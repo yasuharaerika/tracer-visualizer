@@ -1,41 +1,26 @@
 # Knowledge Graph Visualizer
 
-An interactive knowledge graph visualization tool for exploring scientific concepts across multiple domains.
+An interactive knowledge graph visualization tool for exploring scientific concepts and research ideas.
 
 ## Features
 
-- **Interactive Graph Visualization** - Explore relationships between concepts using Sigma.js
-- **Multi-domain Support** - Switch between Physics, Biology, Chemistry, and Materials Science
-- **Search & Filter** - Find specific concepts quickly
-- **Ideas View** - Browse and compare research ideas
+- **Interactive Graph Visualization** - Explore concept relationships using Sigma.js
+- **Multiple Domains** - Switch between different scientific domains
+- **Search** - Find specific concepts quickly
+- **Ideas View** - Browse and compare research ideas with scores
 - **Node Details** - Click on nodes to see detailed information
 
-## Live Demo
+## Usage
 
-Access the deployed version at: https://[username].github.io/[repo-name]/
+Simply open `index.html` in a web browser.
 
-## Local Development
-
-To run locally:
-
+Or use a local server:
 ```bash
-# Clone the repository
-git clone https://github.com/[username]/[repo-name].git
-cd [repo-name]
-
-# Open index.html in a browser
-# Or use a local server
 npx serve .
 ```
 
-## Data Sources
+## Data
 
-This visualization uses knowledge graphs generated from:
-- PhySH (Physics Subject Headings)
-- BioASQ
-- ChEBI
-- MatOnt
-
-## License
-
-MIT
+The `data/` directory contains:
+- `{domain}_graph.json` - Knowledge graph data for each domain
+- `{domain}_ideas_with_papers.json` - Research ideas with related papers
