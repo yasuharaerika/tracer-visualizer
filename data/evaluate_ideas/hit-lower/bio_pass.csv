@@ -1,0 +1,224 @@
+﻿Hypothesis,Plan,Feasibility,Critique
+"Diploid human excitatory neurons require intact purine metabolism to preserve *repolarization reserve* during sustained high-frequency firing, and this requirement can be functionally decomposed into (i) an acute ATP-dependent arm that maintains Na+/K+-ATPase-driven K+ clearance and membrane polarization on the timescale of seconds, and (ii) a slower GTP-dependent arm that sustains surface density and availability of delayed-rectifier K+ channels (KV2/KV7) via vesicular trafficking and membrane recycling on the timescale of hours to days. Loss of specific purine metabolism nodes selectively collapses repolarization reserve before global excitability or viability fail, producing frequency-dependent spike broadening, afterhyperpolarization loss, and depolarization block. We further hypothesize that this collapse can be quantitatively encoded as a stable, extracellular surface barcode by coupling membrane depolarization to *chemically validated, extracellular proximity labeling chemistry* whose kinetics integrate spike frequency while remaining insensitive to subthreshold depolarization. By explicitly calibrating barcode accumulation against patch-clamp-derived repolarization metrics and correcting for expression and surface-area confounds via ratiometric normalization, this ‘Voltage-to-Genotype’ system overcomes prior feasibility concerns and enables pooled CRISPRi screening of purine metabolism genes in diploid human neurons with electrophysiological specificity.","### Step 0: Reporter architecture selection and molecular de-risking (pre-screen gate)
+0.1 **Labeling chemistry choice (proven extracellular system):** Use an engineered extracellular APEX2 peroxidase variant (APEX2-e) with demonstrated activity in oxidizing membrane-impermeant biotin-phenol analogs under controlled H2O2 pulses. APEX2 is selected over ligases due to millisecond-scale catalytic turnover and extensive prior kinetic characterization.
+0.2 **Voltage coupling strategy (non-mechanical, rate-based):** Rather than relying on large conformational gating, fuse APEX2-e to the extracellular N-terminus of a fast, validated voltage sensor (e.g., ASAP-family VSD) via a *short, flexible linker* that preserves voltage-dependent membrane proximity. Depolarization increases residence time of the enzyme within ~10–20 nm of a fixed acceptor scaffold, increasing effective labeling rate without requiring steric on/off gating. This rate-integration model directly addresses reviewer concerns about mechanical feasibility.
+0.3 **Acceptor scaffold:** Express a constitutive, inert single-pass transmembrane protein bearing (i) an extracellular tyrosine-rich acceptor peptide for phenoxyl radical capture and (ii) a spectrally distinct fluorophore (e.g., mTagBFP2) for abundance normalization.
+
+### Step 1: Mandatory feasibility and calibration package (clonal reporter line)
+1.1 **Clonal line generation:** Generate NGN2-inducible diploid human iPSC-derived neurons stably expressing (i) VSD–APEX2-e fusion and (ii) dual-color acceptor scaffold. Validate surface localization, voltage sensitivity, and absence of baseline excitability perturbation.
+1.2 **Stimulation dependence:** Apply field stimulation at 0, 5, 10, 20, and 40 Hz during brief (1–3 min) exposure to membrane-impermeant biotin-phenol + low H2O2. Quantify covalent biotin accumulation by flow cytometry. Demonstrate monotonic frequency dependence.
+1.3 **Specificity controls:** (i) Abolish labeling with TTX; (ii) show minimal labeling under sustained subthreshold depolarization (high-K+ ACSF without spikes); (iii) confirm no labeling in absence of H2O2.
+1.4 **Ratiometric correction:** Normalize biotin signal to constitutive acceptor fluorophore and cell capacitance proxy (forward scatter). Define gating that regresses out reporter abundance and surface area, yielding a normalized ‘repolarization barcode index’.
+
+### Step 2: Benchmarking against electrophysiological ground truth
+2.1 **Patch-clamp correlation:** In the same clonal line, perform whole-cell recordings under identical stimulation paradigms. Quantify spike half-width, afterhyperpolarization amplitude, firing failure frequency, and depolarization block threshold.
+2.2 **Pharmacologic calibration:** Apply acute perturbations with known mechanisms: low-dose ouabain (ATPase stress), 4-AP and KV7 blockers (repolarization machinery), oligomycin/rotenone (energetic stress). Correlate barcode index with repolarization metrics, not baseline firing rate.
+2.3 **Decision criteria:** Establish that barcode index tracks repolarization reserve (e.g., spike broadening and failure) independently of spike initiation probability.
+
+### Step 3: Pooled CRISPRi screening implementation
+3.1 **Perturbation choice:** Use CRISPRi (dCas9-KRAB) to ensure uniform, rapid knockdown in post-mitotic neurons and avoid heterogeneous KO kinetics.
+3.2 **Library design:** Focused purine metabolism library (de novo, salvage, IMPDH/GTP branch, mitochondrial one-carbon–purine coupling) plus controls (Na+/K+-ATPase subunits, Kv trafficking genes, non-targeting guides).
+3.3 **Screen execution:** After knockdown stabilization, apply standardized high-frequency pacing and labeling. Dissociate neurons under TTX + cold conditions to prevent artifactual activity. FACS-sort top/bottom 15% by normalized barcode index.
+3.4 **Analysis:** Guide enrichment analysis (MAGeCK), pathway stratification, and comparison with control gene behavior.
+
+### Step 4: Mechanistic discrimination (ATP vs GTP arms)
+4.1 **Temporal separation:** Acute (minutes–hours) metabolic inhibition versus chronic (days) knockdown to distinguish ATPase failure from trafficking defects.
+4.2 **Biochemical assays:** LC–MS quantification of adenylate and guanylate pools; Na+/K+-ATPase activity assays; extracellular K+ accumulation during pacing.
+4.3 **Trafficking assays:** Surface/total KV2.1 and KV7.2 quantification, Rab/Arf pathway readouts, and rescue with ATP precursors versus guanosine/IMPDH bypass.
+
+### Step 5: Translational and robustness extensions
+5.1 **Metabolic rescue:** Test nucleoside supplementation and transporter modulation.
+5.2 **Reproducibility:** Replicate key findings across independent neuronal differentiations and stimulation geometries.","This revision directly addresses reviewer concerns by replacing speculative mechanical gating with a *rate-based proximity labeling model* grounded in well-characterized extracellular APEX2 chemistry, whose kinetics are sufficient to integrate thousands of action potentials over minutes without requiring per-spike toggling. Expression, surface-area, and health confounds are explicitly corrected through dual-color ratiometric normalization and FSC-based gating. A mandatory calibration phase benchmarks barcode accumulation against gold-standard patch-clamp repolarization metrics and pharmacologic perturbations, ensuring construct validity before pooled screening. The use of CRISPRi de-risks neuronal genetics, while cold/TTX dissociation preserves barcode integrity. Finally, explicit temporal and biochemical criteria disentangle ATPase-driven K+ clearance from GTP-dependent Kv trafficking, aligning the screening readout with a mechanistically precise definition of repolarization reserve rather than generic excitability or metabolic failure.","This is an unusually well-structured attempt to make pooled electrophysiology-adjacent screening feasible in human neurons, and the staged gating (feasibility → calibration → screen) is methodologically disciplined. The central risk remains construct validity of the voltage-coupled APEX2 rate model: it is not yet demonstrated that physiological voltage excursions can produce a sufficiently large and specific modulation of extracellular APEX2 labeling rate to separate 5–40 Hz firing over minutes while remaining insensitive to subthreshold depolarization. The proposed coupling mechanism (“residence time within 10–20 nm”) is plausible but under-specified physically: APEX2 labeling depends strongly on local substrate availability, radical lifetime/diffusion, and microdomain geometry; small VSD motions may be dwarfed by membrane crowding, glycocalyx effects, and acceptor density heterogeneity. In addition, H2O2 pulses and peroxidase activity can induce oxidative membrane/protein changes that themselves alter excitability and channel trafficking, confounding the intended repolarization-reserve readout; the plan includes controls but not explicit quantitative thresholds for acceptable perturbation. Finally, the biological decomposition into ATP (seconds) vs GTP (hours–days) arms is compelling but may not be cleanly separable: purine node perturbations can co-vary ATP/GTP pools, redox state, and phosphoinositide-dependent Kv7 regulation, producing mixed phenotypes that complicate mechanistic attribution unless additional orthogonal readouts (direct Kv current density, membrane PIP2 status, etc.) are incorporated."
+"A TALEN-installed, orthogonal RMCE landing-pad platform placed into a *validated, cardiomyocyte-stable* genomic locus will enable scarless, single-copy, isogenic swapping of multi-module “signaling cassette exchange” programs (secreted paracrine ligands + ECM-tethered morphogen mimetics + drug-inducible receptors). The refined platform will outperform transient delivery and random integration *because it constrains three dominant sources of interpretability failure in engineered heart tissue (EHT) cue-optimization*: (i) locus-dependent silencing/variegation during prolonged cardiomyocyte maturation is minimized by empirically down-selecting a safe-harbor with stable expression across differentiation and EHT conditioning; (ii) intended cue dosage and ratios are enforced by pre-calibrating each polycistronic cassette using absolute extracellular protein quantification (matrix vs supernatant) while monitoring secretory burden/UPR and growth disadvantage, preventing “expression burden artifacts” from masquerading as regenerative biology; and (iii) spatially restricted cue presentation is made mechanistically testable by explicitly designing for—and measuring—hydrogel binding kinetics, effective diffusion, and protease-mediated release to achieve specified extracellular length scales. In an arrayed one-cassette-per-EHT primary screen (with pooled barcoded formats restricted to physically compartmentalized secondary studies), the system will identify causally optimal combinatorial signaling programs that enhance cardiomyocyte maturation, electromechanical coupling, stress resilience, and pro-regenerative behavior under injury-mimetic conditions, with benchmark comparisons normalized to *matched extracellular ligand exposure* rather than transcript abundance.","Step 0 (Design principles and success criteria)
+0.1 Define target cue exposure specifications per factor (updated iteratively from pilot data): (a) target steady-state extracellular concentration range in EHT supernatant (e.g., 0.1–50 ng/mL depending on ligand potency), (b) matrix-bound fraction target (e.g., >50% retained for ECM-tethered variants), and (c) spatial length-scale target (effective gradient/decay length on the order of the EHT microdomain size, e.g., ~50–300 µm rather than millimeters).
+0.2 Define platform pass/fail thresholds before screening biology: (i) single-copy landing pad confirmed by ddPCR; (ii) <10% variance in reporter output across clones within a locus after maturation conditioning; (iii) RMCE fidelity: ≥95% correctly exchanged alleles by targeted long-read/amplicon sequencing; (iv) UPR/ER-stress activation not exceeding a preset ceiling (e.g., <2-fold induction of HSPA5/BiP, DDIT3/CHOP, XBP1s) compared to landing-pad-only controls.
+
+Step 1 (Mandatory module): Locus down-selection and validation for cardiomyocyte-stable expression
+1.1 Candidate loci: install *identical reporter landing pads* into at least two loci (mandatory: AAVS1 and CCR5) and include a third “cardiomyocyte-stability candidate” locus if feasible (e.g., CLYBL, CLYBL-like safe harbor, or another locus with reported stable expression in differentiated lineages). Rationale: reviewers require empirical demonstration that the chosen locus resists silencing/variegation during cardiac differentiation and prolonged EHT maturation.
+1.2 TALEN-mediated landing pad insertion architecture (common across loci):
+- Heterospecific recombinase sites arranged for directional exchange (e.g., FRT-wt and FRT3 in direct orientation) flanking the exchange cassette.
+- A promoter-trap selection scheme with *both positive and negative selection* to suppress background: the landing pad contains a split selectable marker configuration such that correct RMCE reconstitutes positive selection while excising (or inactivating) a negative marker.
+- Chromatin insulation elements flanking the cassette (e.g., cHS4 cores) and/or UCOE to reduce position-effect variegation.
+- A constitutive, differentiation-stable reporter (e.g., fluorescent protein + secreted reporter such as Gaussia luciferase) placed within the exchangeable region so the *same reporter payload* can be evaluated across loci after RMCE.
+1.3 Validation timeline and conditions:
+- Measure reporter expression at: (i) pluripotent stage, (ii) cardiac progenitors, (iii) day ~20–30 cardiomyocytes, (iv) after prolonged EHT maturation with electrical pacing/mechanical load (e.g., additional 2–4 weeks), and (v) after injury-mimetic stress.
+- Quantify: mean expression, cell-to-cell distribution (flow cytometry to detect variegation), and silencing trajectories over time.
+- Select the locus with highest stability (minimal drift), lowest variegation, and no measurable penalty on differentiation efficiency/contractility.
+1.4 Genomic QC: junction PCR + long-read sequencing across insert boundaries; ddPCR for copy number; karyotyping; off-target assessment focusing on predicted TALEN sites.
+
+Step 2: RMCE system engineering with fidelity safeguards
+2.1 RMCE strategy with safeguards against partial/aberrant events:
+- Use an orthogonal recombinase strategy if needed (e.g., dual-site architecture requiring two independent recombination events, or sequential recombination) to reduce partial swaps.
+- Donor design includes: (i) recombinase sites matching landing pad, (ii) “exchange-only” geometry discouraging concatemerization, (iii) loss-of-negative-selection marker upon correct exchange.
+2.2 Delivery format: recombinase delivered as mRNA or protein/RNP-like format to minimize genomic stress and persistent recombinase activity.
+2.3 Verification thresholds per clone before phenotyping:
+- Targeted amplicon sequencing (or long-read) spanning both recombination junctions.
+- ddPCR confirming single-copy donor integration and absence of backbone.
+- Exclude clones with mixed alleles, partial recombination, or backbone retention.
+
+Step 3: Signaling cassette exchange library design with pre-calibration (mandatory cassette QC)
+3.1 Modular cassette architecture:
+- Multi-cistronic program organized as: secretion/ECM-tethered ligand module(s) + inducible receptor/gate module(s) + barcode.
+- Use 2A peptides (P2A/T2A) but treat stoichiometry as *empirical*: maintain standardized gene order across variants to reduce order effects, and include optional internal promoters if 2A ratios prove unstable for certain ligand combinations.
+- Incorporate microRNA target sites to suppress expression in non-cardiomyocyte contaminants (e.g., miR-142 for hematopoietic-like contaminants) while confirming no suppression in cardiomyocytes.
+3.2 Absolute extracellular output calibration (mandatory):
+- For each cassette (prior to EHT screening), quantify secreted ligand concentration in conditioned media and matrix-associated fraction in hydrogel using ELISA or targeted quantitative proteomics.
+- For ECM-tethered ligands: separately measure (i) supernatant concentration, (ii) matrix-extracted concentration, and compute retention ratio.
+- Normalize/adjust designs by swapping signal peptides, adding/removing secretion enhancers, or tuning translation (e.g., altered 2A arrangement or promoter strength) until extracellular exposure targets are met.
+3.3 Secretory burden and fitness controls (mandatory):
+- Measure ER stress/UPR markers (HSPA5/BiP, DDIT3/CHOP, ATF4, XBP1 splicing) and general proteostasis stress.
+- Track proliferation/survival and competitive fitness in mixed culture against a reference line to detect growth disadvantages that could confound screens.
+- Exclude or redesign cassettes that exceed stress thresholds or impose severe fitness costs.
+
+Step 4 (Mandatory module): Quantitative cue-presentation model + measurement plan for spatial restriction
+4.1 Define a tractable reaction–diffusion–binding model in hydrogel:
+- Parameters to estimate per ligand variant: effective diffusion coefficient (Deff), on/off rates for ECM binding (kon/koff), and protease-mediated release rate (krel) under baseline and injury-mimetic conditions.
+- Model outputs: predicted spatial decay length (λ) and time-to-steady-state for cue gradients within EHT geometry.
+4.2 Empirical measurement of diffusion/binding:
+- Create fluorescent analogs or tagged versions of ligands (or surrogate proteins with identical tethering domains).
+- Measure Deff and recovery behavior by FRAP within the specific EHT hydrogel formulation.
+- Measure binding kinetics by incubating hydrogels with known ligand concentrations and quantifying adsorption/desorption over time.
+4.3 Protease-mediated release controls (mandatory):
+- Include tether variants with protease-cleavable linkers vs non-cleavable controls.
+- Test release under defined protease exposure and under injury-mimetic EHT conditions (where protease activity may rise).
+- Use protease inhibitors as mechanistic controls to separate “binding/gradient” effects from “released soluble factor” effects.
+
+Step 5 (Mandatory): Screen design that preserves causality
+5.1 Primary discovery screen (arrayed):
+- One cassette variant per EHT (one-cassette-per-tissue), with multiple independent clones per cassette if feasible to detect clone-to-clone variance.
+- Standardize EHT composition (cardiomyocytes ± defined supportive stromal/endothelial fraction), hydrogel formulation, pacing regimen, and mechanical loading.
+5.2 Secondary validation (optional pooled barcodes with compartmentalization):
+- Only after hits are identified, use pooled barcoded formats in physically compartmentalized systems that block paracrine mixing (e.g., separate microtissues in microwells, droplet/encapsulation, or microfluidic chambers with isolated flow paths).
+- Include sentinel controls to quantify cross-talk (e.g., “reporter-only” tissues adjacent vs isolated).
+
+Step 6: Injury-mimetic evaluation and mechanistic readouts
+6.1 Injury-mimetic conditions in EHT:
+- Hypoxia/reoxygenation, oxidative stress, and inflammatory cytokine challenge designed to emulate post-MI stressors.
+6.2 Maturation and function readouts:
+- Force generation (twitch force), conduction velocity/arrhythmia propensity (optical mapping), calcium handling kinetics, sarcomere structure (super-resolution/EM), metabolic maturation (Seahorse; FAO markers).
+6.3 Mechanism-resolved signaling:
+- Phospho-proteomics and targeted pathway assays (ERK/AKT/STAT, Hippo-YAP, WNT/β-catenin, TGFβ/SMAD).
+- Causality controls: pathway inhibitors/antagonists applied while maintaining matched extracellular ligand exposure.
+6.4 Regeneration-relevant phenotypes:
+- Survival/apoptosis assays; proliferation competency markers with explicit binucleation discrimination; paracrine impact on endothelial network formation in co-culture metrics.
+
+Step 7 (Mandatory): Benchmarking normalized to extracellular exposure (not transcripts)
+7.1 Comparators:
+- Transient delivery (mRNA/protein) and lentiviral random integration.
+7.2 Normalization approach:
+- For each comparator, titrate dosing/viral MOI until *measured extracellular ligand exposure* (ELISA/proteomics in supernatant and matrix) matches the RMCE cassette’s exposure profile (including retention ratio for tethered ligands).
+- Only then compare functional outcomes and variance across replicates to quantify reproducibility gains and true biological superiority of controlled spatiotemporal presentation.
+
+Step 8: Data integration and decision logic
+8.1 Use a multi-objective scoring function combining: (i) maturation/function metrics, (ii) stress resilience, (iii) minimal UPR burden, and (iv) model-predicted/observed spatial restriction parameters.
+8.2 Promote candidates that show consistent benefit across clones and batches, and whose mechanism is supported by pathway perturbation and exposure-matched benchmarking.","1) Addressing locus risk (reviewer point i): The proposal now includes a mandatory locus down-selection module where identical reporter payloads are installed into at least AAVS1 and CCR5 (and optionally a third locus) and tracked across cardiomyocyte differentiation and prolonged EHT maturation. This directly tests silencing/variegation and avoids assuming “cardiac-permissive” behavior.
+
+2) Addressing polycistronic unpredictability and secretion burden (reviewer point ii): Multi-cistronic designs are treated as empirically calibratable rather than inherently stoichiometric. Each cassette is pre-qualified using absolute extracellular protein quantification (matrix and supernatant) and screened for ER stress/UPR and fitness penalties. This prevents distorted ratios, secretory saturation, and stress artifacts from confounding mechanistic interpretation.
+
+3) Making ECM-tethering mechanistically testable (reviewer point iii): A quantitative reaction–diffusion–binding framework is coupled to direct measurements (FRAP-based Deff, binding kinetics, and protease-mediated release controls). Spatial restriction is therefore an engineered, measurable parameter (length scale, retention fraction), not an assertion.
+
+4) Preserving causality in screening (reviewer point iv): The primary screen is explicitly arrayed (one cassette per EHT) to eliminate paracrine mixing across variants. Pooled barcoded formats are restricted to secondary validation with physical compartmentalization and sentinel cross-talk controls.
+
+5) Ensuring RMCE fidelity (reviewer point v): The RMCE architecture includes positive/negative selection logic plus sequencing-based verification thresholds and copy-number/backbone exclusion criteria, with optional orthogonal recombinase safeguards to reduce partial recombination and concatemer artifacts.
+
+6) Benchmarking on extracellular exposure (reviewer point vi): Comparisons to transient delivery and lentiviral expression are normalized to matched extracellular ligand exposure (including matrix retention ratios), not transcript levels, aligning the benchmark with the true bioactive variable in paracrine/ECM-tethered systems.
+
+Overall, the refined plan converts the platform’s key claims—stable locus expression, controlled multi-factor dosage, and spatially restricted cue presentation—into measurable engineering specifications with explicit QC gates, thereby increasing confidence that identified “hit” cassettes reflect causal regenerative mechanisms in EHT rather than expression burden, diffusion artifacts, or screening confounds.","Methodologically, the platform is unusually well-resolved: it anticipates major failure modes in EHT cue optimization (silencing/variegation, secretion burden artifacts, spatial mis-specification, and paracrine cross-talk) and converts them into measurable acceptance criteria. The main score deductions are (i) feasibility/throughput risk: the combined requirements (multi-locus TALEN engineering, clone-level QC with long-read sequencing, per-cassette extracellular proteomics/ELISA, FRAP/binding kinetics per variant, and multi-parametric EHT phenotyping) are resource-intensive and may bottleneck library size and statistical power; (ii) some critical design degrees of freedom remain under-specified (which promoters/insulators are truly differentiation-stable in this context; whether UCOE/cHS4 materially helps at the chosen loci; how many cassette variants are realistically calibratable under the stated constraints); (iii) the mechanistic link between “specified extracellular length scales” and downstream cardiomyocyte phenotypes is plausible but not yet formalized into a falsifiable mediation plan (e.g., demonstrating that changing λ/retention at fixed total exposure changes outcomes, rather than simply changing effective dose); and (iv) TALEN is acceptable but not clearly justified over contemporary alternatives (e.g., Cas9-based targeted integration) given off-target profiling burden and engineering iteration speed—this is not fatal, but it weakens the rationale for the specific nuclease choice."
+"A de novo 4-helix-bundle hemoprotein can be converted into a selective, low-leak ion transporter by engineering a heme-coupled, protonatable “histidine zipper” that drives a reversible one-helical-turn register shift (“piston-like” sliding) of a transmembrane helix, producing an alternating-access cycle between two dehydrated vestibules without ever forming a continuous, water-filled pore. The refined mechanism explicitly addresses the key physical gaps by (i) quantitatively constraining the electrostatic coupling: heme ligation/redox changes (including propionate charge states) will be designed to shift the pKa of one to two buried histidines in the zipper by ~0.8–1.5 units, thereby changing the free-energy difference ΔG(O−I) by ~1–3 kcal/mol across physiologic pH/redox windows; (ii) preventing kinetic freezing: the zipper is redesigned as a ‘frustrated, partially hydrated ion-pair ladder’ in which only 1–2 salt bridges are buried/locked at any time and at least one site is ‘wettable’ by a single-file microhydration pocket, lowering the activation barrier ΔG‡ for registry exchange into a transporter-like regime (~12–16 kcal/mol, target turnover ~1–50 s−1 depending on driving force); (iii) enabling ion entry/exit in a dehydrated environment through a minimal, state-dependent “access hydration” feature at each vestibule—a short-lived, vestibule-local water admission gate (2–5 waters) controlled by a polar clamp residue pair that opens only in the outward-facing or inward-facing state and is sterically incapable of creating a continuous polar track; and (iv) ensuring residue-level structural coherence: the ion-coordination atoms are placed on the sliding helix and a partner helix such that a one-turn register shift relocates the coordinating geometry from an outer vestibule to an inner vestibule while a hydrophobic occlusion layer remains intact and intermediate morphs are explicitly filtered to eliminate any continuous hydrogen-bond chain or pore-radius expansion. The net result is a de novo transporter whose selectivity comes from transient, preorganized coordination in a low-dielectric cavity, whose low leak comes from enforced discontinuity of hydration, and whose switching is deterministically controlled by heme coordination chemistry rather than bulk hydration gating.","Step 0 — Define quantitative design targets (pre-registered success criteria)
+0.1 Transport objective: prioritize K+ uniport for first-pass demonstration (simpler coordination chemistry than Cl−); Cl− or H+/Cl− coupling becomes second-phase after validating access-hydration and anti-trap behavior.
+0.2 Quantitative success metrics (hard gates):
+- Leak floor: planar bilayer shows no stable open-channel state; conductance events must be rare/bursty with mean open probability <10−4 at ±100 mV.
+- Proteoliposome flux: ≥10× on/off ratio between ‘switch ON’ vs ‘switch OFF’ conditions (defined below), and ≥20× over empty liposomes.
+- Selectivity: PK/PNa ≥20 (bi-ionic reversal potential), and inhibition/shift consistent with vestibule motif mutations.
+- Turnover target: 1–50 ions·s−1·protein−1 inferred from calibrated flux + protein copy number; reject variants that are ‘too stable’ with <0.1 s−1 under maximal driving force.
+- Energetic targets: ΔG(O−I) within ±1 kcal/mol under ON condition; ΔG(O−I) ≥ +2 kcal/mol or ≤ −2 kcal/mol under OFF condition; ΔG‡(O↔I) between 12–16 kcal/mol (room temperature) to avoid locking or channel-like rapid exchange.
+
+Step 1 — Architectural blueprint with residue-level mapping (explicit register-shift relocation)
+1.1 Scaffold: antiparallel 4-helix transmembrane bundle (TM1–TM4), each 22–26 residues membrane-spanning, with short extramembranous loops.
+1.2 Sliding helix: TM2 contains a 11–12 residue sliding segment designed to shift by ~3–4 residues (≈ one helical turn). The register shift is defined between Registry-O and Registry-I.
+1.3 Occlusion layer: a 6–8 Å thick hydrophobic gasket midway through the membrane formed by conserved Leu/Ile/Val/Phe across TM1/TM3/TM4, positioned so that in both O and I states the minimum polar-path distance across the membrane exceeds 15 Å and pore radius stays <1.0 Å at the gasket.
+1.4 Two vestibules:
+- Outer vestibule: formed by TM1/TM2/TM3 near extracellular leaflet.
+- Inner vestibule: formed by TM2/TM3/TM4 near cytosolic leaflet.
+1.5 K+ coordination motif (moves with register):
+- Primary ligands on TM2 (sliding helix): two backbone carbonyls presented by a glycine-allowed local geometry (e.g., “Ala-Gly-x-x-Gly” spacing) plus one side-chain oxygen (Thr/Ser) positioned to complete an ~6–8 ligand partial cage.
+- Partner ligand on TM3: a conserved Thr/Ser carbonyl + side-chain oxygen that remains fixed.
+Design mapping rule: in Registry-O, the TM2 carbonyl triad aligns with TM3 partner to form the outer-site cage; after one-turn register shift (Registry-I), the same TM2 carbonyl triad aligns with a second fixed partner oxygen on TM4 to form the inner-site cage. Thus, the ‘moving half’ of the cage is on TM2; the ‘fixed half’ switches partners (TM3 vs TM4) depending on register.
+1.6 Hard constraint: ensure no intermediate creates a continuous polar chain. The coordinating atoms are local to the vestibule and separated from the opposite vestibule by the hydrophobic gasket.
+
+Step 2 — Heme module and quantitatively constrained electrostatic coupling (constant-pH + QM/MM-informed)
+2.1 Heme placement: b-type heme embedded between TM3 and TM4, orthogonal to the transport pathway, with edge-to-zipper distance 7–9 Å (not 6–10 Å generic; target is 7.5–8.5 Å to increase coupling while avoiding direct pore wetting).
+2.2 Axial ligation design:
+- Strong ligand: His on TM3 (fixed).
+- Conditional ligand: His or Met on a short helical turn at the cytosolic end of TM4 whose geometry is only compatible in Registry-I (steric/rotamer allowance); in Registry-O it is misaligned by >1.5 Å and/or clashes.
+2.3 Propionate handling: explicitly include heme propionates in electrostatics model; design local H-bond network to set propionate protonation preference (e.g., one propionate H-bonded to a buried Asn/Ser pair, the other solvent-exposed), and evaluate both protonation microstates in calculations.
+2.4 Coupling calculation workflow (must precede wet-lab library):
+- Build O and I state structural models with explicit heme and propionate microstates.
+- Run constant-pH MD (membrane environment) to compute pKa of designated zipper histidines (target: ΔpKa 0.8–1.5 upon heme ligation change and/or Fe(III)/Fe(II) redox shift).
+- Use QM/MM (heme + axial ligands in QM region) to parameterize redox/ligation-dependent electrostatic potential; feed into Poisson–Boltzmann/GB or explicit-solvent constant-pH as needed.
+- Output: predicted registry populations p(O), p(I) vs pH (6.0–8.0) and redox/ligation state; require p(O)/p(I) to invert by ≥5-fold between ON and OFF conditions.
+2.5 ON/OFF definitions (for experimental gating):
+- ON: heme present + designed redox state (e.g., reduced Fe(II) if it weakens conditional ligand binding, or oxidized Fe(III) if it strengthens—chosen based on computed ΔpKa sign) + pH that protonates the key His.
+- OFF: heme absent, or axial-competition knocked out (conditional ligand Ala), or pH shifted by ≥1 unit in direction that deprotonates the actuator His.
+
+Step 3 — Zipper actuator redesigned to avoid kinetic freezing (engineered microhydration + limited rewiring)
+3.1 Zipper composition: 3 His on TM2 (sliding helix) paired to 3 carboxylates on TM1/TM3, but with only two pairs deeply buried; the third is positioned near a vestibule-local microhydration pocket.
+3.2 “Frustrated ladder” rule: in each registry, only 2 of 3 His–Glu/Asp pairs can be simultaneously optimal; the third is strained/solvent-accessible, creating a designed driving force for switching without requiring full dehydration/rehydration of all pairs.
+3.3 Microhydration pocket: introduce a single polar ‘water seat’ (e.g., Asn/Gln + backbone carbonyl orientation) adjacent to the strained pair, allowing 1–3 waters transiently; this reduces ΔG‡ for salt-bridge exchange while remaining topologically isolated from both vestibules (no continuous water wire).
+3.4 Kinetic benchmarks (simulation gating): compute ΔG‡ along a registry-shift coordinate (umbrella sampling/metadynamics in membrane) and reject designs with ΔG‡ >18 kcal/mol (locked) or <10 kcal/mol (risk of channel-like behavior/intermediate leakage).
+
+Step 4 — Explicit state-dependent access hydration at each vestibule (ion exchange without trapping)
+4.1 Vestibule hydration gate design: each vestibule has a “polar clamp” (e.g., Ser/Thr + Gln/Asn) that can admit a small water cluster only when that vestibule is exposed (O exposes outer clamp; I exposes inner clamp). In the occluded state, clamp residues pack against hydrophobics and eliminate the local water pocket.
+4.2 Ion exchange simulations: for K+ (and later Cl−), perform explicit-solvent MD with adaptive sampling to demonstrate:
+- K+ can enter the exposed vestibule with partial hydration (2–5 waters), bind to the preorganized cage, then be released when the opposite vestibule becomes exposed.
+- Residence time in the bound state is finite (e.g., <10 ms equivalent by kinetics modeling), avoiding permanent trapping.
+4.3 Anti-water-wire constraint: throughout trajectories, enforce/verify that the hydrophobic gasket remains dry (no continuous hydrogen-bonded chain connecting leaflets). Quantify with water occupancy maps and “continuous H-bond path” analysis.
+
+Step 5 — Intermediate-state negative design (morph filters across O→I transition)
+5.1 Generate an explicit morph ensemble (20–50 interpolated backbones) between O and I using constrained interpolation + short MD relaxations.
+5.2 For each intermediate, apply reject filters:
+- Pore radius profile: must not exceed 1.2 Å across the gasket region.
+- Polar-track analysis: no continuous chain of heteroatoms with H-bond distance connectivity spanning membrane.
+- Water occupancy: no persistent (>5% frames) continuous water column.
+5.3 Sequence-level negative design: penalize any arrangement that creates aligned Ser/Thr/Asn/Gln/His across the gasket in any intermediate.
+
+Step 6 — Computational sequence optimization (two-state + coupling term with explicit energies)
+6.1 Two-state design objective function includes:
+- ΔGfold for O and I in membrane.
+- ΔΔGheme-binding (geometry constraints; axial ligation energies).
+- Electrostatic coupling term derived from computed pKa shifts (maps protonation state ↔ registry stabilization).
+- Hydration penalty term (continuous pore/water-wire penalties across morph ensemble).
+- Oligomerization negative design (surface hydrophobics/helix-helix interface specificity).
+6.2 Output a small panel (8–20) of top designs + focused libraries (≤200 variants) at:
+- 1–2 key His (pKa tuner positions), 1–2 carboxylates, conditional axial ligand position, and 2 vestibule clamp positions.
+
+Step 7 — Experimental screening redesigned to penalize leak and require heme-dependent switching signatures
+7.1 Expression and assembly QC (gate before function): quantify expression, membrane localization, oligomeric state; verify heme occupancy (UV–Vis) and ligation (EPR/RR/MCD).
+7.2 Primary functional screens (orthogonal, leak-penalizing):
+- Membrane potential dye assay in proteoliposomes or cells (e.g., DiSC3(5) or equivalent): counterselect variants that collapse ΔΨ in absence of driving force (nonspecific leak).
+- Permeability counterassay: encapsulated fluorophore leakage (calcein/ANTS-DPXS) to reject membrane disruptors.
+- Ion-specific flux assay: K+-sensitive dye/electrode with calibrated protein copy number to estimate turnover.
+Acceptance gate: must show low baseline leak in OFF condition and increased flux in ON condition.
+7.3 Switch validation (must precede deep mechanistic work):
+- Redox titration (mediators) or ligand condition changes to shift heme state while monitoring flux; require ≥5× change in activity consistent with computed p(O)/p(I) inversion.
+- DEER on labels flanking TM2 sliding segment under ON vs OFF conditions; require distance shift matching predicted register change.
+7.4 Secondary mechanistic verification:
+- Registry locks: disulfide pairs designed to trap O or I; locked constructs must abolish flux while preserving heme binding.
+- Accessibility mapping: state-dependent labeling or quenching of vestibule-exposed reporters (outer vs inner) to confirm alternating access.
+- Planar bilayer electrophysiology: confirm transporter-like kinetics (no steady conductance), quantify event statistics.
+
+Step 8 — Causality tests mapped to reviewer concerns
+8.1 Electrostatic coupling causality:
+- Conditional axial ligand knockout (Ala) should reduce ΔpKa and eliminate switching (DEER distances no longer shift with redox/pH).
+- Propionate network perturbations (neutralizing H-bond partners) should change redox/pH dependence as predicted by calculations.
+8.2 Kinetic barrier causality:
+- Remove microhydration pocket (Asn→Leu) should raise ΔG‡ (lower turnover) and bias toward locked registry.
+- Increase wetting locally (Leu→Asn near the ‘water seat’) should speed switching but must not increase leak; reject if polar-track filter fails.
+8.3 Ion exchange causality:
+- Vestibule clamp mutations predicted to reduce access hydration should decrease flux and increase ion trapping signatures (long residence time; reduced turnover) without increasing leak.
+
+Step 9 — Benchmarking and decision points
+9.1 Benchmarks: (i) scaffold without heme; (ii) heme present but zipper neutralized; (iii) zipper present but vestibule motif scrambled; (iv) ‘hydration-gated’ control design with added polar track (expected to leak).
+9.2 Go/no-go: only advance designs that (a) meet leak counterselection thresholds, (b) show heme-dependent DEER switching, and (c) pass intermediate morph negative-design metrics computationally and experimentally (no channel-like conductance).
+
+Phase-2 extension (after K+ success): adapt vestibule chemistry for Cl− by replacing coordination with backbone amide donors + strategically placed cationic residue that is state-exposed but does not line up across the gasket; repeat access-hydration validation to avoid anion trapping.","This revised plan directly closes the reviewers’ physical and energetic gaps with quantitative constraints and explicit risk controls. (i) Electrostatic coupling is no longer asserted qualitatively: constant-pH MD plus QM/MM-informed heme electrostatics (including propionate microstates) will be used to predict ΔpKa (target 0.8–1.5) and convert it to testable ΔG(O−I) shifts and registry populations versus pH/redox/ligation; these predictions are then experimentally read out via redox titration coupled to DEER and flux. (ii) Kinetic freezing risk is mitigated by redesigning the zipper as a partially frustrated ladder with a dedicated microhydration pocket so registry exchange does not require concerted rewiring of a fully dehydrated salt-bridge network; activation barriers are explicitly targeted (12–16 kcal/mol) and computed via enhanced sampling, with rejection criteria for overly high or low ΔG‡. (iii) Ion exchange chemistry is made explicit by engineering a minimal, state-dependent access-hydration gate at each vestibule (2–5 waters, vestibule-local) and validating by simulation that ions can enter, bind, and exit without long-lived trapping while maintaining a dry hydrophobic gasket to prevent leak. (iv) The structural mapping of ‘site relocation’ is specified at residue-logic level: the moving coordinating elements are placed on the sliding helix and are designed to align with different fixed partners (TM3 vs TM4) depending on register; intermediate morph ensembles are explicitly filtered to ensure no continuous polar track or pore expansion at any point along O→I. (v) The selection/screening pipeline is de-risked by replacing growth rescue as the primary gate with orthogonal assays that penalize nonspecific permeability (dye leakage, ΔΨ collapse) and by requiring heme-dependent switching signatures (DEER + redox/pH modulation) before advancing variants. These changes preserve the original concept chain—heme coordination → electrostatic/pKa tuning → zipper rewiring → register shift → alternating access—while providing the quantitative landscape targets, kinetic safeguards, and vestibule-local hydration mechanism necessary for realistic transport turnover with low baseline leak.","This is unusually high-resolution for a de novo transporter proposal: it pre-registers quantitative success criteria (leak, selectivity, turnover, ΔG/ΔG‡ targets), proposes a coherent alternating-access mechanism that explicitly avoids a continuous aqueous pore, and maps computation to falsifiable experimental readouts (redox/pH titration ↔ DEER ↔ flux) with appropriate leak counterselection. Score deductions stem from several remaining physical/implementation gaps. (i) The core actuation claim—heme ligation/redox/propionate microstates producing a reliable 0.8–1.5 pKa-unit shift for *buried* histidines in a low-dielectric membrane bundle—may be over-optimistic and highly parameterization-sensitive; constant-pH MD in membranes is not yet uniformly predictive at that resolution without extensive benchmarking, and the plan does not specify calibration against reference systems or uncertainty propagation into ΔG(O−I). (ii) The kinetic target band (ΔG‡ 12–16 kcal/mol; 1–50 s−1) is reasonable, but the proposed “microhydration pocket” is also a principal leak risk; the proposal relies on morph filtering and water-occupancy metrics, yet does not specify stringent *experimental* assays to detect rare water-wire events under voltage and long timescales beyond planar bilayer statistics, nor does it define how to distinguish true transporter bursts from brief subconductance pore flickers. (iii) The coordinating-site design (carbonyl-based K+ cage that ‘relocates’ with one-turn sliding) is conceptually plausible but under-specified in terms of geometry control and competing ion/water stabilization: carbonyl cages in a dehydrated cavity can bind too tightly (trap) or too weakly (no flux), and the plan lacks an explicit thermodynamic target for K+ binding affinity (e.g., ΔGbind window) and how it is tuned independently of ΔG(O−I) and ΔG‡. (iv) The heme module introduces additional failure modes—misligation, redox instability in membranes, and unintended electron-transfer side reactions—without a clear strategy for controlling redox potential and avoiding redox-mediated membrane damage during assays. Overall, the mechanism is logically integrated and methodologically ambitious, but the feasibility hinges on quantitative electrostatics/pKa predictions and on controlling microhydration-mediated kinetics without inadvertent leak, both of which require stronger benchmarking and tighter experimental discriminators."
