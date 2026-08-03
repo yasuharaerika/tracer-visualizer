@@ -1,0 +1,225 @@
+/* 图谱视图样式 */
+
+.graph-view {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--paper);
+}
+
+/* 顶部导航栏 */
+.graph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem var(--gutter);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.back-button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: var(--paper-deep);
+  transform: translateX(-2px);
+}
+
+.domain-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+}
+
+.domain-subtitle {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+
+.header-center {
+  flex: 1;
+  max-width: 500px;
+}
+
+.header-right {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* 主内容区 */
+.graph-main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.graph-container {
+  flex: 1;
+  position: relative;
+  background: var(--paper);
+}
+
+/* 信息面板容器 - 左右两侧 */
+.info-panel-left-container {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 380px;
+  z-index: 200; /* 高于图谱 */
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-panel-right-container {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: 380px;
+  z-index: 200; /* 高于图谱 */
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 加载状态 */
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--paper);
+  z-index: 50;
+}
+
+.loading-overlay p {
+  font-size: 1rem;
+  color: var(--ink-muted);
+}
+
+/* 错误消息 */
+.error-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--paper);
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-message p {
+  font-size: 1.125rem;
+  color: var(--accent);
+}
+
+.error-message button {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent);
+  color: var(--paper);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.error-message button:hover {
+  background: var(--accent-hover);
+}
+
+/* 底部状态栏 */
+.graph-footer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.75rem var(--gutter);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat.selected {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .info-panel-left-container,
+  .info-panel-right-container {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .graph-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .header-center {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .info-panel-left-container,
+  .info-panel-right-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: var(--shadow-lg);
+    z-index: 90;
+  }
+
+  .info-panel-left-container {
+    left: 0;
+    right: auto;
+  }
+
+  .graph-footer {
+    font-size: 0.8125rem;
+    gap: 1rem;
+  }
+}

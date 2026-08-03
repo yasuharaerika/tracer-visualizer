@@ -1,0 +1,92 @@
+import { useAppStore } from '../utils/store';
+import { GraphNode } from '../types/graph';
+import '../styles/InfoPanel.css';
+import '../styles/InfoPanelExtra.css';
+
+interface InfoPanelRightProps {
+  graphData: { nodes: GraphNode[]; edges: any[] } | null;
+}
+
+export default function InfoPanelRight({ graphData }: InfoPanelRightProps) {
+  const { compareNodeId, setCompareNodeId, setSelectedNodeId } = useAppStore();
+
+  const compareNode = graphData?.nodes.find((n) => n.id === compareNodeId);
+
+  if (!compareNode) {
+    return null;
+  }
+
+  const handleSwitchToThis = () => {
+    // 将当前对比节点设为主节点，关闭右侧面板
+    setSelectedNodeId(compareNodeId);
+    setCompareNodeId(null);
+  };
+
+  return (
+    <div className="info-panel-right">
+      <div className="panel-header">
+        <h3>Compare Node</h3>
+        <div style={{ display: 'flex', gap: '0.5rem' }}>
+          <button
+            onClick={handleSwitchToThis}
+            className="switch-btn"
+            title="Switch to this node"
+          >
+            ⇄
+          </button>
+          <button
+            onClick={() => setCompareNodeId(null)}
+            className="close-btn"
+            title="Close"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      {/* 只有上半部分：节点属性 */}
+      <div className="panel-content">
+        <section className="node-properties">
+          <div className="property-row">
+            <span className="property-label">ID:</span>
+            <span className="property-value">{compareNode.id}</span>
+          </div>
+          <div className="property-row">
+            <span className="property-label">Type:</span>
+            <span className="property-value type-badge">{compareNode.type}</span>
+          </div>
+          {compareNode.facet && (
+            <div className="property-row">
+              <span className="property-label">Facet:</span>
+              <span className="property-value">{compareNode.facet}</span>
+            </div>
+          )}
+          {compareNode.disciplines && (
+            <div className="property-row">
+              <span className="property-label">Disciplines:</span>
+              <span className="property-value">{compareNode.disciplines}</span>
+            </div>
+          )}
+          {compareNode.year && (
+            <div className="property-row">
+              <span className="property-label">Year:</span>
+              <span className="property-value">{compareNode.year}</span>
+            </div>
+          )}
+          {compareNode.description && (
+            <div className="property-row">
+              <span className="property-label">Description:</span>
+              <span className="property-value description">{compareNode.description}</span>
+            </div>
+          )}
+          {compareNode.abstract && (
+            <div className="property-row">
+              <span className="property-label">Abstract:</span>
+              <span className="property-value description">{compareNode.abstract}</span>
+            </div>
+          )}
+        </section>
+      </div>
+    </div>
+  );
+}
