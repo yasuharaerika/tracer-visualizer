@@ -1,0 +1,817 @@
+﻿Hypothesis,Plan,Feasibility,Critique
+"iPSC-to-HSC differentiation fails to achieve durable, transplant-relevant HSC competence because a discrete developmental window contains an epigenetic integration bottleneck in which cytokine-driven signaling cannot be stably coupled to the *endogenous* hematopoietic regulatory architecture due to mis-positioned DNA methylation and imprint instability at native cis-regulatory elements (CREs) and imprinting control regions (ICRs). This bottleneck is not merely a scarcity of rare ‘correct’ clones but reflects an unstable epigenetic attractor state in which methylation maintenance (e.g., ZFP57/ICR protection) and signal-responsive chromatin opening (e.g., STAT5/RUNX1-driven enhancers) are uncoupled. We hypothesize that overcoming this requires (i) endogenous-locus-resolved, allele-aware epigenetic readouts that preserve native chromatin topology, and (ii) closed-loop, factorially optimized cytokine timing that *causally remodels* methylation trajectories rather than selecting pre-existing permissive clones. By combining minimally perturbative endogenous knock-in transcriptional reporters, longitudinal single-cell multiomic methylome/accessibility profiling, and clonal barcoding across the bottleneck, we will identify and enforce cytokine programs that actively stabilize a hematopoietic HSC-like epigenetic basin—defined by correct endogenous methylation, enhancer–promoter connectivity, and imprint integrity—thereby enabling downstream acquisition of long-term, serially transplantable HSC function.","Step 1: Endogenous-locus instrumentation and bottleneck localization (native chromatin preserved).
+1.1 iPSC inputs: ≥3 integration-free human iPSC lines (2 healthy donors + 1 disease/stress-test line with known imprint sensitivity). Validate pluripotency, karyotype, baseline imprint methylation (targeted bisulfite-seq at H19/IGF2, KCNQ1OT1, SNRPN), and allelic expression.
+1.2 Endogenous transcriptional reporters (allele-aware, minimally perturbative):
+- Insert short-lived fluorescent or luminescent tags (e.g., P2A–d2GFP or NanoLuc) into endogenous transcripts at hematopoietic gatekeeper loci using CRISPR/Cas9 HDR, preserving all native regulatory DNA. Targets include RUNX1 (intron 5/endogenous enhancer-coupled isoform), GATA2, HOXA9 or HOXA7 (cluster representative), and MEIS1. Tags are inserted at the 3′ end with minimal UTR disruption.
+- For imprint surveillance, introduce allele-discriminating reporters via SNP-phased tagging where feasible (e.g., allele-specific digital expression quantification for H19/IGF2 and KCNQ1OT1 using silent SNP-linked molecular barcodes rather than altering ICRs).
+1.3 Bottleneck mapping with native epigenetic resolution:
+- Perform a time-resolved differentiation (iPSC → mesoderm → hemogenic endothelium → CD34+ progenitors) with 5–6 defined timepoints.
+- At each timepoint, collect single-cell multiome data (scRNA + scATAC) plus targeted single-cell methylome (scRRBS or targeted scBS-seq) focusing on the same CREs/ICRs instrumented above.
+- Define the bottleneck as the interval where divergence in endogenous CRE methylation/accessibility and imprinted allele expression predicts irreversible loss of hematopoietic output, despite preserved upstream markers.
+
+Step 2: Discriminating remodeling vs selection using lineage tracing.
+2.1 Clonal barcoding: Introduce a high-complexity, neutral lentiviral or transposon-based barcode library into iPSCs prior to differentiation (MOI <0.1).
+2.2 Track barcode abundance through the bottleneck under baseline cytokine conditions while simultaneously profiling endogenous reporters and methylation states.
+2.3 Analytical criterion: true remodeling is inferred if individual barcodes transition from epigenetically non-permissive to permissive states (endogenous reporter activation + methylation shift), whereas pure selection manifests as barcode dropout without state conversion.
+
+Step 3: Closed-loop factorial cytokine optimization constrained by endogenous epigenetic states.
+3.1 Factorial design architecture:
+- Factors: SCF, TPO, FLT3L, IL-3, IL-6, CXCL12; WNT/BMP modulation (categorical); oxygen tension (5% vs 20%).
+- Temporal structure: split-plot design encoding stage-specific pulses vs continuous exposure across the bottleneck window identified in Step 1.
+3.2 Closed-loop objective function (measured at bottleneck):
+- Primary: fraction of cells achieving an endogenous-defined permissive state (RUNX1/GATA2/HOXA reporter activation + open ATAC at corresponding enhancers + corrected methylation slope dm/dt).
+- Constraints: preservation of monoallelic imprinted expression and ICR methylation within cord-blood HSC reference bounds.
+3.3 Optimization workflow:
+- Initial fractional factorial screen to identify dominant cytokine–time interactions affecting methylation kinetics.
+- Refinement via response surface modeling or Bayesian optimization, explicitly penalizing conditions that improve progenitor markers without endogenous epigenetic correction.
+
+Step 4: Validation of causal remodeling.
+4.1 Within-barcode comparisons: demonstrate methylation and accessibility shifts within identical barcodes pre- vs post-bottleneck under optimized cytokine schedules.
+4.2 Signaling–chromatin coupling: phospho-flow (STAT5/ERK) followed by immediate-early transcriptional responses at endogenous loci to show restored signal integration.
+
+Step 5: Stringent HSC functionality gate (predefined before DOE convergence).
+5.1 In vivo benchmark: NSG xenotransplantation with ≥16-week multilineage engraftment, followed by secondary transplantation to assess self-renewal.
+5.2 Molecular gold standard: compare transcriptomic, ATAC, and methylation signatures to cord blood HSC references, focusing on HOXA/MEIS1 program, enhancer topology surrogates, and imprint stability.
+5.3 Only cytokine programs meeting both in vivo and molecular benchmarks are considered successful outputs.
+
+Deliverable: a cytokine timing and composition specification that reproducibly drives *endogenous* epigenetic remodeling through the bottleneck to yield serially transplantable, imprint-stable HSC-like cells.","This revised design directly addresses reviewer concerns by anchoring all readouts to endogenous loci, preserving native chromatin context, 3D topology, and allele specificity—critical for imprinting biology. Endogenous knock-in transcriptional tags are routine in iPSCs and far less perturbative than synthetic reporters, while targeted single-cell methylome/multiome approaches are now mature enough to longitudinally track specific CREs and ICRs. The addition of high-complexity clonal barcoding provides a definitive experimental separation of cytokine-induced epigenetic remodeling from mere clonal selection, resolving a central causal ambiguity. Factorial DOE remains appropriate but is now explicitly constrained by native epigenetic quality attributes rather than surrogate reporter behavior, reducing overfitting to short-term progenitor phenotypes. Finally, by predefining a stringent success gate—secondary transplantation and cord-blood-benchmarked molecular signatures—the optimization is aligned with true HSC competence rather than yield alone. Together, these refinements transform the proposal from an ambitious sensing strategy into a causally rigorous, transplant-relevant epigenetic engineering framework.","This is an unusually rigorous and sophisticated proposal that directly addresses a well-known failure mode in iPSC-derived HSC generation. Engineering resolution is very high: endogenous CRISPR knock-ins, longitudinal single-cell multiomics, and closed-loop DOE are articulated at an actionable level. Logical consistency is strong, with a coherent mechanistic narrative linking cytokine signaling, enhancer accessibility, methylation maintenance, and imprint stability. Minor deductions arise from cumulative technical risk: simultaneous allele-aware knock-ins at multiple loci, high-quality sc-methylome data across many timepoints, and barcode retention through differentiation push feasibility limits, especially when combined in a single workflow. Evidence grounding is excellent and remains firmly within hematopoietic developmental epigenetics without drifting into speculative frameworks. Rationale quality is high, as the proposal reframes cytokine optimization from a selection problem to a causal epigenetic remodeling problem—an original and field-relevant conceptual advance. The only substantive weakness is the lack of explicit fallback paths if reporter knock-in efficiency, imprint perturbation, or sc-methylome sparsity undermine statistical power."
+"Embedding an explicit, learnable “side chain→backbone H-bond satisfaction constraint” into a discrete-state protein design search (rotamer + backbone-ensemble) will enable predictable multiple-residue mutations that reprogram enzyme substrate specificity by enforcing a targeted active-site loop backbone microgeometry rather than by globally reweighting the molecular mechanics force field. Mechanistically, substrate selectivity will be shifted via conformational selection: a designed cooperative network of side chain→backbone hydrogen bonds that bridges loop-to-core reduces loop entropy and biases φ/ψ and peptide-plane orientation into the substrate-productive pocket shape; this preorganizes sterics and electrostatics for the desired substrate while disfavoring off-target substrates that require alternate loop geometries. Methodological adaptation: convert side chain-backbone hydrogen bonding from a generic pairwise energy term into a topological constraint with explicit donor/acceptor assignment, geometric feasibility, and cooperative coupling (network satisfaction) that is optimized jointly with binding discrimination across substrate poses, while leaving the baseline force field unchanged and using it only as a physical regularizer.","Step 1: Specific system setup or data preparation.
+1.1 Select a medically/bioprocess-relevant enzyme where specificity is known to be loop-gated (e.g., a TIM-barrel enzyme used for chiral pharmaceutical intermediate synthesis, or a clinically relevant hydrolase/transaminase with loop-determined enantioselectivity). Choose a target substrate and 3–6 close analog off-target substrates.
+1.2 Acquire or determine a structural starting point (crystal structure preferred; otherwise AlphaFold2 model refined by short restrained MD). Identify the specificity-determining loop(s) adjacent to the binding pocket using structural comparison (available homolog complexes), B-factors/HDX literature if available, and pocket mapping.
+1.3 Build a backbone ensemble focused on loop degrees of freedom using fragment-based loop rebuilding plus harmonic restraints on the core (generate ~50–200 loop conformers). For each conformer, generate consistent substrate poses for target and off-targets using ensemble docking constrained by catalytic geometry (distance/angle constraints to catalytic residues/cofactors).
+
+Step 2: Detailed implementation of the adapted methodology.
+2.1 Methodological adaptation — H-bond Network Satisfaction Design (HNSD).
+- Represent candidate side chain→backbone hydrogen bonds as binary variables on a graph: nodes are candidate donor/acceptor groups (side chains and backbone CO/NH) within the loop-core interface; edges denote geometrically feasible H-bonds under rotamer and backbone states.
+- Replace an “energy bonus” with a constraint-based objective: maximize the number and cooperativity of satisfied H-bonds subject to (i) strict geometric feasibility (distance, angle, acceptor directionality) evaluated on explicit hydrogens and peptide-plane orientation, (ii) exclusivity constraints (a backbone carbonyl accepts at most one strong donor; donors satisfy at most one acceptor unless bifurcation geometry is feasible), (iii) burial gating (only count H-bonds if local environment is sufficiently buried; compute burial from solvent-accessible surface area per conformer), and (iv) register/turn compatibility (only allow bonds compatible with the conformer’s φ/ψ and secondary-structure context).
+- Introduce cooperative coupling: reward closed cycles and multi-edge motifs that connect loop residues to a rigid core “anchor” residue set (2nd-shell core positions) because these motifs reduce loop entropy more than isolated bonds. Implement as subgraph-count terms (e.g., 3–5 member motifs) in an integer linear program (ILP) or mixed-integer quadratic program.
+2.2 Coupled specificity design objective.
+- Multi-state, multi-substrate optimization over (sequence, rotamers, loop conformers):
+  Objective = w_stab*E_phys(apo ensemble) + w_bind*[ΔE_bind(target) − logsumexp_offtargets(ΔE_bind(off-targets))] − w_HNSD*HNSD_score
+  where E_phys uses an unmodified, standard molecular mechanics/implicit-solvent scoring function only to prevent clashes, preserve fold stability, and maintain catalytic geometry; HNSD_score is the constraint-satisfaction/cooperativity score described above.
+- Search strategy: alternating optimization
+  (A) ILP chooses mutation set + hydrogen-bond network edges across the ensemble;
+  (B) rotamer packing + local minimization per conformer enforces geometry;
+  (C) prune designs that violate catalytic constraints or destabilize the apo ensemble.
+- Multiple-residue mutation design: allow 4–12 positions (loop + second-shell anchors) to vary, explicitly requiring at least one loop residue and one core/anchor residue participate in the H-bond network, ensuring a true loop-to-core “latch.”
+2.3 Library synthesis plan.
+- From the Pareto front (specificity vs stability vs HNSD_score), pick 24–48 designs plus controls: (i) same mutation count but with HNSD disabled, (ii) designs maximizing binding score only, (iii) single-point “network break” variants predicted to disrupt a key edge.
+
+Step 3: Rigorous validation and analytical framework.
+3.1 Biochemical validation of substrate specificity.
+- Express and purify variants; measure steady-state kinetics (kcat, KM) for target and each off-target to compute specificity constants (kcat/KM) and a selectivity index (target over best off-target). If relevant, quantify enantioselectivity (E value).
+3.2 Structural/dynamic validation of the proposed mechanism.
+- Determine structures for top 2–4 variants (X-ray/cryo-EM depending on size; NMR for small enzymes/loops). Explicitly verify the designed side chain→backbone H-bond network geometry and loop backbone microgeometry (φ/ψ, peptide-plane orientation, loop-to-core distance metrics).
+- Measure loop dynamics: HDX-MS focusing on the engineered loop segment (expect reduced exchange) and/or NMR relaxation (reduced R2 dispersion) to demonstrate reduced conformational heterogeneity.
+3.3 Causal tests (network dependency).
+- Create single back-mutations that selectively break one H-bond edge (donor→non-donor; acceptor→non-acceptor) without changing pocket volume, and measure whether specificity reverts while global stability remains comparable.
+- Introduce compensatory mutations predicted to restore the same network topology with different residue identities (network-isomorphic rescue). Restoration of specificity would support the topological/network mechanism over idiosyncratic side-chain packing.
+3.4 Computational ablations and generalization.
+- Run independent MD for a subset (WT, best design, network-break mutant) to quantify loop state populations and H-bond occupancies; correlate experimentally measured selectivity with HNSD-predicted network satisfaction across the ensemble.
+- Test transfer to a second homolog enzyme (same fold, different baseline specificity) to assess whether the network-topology approach generalizes beyond a single scaffold.","1. Theoretical/Empirical Basis: Side chain-backbone hydrogen bonds have been shown to enforce strand/loop register and stabilize designed folds; multi-residue mutation can produce cooperative stability/function gains when interactions are designed as networks rather than isolated contacts. Constraint-based (graph/ILP) optimization is well established for protein side-chain packing and can be extended to encode explicit hydrogen-bond feasibility and exclusivity.
+2. Transfer Logic (How the adaptation fits the domain): Substrate specificity in many enzymes is governed by active-site loop conformational selection. Designing a loop-to-core H-bond “latch” directly targets the physical determinant of pocket shape and preorganization, enabling rational reprogramming of specificity with a compact, testable library—highly aligned with biocatalysis and biomedical enzyme redesign.
+3. Comparative Advantage: Unlike the rejected approach, this does not modify or reparameterize a molecular mechanics force field. It introduces a structurally novel adaptation: hydrogen bonding is treated as a discrete, cooperative, topology-constrained design variable coupled to multi-substrate discrimination. This directly addresses a common failure mode (designs that score well yet fail to realize intended loop microgeometry) by enforcing realizable, mutually compatible side chain→backbone H-bond networks and validating causality via network-break/rescue experiments.","This is a technically ambitious and unusually well-specified proposal that demonstrates strong command of modern protein design methodology. The central logic—biasing loop conformational selection via designed side chain→backbone H-bond networks rather than global force-field tuning—is internally consistent and addresses a genuine failure mode in specificity design. The HNSD formulation is novel and well motivated, and the experimental plan includes rare but important causal tests (network break and isomorphic rescue). Minor score deductions arise from practical risk rather than conceptual flaws: (i) the ILP/MILP formulation with cooperative subgraph terms across backbone ensembles may become computationally intractable without clearer pruning or decomposition strategies, (ii) burial gating and peptide-plane orientation constraints are stated but not quantitatively parameterized, and (iii) the dependence on high-quality loop ensembles and docking poses may blur whether observed specificity gains stem from the H-bond network or from conventional packing effects in some cases. These issues do not undermine feasibility but introduce executional risk."
+"Ligand-binding affinity changes (ΔΔGbind) produced by controlled perturbations (single-point mutations at the protein–ligand interface and/or congeneric ligand substitutions under matched assay conditions) are partially mediated by *changes in the conditional distribution of residue torsion-angle microstates given a standardized local solvation field*. Mechanistically, mutations or ligand substitutions reshape the interfacial hydration free-energy landscape (water occupancy and hydrogen-bond topology), which in turn stabilizes or destabilizes specific backbone/sidechain torsion basins; these shifts alter (i) pre-organization penalties, (ii) water-mediated enthalpic contacts, and (iii) conformational entropy at the interface, contributing causally to ΔΔGbind. We will test this by learning an explicit conditional energy correction—Torsion–Solvation Coupled Potential (TSCP)—that is trained on *paired, assay-matched ΔΔG labels* (mutation series / congeneric ligand series / deep mutational scanning enrichment mapped to ΔΔG) with leakage-resistant splits, and by requiring prospective, falsifiable structural and thermodynamic signatures (torsion shifts, water displacement/retention, and ITC-derived ΔH/−TΔS changes) for selected single-point mutants. This approach overcomes the reviewer-noted confounding of heterogeneous PDB affinity labels by (1) anchoring supervision to controlled perturbations where ΔΔG is attributable to a localized change, (2) standardizing the solvation representation via a unified water placement/sampling protocol rather than variable crystallographic waters, and (3) using a conditional energy model whose target is identifiable at the *difference* (ΔΔG) level within matched pairs, reducing spurious correlations driven by protein family, ligand chemotype, or assay conditions.","Step 0 — Pre-registration (mechanism-first constraints)
+0.1 Pre-register (internally and in an OSF-style timestamped document) three falsifiable predictions for a small mutant panel (n=6–10 single mutants): (i) direction and approximate magnitude of ΔΔGbind, (ii) specific torsion-basin shifts (e.g., χ1 trans→gauche− occupancy increase at residue i; φ/ψ shift into adjacent Ramachandran basin), and (iii) specific water occupancy change (e.g., displacement of a bridging water at site W1 or stabilization of a 2-water chain), plus an expected ITC signature (ΔΔH-driven vs −TΔS-driven).
+
+Step 1 — Datasets emphasizing controlled perturbations (replace heterogeneous IC50/Kd aggregation)
+1.1 Primary supervised dataset (ΔΔGbind labels):
+  a) SKEMPI-like protein–protein mutation ΔΔG is not directly ligand-binding; therefore prioritize ligand-binding mutation datasets where available (e.g., enzyme–inhibitor complexes, antibody–hapten where applicable) and curated literature sets with measured Kd/ΔG for WT and mutants under identical conditions.
+  b) Deep mutational scanning (DMS) binding selections for a specific target–ligand system (or receptor–small molecule proxy if available). Map enrichment to ΔΔG via a calibrated logistic/thermodynamic model using a subset with absolute Kd measurements.
+  c) Congeneric ligand series for a fixed protein (e.g., kinase inhibitor series) with matched biochemical assay conditions (same substrate, ATP concentration, temperature, buffer, and mode of inhibition). Use only series where Ki (or Kd) is measured; if IC50 appears, include only when competitive inhibition and Km, [S], and [I] regime are known to apply Cheng–Prusoff reliably; otherwise exclude.
+1.2 Auxiliary structural dataset (unsupervised/statistical regularization): high-resolution PDB protein–ligand complexes (≤2.0–2.5 Å where feasible) for learning torsion/solvation joint statistics, but *not* used as primary affinity supervision.
+1.3 Metadata curation: for every affinity datapoint store assay temperature, pH, buffer, ionic strength, co-factors, protein construct, and ligand protonation state. Exclude or stratify conditions that differ.
+
+Step 2 — Unified, coverage-consistent solvation representation (avoid crystallographic water bias)
+2.1 Standardize protonation/tautomer states using a single pipeline (e.g., Epik/PropKa-like + manual rules for metal sites), generating an ensemble if ambiguous; propagate uncertainty into training via marginalization (average features across plausible microstates).
+2.2 For each complex, compute a *standardized interfacial hydration field* independent of deposited waters:
+  a) Define an interface box around the ligand (e.g., all grid points within 6 Å of ligand heavy atoms and within 6 Å of any protein heavy atom).
+  b) Generate water occupancy and water thermodynamics using one consistent method across all structures:
+     - Preferred: Grand Canonical Monte Carlo (GCMC) hydration sampling in the binding site with a fixed protocol (chemical potential calibrated to bulk water, fixed number of steps, identical force field settings).
+     - Alternative (if GCMC infeasible at scale): 3D-RISM with a single solvent model and closure, then post-process into occupancy/enthalpy-like descriptors.
+  c) Convert hydration output into fixed-size features: per-voxel occupancy p(w), local hydration free energy proxy ΔGhyd(voxel), and graph features for high-occupancy sites (nodes = hydration sites; edges = H-bond feasible connections).
+2.3 Compute residue-level solvation descriptors from the standardized hydration field: for each residue within 6 Å of ligand, aggregate nearby hydration-site statistics (e.g., sum of occupancy in a 3.5 Å sphere around sidechain heteroatoms; count of bridging-water candidates between residue and ligand; hydration-site entropy proxy from occupancy distribution).
+
+Step 3 — Torsion microstates and local structural context
+3.1 For each interfacial residue, compute backbone φ/ψ and sidechain χ angles; discretize into chemically meaningful basins:
+  a) Backbone: Ramachandran basins (αR, β, αL, etc.) using a standard partition.
+  b) Sidechains: rotameric states (e.g., Dunbrack-like bins) plus continuous offsets.
+3.2 Define “torsion microstate” z as a categorical label with optional continuous refinement δ (small-angle offsets). Include an order parameter for flexibility (e.g., multi-rotamer accessibility estimated by steric score + local packing).
+
+Step 4 — TSCP as an explicit conditional energy model with an identifiable training target
+4.1 Define the total scoring function for a mutant/ligand variant relative to WT:
+  ΔΔGpred = ΔΔGbase + ΔΔGTSCP
+  where ΔΔGbase comes from an existing physically motivated term (e.g., EvoDesign-like evolutionary/profile energy for foldability + a standard protein–ligand scoring baseline), and ΔΔGTSCP is the learned correction.
+4.2 TSCP is defined as a *difference of conditional free energies* over torsion microstates under a standardized solvation field:
+  For a given structure s with features x (including standardized hydration descriptors), define
+  Fθ(s) = −kT · log Σz exp(−Eθ(z, x)/kT)
+  where Eθ(z, x) is a neural energy function (small MLP or additive model) that outputs an energy for microstate z given x. Then
+  ΔΔGTSCP = Fθ(s_variant) − Fθ(s_WT).
+  This construction (a) makes torsion contributions explicit and (b) forces the model to explain ΔΔG through changes in torsion–solvation energetics rather than arbitrary correlations.
+4.3 Architectural specificity:
+  a) Inputs x: residue identity, local backbone geometry, SASA/depth, counts/types of nearby polar atoms, ligand functional group descriptors, and standardized hydration-site features (occupancy/ΔGhyd summaries + bridging-water indicators).
+  b) Model form: additive over interfacial residues i (within 6 Å):
+     Eθ(z, x) = Σi Eθ,i(zi, xi)
+     with a low-rank coupling term only for residue pairs that share a hydration site (captures water-bridged cooperativity) to avoid over-flexible global networks.
+  c) Regularization: (i) sparsity penalty on hydration-coupling terms, (ii) monotonic constraints for simple physics-aligned relationships (e.g., increasing reward for forming a water bridge when occupancy increases), and (iii) calibration prior tying predicted ΔΔGTSCP scale to kcal/mol.
+4.4 Training objective (clear, leakage-resistant):
+  a) Supervised loss on paired perturbations (mutation pairs, congeneric ligand pairs): Lsup = Huber(ΔΔGpred − ΔΔGexp).
+  b) Auxiliary likelihood/consistency loss to match torsion distributions only within the same protein family/condition block (prevents the model from “learning” family identity): Laux = KL(pdata(z|x) || pθ(z|x)) computed on held-out structures but *not* across blocks.
+  c) Total loss: L = Lsup + λ·Laux + regularization.
+
+Step 5 — Split strategy and confounding control (mandatory)
+5.1 Blocked cross-validation to prevent leakage:
+  a) Protein-family blocking: no sequence-similar proteins across train/test above a threshold (e.g., 30% identity) and/or no same Pfam.
+  b) Ligand-chemotype blocking: cluster ligands by scaffold/fingerprint; ensure scaffolds in test are absent from training where required.
+  c) Assay-condition blocking: when multiple conditions exist, train/test splits must not mix conditions for the same target–ligand series.
+5.2 Negative controls:
+  a) Label permutation within blocks (should collapse performance).
+  b) Train with hydration features randomized (should reduce any claimed water-mediated improvement).
+
+Step 6 — Integration into EvoDesign-like Monte Carlo design (with selective structural priors)
+6.1 Use an EvoDesign-style evolution-profile Monte Carlo search for sequence proposals to preserve foldability, but modify acceptance to include TSCP-derived ΔΔGTSCP for interfacial residues.
+6.2 Joint sampling: at an interfacial position, propose (amino acid, rotamer basin zi) pairs; compute acceptance using the microstate-marginalized Fθ rather than a single fixed rotamer.
+6.3 Structural priors (responding to helix-only critique):
+  a) Do not apply helical amphiphilicity constraints globally.
+  b) Apply PDB-derived position-dependent helical propensities only when the scaffold segment is a stable helix (secondary structure consensus across templates) and when the residue is not predicted to undergo induced-fit torsion switching (identified by high microstate entropy under pθ(z|x)).
+  c) For loops/β-strands, replace helical priors with context-appropriate torsion/solvent-accessibility priors (Ramachandran basin priors + strand amphipathicity metrics), or leave unconstrained if design success requires flexibility.
+
+Step 7 — Prospective validation designed to support mechanism, not just prediction
+7.1 Select one biomedically relevant target with: (i) tractable expression, (ii) available congeneric ligand series or measurable Kd, and (iii) crystallography/cryo-EM feasibility.
+7.2 Design a small, interpretable mutant panel (n=6–10) plus an expanded panel (n=20–50) guided by TSCP:
+  a) Mechanism panel: single mutations predicted to (i) flip a specific χ1 basin and (ii) displace/retain a specific hydration site, with predicted ITC ΔH/−TΔS direction.
+  b) Performance panel: top-ranked affinity-improving variants with foldability constraints.
+7.3 Experimental measurements:
+  a) Folding/stability: DSF + CD; exclude destabilized variants from affinity interpretation or model ΔΔGbind with stability covariate.
+  b) Binding: SPR/BLI for kinetics and Kd; ITC for ΔH and −TΔS for the mechanism panel.
+  c) If enzymatic: Ki under matched conditions (avoid IC50 unless mechanistically justified).
+7.4 Structural tests (hard mechanism gate): determine structures for a subset (≥3 mutants), and score success by:
+  a) torsion basin agreement (does observed χ/φ/ψ shift match predicted direction?),
+  b) hydration-site agreement using electron density where possible plus comparison to standardized hydration predictions (GCMC/3D-RISM sites),
+  c) correspondence between predicted water-bridge changes and observed H-bonding geometry.
+
+Step 8 — Analysis and decision criteria
+8.1 Report both predictive metrics (RMSE/Spearman on blocked splits) and mechanism metrics:
+  a) fraction of mechanism-panel mutants where torsion shift direction is correct,
+  b) fraction where hydration-site displacement/retention is correct,
+  c) agreement of ITC signature (ΔH vs −TΔS dominated) with predicted torsion–solvation mechanism.
+8.2 A priori success thresholds (example): significant improvement over baseline on blocked splits, plus ≥70% correct directionality on torsion shifts for mechanism panel, plus consistent ITC signature in ≥60% of cases.
+
+Deliverables
+- A TSCP model with explicit microstate marginalization, trained on paired ΔΔG supervision.
+- A standardized hydration feature pipeline (GCMC/3D-RISM) ensuring uniform coverage.
+- A validated design workflow that preserves foldability while optimizing torsion–solvation microstates at interfaces.","Causal rigor and identifiability: The revised plan replaces heterogeneous PDB affinity aggregation with paired, controlled perturbation data (mutation series, congeneric ligand series, DMS), making ΔΔG labels locally attributable and reducing confounding by protein family, ligand series, and assay conditions. TSCP is defined as an explicit conditional free-energy model Fθ(s)=−kT logΣz exp(−Eθ(z,x)/kT), so the learned contribution is mechanistically tied to torsion microstates under a standardized solvation field; training directly targets ΔΔG differences (variant–WT), which is more identifiable than absolute affinity regression across unrelated systems.
+
+Bias control and leakage resistance: The split strategy blocks simultaneously on protein family, ligand chemotype, and assay condition, directly addressing reviewer concerns about spurious predictive gains. Negative controls (label permutation within blocks; randomized hydration features) will quantify whether performance truly derives from torsion–solvation coupling.
+
+Water feature robustness: Instead of relying on inconsistent crystallographic waters (variable occupancy/resolution), the plan standardizes interfacial water treatment using a single protocol (GCMC preferred; 3D-RISM as fallback), yielding coverage-consistent hydration features for every complex and reducing artifacts from missing waters.
+
+Regularization and physical anchoring: TSCP is constrained by (i) an additive residue-level decomposition with sparse, hydration-mediated coupling, limiting overfitting across diverse chemotypes, and (ii) explicit calibration to kcal/mol scale via supervised ΔΔG labels and optional small reference calculations. The model is therefore less reliant on a flexible black-box network and more aligned with interpretable, residue-local energy corrections.
+
+Scope-appropriate structural priors: Helical amphiphilicity priors are applied selectively only to stable helices and are explicitly relaxed for flexible/induced-fit regions, preventing the foldability constraints from suppressing beneficial torsional changes at non-helical interfaces (loops/β-strands).
+
+Mechanism validation beyond prediction: The proposal now includes pre-registered, falsifiable tests requiring concordance among (a) predicted ΔΔGbind, (b) observed torsion-basin shifts, (c) water displacement/retention, and (d) ITC-derived enthalpy/entropy signatures for a small, interpretable mutant panel—directly strengthening the causal claim beyond correlational performance gains.","This is an unusually rigorous and technically mature proposal that squarely addresses well-known confounders in structure–affinity learning. Engineering resolution is very high: the TSCP formulation, hydration standardization via GCMC/3D-RISM, leakage-resistant splits, and pre-registered falsifiable experiments are all actionable and state-of-the-art. Logical consistency is strong: the causal chain from mutation/ligand change → solvation landscape → torsion microstate redistribution → enthalpy/entropy partitioning is internally coherent and the choice to supervise on ΔΔG differences materially improves identifiability. Minor logical risk remains in the assumption that residue-additive torsion energies with sparse hydration-mediated coupling will be sufficient for systems with strong multi-body induced fit; this is mitigated but not eliminated by the proposed coupling terms. Evidence grounding is excellent and remains within biophysics and structural biology without drifting into irrelevant ML abstractions. Rationale quality is high: the proposal directly tackles a recognized bottleneck—heterogeneous affinity labels and unphysical water handling—and offers a structurally novel solution rather than incremental refinement. Overall weaknesses are limited to feasibility at scale (GCMC cost, ITC throughput) and the statistical power of small mechanism panels, not conceptual soundness."
+"If boundary residues in de novo therapeutic miniproteins (35–60 aa) are explicitly optimized as a geometry-aware “solvation-and-frustration gasket” around the hydrophobic core—by (i) learning a differentiable hydration-field potential that rewards formation of a stable, localized hydration shell at the core–boundary interface while disfavoring water-wire–like geometries that penetrate toward the core, and (ii) enforcing negative design through an explicit, topological core-wetting susceptibility penalty computed over a near-native backbone ensemble—then designs will exhibit (a) a larger operational native–misfolded free-energy-gap surrogate (ΔG* = F(decoy ensemble) − F(native basin)), (b) reduced microsecond–millisecond boundary exchange indicative of fewer transient core-exposure events, and (c) lower concentration/stress-induced aggregation, while preserving binding function.
+
+Mechanistic rationale: Standard CPD often succeeds at native-state packing but underconstrains the kinetic/thermodynamic accessibility of partially wetted, alternative collapsed basins that seed aggregation. Boundary residues couple core packing to solvent access; small boundary rearrangements can create transient solvent pathways that lower the free-energy cost of non-native collapse by stabilizing partially hydrated intermediates. BHFiND overcomes this by optimizing an explicit boundary-local hydration free-energy term (favoring “wet-but-not-penetrating” hydration motifs) and by imposing a decoy-ensemble penalty on solvent-channel connectivity into the core. Together, these reshape the landscape by increasing the energetic and entropic barriers to core wetting (reducing population of aggregation-competent intermediates) while maintaining a thin structured hydration layer that stabilizes the boundary conformation. The expected experimental signature is increased residue-specific amide protection at the core–boundary interface and reduced residue-specific exchange contributions in labeled NMR reporters, consistent with a reduced frequency of transient wetting/exposure events.","BHFiND will be made executable as a Rosetta-centered CPD + differentiable hydration-field + explicit decoy-ensemble negative design stack, with MD benchmarking and calibrated mutational sensitivity regularization.
+
+A. Targets, controls, and pre-registration
+1) Select two miniprotein therapeutic modalities (35–60 aa):
+   A1) Protease-inhibitory miniprotein (e.g., kallikrein/thrombin-inhibitor-like fold with constrained loop + compact core).
+   A2) Cytokine-receptor antagonist binder (compact helical bundle with defined interface).
+   Inclusion criteria: (i) known developability bottleneck in the class (aggregation at >10–50 mg/mL or stress sensitivity), (ii) compatible with bacterial expression and isotope labeling.
+
+2) Define matched design arms (n≥30 sequences per target per arm):
+   Arm BHFiND: native-energy + hydration-field + core-wetting susceptibility + mutational sensitivity regularizer.
+   Arm E-native: standard Rosetta (ref2015) fixed-backbone (or flexible-backbone) CPD optimizing only native-state energy.
+   Arm E-surface: Rosetta CPD + increased polar surface heuristic (solubility-biased) without pathway/topology penalty.
+
+3) Pre-registered success criteria (per target, aggregated across constructs):
+   S1) ΔG* improvement: median ΔG*BHFiND − ΔG*control ≥ +3.0 kBT (computed as in Section F).
+   S2) Aggregation reduction: ≥2× lower SEC aggregate fraction after defined stress (thermal + agitation) at matched concentration.
+   S3) NMR mechanism: statistically significant increase in boundary-interface protection factors and decrease in fitted exchange contributions (Rex) on predefined reporters vs controls.
+   S4) Function retention: ≥70% affinity retained post-stress vs ≤40% for at least one control arm (SPR/BLI).
+
+B. Data assets and residue labeling for “boundary”
+4) Training/validation structure set for hydration-field model and boundary definition:
+   B1) Curate ~500–1500 high-resolution protein structures enriched for small proteins/miniproteins (≤120 aa), including NMR ensembles and X-ray.
+   B2) For each structure, compute per-residue continuous boundary score b_i ∈ [0,1] using a weighted combination:
+       b_i = sigmoid(α1·(SASA_i − τSASA) − α2·(ρpack_i − τpack) + α3·ΔSASA_i(local gradient))
+       where ρpack_i is local packing density (e.g., # heavy atoms within 8 Å), and ΔSASA_i is spatial SASA gradient relative to neighbors.
+   B3) Define “core” residues as low SASA & high packing; “surface” as high SASA; “boundary” as intermediate with high SASA gradient and intermediate packing.
+
+C. Computational stack overview (fully specified)
+5) CPD engine: Rosetta (flexible-backbone FastDesign) with ref2015 energy.
+   C1) Backbone ensembles: generate K=50 near-native backbone microstates per target using:
+       (i) Rosetta Backrub + small/shear movers for helices/loops; and/or
+       (ii) diffusion-based backbone sampling (e.g., RFdiffusion) constrained to topology, followed by Rosetta relax.
+   C2) Side chains represented as rotamers; designable positions include boundary + selected surface; core mostly fixed except in dedicated ablation tests.
+
+6) Differentiable hydration-field model class (SE(3)-equivariant):
+   D1) Architecture: SE(3)-equivariant graph neural network (e.g., e3nn-style) operating on local atomic graphs around boundary residues.
+       Nodes: heavy atoms within 10 Å of each boundary residue’s side chain + backbone atoms.
+       Edge features: distances, directional unit vectors, atom types, partial charges (from Rosetta/standard), hydrogen-bond donor/acceptor flags.
+       Outputs per boundary residue i:
+         (a) H_i: predicted “hydration stabilization score” (favors stable shell near boundary)
+         (b) Pwire_i: predicted probability of forming a penetrating water-wire geometry toward the core (to be penalized)
+   D2) Training signal/labels from explicit-solvent MD (ground truth):
+       Create an MD benchmark set of ~60 small proteins/miniproteins (including a subset of our scaffolds and similar folds), simulate each in explicit solvent (e.g., AMBER ff19SB + OPC water) for 200–500 ns.
+       Compute per-frame water occupancy grids and derive residue-local hydration metrics:
+         - Shell occupancy O_shell(i): average water density in a 2.5–4.5 Å annulus around boundary side-chain heavy atoms.
+         - Penetration connectivity C_core(i): probability that a connected water cluster links bulk solvent to any core voxel (defined below) passing within 3.5 Å of boundary residue i.
+         - Bridging-water likelihood B(i): probability of ≥1 water simultaneously H-bonded (distance/angle criteria) to two polar groups near boundary.
+       Define labels:
+         yH_i = z-score(O_shell(i)) + λB·z-score(B(i))
+         ywire_i = C_core(i)
+   D3) Loss:
+       L = Σ_i [ wH·Huber(H_i − yH_i) + wW·BCE(Pwire_i, ywire_i) ] + Lreg
+       with Lreg including weight decay and calibration term to match marginal ywire distribution.
+   D4) Coupling to CPD (backprop through rotamer choices):
+       We do not require differentiating through discrete rotamer selection. Instead, we use a two-level optimization:
+         - Outer loop (Rosetta): discrete sequence/rotamer sampling.
+         - Inner scoring: hydration-field model scores each candidate pose; scores are used in Metropolis acceptance / ranking.
+       To increase smoothness, we additionally evaluate top rotamers with a softmin aggregator:
+         H_pose = Σ_i b_i · ( −log Σ_r exp(−β·H_i(r)) )
+         Pwire_pose = Σ_i b_i · ( Σ_r π_r · Pwire_i(r) )
+       where r enumerates rotamers at residue i in the pose, and π_r are normalized Boltzmann weights from Rosetta side-chain energies.
+
+D. Explicit objective formulas (BHFiND scoring function)
+7) For each sequence s on backbone conformation k (pose p_{s,k}):
+   Native energy term:
+     E_native(s,k) = Rosetta_ref2015(p_{s,k})
+
+   Hydration-field term (boundary-local):
+     E_hyd(s,k) = −λshell·H_pose(s,k) + λwire·Pwire_pose(s,k)
+     (encourages stable boundary hydration shell; penalizes penetrating/wire propensity)
+
+   Core-wetting susceptibility (topological/graph metric; negative design over ensemble):
+8) Define a 3D grid around the protein (voxel size ~1.0 Å) and compute solvent-accessible free space using rolling probe (radius 1.4 Å) on the pose.
+   Define “core region” as voxels within 4.0 Å of any core heavy atom and not solvent-accessible in the native reference.
+   Define “solvent region” as voxels connected to the box boundary.
+
+9) Build a connectivity graph G of accessible voxels; edges connect 6-neighbors.
+   Compute minimal “channel cost” from solvent to core using a weighted shortest path where each voxel v has cost:
+     cost(v) = a·(1 − SASA_free(v)) + b·HydrophobicityPenalty(v)
+   Practically, implement as:
+     WCS(s,k) = exp(−d*(solvent→core))
+   where d* is the minimal path integral cost; high WCS indicates an easy channel.
+
+10) Persistent-homology augmentation for robustness:
+   Compute persistence of 1D tunnels (β1 features) in the solvent-accessible mask near the boundary–core interface; define:
+     PH_tunnel(s,k) = Σ_{tunnels} persistence_length
+   and include as additive penalty.
+
+11) Ensemble negative design penalty:
+   Generate K backbones {k} and compute:
+     E_wet(s) = λwet · log( (1/K) Σ_k exp(γ·WCS(s,k)) ) + λPH·(1/K)Σ_k PH_tunnel(s,k)
+   (log-sum-exp focuses penalty on worst-case near-native conformations; γ tunes sharpness)
+
+E. Calibrated mutational sensitivity regularizer (replacing lattice idea)
+12) Data-backed ΔΔG predictor:
+   E1) Use experimental ΔΔG datasets (e.g., ProTherm/FireProt-style curated sets; focus on small proteins) plus internal measurements from a pilot set.
+   E2) Fit a boundary-focused mutational sensitivity model that predicts ΔΔG_fold for single mutants at boundary positions using either:
+       (i) a pretrained model (e.g., a structure-conditioned ΔΔG predictor) calibrated by isotonic regression to our small-protein regime; and/or
+       (ii) alchemical FEP on a small subset (e.g., 30 boundary mutations across 5 scaffolds) to anchor calibration.
+   E3) For each candidate designed sequence s, compute expected boundary fragility:
+       Frag(s) = Σ_{i in boundary} b_i · E_{a'≠a_i}[ ReLU( ΔΔG_pred(i: a_i→a') − ΔΔG_thresh ) ]
+       where ΔΔG_thresh (e.g., 1.5 kcal/mol) sets tolerance; expectation over likely mutation spectrum (uniform or empirically weighted).
+   Add to objective:
+       E_robust(s) = λrobust · Frag(s)
+   This explicitly regularizes against boundary positions where plausible single mutations greatly destabilize folding / increase exposure.
+
+F. Full BHFiND sequence objective and optimization protocol
+13) Define native-basin score on the design backbone k0 and ensemble penalty over k=1..K:
+   Score_BHFiND(s) = E_native(s,k0) + E_hyd(s,k0) + E_wet(s) + E_robust(s)
+
+14) Optimization workflow:
+   F1) Stage 1 (coarse search): Rosetta FastDesign with restricted amino-acid sets per position (core: hydrophobes; boundary: mixed polar/charged with constraints; surface: polar) while scoring with Score_BHFiND.
+   F2) Stage 2 (refinement): allow expanded amino-acid alphabets at boundary; perform multi-start simulated annealing over sequences; re-rank by Score_BHFiND.
+   F3) Stage 3 (decoy sampling for ΔG*): For each top design, generate M=2000 decoys via Rosetta ab initio / backrub / loop perturbation + relax; compute ΔG* surrogate:
+       ΔG*(s) = F_decoy − F_native
+       with F_native = −kBT·log Σ_{j in native basin} exp(−E_total(j)/kBT)
+            F_decoy  = −kBT·log Σ_{j in decoy basin}  exp(−E_total(j)/kBT)
+       Basin definition: native basin = decoys with Cα-RMSD < 2.0 Å and correct secondary structure; decoy basin = RMSD > 4.0 Å or with detected core wetting channel WCS above threshold.
+   Pre-register thresholding and ensure same protocol for all arms.
+
+15) MD benchmark validation of WCS metric (mandatory per critique):
+   G1) For ~10 designed sequences per arm (across both targets), run explicit-solvent MD (200–500 ns) and quantify true core-wetting events as water occupancy within a core cavity region and solvent-to-core connectivity.
+   G2) Correlate WCS/PH_tunnel computed on static structures and small backbone ensembles with MD-derived wetting event frequency; adjust metric weights (a,b,λPH) on a held-out set.
+
+G. Experimental validation (tightened, labeled, hypothesis-linked)
+16) Expression and labeling:
+   H1) Produce unlabeled constructs for screening and uniformly 15N-labeled constructs for NMR; include 13C labeling for a subset used in relaxation dispersion if needed.
+   H2) Standardize buffer, pH, ionic strength; include formulation-like stress conditions (temperature ramp, agitation, freeze–thaw).
+
+17) Thermodynamics + aggregation:
+   I1) Chemical denaturation (urea/GuHCl) to obtain ΔG_fold and m-value; thermal melts (CD/DSF as appropriate).
+   I2) SEC-MALS and DLS for oligomer/aggregate quantification at relevant concentrations; accelerated stress test with pre-defined time/temperature.
+
+18) NMR experiments (explicitly feasible and residue-specific):
+   J1) 2D 1H-15N HSQC for fold verification and dispersion; assignment strategy appropriate for 35–60 aa (standard triple resonance for subset if 13C/15N-labeled; otherwise HSQC-based with selective labeling where necessary).
+   J2) HDX protection factors using 15N-HSQC time series after D2O exchange:
+       - Quantify residue-specific exchange rates kex and compute protection factor PF = kint/kex using intrinsic rate models.
+       - Focus on predefined boundary–core reporters (highest b_i and near core).
+   J3) Relaxation dispersion on boundary reporters:
+       - Use 15N CPMG or R1ρ on selected residues (boundary positions predicted to gate wetting).
+       - Fit two-state exchange to obtain Rex and exchange parameters; compare BHFiND vs controls.
+   J4) PRE with explicit ensemble interpretation:
+       - Introduce site-specific paramagnetic label (e.g., MTSL on engineered Cys at boundary positions away from binding interface).
+       - Measure PRE Γ2 on 1H-15N (and/or 1H-13C) reporters.
+       - Interpret via an explicit two-ensemble model: native basin + minor non-native/open basin; reweight populations to match PRE + dispersion, constraining that “open basin” corresponds to decoy ensemble structures with high WCS.
+       - Controls: diamagnetic analog; label at a non-boundary surface position to decouple generic PRE broadening from wetting-gating hypothesis.
+
+19) Mechanistic falsification tests (boundary specificity):
+   K1) Boundary ablation scan: single-point mutants predicted to disrupt hydration gasket (charge reversal, polar→hydrophobe) at high-b_i positions; predict increases in WCS and decreases in PF; validate by HSQC-HDX and aggregation.
+   K2) Core-control scan: introduce matched-magnitude core substitutions while keeping boundary fixed; test whether BHFiND sensitivity is boundary-dominant (greater destabilization/aggregation upon boundary perturbation than comparable core perturbations within BHFiND designs).
+
+20) Biomedical function:
+   L1) SPR/BLI affinity (KD, kon/koff) pre- and post-stress.
+   L2) Functional inhibition/antagonism assays as appropriate for target class; define retention metrics and compare across arms.
+
+Deliverables and checkpoints:
+- Month 0–3: build datasets; implement hydration-field GNN; implement WCS/PH metric; small MD benchmark.
+- Month 3–6: design generation across arms; compute ΔG*; downselect.
+- Month 6–12: expression/purification; thermodynamics/aggregation screening.
+- Month 12–18: labeled NMR (HSQC, HDX, dispersion); PRE ensemble reweighting; mechanistic scans.
+- Month 18–24: refine model weights; second design round; function-retention validation.","1) Implementability of the computational method: BHFiND is explicitly anchored to Rosetta FastDesign (discrete rotamer/sequence optimization) augmented by two add-on scorers that are executable now: (i) a trained SE(3)-equivariant hydration-field GNN that outputs per-residue shell-stability and penetration/water-wire propensity, and (ii) a deterministic core-wetting susceptibility score computed from solvent-accessible voxel connectivity plus a persistent-homology tunnel penalty. Both are differentiable in their own parameters, and they couple to CPD through candidate scoring/re-ranking (no need for fully differentiable structure optimization). The negative-design metric is validated against an explicit-solvent MD benchmark set to ensure it correlates with bona fide wetting events, addressing the critique that implicit proxies may be untrustworthy.
+
+2) Data-backed replacement for lattice robustness: Instead of an ad hoc lattice-inspired penalty, boundary mutational robustness is regularized using a calibrated ΔΔG predictor trained/validated on experimental ΔΔG datasets and anchored with a small alchemical FEP subset in the miniprotein regime. This yields a concrete, position-wise fragility functional Frag(s) that penalizes boundary sites overly sensitive to plausible single mutations—an actionable proxy for sequence robustness relevant to manufacturability.
+
+3) Misfolded states and the free-energy-gap surrogate are operationally defined: “Misfolded” is not inferred solely from aggregation; it is defined computationally as membership in a decoy basin generated by a standardized perturbation/sampling protocol (RMSD/secondary-structure and/or WCS thresholds). The claim of a larger native–misfolded gap is tested via a pre-registered ΔG* computed from Boltzmann-aggregated energies over native vs decoy basins, applied identically across BHFiND and control arms.
+
+4) NMR plan is realistic and mechanistically matched: The proposal commits to 15N labeling and 2D 1H-15N HSQC-based HDX to obtain residue-specific protection factors at the boundary–core interface. Relaxation dispersion is restricted to predefined boundary reporters and performed with established 15N CPMG/R1ρ methods, acknowledging labeling and cost. PRE is framed correctly as a distance/proximity constraint and interpreted through explicit ensemble reweighting against computational decoys (especially those with high WCS), with diamagnetic and non-boundary labeling controls to prevent overinterpretation.
+
+5) Alignment with prior assets and core concept chain: The plan explicitly leverages boundary-residue classification and negative design principles (hydrophobic core vs boundary), ties stability/aggregation mechanisms to a compact hydrophobic core stabilized by specific residue networks (consistent with NMR-miniprotein literature), and uses population/robustness ideas only insofar as they motivate mutational-sensitivity regularization—now grounded in empirical ΔΔG/FEP calibration rather than lattice heuristics.","This is an unusually well-specified and mechanistically coherent proposal with strong engineering depth. The coupling of boundary-residue physics to explicit negative design against solvent-channel topology is logically sound and addresses a real failure mode of miniprotein CPD. Minor deductions arise from (i) the ambitious scope and integration risk of simultaneously training a hydration-field GNN, calibrating WCS/PH metrics, and running extensive MD/NMR within a single project, and (ii) partial reliance on surrogate quantities (ΔG*, WCS, PH_tunnel) whose transferability across folds, while benchmarked, may still be fold- or topology-dependent. These are feasibility and generalizability risks rather than conceptual flaws."
+"A low-leak, quantitatively benchmarked membrane binding-to-transcription interface (screened across synNotch, split-TEV, and chemically inducible heterodimer controls) can convert extracellular recombinant SARS‑CoV‑2 spike antigen engagement into a reporter output whose magnitude is dominated by engineered NADH/NAD+/redox-state transduction rather than by homeostatic buffering—provided that (i) the interface is first locked to defined kinetics (EC50, leak, response time) and (ii) the redox actuator operates within a pre-defined “signal budget” that perturbs the cytosolic NADH/NAD+ ratio enough to be resolvable by a dedicated NADH/NAD+-responsive sensor but small enough to avoid global compensatory metabolic rewiring. Specificity and low false-signal performance will be achieved not by using MTT as a nonlinear denominator, but by orthogonal, non-destructive viability/stress gating (constitutive luciferase for cell number + Annexin/PI or real-time impedance), with MTT retained only as a terminal corroborative assay and with erythritol treated as an optional variance-reduction reagent whose effect must be empirically calibrated to confirm it lowers assay variance without shifting circuit baselines. Directed evolution will be recast into a recoverable, throughput-compatible selection using FACS on a genetically encoded redox reporter (primary) plus independent viability counters (exclusion), and transferability to a deployable MOF-based biosensor will be demonstrated via an explicit bridging assay in which the same evolved spike binders are rank-ordered in both cell-based (interface-driven reporter) and cell-free/MOF (capture + enzymatic NADH transduction) formats rather than assuming mapping a priori.","Step 0 — Define quantitative performance targets (“acceptance criteria” and signal budget)
+0.1 Define required sensor performance for the cell-based stage: (a) leak (no spike) < 5% of induced signal; (b) on/off fold-change ≥ 5× at 10–50 nM spike; (c) t50 (time to half-max reporter) ≤ 2 h for transcriptional outputs or ≤ 15 min for protease outputs; (d) assay Z’ ≥ 0.5 in 96-well format; (e) false-positive rate (FPR) ≤ 1% when challenged with generic stressors (oligomycin, rotenone, antimycin A, H2O2, FCCP) at sublethal doses.
+0.2 Define an NADH/NAD+ “signal budget” to avoid global compensation: target an engineered cytosolic NADH/NAD+ ratio change of ~10–25% (detectable by genetically encoded sensors) while maintaining ≥ 90% viability and ≤ 15% change in ATP levels over the assay window. This is enforced by actuator tuning (weak/medium promoters, degrons, or short pulse activation) and validated by orthogonal NAD(H) measurements.
+
+Step 1 — Lock down the binding-to-signal interface with quantitative benchmarking (before redox engineering)
+1.1 Benchmark three membrane-proximal architectures in HEK‑293 (primary) with HepG2 (metabolic contrast) using a common spike binder input (initially a known ACE2-mimetic miniprotein or published anti-spike nanobody):
+  A) synNotch-style receptor: extracellular anti-spike binder → Notch core → Gal4VP64 (or TetR-VP64) intracellular TF release upon ligand binding.
+  B) Split-TEV protease reconstitution: binder-induced proximity reconstitutes TEV; TEV cleaves a membrane-tethered TF (e.g., Gal4VP64) to release it.
+  C) Chemically inducible heterodimerization control (rapalog FKBP/FRB or ABI/PYL): provides a non-spike “gold-standard” inducible dynamic range to quantify maximal achievable downstream signaling and calibrate leak.
+1.2 Quantify for each architecture: surface expression (flow cytometry of epitope tag), ligand EC50 (spike titration), maximal fold induction, basal leak, and response time. Include negative controls (irrelevant antigen, binder-dead mutant).
+1.3 Select the interface that meets targets in 0.1 and exhibits the best “dynamic range per leak” while maintaining high membrane expression. Freeze this interface for downstream evolution to avoid confounding variables.
+
+Step 2 — Engineer a redox transduction module that stays within the signal budget
+2.1 Reporter: implement a genetically encoded NADH/NAD+-sensitive fluorescent sensor (SoNar or Peredox) in the cytosol for fast, direct readout; in parallel, implement a transcriptional redox reporter (NADH/NAD+-responsive TF system) only after the fast sensor is validated. Rationale: direct sensors provide higher temporal resolution and reduce ambiguity from transcriptional latency.
+2.2 Actuator: replace “global” LbNOX/LDH overexpression with a tunable, lower-burden redox valve:
+  - Use an inducible, destabilized (degron-tagged) water-forming NADH oxidase (LbNOX) or NAD+ regeneration enzyme expressed at low levels under a minimal promoter driven by the chosen interface.
+  - Add a “pulse-width” controller: TF drives actuator with an mRNA/protein instability element (e.g., PEST degron) so activation is transient, limiting metabolic rewiring.
+  - Include catalytic-dead actuator mutant as an essential mechanistic control.
+2.3 Characterize metabolic burden and compensation: measure ATP (CellTiter-Glo or equivalent), oxygen consumption proxy (optional plate-based OCR if available), and lactate accumulation (enzymatic assay) in induced vs uninduced states to verify the actuator remains within the 10–25% NADH/NAD+ change window without collapsing energy state.
+
+Step 3 — Replace MTT ratio logic with orthogonal, high-throughput-compatible gating; validate erythritol separately
+3.1 Primary gating (non-destructive, recoverable):
+  - Constitutive luciferase (e.g., NanoLuc) to normalize for cell number/translation capacity.
+  - Real-time impedance (if available) or live/dead fluorescence (calcein-AM) as a continuous viability proxy.
+  - Annexin V / PI (or equivalent) as a stress/apoptosis exclusion gate for confirmatory flow cytometry.
+3.2 MTT is demoted to a terminal corroboration assay (not a denominator): run endpoint MTT only on shortlisted variants to compare with Asset-1-like cytotoxicity profiles across HeLa, HepG2, HEK‑293, PC12.
+3.3 Erythritol claim is converted into a testable sub-aim (not assumed):
+  - Perform a calibration experiment with four conditions (± erythritol; ± spike) and known mitochondrial perturbagens (rotenone/oligomycin/FCCP) while reading (i) SoNar/Peredox, (ii) constitutive luciferase, (iii) viability metric, and (iv) MTT endpoint.
+  - Acceptance criterion: erythritol must reduce variance (CV) of redox/viability readouts under nuisance perturbations by ≥ 20% without shifting baseline circuit output (≤ 5% change in mean reporter in no-spike condition). Only if met is erythritol incorporated as an optional assay stabilizer.
+
+Step 4 — Directed evolution recast into a recoverable selection workflow (FACS-first), with explicit screens
+4.1 Library design (two-stage to reduce combinatorial burden):
+  Stage I (binder evolution): error-prone PCR + focused saturation on known interface residues (paratope) of the spike binder; keep the binding-to-signal interface fixed from Step 1.
+  Stage II (coupling optimization): linker length/geometry and intracellular cleavage/release elements (if split-TEV) or synNotch core tuning (if synNotch) using small rational libraries; avoid simultaneous large-scale mutation of multiple modules.
+4.2 Screening pipeline:
+  - Primary screen: FACS on SoNar/Peredox ratio shift upon spike exposure (short incubation window chosen from Step 1 kinetics), gating out cells with reduced constitutive luciferase (proxy for low viability/translation) and/or positive apoptosis markers.
+  - Secondary screen: 96-well validation of top clones for EC50, maximal response, leak, Z’, and robustness under nuisance conditions (mild mitochondrial inhibitors, oxidative stress) to quantify FPR.
+  - Mechanistic confirmation: catalytic-dead actuator abolishes redox shift; binder-dead mutant abolishes spike dependence.
+
+Step 5 — Analytical specificity and clinical-relevance stress testing
+5.1 Specificity panel: unrelated proteins (e.g., albumin, IgG), other coronavirus spikes, and common interferents (high salt, serum variation).
+5.2 Matrix effects: test in increasing serum percentages and in the presence of common nasal/oral swab buffer components to assess robustness.
+5.3 Quantify LOD/EC50 using recombinant SARS‑CoV‑2 spike titrations; report confidence intervals and assay variability across days.
+
+Step 6 — Explicit bridge to a deployable MOF/cell-free format (rank-order transfer assay)
+6.1 Binder transfer assay (mandatory bridge): take the top N evolved binders from cell-based selection and rank them by:
+  - (a) cell-based apparent EC50 and fold-change (interface output and redox shift), and
+  - (b) cell-free binding kinetics/affinity proxy (ELISA/BLI if available) and performance in a standardized capture assay.
+Demonstrate correlation (rank concordance) to justify transferability.
+6.2 MOF capture layer (Asset 1 linkage): functionalize porphyrin-modified NH2‑MIL‑53-like MOF on an optical/electrode substrate as a high-surface-area immobilization scaffold; immobilize binders via oriented conjugation (e.g., His-tag/Ni-NTA or covalent amine coupling).
+6.3 Cell-free NADH transduction module: couple captured spike to an enzymatic NADH/NAD+ readout (e.g., spike-dependent assembly or recruitment of an NADH-consuming enzyme complex) and read via absorbance/fluorescence; parameters used are those shown to stay within the “signal budget” in cells (limited flux to avoid oxygen/side reactions).
+6.4 Compare performance metrics (LOD, dynamic range, time-to-signal) between MOF/cell-free and cell-based formats using the same binder set; iterate binder immobilization chemistry if rank order diverges.
+
+Step 7 — Biocompatibility and materials interaction (Asset 1-aligned)
+7.1 If MOF materials contact cells in any validation: repeat Asset-1-like multi-line MTT and orthogonal viability assays to confirm ≥ 85% viability across relevant concentrations and that materials do not spuriously drive redox reporters.
+7.2 Establish a materials interference checklist: adsorption of spike/binder, porphyrin photoredox effects, and media component interactions; test under light/dark conditions if porphyrin is used.","Binding-to-signal interface rigor: The revised plan explicitly front-loads benchmarking of multiple membrane signaling architectures (synNotch, split-TEV, inducible heterodimer controls) with quantitative metrics (EC50, leak, response time, surface expression). This directly addresses reviewer concern that membrane reconstitution can be slow and leaky; the proposal now selects an interface only after meeting predefined acceptance thresholds and uses chemical induction as a calibration ceiling for downstream circuit capacity.
+
+Redox actuator risk management: Instead of assuming large NADH/NAD+ perturbations are safe, the plan introduces a defined “signal budget” (10–25% cytosolic NADH/NAD+ change) and constrains actuator flux via promoter strength, degrons, and pulse-like activation. This reduces oxygen consumption/metabolic dominance risk and makes compensation measurable with ATP and lactate assays plus catalytic-dead controls.
+
+MTT deconvolution corrected: MTT is no longer used as a ratio denominator (which could introduce nonlinear noise). It is repositioned as a terminal corroborative cytotoxicity assay consistent with Asset 1, while orthogonal, non-destructive gates (constitutive luciferase, impedance or live/dead dyes, Annexin/PI) provide compatibility with recoverable directed evolution and reduce confounding from multi-site MTT reduction chemistry.
+
+Erythritol claim converted to evidence: Erythritol is not assumed to stabilize mitochondrial NADH fluctuations; it becomes an empirically validated optional stabilizer with a defined criterion (variance reduction without baseline shift). This resolves the critique that its role is weakly grounded and may bias numerator/denominator.
+
+Directed evolution made operationally recoverable: The workflow is redesigned around FACS on a genetically encoded NADH/NAD+ reporter with independent viability/stress exclusion, enabling recovery of selected variants and scalable throughput. Explicit Z’ and FPR targets under mitochondrial poisons provide reviewer-requested rigor.
+
+Translation to MOF electrode made coherent: Rather than assuming cell-evolved coupling maps to an electrode, the plan introduces a bridging rank-order assay where the same evolved binders are evaluated in both cell-based and cell-free/MOF formats. Asset 1’s MOF functionalization is used specifically as a high-surface-area immobilization scaffold, while the cell-free NADH transduction module is separately parameterized to mirror the constrained redox flux validated in cells. This establishes an explicit transferability argument grounded in measured concordance.","This is an unusually rigorous and technically mature proposal that directly addresses common failure modes in synthetic biosensor development (leak, metabolic compensation, assay confounding, and transferability). Engineering resolution is very high, with clearly staged benchmarking, acceptance criteria, and controls. Logical consistency is strong: the hypothesis is internally coherent, and the redox-transduction risk is explicitly bounded by a quantified signal budget. Minor deductions stem from residual complexity risk: the plan assumes that cytosolic NADH/NAD+ sensors (e.g., SoNar/Peredox) will remain interpretable under even modest actuator perturbation across multiple cell lines, and that synNotch/split-TEV kinetics can be fairly compared under identical expression regimes—both plausible but experimentally delicate. Evidence grounding is excellent, though the erythritol component, while now properly demoted and testable, still rests on relatively thin prior biochemical justification. Rationale quality is high: the proposal does not merely apply existing tools but restructures the assay logic and evolution strategy to resolve a recognized bottleneck (redox dominance vs. viability artifacts) in biosensor design."
+"Protein sequences designed by explicitly optimizing *expected mutational fitness*—computed from a calibrated, uncertainty-aware ΔΔG surrogate and a formal population-genetic selection model—will exhibit superior foldability and experimentally measurable mutational robustness compared to sequences optimized with standard evolution-based energy functions alone. Mechanistically, replacing point-estimate stability optimization with a fixation-weighted ensemble objective forces the design algorithm to avoid high-curvature regions of the local free-energy landscape, thereby distributing stabilizing contributions across many weak-to-moderate residue interactions rather than concentrating stability into a small number of epistatic contacts. This redistribution reduces the tail risk of destabilizing mutations while preserving native-like packing and helix amphiphilicity patterns explicitly constrained by PDB-derived positional statistics. The combination overcomes brittleness in evolution-based design by aligning the objective function with how robustness emerges in natural protein populations—as an ensemble property conditioned on viability thresholds rather than maximal stability of a single sequence.","Step 1: Dataset curation and structural microenvironment extraction.
+1.1 Compile a non-redundant PDB dataset (≤30% global sequence identity via MMseqs2 clustering) of monomeric proteins solved at ≤2.5 Å resolution. Entire SCOP/CATH folds corresponding to the three target scaffolds are removed from the training set to prevent homolog leakage.
+1.2 For each residue, extract a microenvironment vector: backbone torsion bins (φ/ψ/ω), secondary structure, relative solvent accessibility, hydrogen-bonding state, and a residue–residue contact graph with edge labels encoding distance and orientation. These descriptors define the input space for ΔΔG surrogate training.
+
+Step 2: Absolute folding free energy baseline and robustness definition (identifiability).
+2.1 Choose a single robustness definition: *expected fitness under mutation*. For a designed sequence s on fixed backbone B, define absolute folding free energy as ΔG(s) = ΔG_ref(B) + Σ_i ε_i(s_i|B), where ΔG_ref(B) is a backbone-specific constant estimated once using Rosetta/FoldX consensus and ε_i are per-residue compatibility energies from the evolution-based profile.
+2.2 For any mutant m of s, define ΔG(m) = ΔG(s) + ΔΔG_surrogate(m|s,B). Viability threshold is fixed at ΔG_crit = −2.0 kcal/mol, chosen to correspond to minimal foldability at physiological temperature (≈5–10% folded fraction), consistent with experimental stability distributions.
+
+Step 3: Population-genetic model and robustness objective.
+3.1 Mutation model: single-nucleotide mutation matrix collapsed to amino-acid substitutions using a standard genetic code; mutation rate μ = 10⁻⁶ per site per generation. Double mutants are sampled only as second-order terms weighted by μ².
+3.2 Selection function: fitness w(m) = exp(−β·max(0, ΔG(m) − ΔG_crit)), with β = 1/(k_BT) at 310 K. This maps thermodynamic stability to selection coefficients in a smooth, differentiable manner.
+3.3 Robustness objective R(s) = −E_m[w(m)], the negative expected fitness over the mutational neighborhood, approximated by Monte Carlo sampling. This replaces ad hoc P_destab and variance terms with a single, interpretable quantity: expected post-mutation fitness.
+
+Step 4: ΔΔG surrogate model (locked-down methodology).
+4.1 Train a graph neural network (GNN) that maps (microenvironment, wild-type residue, mutant residue) → ΔΔG. Training data combine ProTherm, SKEMPI, and curated deep mutational scanning datasets mapped onto PDB structures.
+4.2 Data splitting: cluster by ≤30% sequence identity; entire clusters are assigned to train/validation/test splits to prevent homolog contamination.
+4.3 Target performance: RMSE ≤1.0 kcal/mol overall, with explicit calibration of tails (ΔΔG > 2 kcal/mol) using reliability diagrams and expected calibration error (ECE ≤0.05).
+4.4 Uncertainty quantification: ensemble of 10 independently trained GNNs; posterior ΔΔG samples propagate uncertainty into R(s) by averaging w(m) over ensemble predictions, yielding a risk-sensitive robustness estimate.
+
+Step 5: Helix positional priors and interaction control.
+5.1 Construct position-dependent amino-acid propensity priors for α-helices (N1–N15/C1–C15) stratified by solvent exposure and amphiphilicity class, derived from the curated PDB dataset.
+5.2 Implement helix term H(s) as a KL-divergence penalty between designed residue distributions and PDB priors, scaled to contribute ≤10% of the total energy to avoid double-counting with evolution-based profiles.
+
+Step 6: Design optimization and ablation controls.
+6.1 Optimize sequences via Monte Carlo simulated annealing under four pre-registered arms with identical compute budgets: (i) baseline evolution-based energy, (ii) +H only, (iii) +R only, (iv) +H+R.
+6.2 Enforce matched sequence identity distributions across arms to control for trivial conservation effects.
+
+Step 7: Mechanistic readouts (energetic dispersion and epistasis).
+7.1 Compute per-residue ΔΔG contribution maps by averaging |ΔΔG_i| over all single mutants at position i; quantify dispersion using Gini coefficients.
+7.2 Measure pairwise epistasis ε_ij = ΔΔG_ij − (ΔΔG_i + ΔΔG_j) for a designed subset of double mutants to directly assess curvature reduction in the free-energy landscape.
+
+Step 8: Validation.
+8.1 Computational: structure prediction confidence, ΔG distributions, expected fitness under mutation, helix periodicity metrics.
+8.2 Experimental: expression, DSF Tm, functional assays, and deep mutational scanning. Empirical robustness is defined as the fraction of mutants with w(m) ≥ 0.9 relative to wild type.
+
+Step 9: Statistical analysis.
+9.1 Mixed-effects models comparing arms within each scaffold; pre-registered success criterion: ≥30% increase in expected fitness under mutation at matched function for +R and +H+R arms.","This proposal is now mathematically and empirically identifiable. Robustness is defined by a single primary quantity—expected fitness under mutation—derived from an explicit population-genetic model with fixed mutation rates, selection function, and thermodynamic threshold. Absolute and relative free energies are consistently computed on-backbone, avoiding ambiguity between ΔΔG- and ΔG-based criteria. The ΔΔG surrogate is tightly specified with leakage-proof data splits, tail-calibration targets, and ensemble-based uncertainty propagation, ensuring that the optimized tail risk is not an artifact of model error. Mechanistic claims are operationalized through quantitative energetic dispersion and epistasis metrics rather than indirect graph proxies. Finally, helix priors are incorporated as weak, orthogonal constraints with explicit ablations, guaranteeing that observed gains can be causally attributed to robustness regularization rather than over-constraining evolution-based profiles. Together, these refinements make the approach not only feasible but testable, interpretable, and directly comparable to existing evolution-based design frameworks.","This is a technically mature and unusually well-specified proposal that demonstrates strong command of both protein biophysics and evolutionary modeling. The central mechanism—optimizing expected post-mutation fitness rather than nominal stability—is logically coherent and well operationalized, with careful attention to identifiability, leakage control, and ablation. The main deductions arise from residual modeling assumptions that are acknowledged but not stress-tested: (i) the additive decomposition of absolute ΔG into per-residue terms risks conflating compatibility scores with physical energetics, especially for tightly packed cores; (ii) a single global ΔG_crit and mutation rate may oversimplify scaffold-specific folding/selection regimes; and (iii) despite tail calibration targets, ΔΔG surrogate error in the >2 kcal/mol regime remains a potential confound when directly optimized against. These do not undermine feasibility but slightly weaken the causal certainty of the mechanistic claims."
+"In primary biliary cholangitis (PBC), the disease-shifted steroid enzyme balance (↓SULT1E1, ↑STS) increases the local capacity of bile-duct epithelium to desulfate circulating/ductal DHEA-S into DHEA precisely at the inflamed ductular interface. Under bile-acid/ROS stress, a controlled pulse of intra-cholangiocyte DHEA can bias stress-response programs toward anti-apoptosis and redox buffering while dampening maladaptive cholangiocyte-to-portal paracrine outputs that drive portal inflammation and hepatic stellate cell (HSC) activation (TGF-β/PDGF/CTGF/CCL2/IL-6 axis), thereby reducing fibrogenesis (Asset 1 mechanistic link) and preserving duct integrity (Asset 2 cytoprotection link). To overcome the key translational risks identified by reviewers—(i) STS ubiquity and (ii) aryl-sulfamate triggers behaving as irreversible inhibitors rather than clean substrates—we will engineer and quantitatively validate a bile-duct-enriched, STS-activated “substrate-not-inhibitor” prodrug system whose activation is governed by: (a) demonstrable catalytic turnover by purified STS (high kcat with low time-dependent inactivation), (b) a PK/PD model integrating measured STS activity distributions across human PBC ducts/hepatocytes/immune cells and nanoparticle exposure to predict on-target DHEA release vs systemic burden, and (c) explicit control of downstream steroid metabolism (DHEA→androstenedione/testosterone/estradiol), enabling causal attribution to ERα and/or AR in cholangiocytes (with aromatase/17β-HSD blockade to isolate direct receptor signaling from downstream sex-steroid conversion). We predict that a duct-targeted, STS-activated DHEA prodrug will achieve higher cholangiocyte-local receptor engagement under cholestatic oxidative stress with lower systemic androgenic/estrogenic exposure than free DHEA/DHEA-S, yielding net suppression of immune-mediated portal injury and HSC-driven collagen deposition in both cholestatic injury (BDL) and bona fide autoimmune cholangitis models.","Step 1 — Quantitative human mapping (activity, not just expression) to parameterize selectivity and PK/PD.
+1.1 Spatial “STS activity distribution” atlas in human PBC.
+- Samples: human PBC explants/biopsies stratified early vs late stage; non-PBC cholestatic controls where available.
+- Readouts:
+  (i) Multiplex IF + RNAscope: STS, SULT1E1, ERα, AR co-registered with KRT19/SOX9 (ductular reaction), COL1A1/ACTA2 (fibrosis), CD68/CD163 (macrophages), EPCAM.
+  (ii) Quantitative enzyme activity: apply sulfatase activity-based probes (ABPs) optimized for STS (fluorophosphonate/arylsulfate-mimetic ABPs where appropriate) plus orthogonal biochemical activity from laser-capture microdissected ducts vs periportal hepatocytes vs immune infiltrates; report activity as pmol substrate converted/min/mg protein.
+  (iii) Single-cell/spatial transcriptomics (targeted panel acceptable): confirm STS/SULT1E1 and steroid-metabolism nodes (HSD3B, HSD17B isoforms, CYP19A1/aromatase, SRD5A1/2) in cholangiocytes vs macrophages vs HSC.
+- Output: probability distributions of STS activity per cell-type compartment (duct epithelium, hepatocyte, macrophage) to feed Step 2 PK/PD.
+
+1.2 Microphysiological PBC platform with compartment control.
+- Chip architecture: dual-channel microfluidic device with (a) apical “bile” channel lined by cholangiocyte organoid-derived epithelium under flow, and (b) basolateral “portal” channel containing Kupffer-like macrophages and primary human HSC embedded in ECM hydrogel (collagen I/Matrigel blend, stiffness tuned 1–5 kPa).
+- Stressors: deliver GCDC to apical channel; deliver controlled ROS flux (e.g., menadione or H2O2 microdosing) with real-time ROS sensors; maintain bile-acid gradients (apical>>basolateral) to mimic cholestasis.
+- Patient relevance: prioritize PBC patient-derived cholangiocytes when feasible; otherwise iPSC-cholangiocytes conditioned with PBC-like cytokines (IL-17A, IFN-γ, TNF-α) to approximate inflammatory cholangitis.
+
+Step 2 — Prodrug chemistry redesign and a mandatory substrate-vs-inhibitor validation package.
+2.1 Trigger strategy: explicitly de-risk aryl-sulfamate irreversible inhibition.
+- Parallel trigger families (screened head-to-head):
+  A) Sulfate ester self-immolative prodrug (preferred “substrate-first”): DHEA-O-SO3− linked via a para-hydroxybenzyl (PHB) self-immolative spacer that releases native DHEA after STS-catalyzed sulfate hydrolysis and 1,6-elimination; electronics tuned (para substituents) to reduce non-enzymatic hydrolysis at pH 7.4 while maintaining STS turnover.
+  B) “Soft-sulfamate” analogs only if A fails: N-alkyl/aryl sulfamates engineered to minimize time-dependent STS inactivation (avoid classic aryl-sulfamate motifs known for suicide inhibition); include leaving-group tuning and sterics to favor turnover.
+- Decision gate: advance only triggers meeting strict enzymology thresholds in 2.2.
+
+2.2 Mandatory substrate-vs-inhibitor validation (purified enzyme + cellular genetics).
+- Purified STS assays:
+  (i) Steady-state kinetics: measure kcat, KM, kcat/KM for each candidate trigger using recombinant human STS (membrane prep or nanodisc-reconstituted STS); quantify product DHEA by LC–MS/MS.
+  (ii) Time-dependent inhibition (TDI): preincubate STS with candidate at multiple concentrations and times; measure residual activity on a standard fluorescent STS substrate; fit kinact/KI. Hard criterion: minimal TDI (kinact/KI below predefined threshold relative to a known irreversible inhibitor control).
+  (iii) Partition ratio (turnover vs inactivation): determine molecules of DHEA released per STS molecule before activity loss.
+- Cellular genetic rescue:
+  (i) STS knockout (CRISPR) and STS overexpression in human cholangiocytes; confirm that prodrug→DHEA conversion and phenotypes scale with STS abundance.
+  (ii) Rescue experiment: reintroduce STS in KO background to restore activation.
+  (iii) Off-target sulfatase panel: evaluate activation in ARSA/ARSB/other sulfatases (purified or cell lines) to ensure specificity is not broadly sulfatase-driven.
+
+2.3 Bile-duct enrichment: nanoparticle parameters specified and measurable.
+- Carrier: PEG-PLGA nanoparticles (50–90 nm target hydrodynamic diameter; PDI <0.2) with (i) near-neutral zeta potential (−5 to +5 mV) to reduce nonspecific uptake, (ii) prodrug loading quantified (wt% and release stability in plasma/bile simulant).
+- Targeting ligands (dual mode, tested empirically):
+  (i) Basolateral cholangiocyte targeting: anti-EpCAM scFv or anti-KRT19-binding peptide (screen for internalization).
+  (ii) Ductal retention: bile-acid-mimetic surface moiety (e.g., cholate-conjugated PEG) to enhance biliary/ductal association under cholestasis.
+- Uptake benchmarking: quantify nanoparticle uptake (flow cytometry + confocal) in cholangiocytes vs hepatocytes vs macrophages under inflammatory conditions; report uptake rate constants for PK/PD.
+
+Step 3 — PK/PD modeling that combines STS activity distributions with exposure to predict therapeutic index.
+3.1 Model structure.
+- Multi-compartment model: plasma, liver sinusoid, hepatocyte, portal immune compartment, bile-duct epithelium (apical/basolateral), bile.
+- Processes:
+  (i) Nanoparticle transport/uptake (measured from biodistribution/uptake assays).
+  (ii) Intracellular prodrug activation: Michaelis–Menten using measured STS kcat/KM and cell-type STS activity distributions from Step 1.
+  (iii) DHEA diffusion/efflux and metabolism.
+- Outputs: predicted local ductal DHEA AUC, systemic DHEA AUC, and proportion activated in off-target tissues.
+- Decision gate: proceed to in vivo only if model predicts ≥X-fold (predefined) ductal-vs-systemic exposure advantage relative to free DHEA.
+
+Step 4 — Mechanistic causality with explicit steroid-metabolism mapping and receptor disentangling.
+4.1 Steroid metabolite fate mapping (mandatory).
+- LC–MS/MS steroid panel in chip and in vivo tissues: DHEA-S, DHEA, androstenedione, testosterone, DHT, estrone, estradiol; quantify in cholangiocytes, media (apical vs basolateral), and liver compartments.
+- Enzyme-expression coupling: correlate metabolite patterns with HSD3B/HSD17B/CYP19A1/SRD5A1/2 expression.
+
+4.2 Receptor and metabolism dissection controls.
+- Receptor dependence:
+  (i) ERα and AR CRISPRi/siRNA in cholangiocytes.
+  (ii) Pharmacology: ERα antagonist (e.g., MPP) and AR antagonist (e.g., enzalutamide) in-chip, with dose–response.
+- Metabolic blockade to separate direct DHEA actions from downstream sex steroids:
+  (i) Aromatase inhibitor (letrozole) to block DHEA→estrogens.
+  (ii) 17β-HSD inhibitors (isoform-appropriate; select based on expressed HSD17B in cholangiocytes).
+  (iii) 5α-reductase inhibitor (finasteride/dutasteride) to block DHT formation.
+- Interpretability: compare phenotypes under (a) receptor block, (b) metabolic block, (c) both, to assign causal weight to ERα vs AR vs downstream estradiol/testosterone.
+
+4.3 Phenotypic endpoints aligned to fibrosis causality.
+- Cholangiocyte stress survival: Annexin V/caspase 3/7, mitochondrial ΔΨm, Nrf2 targets, DNA damage markers.
+- Ductular reaction vs “protective proliferation”: quantify Ki67/EdU along with differentiation/repair markers; explicitly test whether prodrug reduces maladaptive proliferative/inflammatory programs under stress despite preserving viability.
+- Paracrine outputs to portal niche: TGF-β, PDGF, CTGF, IL-6, CCL2, osteopontin; multiplex ELISA + transcript.
+- HSC response: α-SMA, COL1A1, hydroxyproline/procollagen I, MMP/TIMP ratio; include HSC RNA-seq module for activation states.
+- Mediation analysis: pre-specified causal model where treatment → (cholangiocyte paracrine reduction) → (HSC activation reduction) → (fibrosis reduction).
+
+Step 5 — In vivo translation with required autoimmune cholangitis + cholestasis model pairing.
+5.1 Models (mandatory pairing).
+- Autoimmune cholangitis: commit to at least one bona fide PBC-like model (choose based on facility):
+  (i) dnTGFβRII mouse (autoimmune cholangitis with portal inflammation) and/or
+  (ii) NOD.c3c4 (autoimmune biliary disease features).
+- Cholestasis/fibrosis comparator: bile duct ligation (BDL) to test bile-acid/ROS injury context independent of autoimmunity.
+
+5.2 Dosing, biodistribution, and on-target activation.
+- Biodistribution: fluorescence/PET-labeled nanoparticles; quantify ductal enrichment by imaging + tissue LC–MS/MS.
+- On-target activation: measure prodrug and released DHEA/metabolites in microdissected bile ducts vs parenchyma; align with STS activity.
+- Comparator arms: targeted prodrug vs free DHEA vs DHEA-S vs inactive prodrug (non-cleavable analog).
+
+5.3 Efficacy and immune-fibrosis linkage.
+- Histology: ductopenia/ductular reaction (CK19), portal inflammation scoring, Sirius Red morphometry, second-harmonic generation collagen architecture, α-SMA.
+- Molecular: portal cytokine/chemokine signatures; HSC activation signatures; oxidative stress markers.
+- Functional: liver stiffness (where feasible), serum ALP/ALT/bilirubin.
+
+5.4 Safety/therapeutic index.
+- Endocrine burden: systemic steroid panel; reproductive tissue gene panels (uterus/prostate equivalents), lipid/coagulation profile.
+- Off-target immune modulation: macrophage polarization markers; ensure no generalized immunosuppression driving false-positive fibrosis reduction.
+
+Step 6 — Rigor, preregistration, and go/no-go criteria.
+6.1 Pre-registered primary endpoints: (i) ductal DHEA exposure advantage (duct/parenchyma and duct/systemic AUC), (ii) cholangiocyte apoptosis under GCDC+ROS, (iii) HSC activation index, (iv) fibrosis area fraction.
+6.2 Power calculations and blinded quantification for histology and image analysis.
+6.3 Go/no-go gates:
+- Chemistry gate: must meet substrate-not-inhibitor enzymology thresholds (2.2).
+- Selectivity gate: PK/PD predicts and in vivo confirms ductal enrichment and reduced systemic exposure vs free DHEA.
+- Mechanism gate: phenotype must be attenuated by ERα/AR perturbation and remain interpretable after metabolic-block controls.","1) Enzymology/selectivity de-risking (addresses reviewer point 1): Rather than assuming aryl-sulfamates behave as clean substrates, the plan explicitly implements a substrate-vs-inhibitor validation package: purified STS kcat/KM, time-dependent inhibition (kinact/KI), partition ratio (turnover before inactivation), and cellular genetics (STS KO/overexpression/rescue). A parallel trigger strategy prioritizes sulfate-ester self-immolative designs to avoid the known failure mode of irreversible STS inhibition by classic aryl-sulfamates. Advancement is gated by quantitative thresholds, preventing mechanistic confounding from STS inhibition.
+
+2) Quantitative therapeutic index via PK/PD modeling (addresses reviewer point 1): Because STS is broadly expressed, “kinetic gating” is insufficient without quantitative exposure modeling. The proposal therefore measures STS activity distributions in human PBC ducts vs hepatocytes vs immune cells and combines these with nanoparticle uptake/biodistribution data in a multi-compartment PK/PD model to predict on-target DHEA release and systemic steroid burden. This explicitly tests whether bile-duct enrichment + activation kinetics can yield a meaningful duct/systemic AUC advantage.
+
+3) Causality under pleiotropic steroid biology (addresses reviewer point 2): Asset 2 supports DHEA/DHEA-S cytoprotection under bile-acid/ROS stress with ER involvement and AR contribution, but DHEA’s metabolism could redirect effects. The plan therefore includes mandatory LC–MS/MS steroid metabolomics (DHEA→androstenedione/testosterone/DHT/estrone/estradiol) and uses aromatase, 17β-HSD, and 5α-reductase inhibitors to separate direct ERα/AR signaling from downstream sex-steroid conversion. Receptor perturbations (ERα/AR CRISPRi/antagonists) are combined with metabolic blockade to tightly constrain mechanism attribution.
+
+4) Biological coherence with PBC fibrogenesis (Assets 1 and 2) while avoiding overreach: Asset 1 indicates fibrogenesis in PBC-like disease is linked to inflammatory bile duct injury/ROS and portal crosstalk rather than “pure” cholestasis alone. The revised plan therefore commits to testing in at least one autoimmune cholangitis model (dnTGFβRII and/or NOD.c3c4) alongside BDL, ensuring immune-mediated portal inflammation claims are directly evaluated in a PBC-relevant context. The microfluidic platform explicitly models apical (bile) vs basolateral (portal) compartments, enabling compartmentalized exposure and paracrine-to-HSC causality testing.
+
+5) Translational practicality: Each risk is tied to measurable go/no-go criteria (enzymology thresholds, predicted/observed ductal AUC advantage, receptor/metabolism-dependent phenotypes). This structure increases the likelihood of generating interpretable outcomes even if some components underperform (e.g., trigger family A vs B), while preserving the original concept chain: PBC enzyme asymmetry → cholangiocyte stress survival + reduced maladaptive paracrine signaling → reduced HSC activation → reduced fibrosis.","This is an unusually rigorous and well-structured proposal that directly addresses prior reviewer concerns through quantitative enzymology, genetic rescue, and PK/PD modeling rather than narrative argument. Engineering resolution is very high, with concrete specifications for enzyme kinetics, nanoparticle properties, microfluidic architecture, and decision gates. Logical consistency is strong: the disease-specific enzyme asymmetry (STS/SULT1E1), cholangiocyte stress biology, paracrine control of HSC activation, and fibrosis outcomes are coherently linked, and the plan explicitly tests each causal edge. Minor deductions arise from cumulative complexity and execution risk—particularly the assumption that ductal STS activity plus nanoparticle enrichment can overcome hepatocyte/macrophage activation in vivo, which remains empirically uncertain despite modeling safeguards. Evidence grounding is solid and remains within hepatobiliary immunobiology and steroid signaling, though some endpoints (e.g., Nrf2 biasing) rely on indirect inference rather than direct precedent in PBC cholangiocytes. Rationale quality is high: the proposal does not merely apply existing methods but redesigns steroid prodrug chemistry and validation frameworks to solve a recognized translational bottleneck (STS ubiquity and aryl-sulfamate failure modes)."
+"Engineering a genetically encoded diiron-bacterioferritin (Bfr) metallocage chimera in which an MMO/RNR-like diiron 4-helix-bundle is transplanted into the *native Bfr heme pocket* (via a designed helix–turn–helix insert plus second-shell hydrogen-bond network) will enable *kinetically gated O2 activation* whose oxidizing equivalent is delivered locally to a proximal, engineered Ser–His–Asp catalytic module to drive *classical acyl-enzyme esterase chemistry* while minimizing off-pathway ROS.
+
+Chemically grounded coupling mechanism (falsifiable): The intended dominant manifold is not “diffuse oxidation” but a *redox-gated increase in His general-base strength* (via H-bond/electrostatic coupling to the diiron peroxo/oxo state) that accelerates: (1) His-mediated deprotonation of Ser-OH → Ser-O−, (2) nucleophilic attack on the ester carbonyl to form a covalent *acyl–Ser enzyme intermediate*, and (3) hydrolysis of the acyl–Ser by activated water to release carboxylate + regenerated Ser. The diiron site’s role is to create a *transient, state-dependent electrostatic field / proton relay reconfiguration* (diferrous → peroxo/diferric) that shifts the His pKa and orders a flexible catalytic loop (“order-on-oxidation switch”), thereby gating acylation to periods when O2 has been productively activated.
+
+Predicted detectable species and discriminants:
+- A covalent acyl–Ser intermediate detectable by rapid-quench followed by intact-protein MS and peptide LC–MS/MS (mass shift matching the acyl group), abolished by Ser→Ala and strongly reduced by His→Gln.
+- Product oxygen source: incorporation of solvent-derived 18O from H2(18)O into the carboxylate product (expected for hydrolysis via acyl–enzyme), with *minimal* incorporation from 18O2 (distinguishing hydrolysis from oxidative cleavage/oxygenation).
+- Kinetic signatures: a burst phase consistent with pre-steady-state acylation (stopped-flow/rapid-quench), and solvent isotope/KIE patterns (H2O/D2O effect on deacylation; minimal primary 18O2 KIE on product formation if O2 is gating rather than being inserted).
+- Off-pathway oxidation readouts (protein sulfoxides, dityrosine, carbonylation; substrate radical products) must remain below pre-specified thresholds; otherwise the mechanism is rejected.
+
+Why this overcomes reviewer-identified failure modes: (i) It commits to a *canonical esterase covalent intermediate* (acyl–Ser) with explicit MS/isotope tests, rather than an underspecified “Ser activation by Fe–O.” (ii) It treats the heme-pocket transplant as a constrained, negative-designed metal site with explicit criteria for rigidity, solvation control, and exclusion of alternate Fe nucleation sites. (iii) It redesigns directed evolution so survival cannot be achieved by loss-of-function: expression/metallation are normalized, and variants must first pass a minimum diiron O2-activation signature before esterase screens; alternatively, selection is coupled to prodrug activation rather than ROS reduction alone.","Step 0 — Pre-commitment: staged program with go/no-go milestones
+0.1 Milestone A (metal site reality check; GO/NO-GO): Demonstrate a bona fide diiron(II/III)-O2 intermediate *in the engineered heme pocket* with correct stoichiometry (≈2 Fe per pocket), spectroscopic signature, and controlled lifetime (stopped-flow UV–vis + Mössbauer/EPR on rapid-freeze-quench). If not achieved, halt Ser–His–Asp installation and iterate pocket geometry/negative design.
+0.2 Milestone B (local oxidizing-equivalent containment; GO/NO-GO in parallel): In a simplified construct lacking the Ser triad, install a proximal redox-reporting residue pair (e.g., engineered Tyr/Trp reporter or redox-sensitive fluorophore-adjacent motif) to quantify local oxidation vs diffuse ROS (dityrosine/Trp oxidation mapping). Proceed to triad only if oxidation remains localized and low globally.
+
+Step 1 — Scaffold choice and pocket mapping (explicit structural constraints)
+1.1 Select 3–5 Bfr homologs with: (i) high soluble expression and stable cage assembly, (ii) high-resolution heme-pocket structures (or high-confidence AlphaFold + experimental validation), (iii) minimal competing ferroxidase/mineralization activity under assay conditions (screen for low nonspecific Fe(II) oxidation/mineral core growth).
+1.2 Quantitatively map the heme pocket for: (i) cavity volume and solvent occupancy (MD + water mapping), (ii) O2 access pathways (CAVER/MD), (iii) side-chain plasticity. Define geometric acceptance windows for the transplant: target Fe–Fe distance 3.2–3.6 Å (peroxo-competent), carboxylate bridging topology (μ-1,3 or μ-η1:η1 patterns), and one/two His ligands positioned for facial diiron coordination.
+
+Step 2 — Methodological adaptation: heme-pocket-to-diiron 4-helix microbundle transplant with negative design
+2.1 Design an internal helix–turn–helix insert that, together with two pre-existing pocket helices, forms a constrained 4-helix microbundle. Architectural parameters:
+- Bundle crossing angles and helix register chosen to minimize diiron-site drift (<0.8 Å RMSD in MD for first-shell ligands in the diferrous state).
+- Introduce a steric ‘buttress’ (hydrophobic packing layer) behind ligand helices to reduce breathing motions that would favor ROS leak.
+2.2 First-shell ligand set (explicit): build a diiron motif using 4 carboxylates + 1–2 histidines (E/D…E/D…H pattern) consistent with MMO/RNR families; enforce a single dominant bidentate/monodentate pattern by local packing (negative design to disfavor alternate rotamers).
+2.3 Second-shell network to tune intermediate lifetime:
+- Install defined H-bond donors/acceptors that stabilize peroxo vs oxo (e.g., one H-bond donor to terminal peroxo oxygen; one polar residue positioning a bound water as proton relay). Target an intermediate half-life window (e.g., 10–500 ms at 10–25 °C) suitable for gating without long-lived oxidants.
+2.4 Water activity and alternate-site suppression (negative design requirements + validation plan):
+- Reduce adventitious metal-binding patches by mutating surface Asp/Glu clusters near pocket entrances; add repulsive electrostatics around non-target cavities.
+- Disable mineralization nucleation: mutate ferroxidase-channel residues and inner-surface acidic patches implicated in core growth while preserving cage assembly.
+- Add a ‘metal selectivity filter’ at the pocket mouth (geometry + charge) to disfavor nonspecific Fe binding elsewhere.
+
+Step 3 — Build the redox-gated Ser–His–Asp esterase module only after Milestone A
+3.1 Catalytic module placement: position Ser on a short internal loop adjacent to the ester-binding channel; place His within H-bonding distance to Ser and within electrostatic-coupling distance to a diiron second-shell carboxylate (to shift His pKa upon diferric-peroxo/oxo formation). Asp/Glu placed to orient/activate His.
+3.2 Order-on-oxidation switch (explicit, testable):
+- Apo/diferrous state: loop partially disordered; His engaged in a salt bridge that suppresses basicity.
+- Upon O2 activation (diferric-peroxo/oxo state): designed rearrangement breaks the suppressive salt bridge and forms a new H-bond network anchored to the oxidized diiron second shell, increasing His basicity and aligning the oxyanion hole.
+3.3 Oxyanion hole: specify two backbone NHs plus a side-chain (Asn/Gln) positioned to stabilize the tetrahedral intermediate; validate by mutational knockdowns (Asn→Ala reduces kcat without changing O2 intermediate formation).
+
+Step 4 — Assays that hard-wire falsifiable mechanism into selection and validation
+4.1 Diiron intermediate assays (required for progression):
+- Stopped-flow UV–vis kinetic traces consistent with peroxo/diferric formation and decay.
+- Rapid-freeze-quench Mössbauer/EPR quantifying Fe(II)/Fe(III) populations and intermediate yield.
+- O2 consumption stoichiometry vs Fe loading.
+4.2 Acyl–enzyme detection (mandatory):
+- Rapid-quench reactions with ester substrate followed by intact-protein MS for acyl adduct; confirm site by peptide LC–MS/MS.
+- Time-resolved formation/decay of acyl–Ser to separate acylation vs deacylation rates.
+4.3 Isotope tracing to distinguish hydrolysis vs oxidation:
+- Run in H2(18)O: expect 18O incorporation into product carboxylate (hydrolytic deacylation).
+- Run under 18O2 with unlabeled water: expect minimal 18O incorporation into product if O2 is gating rather than inserted.
+- Solvent KIE (H2O/D2O) and optional 18O2 KIE: patterns must match hydrolytic chemistry; deviations trigger redesign.
+4.4 Off-pathway oxidation quantification (mandatory negative validation):
+- Proteomics for Met sulfoxide, Trp oxidation, Tyr dimerization, backbone carbonylation; set acceptance thresholds (e.g., <5% oxidized peptides under catalytic turnover conditions).
+- Small-molecule side products by LC–MS to detect oxidative cleavage/oxygenation.
+- ROS perturbation controls: catalase and SOD addition should not abolish esterase activity if coupling is intramolecularly gated; peroxide-clamp (exogenous H2O2) tests whether activity is due to free peroxide.
+
+Step 5 — Directed evolution redesigned to avoid loss-of-function escape
+5.1 Library design (focused, mechanistically partitioned):
+- Set A: second-shell residues controlling peroxo/oxo lifetime and proton relay.
+- Set B: loop/switch residues controlling oxidation-dependent ordering and His pKa.
+- Set C: substrate channel residues controlling binding and exclusion of bulk water (to suppress uncoupled ROS chemistry).
+5.2 Stage-1 gate (cannot be satisfied by inactivity): enforce expression and metallation normalization
+- Express variants with a quantitative expression reporter (e.g., C-terminal fluorescent tag or standardized ELISA/Western quantitation) and discard low-expression variants.
+- Enforce Fe loading criteria (ICP-MS on pooled lysates or plate-based colorimetric iron quantitation after purification) and discard under-metallated variants.
+- Require a minimum O2-activation signature: plate-adapted O2-consumption kinetics or a diiron-state reporter signal must exceed a preset threshold before any survival/activity selection.
+5.3 Stage-2 functional selection/screen with coupling metric:
+- Primary screen: fluorogenic ester turnover.
+- Coupling screen in parallel: quantify product/O2 and product/H2O2; prioritize variants maximizing product per O2 consumed and minimizing H2O2 leakage.
+5.4 In vivo selection redesigned (two options; choose based on implementability):
+Option 1 (preferred): prodrug-activation-linked survival—engineer a strain where growth depends on hydrolysis of an ester-masked essential nutrient/antibiotic-resistance precursor; this selects for productive esterase chemistry rather than merely low ROS.
+Option 2 (if ROS filter retained): ROS-stress filter *with enforced activity gate*—apply oxidative-stress conditions but only after confirming expression/metallation and minimum diiron O2-activation; incorporate an orthogonal activity reporter so ‘safe but inactive’ cannot win.
+5.5 Recombination: DNA shuffling among top performers within and across Sets A–C; re-screen under identical expression/metallation constraints.
+
+Step 6 — Structural verification and metal-site specificity mapping
+6.1 Metal-site specificity: Mössbauer/EPR titrations across Fe equivalents to map whether iron populates unintended sites; confirm dominant diiron population localized to engineered pocket.
+6.2 Structures of key states: cryo-EM/X-ray of apo, diferrous-loaded, and O2-exposed forms where feasible; validate microbundle formation, ligand geometry, and catalytic loop ordering.
+
+Step 7 — Biomedical/biotechnological proof-of-concept (only after mechanism validated)
+7.1 Demonstrate selective ester prodrug activation under physiological-like buffers with ROS monitoring; include chelator and O2-depletion controls.
+7.2 Cytocompatibility: mammalian cell oxidative-stress assays (e.g., H2O2 readouts, viability) alongside activity readouts; confirm that activity correlates with the diiron intermediate signature and acyl–Ser formation rather than generalized oxidation.","1) Chemical plausibility is made falsifiable and measurable. The revised proposal no longer relies on an ambiguous “reversible covalent activation by Fe–O.” It commits to a canonical esterase pathway with a covalent acyl–Ser intermediate and specifies direct detection (rapid-quench + intact MS/peptide mapping), oxygen-source tracing (H2(18)O vs 18O2), and kinetic signatures (burst kinetics; solvent isotope effects). These tests will decisively distinguish hydrolysis via acyl–enzyme from oxidative cleavage or radical pathways.
+
+2) Structural risks of the heme-pocket transplant are mitigated with explicit negative design plus validation. The heme pocket is treated as a constrained cavity whose solvation, access tunnels, and competing iron-binding/mineralization routes are explicitly redesigned and then empirically mapped (Mössbauer/EPR titrations for alternate Fe sites; water/O2 access modeling; mineralization suppression mutations). This directly addresses the concern that pocket geometry/solvation could defeat diiron rigidity or promote ROS leak.
+
+3) The evolution strategy is redesigned to prevent loss-of-function escape. The in vivo component is either replaced by prodrug-activation-linked survival (selects for productive hydrolysis) or retained only with enforced normalization for expression and metallation plus a required minimum O2-activation signature before activity screening. This prevents trivial winners (low expression, poor metallation, dead O2 chemistry).
+
+4) Go/no-go milestones reduce over-ambition and de-risk coupling complexity. The plan pre-commits to demonstrating a spectroscopically validated diiron peroxo/oxo intermediate with correct stoichiometry *before* adding the Ser–His–Asp switch. A parallel minimalist reporter strategy tests local oxidizing-equivalent containment early, preventing late-stage failure due to diffuse ROS chemistry.
+
+5) Strong literature grounding and design logic. Asset 1 supports that subtle geometric/second-shell features tune diiron O2 intermediates in MMO/RNR-class four-helix bundles, motivating parametric ligand geometry and intermediate-lifetime engineering. Asset 2 supports that de novo design and directed evolution can install enzymatic function (including esterase activity) and that function can be tuned through focused libraries—here upgraded by coupling screens that explicitly track intermediate lifetime and ROS leakage rather than activity alone.","This is an unusually rigorous and falsifiable proposal that directly addresses common failure modes in metalloprotein engineering. Strengths include the explicit commitment to a canonical acyl–Ser esterase intermediate with decisive MS/isotope tests, disciplined go/no-go milestones prior to catalytic embellishment, and a thoughtfully redesigned evolution strategy that prevents loss-of-function escape. The principal deductions arise from residual speculative coupling assumptions: (i) the magnitude and speed of electrostatic His pKa modulation by a diiron peroxo/oxo state remain unquantified and may be smaller than required to gate acylation cleanly; (ii) the heme pocket’s intrinsic solvation dynamics and evolutionary role as a transient cofactor site may still frustrate long-term diiron rigidity despite negative design; and (iii) ROS ‘acceptance thresholds’ and coupling metrics, while laudable, are somewhat arbitrary and may require iterative recalibration to avoid false negatives. These are not conceptual flaws, but they do represent nontrivial execution risk."
+"A substrate-promiscuous, L-arginine-oxidase-like catalyst can be built by a “cofactor-first, fold-last” strategy if (and only if) selection is stoichiometrically coupled to bona fide L-amino-acid oxidation chemistry rather than generic ROS flux. The refined central claim is mechanistic: covalent 8α-flavin tethering to a minimal designed peptide nucleus can pre-organize (i) isoalloxazine ring planarity and polarization at N5/C4a through a deliberately placed H-bond/electrostatic microenvironment and (ii) a constrained substrate approach trajectory sufficient for hydride transfer from the α-C–H of amino acids—detectable as a charge-transfer (CT) complex plus a primary kinetic isotope effect (KIE)—even before a full fold exists. Subsequent de novo fold accretion is then driven by selection pressures that are proportional to catalytic turnover (kcat/Km) via product-coupled auxotrophy rescue (keto-acid and/or NH3) and simultaneously protected from false positives by explicit negative selections against nonspecific flavin redox cycling (NADH oxidase-like activity) and general ROS generation. Mechanistically, the tethered nucleus fixes the redox geometry (reducing the configurational search), while evolution of second-sphere residues and a defined O2/H2O channel improves (a) CT-complex stabilization and reductive half-reaction (kred) and (b) controlled flavin reoxidation with O2; orthogonal biophysical gates (monodispersity, protease resistance, thermal stability) prevent selection drift toward overexpression, aggregation, or stress-response hacks. This design overcomes scaffold-grafting limitations because the invariant, optimized electron-transfer center is established first and remains conserved, while promiscuity is explicitly selected by substrate alternation under turnover-linked selection rather than inherited from a pre-existing natural pocket.","Step 0 — Define quantitative success criteria and controls (pre-registered).
+0.1 Target reaction: FAD-dependent oxidative deamination of L-arginine and a panel (L-lysine, L-ornithine, L-histidine, L-leucine as negative/orthogonal) producing the corresponding α-keto acid + NH3 + H2O2. Primary mechanistic readouts: (i) CT complex formation (long-wavelength absorbance), (ii) kred and kox (stopped-flow), (iii) primary KIE on α-2H substrates, (iv) LC–MS-verified product identity and mass balance.
+0.2 Define false-positive modes to exclude: (a) NADH oxidase/redox cycling (O2 consumption/H2O2 generation without amino acid oxidation), (b) non-enzymatic Fenton-driven ROS, (c) host stress-response mutations enabling growth without catalysis, (d) aggregation/oligomerization increasing apparent activity.
+0.3 Baseline comparators: native OkAROD and AncARODn0 (Asset 2) as positive controls; a tethered-FAD peptide with scrambled microenvironment and a tethered riboflavin analog lacking N5/C4a reactivity as negative controls.
+
+Step 1 — Build and validate the minimal “redox nucleus” (pre-fold milestone gate).
+1.1 Chemical architecture of the nucleus (25–60 aa peptide + covalent FAD):
+- Cofactor: 8α-substituted FAD analog enabling site-selective tethering (two variants in parallel): (i) 8α-maleimide-FAD for Cys-conjugation; (ii) 8α-NHS-ester-FAD for Lys/ornithine-like sidechain conjugation.
+- Tether placement: single handle placed to bias isoalloxazine exposure such that the si-face is partially shielded while the re-face remains solvent accessible for substrate approach; enforce a single conjugation site by eliminating other nucleophiles near the tether.
+- Microenvironment rules (imported as physicochemical priors from AROD/LAAO/AncAROD trends, without copying motifs; Asset 2):
+  (a) One strategically positioned H-bond donor to O4 and/or acceptor near N5 to tune flavin electrophilicity; 
+  (b) A cationic residue placed 5–9 Å from the ring to stabilize developing negative charge in the reduced flavin and to promote CT formation with basic substrates;
+  (c) A hydrophobic “lid” segment (4–8 residues, Leu/Ile/Val/Phe mixture) to reduce bulk solvent dielectric around the isoalloxazine while leaving a defined aperture.
+1.2 Library construction for the nucleus:
+- Size: 10^4–10^6 variants (synthetic DNA + expression as short peptides fused to a soluble carrier that can be proteolytically removed).
+- Diversity: focused at 8–12 positions surrounding the tethered flavin; maintain tether position invariant.
+- In vitro conjugation QC: intact-mass MS to confirm 1:1 FAD:peptide; UV–vis ratios (A450/A280) standardized; discard nonstoichiometric conjugates.
+1.3 Milestone 1 (mandatory before fold accretion): demonstrate true LAAO-like chemistry in nucleus-only constructs.
+- Product identity: LC–MS for α-keto acids with authentic standards; NH3 quantification via GDH-coupled assay; H2O2 via electrochemical probe and HRP-coupled assay; require closed mass balance within predefined tolerance.
+- CT complex: UV–vis difference spectra upon substrate titration; require a substrate-dependent long-wavelength band consistent with flavin–amine CT; quantify KD(CT) and CT amplitude.
+- KIE: compare kred and/or kcat using α-2H-labeled amino acids; require a primary KIE consistent with rate-limiting hydride transfer in the reductive half-reaction.
+- Negative controls: show absence of activity with apo peptide, nonreactive flavin analog, or scrambled microenvironment.
+Decision gate: only nucleus variants meeting CT + KIE + product identity criteria proceed to fold accretion.
+
+Step 2 — Replace/harden in vivo selection: stoichiometric product-coupled auxotrophy + negative selections.
+2.1 Primary in vivo selection (turnover-proportional): keto-acid–coupled essential rescue.
+- Use an E. coli strain engineered so growth is dependent on intracellular formation of a specific α-keto acid from a supplied amino acid, by deleting the native biosynthetic entry step and making the keto-acid the required precursor for an essential metabolite.
+  Example architecture (illustrative; final choice based on pathway robustness):
+  - Create an auxotrophy where a transaminase-dependent step requires an α-keto acid that the cell cannot otherwise generate under the selection medium;
+  - Supply the corresponding amino acid substrate externally; survival requires oxidase-generated α-keto acid flux.
+- Critical parameterization: adjust substrate concentration below saturation to favor selection on kcat/Km; control uptake with defined transporters if needed.
+2.2 Orthogonal/parallel selection: NH3-dependent nitrogen rescue under defined nitrogen limitation.
+- Engineer a strain unable to assimilate the provided nitrogen source unless NH3 is produced in situ; selection media uses amino acid as the primary nitrogen precursor in a form that requires deamination.
+- This provides a second stoichiometric axis (NH3) that must correlate with the same catalytic turnover.
+2.3 Compartmentalization and redox-sink control to reduce host confounding:
+- Express catalysts in the periplasm (signal peptide export) to minimize cytosolic stress-response coupling and to isolate product generation from central ROS buffering;
+- Implement defined periplasmic redox sinks (e.g., controlled expression of peroxidase) such that H2O2 is buffered but keto-acid/NH3 remain the growth-relevant signals.
+2.4 Explicit negative selections against nonspecific redox cycling / ROS generators:
+- Counterselection condition A (NADH oxidase screen): provide NADH-generating carbon source and O2 but no amino acid substrate; penalize variants that trigger oxygen consumption/H2O2 accumulation without keto-acid/NH3 production by linking ROS to a toxin or by using a reporter-driven kill switch.
+- Counterselection condition B (ROS-only artifacts): include catalase/peroxidase modulation so that generic ROS flux does not correlate with growth; require keto-acid-dependent rescue simultaneously.
+- Genotype containment: use short selection windows and periodically re-transform plasmid pools into fresh naive cells to eliminate enrichment of host genomic stress-response mutations.
+2.5 Quantitative flux calibration to enforce genotype→phenotype proportionality:
+- Normalize expression: bicistronic expression with a fluorescent reporter or targeted proteomics to estimate enzyme abundance; selection scored as growth per enzyme level.
+- Measure intracellular/periplasmic H2O2 with genetically encoded reporters (e.g., roGFP-based sensors) only as a diagnostic, not the selection driver.
+- Include catalase background controls (high vs low catalase) to confirm growth dependence tracks keto-acid/NH3, not ROS tolerance.
+
+Step 3 — Fold accretion (“wraparound”) with orthogonal biophysical gates.
+3.1 Library architecture for fold accretion:
+- Starting point: best-performing nucleus variants from Step 1.
+- Add flanking segments (N- and C-terminal) totaling 60–140 aa with biased composition toward soluble helices/turns; diversify only second-sphere and channel-lining positions (20–40 positions) while locking tether and first-shell flavin contacts.
+- Introduce a minimal, explicit O2/H2O conduit design constraint: a polar-lined channel segment (Ser/Thr/Asn/Gln) terminating near the flavin C4a/N5 region, plus a hydrophobic bottleneck (Val/Ile/Leu) to limit bulk water while allowing O2 diffusion.
+3.2 Selection stack (must pass all):
+- Primary: keto-acid auxotrophy rescue (Step 2.1) with alternating substrates (Arg → Lys/Orn → His) per round to force promiscuity.
+- Secondary: NH3 rescue (Step 2.2) applied intermittently to ensure stoichiometric consistency.
+- O2-regime constraint: alternate microaerobic vs aerobic growth to select oxidative half-reaction competence (kox) and robust channel function.
+3.3 Orthogonal biophysical gates to prevent aggregation/overexpression artifacts:
+- Protease resistance gate: subject periplasmic extracts to limited proteolysis; enrich variants retaining activity and intact size (proxy for folded, protected architecture).
+- Monodispersity gate: periodic SEC-MALS on pooled leaders; deprioritize highly oligomeric/aggregated variants.
+- Thermal gate: thermal shift assay (DSF) or T1/2 screen to maintain stability (leveraging the stability–promiscuity link seen in ancestral enzymes; Asset 2).
+
+Step 4 — Mechanism-resolved characterization and benchmarking.
+4.1 Kinetics and half-reaction dissection:
+- Stopped-flow: kred with substrate titrations and kox with O2 titrations; fit two-half-reaction model; compare across substrates to quantify promiscuity mechanism.
+- CT-complex quantification: correlate CT amplitude/KD with kred across substrate panel to verify the intended mechanistic linkage.
+4.2 Full chemical validation:
+- LC–MS quantification of α-keto acids; NH3 and H2O2 assays with mass balance; verify stoichiometry ~1:1:1.
+- Rule out side reactions by monitoring O2 consumption (Clark electrode) and checking for uncoupling (excess H2O2 vs keto-acid).
+4.3 Structural/channel validation:
+- Determine structure of at least one lead (NMR for smaller monomers or X-ray/cryo-EM for larger/oligomeric constructs).
+- Validate channel dynamics: HDX-MS + oxygen-dependent flavin quenching; map solvent accessibility around flavin and channel-lining residues.
+4.4 Promiscuity quantification:
+- Compute promiscuity index (entropy-based over kcat/Km distribution) and identify Pareto-optimal variants (high Arg activity without collapse of breadth).
+4.5 Benchmarking vs OkAROD and AncARODn0:
+- Compare kred, kox, coupling efficiency, promiscuity index, and stability (Tm, T1/2) under identical pH/O2/temperature.
+
+Step 5 — Data-driven iteration with interpretable mutagenesis.
+5.1 Deep sequencing after each selection round; map enrichment to structural hypotheses (channel vs second-sphere).
+5.2 Restrict mutagenesis to statistically enriched positions near (i) substrate approach trajectory and (ii) channel lining; keep tether + first-shell contacts invariant.
+5.3 Re-run negative selections after each major improvement to ensure gains are not due to redox cycling or host adaptation.","1) Addressing the selection confound (mandatory directive): the revised plan removes H2O2-driven growth as the primary selector and replaces it with stoichiometric product-coupled auxotrophy (keto-acid and/or NH3). This ties survival to the chemical outputs of amino-acid oxidation rather than to global ROS stress, buffering capacity, or OxyR pathway hacks. H2O2 is retained only as a diagnostic readout, while explicit counterselections penalize NADH oxidase-like redox cycling and ROS-only generators.
+
+2) Demonstrating that a minimal tethered-FAD nucleus can do LAAO-like chemistry: a staged Milestone 1 requires (i) LC–MS-confirmed α-keto acid identity, (ii) CT-complex formation upon substrate binding, and (iii) a primary KIE using α-2H substrates—three orthogonal criteria that together are difficult to satisfy with nonspecific ROS chemistry. This milestone is enforced before fold accretion, directly resolving the reviewer’s concern that the nucleus may not support hydride transfer without a pocket.
+
+3) Quantitative genotype→phenotype linkage: selection is calibrated to operate under sub-saturating substrate and under expression-normalized scoring (reporter-linked abundance or proteomics), making survival track kcat/Km rather than expression level or stress tolerance. Periodic re-transformation into fresh host cells reduces enrichment of host genomic escape mutations.
+
+4) Preventing fold-accretion drift: the wraparound evolution is constrained by orthogonal biophysical gates (protease resistance, SEC-MALS monodispersity, and thermal stability). These screens explicitly suppress common artifacts (aggregation, oligomerization-driven apparent activity, overexpression benefits) and enforce acquisition of a real protective architecture around the invariant flavin nucleus.
+
+5) Literature grounding and transfer logic: de novo oxidoreductase maquettes (Asset 1) support the premise that minimal architectures can enable efficient electron transfer if cofactor placement is correct; ancestral AROD/LAAO results (Asset 2) support that stability and promiscuity can be tuned by second-sphere environments rather than requiring a rigid natural scaffold. The revised strategy integrates both: fix the cofactor geometry and ET competence first, then select and measure second-sphere/channel features under turnover-proportional constraints.","This is an unusually rigorous and mechanistically self-aware proposal. The strongest aspect is the explicit decoupling of bona fide amino-acid oxidation from generic flavin redox cycling via stoichiometric, product-coupled auxotrophies and negative selections—this directly addresses a major historical confound in oxidase evolution experiments. The cofactor-first nucleus milestone, enforced by orthogonal CT, KIE, and LC–MS criteria, provides a logically sound gate that prevents premature scaffold-driven artifacts. Minor weaknesses are primarily executional rather than conceptual: (i) the feasibility of detecting clean CT complexes and primary KIEs in very small, partially disordered peptide–flavin conjugates is nontrivial and may limit hit rates; (ii) keto-acid–based auxotrophies, especially in the periplasm, are metabolically brittle and may require substantial host-pathway debugging; and (iii) the designed O2/H2O channel constraints, while conceptually justified, may be underpowered without earlier structural feedback. These issues slightly reduce confidence in throughput and timeline, but not in scientific validity."
+"Chloroplast NDH activity can be increased in a physiologically stable, non-artifactual manner by implementing a *nuclear safe-harbor–encoded*, redox-responsive proteostasis “activity clamp” that conditionally stabilizes NDH biogenesis capacity only when stromal redox pressure is high. The refined mechanism resolves key risks raised by reviewers as follows: (i) **expression/localization coherence**—NDH assembly factors are predominantly nuclear-encoded and imported; therefore, the clamp cassette will be inserted as a *single copy into a defined nuclear safe-harbor* (or recovered as single-locus segregants) to avoid plastome mis-context, while explicitly quantifying transcript constancy and protein import; (ii) **degron realism in chloroplasts**—conditional degradation will be mediated by an experimentally grounded chloroplast protease/adaptor logic, using a *Clp-dependent N-end rule chloroplast degron* (stromal-facing) whose accessibility is gated by a thioredoxin-reducible disulfide “latch” with a specified redox midpoint, and pre-validated with a reporter before fusing to NDH factors; (iii) **assembly bottleneck uncertainty**—rather than assuming a single limiting node, the clamp will be deployed across a panel of 3–5 NDH assembly candidates prioritized from Chloroplast Function Database resources and literature, and success will be judged by *increase in assembled NDH holocomplex* (BN-PAGE) rather than free-factor accumulation, while monitoring proteostasis stress to detect off-pathway overload; (iv) **portability to regenerative medicine**—the translational module will target a concrete mitochondrial proteostasis/assembly node relevant to hypoxia–reoxygenation in human PSCs (Complex I assembly factor NDUFAF1 or NDUFAF2), controlled by a defined ubiquitin–proteasome degron system (engineered degron recognized by a specified E3 context) gated by a calibrated NADH/NAD+ sensing domain. This architecture implements a quantitative redox→half-life transfer function that couples electron-entry capacity to redox state, minimizing chronic over-reduction while accelerating recovery from redox transients (plants: PQ/PSI redox balance; PSCs: Complex I-supported respiratory redox balance), thereby improving resilience without constitutive overexpression artifacts.","Step 0 — Resolve expression/localization and establish “non-artifactual” baseline controls (Arabidopsis)
+0.1 Choose nuclear expression (mandatory): Build clamp constructs as nuclear transgenes with (a) a constitutive, moderate promoter chosen for transcript stability across light regimes (e.g., UBQ10 or RPS5A; final selection based on low variance in pilot qPCR), (b) a standardized 5′UTR/3′UTR pair used across all variants, (c) intron-containing plant expression architecture for consistent processing, and (d) an N-terminal chloroplast transit peptide (cTP) matched to stromal localization (e.g., cTP from RBCS1A) for soluble assembly factors; for thylakoid-associated factors, use an appropriate bipartite targeting sequence if required.
+0.2 Integration strategy to avoid positional/dosage artifacts: Either (Option A) insert into a defined nuclear safe-harbor via CRISPR/Cas9-mediated HDR (single-copy landing pad line), or (Option B) generate multiple independent transformants and isolate single-locus lines by segregation plus copy-number determination (ddPCR) and exclude multi-copy lines. Mandatory readouts: (i) genomic copy number (ddPCR), (ii) insertion structure (long-read amplicon sequencing), (iii) transcript levels across conditions (RT-qPCR at baseline light, high light, reductive stress) demonstrating <20% variance for the same construct.
+0.3 Import/processing validation: Confirm chloroplast targeting and stromal exposure of the degron using immunoblot for precursor vs processed size, protease protection assays on isolated chloroplasts, and confocal microscopy for fluorescent reporter fusions.
+
+Step 1 — Pre-validate chloroplast redox-gated degron/protease logic with a reporter (mandatory de-risk)
+1.1 Select a *chloroplast-relevant degradation pathway*: Use a stromal Clp-dependent N-end rule degron logic (Clp protease in stroma with adaptor-mediated selection). Implement a degron whose recognition is triggered by an exposed, destabilizing N-terminus (N-degron) generated after chloroplast import/processing.
+1.2 Reporter architecture: cTP–(GFP or mNeonGreen)–redox latch–N-degron module. Build matched controls: (i) no-degron, (ii) constitutive degron (latch disabled), (iii) redox-insensitive latch mutant (Cys→Ser/Ala).
+1.3 Redox latch specification: Engineer a thioredoxin-reducible disulfide clamp (two strategically placed cysteines flanking a short masking helix) designed to switch around a stromal redox midpoint target of ~−300 to −330 mV (consistent with thioredoxin-coupled stromal environments). Explicitly test latch midpoint by in organello redox titration (DTTred/DTTox buffers) combined with mobility shift/alkylation assay (e.g., mPEG-maleimide labeling) to quantify reduced vs oxidized latch fraction.
+1.4 Identify thioredoxin isoform and kinetics expectation: Focus on stromal TRX-f (light-regulated) and/or TRX-m as candidate actuators. Test dependence by transiently perturbing thioredoxin reduction capacity (genetic line if available, or pharmacologic modulation of ferredoxin–thioredoxin reductase activity) and measure reporter half-life switching kinetics after dark→light or light→dark transitions (target response: minutes to <1 hour).
+1.5 Demonstrate conditional degradation: In vivo cycloheximide chase (nuclear translation block) plus time-course fluorescence/immunoblot; confirm Clp involvement by testing in lines with reduced Clp capacity (where viable) or by monitoring accumulation of known Clp substrates as a functional proxy. Gate criteria: ≥2× difference in reporter half-life between oxidizing vs reducing conditions, lost in latch-mutant.
+
+Step 2 — NDH assembly bottleneck mapping and candidate selection grounded in mutant priors
+2.1 Candidate panel (3–5 nodes, not 1–2): Mine Chloroplast Function Database / phenotyped insertion resources to nominate NDH biogenesis factors spanning distinct assembly stages (e.g., lumenal vs stromal-facing assembly helpers; membrane module support; cofactor insertion-associated factors). Selection criteria: (i) measurable but non-lethal phenotype in insertion line, (ii) evidence of NDH deficiency signatures (e.g., reduced post-illumination fluorescence rise), (iii) predicted stromal accessibility if using Clp/N-end rule degron, (iv) minimal predicted pleiotropy outside NDH.
+2.2 Establish baselines: For each candidate, acquire/confirm insertion mutants; quantify NDH activity proxy (post-illumination chlorophyll fluorescence rise), NDH subcomplex abundance (immunoblot markers), and holocomplex (BN-PAGE). This defines where the pathway fails and informs whether stabilization is likely to propagate to assembled NDH.
+2.3 Define “success” metric explicitly: Primary endpoint is increased *assembled NDH holocomplex* abundance (BN-PAGE + immunodetection of NDH subunits) and increased NDH-dependent electron input signatures, not merely increased candidate protein abundance.
+
+Step 3 — Build and deploy NDH “activity clamp” constructs (nuclear safe-harbor; mechanistically matched to Step 1)
+3.1 For each candidate factor, build: cTP–candidate ORF–redox latch–N-degron. Controls per candidate: (i) no-degron, (ii) always-degraded (latch disabled), (iii) latch Cys mutants (redox-dead).
+3.2 Generate single-copy lines: Use safe-harbor insertion or isolate single-locus segregants; confirm comparable transcript levels across variants (RT-qPCR) to support the claim that regulation occurs at protein lifetime.
+3.3 Quantify redox→half-life transfer: Measure candidate protein half-life across (a) constant moderate light, (b) fluctuating light, (c) reductive stress, and fit a Hill-type relationship between stromal redox reporter (NADPH/NADP+ sensor targeted to stroma) and protein half-life.
+
+Step 4 — Determine whether stabilization increases assembled NDH vs free-factor accumulation and detect proteostasis overload
+4.1 Assembly state mapping: BN-PAGE to quantify NDH holocomplex and subcomplexes; standard SDS-PAGE immunoblots for free factor and representative NDH subunits.
+4.2 Proteostasis stress surveillance (mandatory): Measure induction of chloroplast proteostasis markers (Clp subunits, chaperones such as HSP70/HSP90 homologs, stromal unfolded-protein response proxies where established), and check for aggregation/insolubility (detergent fractionation).
+4.3 Functional readouts: NDH-dependent PQ reduction (post-illumination fluorescence rise), PSI acceptor-side limitation/redox kinetics (P700 measurements), cyclic electron flow indicators, and in vivo stromal NADPH/NADP+ dynamics using targeted sensors.
+
+Step 5 — Causality and safety window definition
+5.1 Genetic epistasis: Introduce clamp into ndh core-deficient background; loss of functional benefit confirms NDH dependence.
+5.2 Latch necessity: Demonstrate that benefits disappear with latch Cys mutants (redox-insensitive) while transcript remains constant.
+5.3 Stress paradigms: fluctuating light; chilling + high light; and seedling hypoxia→reoxygenation. Endpoints: ROS burst amplitude (chloroplast-targeted probes), photoinhibition (Fv/Fm, PSI parameters), recovery kinetics, biomass.
+5.4 Quantitative operating window: Build a mechanistic model (redox state → candidate half-life → assembled NDH → PQ redox poise/pmf → ROS/recovery). Identify a window where clamp improves recovery without chronically increasing reductive pressure.
+
+Step 6 — Translational port to regenerative medicine (human PSCs): define node, pathway, sensor, and calibration
+6.1 Target a concrete mitochondrial node: Complex I assembly support factor NDUFAF1 (or NDUFAF2 as secondary) as the “assembly capacity” lever relevant to hypoxia/reoxygenation, with the goal of stabilizing Complex I biogenesis capacity during redox stress.
+6.2 Proteolytic pathway choice and implementability: Use cytosolic ubiquitin–proteasome control of a nucleus-encoded mitochondrial protein (pre-import) via an engineered degron recognized by a defined E3 system (e.g., an inducible degron architecture adapted to constitutive E3 availability), ensuring orthogonality and tunability in PSCs.
+6.3 NADH/NAD+ sensing domain: Implement an NADH-binding switch domain from a characterized NAD(H)-binding fold (e.g., Rex-family–derived NADH-binding/regulatory module or a validated NADH-sensing protein domain used in biosensors), engineered so NADH-binding masks the degron (stabilization when NADH is high) and NAD+ binding unmasks it (degradation when NADH pressure is low). 
+6.4 Calibration: In PSCs, quantify degron accessibility vs intracellular NADH/NAD+ using (i) a co-expressed genetically encoded NADH/NAD+ sensor (e.g., cytosolic/mitochondrial-targeted sensor), (ii) half-life measurements of the module, and (iii) pharmacologic modulation (e.g., altering ETC flux) to map dynamic range.
+6.5 Genome engineering for non-artifactual expression (Asset 1/2 alignment): Insert as single copy into a human safe-harbor locus (e.g., AAVS1) using CRISPR/Cas9; isolate clonal PSC lines; confirm stable expression and pluripotency.
+6.6 Functional assays under hypoxia/reoxygenation and differentiation stress: Readouts include mitochondrial membrane potential stability, ROS (mitochondrial ROS indicator), ATP/ADP, apoptosis markers, Complex I activity proxies, and differentiation efficiency/heterogeneity. Benchmark against constitutive overexpression and degron-free controls to demonstrate necessity of redox-gated proteostasis control.","Addresses reviewer risks directly:
+1) Expression/localization coherence (non-artifactual claim): The clamp is implemented as a nuclear, single-copy (safe-harbor or single-locus) transgene with explicit quantification of copy number and transcript constancy across conditions, avoiding plastome expression of nuclear-type assembly factors and the attendant UTR/codon/stoichiometry artifacts.
+2) Chloroplast degron mechanism is pre-validated: The proposal no longer assumes generic degron recognition. It first demonstrates conditional degradation with a chloroplast-targeted reporter using a Clp-linked, stromal-facing N-degron whose accessibility is gated by a thioredoxin-reducible disulfide latch. The latch redox midpoint and switching kinetics are measured empirically, and thioredoxin dependence is tested.
+3) NDH “limiting node” assumption is de-risked: Instead of banking on one assembly factor, a 3–5 candidate panel spanning distinct NDH biogenesis steps is tested. Success is defined by increased *assembled NDH holocomplex* (BN-PAGE) and improved NDH-dependent electron transport signatures, while monitoring proteostasis stress markers and aggregation to detect off-pathway overload.
+4) Quantitative redox→half-life rule is made measurable: The design explicitly couples stromal redox readouts (NADPH/NADP+ sensors) to measured half-life shifts and holocomplex outcomes, enabling parameter fitting and an “operating window” definition rather than qualitative claims.
+5) PSC port is specified and implementable: A concrete mitochondrial node (Complex I assembly factor NDUFAF1/NDUFAF2) and a defined proteolytic control axis (ubiquitin–proteasome degron control pre-import) are named. The NADH/NAD+ sensing component is treated as an engineered, calibratable switch with explicit cellular calibration using NADH/NAD+ sensors, and single-copy safe-harbor insertion/clonal validation aligns with established PSC genetic engineering best practices (Assets 1–2).","This is an unusually detailed and technically mature proposal that directly addresses common failure modes in chloroplast bioengineering: expression artifacts, mislocalized proteostasis assumptions, and incorrect inference from free-factor accumulation. The stepwise de-risking (reporter-first validation of a Clp-linked redox-gated degron, panelized NDH assembly candidates, BN-PAGE–based holocomplex readouts, and proteostasis stress surveillance) demonstrates strong engineering discipline and logical rigor. The redox→half-life transfer function is explicitly measurable, which elevates the work beyond descriptive physiology. Minor deductions arise from residual uncertainties that remain empirically unresolved rather than conceptually flawed: (i) the chloroplast N-end rule and adaptor specificity are still incompletely mapped, so degron predictability may vary between substrates; (ii) thioredoxin midpoint tuning to a narrow physiological window may prove context-dependent across light regimes; and (iii) the translational PSC port, while thoughtfully specified, represents a substantial additional risk layer that could dilute focus if not clearly staged as a downstream aim rather than a parallel deliverable."
+"Engineered, allosterically switchable PRC1 (“Opto-PRC1”) that couples a light-gated conformational clamp to RING1A/B E3 ligase positioning will enable causally separable control of (i) PRC1 chromatin-compaction/remodeling antagonism and (ii) H2AK119 ubiquitination, thereby producing tunable and reversible transcriptional repression with defined chromatin-structural trajectories. Mechanistically, forcing a controllable geometric proximity between RING1 (E2~Ub-loaded active site) and the H2A N-terminus on nucleosomes while independently modulating CBX/PHC-mediated chromatin bridging will allow us to disentangle and optimize two repression modes: steric inhibition of SWI/SNF-type remodeling (as suggested by PRC1/PCC effects on nucleosome organization) and enzymatic deposition of H2AK119ub that stabilizes Polycomb occupancy and propagates silencing. The methodological adaptation is a structural re-engineering of PRC1 subunit architecture: (a) insertion of an optogenetic dimerization module (iLID/SspB or CRY2/CIBN) between RING1 and a nucleosome-anchoring reader (CBX chromodomain or a minimal H3K27me3-binding module) to light-control RING1 residence time and orientation on chromatin; and (b) incorporation of a mechanically stiff, length-tunable helical linker (“molecular ruler”) plus a leucine-zipper clamp to bias the RING1–E2~Ub trajectory toward H2A Lys119, increasing catalytic efficiency only when the clamp is engaged. This guarantees superiority over constitutive recruitment because repression will be achieved at lower PRC1 abundance with fewer off-target chromatin interactions, and because the two mechanisms (compaction vs ubiquitination) can be orthogonally gated to determine which is necessary/sufficient for stable repression in mammalian cells.","Step 1: Specific system setup or data preparation.
+1.1 Select a human cell model with Polycomb-dependent lineage programs (e.g., hESCs or AML cells with high PcG dependence) and generate a safe-harbor landing pad (AAVS1) for single-copy integration of Opto-PRC1 components under doxycycline control.
+1.2 Establish dual reporters: (i) a PRC2-primed, H3K27me3-marked synthetic Polycomb response element upstream of a destabilized fluorescent gene; (ii) an endogenous locus readout (e.g., HOX cluster gene) tagged with MS2/PP7 nascent RNA imaging for real-time transcription.
+1.3 Create RING1A/B-null or degron lines (auxin-inducible degron) to remove endogenous RING1 activity, ensuring repression arises from engineered complexes.
+
+Step 2: Detailed implementation of the adapted methodology.
+2.1 Build modular Opto-PRC1 variants:
+- Variant A (Orientation-gated ubiquitination): RING1B fused to SspB; CBX7 (or CBX4) fused to iLID; between RING1B and SspB insert a rigid ER/K helical linker of defined length (e.g., 10, 20, 30 nm) and a conditional leucine-zipper clamp that engages only upon iLID/SspB binding, constraining the active-site approach to H2A.
+- Variant B (Compaction-gated remodeling antagonism): PHC1/PHC2 SAM domain polymerization module fused to CRY2 for light-inducible oligomerization to enhance chromatin bridging independent of RING1 catalytic gating.
+- Variant C (Orthogonal control): Combine A and B with distinct wavelengths (e.g., blue-light iLID; near-IR bacterial phytochrome BphP1/QPAS1) to independently toggle ubiquitination vs compaction.
+2.2 Quantitatively map structure–function:
+- Measure H2AK119ub kinetics at targeted loci using CUT&Tag time courses (minutes to hours) after light pulses; use catalytically dead RING1B (Cys-to-Ala in RING) as a control for compaction-only effects.
+- Assay chromatin structure changes using Micro-C (nucleosome-level contacts), ATAC-seq (accessibility), and live-cell single-locus compaction via CRISPR-dCas9 fluorescent tagging.
+- Challenge remodeling directly: recruit a defined SWI/SNF ATPase module (e.g., BRG1 tethered via dCas9) and quantify whether Opto-PRC1 compaction mode blocks remodeling without requiring H2AK119ub (inspired by PCC/PSC inhibition of hSWI/SNF).
+2.3 Engineer catalytic efficiency and specificity:
+- Perform focused mutagenesis on RING1B–BMI1/PCGF interface residues that tune E2 (UBCH5/UBCH6) engagement and test variants under the same light-gated geometry to identify combinations that maximize on-target H2AK119ub while minimizing global ubiquitination.
+- Compare CBX paralogs (CBX2/4/6/7/8) as anchoring readers (reflecting distinct PRC1 compositions) to test how reader choice alters repression potency and off-target binding.
+
+Step 3: Rigorous validation and analytical framework.
+3.1 Causality decomposition: Use factorial designs (ubiquitination ON/OFF; compaction ON/OFF) and quantify transcriptional repression onset time, depth, and memory (persistence after light-off), separating immediate steric remodeling inhibition from longer-term epigenetic stabilization.
+3.2 Proteomic validation: Use proximity labeling (TurboID fused to engineered subunits) during light ON vs OFF to confirm assembly states and to identify unintended interactors (e.g., 14-3-3 effects on CBX4-like behavior).
+3.3 Off-target and safety profiling: Genome-wide CUT&Tag for H2AK119ub and CBX occupancy plus RNA-seq to quantify collateral repression; assess DNA damage and replication stress markers to ensure chromatin perturbation does not induce toxicity.
+3.4 Translational test: In a cancer-relevant model (e.g., Polycomb-addicted lymphoma), evaluate whether transient Opto-PRC1-mediated silencing of a driver enhancer network induces differentiation/apoptosis more selectively than global PRC1 inhibition, using xenograft-compatible red-shifted gating modules for in vivo feasibility.","1. Theoretical/Empirical Basis: PRC1 components (including RING1/dRING1) can directly inhibit chromatin remodeling and alter nucleosome configurations, and mammalian PRC1 exists as CBX-mutually exclusive assemblies with distinct repression potencies. RING1’s E3 ligase activity (H2AK119ub) and CBX chromodomain-mediated recognition of H3K27me3 provide natural, modular handles for engineered recruitment and mechanistic separation.
+2. Transfer Logic (How the adaptation fits the domain): Optogenetic proximity control and rigid-linker “molecular ruler” strategies are established in protein engineering for controlling enzyme–substrate geometry; adapting them to PRC1 directly addresses a key limitation in epigenetic therapy/biology—current perturbations (knockouts or inhibitors) are global, slow, and confound enzymatic and structural roles. The proposed architecture converts PRC1 from a constitutive, multi-factorial regulator into a tunable bioengineered actuator suitable for causal biomedicine.
+3. Comparative Advantage: Compared with standard CRISPRi (which recruits generic repressors) or pharmacologic PRC1 inhibition (global loss of function), Opto-PRC1 offers (i) orthogonal control of compaction vs ubiquitination, (ii) reversible, time-resolved perturbations to infer mechanism, (iii) enhanced on-target catalytic efficiency via enforced geometry reducing required expression levels, and (iv) the ability to select CBX paralog-specific complexes to match disease context and minimize off-target repression.","This is an unusually sophisticated and well-integrated bioengineering proposal that demonstrates deep command of PRC1 biology, chromatin mechanics, and protein-engineering principles. The engineering resolution is high: optogenetic modules, ER/K rigid linkers, factorial gating of compaction versus ubiquitination, and locus-resolved readouts are all specified with actionable detail. Logical consistency is strong—the hypothesis that geometric control of RING1 positioning can decouple enzymatic ubiquitination from steric remodeling inhibition is mechanistically defensible and well motivated by prior PRC1/PCC literature. Minor deductions arise from cumulative complexity: the simultaneous integration of multiple optogenetic systems, degrons, rigid-linker tuning, and chromatin assays increases the risk that failure modes (misfolding, impaired PRC1 assembly, altered nuclear dynamics) could confound interpretation, and contingency plans are not explicitly articulated. Evidence grounding is excellent, remaining tightly anchored to Polycomb biology and chromatin structure, with no conceptual drift. Rationale quality is very high, as the proposal directly targets a central bottleneck in the field—causal separation of PRC1’s structural versus enzymatic repression modes—via a genuinely novel structural re-engineering rather than incremental application of CRISPRi-like tools."
+"Endoglucanase thermostability can be increased by engineering a more dehydration-resistant and mechanically coupled hydrogen-bond network around the catalytic cleft, and this can be achieved more reliably than standard Rosetta-only or MD-only design by a methodological adaptation that (i) replaces generic stability scoring with an FTIR-calibrated secondary-structure/solvation constraint and (ii) uses Adaptive Biasing Force (ABF) to compute unfolding-initiating free-energy profiles for specific “weak modes” (β-strand peeling/loop opening) that are then directly penalized during ROSETTA sequence design. Mechanistically, thermostability improvement arises when mutations increase the free-energy barrier to the first irreversible unfolding events (local strand detachment and active-site loop opening) while preserving the catalytic geometry; the FTIR-calibrated constraint ensures that designed mutations maintain (or enhance) the experimentally observed helical/β content and hydration signatures under heat stress, preventing designs that score well in silico yet shift secondary structure in vitro.","Step 1: Specific system setup or data preparation.
+1.1 Select a target endoglucanase scaffold (GH family appropriate for biomass conversion) with an available structure or AlphaFold model; define catalytic residues and substrate-binding cleft.
+1.2 Build a sequence/structure comparative set via bioinformatics: mine amphibian (frog) skin microbiome metagenomes and amphibian-associated isolates for endoglucanase homologs; compute consensus motifs, coevolutionary couplings, and identify naturally enriched thermostability-associated features (salt-bridge patterns, proline distribution, aromatic clusters).
+1.3 Express/purify a small panel: wild-type scaffold + 3–5 natural frog-associated homologs (or closest available homologs if direct frog isolates are limited). Record temperature-ramped FTIR (amide I/II) in H2O and D2O to quantify secondary-structure retention and hydration-shell changes (amide I peak deconvolution; H/D exchange kinetics).
+
+Step 2: Detailed implementation of the adapted methodology.
+2.1 FTIR-to-constraint model (“Spectral Stability Prior”): fit a mapping from FTIR observables (fractional α/β content, unfolding onset temperature from amide I shifts, hydration sensitivity from H/D exchange rates) to structural descriptors (backbone H-bond counts, solvent-accessible backbone area, local packing/frustration indices) across the panel in 1.3. Convert this into residue-level soft constraints used in ROSETTA (e.g., penalize mutations predicted to increase solvent exposure of backbone in regions whose FTIR indicates heat-stable secondary structure; reward mutations increasing local H-bond cooperativity where FTIR shows early loss).
+2.2 ABF “weak-mode barrier” computation: identify 2–3 dominant unfolding initiation coordinates using short high-temperature unbiased MD plus principal component/collective variable discovery (e.g., distance between β-strand pairs at the edge of the sheet, active-site loop opening angle, catalytic cleft mouth radius). For each coordinate, run ABF to obtain free-energy profiles (ΔG vs CV) for wild-type. Define target barrier increases (e.g., +2–4 kcal/mol) without altering catalytic geometry.
+2.3 Rosetta design with ABF-informed objective (“Barrier-augmented Rosetta”): iterate design in localized regions implicated by ABF (sheet edges, loop hinges, helix caps). For each design batch:
+- Use ROSETTA FastDesign with the Spectral Stability Prior (2.1) and functional constraints (active-site geometry and substrate docking constraints).
+- Filter designs by rapid MD screening and re-run ABF on the same CVs to estimate barrier changes relative to wild-type.
+- Select designs that increase barriers for at least two weak modes while keeping predicted binding/docking and catalytic residue geometry within preset RMSD tolerances.
+2.4 Build a focused library for wet-lab: encode 20–60 top-ranked single and combinatorial mutations (including epistatic pairs suggested by coevolution and ABF sensitivity). Use site-directed mutagenesis and a small combinatorial library with degenerate codons at 3–6 positions.
+
+Step 3: Rigorous validation and analytical framework.
+3.1 Enzyme stability/thermostability assays: measure Tm (DSF/CD), half-life at process-relevant temperatures (e.g., 60–80°C depending on scaffold), and residual activity after heat challenge. Quantify kinetic parameters (kcat/KM) on CMC and/or defined cello-oligosaccharides to ensure no activity collapse.
+3.2 FTIR validation under temperature ramps: confirm that improved variants show delayed amide I/II transitions, preserved secondary-structure signatures, and reduced hydration-shell destabilization (H/D exchange slower in protected regions). Compare against wild-type and against Rosetta-designed controls lacking the Spectral Stability Prior/ABF barrier objective.
+3.3 Mechanism tests: map mutation effects onto structure; verify that stability gains correlate with ABF barrier increases and with FTIR-indicated secondary-structure retention. Use limited proteolysis or HDX-MS (optional) to corroborate reduced local unfolding at the ABF-identified weak modes.
+3.4 Comparative benchmarking: head-to-head with (i) standard ROSETTA stability design (ΔΔG-only), (ii) consensus/consurf-guided mutagenesis, and (iii) directed evolution without mechanistic priors. Primary endpoint: thermostability at constant activity (e.g., ≥2–3× half-life increase at target temperature with ≤20% loss in kcat/KM).","1. Theoretical/Empirical Basis: Asset 1 supports integrating bioinformatics, ROSETTA, and enhanced-sampling MD (including ABF) for stability engineering, but typical pipelines optimize static ΔΔG rather than barriers to unfolding initiation. Asset 2 demonstrates FTIR as a sensitive readout of thermally driven secondary-structure retention and hydration-linked stability mechanisms, motivating an FTIR-calibrated constraint rather than relying solely on in silico proxies.
+2. Transfer Logic (How the adaptation fits the domain): Industrial biocatalysis needs enzymes that retain function at elevated temperatures; the adaptation directly targets the mechanistic bottleneck—early local unfolding events that precipitate global denaturation—while enforcing experimentally anchored secondary-structure behavior through FTIR-derived priors. Frog-associated biodiversity provides a realistic bioinformatics source of alternative stabilizing motifs shaped by amphibian microenvironments, feeding rational design.
+3. Comparative Advantage: (i) ABF-derived barriers address kinetic stability (unfolding resistance) often missed by equilibrium scoring; (ii) FTIR-calibrated priors reduce false-positive designs that misfold or shift secondary structure despite favorable computed energies; (iii) focusing mutations on ABF-identified weak modes yields smaller, more efficient experimental libraries than unguided directed evolution, improving hit rate and preserving catalytic geometry.","This is a technically sophisticated and unusually well-integrated proposal that targets a real and well-known bottleneck in enzyme thermostability engineering: the mismatch between equilibrium stability scoring and kinetic unfolding resistance. The linkage between FTIR observables and residue-level Rosetta constraints is conceptually strong and experimentally anchored, and the ABF-based focus on weak-mode barriers is logically consistent with modern views of local unfolding as the trigger for irreversible denaturation. The bioinformatics component (frog-associated homologs) is plausible and adds evolutionary signal rather than serving as novelty alone. Minor weaknesses remain in feasibility density: (i) ABF recalculation for multiple designs, even filtered, may be computationally heavy unless aggressively approximated; (ii) the statistical robustness of mapping sparse FTIR panel data to residue-level constraints is not fully specified; and (iii) success depends on the assumption that the identified weak modes are transferable across sequence variants, which may not always hold. These are manageable but real risks rather than conceptual flaws."
