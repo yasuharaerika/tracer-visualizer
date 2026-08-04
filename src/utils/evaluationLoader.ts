@@ -39,7 +39,7 @@ async function loadEvaluationData(): Promise<EvaluationData> {
   };
 
   try {
-    const response = await fetch('/data/evaluation_data.csv');
+    const response = await fetch('./data/evaluation_data.csv');
     if (!response.ok) {
       throw new Error(`Failed to load evaluation_data.csv: ${response.status}`);
     }
