@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAppStore } from '../utils/store';
 import { Domain, DOMAIN_LABELS, IdeaWithPapers } from '../types/graph';
-import { getIdeasEvaluationCategories, EvaluationCategory, EVALUATION_COLORS, EVALUATION_LABELS } from '../utils/evaluationLoader';
+import { getBatchEvalCategories, EvalCat, COLORS, LABELS } from '../utils/eval';
 import '../styles/IdeasView.css';
 
 export default function IdeasView() {
@@ -23,7 +23,7 @@ export default function IdeasView() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'score' | 'chain'>('score');
   const [selectedIdea, setSelectedIdea] = useState<IdeaWithPapers | null>(null);
-  const [ideaCategories, setIdeaCategories] = useState<Map<number, EvaluationCategory>>(new Map());
+  const [ideaCategories, setIdeaCategories] = useState<Map<number, EvalCat>>(new Map());
   const [filterCategory, setFilterCategory] = useState<'all' | 'low' | 'lower'>('all');
 
   // 加载评估分类数据
@@ -33,12 +33,11 @@ export default function IdeasView() {
       return;
     }
 
-    const loadCategories = async () => {
+    const loadCategories = () => {
       try {
         console.log('[IdeasView] Loading categories for', ideasData.length, 'ideas in', currentDomain);
-        const categories = await getIdeasEvaluationCategories(
-          ideasData.map(idea => ({ id: idea.id, proposal_content: idea.proposal_content })),
-          currentDomain
+        const categories = getBatchEvalCategories(
+          ideasData.map(idea => ({ id: idea.id, proposal_content: idea.proposal_content }))
         );
         console.log('[IdeasView] Loaded categories:', categories);
         setIdeaCategories(categories);
@@ -53,7 +52,7 @@ export default function IdeasView() {
   // 获取Idea的颜色
   const getIdeaColor = (idea: IdeaWithPapers): string => {
     const category = ideaCategories.get(idea.id);
-    return EVALUATION_COLORS[category || 'default'];
+    return COLORS[category || 'default'];
   };
 
   // 验证并设置领域
@@ -214,16 +213,16 @@ export default function IdeasView() {
           <button
             className={`filter-btn ${filterCategory === 'low' ? 'active' : ''}`}
             onClick={() => setFilterCategory('low')}
-            style={{ backgroundColor: filterCategory === 'low' ? EVALUATION_COLORS['low'] : undefined }}
+            style={{ backgroundColor: filterCategory === 'low' ? COLORS['low'] : undefined }}
           >
-            {EVALUATION_LABELS['low']} ({Array.from(ideaCategories.values()).filter(v => v === 'low').length})
+            {LABELS['low']} ({Array.from(ideaCategories.values()).filter(v => v === 'low').length})
           </button>
           <button
             className={`filter-btn ${filterCategory === 'lower' ? 'active' : ''}`}
             onClick={() => setFilterCategory('lower')}
-            style={{ backgroundColor: filterCategory === 'lower' ? EVALUATION_COLORS['lower'] : undefined }}
+            style={{ backgroundColor: filterCategory === 'lower' ? COLORS['lower'] : undefined }}
           >
-            {EVALUATION_LABELS['lower']} ({Array.from(ideaCategories.values()).filter(v => v === 'lower').length})
+            {LABELS['lower']} ({Array.from(ideaCategories.values()).filter(v => v === 'lower').length})
           </button>
         </div>
 
@@ -231,14 +230,14 @@ export default function IdeasView() {
         <div className="ideas-legend-right">
           <span
             className="legend-color"
-            style={{ backgroundColor: EVALUATION_COLORS['low'] }}
+            style={{ backgroundColor: COLORS['low'] }}
           />
-          <span className="legend-text">{EVALUATION_LABELS['low']}</span>
+          <span className="legend-text">{LABELS['low']}</span>
           <span
             className="legend-color"
-            style={{ backgroundColor: EVALUATION_COLORS['lower'] }}
+            style={{ backgroundColor: COLORS['lower'] }}
           />
-          <span className="legend-text">{EVALUATION_LABELS['lower']}</span>
+          <span className="legend-text">{LABELS['lower']}</span>
         </div>
       </div>
 
