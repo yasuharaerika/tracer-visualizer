@@ -13,7 +13,7 @@ export default defineConfig({
       ],
     }),
   ],
-  base: './', // 使用相对路径，支持 GitHub Pages 子路径部署
+  base: '/tracer-visualizer/', // 固定路径，支持 GitHub Pages 子路径部署
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
@@ -30,5 +30,9 @@ export default defineConfig({
   publicDir: 'public',
   build: {
     cssMinify: 'esbuild',
+    minify: 'esbuild',
+    rollupOptions: {
+      input: './index.html',
+    },
   },
 })
