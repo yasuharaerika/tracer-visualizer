@@ -1,7 +1,16 @@
+// 规范化函数：将各种连字符/破折号统一为普通连字符
+function normalizeKey(text: string): string {
+  return text
+    .replace(/[‐-―−]/g, '-')  // 各种连字符和破折号 -> 普通连字符
+    .replace(/[  -   　]/g, ' ')  // 不间断空格和各种空格 -> 普通空格
+    .replace(/\s+/g, ' ')  // 多个空格 -> 单个空格
+    .trim();
+}
+
 // 评估数据 - 内联版本，确保打包进bundle
 // 低匹配度Ideas (match_score >= 0.2 for bio/mat/chem or >= 5 for phy)
 const DATA_LOW: string[] = [
-  "Engineering a pre-organized energy landscape in de novo iron",
+  "Engineering a pre-organized energy landscape in de novo iron-sulfur",
   "iPSC-to-HSC differentiation fails to achieve durable",
   "Embedding an explicit, learnable side chain",
   "Ligand-binding affinity changes",
@@ -69,9 +78,9 @@ const DATA_LOWER: string[] = [
   "Engineering light-controlled genetic circuits"
 ];
 
-// 创建Set用于快速查找
-const SET_LOW = new Set(DATA_LOW);
-const SET_LOWER = new Set(DATA_LOWER);
+// 创建Set用于快速查找（使用规范化键）
+const SET_LOW = new Set(DATA_LOW.map(normalizeKey));
+const SET_LOWER = new Set(DATA_LOWER.map(normalizeKey));
 
 // 类型定义
 export type EvalCat = 'low' | 'lower' | null;
@@ -93,7 +102,7 @@ export const LABELS = {
  * 获取单个idea的评估分类
  */
 export function getEvalCategory(proposal: string): EvalCat {
-  const key = proposal.replace(/^Hypothesis:\s*/i, '').slice(0, 100).trim();
+  const key = normalizeKey(proposal.replace(/^Hypothesis:\s*/i, '').slice(0, 100));
   if (SET_LOWER.has(key)) return 'lower';
   if (SET_LOW.has(key)) return 'low';
   return null;
