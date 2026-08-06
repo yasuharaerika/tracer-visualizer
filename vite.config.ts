@@ -10,6 +10,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         { src: 'data/*', dest: '.' },
+        { src: 'favicon.svg', dest: '.' },
       ],
     }),
   ],
@@ -34,5 +35,6 @@ export default defineConfig({
     rollupOptions: {
       input: './index.html',
     },
+    assetsInlineLimit: 0, // 不内联小文件，确保SVG等资源正确输出
   },
 })
