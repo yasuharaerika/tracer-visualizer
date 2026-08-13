@@ -41,7 +41,9 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
     if (paperLinks && currentDomain && idea.related_papers) {
       const links: Record<string, string> = {};
       for (const paper of idea.related_papers) {
-        links[paper] = paperLinks[currentDomain]?.[paper] || null;
+        // 去掉 .mmd 后缀来匹配
+        const paperId = paper.replace(/\.mmd$/, '');
+        links[paper] = paperLinks[currentDomain]?.[paperId] || null;
       }
       setPaperLinksMap(links);
     }

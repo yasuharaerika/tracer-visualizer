@@ -35,7 +35,9 @@ export default function InfoPanelRight({ graphData }: InfoPanelRightProps) {
   // 获取选中论文的链接
   useEffect(() => {
     if (compareNode && compareNode.type === 'paper' && paperLinks && currentDomain) {
-      const link = paperLinks[currentDomain]?.[compareNode.id] || null;
+      // 去掉 .mmd 后缀来匹配
+      const paperId = compareNode.id.replace(/\.mmd$/, '');
+      const link = paperLinks[currentDomain]?.[paperId] || null;
       setPaperLink(link);
     } else {
       setPaperLink(null);
