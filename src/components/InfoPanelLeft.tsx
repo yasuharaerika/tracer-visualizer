@@ -17,6 +17,9 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
   const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
   const [paperLink, setPaperLink] = useState<string | null>(null);
 
+  // 获取选中节点的详细信息
+  const selectedNode = graphData?.nodes.find(n => n.id === selectedNodeId);
+
   // 加载论文链接数据
   useEffect(() => {
     const loadLinks = async () => {
@@ -42,9 +45,6 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
       setPaperLink(null);
     }
   }, [selectedNode, paperLinks, currentDomain]);
-
-  // 获取选中节点的详细信息
-  const selectedNode = graphData?.nodes.find(n => n.id === selectedNodeId);
 
   if (!selectedNodeId || !selectedNode) {
     return null;

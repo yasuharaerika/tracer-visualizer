@@ -14,6 +14,8 @@ export default function InfoPanelRight({ graphData }: InfoPanelRightProps) {
   const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
   const [paperLink, setPaperLink] = useState<string | null>(null);
 
+  const compareNode = graphData?.nodes.find((n) => n.id === compareNodeId);
+
   // 加载论文链接数据
   useEffect(() => {
     const loadLinks = async () => {
@@ -29,8 +31,6 @@ export default function InfoPanelRight({ graphData }: InfoPanelRightProps) {
     };
     loadLinks();
   }, []);
-
-  const compareNode = graphData?.nodes.find((n) => n.id === compareNodeId);
 
   // 获取选中论文的链接
   useEffect(() => {
