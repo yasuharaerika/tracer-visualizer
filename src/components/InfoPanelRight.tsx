@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { useAppStore } from '../utils/store';
-import { GraphNode } from '../types/graph';
+import { GraphNode, PaperLinks } from '../types/graph';
 import '../styles/InfoPanel.css';
 import '../styles/InfoPanelExtra.css';
 
@@ -8,9 +9,38 @@ interface InfoPanelRightProps {
 }
 
 export default function InfoPanelRight({ graphData }: InfoPanelRightProps) {
-  const { compareNodeId, setCompareNodeId, setSelectedNodeId } = useAppStore();
+  const { compareNodeId, setCompareNodeId, setSelectedNodeId, currentDomain } = useAppStore();
+
+  const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
+  const [paperLink, setPaperLink] = useState<string | null>(null);
+
+  // 加载论文链接数据
+  useEffect(() => {
+    const loadLinks = async () => {
+      try {
+        const response = await fetch('./data/paper_links.json');
+        if (response.ok) {
+          const data = await response.json();
+          setPaperLinks(data);
+        }
+      } catch (err) {
+        console.error('Error loading paper links:', err);
+      }
+    };
+    loadLinks();
+  }, []);
 
   const compareNode = graphData?.nodes.find((n) => n.id === compareNodeId);
+
+  // 获取选中论文的链接
+  useEffect(() => {
+    if (compareNode && compareNode.type === 'paper' && paperLinks && currentDomain) {
+      const link = paperLinks[currentDomain]?.[compareNode.id] || null;
+      setPaperLink(link);
+    } else {
+      setPaperLink(null);
+    }
+  }, [compareNode, paperLinks, currentDomain]);
 
   if (!compareNode) {
     return null;
@@ -55,6 +85,19 @@ export default function InfoPanelRight({ graphData }: InfoPanelRightProps) {
             <span className="property-label">Type:</span>
             <span className="property-value type-badge">{compareNode.type}</span>
           </div>
+          {compareNode.type === 'paper' && paperLink && (
+            <div className="property-row">
+              <span className="property-label">Link:</span>
+              <a
+                href={paperLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="paper-link-btn"
+              >
+                🔗 Open Paper
+              </a>
+            </div>
+          )}
           {compareNode.facet && (
             <div className="property-row">
               <span className="property-label">Facet:</span>

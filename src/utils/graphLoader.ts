@@ -1,4 +1,35 @@
-import { Domain, GraphData, Idea } from '../types/graph';
+import { Domain, GraphData, Idea, PaperLinks } from '../types/graph';
+
+// 论文链接缓存
+let paperLinksCache: PaperLinks | null = null;
+
+// 加载论文链接数据
+export async function loadPaperLinks(): Promise<PaperLinks> {
+  if (paperLinksCache) {
+    return paperLinksCache;
+  }
+
+  try {
+    const response = await fetch('./data/paper_links.json');
+    if (!response.ok) {
+      throw new Error('Failed to load paper_links.json');
+    }
+    paperLinksCache = await response.json();
+    return paperLinksCache;
+  } catch (error) {
+    console.error('Error loading paper links:', error);
+    return {};
+  }
+}
+
+// 获取指定论文的链接
+export async function getPaperLink(
+  domain: Domain,
+  paperId: string
+): Promise<string | null> {
+  const links = await loadPaperLinks();
+  return links[domain]?.[paperId] || null;
+}
 
 // 加载图谱数据
 export async function loadGraphData(domain: Domain): Promise<GraphData> {

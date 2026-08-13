@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAppStore } from '../utils/store';
-import { GraphNode, IdeaWithPapers } from '../types/graph';
+import { GraphNode, IdeaWithPapers, PaperLinks } from '../types/graph';
 import '../styles/InfoPanel.css';
 import '../styles/InfoPanelExtra.css';
 
@@ -11,9 +11,37 @@ interface InfoPanelLeftProps {
 type TabType = 'concepts' | 'papers' | 'ideas';
 
 export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
-  const { selectedNodeId, setSelectedNodeId, ideasData, setCompareNodeId, compareNodeId, setSelectedIdeaId } = useAppStore();
+  const { selectedNodeId, setSelectedNodeId, ideasData, setCompareNodeId, compareNodeId, setSelectedIdeaId, currentDomain } = useAppStore();
 
   const [activeTab, setActiveTab] = useState<TabType>('concepts');
+  const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
+  const [paperLink, setPaperLink] = useState<string | null>(null);
+
+  // 加载论文链接数据
+  useEffect(() => {
+    const loadLinks = async () => {
+      try {
+        const response = await fetch('./data/paper_links.json');
+        if (response.ok) {
+          const data = await response.json();
+          setPaperLinks(data);
+        }
+      } catch (err) {
+        console.error('Error loading paper links:', err);
+      }
+    };
+    loadLinks();
+  }, []);
+
+  // 获取选中论文的链接
+  useEffect(() => {
+    if (selectedNode && selectedNode.type === 'paper' && paperLinks && currentDomain) {
+      const link = paperLinks[currentDomain]?.[selectedNode.id] || null;
+      setPaperLink(link);
+    } else {
+      setPaperLink(null);
+    }
+  }, [selectedNode, paperLinks, currentDomain]);
 
   // 获取选中节点的详细信息
   const selectedNode = graphData?.nodes.find(n => n.id === selectedNodeId);
@@ -92,6 +120,19 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
             <span className="property-label">Type:</span>
             <span className="property-value type-badge">{selectedNode.type || 'unknown'}</span>
           </div>
+          {selectedNode.type === 'paper' && paperLink && (
+            <div className="property-row">
+              <span className="property-label">Link:</span>
+              <a
+                href={paperLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="paper-link-btn"
+              >
+                🔗 Open Paper
+              </a>
+            </div>
+          )}
           {selectedNode.facet && (
             <div className="property-row">
               <span className="property-label">Facet:</span>

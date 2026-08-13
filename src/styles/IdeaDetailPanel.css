@@ -211,3 +211,29 @@
   font-family: 'Courier New', monospace;
   font-size: 0.8rem;
 }
+
+/* 论文项内容容器 */
+.paper-item-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* Idea面板中的论文链接按钮 */
+.paper-item .paper-link-btn {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.paper-item .paper-link-btn:hover {
+  background: var(--accent-deep);
+  transform: scale(1.1);
+}

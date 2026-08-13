@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { useAppStore } from '../utils/store';
-import { IdeaWithPapers } from '../types/graph';
+import { IdeaWithPapers, PaperLinks } from '../types/graph';
 import '../styles/IdeaDetailPanel.css';
 
 interface IdeaDetailPanelProps {
@@ -13,7 +14,38 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
     setIsIdeaPinned,
     selectedNodeId,
     setSelectedNodeId,
+    currentDomain,
   } = useAppStore();
+
+  const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
+  const [paperLinksMap, setPaperLinksMap] = useState<Record<string, string>>({});
+
+  // 加载论文链接数据
+  useEffect(() => {
+    const loadLinks = async () => {
+      try {
+        const response = await fetch('./data/paper_links.json');
+        if (response.ok) {
+          const data = await response.json();
+          setPaperLinks(data);
+        }
+      } catch (err) {
+        console.error('Error loading paper links:', err);
+      }
+    };
+    loadLinks();
+  }, []);
+
+  // 获取所有论文的链接
+  useEffect(() => {
+    if (paperLinks && currentDomain && idea.related_papers) {
+      const links: Record<string, string> = {};
+      for (const paper of idea.related_papers) {
+        links[paper] = paperLinks[currentDomain]?.[paper] || null;
+      }
+      setPaperLinksMap(links);
+    }
+  }, [paperLinks, currentDomain, idea.related_papers]);
 
   const handleNodeClick = (nodeId: string) => {
     if (isIdeaPinned) {
@@ -67,16 +99,32 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
           <section className="detail-section">
             <h4>Related Papers ({idea.related_papers.length})</h4>
             <ul className="papers-list">
-              {idea.related_papers.map((paper, index) => (
-                <li
-                  key={index}
-                  className="paper-item"
-                  onClick={() => handleNodeClick(paper)}
-                >
-                  <span className="paper-type">Paper</span>
-                  <span className="paper-name">{paper}</span>
-                </li>
-              ))}
+              {idea.related_papers.map((paper, index) => {
+                const link = paperLinksMap[paper];
+                return (
+                  <li
+                    key={index}
+                    className="paper-item"
+                    onClick={() => handleNodeClick(paper)}
+                  >
+                    <div className="paper-item-content">
+                      <span className="paper-type">Paper</span>
+                      <span className="paper-name">{paper}</span>
+                    </div>
+                    {link && (
+                      <a
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="paper-link-btn"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        🔗
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </section>
         )}

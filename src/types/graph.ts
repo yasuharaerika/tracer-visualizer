@@ -81,3 +81,10 @@ export interface EdgeDisplayData {
   size: number;
   hidden?: boolean;
 }
+
+// 论文链接数据结构
+export interface PaperLinks {
+  [domain: string]: {
+    [paperId: string]: string;
+  };
+}
