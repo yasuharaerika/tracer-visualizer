@@ -1,4 +1,4 @@
-/* Ideas视图样式 */
+/* Ideas视图样式 - 网格画廊布局 + 弹窗 */
 
 .ideas-view {
   display: flex;
@@ -7,7 +7,9 @@
   background: var(--paper);
 }
 
-/* 顶部导航栏 */
+/* ============================================
+   顶部导航栏
+   ============================================ */
 .ideas-header {
   display: flex;
   align-items: center;
@@ -29,7 +31,9 @@
   gap: 0.75rem;
 }
 
-/* 控制栏 */
+/* ============================================
+   控制栏
+   ============================================ */
 .ideas-controls {
   display: flex;
   align-items: center;
@@ -77,7 +81,9 @@
   color: var(--ink-muted);
 }
 
-/* 图例和筛选容器 */
+/* ============================================
+   图例和筛选
+   ============================================ */
 .ideas-legend-container {
   display: flex;
   align-items: center;
@@ -85,10 +91,8 @@
   padding: 0.75rem var(--gutter);
   background: var(--paper);
   border-bottom: 1px solid var(--border);
-  position: relative;
 }
 
-/* 图例和筛选 */
 .ideas-legend {
   display: flex;
   align-items: center;
@@ -103,7 +107,6 @@
   margin-right: 0.5rem;
 }
 
-/* 右侧图例 */
 .ideas-legend-right {
   display: flex;
   align-items: center;
@@ -154,117 +157,134 @@
   background: var(--accent-hover);
 }
 
-/* 主内容 */
+/* ============================================
+   主内容区
+   ============================================ */
 .ideas-main {
   flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+/* ============================================
+   网格布局 - 8列画廊
+   ============================================ */
+.ideas-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.75rem;
+}
+
+/* 网格卡片 */
+.idea-grid-card {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
   overflow: hidden;
 }
 
-.ideas-layout {
-  display: flex;
-  height: 100%;
+.idea-grid-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 97, 47, 0.15);
 }
 
-/* Ideas列表 */
-.ideas-list {
+.idea-grid-card:active {
+  transform: translateY(0);
+}
+
+/* 卡片顶部 - 评分 */
+.grid-card-score {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+/* 卡片下方 - 概念链 */
+.grid-card-chain {
   flex: 1;
-  overflow-y: auto;
-  padding: 1.5rem;
+  font-size: 0.625rem;
+  line-height: 1.4;
+  color: var(--ink);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+
+/* ============================================
+   弹窗遮罩
+   ============================================ */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   弹窗内容
+   ============================================ */
+.modal-content {
+  width: 90%;
+  max-width: 700px;
+  max-height: 85vh;
+  background: var(--paper);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
 }
 
-.idea-card {
-  padding: 1.25rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.idea-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 2px 8px rgba(196, 97, 47, 0.1);
-  transform: translateY(-1px);
-}
-
-.idea-card.selected {
-  border-color: var(--accent);
-  background: var(--accent-soft) !important;
-}
-
-/* 非选中状态时使用背景色 */
-.idea-card:not(.selected) {
-  background-color: inherit;
-}
-
-.idea-header {
+/* 弹窗头部 */
+.modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
-}
-
-.idea-number {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--ink-muted);
-}
-
-.idea-score {
-  padding: 0.25rem 0.75rem;
-  background: var(--accent);
-  color: var(--paper);
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.idea-chain {
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--ink);
-  margin-bottom: 0.75rem;
-  font-family: 'Courier New', monospace;
-}
-
-.idea-meta {
-  display: flex;
-  gap: 1rem;
-  font-size: 0.8125rem;
-  color: var(--ink-muted);
-}
-
-.paper-count {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-/* 详情面板 */
-.idea-detail {
-  width: 500px;
-  background: var(--surface);
-  border-left: 1px solid var(--border);
-  overflow-y: auto;
-  flex-shrink: 0;
-}
-
-.detail-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   border-bottom: 1px solid var(--border);
-  background: var(--paper);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background: var(--surface);
 }
 
-.detail-header h3 {
+.modal-header h3 {
   font-family: var(--font-serif);
   font-size: 1.25rem;
   font-weight: 600;
@@ -272,28 +292,13 @@
   margin: 0;
 }
 
-.close-btn {
-  width: 2rem;
-  height: 2rem;
+.modal-actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: none;
-  color: var(--ink-muted);
-  font-size: 1.5rem;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
+  gap: 0.5rem;
 }
 
-.close-btn:hover {
-  background: var(--paper-deep);
-  color: var(--ink);
-}
-
-.jump-to-graph-btn {
+.modal-action-btn,
+.modal-close-btn {
   width: 2rem;
   height: 2rem;
   display: flex;
@@ -301,44 +306,58 @@
   justify-content: center;
   border: 1px solid var(--border);
   background: var(--paper);
-  color: var(--ink);
+  color: var(--ink-muted);
   font-size: 1rem;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.2s ease;
-  flex-shrink: 0;
 }
 
-.jump-to-graph-btn:hover {
+.modal-action-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
-  transform: scale(1.05);
+  color: white;
 }
 
-.detail-content {
+.modal-close-btn {
+  font-size: 1.5rem;
+  border: none;
+  background: transparent;
+}
+
+.modal-close-btn:hover {
+  background: var(--paper-deep);
+  color: var(--ink);
+}
+
+/* 弹窗内容区 */
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
   padding: 1.5rem;
 }
 
-.detail-section {
-  margin-bottom: 2rem;
+/* 弹窗内的区块 */
+.modal-section {
+  margin-bottom: 1.5rem;
 }
 
-.detail-section:last-child {
+.modal-section:last-child {
   margin-bottom: 0;
 }
 
-.detail-section h4 {
-  font-size: 0.875rem;
+.modal-section h4 {
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--ink-muted);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.75rem 0;
 }
 
 .chain-display {
   padding: 1rem;
-  background: var(--paper);
+  background: var(--surface);
   border-radius: 8px;
   border: 1px solid var(--border);
   font-family: 'Courier New', monospace;
@@ -348,47 +367,18 @@
 }
 
 .score-display {
-  padding: 1rem;
+  padding: 1.5rem;
   background: var(--accent-soft);
   border-radius: 8px;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--accent);
   text-align: center;
 }
 
-.proposal-block {
-  margin-bottom: 1rem;
-}
-
-.proposal-block:last-child {
-  margin-bottom: 0;
-}
-
-.proposal-block strong {
-  display: block;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--ink-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-bottom: 0.5rem;
-}
-
-.proposal-block p {
-  padding: 0.75rem;
-  background: var(--paper);
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  font-size: 0.875rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.proposal-text,
 .critique-text {
   padding: 1rem;
-  background: var(--paper);
+  background: var(--surface);
   border-radius: 8px;
   border: 1px solid var(--border);
   font-size: 0.875rem;
@@ -396,6 +386,9 @@
   white-space: pre-wrap;
 }
 
+/* ============================================
+   论文列表
+   ============================================ */
 .papers-list {
   display: flex;
   flex-direction: column;
@@ -407,7 +400,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem;
-  background: var(--paper);
+  background: var(--surface);
   border-radius: 8px;
   border: 1px solid var(--border);
   font-size: 0.875rem;
@@ -427,7 +420,6 @@
   white-space: nowrap;
 }
 
-/* 论文链接按钮 */
 .paper-link-btn {
   flex-shrink: 0;
   padding: 0.25rem 0.5rem;
@@ -437,15 +429,16 @@
   font-size: 0.75rem;
   text-decoration: none;
   transition: all 0.2s ease;
-  margin-left: auto;
 }
 
 .paper-link-btn:hover {
   background: var(--accent-deep);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* 加载和空状态 */
+/* ============================================
+   加载和空状态
+   ============================================ */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -461,6 +454,7 @@
 }
 
 .empty-state {
+  grid-column: 1 / -1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,57 +463,58 @@
   font-style: italic;
 }
 
-/* 滚动条 */
-.ideas-list::-webkit-scrollbar,
-.idea-detail::-webkit-scrollbar {
-  width: 6px;
+/* ============================================
+   滚动条
+   ============================================ */
+.ideas-main::-webkit-scrollbar,
+.modal-body::-webkit-scrollbar {
+  width: 8px;
 }
 
-.ideas-list::-webkit-scrollbar-track,
-.idea-detail::-webkit-scrollbar-track {
-  background: var(--paper);
+.ideas-main::-webkit-scrollbar-track,
+.modal-body::-webkit-scrollbar-track {
+  background: var(--surface);
 }
 
-.ideas-list::-webkit-scrollbar-thumb,
-.idea-detail::-webkit-scrollbar-thumb {
+.ideas-main::-webkit-scrollbar-thumb,
+.modal-body::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
-.ideas-list::-webkit-scrollbar-thumb:hover,
-.idea-detail::-webkit-scrollbar-thumb:hover {
+.ideas-main::-webkit-scrollbar-thumb:hover,
+.modal-body::-webkit-scrollbar-thumb:hover {
   background: var(--ink-muted);
 }
 
-/* 响应式 */
-@media (max-width: 1024px) {
-  .idea-detail {
-    width: 400px;
+/* ============================================
+   响应式 - 减少列数
+   ============================================ */
+@media (max-width: 1400px) {
+  .ideas-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .ideas-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .ideas-controls {
-    flex-wrap: wrap;
+  .ideas-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .search-container {
-    flex-basis: 100%;
-    max-width: none;
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
   }
+}
 
-  .ideas-layout {
-    flex-direction: column;
-  }
-
-  .idea-detail {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 90%;
-    max-width: 500px;
-    z-index: 200;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+@media (max-width: 480px) {
+  .ideas-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

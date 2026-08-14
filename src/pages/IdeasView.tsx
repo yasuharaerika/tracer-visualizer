@@ -150,13 +150,26 @@ export default function IdeasView() {
 
   // 跳转到图谱并高亮此Idea的路径
   const jumpToGraph = (idea: IdeaWithPapers) => {
-    // 设置Idea和第一个节点
     setSelectedIdeaId(idea.id);
     setSelectedNodeId(idea.concept_chain[0]);
-
-    // 跳转到图谱页面
     navigate(`/graph/${currentDomain}`);
   };
+
+  // 关闭弹窗
+  const closeModal = () => {
+    setSelectedIdea(null);
+  };
+
+  // 键盘 ESC 关闭弹窗
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedIdea) {
+        closeModal();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedIdea]);
 
   if (!currentDomain) {
     return null;
@@ -265,7 +278,7 @@ export default function IdeasView() {
         </div>
       </div>
 
-      {/* 主内容 */}
+      {/* 主内容 - 网格布局 */}
       <main className="ideas-main">
         {isLoading ? (
           <div className="loading-container">
@@ -273,135 +286,125 @@ export default function IdeasView() {
             <p>Loading ideas...</p>
           </div>
         ) : (
-          <div className="ideas-layout">
-            {/* Ideas列表 */}
-            <div className="ideas-list">
-              {filteredAndSortedIdeas.map((idea, index) => (
-                <div
-                  key={index}
-                  className={`idea-card ${selectedIdea === idea ? 'selected' : ''}`}
-                  style={{ backgroundColor: getIdeaColor(idea) }}
-                  onClick={() => setSelectedIdea(idea)}
-                >
-                  <div className="idea-header">
-                    <span className="idea-number">#{index + 1}</span>
-                    <span className="idea-score">
-                      {idea.final_score?.toFixed(2) || 'N/A'}
-                    </span>
-                  </div>
-                  <div className="idea-chain">
-                    {idea.original_chain}
-                  </div>
-                  <div className="idea-meta">
-                    <span className="paper-count">
-                      📄 {idea.related_papers?.length || 0} papers
-                    </span>
-                  </div>
+          <div className="ideas-grid">
+            {filteredAndSortedIdeas.map((idea) => (
+              <div
+                key={idea.id}
+                className="idea-grid-card"
+                style={{ backgroundColor: getIdeaColor(idea) }}
+                onClick={() => setSelectedIdea(idea)}
+              >
+                <div className="grid-card-score">
+                  {idea.final_score?.toFixed(2) || 'N/A'}
                 </div>
-              ))}
-
-              {filteredAndSortedIdeas.length === 0 && !isLoading && (
-                <div className="empty-state">
-                  <p>No ideas found</p>
+                <div className="grid-card-chain">
+                  {idea.original_chain}
                 </div>
-              )}
-            </div>
+              </div>
+            ))}
 
-            {/* 详情面板 */}
-            {selectedIdea && (
-              <div className="idea-detail">
-                <div className="detail-header">
-                  <h3>Idea Details</h3>
-                  <div style={{ display: 'flex', gap: '0.5rem' }}>
-                    <button
-                      onClick={() => jumpToGraph(selectedIdea)}
-                      className="jump-to-graph-btn"
-                      title="Jump to graph view"
-                    >
-                      🗺️
-                    </button>
-                    <button
-                      onClick={() => setSelectedIdea(null)}
-                      className="close-btn"
-                    >
-                      ×
-                    </button>
-                  </div>
-                </div>
-
-                <div className="detail-content">
-                  {/* 1. 概念链 */}
-                  <section className="detail-section">
-                    <h4>Concept Chain</h4>
-                    <div className="chain-display">
-                      {selectedIdea.original_chain}
-                    </div>
-                  </section>
-
-                  {/* 2. 相关论文 */}
-                  {selectedIdea.related_papers && selectedIdea.related_papers.length > 0 && (
-                    <section className="detail-section">
-                      <h4>Related Papers ({selectedIdea.related_papers.length})</h4>
-                      <div className="papers-list">
-                        {selectedIdea.related_papers.map((paper, idx) => {
-                          // 去掉 .mmd 后缀来匹配链接
-                          const paperId = paper.replace(/\.mmd$/, '');
-                          const link = paperLinks?.[currentDomain!]?.[paperId];
-                          return (
-                            <div key={idx} className="paper-item">
-                              <span className="paper-icon">📄</span>
-                              <span className="paper-id">{paper}</span>
-                              {link && (
-                                <a
-                                  href={link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="paper-link-btn"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
-                                  🔗
-                                </a>
-                              )}
-                            </div>
-                          );
-                        })}
-                      </div>
-                    </section>
-                  )}
-
-                  {/* 3. 评分 */}
-                  <section className="detail-section">
-                    <h4>Final Score</h4>
-                    <div className="score-display">
-                      {selectedIdea.final_score?.toFixed(2) || 'N/A'}
-                    </div>
-                  </section>
-
-                  {/* 4. 提案内容 */}
-                  {selectedIdea.proposal_content && (
-                    <section className="detail-section">
-                      <h4>Proposal</h4>
-                      <div className="critique-text">
-                        {selectedIdea.proposal_content}
-                      </div>
-                    </section>
-                  )}
-
-                  {/* 5. 评价 */}
-                  {selectedIdea.final_critique && (
-                    <section className="detail-section">
-                      <h4>Critique</h4>
-                      <div className="critique-text">
-                        {selectedIdea.final_critique}
-                      </div>
-                    </section>
-                  )}
-                </div>
+            {filteredAndSortedIdeas.length === 0 && (
+              <div className="empty-state">
+                <p>No ideas found</p>
               </div>
             )}
           </div>
         )}
       </main>
+
+      {/* 详情弹窗 */}
+      {selectedIdea && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <h3>Idea Details</h3>
+              <div className="modal-actions">
+                <button
+                  onClick={() => jumpToGraph(selectedIdea)}
+                  className="modal-action-btn"
+                  title="Jump to graph view"
+                >
+                  🗺️
+                </button>
+                <button
+                  onClick={closeModal}
+                  className="modal-close-btn"
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+
+            <div className="modal-body">
+              {/* 1. 概念链 */}
+              <section className="modal-section">
+                <h4>Concept Chain</h4>
+                <div className="chain-display">
+                  {selectedIdea.original_chain}
+                </div>
+              </section>
+
+              {/* 2. 相关论文 */}
+              {selectedIdea.related_papers && selectedIdea.related_papers.length > 0 && (
+                <section className="modal-section">
+                  <h4>Related Papers ({selectedIdea.related_papers.length})</h4>
+                  <div className="papers-list">
+                    {selectedIdea.related_papers.map((paper, idx) => {
+                      const paperId = paper.replace(/\.mmd$/, '');
+                      const link = paperLinks?.[currentDomain!]?.[paperId];
+                      return (
+                        <div key={idx} className="paper-item">
+                          <span className="paper-icon">📄</span>
+                          <span className="paper-id">{paper}</span>
+                          {link && (
+                            <a
+                              href={link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="paper-link-btn"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              🔗
+                            </a>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+              )}
+
+              {/* 3. 评分 */}
+              <section className="modal-section">
+                <h4>Final Score</h4>
+                <div className="score-display">
+                  {selectedIdea.final_score?.toFixed(2) || 'N/A'}
+                </div>
+              </section>
+
+              {/* 4. 提案内容 */}
+              {selectedIdea.proposal_content && (
+                <section className="modal-section">
+                  <h4>Proposal</h4>
+                  <div className="critique-text">
+                    {selectedIdea.proposal_content}
+                  </div>
+                </section>
+              )}
+
+              {/* 5. 评价 */}
+              {selectedIdea.final_critique && (
+                <section className="modal-section">
+                  <h4>Critique</h4>
+                  <div className="critique-text">
+                    {selectedIdea.final_critique}
+                  </div>
+                </section>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
