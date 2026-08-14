@@ -306,7 +306,7 @@ export default function IdeasView() {
                 </div>
 
                 <div className="detail-content">
-                  {/* 概念链 */}
+                  {/* 1. 概念链 */}
                   <section className="detail-section">
                     <h4>Concept Chain</h4>
                     <div className="chain-display">
@@ -314,35 +314,7 @@ export default function IdeasView() {
                     </div>
                   </section>
 
-                  {/* 评分 */}
-                  <section className="detail-section">
-                    <h4>Final Score</h4>
-                    <div className="score-display">
-                      {selectedIdea.final_score?.toFixed(2) || 'N/A'}
-                    </div>
-                  </section>
-
-                  {/* 提案内容 */}
-                  {selectedIdea.proposal_content && (
-                    <section className="detail-section">
-                      <h4>Proposal</h4>
-                      <div className="critique-text">
-                        {selectedIdea.proposal_content}
-                      </div>
-                    </section>
-                  )}
-
-                  {/* 评价 */}
-                  {selectedIdea.final_critique && (
-                    <section className="detail-section">
-                      <h4>Critique</h4>
-                      <div className="critique-text">
-                        {selectedIdea.final_critique}
-                      </div>
-                    </section>
-                  )}
-
-                  {/* 相关论文 */}
+                  {/* 2. 相关论文 */}
                   {selectedIdea.related_papers && selectedIdea.related_papers.length > 0 && (
                     <section className="detail-section">
                       <h4>Related Papers ({selectedIdea.related_papers.length})</h4>
@@ -353,6 +325,34 @@ export default function IdeasView() {
                             <span className="paper-id">{paper}</span>
                           </div>
                         ))}
+                      </div>
+                    </section>
+                  )}
+
+                  {/* 3. 评分 */}
+                  <section className="detail-section">
+                    <h4>Final Score</h4>
+                    <div className="score-display">
+                      {selectedIdea.final_score?.toFixed(2) || 'N/A'}
+                    </div>
+                  </section>
+
+                  {/* 4. 提案内容 */}
+                  {selectedIdea.proposal_content && (
+                    <section className="detail-section">
+                      <h4>Proposal</h4>
+                      <div className="critique-text">
+                        {selectedIdea.proposal_content}
+                      </div>
+                    </section>
+                  )}
+
+                  {/* 5. 评价 */}
+                  {selectedIdea.final_critique && (
+                    <section className="detail-section">
+                      <h4>Critique</h4>
+                      <div className="critique-text">
+                        {selectedIdea.final_critique}
                       </div>
                     </section>
                   )}
