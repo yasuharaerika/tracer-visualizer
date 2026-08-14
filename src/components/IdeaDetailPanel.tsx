@@ -1,10 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useAppStore } from '../utils/store';
-import { IdeaWithPapers, PaperLinks } from '../types/graph';
+import { IdeaWithPapers } from '../types/graph';
 import '../styles/IdeaDetailPanel.css';
 
 interface IdeaDetailPanelProps {
   idea: IdeaWithPapers;
+}
+
+// 论文链接数据结构
+interface PaperLinks {
+  [domain: string]: {
+    [paperId: string]: string | null;
+  };
 }
 
 export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
@@ -18,7 +25,7 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
   } = useAppStore();
 
   const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
-  const [paperLinksMap, setPaperLinksMap] = useState<Record<string, string>>({});
+  const [paperLinksMap, setPaperLinksMap] = useState<Record<string, string | null>>({});
 
   // 加载论文链接数据
   useEffect(() => {
@@ -39,7 +46,7 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
   // 获取所有论文的链接
   useEffect(() => {
     if (paperLinks && currentDomain && idea.related_papers) {
-      const links: Record<string, string> = {};
+      const links: Record<string, string | null> = {};
       for (const paper of idea.related_papers) {
         // 去掉 .mmd 后缀来匹配
         const paperId = paper.replace(/\.mmd$/, '');
@@ -79,7 +86,7 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
       </div>
 
       <div className="panel-content">
-        {/* 概念链 */}
+        {/* 1. 概念链 */}
         <section className="detail-section">
           <h4>Concept Chain</h4>
           <div className="concept-chain-list">
@@ -96,7 +103,7 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
           </div>
         </section>
 
-        {/* 相关论文 - 移到分数前面 */}
+        {/* 2. 相关论文 */}
         {idea.related_papers && idea.related_papers.length > 0 && (
           <section className="detail-section">
             <h4>Related Papers ({idea.related_papers.length})</h4>
@@ -131,13 +138,13 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
           </section>
         )}
 
-        {/* 最终评分 */}
+        {/* 3. 最终评分 */}
         <section className="detail-section score-section">
           <h4>Final Score</h4>
           <div className="score-display">{idea.final_score?.toFixed(2) ?? 'N/A'}</div>
         </section>
 
-        {/* 提案内容 */}
+        {/* 4. 提案内容 */}
         {idea.proposal_content && (
           <section className="detail-section">
             <h4>Proposal</h4>
@@ -145,7 +152,7 @@ export default function IdeaDetailPanel({ idea }: IdeaDetailPanelProps) {
           </section>
         )}
 
-        {/* 最终评价 */}
+        {/* 5. 最终评价 */}
         {idea.final_critique && (
           <section className="detail-section">
             <h4>Final Critique</h4>
