@@ -5,6 +5,13 @@ import { Domain, DOMAIN_LABELS, IdeaWithPapers } from '../types/graph';
 import { getBatchEvalCategories, EvalCat, COLORS, LABELS } from '../utils/eval';
 import '../styles/IdeasView.css';
 
+// 论文链接数据结构
+interface PaperLinks {
+  [domain: string]: {
+    [paperId: string]: string | null;
+  };
+}
+
 export default function IdeasView() {
   const { domain } = useParams<{ domain: string }>();
   const navigate = useNavigate();
@@ -25,6 +32,23 @@ export default function IdeasView() {
   const [selectedIdea, setSelectedIdea] = useState<IdeaWithPapers | null>(null);
   const [ideaCategories, setIdeaCategories] = useState<Map<number, EvalCat>>(new Map());
   const [filterCategory, setFilterCategory] = useState<'all' | 'low' | 'lower'>('all');
+  const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
+
+  // 加载论文链接数据
+  useEffect(() => {
+    const loadLinks = async () => {
+      try {
+        const response = await fetch('./data/paper_links.json');
+        if (response.ok) {
+          const data = await response.json();
+          setPaperLinks(data);
+        }
+      } catch (err) {
+        console.error('Error loading paper links:', err);
+      }
+    };
+    loadLinks();
+  }, []);
 
   // 加载评估分类数据
   useEffect(() => {
@@ -319,12 +343,28 @@ export default function IdeasView() {
                     <section className="detail-section">
                       <h4>Related Papers ({selectedIdea.related_papers.length})</h4>
                       <div className="papers-list">
-                        {selectedIdea.related_papers.map((paper, idx) => (
-                          <div key={idx} className="paper-item">
-                            <span className="paper-icon">📄</span>
-                            <span className="paper-id">{paper}</span>
-                          </div>
-                        ))}
+                        {selectedIdea.related_papers.map((paper, idx) => {
+                          // 去掉 .mmd 后缀来匹配链接
+                          const paperId = paper.replace(/\.mmd$/, '');
+                          const link = paperLinks?.[currentDomain!]?.[paperId];
+                          return (
+                            <div key={idx} className="paper-item">
+                              <span className="paper-icon">📄</span>
+                              <span className="paper-id">{paper}</span>
+                              {link && (
+                                <a
+                                  href={link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="paper-link-btn"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  🔗
+                                </a>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     </section>
                   )}
