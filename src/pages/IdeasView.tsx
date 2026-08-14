@@ -53,20 +53,17 @@ export default function IdeasView() {
   // 加载评估分类数据
   useEffect(() => {
     if (!currentDomain || ideasData.length === 0) {
-      console.log('[IdeasView] Skipping category load:', { currentDomain, ideasCount: ideasData.length });
       return;
     }
 
     const loadCategories = () => {
       try {
-        console.log('[IdeasView] Loading categories for', ideasData.length, 'ideas in', currentDomain);
         const categories = getBatchEvalCategories(
           ideasData.map(idea => ({ id: idea.id, proposal_content: idea.proposal_content }))
         );
-        console.log('[IdeasView] Loaded categories:', categories);
         setIdeaCategories(categories);
       } catch (err) {
-        console.error('[IdeasView] Error loading evaluation categories:', err);
+        console.error('Error loading evaluation categories:', err);
       }
     };
 
@@ -154,22 +151,6 @@ export default function IdeasView() {
     setSelectedNodeId(idea.concept_chain[0]);
     navigate(`/graph/${currentDomain}`);
   };
-
-  // 关闭弹窗
-  const closeModal = () => {
-    setSelectedIdea(null);
-  };
-
-  // 键盘 ESC 关闭弹窗
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && selectedIdea) {
-        closeModal();
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedIdea]);
 
   if (!currentDomain) {
     return null;
@@ -278,133 +259,136 @@ export default function IdeasView() {
         </div>
       </div>
 
-      {/* 主内容 - 网格布局 */}
-      <main className="ideas-main">
+      {/* 主内容 - 网格 + 侧边面板 */}
+      <main className={`ideas-main ${selectedIdea ? 'with-sidebar' : ''}`}>
         {isLoading ? (
           <div className="loading-container">
             <div className="loading" />
             <p>Loading ideas...</p>
           </div>
         ) : (
-          <div className="ideas-grid">
-            {filteredAndSortedIdeas.map((idea) => (
-              <div
-                key={idea.id}
-                className="idea-grid-card"
-                style={{ backgroundColor: getIdeaColor(idea) }}
-                onClick={() => setSelectedIdea(idea)}
-              >
-                <div className="grid-card-score">
-                  {idea.final_score?.toFixed(2) || 'N/A'}
-                </div>
-                <div className="grid-card-chain">
-                  {idea.original_chain}
-                </div>
-              </div>
-            ))}
+          <>
+            {/* 网格区域 */}
+            <div className="ideas-grid-container">
+              <div className="ideas-grid">
+                {filteredAndSortedIdeas.map((idea) => (
+                  <div
+                    key={idea.id}
+                    className={`idea-grid-card ${selectedIdea?.id === idea.id ? 'selected' : ''}`}
+                    style={{ backgroundColor: getIdeaColor(idea) }}
+                    onClick={() => setSelectedIdea(idea)}
+                  >
+                    <div className="grid-card-score">
+                      {idea.final_score?.toFixed(2) || 'N/A'}
+                    </div>
+                    <div className="grid-card-chain">
+                      {idea.original_chain}
+                    </div>
+                  </div>
+                ))}
 
-            {filteredAndSortedIdeas.length === 0 && (
-              <div className="empty-state">
-                <p>No ideas found</p>
+                {filteredAndSortedIdeas.length === 0 && (
+                  <div className="empty-state">
+                    <p>No ideas found</p>
+                  </div>
+                )}
               </div>
+            </div>
+
+            {/* 侧边详情面板 */}
+            {selectedIdea && (
+              <aside className="ideas-sidebar">
+                <div className="sidebar-header">
+                  <h3>Idea Details</h3>
+                  <div className="sidebar-actions">
+                    <button
+                      onClick={() => jumpToGraph(selectedIdea)}
+                      className="sidebar-action-btn"
+                      title="Jump to graph view"
+                    >
+                      🗺️
+                    </button>
+                    <button
+                      onClick={() => setSelectedIdea(null)}
+                      className="sidebar-close-btn"
+                    >
+                      ×
+                    </button>
+                  </div>
+                </div>
+
+                <div className="sidebar-body">
+                  {/* 1. 概念链 */}
+                  <section className="sidebar-section">
+                    <h4>Concept Chain</h4>
+                    <div className="chain-display">
+                      {selectedIdea.original_chain}
+                    </div>
+                  </section>
+
+                  {/* 2. 相关论文 */}
+                  {selectedIdea.related_papers && selectedIdea.related_papers.length > 0 && (
+                    <section className="sidebar-section">
+                      <h4>Related Papers ({selectedIdea.related_papers.length})</h4>
+                      <div className="papers-list">
+                        {selectedIdea.related_papers.map((paper, idx) => {
+                          const paperId = paper.replace(/\.mmd$/, '');
+                          const link = paperLinks?.[currentDomain!]?.[paperId];
+                          return (
+                            <div key={idx} className="paper-item">
+                              <span className="paper-icon">📄</span>
+                              <span className="paper-id">{paper}</span>
+                              {link && (
+                                <a
+                                  href={link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="paper-link-btn"
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  🔗
+                                </a>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </section>
+                  )}
+
+                  {/* 3. 评分 */}
+                  <section className="sidebar-section">
+                    <h4>Final Score</h4>
+                    <div className="score-display">
+                      {selectedIdea.final_score?.toFixed(2) || 'N/A'}
+                    </div>
+                  </section>
+
+                  {/* 4. 提案内容 */}
+                  {selectedIdea.proposal_content && (
+                    <section className="sidebar-section">
+                      <h4>Proposal</h4>
+                      <div className="critique-text">
+                        {selectedIdea.proposal_content}
+                      </div>
+                    </section>
+                  )}
+
+                  {/* 5. 评价 */}
+                  {selectedIdea.final_critique && (
+                    <section className="sidebar-section">
+                      <h4>Critique</h4>
+                      <div className="critique-text">
+                        {selectedIdea.final_critique}
+                      </div>
+                    </section>
+                  )}
+                </div>
+              </aside>
             )}
-          </div>
+          </>
         )}
       </main>
-
-      {/* 详情弹窗 */}
-      {selectedIdea && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h3>Idea Details</h3>
-              <div className="modal-actions">
-                <button
-                  onClick={() => jumpToGraph(selectedIdea)}
-                  className="modal-action-btn"
-                  title="Jump to graph view"
-                >
-                  🗺️
-                </button>
-                <button
-                  onClick={closeModal}
-                  className="modal-close-btn"
-                >
-                  ×
-                </button>
-              </div>
-            </div>
-
-            <div className="modal-body">
-              {/* 1. 概念链 */}
-              <section className="modal-section">
-                <h4>Concept Chain</h4>
-                <div className="chain-display">
-                  {selectedIdea.original_chain}
-                </div>
-              </section>
-
-              {/* 2. 相关论文 */}
-              {selectedIdea.related_papers && selectedIdea.related_papers.length > 0 && (
-                <section className="modal-section">
-                  <h4>Related Papers ({selectedIdea.related_papers.length})</h4>
-                  <div className="papers-list">
-                    {selectedIdea.related_papers.map((paper, idx) => {
-                      const paperId = paper.replace(/\.mmd$/, '');
-                      const link = paperLinks?.[currentDomain!]?.[paperId];
-                      return (
-                        <div key={idx} className="paper-item">
-                          <span className="paper-icon">📄</span>
-                          <span className="paper-id">{paper}</span>
-                          {link && (
-                            <a
-                              href={link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="paper-link-btn"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              🔗
-                            </a>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </section>
-              )}
-
-              {/* 3. 评分 */}
-              <section className="modal-section">
-                <h4>Final Score</h4>
-                <div className="score-display">
-                  {selectedIdea.final_score?.toFixed(2) || 'N/A'}
-                </div>
-              </section>
-
-              {/* 4. 提案内容 */}
-              {selectedIdea.proposal_content && (
-                <section className="modal-section">
-                  <h4>Proposal</h4>
-                  <div className="critique-text">
-                    {selectedIdea.proposal_content}
-                  </div>
-                </section>
-              )}
-
-              {/* 5. 评价 */}
-              {selectedIdea.final_critique && (
-                <section className="modal-section">
-                  <h4>Critique</h4>
-                  <div className="critique-text">
-                    {selectedIdea.final_critique}
-                  </div>
-                </section>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
