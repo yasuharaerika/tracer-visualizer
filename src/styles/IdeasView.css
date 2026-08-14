@@ -1,29 +1,5 @@
-/* Ideas视图样式 - 增强版：卡片分层 + 滚动动效 */
+/* Ideas视图样式 */
 
-/* ============================================
-   CSS 变量覆盖（如果需要可以调整）
-   ============================================ */
-:root {
-  /* 增强的分层阴影 */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
-
-  /* 增强的边框 */
-  --border-light: rgba(0, 0, 0, 0.06);
-  --border-medium: rgba(0, 0, 0, 0.1);
-  --border-accent: rgba(196, 97, 47, 0.3);
-
-  /* 动画时长 */
-  --transition-fast: 0.15s ease;
-  --transition-normal: 0.25s ease;
-  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* ============================================
-   基础布局
-   ============================================ */
 .ideas-view {
   display: flex;
   flex-direction: column;
@@ -31,24 +7,21 @@
   background: var(--paper);
 }
 
-/* ============================================
-   顶部导航栏 - 增强层次感
-   ============================================ */
+/* 顶部导航栏 */
 .ideas-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 2rem;
-  background: linear-gradient(180deg, var(--surface) 0%, rgba(255,255,255,0.95) 100%);
-  border-bottom: 1px solid var(--border-light);
+  padding: 1rem var(--gutter);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   z-index: 100;
-  backdrop-filter: blur(8px);
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .header-right {
@@ -56,18 +29,14 @@
   gap: 0.75rem;
 }
 
-/* ============================================
-   控制栏 - 悬浮效果
-   ============================================ */
+/* 控制栏 */
 .ideas-controls {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  padding: 1rem 2rem;
-  background: var(--paper);
-  border-bottom: 1px solid var(--border-light);
-  position: relative;
-  z-index: 50;
+  padding: 1rem var(--gutter);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
 }
 
 .search-container {
@@ -78,127 +47,114 @@
 
 .sort-buttons {
   display: flex;
-  gap: 0.375rem;
+  gap: 0.5rem;
 }
 
 .sort-btn {
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-medium);
+  border: 1px solid var(--border);
   background: var(--paper);
-  color: var(--ink-muted);
-  border-radius: 8px;
-  font-size: 0.8125rem;
-  font-weight: 500;
+  color: var(--ink);
+  border-radius: 6px;
+  font-size: 0.875rem;
   cursor: pointer;
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
 }
 
 .sort-btn:hover {
-  background: var(--surface);
-  border-color: var(--ink-muted);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  background: var(--paper-deep);
 }
 
 .sort-btn.active {
   background: var(--accent);
-  color: white;
+  color: var(--paper);
   border-color: var(--accent);
-  box-shadow: var(--shadow-md), 0 0 0 1px var(--accent);
 }
 
 .stats {
   margin-left: auto;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--ink-muted);
-  font-weight: 500;
 }
 
-/* ============================================
-   图例和筛选 - 悬浮卡片风格
-   ============================================ */
+/* 图例和筛选容器 */
 .ideas-legend-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 2rem;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border-light);
+  padding: 0.75rem var(--gutter);
+  background: var(--paper);
+  border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
+/* 图例和筛选 */
 .ideas-legend {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
 .legend-label {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   color: var(--ink-muted);
   font-weight: 500;
   margin-right: 0.5rem;
 }
 
+/* 右侧图例 */
 .ideas-legend-right {
   display: flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.375rem 0.75rem;
-  background: var(--paper);
-  border: 1px solid var(--border-medium);
+  gap: 0.5rem;
+  padding: 0.375rem 0.875rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  box-shadow: var(--shadow-sm);
 }
 
 .ideas-legend-right .legend-color {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 4px;
   flex-shrink: 0;
 }
 
 .ideas-legend-right .legend-text {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: var(--ink);
   white-space: nowrap;
 }
 
 .filter-btn {
-  padding: 0.375rem 0.75rem;
-  border: 1px solid var(--border-medium);
-  background: var(--paper);
+  padding: 0.375rem 0.875rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
   color: var(--ink-muted);
-  border-radius: 20px;
-  font-size: 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all var(--transition-normal);
-  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
 }
 
 .filter-btn:hover {
-  background: var(--surface);
+  background: var(--paper-deep);
   border-color: var(--ink-muted);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
 }
 
 .filter-btn.active {
   background: var(--accent);
-  color: white;
+  color: var(--paper);
   border-color: var(--accent);
-  box-shadow: var(--shadow-md);
 }
 
 .filter-btn.active:hover {
-  filter: brightness(1.1);
+  background: var(--accent-hover);
 }
 
-/* ============================================
-   主内容区
-   ============================================ */
+/* 主内容 */
 .ideas-main {
   flex: 1;
   overflow: hidden;
@@ -209,75 +165,39 @@
   height: 100%;
 }
 
-/* ============================================
-   Idea 卡片 - 分层 + 滚动动画
-   ============================================ */
+/* Ideas列表 */
 .ideas-list {
   flex: 1;
   overflow-y: auto;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* 滚动渐入动画 */
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .idea-card {
-  padding: 1.25rem 1.5rem;
-  background: var(--paper);
-  border: 1px solid var(--border-medium);
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 12px;
   cursor: pointer;
-  transition: all var(--transition-slow);
-  box-shadow: var(--shadow-sm);
-  animation: fadeSlideUp 0.5s ease backwards;
-  position: relative;
-  overflow: hidden;
-}
-
-/* 卡片顶部装饰线 */
-.idea-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity var(--transition-normal);
+  transition: all 0.2s ease;
 }
 
 .idea-card:hover {
-  border-color: var(--border-accent);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
-
-.idea-card:hover::before {
-  opacity: 1;
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(196, 97, 47, 0.1);
+  transform: translateY(-1px);
 }
 
 .idea-card.selected {
   border-color: var(--accent);
-  background: linear-gradient(135deg, rgba(196, 97, 47, 0.03) 0%, var(--paper) 100%);
-  box-shadow: var(--shadow-lg), 0 0 0 1px var(--accent);
+  background: var(--accent-soft) !important;
 }
 
-.idea-card.selected::before {
-  opacity: 1;
-  background: var(--accent);
+/* 非选中状态时使用背景色 */
+.idea-card:not(.selected) {
+  background-color: inherit;
 }
 
 .idea-header {
@@ -288,38 +208,32 @@
 }
 
 .idea-number {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--ink-muted);
-  letter-spacing: 0.02em;
 }
 
 .idea-score {
   padding: 0.25rem 0.75rem;
-  background: linear-gradient(135deg, var(--accent) 0%, #d4713f 100%);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.8125rem;
+  background: var(--accent);
+  color: var(--paper);
+  border-radius: 999px;
+  font-size: 0.875rem;
   font-weight: 600;
-  box-shadow: var(--shadow-sm);
 }
 
 .idea-chain {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--ink);
   margin-bottom: 0.75rem;
   font-family: 'Courier New', monospace;
-  padding: 0.5rem 0.75rem;
-  background: var(--surface);
-  border-radius: 6px;
-  border-left: 3px solid var(--accent);
 }
 
 .idea-meta {
   display: flex;
   gap: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   color: var(--ink-muted);
 }
 
@@ -329,50 +243,30 @@
   gap: 0.25rem;
 }
 
-/* ============================================
-   详情面板 - 滑入动画
-   ============================================ */
+/* 详情面板 */
 .idea-detail {
-  width: 480px;
-  background: var(--paper);
-  border-left: 1px solid var(--border-medium);
+  width: 500px;
+  background: var(--surface);
+  border-left: 1px solid var(--border);
   overflow-y: auto;
   flex-shrink: 0;
-  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.05);
-}
-
-/* 滑入动画 */
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.idea-detail {
-  animation: slideInRight 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .detail-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid var(--border-light);
-  background: linear-gradient(180deg, var(--surface) 0%, var(--paper) 100%);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(8px);
 }
 
 .detail-header h3 {
   font-family: var(--font-serif);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--ink);
   margin: 0;
@@ -385,19 +279,18 @@
   align-items: center;
   justify-content: center;
   border: none;
-  background: transparent;
+  background: none;
   color: var(--ink-muted);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  border-radius: 8px;
-  transition: all var(--transition-fast);
+  border-radius: 6px;
+  transition: all 0.2s ease;
   flex-shrink: 0;
 }
 
 .close-btn:hover {
-  background: var(--surface);
+  background: var(--paper-deep);
   color: var(--ink);
-  transform: scale(1.05);
 }
 
 .jump-to-graph-btn {
@@ -406,45 +299,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-medium);
+  border: 1px solid var(--border);
   background: var(--paper);
   color: var(--ink);
   font-size: 1rem;
   cursor: pointer;
-  border-radius: 8px;
-  transition: all var(--transition-normal);
+  border-radius: 6px;
+  transition: all 0.2s ease;
   flex-shrink: 0;
-  box-shadow: var(--shadow-sm);
 }
 
 .jump-to-graph-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: white;
   transform: scale(1.05);
-  box-shadow: var(--shadow-md);
 }
 
 .detail-content {
   padding: 1.5rem;
 }
 
-/* ============================================
-   详情内容区 - 卡片分层
-   ============================================ */
 .detail-section {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: var(--surface);
-  border-radius: 10px;
-  border: 1px solid var(--border-light);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition-normal);
-}
-
-.detail-section:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-medium);
+  margin-bottom: 2rem;
 }
 
 .detail-section:last-child {
@@ -452,47 +328,33 @@
 }
 
 .detail-section h4 {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  margin: 0 0 0.75rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.detail-section h4::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-  flex-shrink: 0;
+  letter-spacing: 0.05em;
+  color: var(--ink-muted);
+  margin: 0 0 1rem 0;
 }
 
 .chain-display {
-  padding: 0.875rem;
+  padding: 1rem;
   background: var(--paper);
   border-radius: 8px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border);
   font-family: 'Courier New', monospace;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   word-break: break-word;
-  border-left: 3px solid var(--accent);
 }
 
 .score-display {
-  padding: 1.25rem;
-  background: linear-gradient(135deg, rgba(196, 97, 47, 0.08) 0%, rgba(196, 97, 47, 0.02) 100%);
-  border-radius: 10px;
-  font-size: 2.5rem;
-  font-weight: 700;
+  padding: 1rem;
+  background: var(--accent-soft);
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: 600;
   color: var(--accent);
   text-align: center;
-  border: 1px solid rgba(196, 97, 47, 0.15);
 }
 
 .proposal-block {
@@ -517,7 +379,7 @@
   padding: 0.75rem;
   background: var(--paper);
   border-radius: 8px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border);
   font-size: 0.875rem;
   line-height: 1.6;
   margin: 0;
@@ -525,18 +387,15 @@
 
 .proposal-text,
 .critique-text {
-  padding: 0.875rem;
+  padding: 1rem;
   background: var(--paper);
   border-radius: 8px;
-  border: 1px solid var(--border-light);
-  font-size: 0.8125rem;
-  line-height: 1.7;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+  line-height: 1.6;
   white-space: pre-wrap;
 }
 
-/* ============================================
-   论文列表 - 分层卡片
-   ============================================ */
 .papers-list {
   display: flex;
   flex-direction: column;
@@ -547,27 +406,19 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.625rem 0.75rem;
+  padding: 0.75rem;
   background: var(--paper);
   border-radius: 8px;
-  border: 1px solid var(--border-light);
-  font-size: 0.8125rem;
-  transition: all var(--transition-fast);
-}
-
-.paper-item:hover {
-  background: rgba(196, 97, 47, 0.03);
-  border-color: var(--border-accent);
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
 }
 
 .paper-icon {
-  font-size: 0.875rem;
-  flex-shrink: 0;
+  font-size: 1rem;
 }
 
 .paper-id {
   font-family: 'Courier New', monospace;
-  font-size: 0.75rem;
   color: var(--ink);
   flex: 1;
   min-width: 0;
@@ -576,27 +427,25 @@
   white-space: nowrap;
 }
 
+/* 论文链接按钮 */
 .paper-link-btn {
   flex-shrink: 0;
   padding: 0.25rem 0.5rem;
   background: var(--accent);
   color: white;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 0.75rem;
   text-decoration: none;
-  transition: all var(--transition-fast);
-  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+  margin-left: auto;
 }
 
 .paper-link-btn:hover {
-  background: #b5532a;
-  transform: scale(1.05);
-  box-shadow: var(--shadow-md);
+  background: var(--accent-deep);
+  transform: scale(1.1);
 }
 
-/* ============================================
-   加载和空状态
-   ============================================ */
+/* 加载和空状态 */
 .loading-container {
   display: flex;
   flex-direction: column;
@@ -608,7 +457,7 @@
 
 .loading-container p {
   color: var(--ink-muted);
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .empty-state {
@@ -617,12 +466,10 @@
   justify-content: center;
   padding: 4rem 2rem;
   color: var(--ink-muted);
-  font-size: 0.9375rem;
+  font-style: italic;
 }
 
-/* ============================================
-   滚动条美化
-   ============================================ */
+/* 滚动条 */
 .ideas-list::-webkit-scrollbar,
 .idea-detail::-webkit-scrollbar {
   width: 6px;
@@ -630,12 +477,12 @@
 
 .ideas-list::-webkit-scrollbar-track,
 .idea-detail::-webkit-scrollbar-track {
-  background: var(--surface);
+  background: var(--paper);
 }
 
 .ideas-list::-webkit-scrollbar-thumb,
 .idea-detail::-webkit-scrollbar-thumb {
-  background: var(--border-medium);
+  background: var(--border);
   border-radius: 3px;
 }
 
@@ -644,21 +491,10 @@
   background: var(--ink-muted);
 }
 
-/* ============================================
-   响应式布局
-   ============================================ */
+/* 响应式 */
 @media (max-width: 1024px) {
   .idea-detail {
-    width: 420px;
-  }
-
-  .ideas-header,
-  .ideas-controls,
-  .ideas-legend-container,
-  .ideas-list,
-  .detail-content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    width: 400px;
   }
 }
 
@@ -682,8 +518,8 @@
     right: 0;
     bottom: 0;
     width: 90%;
-    max-width: 480px;
+    max-width: 500px;
     z-index: 200;
-    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
   }
 }
