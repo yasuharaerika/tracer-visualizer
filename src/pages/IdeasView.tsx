@@ -88,19 +88,27 @@ export default function IdeasView() {
     }
   }, [domain, currentDomain, setCurrentDomain, navigate]);
 
-  // 加载Ideas数据
+  // 加载Ideas数据（使用带 hypothesis_summary 的文件）
   useEffect(() => {
     if (!currentDomain) return;
 
     const loadData = async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`./data/${currentDomain}_ideas_with_papers.json`);
+        // 优先加载带 hypothesis_summary 的数据
+        const response = await fetch(`./data/${currentDomain}_ideas_with_hypothesis_summary.json`);
         if (!response.ok) {
-          throw new Error(`Failed to load ${currentDomain} ideas`);
+          // 如果不存在，回退到原始文件
+          const fallbackResponse = await fetch(`./data/${currentDomain}_ideas_with_papers.json`);
+          if (!fallbackResponse.ok) {
+            throw new Error(`Failed to load ${currentDomain} ideas`);
+          }
+          const fallbackData = await fallbackResponse.json();
+          setIdeasData(fallbackData);
+        } else {
+          const data = await response.json();
+          setIdeasData(data);
         }
-        const data = await response.json();
-        setIdeasData(data);
       } catch (err) {
         console.error('Error loading ideas:', err);
       } finally {
@@ -282,7 +290,7 @@ export default function IdeasView() {
                       {idea.final_score?.toFixed(2) || 'N/A'}
                     </div>
                     <div className="grid-card-chain">
-                      {idea.original_chain}
+                      {idea.hypothesis_summary || idea.original_chain}
                     </div>
                   </div>
                 ))}

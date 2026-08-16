@@ -225,15 +225,15 @@
   line-height: 1;
 }
 
-/* 卡片下方 - 概念链 */
+/* 卡片下方 - Hypothesis Summary */
 .grid-card-chain {
   flex: 1;
-  font-size: 0.625rem;
-  line-height: 1.4;
+  font-size: 0.6875rem;
+  line-height: 1.5;
   color: var(--ink);
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 10;
   -webkit-box-orient: vertical;
   word-break: break-word;
 }
