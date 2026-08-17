@@ -92,7 +92,7 @@ export default function GraphCanvas() {
     return '#95A5A6'; // 默认灰蓝色
   };
 
-  // 加载图谱数据
+  // 加载图谱数据（支持.gz压缩）
   useEffect(() => {
     if (!currentDomain) return;
 
@@ -102,17 +102,31 @@ export default function GraphCanvas() {
       setLoadProgress(0);
 
       try {
-        const response = await fetch(`./data/${currentDomain}_graph.json`);
+        // 模拟进度（fetch不支持真实进度）
+        setLoadProgress(10);
+
+        // 尝试加载.gz版本，失败则回退到普通版本
+        let response = await fetch(`./data/${currentDomain}_graph.json.gz`);
+        if (!response.ok) {
+          response = await fetch(`./data/${currentDomain}_graph.json`);
+        }
+
         if (!response.ok) {
           throw new Error(`Failed to load ${currentDomain} graph`);
         }
 
-        // 模拟进度（fetch不支持真实进度）
         setLoadProgress(30);
 
-        const data = await response.json();
-        setLoadProgress(60);
+        const arrayBuffer = await response.arrayBuffer();
+        setLoadProgress(50);
 
+        // 解压数据
+        const pako = (await import('pako')).default;
+        const uint8Array = new Uint8Array(arrayBuffer);
+        const decompressed = pako.ungzip(uint8Array, { to: 'string' })
+
+        setLoadProgress(70);
+        const data = JSON.parse(decompressed);
         setGraphData(data);
         setLoadProgress(100);
       } catch (err) {

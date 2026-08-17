@@ -2,11 +2,18 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
+import viteCompression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
+    // 生成 gzip 压缩文件
+    viteCompression({
+      algorithm: 'gzip',
+      ext: '.gz',
+      threshold: 1024, // 超过1KB就压缩
+    }),
     viteStaticCopy({
       targets: [
         { src: 'data/*', dest: '.' },
