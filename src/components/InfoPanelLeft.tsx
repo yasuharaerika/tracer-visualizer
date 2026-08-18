@@ -4,6 +4,19 @@ import { GraphNode, IdeaWithPapers, PaperLinks } from '../types/graph';
 import '../styles/InfoPanel.css';
 import '../styles/InfoPanelExtra.css';
 
+// GitHub SVG 图标
+const GitHubIcon = ({ size = 16 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    style={{ verticalAlign: 'middle', marginRight: '4px' }}
+  >
+    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+  </svg>
+);
+
 interface InfoPanelLeftProps {
   graphData: { nodes: GraphNode[]; edges: any[] } | null;
 }
@@ -16,6 +29,8 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
   const [activeTab, setActiveTab] = useState<TabType>('concepts');
   const [paperLinks, setPaperLinks] = useState<PaperLinks | null>(null);
   const [paperLink, setPaperLink] = useState<string | null>(null);
+  const [paperGithubLinks, setPaperGithubLinks] = useState<PaperLinks | null>(null);
+  const [paperGithubLink, setPaperGithubLink] = useState<string | null>(null);
 
   // 获取选中节点的详细信息
   const selectedNode = graphData?.nodes.find(n => n.id === selectedNodeId);
@@ -24,10 +39,19 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
   useEffect(() => {
     const loadLinks = async () => {
       try {
-        const response = await fetch('./data/paper_links.json');
-        if (response.ok) {
-          const data = await response.json();
+        const [paperResponse, githubResponse] = await Promise.all([
+          fetch('./data/paper_links.json'),
+          fetch('./data/paper_github_links.json'),
+        ]);
+
+        if (paperResponse.ok) {
+          const data = await paperResponse.json();
           setPaperLinks(data);
+        }
+
+        if (githubResponse.ok) {
+          const data = await githubResponse.json();
+          setPaperGithubLinks(data);
         }
       } catch (err) {
         console.error('Error loading paper links:', err);
@@ -46,7 +70,15 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
     } else {
       setPaperLink(null);
     }
-  }, [selectedNode, paperLinks, currentDomain]);
+
+    if (selectedNode && selectedNode.type === 'paper' && paperGithubLinks && currentDomain) {
+      const paperId = selectedNode.id.replace(/\.mmd$/, '');
+      const githubLink = paperGithubLinks[currentDomain]?.[paperId] || null;
+      setPaperGithubLink(githubLink);
+    } else {
+      setPaperGithubLink(null);
+    }
+  }, [selectedNode, paperLinks, paperGithubLinks, currentDomain]);
 
   if (!selectedNodeId || !selectedNode) {
     return null;
@@ -122,17 +154,31 @@ export default function InfoPanelLeft({ graphData }: InfoPanelLeftProps) {
             <span className="property-label">Type:</span>
             <span className="property-value type-badge">{selectedNode.type || 'unknown'}</span>
           </div>
-          {selectedNode.type === 'paper' && paperLink && (
+          {selectedNode.type === 'paper' && (paperLink || paperGithubLink) && (
             <div className="property-row">
-              <span className="property-label">Link:</span>
-              <a
-                href={paperLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="paper-link-btn"
-              >
-                🔗 Open Paper
-              </a>
+              <span className="property-label">Links:</span>
+              <div className="link-buttons">
+                {paperLink && (
+                  <a
+                    href={paperLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="paper-link-btn"
+                  >
+                    🔗 Paper
+                  </a>
+                )}
+                {paperGithubLink && (
+                  <a
+                    href={paperGithubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="paper-link-btn github-link"
+                  >
+                    <GitHubIcon size={14} /> GitHub
+                  </a>
+                )}
+              </div>
             </div>
           )}
           {selectedNode.facet && (

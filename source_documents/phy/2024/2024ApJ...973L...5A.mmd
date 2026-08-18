@@ -1,0 +1,431 @@
+###### Abstract
+
+Stars with initial masses larger than 8 solar masses undergo substantial mass loss through mechanisms that remain elusive. Unraveling the origins of this mass loss is important for comprehending the evolutionary path of these stars, the type of supernova explosion and whether they become neutron stars or black hole remnants. In 2022 December, RW Cep experienced the Great Dimming in its visible brightness, presenting a unique opportunity to understand mass loss mechanisms. Our previous observations of RW Cep from the CHARA Array, taken during the dimming phase, show a compelling asymmetry in the star images, with a darker zone on the west side of the star indicating presence of dust in front of the star in our line of sight. Here, we present multi-epoch observations from CHARA while the star re-brightened in 2023. We created images using three image reconstruction methods and an analytical model fit. Comparisons of images acquired during the dimming and re-brightening phases reveal remarkable differences. Specifically, the west side of RW Cep, initially obscured during the dimming phase, reappeared during the subsequent re-brightening phase and the measured angular diameter became larger by 8%. We also observed image changes from epoch to epoch while the star is brightening indicating the time evolution of dust in front of the star. We suggest that the dimming of RW Cep was a result from a recent surface mass ejection event, generating a dust cloud that partially obstructed the stellar photosphere.
+
+Late-type supergiant stars (910), stellar mass loss (1613), stellar radii (1626), variable stars (1761) 0000-0002-9677-787X]Narsireddy Anugu
+
+0000-0002-8862-7877]Douglas R. Gies
+
+0000-0002-8861-6777]Rachael M. Roettenbacher
+
+0000-0002-8882-8777]John D. Monnier
+
+0000-0002-8882-8777]Miguel Montarges
+
+0000-0002-8882-8777]Antoine Merand
+
+0000-0002-8882-8777]Fabien Baron
+
+0000-0002-8888-0888]Gail H. Schaefer
+
+0000-0002-8882-888X]Katherine A. Shepard
+
+0000-0002-8882-8888]Stefan Kraus
+
+0000-0002-8888-0888]Matthew D. Anderson
+
+0000-0002-8888-0888]Isabelle Cordon
+
+0000-0002-8888-0888]Tyler Gardner
+
+0000-0002-8888-0888]Maya Gutierrez
+
+0000-0002-8888-0888]Rainer Kohler
+
+0000-0002-8888-0888]Karolina Kubiak
+
+0000-0002-8888-0888-0888]Cyprian Lanthermann
+
+0000-0002-8888-0888-0888]Olli Majoinen
+
+## 1 Introduction
+
+Studying the origins of mass loss rates in massive stars is crucial for understanding their evolutionary trajectory on the Hertzsprung-Russell (H-R) diagram. Mass loss plays a pivotal role in the transformation of these stars into hot supergiants, such as luminous blue variables, B[e] supergiants, or Wolf-Rayet stars. It also determines the type of supernova explosion they will undergo and their subsequent fate as either neutron star or black hole remnants (deJager 1998; Langer 2012; Smith 2014). Recent Great Dimming events observed in Betelgeuse (Montarges et al., 2021; Dupree et al., 2020, 2022; Humphreys & Jones, 2022) and RW Cep (HD 212466, Jones et al., 2023; Anugu et al., 2023) suggest that episodic surface mass ejections are mainstream processes in supergiants and hypergiants, driven probably by the combined activity of hot convection cells and pulsation.
+
+This study focuses on RW Cep, a star that experienced a dramatic dimming event in 2020. As shown in Figures 1 and 2, the event manifested as a 1.2-magnitude decrease in brightness from the beginning of 2020 to the end of 2022. This was followed by a subsequent brightening that began in early 2023 and continued until February 2024. Although RW Cep experienced six dimming events in the past century, the one recorded in 2022 was the most profound. The star reached its faintest level in over a century, thus earning the name "The Great Dimming of RW Cep". Jones et al. (2023) analyzed the Spectral Energy Distribution (SED) of RW Cep, suggesting the Great Dimming is part of a series of mass ejections that have likely occurred over the past century. Analysis of SED reveals the presence of two dust shells: an inner shell with a temperature of 250 K and an outer shell at 100 K. These shells were subsequently imaged by the Multiple Mirror Telescope (MMT) observatory at a wavelength of 11.9\\mum, revealing an angular radius of 300-400 mas (Jones et al., 2023). These observations from both SED analysis and direct imaging provide strong evidence that the ongoing fading event is likely part of a series of mass ejection and dust formation episodes in the history of RW Cep. Shenoy (2016) also estimated the mass loss rate \\sim 7\\times 10^{-6}M_{\\odot}yr{}^{-1} in RW Cep using a DUSTY model fit. Assuming a wind velocity of 50 km s{}^{-1} for the dust shells, they further estimated that the shells were likely formed from material ejected during outbursts that occurred \\sim 95-140 years ago.
+
+High spectral resolution monitoring of the H\\alpha spectral line reveals strong emission during the dimming minimum, compared to both before and after the dimming (Kasikov et al., 2024). The H\\alpha line is blue-shifted (-100 km/s), indicating that the ejected gas cloud is moving towards us. This gas cloud may be the source of the dust that blocked the star in our line of sight during the dimming.
+
+The analysis of near-infrared (NIR) spectroscopy obtained during the dimming event, as discussed by Anugu et al. (2023, hereafter Paper I), suggests the formation of newly formed dust. This conclusion is drawn from the interpretation of the change in continuum slope, as described in Paper I. The study also found that there was a temperature drop of \\Delta T_{\\rm eff}=300 K during the dimming event, with an effective temperature T_{\\rm eff} of 3900 K compared to 4200 K before the dimming. The interferometric observations of RW Cep from the same study were conducted by the Georgia State University Center for High Angular Resolution Astronomy (CHARA) Array in both H and K-band wavelengths (ten Brummelaar et al., 2005; Schaefer et al., 2020). These observations revealed RW Cep to be one of the largest stars known, with a limb-darkened diameter of \\theta_{LD}=2.45 mas, corresponding to a linear radius of 900-1760R_{\\odot} considering its distance range of 3.4 to 6.7 kpc. Image reconstructions of the CHARA data at H and K-band wavelengths revealed a remarkable asymmetry in the western part of the star, which appeared darker, particularly in the K-band images. This observation hints at a potential association with cool circumstellar dust obscuring the star in our line of sight. See Table 1 for a summary of properties of RW Cep.
+
+Here we present new CHARA observations that were made while RW Cep was re-brightening in 2023. During this re-brightening phase, we conducted observations in four epochs spanning almost four months, starting from 2023 July to October. The images captured during the 2023 re-brightening phase offer a different perspective on RW Cep, as the western part of the star reappeared bright, standing in stark contrast to the images obtained during the dimming phase (see Figure 3).
+
+This paper is organized into the following sections. The long-term photometric variability of RW Cep since the beginning of the 20th century is presented in Section 2. A comparison of the duration of each dimming event (brightness fall and rise time) is also provided in this section. The observation log of our new interferometric observations taken in 2023 using the CHARA Array is described in Section 3 and Appendix A. This section outlines the data acquisition process and the subsequent data reduction techniques employed to prepare the data for analysis. The initial interpretation of the data using a model fitting technique is presented in Section 4. To reconstruct model-independent images, we employ three independent image reconstruction software packages, as described in Sections 5, 6 and Appendix B. These algorithms allow us to reconstruct images of RW Cep, both in the continuum and in specific CO band emission lines. We discuss the results in Section 8, explaining the main processes behind the 2022 dimming. Concluding remarks are presented in the final Section 9.
+
+## 2 Historical Outburst and Dimming Activity of RW Cep
+
+Figure 1 illustrates 125 years of visual light curve data for RW Cep covering the period from 1900 to 2024. The plot is generated using archival time-series photometry data obtained from the American Association for Variable Star Observers (AAVSO, Kloppenborg, 2023) and the Digital Access to Smithsonian Collections History (DASCH, Grindlay et al., 2012) databases. We applied a -2.32 magnitude offset to the DASCH dataset to match the AAVSO dataset. To filter the noisy observations, a 15-day moving average was applied to smooth the data using a low-pass filter _signal.filter_ from Python, and subsequently, the data were binned into 7-day intervals.
+
+A visual examination of the light curve shows a semi-episodic pattern of dimming and re-brightening activity. We identify six significant dimming episodes since 1900, occurring in 1908.5, 1936, 1950.5 (Semakin, 1954), 1962, 1988, and most recently in 2023. These events were identified based on two criteria: (i) the dimming event must cause a significant decrease in brightness, exceeding the pulsational instability dimming of \\pm 0.3 magnitudes, and (ii) the dimming event should have a longer fall and rise time, meaning the time between the start of dimming and the subsequent return to normal brightness must be longer than the \\sim 1-1.5 year pulsation period of the star (see Figure 4). In these identified events, the visual brightness dropped by up to \\Delta V=1.2 magnitudes, and the fall and rise times of the dimming events were over four years (see Figure 2b). RW Cep exhibits asymmetric dimming light curves similar to
+
+\\begin{table}
+
+\\begin{tabular}{l c l} \\hline \\hline \\multicolumn{1}{c}{ Parameter} & \\multicolumn{1}{c}{Value} & \\multicolumn{1}{c}{Reference} \\\\ \\hline Stellar Radius (mas) & 1.30\\pm 0.02 & This work \\\\ Stellar Radius (R_{\\odot}) & 1100\\pm 44 & This work \\\\ Circumstellar env radius (mas) & 2.15\\pm 0.10 & This work \\& Paper I \\\\ Circumstellar env radius (R_{\\odot}) & 1820\\pm 110 & This work \\\\ Spectral type & K2Ia-0 - M2Ia-0 & Keenan \\& McNeil (1989); Watson et al. (2006) \\\\ Distance (pc) & 3935\\pm 152 & Delgado et al. (2013); Cantat-Gaudin et al. (2020); \\\\  & & Almeida et al. (2023); Hunt \\& Reffert (2024) \\\\ Temperature (K) & 4200-4400 & before dimming; Paper I, Jones et al. (2023) \\\\  & 3900 & during dimming, Anugu et al. (2023) \\\\ Luminosity (L/L_{\\odot}\\times 10^{3}) & 300 & Jones et al. (2023) \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: RW Cep properties.
+
+[W60]B90 in Large Magellanic Cloud (Munoz-Sanchez et al., 2024). This means the star takes longer time to decrease in brightness (fall) than it does to increase in brightness (rise).
+
+We propose that these major dimming events resulted from outbursts, leading to substantial mass loss with the release of gas clouds from the stellar surface. The analysis of SED and thermal imaging from the MMT reveals that presence of two dust shells, which could have formed from these mass ejected material (Jones et al., 2023). As these gas clouds travel outward, they cool down and condense into dust, temporarily blocking the star to dim in our line of sight before eventually dispersing. This formation of dust would naturally lead to a decrease in brightness, with the brightness eventually returning to normal levels once the dust cloud has moved away. Interestingly, the 2020-2022 event was the faintest (\\Delta V=1.2, Figure 2b) compared to all other events, suggesting the name "The Great Dimming." The next major event occurred around mid-1950, although the photometric observations appear noisy. The shortest period between two dimming events ever recorded is around 14.5 years, which occurred between 1936 and 1950.5. The longest period between two dimming is around 35 years, stretching from 1988 to 2023. On the other hand, the small duration (fall and rise time) dimming events may have been triggered by pulsational instabilities within the extensive, tenuous outer envelope of the star (Stothers, 1969; van Genderen et al., 2019).
+
+Figure 4 presents the power spectrum periodogram of RW Cep. We utilized the Lomb-Scargle periodogram module from the Python astropy.timeseries library (VanderPlas, 2018) to compute the periodogram based on the AAVSO data. The Lomb-Scargle periodogram is a statistical tool designed to detect periodic signals in unevenly spaced data. In the power spectrum, several peaks were observed, ranging from a few hundred days to more than 10 years. Theoretical predictions suggest that multiple periodicities may arise from multimode pulsations, as observed in red supergiant stars and yellow hypergiants (Kiss et al., 2006; van Genderen et al., 2019). We carefully examined all the peaks in the power spectrum to determine if they were harmonics of long secondary periods or aliasing peaks resulting from observing window gaps in the data. RW Cep exhibits no unique pulsation period, but varies between 350 and 800 days. The frequently observed pulsation period is 403\\pm 20 days, while the long secondary period spans approximately 2495\\pm 30 days.
+
+The long secondary periods maybe linked to the turnover duration time of large convection cells on the stellar surface, which are recognized for their substantial depth and vigorous convection (Stothers & Leung, 1971; Stothers, 2010, 2012). Observing RW Cep with the CHARA Array throughout this long secondary period could serve to corroborate the relationship between the convection cells and the long second period variability.
+
+## 3 The CHARA Array Observations in H and K-Band Wavelengths
+
+In this section, we briefly describe the 2023 CHARA observing campaign, the data reduction and the data calibration. A detailed observing log is provided in Appendix A. We conducted a four-epoch observational campaign, with each epoch separated by approximately one month. Figure 2 marks the corresponding CHARA observing dates on the visual light curve. We followed similar observing and data reduction procedures as outlined in Paper I. The observations were carried out using the CHARA Array located at the Mount Wilson, California, USA. The CHARA Array is composed of six 1-meter telescopes arranged in a Y-shaped configuration (ten Brummelaar et al., 2005; Schaefer et al., 2020). Each telescope is equipped with an adaptive optics system to improve the flux injection into the beam combiner instruments in the laboratory (Che et al., 2013; Anugu et al., 2020). The CHARA Array stands as the largest optical and near-infrared interferometer in the world, featuring baseline lengths ranging from B=34 m to 331 m. We used the H-band MIRC-X (\\lambda=1.5-1.8\\mum, Anugu et al., 2020) and the K-band MYSTIC instruments (\\lambda=2.0-2.39\\mum, Setterholm et al., 2023) to collect interferometric data. MIRC-X and MYSTIC simultaneously combine six telescope beams, providing 15 squared visibilities (V^{2}) and 10 independent closure phases (T3PHI) within each operational wavelength band. The MIRC-X (\\mathcal{R}=190) and MYSTIC (\\mathcal{R}=278) observations cover 30 and 52 spectral channels in H and K-bands and they deliver angular resolutions of approximately \\lambda/2B\\sim 0.5 and 0.6 milliarcseconds (mas), respectively.
+
+The raw MIRC-X and MYSTIC data sets1 were reduced using the standard MIRC-X pipeline, version 1.4.0 (Anugu et al., 2020; Le Bouquin et al., 2024). The pipeline produces squared visibilities (V^{2}) and closure phases (T3PHI) and flux. We applied the IDL mircx_cal.script routine to calibrate the target data with calibrator data, ensuring accuracy and reliability in our analysis.
+
+Footnote 1: can be accessed from [https://www.chara.gsu.edu/observers/database](https://www.chara.gsu.edu/observers/database)
+
+## 4 Model Fitting of the Continuum and Line Regions
+
+To interpret the V^{2} and T3PHI data, we applied model fitting utilizing the Python-based Parametric Modeling of Optical InteRferomEtric Data software, PMOIRED (Merand, 2022; Merand et al., 2024). We used MYSTIC data for this model fitting to model bright spots on the surface of the star and CO spectral lines. The PMOIRED software enables the construction of a complex model in a linear combination of simple components. Additionally, it is equipped with grid search mechanisms to explore parameter space, to check for local minima traps, and facilitate finding the global minimum.
+
+For this model fitting, we used MYSTIC K-band data including all wavelengths \\lambda=2.00-2.39\\mum. Our fitting procedure began by establishing parameters for the limb-darkened disk diameter and an extended circumstellar envelope surrounding the star. To model structures on the stellar surface, initially, a single bright circular Gaussian spot was introduced. Watching the reduced chi-squared \\chi^{2}_{\\rm red}, we implemented multiple bright spots denoted by n. Each spot was characterized using a Gaussian model defined by four free parameters: Full Width at Half Maximum (FWHM, d_{n}), the relative flux of spot (f_{n}) in comparison to the star, and its position (projected radial distance r_{n}, position angle \\theta_{n}) on the stellar surface relative to the center of the star. Other parameters included the limb-darkening disk diameter (d_{\\rm photo}), limb-darkening power law coefficient (\\alpha), and flux (f_{\\star}) of the central star. The overall flux of the system remained fixed at 1.0, while the circumstellar environment flux (f_{\\rm env}) was computed as 1-f_{\\star}-\\sum_{n=1}^{n=3}f_{n}. Although the circumstellar envelope is spherical in shape, we adapted a simple 2-dimensional projection disk characterized by inner and outer diameter and radial profile parameters. The outer diameter of the circumstellar envelope (d_{\\rm env}) is searched for within the range between the photosphere diameter (d_{\\rm photo}) and 2\\times d_{\\rm photo}. The inner diameter of the circumstellar envelope is set to match the size of the star (d_{\\rm photo}). We also fitted the CO spectral lines. We used the near-infrared spectrum from the APO observatory, as described in Paper I, to perform a simultaneous fit. We used the known CO band-head wavelengths to set the boundary between the continuum and CO line regions, and we adopted a truncated, exponential spatial profile in PMOIRED to represent the extended atmosphere. For simplicity, we assumed coplanarity between the star and circumstellar envelope.
+
+In determining the positions of these spots, we used the grid search method from the PMOIRED software, adhering to the following constraints. Firstly, the location of a spot d_{n} must be within the boundary of the stellar diameter, ensuring that d_{n}<d_{\\rm photo}/2. Secondly, the diameter of each spot must not be larger than the diameter of the star. We also fitted the spectral lines, revealing circumstellar envelope absorption spectra with approximately 35% absorption.
+
+Through this modeling approach, we identified three distinct bright spots n=3, achieving a \\chi^{2}_{\\rm red}=3-7 for different epochs (See Table 2). Attempts to add a fourth bright spot did not significantly improve \\chi^{2}_{\\rm red} value. The final model yielded a limb-darkened star, with three Gaussian spots and an extended circumstellar envelope for the wavelength range of the CO lines (\\lambda>2.31\\mum).
+
+Figure 5 shows the best-fit analytical model images for all imaging epochs covering both dimming and re-brightening phases. In this paper all the images are plotted on a linear intensity scale. From these images, it is evident that during the dimming phase (2022 December), the western part of the star appeared darker compared to the images obtained in 2023. Table 3 present the best-fit parameters from the PMOIRED analytical model. In the 2022 December image, two spots (one giant and one smaller) were detected, positioned in the western part of the star. In the 2023 epochs, three giant spots were identified, located in the southern and eastern parts in addition to the western part. These three spots have FWHM sizes of 0.93 mas, 0.92 mas and 0.72 mas located in the western, eastern and southern parts, respectively. These bright spots contribute 9%, 8%, and 4% of the total flux, respectively. We measured the limb-darkened diameter to be 2.60\\pm 0.02 mas with a limb-darkening coefficient of 0.45\\pm 0.06. The background flux is approximately zero within measurement errors.
+
+Figure 6 presents the circumstellar envelope detection from the longer CO band wavelengths. We found that the circumstellar envelope has a diameter of approximately 4.3\\pm 0.1 mas, i.e., the circumstellar envelope extends up to twice the size of the star, which is typical for the MOLsphere of evolved stars (e.g., Perrin et al., 2005; Ohnaka et al., 2011; Montarges et al., 2014; Anugu et al., 2023, 2024).
+
+Table 4 shows limb-darkened diameters fitted using three different software packages. The PMOIRED model fit gives a limb-darkened diameter of 2.62\\pm 0.03 mas. Interestingly, the diameter measured in the 2023 epochs is larger than the diameter measured in 2022 December. Appendix A shows the K-band (2.0-2.39\\mum) fitting residuals from the PMOIRED model fitting for the epoch of 2023 July 21.
+
+## 5 Image Reconstruction in Continuum Regions
+
+The image reconstructions are performed separately for the continuum and CO band wavelength datasets. This section elaborates on the continuum in the H-band and K-band (\\lambda=2.0-2.31\\mum) wavelength image reconstructions, while Section 6 delves into the CO band and continuum (\\lambda=2.31-2.39\\mum) image reconstructions.
+
+We employed similar image reconstruction methods as those employed in Paper I to generate aperture synthesis images. The first code we used was Optical Interferometry TOOLS (OITOOLS) (Norris et al., 2021)2 to compare with the analytical images made with PMOIRED. OITOOLS employs a quasi-Newton method with rapid gradient minimization using Variable Metric Limited Memory with Bounds (VMLMB). OITOOLS is designed for both two-dimensional image reconstruction and model fitting applications. This software starts by modeling the best-fit limb-darkened angular diameter, which sets the boundaries for the assigned flux. OITOOLS is coded in the Julia programming language.
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline Epoch & OITOOLS & ROTIR & SURFING & PMOIRED \\\\ \\hline
+
+2022 Dec & 1.26 & 1.37 & 1.32 & 4 \\\\
+
+2023 Jul & 2.5 & 2.7 & 1.22 & 5 \\\\
+
+2023 Aug & 1.9 & 2.0 & 0.47 & 5 \\\\
+
+2023 Sep & 0.8 & 0.9 & 0.68 & 6 \\\\
+
+2023 Oct & 0.9 & 1.0 & 0.19 & 3 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: The best-fit \\chi^{2}_{\\rm red} of the K-band measurements for each method.
+
+We used the same image reconstruction parameters as in Paper I, including positivity constraints and total variation regularization, with the hyperparameter weight chosen using the classical L-curve method. In OITOOLS, we applied edge-preserving \\ell_{2}-\\ell_{1} regularization. The images were constructed with a field of view of 6.4\\times 6.4 mas and a pixel scale of 0.05 mas. To address the issue of local minima traps, 500 image reconstructions were initiated from randomly generated images. To further assess the robustness of our reconstructions, images were created using different exposure times, such as short 30-second exposures and 10-minute averaged integrations. The consistency and reliability of the resulting images were verified (Figure 7).
+
+We also used two other image reconstruction methods, ROTIR (Martinez et al., 2021) and SURFING (Roettenbacher et al., 2016) to reconstruct images from the interferometric data as presented in Appendix B. Table 2 presents the
+
+\\begin{table}
+
+\\begin{tabular}{l|c c c|c c c} \\hline \\hline \\multicolumn{1}{c|}{ Epoch} & \\multicolumn{3}{c|}{H-band} & \\multicolumn{3}{c}{K (2.0-2.3\\mum)} \\\\ UT Date & OITOOLS & SURFING & PMOIRED & OITOOLS & SURFING & PMOIRED \\\\ \\hline
+
+2022 Dec & 2.41\\pm 0.08 & 2.44 & 2.45\\pm 0.04 & 2.35\\pm 0.13 & 2.44 & 2.41\\pm 0.07 \\\\
+
+2023 Jul & 2.68\\pm 0.09 & 2.72 & 2.62\\pm 0.05 & 2.62\\pm 0.09 & 2.50 & 2.62\\pm 0.03 \\\\
+
+2023 Aug & 2.61\\pm 0.10 & 2.49 & 2.59\\pm 0.05 & 2.63\\pm 0.11 & 2.52 & 2.60\\pm 0.01 \\\\
+
+2023 Sep & 2.62\\pm 0.11 & 2.62 & 2.63\\pm 0.16 & 2.57\\pm 0.16 & 2.58 & 2.64\\pm 0.02 \\\\
+
+2023 Oct & 2.60\\pm 0.09 & 2.59 & 2.59\\pm 0.05 & 2.59\\pm 0.11 & 2.57 & 2.58\\pm 0.01 \\\\ \\hline \\end{tabular} Note. – The 2022 December epoch marked the dimming of the star, while the remaining epochs were observed during its re-brightening phase.
+
+\\end{table}
+
+Table 4: The limb darkened diameter, d_{\\rm photo} (mas), measured for all epochs.
+
+\\begin{table}
+
+\\begin{tabular}{l c} \\hline \\hline \\multicolumn{1}{c}{ Param} & Value \\\\ \\hline Fluxes & & \\\\ f_{1} (\\%) & 8\\pm 1 \\\\ f_{2} (\\%) & 4\\pm 1 \\\\ f_{3} (\\%) & 9\\pm 1 \\\\ f_{\\rm env} (\\%) & 35\\pm 3 \\\\ \\hline \\multicolumn{2}{l}{FWHM of spots} & \\\\ d_{1} (mas) & 0.92\\pm 0.01 \\\\ d_{2} (mas) & 0.72\\pm 0.04 \\\\ d_{3} (mas) & 0.93\\pm 0.02 \\\\ \\hline Spot position from origin & (r_{n}, \\theta_{n}) \\\\ r_{1} (mas) & 0.83\\pm 0.01 \\\\ r_{2} (mas) & 0.70\\pm 0.01 \\\\ r_{3} (mas) & 0.45\\pm 0.02 \\\\ \\theta_{1} ({}^{\\circ}) & 84\\pm 1 \\\\ \\theta_{2} ({}^{\\circ}) & 167\\pm 1 \\\\ \\theta_{3}({}^{\\circ}) & 272\\pm 1 \\\\ \\hline \\multicolumn{2}{l}{Limb-darkened angular diameter} & \\\\ d_{\\rm photo} (mas) & 2.62\\pm 0.03 \\\\ \\alpha & & 0.45\\pm 0.06 \\\\ d_{\\rm env} (mas) & & 4.36\\pm 0.13 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: The best-fit PMOIRED model fitting parameters from epoch 2023 July
+
+[MISSING_PAGE_FAIL:11]
+
+Furthermore, considering the angular diameter of the circumstellar envelope, measured at 4.3\\pm 0.2 mas (see Section 4 and Section 8), we estimate its physical radius to be 1820\\pm 110R_{\\odot}.
+
+### A Dust Clump Hypothesis for the Dimming of RW Cep
+
+A comparison of images of RW Cep obtained during its 2022 December dimming phase (Paper I) and subsequent re-brightening (see Figure 3) reveals striking differences. We suggest that a dust clump obscured the west side of RW Cep during this dimming event. Several lines of evidence support this hypothesis:
+
+* **Changes in stellar size:** We found that the limb-darkened photosphere diameter is 8\\pm 1% (Table 4, Section 7) larger during the re-brightening phase than during the dimming phase. This substantial difference suggests that the stellar photosphere was partially blocked during the dimming phase, possibly by a dust clump, making the star appear smaller. The subsequent clearing of the dust allowed the star to return to its normal size.
+
+* **Gas cloud outburst:** Concurrent H\\alpha observations in the visible wavelength spectrum by Kasikov et al. (2024) show a strong, blue-shifted emission during the dimming phase, suggesting a gas outburst directed towards us. This is consistent with the formation of a dust clump.
+
+* **Dust evolution:** A visual inspection of our CHARA images taken in 2023 while re-brightening reveals small changes in images from one epoch to another during the star's brightening, providing insights into the temporal evolution of the obstructing dust (see Figures 7).
+
+* **Dust extinction:** The role of dust formation for the Great Dimming event is consistent with changes recorded in the near-infrared spectrum. We obtained near-IR spectra of RW Cep both during the the dimming and recovery stages with the TripleSpec spectrograph on the 3.5 m telescope at Apache Point Observatory (Wilson et al., 2004). The spectrum obtained during the re-brightening stage was made and reduced in the same way as the first spectrum (as described in Paper I). It is difficult to obtain accurate absolute fluxes, given the extreme brightness of the star and the finite slit size, so for the new observation we renormalized the fluxes by comparing them to the H-band fluxes in a full-brightnss spectrum of RW Cep from the IRTF spectral library that was shown in Paper I. This flux renormalization assumes that the star had returned to its full brightness by the date of observation (2023 Sep 26; HJD 2460213.66). Inspection of Figure 2 indicates that the re-brightening was not totally complete by this date, so we caution that the estimate of the flux in the new spectrum may be slightly overestimated. Figure 9 shows a comparison of the spectrum during the Great Dimming (2023 January; black) with that near full recovery (2023 September; gray). We see that the flux variations at longer wavelengths were minor, while large flux increases occurred at shorter wavelengths during brightening. Dust extinction is much larger at shorter wavelengths, so these observations confirm the idea that the Great Dimming event was caused by foreground dust formation that blocked the flux from the star.
+
+We propose a similar explanation offered for the Betelgeuse dimming. The explanation for the origin of the Betelgeuse Great Dimming involves the formation of a rare and hot convective bubble on the surface of star, accumulating material propelled by the creation of a large plasma outflow due to powerful deep successive shocks (Kravchenko et al., 2021) beneath the stellar photosphere (Dupree et al., 2020, 2022). This hot convection bubble transforms into a surface mass ejection driven by pulsation and magnetic fields (Dupree et al., 2022; Humphreys and Jones, 2022). The ejected gas cloud moves away from the star, cools down, and gradually forms dust in front of the star. The opaque dust obstructs the star in the southern part, causing the star to dim (Montarges et al., 2021). Due to the loss of material from the hot spot region, a cooler area emerges on the photosphere, appearing as a dark spot in the line of sight. As the dust next condenses into larger grains, the opacity drops, and the star returns to its normal brightness.
+
+We suggest that similar processes might have been triggered in RW Cep. Gas ejection began in 2020 in our direction, expanded outwards, and cooled to begin forming dust, blocking the western side of the star with a projected size of 0.45R_{*}. This caused RW Cep to appear darker during its dimming in 2022 December. As the dust moved further away from the star, it cleared from our line of sight, causing the star to reappear in its normal shape in the epochs of 2023. Additionally, the dust cloud is not entirely aligned in our direction, so as it starts to move off the face of the star, this cloud motion out of the line of sight to the star could happen rapidly. Thus, the return to regular brightness is more rapid than the fading. This asymmetry in the light curve (slow fade, rapid re-brightening) appears in other stars too (Figure 10).
+
+While the dimming of RW Cep shares some similarities with Betelgeuse, it is important to note that there are also key differences. Figure 10 compares the RW Cep dimming event (2020-2022) to other massive stars experiencing significant mass loss: (i) the red supergiant (RSG) Betelgeuse Great Dimming (2019-2020), (ii) the red hypergiant (RHG) VY Canis Majoris major dimming event (1988-1993, Humphreys et al., 2021), and (iii) the yellow hypergiant(YHG) \\rho Cas major dimming event (1946-47, Beardsley, 1961; Maravelias and Kraus, 2022). To ensure consistency, the minimum of each event was utilized as the reference point for both relative magnitude and date. Notably, of the dimming event, i.e., the fall and rise time of RW Cep, lasted around 4 years, significantly longer than Betelgeuse (<1 y) and \\rho Cas (\\sim 2 y) but shorter than VY CMa (over 5 years). The dimming depth of RW Cep (\\sim 1.2 mag) resembled the Great Dimming of Betelgeuse, while \\rho Cas and VY CMa dimmed further (more than 1.7 mag). These differences could potentially be attributed to the size of each star, as well as the size, opacity, and geometry of the dust clump blocking the star from our line of sight. If the dust clump takes longer to lose its opacity or to disperse by moving away from the star, the dimming dip duration will be prolonged. The depth of these dimming events is related to the size, density, and geometry of the dust clumps.
+
+Table 5 presents a comparison of properties of these stars. RW Cep has an estimated radius 1100\\pm 44\\ R_{\\odot}, making it approximately twice the size of \\rho Cas, which ranges from 500-760\\ R_{\\odot}(Anugu et al., 2024), and 1.25 times larger than Betelgeuse, with a radius ranging from 750-1000\\ R_{\\odot}(Joyce et al., 2020; Kravchenko et al., 2021). This prolonged dimming duration for the larger stars, VY CMa (1420\\pm 120\\ R_{\\odot}, Wittkowski et al., 2012) and RW Cep might imply that these stars have experienced greater mass loss and have a larger amount of dust surrounding them, potentially leading to an extended period of obscuration. Furthermore, if the outflow velocities are comparable, it takes longer for the material to travel due to the larger dimensions of these stars. One exception is \\rho Cas, which is the smallest star in our sample but experienced a longer dimming duration (\\sim 2\\ y) than Betelgeuse (<1\\ y). This suggests that the ejected material from \\rho Cas may have different dust formation properties, such as grain size and chemistry, which obscure the star for a longer period.
+
+Since RW Cep (YHG) and Betelgeuse (RSG) belong to different object classifications, potential differences in dust chemistry and grain size might complicate our understanding of the RW Cep dimming phenomenon. A detailed analysis of dust properties of RW Cep is beyond the scope of this current work.
+
+Another striking difference between Betelgeuse and RW Cep is the temporary change in pulsation period in post-dimming. After the Great Dimming of Betelgeuse, the pulsation period was observed to have halved from its 420-day primary period (e.g., MacLeod et al., 2023). Hydrodynamic simulations by MacLeod et al. (2023) suggest that a significant upwelling of a hot convection bubble can disrupt the phase coherence of the star's pulsation, leading to an expansion of the surface while deeper layers contract. Consequently, this led to a change in the pulsations from the 420-day pulsation period to the 200-day. They also suggest that Betelgeuse will likely return to its previous 420-day fundamental mode pulsation within the next 5-10 years. As of the time of writing, RW Cep has fully recovered to its typical brightness. However, since March 2024, it started dimming again (see Figure 2). Future observations may or may not reveal changes in the pulsation period of RW Cep (refer to Section 2).
+
+Similar to the 2022 dimming episode, the other major dimming events of RW Cep recorded in 1908.5, 1936, 1950.5, 1962, and 1988 --characterized by a more significant drop in visual magnitude and a longer duration (>3 y) -- might have been triggered by a hot convection cell-driven mass loss mechanism (see Figures 1 and 2). Apart from these major dimming events, the more frequent dimmings, which exhibit a lower drop in visual magnitude and shorter duration (1-1.5 y), are likely driven by pulsation-enhanced dust formation above the photosphere.
+
+### Evolutionary State of RW Cep: Yellow hypergiant?
+
+A crucial first step in comparing the RW Cep dimming event to similar stellar phenomena is precisely classifying the star. The exact classification of RW Cep as a red or yellow hypergiant remains unclear (Castro-Carrizo et al., 2007; Jones et al., 2023). The red or yellow hypergiants are a small class of evolved massive stars that represent a short-lived evolutionary phase near the top of the Hertzsprung-Russell diagram. They are extremely rare, highly unstable, and experience severe mass loss. Red hypergiants are the most luminous cool hypergiants, while YHGs are intermediate temperature or warm hypergiants. An example of a red hypergiant (RHG) star is VY CMa (Humphreys et al., 2021, references within).
+
+Yellow hypergiants (YHG) may represent the transition from red supergiant objects that evolve bluewards in the Hertzsprung-Russell (H-R) diagram. However, the details of such evolution are still poorly understood (de Jager, 1998; Nieuwenhuijzen and de Jager, 2000). They exhibit strong spectral variability and recurrent eruption events, with large mass loss rates of up to \\sim 5\\times 10^{-2}M_{\\odot}yr{}^{-1} when they experience an outburst (Lobel et al., 2003). Most YHGs have a temperature near the cool border of the yellow void, an unstable region with effective temperatures between \\sim 7000-12000 K. Four well-studied YHGs are \\rho Cas (Lobel et al., 2003; Kraus et al., 2019; Anugu et al., 2024), IRC+10420 (Humphreys et al., 2002; Tiffany et al., 2010), HR 8752 (Nieuwenhuijzen & de Jager, 2000; Nieuwenhuijzen et al., 2012; Kasikov et al., 2024b), and HR 5171 A (Chesneau et al., 2014; Wittkowski et al., 2017).
+
+Table 5 presents a comparison of the properties of RW Cep with those of established RHG and YHGs. This comparison aims to determine if RW Cep can be classified as a YHG or RHG.
+
+* 5.73 falls within the range established for YHGs \\log(L/L\\odot)=5.4-5.8(Humphreys, 1978; de Jager, 1998; Jones et al., 2023). This is significantly lower than the typical luminosity of red hypergiants.
+
+* Temperature: With an effective temperature ranging from 4,400 K to 5,018 K (Jones et al., 2023; Meneses-Goytia et al., 2015), RW Cep falls on the lower end of the YHG range T_{\\rm eff}=4000-7500(Nieuwenhuijzen & de Jager, 2000; Nieuwenhuijzen et al., 2012).
+
+* Episodic Outbursts and Circumstellar Envelope Formation: A defining feature of YHGs is episodic outbursts that lead to mass loss and the formation of a circumstellar envelope and shells. Similar to the well-known YHG \\rho Cas, RW Cep exhibits outbursts visible as sudden dips in brightness followed by brightening, as evidenced by its light curve data since 1900 (see Figure 2). Spectral studies also reveal the presence of a moving gas shell around RW Cep, similar to \\rho Cas (Merrill & Wilson, 1956).
+
+* Spectral Variation: Another characteristic of YHGs is a change in spectral type over time (Nieuwenhuijzen et al., 2012). The spectral classification of RW Cep is poorly studied over the years. However, it seems to have shifted from G8-Ia (Morgan & Roman, 1950) to K2-Ia (Rayner et al., 2009; Messineo et al., 2021) and finally to M2-Ia (Humphreys, 1978; Watson et al., 2006; Skiff, 2010).
+
+The combination of its luminosity, temperature variations, episodic outbursts, mass loss, presence of a moving gas shell, spectral variations, and the presence of circumstellar envelope and stellar surface bright and dark features bear many similarities to the well-studied YHG \\rho Cas (Lobel et al., 2003; Kraus et al., 2019; Anugu et al., 2024). These factors suggest that RW Cep is a YHG candidate and can be considered an analogue to \\rho Cas.
+
+_Similarities and Differences: RW Cep vs. yellow hypergiant \\rho Cas --_To gain a deeper understanding of RW Cep, we present a comparison with \\rho Cas. Both stars are surrounded by shells of gas and dust, as evidenced by CO gas emission (Lobel et al., 2003; Anugu et al., 2024). A striking similarity is that the both stars experience episodic mass loss, but RW Cep, appears to be more active compared to \\rho Cas. It experiences outbursts roughly every 15 to 35 years, compared to a frequency of 20 to 50 years \\rho Cas. Since 1900, RW Cep has undergone six estimated outbursts (see Figure 1), while
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c} \\hline \\hline Object & Class & Init Mass & T_{\\rm eff} & \\log(L/L_{\\odot}) & R/R_{\\odot} & Spectral & Mass Loss Rate \\\\  & & M_{i}/M_{\\odot} & K & & & Classification & M_{\\odot}yr{}^{-1} \\\\ \\hline VY CMa & Red & 30-40  & 3490\\pm 90 & 5.4\\pm 0.1 & 1420\\pm 120 & M5e Ia  & 10^{-3}.10^{-4} \\\\ RW Cep & Red/Yellow & 25-40 & 4200–4400 [3,5] & 5.47-5.73 [3,4] & 1100\\pm 44 & K2Ia-0 - M2Ia-0 [7,8] & \\sim 7\\times 10^{-6} \\\\ \\rho Cas & Yellow & 40  & 4500-8000 [9,10] & 5.48\\pm 0.32 & 564-700  & F8 - G2 Ia0  & 10^{-3}.10^{-6} \\\\ IRC+10420 & Yellow & 20-40  & 7930\\pm 140 & 5.42-5.60 [14,15] & 442 \\pm 84  & F8Ia+ - AZI [15,16] & 2\\times 10^{-3} \\\\ HR 8752 & Yellow & 20-30  & 4000-8000 [14,21] & 5.43  & 511 \\pm 112  & K5Ia0 - A6Ia+ & 10^{-6} \\\\ HR 5171 A & Yellow & 25  & 4287\\pm 760 & 5.79  & 1575\\pm 400 & G0/2-K1/3Ia+ & 7\\times 10^{-6} \\\\ \\hline \\end{tabular} Note. – 1. Humphreys et al. (2007), 2. Wittkowski et al. (2012), 3. Jones et al. (2023), 4. Shenoy (2016), 5. Anugu et al. (2023), 6. This work, 7. Keenan & McNeil (1989), 8. Watson et al. (2006), 9. Kraus et al. (2019), 10. van Genderen et al. (2019), 11. Lobel et al. (2003), 12. Wittkowski et al. (2017), 13. Clark et al. (2014), 14. Nieuwenhuijzen et al. (2012), 15. Klochkova et al. (2019), 16. Klochkova et al. (2002), 17. Anugu et al. (2024), 18. Oudmaijer & de Wit (2013), 19. van Belle et al. (2009), 20. Chesneau et al. (2014), 21. Kasikov et al. (2024b). We used the Gaia DR3 distances (Bailer-Jones et al., 2021) in converting the angular diameters into physical radii.
+
+\\end{table}
+
+Table 5: Comparing RW Cep with Red and Yellow hypergiants\\rho Cas has only had four since 1940 (Maravelias & Kraus, 2022). Despite this difference in outburst frequency, both stars share a similar pulsating nature, exhibiting semi-regular variations in brightness. RW Cep pulsates every 350 to 800 days (see Figure 4), while \\rho Cas pulsates every 320 to 500 days (van Genderen et al., 2019). The amplitude of these brightness changes due to pulsation is also comparable, with RW Cep varying by about \\pm 0.3 magnitudes and \\rho Cas by \\pm 0.2 magnitudes (in the V-band). Interestingly, both stars exhibit a similar light curve pattern, characterized by an increase in V-band brightness before an outburst. Lobel et al. (2003) documented this trend in \\rho Cas prior to the Millennium outburst that occurred in 2000-2001, and a similar trend has been observed in RW Cep (see Figure 1). Finally, both these objects show blue-shifted strong H\\alpha emission during the dimming compared to before and after the dimming (Lobel et al., 2003; Kasikov et al., 2024).
+
+There are a few differences. Based on their effective temperatures, \\rho Cas, with T_{\\rm eff}=4500-8000K (Kraus et al., 2019; van Genderen et al., 2019), appears to be moving towards the blueward loop closer to the low-temperature border of the yellow void in the HR diagram (de Jager, 1998). In contrast, RW Cep, with T_{\\rm eff}=4200-4400 K (Paper I, Jones et al., 2023), lies at the lower end of the yellow hypergiant temperature range, which spans from 4000-7000 K. The effective temperature changes during dimming cycles differ significantly. RW Cep cooled by a smaller amount (300 K) during its most recent outburst (2022-2023, Anugu et al., 2023) compared to \\rho Cas much larger drop of 3000 K during its 2000-01 outburst (Lobel et al., 2003). The spectral variations in \\rho Cas are clearly evident, changing from F8 to G2 Ia0. Similarly RW Cep also exhibits spectral variations.
+
+## 9 Summary and Conclusions
+
+This study investigates the 2022 dimming and subsequent brightening of the massive star RW Cep. We conducted observations of RW Cep using the world's largest interferometer at H and K-band wavelengths. Images of the star were reconstructed from the interferometric data using a model fitting and three different image reconstruction methods to check the robustness of the images. The resulting images are mostly in agreement, confirming the validity of the images.
+
+During the dimming phase in 2022 December, the CHARA images recorded an asymmetric shape, with a darker western side. As the star entered the re-brightening phase in 2023, the western side reappeared brighter again in the CHARA images. Furthermore, observations from 2023 July, August, September, and October reveal changes from epoch to epoch. These changes could be attributed to the time-varying dispersal of dust away from the star. Finally, we also found that the star's photosphere diameter increased by 8\\pm 1\\% during the re-brightening phase compared to the dimming phase. This substantial increase suggests that the stellar surface was partially blocked during the dimming phase, possibly by a dust clump. The star appeared smaller and asymmetrical during the Great Dimming compared to the 2023 re-brightening images, indicating that some clearing out has occurred.
+
+We propose that the dimming in RW Cep is due to a recent surface mass ejection event, similar to processes observed in Betelgeuse. This ejected material likely cooled and formed a dust cloud that partially blocked the starlight in our line of sight, causing the observed dimming. As the dusty ejecta expand and clear, the star re-brightened, revealing the previously obscured western region. While the dust formation scenario offers a compelling explanation for the Great Dimming of RW Cep, several questions remain unanswered. A more comprehensive understanding requires a detailed analysis of the dust properties around the star, including composition, grain size distribution, and total mass. Alternative explanations, such as the formation of giant cool spots on the stellar surface causing the observed changes, are potentially ruled out. The strong evidence from the H\\alpha emission and blueward shifts of the gas cloud during the Great Dimming (Kasikov et al., 2024) supports the conclusion that a mass ejection occurred in our direction and that dust formation in the gas clump caused the fading.
+
+Overall, this study suggests that RW Cep is a yellow hypergiant candidate star experiencing episodic dimming events caused by potential dust formation around the star.
+
+Since March 2024, the star has started dimming again. A follow-up program involving spectroscopic, photometric, and imaging observations of RW Cep could reveal outburst events, significant variability in effective temperature, large changes in mass loss rates, and provide essential information about the fundamental properties of atmospheric dynamics and wind physics.
+
+We interpret the bright spots on the stellar surface with contributing fluxes of 4%, 8% and 9% (Sections 4 and 5) observed during the RW Cep re-brightening as giant convection cells on the stellar surface. We plan to use the CHARA Array to study the dynamics of these convection cells over time, which could reveal a link between the convection cells and long secondary period variability. The long secondary periods maybe linked to the turnover duration time of large convection cells on the stellar surface, which are recognized for their substantial depth and vigorous convection (Stothers Leung, 1971; Stothers Leung, 2010, 2012). Long-term CHARA monitoring, coupled with AAVSO light curve data, may help establish connections between convection cell activity, pulsations, long secondary periods, and mass loss events.
+
+We would like to express our sincere gratitude to the anonymous reviewer for their insightful comments and constructive suggestions, which have significantly improved the quality of our manuscript. We thank Jean-Baptiste Le Bouquin for his significant contributions to the development of the MIRC-X and MYSTIC instruments. We are grateful to Naomi Elmberg for assistance in obtaining the DASCH photometry data for RW Cep. We thank Stephen Ridgway for his comments, which enabled improvement of the paper. This work is based upon observations obtained with the Georgia State University Center for High Angular Resolution Astronomy Array at Mount Wilson Observatory. The CHARA Array is supported by the National Science Foundation under Grant No. AST-1636624, AST-1908026, and AST-2034336. Institutional support has been provided from the GSU College of Arts and Sciences and the GSU Office of the Vice President for Research and Economic Development. We acknowledge with thanks the variable star observations from the AAVSO International Database contributed by observers worldwide and used in this research. The work is also based on observations obtained with the Apache Point Observatory 3.5-meter telescope, which is owned and operated by the Astrophysical Research Consortium. R.M.R. acknowledges support from the Heising-Simons Foundation 51 Pegasi b Fellowship. M.M. acknowledges funding from the Programme Paris Region fellowship supported by the Region Ile-de-France. This project has received funding from the European Union's Horizon 2020 research and innovation program under the Marie Sklodowska-Curie Grant agreement No. 945298. J.D.M. acknowledges funding for the development of MIRC-X (NASA-XRP NNX16AD43G, NSF AST-1909165) and MYSTIC (NSF ATI-1506540, NSF AST-1909165). F.B. acknowledges funding from the National Science Foundation under Grant No. AST-1814777. S.K. acknowledges support from the European Research Council through a Starting Grant (Grant Agreement No. 639889) and Consolidator Grant (Grant Agreement No. 101003096), and STFC Consolidated Grant (ST/V000721/1). CHARA, AAVSO
+
+Astropy (Astropy Collaboration et al., 2022), PMOIRED (Merand et al., 2024), ROTIR (Martinez et al., 2021), OITOOLS (Norris et al., 2021), SURFING (Roettenbacher et al., 2016), mircx_pipeline (Le Bouquin et al., 2024)
+
+## Appendix A The CHARA Observation Log and Fitting Residuals
+
+This section presents the CHARA observing log, the (u,v)-coverage of our observations, and the fitting residuals. The detailed observing log for the MIRC-X and MYSTIC observations is provided in Section 6.
+
+Figure 11 presents the (u,v)-coverage of the 2023 observations. These (u,v) coordinates specify which components of the Fourier transform of the sky brightness are represented in the visibilities and closure phases. The effective resolution of the interferometric reconstructed images is determined by the maximum extent of the (u,v)-coverage. Gaps in (u,v)-coverage can introduce artifacts in synthesized images. Our observations present good (u,v)-coverage, providing an opportunity to reconstruct reliable images. We combined the nights observed in 2023 July (nights 21, 22, and 23) into a single dataset for a better (u,v)-coverage. Similarly, we grouped the observations from 2023 September (nights 01 and 17) together, assuming that the stellar surface did not change on such short time sales.
+
+Figure 12 shows the visibilities V^{2} and closure phases (T3PHI) of RW Cep in the K band. The CO bandhead lines (2.3 \\mum) show lower V^{2} compared to the continuum, indicating the presence of a circumstellar envelope. We also conducted medium and high spectral resolution observations (\\mathcal{R}=981 and \\mathcal{R}=1724) with the MYSTIC instrument. These observations aimed at characterizing the circumstellar envelope in the CO bands, and the results will be presented in a separate paper.
+
+Figure 13 presents the K-band (2.0-2.39\\mum) fitting residuals from the PMOIRED model fitting for the epoch of 2023 July 21. The fitting residuals for the OITOOLS image reconstruction of the continuum are shown in Figure 14. The residuals for other ROTIR and SURFING reconstructions are qualitatively similar.
+
+## Appendix B Additional Image Reconstructions with Rotir and Surfing
+
+We used two additional image reconstruction software packages to reconstruct images from the interferometric datasets: (i) ROTational Image Reconstruction (ROTIR) (Martinez et al., 2021)3, and (ii) SURFace imagING (SURF-ING, Roettenbacher et al., 2016). ROTIR and SURFING make use of HEALPix tessellation (Gorski et al., 2005) to generate three-dimensional surfaces of stars. They assign a specific intensity to each element on the three-dimensional surface of the star. ROTIR is coded in the Julia programming language and uses OITOOLS libraries, whereas SURF-ING is developed using IDL.
+
+Footnote 3: [https://github.com/fabienbaron/ROTIR.jl.git](https://github.com/fabienbaron/ROTIR.jl.git)
+
+The ROTIR software allocates flux to surface patches on a rotating star, but in this case only the visible hemisphere is considered because the rotational period is much longer than the span of the observations. We used total variation regularization with hyperparameter weight 0.05. The SURFING algorithm iteratively solves the brightness distribution on the pixels of the sphere. Our ROTIR and SURFING images consist of approximately 22 pixels across the stellar
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline  DATE & Instrument & Spec. Res. Power & Calibrators & Diameter \\\\ (UT) & & (\\mathcal{R}=\\lambda/\\triangle\\lambda) & & (mas) \\\\ \\hline
+
+2022-12-23{}^{a} & MIRC-X & 50 & HD 224870 & 0.653\\pm 0.053 \\\\  & MYSTIC & 100 & HD 5916 & 0.527\\pm 0.037 \\\\
+
+2023-07-21{}^{b} & MIRC-X & 50 & HD 224870 & 0.653\\pm 0.053 \\\\  & MYSTIC & 278 & HD 5916 & 0.527\\pm 0.037 \\\\
+
+2023-07-22{}^{b} & MIRC-X & 50 & HD 216206 & 0.885\\pm 0.074 \\\\  & MYSTIC & 1724 & HD 219080 & 0.692\\pm 0.067 \\\\
+
+2023-07-23{}^{b} & MIRC-X & 50 & HD 216206 & 0.885\\pm 0.074 \\\\  & MYSTIC & 981 & HD 217694 & 0.897\\pm 0.058 \\\\
+
+2023-08-04 & MIRC-X & 190 & HD 219080 & 0.692\\pm 0.067 \\\\  & MYSTIC & 278 & HD 224870 & 0.653\\pm 0.053 \\\\  & & HD 16780 & 0.940\\pm 0.090 \\\\
+
+2023-09-01{}^{c} & MIRC-X & 50 & HD 218187 & 0.622\\pm 0.015 \\\\  & MYSTIC & 50 & HD 26553 & 0.500\\pm 0.045 \\\\  & & HD 211822 & 0.563\\pm 0.013 \\\\  & & HD 211982 & 0.569\\pm 0.014 \\\\
+
+2023-09-17{}^{c} & MIRC-X & 190 & HD 219080 & 0.692\\pm 0.067 \\\\  & MYSTIC & 278 & HD 211982 & 0.569\\pm 0.014 \\\\  & & HD 211822 & 0.563\\pm 0.013 \\\\
+
+2023-10-25 & MIRC-X & 190 & HD 219080 & 0.692\\pm 0.067 \\\\  & MYSTIC & 278 & HD 211982 & 0.569\\pm 0.014 \\\\  & MYSTIC & 278 & HD 211982 & 0.563\\pm 0.013 \\\\
+
+2023-10-25 & MIRC-X & 190 & HD 219080 & 0.692\\pm 0.067 \\\\  & MYSTIC & 278 & HD 211982 & 0.569\\pm 0.014 \\\\  & MYSTIC & 278 & HD 211982 & 0.569\\pm 0.014 \\\\  & & HD 6282 & 0.554\\pm 0.012 \\\\ \\hline \\end{tabular} Note. – Observing date with flag a is already published in Paper I. Observing dates with flag b are combined together in a single group to achieve better (u,v)-coverage. Same for c flagged nights.
+
+\\end{table}
+
+Table 6: RW Cep observations from the CHARA Array instruments MIRC-X (H-band) and MYSTIC (K-band). The instrument configuration with spectral dispersion (\\mathcal{R}) and calibrators are included. The calibrator star diameters adapted from the JMMC catalog (Bourges et al., 2017). UT indicates the universal time at the beginning of the data recording.
+
+[MISSING_PAGE_FAIL:21]
+
+Anugu, N., Le Bouquin, J.-B., Monnier, J. D., et al. 2020b, AJ, 160, 158, doi: 10.3847/1538-3881/abe957
+
+* Anugu, N., Baron, F., Gies, D. R., et al. 2023, AJ, 166, 78, doi: 10.3847/1538-3881/ace59d
+
+* 
+
+* Anugu et al. (2024) Anugu, N., Baron, F., Monnier, J. D., et al. 2024, arXiv e-prints, arXiv:2408.02756, doi: 10.48550/arXiv.2408.02756
+
+* Astropy Collaboration et al. (2022) Astropy Collaboration, Price-Whelan, A. M., Lim, P. L., et al. 2022, ApJ, 935, 167, doi: 10.3847/1538-4357/ac7c74
+
+* Bailer-Jones et al. (2021) Bailer-Jones, C. A. L., Rybizki, J., Fouesneau, M., Demleitner, M., & Andrae, R. 2021, AJ, 161, 147, doi: 10.3847/1538-3881/abd806
+
+* Beardsley (1961) Beardsley, W. R. 1961, ApJS, 5, 381, doi: 10.1086/190058
+
+* Bourges et al. (2017) Bourges, L., Mella, G., Lafrasse, S., et al. 2017, VizieR Online Data Catalog, II/346
+
+* Cantat-Gaudin et al. (2020) Cantat-Gaudin, T., Anders, F., Castro-Ginard, A., et al. 2020, A&A, 640, A1, doi: 10.1051/0004-6361/202038192
+
+* Castro-Carrizo et al. (2007) Castro-Carrizo, A., Quintana-Lacaci, G., Bujarrabal, V., Neri, R., & Alcolea, J. 2007, A&A, 465, 457, doi: 10.1051/0004-6361:20066169
+
+* Che et al. (2013) Che, X., Sturmann, L., Monnier, J. D., et al. 2013, Journal of Astronomical Instrumentation, 2, 1340007, doi: 10.1142/S2251171713400072
+
+* Chesneau et al. (2014) Chesneau, O., Meilland, A., Chapellier, E., et al. 2014, A&A, 563, A71, doi: 10.1051/0004-6361/201322421
+
+* Clark et al. (2014) Clark, J. S., Negueruela, I., & Gonzalez-Fernandez, C. 2014, A&A, 561, A15, doi: 10.1051/0004-6361/201322772
+
+* de Jager (1998) de Jager, C. 1998, A&A Rev, 8, 145, doi: 10.1007/s001590050009
+
+* Delgado et al. (2013) Delgado, A. J., Djupvik, A. A., Costado, M. T., & Alfaro, E. J. 2013, MNRAS, 435, 429, doi: 10.1093/mnras/stt1311
+
+* Dupree et al. (2020) Dupree, A. K., Strassmeier, K. G., Matthews, L. D., et al. 2020, ApJ, 899, 68, doi: 10.3847/1538-4357/aba516
+
+* Dupree et al. (2022) Dupree, A. K., Strassmeier, K. G., Calderwood, T., et al. 2022, ApJ, 936, 18, doi: 10.3847/1538-4357/ac7853
+
+* Gorski et al. (2005) Gorski, K. M., Hivon, E., Banday, A. J., et al. 2005, ApJ, 622, 759, doi: 10.1086/427976
+
+* Grindlay et al. (2012) Grindlay, J. E., Palmer, D. J. M., Alcock, S. C., et al. 2012, Proceedings of the International Astronomical Union, 7, 29, doi: 10.1017/S1743921312000367
+
+* Humphreys (1978) Humphreys, R. M. 1978, ApJS, 38, 309, doi: 10.1086/190559
+
+* Humphreys et al. (2021) Humphreys, R. M., Davidson, K., Richards, A. M. S., et al. 2021, AJ, 161, 98, doi: 10.3847/1538-3881/abd316
+
+* Humphreys et al. (2002) Humphreys, R. M., Davidson, K., & Smith, N. 2002, AJ, 124, 1026, doi: 10.1086/341380
+
+* Humphreys et al. (2007) Humphreys, R. M., Helton, L. A., & Jones, T. J. 2007, AJ, 133, 2716, doi: 10.1086/517609
+
+* Humphreys & Jones (2022) Humphreys, R. M., & Jones, T. J. 2022, AJ, 163, 103, doi: 10.3847/1538-3881/ac46ff
+
+* Hunt & Reffert (2024) Hunt, E. L., & Reffert, S. 2024, A&A, 686, A42, doi: 10.1051/0004-6361/202348662
+
+* Jones et al. (2023) Jones, T. J., Shenoy, D., & Humphreys, R. 2023, Research Notes of the American Astronomical Society, 7, 92, doi: 10.3847/2515-5172/acd37f
+
+* Joyce et al. (2020) Joyce, M., Leung, S.-C., Molnar, L., et al. 2020, ApJ, 902, 63, doi: 10.3847/1538-4357/abb8db
+
+* Kasikov et al. (2024a) Kasikov, A., Kolka, I., & Aret, A. 2024a, in The post-outburst evolution of RW Cep, Physics of Extreme Massive Stars, Rio de janeiro, Brazil, 77342I, doi: [https://stel.asu.cas.cz/MassiveStars2024/](https://stel.asu.cas.cz/MassiveStars2024/)
+
+* Kasikov et al. (2024b) Kasikov, A., Kolka, I., Aret, A., Enemae, T., & Checha, V. 2024b, A&A, 686, A270, doi: 10.1051/0004-6361/202348775
+
+* Keenan & McNeil (1989) Keenan, P. C., & McNeil, R. C. 1989, ApJS, 71, 245, doi: 10.1086/191373
+
+* Kiss et al. (2006) Kiss, L. L., Szabo, G. M., & Bedding, T. R. 2006, MNRAS, 372, 1721, doi: 10.1111/j.1365-2966.2006.10973.x
+
+* Klochkova (2019) Klochkova, V. G. 2019, Astrophysical Bulletin, 74, 475, doi: 10.1134/S1990341319040138
+
+* Klochkova et al. (2002) Klochkova, V. G., Yushkin, M. V., Chentsov, E. L., & Panchuk, V. E. 2002, Astronomy Reports, 46, 139, doi: 10.1134/1.1451927
+
+* Kloppenborg (2023) Kloppenborg, B. K. 2023, Observations from the AAVSO International Database. [https://www.aavso.org](https://www.aavso.org)
+
+* Kraus et al. (2019) Kraus, M., Kolka, I., Aret, A., et al. 2019, MNRAS, 483, 3792, doi: 10.1093/mnras/sty3375
+
+* Kravchenko et al. (2021) Kravchenko, K., Jorissen, A., Van Eck, S., et al. 2021, A&A, 650, L17, doi: 10.1051/0004-6361/202039801
+
+* Langer (2012) Langer, N. 2012, ARA&A, 50, 107, doi: 10.1146/annurev-astro-081811-125534
+
+* Le Bouquin et al. (2024) Le Bouquin, J.-B., Anugu, N., Davies, C. L., et al. 2024, CHARA MIRC-X and MYSTIC Data Reduction Pipeline, Zenodo, doi: 10.5281/zenodo.12735292
+
+* Lobel et al. (2003) Lobel, A., Dupree, A. K., Stefanik, R. P., et al. 2003, ApJ, 583, 923, doi: 10.1086/345503
+
+* MacLeod et al. (2023) MacLeod, M., Antoni, A., Huang, C. D., Dupree, A., & Loeb, A. 2023, ApJ, 956, 27, doi: 10.3847/1538-4357/acd4b
+
+* Maravelias & Kraus (2022) Maravelias, G., & Kraus, M. 2022, JAAVSO, 50, 49, doi: 10.48550/arXiv.2112.13158
+
+* Martinez et al. (2021) Martinez, A. O., Baron, F. R., Monnier, J. D., Roettenbacher, R. M., & Parks, J. R. 2021, ApJ, 916, 60, doi: 10.3847/1538-4357/ac06a5
+
+* Meneses-Goytia et al. (2015) Meneses-Goytia, S., Peletier, R. F., Trager, S. C., et al. 2015, A&A, 582, A96, doi: 10.1051/0004-6361/201423837
+
+* Merand (2022) Merand, A. 2022, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 12183, Optical and Infrared Interferometry and Imaging VIII, ed. A. Merand, S. Sallum, & J. Sanchez-Bermudez, 121831N, doi: 10.1117/12.2626700
+
+* Merrill & Wilson (1956) Merrill, P. W., & Wilson, O. C. 1956, ApJ, 123, 392, doi: 10.1086/146178
+
+* Messineo et al. (2021) Messineo, M., Figer, D. F., Kudritzki, R.-P., et al. 2021, AJ, 162, 187, doi: 10.3847/1538-3881/ac116b
+
+* Montarges et al. (2014) Montarges, M., Kervella, P., Perrin, G., et al. 2014, A&A, 572, A17, doi: 10.1051/0004-6361/201423538
+
+* Montarges et al. (2021) Montarges, M., Cannon, E., Lagadec, E., et al. 2021, Nature, 594, 365, doi: 10.1038/s41586-021-03546-8
+
+* Morgan & Roman (1950) Morgan, W. W., & Roman, N. G. 1950, ApJ, 112, 362, doi: 10.1086/145351
+
+* Munoz-Sanchez et al. (2024) Munoz-Sanchez, G., de Wit, S., Bonanos, A. Z., et al. 2024, arXiv e-prints, arXiv:2405.11019, doi: 10.48550/arXiv.2405.11019* Merand et al. (2024) Merand, A., Astro-mh, & Gomes, T. 2024, amerand/PMOIRED: cleanup and removing examples, 1.2, Zenodo, doi: 10.5281/zenodo.10889235
+
+* Nieuwenhuijzen & de Jager (2000) Nieuwenhuijzen, H., & de Jager, C. 2000, A&A, 353, 163
+
+* Nieuwenhuijzen et al. (2012) Nieuwenhuijzen, H., De Jager, C., Kolka, I., et al. 2012, A&A, 546, A105, doi: 10.1051/0004-6361/201117166
+
+* Norris et al. (2021) Norris, R. P., Baron, F. R., Monnier, J. D., et al. 2021, ApJ, 919, 124, doi: 10.3847/1538-4357/ac0c7e
+
+* Ohnaka et al. (2011) Ohnaka, K., Weigelt, G., Millour, F., et al. 2011, A&A, 529, A163, doi: 10.1051/0004-6361/201016279
+
+* Oudmaijer & de Wit (2013) Oudmaijer, R. D., & de Wit, W. J. 2013, A&A, 551, A69, doi: 10.1051/0004-6361/201220185
+
+* Perrin et al. (2005) Perrin, G., Ridgway, S. T., Verhoelst, T., et al. 2005, A&A, 436, 317, doi: 10.1051/0004-6361:20042313
+
+* Rayner et al. (2009) Rayner, J. T., Cushing, M. C., & Vacca, W. D. 2009, ApJS, 185, 289, doi: 10.1088/0067-0049/185/2/289
+
+* Roettenbacher et al. (2016) Roettenbacher, R. M., Monnier, J. D., Korhonen, H., et al. 2016, Nature, 533, 217, doi: 10.1038/nature17444
+
+* Schaefer et al. (2020) Schaefer, G. H., ten Brummelaar, T. A., Gies, D. R., et al. 2020, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 11446, Optical and Infrared Interferometry and Imaging VII, ed. P. G. Tuthill, A. Merand, & S. Sallum, 1144605, doi: 10.1117/12.2562665
+
+* Semakin (1954) Semakin, N. K. 1954, Peremennye Zvezdy, 10, 191
+
+* Setterholm et al. (2023) Setterholm, B. R., Monnier, J. D., Le Bouquin, J.-B., et al. 2023, Journal of Astronomical Telescopes, Instruments, and Systems, 9, 025006, doi: 10.1117/1.JATIS.9.2.025006
+
+* Shenoy (2016) Shenoy, D. P. 2016, PhD thesis, University of Minnesota
+
+* Skiff (2010) Skiff, B. A. 2010, VizieR Online Data Catalog: Catalogue of Stellar Spectral Classifications (Skiff, 2009-2012), VizieR On-line Data Catalog: B/mk. Originally published in: 2009yCat....1.2023S
+
+* Smith (2014) Smith, N. 2014, ARA&A, 52, 487, doi: 10.1146/annurev-astro-081913-040025
+
+* Stothers (1969) Stothers, R. 1969, ApJ, 156, 541, doi: 10.1086/149987
+
+* Stothers & Leung (1971) Stothers, R., & Leung, K. C. 1971, A&A, 10, 290
+
+* Stothers (2010) Stothers, R. B. 2010, ApJ, 725, 1170, doi: 10.1088/0004-637X/725/1/1170
+
+* Stothers (2012) --. 2012, ApJ, 751, 151, doi: 10.1088/0004-637X/751/2/151
+
+* ten Brummelaar et al. (2005) ten Brummelaar, T. A., McAlister, H. A., Ridgway, S. T., et al. 2005, ApJ, 628, 453, doi: 10.1086/430729
+
+* Tiffany et al. (2010) Tiffany, C., Humphreys, R. M., Jones, T. J., & Davidson, K. 2010, AJ, 140, 339, doi: 10.1088/0004-6256/140/2/339
+
+* van Belle et al. (2009) van Belle, G. T., Creech-Eakman, M. J., & Hart, A. 2009, MNRAS, 394, 1925, doi: 10.1111/j.1365-2966.2008.14146.x
+
+* van Genderen et al. (2019) van Genderen, A. M., Lobel, A., Nieuwenhuijzen, H., et al. 2019, A&A, 631, A48, doi: 10.1051/0004-6361/201834358
+
+* VanderPlas (2018) VanderPlas, J. T. 2018, ApJS, 236, 16, doi: 10.3847/1538-4365/aab766
+
+* Watson et al. (2006) Watson, C. L., Henden, A. A., & Price, A. 2006, Society for Astronomical Sciences Annual Symposium, 25, 47
+
+* Wilson et al. (2004) Wilson, J. C., Henderson, C. P., Herter, T. L., et al. 2004, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 5492, Ground-based Instrumentation for Astronomy, ed. A. F. M. Moorwood & M. Iye, 1295-1305, doi: 10.1117/12.550925
+
+* Wittkowski et al. (2012) Wittkowski, M., Hauschildt, P. H., Arroyo-Torres, B., & Marcaide, J. M. 2012, A&A, 540, L12, doi: 10.1051/0004-6361/201219126
+
+* Wittkowski et al. (2017) Wittkowski, M., Abellan, F. J., Arroyo-Torres, B., et al. 2017, A&A, 606, L1, doi: 10.1051/0004-6361/201731569

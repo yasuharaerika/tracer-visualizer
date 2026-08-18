@@ -1,0 +1,141 @@
+###### Abstract
+
+We study the impact of finite-temperature effects in numerical-relativity simulations of binary neutron star mergers with microphysical equations of state and neutrino transport in which we vary the effective nucleon masses in a controlled way. We find that, as the specific heat is increased, the merger remnants become colder and more compact due to the reduced thermal pressure support. Using a full Bayesian analysis, we demonstrate that this effect will be measurable in the postmerger gravitational wave signal with next-generation observatories at signal-to-noise ratios of 15.
+
+0000-0002-8022-1867]Mateo Breschi
+
+0000-0002-2162-1867]David Radice
+
+0000-0002-0002-8227]Sebastiano Bernuzzi
+
+## 1 Introduction.
+
+The extreme conditions found in neutron stars make them an ideal means for probing the nuclear equation of state (EOS). Electromagnetic (EM) observations of pulsars have provided valuable information about the mass distribution of neutron stars (Lattimer & Prakash, 2001; Alsing et al., 2018), and recent results from NICER offer constraints on their radii (Riley et al., 2021; Ludlam et al., 2022; Salmi et al., 2022). Binary neutron star (BNS) mergers give additional astronomical constraints; the gravitational waves (GW) and EM counterpart of GW170817 contained details about the EOS via tidal deformability measurements and ejecta characteristics (Abbott et al., 2017; Margalit & Metzger, 2017; Radice et al., 2018; De et al., 2018; Abbott et al., 2018; Dietrich et al., 2020; Kashyap et al., 2022).
+
+Due to the high Fermi temperature of matter in a neutron star, constraints obtained from pulsars and BNS inspirals are informative of the zero-temperature equation of state (EOS). On the other hand, temperatures as high as 100 MeV might be reached in the post-merger phase (Perego et al., 2019), making it a possible probe of the finite-temperature EOS. Current GW detectors have not yet observed a BNS post-merger (Abbott et al., 2017, 2018, 2020). Nevertheless, future detectors, like the proposed Einstein Telescope (ET) (Maggiore et al., 2020) and Cosmic Explorer (CE) (Abbott et al., 2017) detectors, will feature improved sensitivity at the higher frequencies necessary to detect BNS post-merger signals. Inference on the EOS using post-merger data is possible at (post-merger) signal-to-noise ratios (SNR) as low as 8 (Breschi et al., 2022). Additionally, sensitivity upgrades to current instruments promise higher BNS detection counts with better sky localization (Abbott et al., 2018).
+
+State-of-the-art BNS merger simulations typically incorporate thermal effects via full finite-temperature EOSs, often in the form of a table (Bauswein et al., 2010; Sekiguchi et al., 2011), and realistic neutrino transport, such as via elaborate moment approximations (Foucart et al., 2016; Radice et al., 2022) or Monte Carlo methods (Foucart et al., 2022). Many studies perform simulations with multiple finite-temperature EOSs to demonstrate sensitivity (or lack thereof, as the case may be) of BNS merger observables under different scenarios, but the different cold-temperature behavior of each EOS makes it difficult to attribute specific outcomes to finite-temperature behavior (Neilsen et al., 2014; Radice et al., 2018; Most et al., 2019; Perego et al., 2019; Hammondet al., 2021; Camilletti et al., 2022). Some studies have explored systematic changes in thermal effects through a so-called "hybrid EOS", which extends a cold nuclear EOS to finite temperatures using an ideal gas component with a fixed adiabatic constant \\Gamma_{\\rm th}(Bauswein et al., 2010; Figura et al., 2020). However, this is only a very rough approximation, as the effective \\Gamma_{\\rm th} of a full finite-temperature EOS varies considerably with density, temperature, and composition (Carbone and Schwenk, 2019). Raithel et al. (2021) more recently considered finite-temperature effects through a more sophisticated hybrid EOS based on an approximation to the effective mass, but they do not fully explore how their model affects post-merger GW signals, nor is this approach an entirely self-consistent model. Furthermore, none of these studies incorporate all the relevant physics for modeling thermal effects, particularly consistent neutrino transport.
+
+In this _Letter_, we present a first GR neutrino-radiation hydrodynamics study of finite-temperature effects of a realistic nuclear EOS on BNS mergers through modifications to the specific heat capacity. Our simulations show that an increased heat capacity results in denser, cooler remnants. This leaves clear imprints on the GW signal in the post-merger phase, which we show can be recovered in a parameter estimation pipeline tuned to a next-generation GW observatory.
+
+## 2 Methods.
+
+We select three non-relativistic Skyrme-type nucleonic EOSs built with the framework of Schneider et al. (2019) and parameterized to produce the same cold nuclear matter bulk properties but different specific heat content. In Skyrme EOSs, the specific heat is controlled by the _temperature-independent_ effective masses of neutrons and protons, m_{n}^{*} and m_{p}^{*}, respectively. These have a simple phenomenological description (Constantinou et al., 2014; Schneider et al., 2019; Margueron et al., 2018) that depends only on two parameters and on the nucleonic number densities, n_{n} and n_{p} (or, alternatively, the number density n=n_{n}+n_{p} and the proton fraction Y_{p}=n_{p}/n of matter), and converge toward the vacuum nucleon masses at zero density. The parameters were chosen to reproduce two nuclear matter observables at saturation density: the effective mass for symmetric nuclear matter, m^{*}=m_{n}^{*}\\simeq m_{p}^{*}, and the neutron-proton effective mass splitting for pure neutron matter, \\Delta m^{*}. Guided by theoretical and experimental efforts (Margueron et al., 2018; Li et al., 2018; Huth et al., 2021; Zhang et al., 2021), the selected EOSs probe the average and extreme, but still plausible, expected values for m^{*}, m^{*}=\\left\\{0.55,0.75,0.95\\right\\}m_{n}, while fixing the yet poorly constrained \\Delta m^{*} to 0.10\\,m_{n}. The same EOSs were used to study GW signals from core-collapse supernovae (Andersen et al., 2021).
+
+To first order, the baryonic contribution to the specific heat of degenerate matter found in the core of a neutron star, which dominates over the lepton contribution, is c_{v}=\\left(\\frac{\\pi}{3}\\right)^{2/3}\\frac{T}{n}\\left(n_{p}^{1/3}m_{p}^{*}+n_{ n}^{1/3}m_{n}^{*}\\right), see Eq. (151) of Constantinou et al. (2014). Thus, all else being equal, increasing m^{*} leads to a larger specific heat capacity for matter in the merger remnant, to which we attribute the differences seen across our simulations.
+
+Using the pseudospectral code LORENE(Gourgoulhon et al., 2016), we construct initial data for equal-mass binary neutron star systems in quasicircular orbit with a gravitational mass of M=1.35 M{}_{\\odot} per star. We evolve each binary using THC_M1(Radice et al., 2022; Zappa et al., 2023), an extension of the THC numerical relativity code (Radice et al., 2014, 2014) incorporating neutrino transport via a moment formalism (Thorne, 1981; Shibata et al., 2011). The implementation in THC_M1 makes use of the Minerbo closure for the radiation pressure tensor, which is exact in the optically thick limit. Thus while our neutrino treatment is approximate overall, we can capture effects such as neutrino trapping and dissipative effects from out-of-equilibrium weak reactions in the BNS remnant exactly. Our runs, while not modeling the magnetic field explicitly, also account for the effects of heating and angular momentum transport from magnetohydrodynamic (MHD) turbulence via a general relativistic large eddy simulation (GRLES) formalism calibrated with high-resolution GRMHD BNS simulations (Radice, 2017; Kiuchi et al., 2018; Radice, 2020).
+
+We perform each simulation at two resolutions, designated as LR and SR, respectively corresponding to a grid spacing of \\Delta x\\approx 250 m and \\Delta x\\approx 180 m in the finest refinement level, which covers both stars during the inspiral and merger phases. We also run identical SR simulations with our older M0 solver (Radice et al., 2016) to validate our results; though the solver is less accurate and does not properly capture effects such as neutrino trapping, these runs support the major results of the M1 runs.
+
+## 3 Results.
+
+Figure 1 shows slices of the x-y plane for the m^{*}=0.55 and m^{*}=0.95 SR simulations at approximately 5 ms post-merger and average temperatures for all three values of m^{*}1. Even at this relatively early post-merger time, the density of the remnant's inner core is notice ably larger in the m^{*}=0.95 model. Conversely, the temperature is lower for the m^{*}=0.95 compared to the m^{*}=0.55. The m^{*}=0.75 model has an intermediate behaviour compared to the other two. Interestingly, we find that the temperature trend reverses at lower densities (Figure 1), possibly because of the larger compactness of the merger remnant in the larger m^{*} models. In other words, for higher m^{*}, surface material (where the differences between EOS models are much smaller) falls deeper into the gravitational potential, becoming hotter in the process. A similar trend was reported for CCSN simulations (Schneider et al., 2019). The top panel of Figure 2 shows that the maximum rest-mass density is highest in the m^{*}=0.95 model and lowest for m^{*}=0.55 at most post-merger times. As suggested in this plot, all of the models, independent of resolution or neutrino treatment, produce long-lived remnants.
+
+The GW strain in Figure 2 (bottom panel) demonstrates identical behavior in the inspiral for all three models, but the waveforms begin to deviate in the post-merger due to finite-temperature effects in the EOS. The differences in morphology include frequency evolution, amplitude, damping times, and modulations. This is more quantitatively seen in the GW spectrum (see Figure 3), where there is a clear rightward shift in the peak postmerger frequency, f_{2}, as m^{*} increases. Table 1 contains f_{2} for both the LR and SR simulations. Although the precision of the NR waveform is limited by finite resolution and step size, the shift of \\Delta f\\gtrsim 10 Hz is robust across resolutions, which suggests it is an effect of the EOS and not an artifact of the simulations. The M0 SR simulation demonstrates a similar trend, although the m^{*}=0.75 run is much closer to the m^{*}=0.95 model than either of the M1 cases. This provides an important sanity check of our results, but we stress that it is only qualitative; the M1 results should be used for quantitative analysis of post-merger effects, as a self-consistent approach which accounts for neutrino trapping noticeably changing the remnant's evolution (see Zappa et al. (2023); the appendix also contains a more detailed comparison).
+
+To detect these thermal effects in the postmerger via next-generation GW detectors and possibly constrain the m^{*} nuclear parameter, we perform full Bayesian inference on the postmerger GW signals. To compute injections, we extract the postmerger waveforms from the SR simulations by applying a Tukey window to suppress the inspiral and spline interpolate the GW waveforms to a sampling rate of 16384 Hz. We further zero pad the signals to a segment of 1 s. For brevity, we consider here only noise-less injections. For parameter estimation, we employ the publicly available code bajes(Breschi et al., 2021) and use the UltraNest(Buchner, 2021) sampler available as part of the bajes pipeline. We recover the injections by using the postmerger model NRPMw from (Breschi et al., 2022) and compute posteriors on its parameters. We inject all signals at a luminosity distance corresponding to a post-merger SNR of 15 (which corresponds to an inspiral SNR of \\mathcal{O}(100), see Maggiore et al. (2020)), assuming the power spectral density of ET-D (Hild et al., 2011) to simulate the detector response. The priors are set in accordance to (Breschi et al., 2022), section-IIB. In Figure 3, we show the reconstructed waveforms from NRPMw evaluated on the parameter space of the recovered posterior samples. We list the recovered SNRs and f_{2} values in Table 1. At \\text{SNR}=15, the injected spectrum's f_{2} frequencies sit well within the 90% credible intervals of the distribution of reconstructed waveform's f_{2} frequencies. Furthermore, these intervals do not overlap, indicating that all three waveforms are clearly distinguishable at a post-merger \\text{SNR}=15 with 90% credibility.
+
+## 4 Discussion.
+
+We have shown that m^{*} significantly influences the GW signals in BNS mergers, and we have analyzed this effect in detail for f_{2}. The relationship between m^{*} and f_{2} is easily explained in terms of the specific heat. In
+
+\\begin{table}
+
+\\begin{tabular}{l c|c c c} \\hline \\hline m^{*} & (m_{n}) & 0.55 & 0.75 & 0.95 \\\\ \\hline f_{2}^{\\text{LR}} & (kHz) & 2.862 & 2.908 & 2.921 \\\\ f_{2}^{\\text{M0}} & (kHz) & 2.864 & 2.966 & 2.974 \\\\ f_{2}^{\\text{SR}} & (kHz) & 2.835 & 2.908 & 3.080 \\\\ \\mathcal{M}_{0.75}^{\\text{SR}} & & 0.04 & N/A & 0.08 \\\\ \\mathcal{M}_{0.95}^{\\text{SR}} & & 0.09 & 0.08 & N/A \\\\ f_{2}^{\\text{NRPMw}} & (kHz) & 2.83^{+0.02}_{-0.02} & 2.91^{+0.02}_{-0.02} & 3.06^{+0.02}_{-0.02} \\\\ \\text{SNR}_{\\text{mf}} & & 13.6^{+1.6}_{-2.7} & 13.4^{+1.6}_{-2.5} & 13.8^{+1.8}_{-2.2} \\\\ D_{L} & (Mpc) & 56.353 & 56.730 & 49.655 \\\\ \\hline \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Peak post-merger frequencies (f_{2}) of the gravitational wave spectrum for the LR (M1), M0, and SR (M1) simulations and the NRPMw model. For reference, the recovered matched-filter SNR values and corresponding luminosity distance D_{L} are also provided. For consistency, all peaks are measured after suppressing the inspiral. We also provide the mismatch, \\mathcal{M}(see Lindblom et al. (2008); Damour et al. (2011)), between the f_{2}^{\\text{SR}} runs, with one row measured against m^{*}=0.75 and the other against m^{*}=0.95. creasing the specific heat appears to soften the equation of state; because it requires more energy to increase the temperature, there is less thermal pressure available to support the star, thus producing a more rapidly rotating and compact remnant with lower temperatures, in agreement with core-collapse supernovae studies (Andersen et al., 2021; Schneider et al., 2019; Yasin et al., 2020).
+
+The EOSs we use have a simple relationship between m^{*} and the specific heat capacity which may not be representative of the true nuclear EOS, which is expected to be both density and temperature dependent (Carbbone and Schwenk, 2019). Nevertheless, this study serves as a proof of concept demonstrating that future detectors like ET and CE can use f_{2} to constrain the finite-temperature EOS. We also reiterate that this effect _only_ affects the finite-temperature evolution, which will not be observable until next-generation detectors sensitive to the post-merger phase come online. Furthermore, we also note that this study does not provide a method for measuring m^{*} from f_{2}; we only assert that m^{*} leaves an imprint on f_{2}.
+
+We do acknowledge some limitations in our work; most notably, the length of the m^{*}=0.95 M1 simulation is much shorter than both the m^{*}=0.55 and m^{*}=0.75 runs due to a limitation in the M1 neutrino solver which introduced unphysical effects past 5 ms post-merger. This short length may explain why f_{2}^{m^{*}=0.95} increases between the LR and SR runs while both f_{2}^{m^{*}=0.55} and f_{2}^{m^{*}=0.75} instead decrease, as a shorter signal will introduce a extra spread of frequencies to the power spectrum and possibly shift the peak. Another possible limitation concerns the omission of magnetic fields. Our simulations include a GRLES model which can account for some, but not all MHD effects. On the other hand, other simulations suggest that MHD effects on the post-merger gravitational wave frequency are negligible for realistic initial magnetic field strengths (Palenzuela et al., 2022).
+
+We may consider several avenues for future work. Longer simulations would allow us to investigate the ejecta and consider possible effects on EM counterparts, as well as possible thermal effects on the lifetime of the remnants. Additionally, Zappa et al. (2023) indicate that resolution has a prominent influence on post-merger evolution, including collapse time and disk formation. Although we validate our results here with two resolutions, accurately determining the precise value of f_{2} for each model would require higher resolution calculations. To investigate our hypothesis that this study's results are general, future simulations could also explore other EOS models with tunable finite-temperature behavior.
+
+NOTE ADDED
+
+While this manuscript was under review, Raithel and Paschalidis (2023) announced new results on the impact of thermal effects on f_{2}. Their work uses a semi-analytic prescription for the EOS and neglects neutrinos, but it is in good agreement with our findings.
+
+The authors thank Albino Perego, Ish Gupta, Arnab Dhani, Rahul Kashyap and Bangalore Sathyaprakash for helpful discussions. DR acknowledges funding from the U.S. Department of Energy, Office of Science, Division of Nuclear Physics under Award Number(s) DE-SC0021177 and from the National Science Foundation under Grants No. PHY-2011725, PHY-2020275, PHY-2116686, and AST-2108467. SB acknowledges support by the EU H2020 under ERC Starting Grant, no. BinGraSp-714626 and from the Deutsche Forschungsgemeinschaft DFG project MEMI number BE 6301/2-1. MB acknowledges support by the PRO3 program "DS4Astro" of the Italian Ministry for Universities and Research. Simulations were performed on PSC Bridges2 (NSF XSEDE allocation TG-PHY160025). This research used resources of the National Energy Research Scientific Computing Center, a DOE Office of Science User Facility supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231. Computations for this research were performed on the Pennsylvania State University's Institute for Computational and Data Sciences' Roar supercomputer.
+
+## Appendix A Neutrino Effects
+
+The presence of a trapped neutrino gas in optically-thick regions can affect the temperature and composition of the remnant (Perego et al., 2019; Zappa et al., 2023). Many BNS simulations today employ leakage schemes, which do not explicitly model neutrino radiation, but instead estimate a cooling rate based on the local optical depth (Sekiguchi et al., 2011; Neilsen et al., 2014; Palenzuela et al., 2015; Radice et al., 2016, 2018). Because they do not perform consistent radiation transport, leakage schemes cannot capture the trapped neutrino gas in the remnant or potential out-ofequilibrium effects. The more accurate M1 scheme, however, directly models neutrino transport and can therefore capture both these effects (Radice et al., 2022; Zappa et al., 2023). Because our study represents the first investigation of thermal effects in BNS mergers with self-consistent neutrino transport, we will demonstrate here the influence of neutrinos on our results by comparing our M0 (a leakage-style scheme) simulations to our M1 runs.
+
+In Fig. 4, we show the GW strain for both the M0 and M1 simulations. All three values of m^{*} show identical behavior in the inspiral, which is to be expected; neutrinos emissions are highly sensitive to the temperature, which is quite low prior to merger. In the post-merger signal, the m^{*}=0.55 and m^{*}=0.75 differ only very slightly in amplitude and frequency. The m^{*}=0.95 runs show somewhat stronger deviations but are still quite similar in overall morphology. Nevertheless, the shifts in f_{2} (see Table 1 in the main text) for changes in the neutrino solver are within a factor of two or three of the shifts due to changing m^{*}; were these results used to calibrate some model for determining m^{*} from f_{2}, it may result in a fairly significant error.
+
+In Fig. 5, we show the average temperature as a function of density at 5 ms post-merger for both the M0 and M1 SR simulations. We calculate this temperature by constructing two-dimensional histograms in temperature and density, then performing a weighted average over the temperature for each density bin. This data is smoothed by averaging five time steps centered around 5 ms. The M1 data demonstrates a clear trend at higher densities (\\rho\\gtrsim\\rho_{\\rm sat}) where higher values of m^{*} lead to lower temperatures, and there is limited evidence suggesting an inverted trend in the outer layers of the star (\\rho\\lesssim\\rho_{\\rm sat}), a result which is consistent with core-collapse supernovae simulations (Schneider et al., 2019). One possible explanation is due to the increased compactness for higher m^{*}; material near the surface (where the density is low enough that m^{*} has a much weaker effect on the EOS) falls deeper into the gravitational potential and heats up more as m^{*} increases. However, the high-density trend is obscured in the M0 data, and there is no evidence of the low-density trend, as the m^{*}=0.55 temperature is often higher than the m^{*}=0.75 temperature at lower densities (where the M0 scheme suppresses neutrino absorption).
+
+[MISSING_PAGE_EMPTY:16148]
+
+* Huth et al. (2021) Huth, S., Wellenhofer, C., & Schwenk, A. 2021, Phys. Rev. C, 103, 025803, doi: 10.1103/PhysRevC.103.025803
+
+* Kashyap et al. (2022) Kashyap, R., et al. 2022, Phys. Rev. D, 105, 103022, doi: 10.1103/PhysRevD.105.103022
+
+* Kiuchi et al. (2018) Kiuchi, K., Kyutoku, K., Sekiguchi, Y., & Shibata, M. 2018, Phys. Rev. D, 97, 124039, doi: 10.1103/PhysRevD.97.124039
+
+* Lattimer & Prakash (2001) Lattimer, J. M., & Prakash, M. 2001, The Astrophysical Journal, 550, 426, doi: 10.1086/319702
+
+* Li et al. (2018) Li, B.-A., Cai, B.-J., Chen, L.-W., & Xu, J. 2018, Progress in Particle and Nuclear Physics, 99, 29, doi: [https://doi.org/10.1016/j.ppnp.2018.01.001](https://doi.org/10.1016/j.ppnp.2018.01.001)
+
+* Lindblom et al. (2008) Lindblom, L., Owen, B. J., & Brown, D. A. 2008, Phys. Rev. D, 78, 124020, doi: 10.1103/PhysRevD.78.124020
+
+* Ludlam et al. (2022) Ludlam, R. M., et al. 2022, Astrophys. J., 927, 112, doi: 10.3847/1538-4357/ac5028
+
+* Maggiore et al. (2020) Maggiore, M., et al. 2020, JCAP, 2020, 050, doi: 10.1088/1475-7516/2020/03/050
+
+* Margalit & Metzger (2017) Margalit, B., & Metzger, B. D. 2017, Astrophys. J. Lett., 850, L19, doi: 10.3847/2041-8213/aa991c
+
+* Margueron et al. (2018) Margueron, J., Hoffmann Casali, R., & Gulminelli, F. 2018, Phys. Rev. C, 97, 025805, doi: 10.1103/PhysRevC.97.025805
+
+* Most et al. (2019) Most, E. R., Papenfort, L. J., Dexheimer, V., et al. 2019, Phys. Rev. Lett., 122, 061101, doi: 10.1103/PhysRevLett.122.061101
+
+* Neilsen et al. (2014) Neilsen, D., Liebling, S. L., Anderson, M., et al. 2014, Phys. Rev. D, 89, 104029, doi: 10.1103/PhysRevD.89.104029
+
+* Palenzuela et al. (2022) Palenzuela, C., Aguilera-Muret, R., Carrasco, F., et al. 2022, Phys. Rev. D, 106, 023013, doi: 10.1103/PhysRevD.106.023013
+
+* Palenzuela et al. (2015) Palenzuela, C., Liebling, S. L., Neilsen, D., et al. 2015, Phys. Rev. D, 92, 044045, doi: 10.1103/PhysRevD.92.044045
+
+* Perego et al. (2019) Perego, A., Bernuzzi, S., & Radice, D. 2019, Eur. Phys. J. A, 55, 124, doi: [https://doi.org/10.1140/epja/i2019-12810-7](https://doi.org/10.1140/epja/i2019-12810-7)
+
+* Radice (2017) Radice, D. 2017, Astrophys. J. Lett., 838, L2, doi: 10.3847/2041-8213/aa6483
+
+* Radice et al. (2020) --. 2020, Symmetry, 12, 1249, doi: 10.3390/sym12081249
+
+* Radice et al. (2022) Radice, D., Bernuzzi, S., Perego, A., & Haas, R. 2022, Mon. Not. Roy. Astron. Soc., 512, 1499, doi: 10.1093/mnras/stac589
+
+* Radice et al. (2016) Radice, D., Galeazzi, F., Lippuner, J., et al. 2016, Mon. Not. Roy. Astron. Soc., 460, 3255, doi: 10.1093/mnras/stw1227
+
+* Radice et al. (2018a) Radice, D., Perego, A., Hotokezaka, K., et al. 2018a, Astrophys. J., 869, 130, doi: 10.3847/1538-4357/aaf054
+
+* Radice et al. (2018b) Radice, D., Perego, A., Zappa, F., & Bernuzzi, S. 2018b, Astrophys. J. Lett., 852, L29, doi: 10.3847/2041-8213/aaa402
+
+* Radice et al. (2014a) Radice, D., Rezzolla, L., & Galeazzi, F. 2014a, Mon. Not. Roy. Astron. Soc., 437, L46, doi: 10.1093/mnras/slt137
+
+* Radice et al. (2014b) --. 2014b, Classical and Quantum Gravity, 31, 075012, doi: 10.1088/0264-9381/31/7/075012
+
+* Raithel et al. (2021) Raithel, C., Paschalidis, V., & Ozel, F. 2021, Phys. Rev. D, 104, 063016, doi: 10.1103/PhysRevD.104.063016
+
+* Raithel & Paschalidis (2023) Raithel, C. A., & Paschalidis, V. 2023. [https://arxiv.org/abs/2306.13144](https://arxiv.org/abs/2306.13144)
+
+* Riley et al. (2021) Riley, T. E., et al. 2021, Astrophys. J. Lett., 918, L27, doi: 10.3847/2041-8213/ac0a81
+
+* Salmi et al. (2022) Salmi, T., et al. 2022, Astrophys. J., 941, 150, doi: 10.3847/1538-4357/ac983d
+
+* Schneider et al. (2019) Schneider, A. S., Roberts, L. F., Ott, C. D., & O'Connor, E. 2019, Phys. Rev. C, 100, 055802, doi: 10.1103/PhysRevC.100.055802
+
+* Sekiguchi et al. (2011a) Sekiguchi, Y., Kiuchi, K., Kyutoku, K., & Shibata, M. 2011a, Phys. Rev. Lett., 107, 051102, doi: 10.1103/PhysRevLett.107.051102
+
+* Sekiguchi et al. (2011b) --. 2011b, Phys. Rev. Lett., 107, 051102, doi: 10.1103/PhysRevLett.107.051102
+
+* Shibata et al. (2011) Shibata, M., Kiuchi, K., Sekiguchi, Y.-i., & Suwa, Y. 2011, Prog. Theor. Phys., 125, 1255, doi: 10.1143/PTP.125.1255
+
+* Thorne (1981) Thorne, K. S. 1981, Mon. Not. Roy. Astron. Soc., 194, 439, doi: 10.1093/mnras/194.2.439
+
+* Yasin et al. (2020) Yasin, H., Schafer, S., Arcones, A., & Schwenk, A. 2020, Phys. Rev. Lett., 124, 092701, doi: 10.1103/PhysRevLett.124.092701
+
+* Zappa et al. (2023) Zappa, F., Bernuzzi, S., Radice, D., & Perego, A. 2023, Mon. Not. Roy. Astron. Soc., doi: 10.1093/mnras/stad107
+
+* Zhang et al. (2021) Zhang, Z., Feng, X.-B., & Chen, L.-W. 2021, Chinese Physics C, 45, 064104, doi: 10.1088/1674-1137/abf428

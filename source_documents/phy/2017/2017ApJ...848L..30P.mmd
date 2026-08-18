@@ -1,0 +1,129 @@
+###### Abstract
+
+We present an analysis of the host-galaxy environment of Swope Supernova Survey 2017a (SSS17a), the discovery of an electromagnetic counterpart to a gravitational wave source, GW170817. SSS17a occurred 1.9 kpc (in projection; 10\\farcs2) from the nucleus of NGC 4993, an S0 galaxy at a distance of 40 Mpc. We present a _Hubble Space Telescope_ (_HST_) pre-trigger image of NGC 4993, Magellan optical spectroscopy of the nucleus of NGC 4993 and the location of SSS17a, and broad-band UV through IR photometry of NGC 4993. The spectrum and broad-band spectral-energy distribution indicate that NGC 4993 has a stellar mass of \\log(M/M_{\\odot})=10.49^{+0.08}_{-0.20} and star formation rate of 0.003 M{}_{\\odot} yr{}^{-1}, and the progenitor system of SSS17a likely had an age of >2.8 Gyr. There is no counterpart at the position of SSS17a in the _HST_ pre-trigger image, indicating that the progenitor system had an absolute magnitude M_{V}>-5.8 mag. We detect dust lanes extending out to almost the position of SSS17a and >100 likely globular clusters associated with NGC 4993. The offset of SSS17a is similar to many short gamma-ray burst offsets, and its progenitor system was likely bound to NGC 4993. The environment of SSS17a is consistent with an old progenitor system such as a binary neutron star system.
+
+## 1. Introduction
+
+On 2017 August 17 (UT), the Laser Interferometer Gravitational Wave Observatory (LIGO) and Virgo interferometer detected a gravitational wave source from a binary neutron star (BNS) merger, GW170817 (LIGO/Virgo collaboration 2017b, ; LIGO Scientific Collaboration and Virgo Collaboration, in preparation). Two seconds after the LIGO/Virgo detection, the Fermi Gamma-ray Space Telescope and INTErnational Gamma-Ray Astrophysics Laboratory (INTEGRAL) detected a short-duration gamma-ray burst (sGRB; LIGO/Virgo collaboration 2017a; INTEGRAL 2017). About 11 hours after the LIGO/Virgo trigger, our team discovered an optical transient in NGC 4993 coincident with GW170817, called Swope Supernova Survey 2017a (SSS17a; One-Meter Two-Hemisphere (1M2H) collaboration 2017; Coulter et al. 2017).
+
+SSS17a is the first detection of an electromagnetic counterpart to a gravitational wave source. This discovery marks a milestone and opens a new era in modern astronomy. The gravitational wave data suggests that SSS17a is a BNS merger, the most popular progenitor model of sGRBs (e.g., Eichler et al. 1989; Berger 2014; Lee & Ramirez-Ruiz 2007).
+
+The host environments of astrophysical transients have long been a profitable route to understanding the nature of their progenitor systems and placing broad constraints on their properties. For example, the long-duration GRBs and sGRBs have very different host environments. While long GRBs predominantly occur in star-forming galaxies (e.g., Bloom et al. 2002), sGRBs can be found in both star-forming and early-type galaxies (Prochaska et al. 2006; Fong et al. 2013), indicating an older population. In addition, sGRBs tend to be found in more massive galaxies and generally show larger offsets from their hosts than long GRBs do (Zheng & Ramirez-Ruiz 2007; Behroozi et al. 2014). The distinct host properties suggest they are likely to arise from different progenitor populations.
+
+In this work, we investigate the host environment of SSS17a, both globally and locally. By comparing our results to those from different kinds of astrophysical transients, we constrain the nature of the progenitor system.
+
+A plan of the paper follows. In Section 2, we describe the observations and data reduction, and Section 3 discusses the methods used to analyze the data and show the determined host properties. The discussion and conclusions are presented in Section 4 and 5, respectively. Throughout this paper, we assume H{}_{0}=70 km s{}^{-1} Mpc{}^{-1} and a flat universe with \\Omega_{\\rm M}=0.3 when necessary.
+
+## 2. Observations and Data Reduction
+
+SSS17a was discovered 5\\farcs3 E and 8\\farcs7 N of NGC 4993 (One-Meter Two-Hemisphere (1M2H) collaboration 2017; Coulter et al. 2017), an early-type S0 galaxy with redshift z=0.009727\\pm 0.000050 (de Vaucouleurs et al. 1991) in a galaxy group (Makarov & Karachentsev 2011). The transient is only 1.9 kpc offset (projected) from NGC 4993, assuming the distance to NGC 4993 of 39.5 Mpc based on the Tully-Fisher method (Freedman et al. 2001).
+
+NGC 4993 was observed by the _Hubble Space Telescope_ (_HST_) with the Advanced Camera for Surveys (ACS) on April 28, 2017 (UT) in the F606W filter as part of the "Schedule Gap Pilot" program (Program 14840; PI Bellini). We obtained the _HST_ images from the Mikulski Archive for Space Telescopes (MAST). We reduced the _HST_ image using the drizzlepac pipeline (Avila et al. 2015). The calibrated frames were further corrected for geometric distortion, sky background, cosmic-rays and combined with astrodrizzle. We registered the final, combined images using TweakReg.
+
+We performed photometry on the combined _HST_/ACS image following standard procedures with dolphot13. The dolphot photometry was calibrated using the ACS/WFC F606W zero point for April 28, 2017 from the ACS zero point calculator14.
+
+Footnote 13: [http://americano.dolphinsim.com/dolphot/](http://americano.dolphinsim.com/dolphot/)
+
+Footnote 14: [https://acsczeropoints.stsci.edu/](https://acsczeropoints.stsci.edu/)
+
+Footnote 15: [http://pslimages.stsci.edu/cgi-bin/pslcutouts](http://pslimages.stsci.edu/cgi-bin/pslcutouts)
+
+We obtained Pan-STARRS1 (PS1) griz imaging of NGC 4993 from the PS1 image cutout server16 (Chambers et al. 2016). These data had been calibrated to the PS1 system following procedures described in Magnier et al. (2016).
+
+Footnote 16: [http://americano.dolphinsim.com/dolphot/](http://americano.dolphinsim.com/dolphot/)
+
+To measure the photometry of NGC 4993, we fit an elliptical isophote to the galaxy profile using the IRAF package isophote. We measured an _HST_/ACS F606W AB magnitude of 12.23 \\pm 0.01 mag. Using the same method, we measured PS1 griz AB magnitudes of 12.45 \\pm 0.02, 12.14 \\pm 0.02, 11.78 \\pm 0.02, and
+
+Figure 1.— _Upper left_: False-color (RGB channels corresponding to PS1 irg filters) image of the field surrounding NGC 4993 (indicated by the yellow arrow). The green arrow marks the closest galaxy to NGC 4993 in the same galaxy group, ESO 508-G018. _Upper right_: Zoom-in of the upper-left image centered on NGC 4993. The red cross marks the location of SSS17a. _Lower left_: _HST_/ACS F606W image near the center of NGC 4993. The yellow circle represents the 1-\\sigma error circle of the SSS17a location. The dust lanes surrounding the galactic center are obvious. _Lower right_: Zoom-in of the lower-left image after subtracting a galfit model, centered on the SSS17a location. The yellow circle and red circle represent the 1-\\sigma and 3-\\sigma astrometric uncertainty, respectively. Blue circles mark the potential globular clusters near the transient location. For all images, north is up and east is left.
+
+12.62\\pm 0.02 mag, respectively. In addition, we obtained far-UV (FUV) and near-UV (NUV) photometry from the Galaxy Evolution Explorer (GALEX; Bianchi et al., 2017), JHK_{s} near-infrared (NIR) photometry from the Two Micron All-Sky Survey (2MASS; Skrutskie et al., 2006) and 3.6-22\\mum IR photometry from the Wide-field Infrared Survey Explorer (WISE; Wright et al., 2010).
+
+We examined the position of SSS17a in the _HST_/ACS F606W image and did not detect any sources at the transient location. Placing artificial stars on similar surface-brightness areas, we determined an AB magnitude limit at the position of SSS17a of m_{V}>27.2 mag, corresponding to M_{V}>-5.8 mag at the distance of NGC 4993, consistent with limits initially reported by HST (2017).
+
+We obtained an optical spectrum of NGC 4993 on 2017 September 5 (UT) using the f/4 camera of the Inamori-Magellan Areal Camera & Spectrograph (IMACS; Dressler et al., 2006) on the 6.5-m Magellan/Baade telescope at Las Campanas Observatory. We used the 600 \\ell/mm grating with a blaze angle of 8\\fdg6 to cover the wavelength range 3500-6500 A at a spectral resolution of R\\approx 2500. We obtained three 600 s exposures on NGC 4993 with a 0\\farcs7-wide long slit in mediocre conditions with some clouds. We carried out basic reductions of the spectra (bias subtraction, wavelength calibration, flatfielding, and coaddition) using the COSMOS software package (Dressler et al., 2011).1 We then extracted the spectrum over a 3\\farcs7-diameter aperture in IRAF and applied a flux calibration derived from observations of the standard star LTT 6248. The flux-calibrated spectrum of NGC 4993 is displayed in the upper panel of Fig 2.
+
+Footnote 1: [http://code.obs.carnegiescience.edu/cosmos](http://code.obs.carnegiescience.edu/cosmos)
+
+## 3. Analysis
+
+### Stellar mass and star formation rate
+
+We use the photometric redshift code z-PEG (Le Borgne & Rocca-Volmerange, 2002), which is based on the spectral synthesis code PEGASE.2 (Fioc & Rocca-Volmerange, 1997), to estimate the host-galaxy stellar mass (M_{\\rm stellar}) and star-formation rate (SFR). z-PEG fits the observed galaxy colors with galaxy SED templates corresponding to 9 spectral types (SB, Im, Sd, Sc, Sbc, Sb, Sa, S0 and E). We assume a Salpeter (1955) initial-mass function (IMF). The photometry is corrected for foreground Milky Way reddening of E(B-V)=0.109 mag (Schlafy & Finkbeiner, 2011; Shappee et al., 2017) with R_{V}=3.1 and a Cardelli, Clayton, & Mathis (1989, CCM) reddening law.
+
+Using our 14-band photometry (see Section 2), we measure a host M_{\\rm stellar} of \\log(M/M_{\\odot})=10.49^{+0.08}_{-0.20}, corresponding to a halo mass of \\log(M_{\\rm halo}/M_{\\odot})=11.96 using the M_{\\rm stellar}-M_{\\rm halo} relation derived in Yang et al. (2008), assuming \\log(M_{0}/M_{\\odot})=9.8, \\log(M_{\\rm h}/M_{\\odot})=10.7, \\alpha=0.6 and \\beta=2.9 in their Eq. (7). The observed photometry and best-fit template can be found in Fig. 3.
+
+In Fig. 4 we compare the measured M_{\\rm stellar} to that for the host galaxies of supernovae (SNe) and both short and long GRBs. Similar to SNe Ia and core-collapse SNe, sGRBs can be found in galaxies with a wide range of M_{\\rm stellar}. By contrast, long GRBs are predominantly found in low-mass galaxies. We find that NGC 4993 is
+
+Figure 3.— The best-fit SED template by z-PEG (black curve) to the observed 14-band photometry (red filled-circle). The grey curve represents the template by intentionally forcing z-PEG to better fit the UV photometry but sacrificing the goodness of fitting on other bands.
+
+Figure 2.— _Top_: Magellan/IMACS spectrum of NGC 4993. The red spectrum shows the spectral fit recovered with the Gandalf software package. _Bottom_: A grid containing a total of 288 stellar templates (a combination of 6 metallicities and 48 ages) used for ppxF fitting. Here we only plot the templates with age older than 1 Gyr. The weight of each template is represented by the strength of the color. The templates with higher weights are brighter. We present here the result for NGC 4993. The green cross represents the weighted mean stellar age and metallicity.
+
+[MISSING_PAGE_FAIL:4]
+
+8 km s{}^{-1} for NGC 4993. The best-fit value for the diffusive dust component is zero (the local dust component cannot be constrained due to the lack of nebular emissions in our spectrum), suggesting that dust extinction within the inner 3\\farcs7 of NGC 4993 is negligible.
+
+In Fig. 2 we show the stellar age and metallicity distributions of the host galaxy stellar populations given by the ppxf fit. We determine a mass-weighted mean stellar age of 10.97 Gyr, with the youngest and oldest stellar populations having ages of 2.8 Gyr and a Hubble time, respectively. This result strongly suggests that the progenitor system of SSS17a was at least 2.8 Gyr old. Our result is consistent with previous findings that sGRBs tend to originate from older populations (Leibler & Berger, 2010).
+
+We measure a mass-weighted mean stellar metallicity [M/H]=-0.03, corresponding to \\sim0.9 Z_{\\odot}. Leibler & Berger (2010) used the gas-phase metallicity 12 + log(O/H) and measured a mean metallicity of \\sim1 Z_{\\odot} for sGRB samples. They also found that the metallicities of sGRB hosts are generally higher than those for long GRB hosts (with a median metallicity of only \\sim0.3 Z_{\\odot}). Therefore, NGC 4993 has a typical metallicity for an sGRB host galaxy.
+
+### Offset and fractional flux
+
+SSS17a is offset by 10\\farcs2 from the center of NGC 4993, corresponding to a physical (projected) offset of 1.9 kpc using the Tully-Fisher distance of 39.5 Mpc (Freedman et al., 2001). In Fig. 4, we compare the measured offset to that for different types of transients. It is evident that the locations of sGRBs tend to be farther from the centers of their host galaxies (with a median offset of 5 kpc) than long GRBs and other SNe. We find that the offset of SSS17a is somewhat small in comparison to sGRBs, with \\sim77% of all sGRBs having an offset of >1.9 kpc. This same trend is true when normalizing the offset by the effective radius of the galaxy, where SSS17a has a normalized offset of r/r_{e}=0.61, and \\sim80% of all sGRBs have larger normalized offsets.
+
+To further study the local environment of the transient, we use the fractional flux method (e.g., Fruchter et al., 2006). The fractional flux is defined as the sum of all flux in all pixels that are fainter than that measured at the location of the transient divided by the total flux associated with the galaxy. Using the _HST_/ACS F606W image, we determine a fractional flux of 0.41 for SSS17a (Fig. 4). With this metric, sGRBs do not trace the optical light of the galaxy, with \\sim45% of all sGRBs being at positions with effectively no galaxy light. That is, sGRBs are often found in the far outskirts of a galaxy. In contrast, long GRBs tend to be in the brightest part of their host galaxies (with a median fractional flux of 0.86), suggesting that their progenitors are likely related to bright star-forming regions.
+
+The fractional flux of SSS17a is relatively high compared to sGRB samples (\\sim80th percentile; consistent with the offset distribution), but low relative to long GRBs (only \\sim4th percentile).
+
+### Morphology
+
+NGC 4993 is clearly an S0 galaxy (Capaccioli et al., 2015). To further quantify its morphology, we use galfit(Peng et al., 2002) to fit the surface brightness profile of NGC 4993. We fit the galaxy profile with a single Sersic model given by
+
+\\Sigma(r)=\\Sigma_{e}\\exp\\{-\\kappa[(r/r_{e})^{1/n}-1]\\},  where r_{e} is the effective radius such that half of the total flux is enclosed within r_{e}, \\Sigma_{e} is the surface brightness at the effective radius r_{e}, n is the Sersic index (a concentration parameter), and \\kappa is a variable coupled to n.
+
+Fitting the _HST_ image of NGC 4993, galfit gives a concentration parameter n\\approx 4 (the de Vaucouleurs profile), which is similar to typical elliptical galaxies. The effective radius r_{e} is 17'', corresponding to a physical size of 3.3 kpc. A residual image is created by subtracting the best-fit model from the original image (see Fig. 5).
+
+Dust lanes are clearly seen in the residual image, extending several kpc from the galactic center (see both Fig. 1 and Fig. 5) roughly in the direction of SSS17a (HST, 2017). However, the dust lanes do not appear to reach the position of SSS17a, providing further evidence that SSS17a does not suffer strong extinction and consistent with the results of Shappee et al. (2017). The dust lanes found in early-type galaxies are usually indications of recent minor mergers and likely to host active galactic nuclei (Shabala et al., 2012).
+
+### Globular clusters
+
+Globular clusters contain very high densities of stars. This high stellar density increases the probability of close interactions and leads to mergers more frequently than for field stars (Grindlay et al., 2006; Lee et al., 2010; Samsing et al., 2014). Here we investigate the possibility that SSS17a originated from a globular cluster in NGC 4993.
+
+To better detect sources hidden in the diffuse stellar light, we use the galfit residual image (Section 3.4), and identify sources using sextractor(Bertin & Arnouts, 1996, see Fig. 5). To identify possible globular clusters, we require that each source have the following properties: (1) not obviously a foreground star (we cross-check this by using a catalog such as USNO-B1.0), (2) point-like PSF, and (3) a brightness consistent with a globular cluster at 40 Mpc given the globular cluster luminosity function (e.g., Faifer et al., 2011), specifically those with 21\\leq m_{AB}\\leq 24 mag (corresponding to -10\\leq M_{AB}\\leq-7 mag). A total of 119 sources pass these cuts and are selected as potential globular clusters, with the closest one being \\sim290 pc away in projection from the position of SSS17a. In principle, we should be able to detect all of the globular clusters in the image (the detection limit is \\sim27 mag). However, the number estimated here could be underestimated due to the dust extinction or the relatively bright background near the host nucleus.
+
+Previous studies (e.g., Peng et al., 2008) showed that the total mass of globular clusters (M_{\\rm GCS}) within the host galaxy can be estimated by a simple scaling relation to the host galaxy halo mass (M_{\\rm halo}) via
+
+M_{\\rm GCS}/M_{\\rm halo}=\\eta,  where \\eta represents the absolute efficiency of globular cluster formation. Assuming an efficiency \\eta\\simeq 4\\times 10^{-5}(Harris et al., 2015) and an average globular cluster mass of 4\\times 10^{5}\\,M_{\\odot}(Spitler & Forbes, 2009), the number of globular clusters (N_{\\rm GCS}) within a galaxy of M_{\\rm halo} can be estimated by
+
+N_{\\rm GCS}=(1.0\\times 10^{-10})\\times M_{\\rm halo}. 
+
+Using N_{\\rm GCS}=119 (the number of likely globular clusters detected in the _HST_ image), we determine \\log(M_{\\rm halo}/M_{\\odot})=12.07, which is close to the value that we found using the M_{\\rm stellar}-M_{\\rm halo} relation (see Section 3.1).
+
+## 4. Discussion
+
+In Section 3.3 we show that sGRBs tend to have larger offsets from their host galaxies than other kinds of transients. The observed offset distribution is generally consistent with the predictions for compact object mergers (e.g., Behroozi et al., 2014). Simulations show that these progenitor systems experience a natal kick when the stars transition to white dwarfs, neutron stars, or black holes. The kick velocity can be up to several hundreds of kilometers per second (Fryer & Kalogera, 1997; Fryer et al., 1998) -- potentially larger than the escape velocity of its host galaxy, which could expel the progenitor system and result in a large offset from the host galaxy.
+
+However, SSS17a has a relatively small offset compared to the typical offsets of sGRBs. Combined with its likely old age, the location close to the center of the host galaxy suggests that the progenitor system of SSS17a was bound to NGC 4993. Assuming a stellar mass of \\log(M/M_{\\odot})=10.49 (Section 3.1), the escape velocity of NGC 4993 is 350 km s{}^{-1} at the transient location. We therefore have a constraint on the SSS17a progenitor system kick of \\leq 350 km s{}^{-1}, which is consistent with the kicks seen for Milky Way neutron star binaries (Fryer & Kalogera, 1997; Wang et al., 2006; Wong et al., 2010).
+
+Assuming the distance to the nearest likely globular cluster (290 pc; see Section 3.5) and the age of the youngest stellar population (2.8 Gyr; see Section 3.2), a velocity of \\sim 0.1 km s{}^{-1} is sufficient for the progenitor to travel from a globular cluster to its the current location. Thus the progenitor kick should be dominated by the escape velocity of the globular cluster (typically several tens of kilometers per second), which makes it hard to exclude the possibility that the progenitor originated in a globular cluster.
+
+## 5. Conclusions
+
+In this work, we investigate the host environment of SSS17a, the first electromagnetic counterpart to a gravitational wave source. We use optical spectroscopy and broad-band UV through IR photometry of the host galaxy to constrain the host properties, such as stellar mass, SFR, age, and metallicity. Below we summarize our main findings.
+
+* NGC 4993, the host galaxy of SSS17a, is an S0 galaxy at 40 Mpc. It is massive and shows negligible recent star formation. Its mean stellar age is high, suggesting that the progenitor system likely originated from an old stellar population (an age of >2.8 Gyr). NGC 4993 is similar to galaxies that have hosted sGRBs and the expected host galaxies of BNS mergers. It is unlike typical host galaxies for other transient classes, being the most distinct from long GRB host galaxies.
+
+* Its small projected offset combined with its likely old age suggests that the progenitor system of SSS17a was gravitationally bound to NGC 4993. This then implies a limit on the kick velocity of the progenitor system to be \\leq350 km s{}^{-1}.
+
+* Many likely globular clusters are detected in the host galaxy, including close to the position of SSS17a. We cannot exclude the possibility that the progenitor of SSS17a originated from a globular cluster.
+
+The galactic environment of SSS17a provides additional constraints on its progenitor system beyond that extracted from the GW data and the EM observations of SSS17a itself. With larger samples of BNS merger host galaxies, we will be able to determine if they differ in any way from sGRB host galaxies.
+
+## Acknowledgments
+
+We thank the University of Copenhagen, DARK Cosmology Centre, and the Niels Bohr International Academy for hosting D.A.C., R.J.F., A.M.B., E.R., and M.R.S. during the discovery of GW170817/SSS17a. R.J.F., A.M.B., and E.R. were participating in the
+
+Figure 5.— _Left_: The _HST_/ACS F606W image of NGC 4993. _Middle_: The residual image by subtracting a single Sérsic profile modelled by galfit from the same image. _Right_: Candidate globular clusters detected (in green) after our cuts described in Section 3.5. The radius of the circle is proportional to size of the source. The red cross in each image represents the location of SSS17a.
+
+Kavli Summer Program in Astrophysics, "Astrophysics with gravitational wave detections." This program was supported by the the Kavli Foundation, Danish National Research Foundation, the Niels Bohr International Academy, and the DARK Cosmology Centre. We would also like to thank J. Mulchaey (Carnegie Observatories director), L. Infante (Las Campanas Observatory director), and the entire Las Campanas staff for their extreme dedication, professionalism, and excitement, all of which were critical in the discovery of the first gravitational wave optical counterpart and its host galaxy as well as the observations used in this study.
+
+The UCSC group is supported in part by NSF grant AST-1518052, the Gordon & Betty Moore Foundation, the Heising-Simons Foundation, generous donations from many individuals through a UCSC Giving Day grant, and from fellowships from the Alfred P. Sloan Foundation (R.J.F), the David and Lucile Packard Foundation (R.J.F. and E.R.) and the Niels Bohr Professorship from the DNRF (E.R.). A.M.B. acknowledges support from a UCMEXUS-CONACYT Doctoral Fellowship. DK is supported in part by a Department of Energy (DOE) Early Career award DE-SC0008067, a DOE Office of Nuclear Physics award DE-SC0017616, and a DOE SciDAC award DE-SC0018297, and by the Director, Office of Energy Research, Office of High Energy and Nuclear Physics, Divisions of Nuclear Physics, of the U.S. Department of Energy under Contract No.DE-AC02-05CH11231. M.R.D. and B.J.S. were partially supported by NASA through Hubble Fellowship grants HST-HF-51373.001 and HST-HF-51348.001 awarded by the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc., for NASA, under contract NAS5-26555. This research has made use of the NASA/IPAC Extragalactic Database (NED), which is operated by the Jet Propulsion Laboratory, California Institute of Technology, under contract with the National Aeronautics and Space Administration. Based on observations made with the NASA/ESA Hubble Space Telescope, obtained from the Data Archive at the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc., under NASA contract NAS 5-26555. These observations are associated with program GO-14840.

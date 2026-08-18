@@ -1,0 +1,117 @@
+###### Abstract
+
+We construct numerical models of the newly discovered binary pulsar J0737-3039A, both with a fully relativistic, uniformly rotating, equilibrium code that handles arbitrary spins and in the relativistic, slow-rotation approximation. We compare results for a representative sample of viable nuclear equations of state (EOS) that span three, qualitatively different, classes of models for the description of nuclear matter. A future dynamical measurement of the neutron star's moment of inertia from pulsar timing data will impose significant constraints on the nuclear EOS. Even a moderately accurate measurement (\\lesssim 10\\%) may be able to rule out some of these competing classes. Using the measured mass, spin and moment of inertia to identify the optimal model computed from different EOSs, one can determine the pulsar's radius.
+
+Gravitation -- stars: neutron -- pulsars: individual (J0737-3039) -- stars: rotation
+
+## 1 Introduction
+
+The recently discovered binary neutron star system J0737-3039 has many very interesting and exciting properties (e.g. Burgay et. al 2003; Lyne et. al 2004). Both stars in J0737-3039 have been identified as pulsars, the binary is about ten times closer to the Earth than the Hulse-Taylor binary B1913+16, and the binary separation is significantly less than that of B1913+16 (Burgay et. al 2003). As a consequence, relativistic effects affecting the orbital dynamics play a much larger role in J0737-3039 than in all previously discovered binary neutron stars. One such effect that may become measurable soon from pulsar timing data is spin-orbit coupling (Damour & Schafer 1988; Wex 1995). In particular, Lens-Thirring precession will yield the moment of inertia of the more rapidly spinning pulsar J0737-3039A (Lyne et. al. 2004; O'Connell 2004). Such a determination would constitute the first time that the moment of inertia of a neutron star (or any other star) has been measured by dynamical means. The recently launched Gravity Probe B experiment will measure Lens-Thirring as well as geodetic precession of a gyroscope in orbit about the Earth. Geodetic precession has been measured in the binary pulsar system B1534+12 (Stairs, Thorsett & Arzoumanian 2004).
+
+Since the star's gravitational mass and spin frequency are well determined, a measurement of the moment of inertia could provide a stringent constraint on the nuclear equation of state (EOS). Using the measured mass, spin and moment of inertia to select the optimal candidate from a suite of theoretical models constructed from competing EOSs, one can also determine the pulsar's radius.
+
+In this paper we point out that even a measurement of the moment of inertia of modest accuracy (\\lesssim 10\\%) may help differentiate between competing approaches that are presently adopted for the description of nuclear matter and the construction of nuclear EOSs (for a general review of modern EOSs see Lattimer & Prakash 2000, 2001). In Section 2 we briefly review three qualitatively distinct classes of EOSs; in Section 3 we adopt representative EOSs in each of these classes to construct numerical models of J0737-3039A and determine its moment of inertia; in Section 4 we briefly discuss our findings.
+
+## 2 Equations of State
+
+In this paper we consider six different nuclear EOSs. They are chosen to represent three different classes of EOSs, distinguished by the formalism used in their construction (see discussion below). All six of these EOSs give maximum gravitational masses that exceed the mass of the most massive neutron star (PSR J1518+4904, M/M_{\\odot}=1.56; Thorsett & Chakrabarty 1999) residing in the six known binary radio pulsar systems. These systems provide neutron stars with the most accurately determined masses. Some pulsar masses determined with greater uncertainty (e.g., PSR J0751+1807, believed to have a low-mass white dwarf companion and an estimated mass M/M_{\\odot}\\sim 2.2; see, e.g., Table 1 in Stairs 2004) are greater than the maximum allowed masses for some of the chosen six EOSs (see Table 1 below). If confirmed, these objects would rule out these particular EOSs, or require adjustment of some of the parameters on which they are based.
+
+The first class of EOSs that we consider are results of nonrelativistic many-body calculations using realistic models of two- and three-nucleon interactions. The two-nucleon interactions are obtained by fitting observed nucleon-nucleon scattering data, and the three-nucleon interactions are based on the energies of light nuclei and/or properties of symmeric nuclear matter (SNM) with comparable number of neutrons and protons. To represent these class I EOSs we choose two examples. The first is APR (Akmal, Pandharipande, & Ravenhall 1998), which adopts a modern two-nucleon interaction (A18), together with its relativistic boost correction and the UIX threenucleon potential. The second is FPS (Lorenz, Ravenhall, & Pethick 1993), which is based on an older two-nucleon interaction (U14), and phenomenological density dependent terms to represent the effects of three-nucleon forces. The main difference between these two EOSs is that FPS exactly reproduces the empirical properties of SNM, but not light nuclei, while the A18+UIX forces used by APR reproduce both the binding energies of light nuclei and SNM properties fairly accurately.
+
+An important property of the EOSs belonging to class I is that the pressure of pure neutron matter (PNM) at desities in the 10^{11}-10^{14} g cm{}^{-3} range is close to half of that of noninteracting neutron gas (Carlson, Morales, Pandharipande, & Ravenhall 2003). This follows from the known, large neutron-neutron scattering length, a\\sim 18 fm, which makes the dimensionless parameter ak_{F}, where k_{F} is the Fermi momentum of PNM, larger than unity, and results in relatively smaller crusts, radii and moments of inertia for neutron stars with M<1.6M_{\\odot}.
+
+The second, class II, of EOSs are based on relativistic mean-field approximations. A mean-field Lagrangian is chosen to reproduce the empirical properties of SNM, and it is used to calculate the EOS of neutron star matter, which is closer to PNM, using the mean-field approximation. SNM is charged, and in absence of Coulomb forces it is believed to be bound with an energy of \\sim-16 MeV per nucleon, and to have zero pressure at a density of \\sim 2.5\\times 10^{14} g cm{}^{-3}. At lower densities its pressure is negative and it becomes unstable at densities less than \\sim 1.5\\times 10^{14} g cm{}^{-3}. On the other hand PNM has positive energy and pressure at all densities as far as we know. Thus it is most challenging to extrapolate the properties of SNM to those of PNM. The relativistic mean field Lagrangian contains no information on neutron-neutron scattering, such as the large value of the scattering length a, and therefore the pressure of class II EOSs approaches that of noninteracting neutron gas at desities less than 10^{14} g cm{}^{-3}. They yield neutron stars with relatively larger crusts, radii and moments of inertia. We choose MS1 (Muller and Serot 1996) and GM3 (Glendenning & Moszkowski 1991) to represent class II.
+
+The class III of EOSs we consider assume that neutron stars are entirely made up of strange quark matter. This hypothetical form of matter is electrically neutral and has zero pressure at densities of order 10^{14} g cm{}^{-3}. There is no information or observational evidence for this matter. We consider two examples: SQM1 and SQM3 (Prakash, Cooke, & Lattimer 1995).
+
+Tables of the comoving total mass density \\rho, the rest mass density \\rho_{0} and the pressure P of the chosen EOSs were kindly provided by M. Prakash and D. G. Ravenhall. To improve the convergence of our numerical codes we found it helpful to increase the number of data points using third-order interpolation between the raw data.
+
+## 3 The moment of inertia
+
+Adopting the EOSs discussed in Section 2 we compute the moment of inertia of the pulsar J0737-3039A by performing two independent relativistic calculations. We assume that the pulsar is rotating _uniformly_; while nascent neutron stars can form with appreciable differential rotation, viscosity and magnetic fields will combine to drive them to uniform rotation on a timescale much shorter than the age of the pulsar inferred from its spindown, 210 Myr. In addition, the precision of the underlying pulsar clock mechanism strongly argues in favor of solid-body rotation.
+
+In the first calculation, we adopt the numerical code of Cook, Shapiro & Teukolsky 1994, hereafter CST, to construct stationary models of uniformly rotating neutron stars. This code treats arbitrary spin rates without approximation. We use it to compute models that have the gravitational mass M=1.337M_{\\odot} and the angular velocity \\Omega=276.8s{}^{-1} (corresponding to a spin period P=27.7 ms) of J0737-3039A. We refer to CST for details of the code, including how the code utilizes tabulated EOSs. The code computes the angular momentum J
+
+J=\\int T^{\\mu}_{\\ \\nu}\\xi^{\\nu}_{(\\phi)}d^{3}\\Sigma_{\\mu}  where T^{\\mu\\nu} is the stress-energy tensor for a perfect fluid,
+
+T^{\\mu\\nu}=(\\rho+P)u^{\\mu}u^{\\nu}+Pg^{\\mu\\nu},  and \\xi^{\\nu}_{(\\phi)} is the Killing vector in the azimuthal direction reflecting axisymmetry. In (2) u^{\\mu} is the fluid four-velocity, which for uniformly rotating, axisymmetric stars takes the form u^{\\mu}=u^{t}(1,0,0,\\Omega) where \\Omega=u^{\\phi}/u^{t} is the stellar angular velocity. The definition (1) then reduces to
+
+J=\\int(\\rho+p)u^{t}(g_{\\phi\\phi}u^{\\phi}+g_{\\phi t}u^{t})\\sqrt{-g}d^{3}x  where g\\equiv\\det({\\rm g}_{\\alpha\\beta}). From the angular momentum J the moment of inertia is determined as I\\equiv J/\\Omega.
+
+A simple estimate shows that the stellar frequency \\Omega=276.8 Hz is much less than the Kepler frequency at the stellar equator, \\Omega_{\\rm max}\\approx(GM/R^{3})^{1/2}. For all the EOSs we consider here \\Omega/\\Omega_{\\rm max}<0.035. This implies that deviations from sphericity are very small, so that the moment of inertia can also be approximated from spherical stellar models. Our second calculation therefore adopts this slow-rotation approximation (Hartle 1967; Chandrasekhar & Miller 1974; Glendenning & Weber 1992; Ravenhall & Pethick 1994) which we briefly review as follows.
+
+In the slow-rotation limit in spherical polar coordinates the metric can be written as (G=c=1)
+
+ds^{2}=-e^{2\\Phi}dt^{2}+\\left(1-\\frac{2m}{r}\\right)^{-1}dr^{2}
+
+-2\\omega r^{2}\\sin^{2}\\theta dtd\\phi+r^{2}(d\\theta^{2}+\\sin^{2}\\theta d\\phi^{ 2})  where m(r) is the total mass within radius r
+
+\\frac{dm}{dr}=4\\pi r^{2}\\rho  and where \\omega(r)\\equiv\\left.d\\phi/dt\\right|_{\\rm ZAMO} is the Lense-Thirring angular velocity of a zero-angular momentum observer (ZAMO) with p_{\\phi}=0. Up to first order in \\omega all metric potentials are spherically symmetric and only depend on the areal radius r. In the stellar interior, Einstein's equations reduce to
+
+\\frac{d\\Phi}{dr}=\\frac{m+(4\\pi r^{3}p)}{1-2m/r}\\ \\ (r<R),  and
+
+\\frac{1}{r^{3}}\\frac{d}{dr}\\left(r^{4}j\\frac{d\\bar{\\omega}}{dr}\\right)+4\\frac{ dj}{dr}\\bar{\\omega}=0\\ \\ (r<R),  where following convention we define \\bar{\\omega}\\equiv\\Omega-\\omega and
+
+j\\equiv\\left(1-\\frac{2m}{r}\\right)^{1/2}\\ e^{-\\Phi}. The stellar structure is determined by the Tolman-Oppenheimer-Volkoff eq. (Arnett & Bowers 1976) 1
+
+Footnote 1: Note that in eq. (3.11) of Arnett & Bowers this expression has an incorrect exponent
+
+\\frac{dP}{dr}=-(\\rho+P)\\frac{m+4\\pi r^{3}P}{1-2m/r}. 
+
+Exterior to the stellar surface at r=R, defined as the radius R at which the pressure first vanishes P(R)=0, the metric reduces to
+
+e^{2\\Phi}=\\left(1-\\frac{2M}{r}\\right)\\quad(r>R),  and
+
+\\omega=\\frac{2J}{r^{3}}\\qquad(r>R)  where M=m(R) is the total gravitational mass.
+
+On the surface of the star the interior and exterior solutions are matched by satisfying the boundary conditions
+
+\\bar{\\omega}(R)=\\Omega-\\frac{R}{3}\\frac{d\\bar{\\omega}}{dr},  and
+
+\\Phi(R)=\\frac{1}{2}\\ln(1-2M/R). 
+
+In practice this is accomplished by choosing arbitrary initial values \\Phi_{c} and \\omega_{c} at r=0 for the integration of (6) and (7) to the surface r=R. The boundary conditions are then met by multiplying the interior solutions by appropriate constants.
+
+The moment of inertia I=J/\\Omega can then be computed from eq. (3). Using \\Omega=u^{\\phi}/u^{t} and keeping only terms up to first order in \\Omega and \\omega we find
+
+I\\approx\\frac{8\\pi}{3}\\int_{0}^{R}\\frac{(\\rho+p)e^{-\\Phi}}{(1-2m/r)^{1/2}} \\frac{\\bar{\\omega}}{\\Omega}r^{4}dr. 
+
+This slow-rotation approximation for the moment of inertia neglects deviations from sphericity and is independent of the angular velocity \\Omega.
+
+In this framework, the moment of inertia can be computed by solving ordinary differential equations, namely the Tolman-Oppenheimer-Volkoff eqs. (5) and (9) together with eqs. (6) and (7), followed by a numerical quadrature, (14). This integration can be carried out with almost arbitrary accuracy, so that that the error is dominated by the slow-rotation approximation. From (\\Omega/\\Omega_{\\rm max})^{2}\\sim 10^{-3} we expect this error to be in the order of about 0.1 % (which we have verified by comparison with our calculations using the CST code). For most EOSs our datasets are fairly sparse, which leads to an interpolation error that is closer to about 1 % for some EOSs, far larger than the intrinsic error arising from the slow-rotation approximation. We summarize our numerical results in Table 1, constructed using this approximation. All results obtained with the CST code were within 1 % of the results in Table 1, the difference dominated by interpolation error within the EOS datasets, which is carried out differently in the two calculations. (We found closer agreement for those EOSs for which more datapoints are available). We also point out that the CST code calculations showed that the oblateness of the stars is very small for all EOSs R_{e}/R_{p}-1\\lesssim 10^{-3}, where R_{e} and R_{p} are the equatorial and polar radius.
+
+## 4 Discussion
+
+It is evident from Table 1 that the moment of inertia I for a neutron star like J0737-3039A depends quite strongly on the EOS. Hence a measurement of I could impose new constraints on the EOS, refining some of the parameters that enter the models of nuclear matter, or even ruling out whole classes of models that currently exist.
+
+Within each Class I and II, the predictions for the neutron star radius and moment of inertia are fairly similar, but between these two classes, the values are quite different. Class I predicts a radius \\lesssim 12 km and a moment of inertia \\lesssim 1.2\\times 10^{45}{\\rm g\\;cm^{2}}, while Group II predicts a radius of about \\gtrsim 13 km and a moment of inertia \\gtrsim 1.5\\times 10^{45}{\\rm g\\;cm^{2}}. This implies that an observational measurement of I even with a modest accuracy (say 10 % or so) may distinguish these different groups, establishing whether "realistic" many-body nuclear models based on nuclear matter and experimental data (Class I) or mean-field models (Class II) provide better descriptions of neutron star matter.
+
+There is a much larger spread in our results for Class III, which seem to depend quite strongly on various free parameters in the EOS. These parameters affect the (surface) density at which the pressure vanishes, and hence the radius and moment of inertia of the stellar models. A measurement of I may serve to constrain these parameters.
+
+As an aside we point out that the pulsar's companion, J0737-3039B, which is also a pulsar, has a surprisingly small gravitational mass of only M=1.25M_{\\odot}. The corresponding baryonic rest mass depends on the EOS and ranges from 1.34 M_{\\odot} to 1.37 M_{\\odot} for Classes I and II (see Lattimer, J. M., & Prakash, M., 2001, ApJ, 550, 426.
+
+Lorenz, C. P., Ravenhall, D. G., and Pethick, C. J., 1993, Phys. Rev. Lett., 70, 379
+
+Lyne, A. G., Burgay, M., Kramer, M., Possenti, A., Manchester, R. N., Camilo, F., McLaughlin, M. A., Lorimer, D. R., D'Amico, N., Joshi, B. C., Reynolds, J. & Freire, P. C. C., 2004, Science, 303, 1153
+
+Morrison, I. A., Baumgarte, T. W., and Shapiro, S. L., 2004, ApJ, in press
+
+Muller, H., & Serot, B. D., 1996, Nucl. Phys., 606, 508
+
+O'Connell, R. F., 2004, Phys. Rev. Lett., 93, 081103
+
+Prakash, M., Cooke, J. R., & Lattimer, J. M., 1995, Phys. Rev. D, 52, 661.
+
+Ravenhall, D. G., & Pethick, C. J., 1994, ApJ, 424, 846.
+
+Stairs, I. H., 2004, Science, 304, 547
+
+Stairs, I. H., Thorsett, S. E., & Arzoumanian, Z., 2004, Phys. Rev. Lett., in press (astro-ph/0408457)
+
+Thorsett, S. E., & Chakrabarty, D., 1999, ApJ, 512, 288
+
+Wex, N., 1995, Class. Quantum Grav., 12, 983
+
+Willems, B., & Kalogera, V., 2004, ApJ, 603, L101
+
+Woosley, S. E., Heger, A., & Weaver, T. A., 2002, Rev. Mod. Phys., 74, 1015

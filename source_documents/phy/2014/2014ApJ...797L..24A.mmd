@@ -1,0 +1,169 @@
+###### Abstract
+
+Millisecond pulsars (MSPs) orbiting helium white dwarfs (WDs) in eccentric orbits challenge the established binary-evolution paradigm that predicts efficient orbital circularization during the mass-transfer episode that spins up the pulsar. Freire & Tauris (2014) recently proposed that these binary MSPs may instead form from the rotationally delayed accretion-induced collapse of a massive WD. This scenario predicts that eccentric systems preferably host low-mass pulsars and travel with small systemic velocities--in tension with new observational constraints. Here I show that a substantial growth in eccentricity may alternatively arise from the dynamical interaction of the binary with a circumbinary disk. Such a disk may form from ejected donor material during hydrogen flash episodes, when the neutron star is already an active radio pulsar and tidal forces can no longer circularize the binary. I demonstrate that a short-lived (10^{4}-10^{5} yr) disk can result in eccentricities of e\\simeq 0.01-0.15 for orbital periods between 15 and 50 days. Finally, I propose that, more generally, the disk hypothesis may explain the lack of circular binary pulsars for the aforementioned orbital-period range.
+
+Subject headings:pulsars: general - pulsars: individual: (PSR J1618-3919, PSR J1946+3417, PSR J2234+0611) - stars: evolution - white dwarfs +
+
+Footnote †: slugcomment: To appear in The Astrophysical Journal Letters
+
+## 1. Introduction
+
+The majority of binary millisecond pulsars (MSPs) orbit low-mass helium white-dwarf companions (He WDs; see data in Manchester et al. 2005). The standard formation channel for these systems requires mass transfer from a low-mass donor (m_{\\rm donor}\\lesssim 2\\,{\\rm M}_{\\odot}) onto an old neutron star (NS) during a long-lived, low-mass X-ray binary (LMXB) phase. Throughout the mass-transfer episode, the NS gains mass and spin angular momentum, and tidal forces acting on the donor wipe out any primordial eccentricity imparted on the system during the supernova explosion (see, e.g., Bhattacharya & van den Heuvel 1991).
+
+LMXBs with relatively wide initial separations initiate mass transfer as the donor undergoes hydrogen-shell burning on the red giant branch. Such systems evolve toward orbital periods between \\sim 2 and \\sim 150 days (Tauris & van den Heuvel 2006) and follow two distinct relations. (1) the remnant companions are He WDs with masses that scale with orbital period, because the progenitor's core mass depends on the stellar radius which is set by the orbital separation (e.g., Savonije 1987; Tauris & Savonije 1999); (2) the residual eccentricity correlates with the orbital period because turbulent density fluctuations in the donor's convective envelope prevent perfect circularization (Phinney 1992).
+
+Indeed, most known binary MSPs outside of globular clusters closely follow the predictions of the "recycling" scenario (based on data available in the ATNF pulsar catalog; Manchester et al. 2005). Until recently, the only known MSP with a substantial eccentricity was PSR J1903+0327 with e\\simeq 0.44 and a main-sequence companion (Champion et al. 2008). The current consensus for this binary's formation is that it is the fossil of a triple system, where the mass-losing star was ejected due to dynamical interactions (e.g., Freire et al. 2011; Portegies Zwart et al. 2011).
+
+Interestingly, eccentric MSPs have now grown in number with the discovery of the three systems shown in Table 1. For these binaries a triple-origin scenario seems unlikely for two main reasons: First, the companions are He WDs (J. Antoniadis _et al._, in preparation) that have masses consistent with what is expected from binary evolution (e.g. Tauris & Savonije 1999). Second, their orbital periods and eccentricities seem to resemble each other, which is unlikely for systems that evolved through a chaotic dynamical process.
+
+Freire & Tauris (2014) proposed instead that the first two MSPs in Table 1 may have formed directly from the rotationally delayed, accretion-induced collapse (RD-AIC) of a massive WD. In this scenario, the eccentricity grows from zero to roughly (m_{\\rm WD}^{\\rm progenitor}-m_{\\rm NS})/M\\simeq 0.1 during the NS formation (where m_{\\rm WD}^{\\rm progenitor} is the mass of the WD progenitor, m_{\\rm NS} is the NS mass after the implosion, and M is the total mass of the binary). Systems formed via an RD-AIC should host low-mass NSs (with a mass equal to the initial baryonic WD mass minus the gravitational binding energy) and move with small systemic velocities, as the natal kick from the WD implosion should be minimal (Kitaura et al. 2006; Dessart et al. 2006).
+
+However, recent observations show that eccentric MSPs in fact host NSs with highly scattered masses and systemic velocities, thereby contradicting the RD-AIC hypothesis (J. Antoniadis _et al._, in preparation; E. Barr & P. Freire, private communication). An explanation of these measurements within the RD-AIC scenario would require an additional assumption of highly differentially rotating WD progenitors and substantial natal kicks at birth (Freire & Tauris 2014).
+
+In this Letter, I propose that high eccentricities may instead result from the dynamical interaction of the binary with a circumbinary disk (CB disk). I show that such a disk may form from material escaping the donor's surface as it undergoes hydrogen-shell flashes, following the LMXB phase and shortly before entering the final WD cooling branch. The mass loss (of order 10^{-4}-10^{-3}\\,{\\rm M}_{\\odot}) during flashes--occurringwhen the NS is already an active MSP and tidal forces can no longer affect the contracting proto-WD--can lead to a CB disk which may increase the eccentricity to the observed values within a timescale much shorter than the characteristic ages of these systems. Finally, using a Monte-Carlo (MC) simulation, I demonstrate that the CB hypothesis may explain the lack of circular MSPs with orbital periods between \\sim 15 and \\sim 50 days. Within the CB disk scenario, the low end of the orbital period gap would be linked to a decreased CB disk lifetime for shorter orbital periods and the long-period cutoff would result from the cessation of hydrogen flashes for higher-mass WDs.
+
+## 2. Eccentricity Growth Though Interaction with a Circumbinary Disk
+
+### Circumbinary disk formation, mass and lifetime
+
+A CB disk able to pump up the eccentricity of a binary MSP can form if the following conditions are met.
+
+* There should be enough matter lost from the donor that cannot be accreted onto the NS and
+
+* tidal forces that tend to circularize the orbit should be minimal.
+
+Both these criteria are fulfilled immediately after the cessation of the long-term recycling phase. To demonstrate this I use a set of LMXB calculations conducted with the mesa stellar-evolution code (Paxton et al., 2013, 2013). The initial binaries consist of a 1.3\\,\\mathrm{M}_{\\odot} NS (treated as a point mass), companions with masses between 1.4 and 1.6\\,\\mathrm{M}_{\\odot} and initial orbital periods between two and four days. An example track for a donor mass of m_{\\mathrm{donor}}=1.4\\,\\mathrm{M}_{\\odot} and an initial orbital period of P_{\\mathrm{b}}^{\\mathrm{init}}=3.0\\,\\mathrm{days} can be seen in Fig. 1. As a result of the hydrogen shell flashes, the binary undergoes a short-lived (\\sim 10^{3}\\,\\mathrm{yr}) episode of additional Roche-lobe overflow in which the mass-transfer rate exceeds the Eddington limit of the accreting NS, causing matter to be lost from the binary. The total ejected mass for the model system in Fig. 1 is \\Delta M_{\\mathrm{hash}}\\simeq 2.0\\times 10^{-4}\\,\\mathrm{M}_{\\odot} and varies from \\sim 1\\times 10^{-4} to 9\\times 10^{-4}\\,\\mathrm{M}_{\\odot} among different tracks (see also Istrate et al. 2014a,b).
+
+Immediately after the flash episode, the circularization timescale, \\tau_{\\mathrm{circ}} (Zahn, 1977), grows beyond 10^{10}\\,\\mathrm{yr} as the star contracts and settles on the cooling track. Hence, tides become irrelevant for the subsequent evolution of the orbital elements. Furthermore, as previous studies have shown (e.g., Burderi et al. 2002; D'Antona et al. 2006; Tauris 2012), the NS is already an active MSP and its magneto-dipole pressure exceeds the ram pressure of the accreted matter at L1. Consequently, a large fraction of companion's material carrying substantial specific orbital angular momentum may escape the system through L2 and form a CB disk.
+
+The lifetime of the disk is difficult to estimate but it most likely depends sensitively on the photo-evaporation efficiency of the pulsar's spin-down luminosity and the average distance from the binary (and consequently the binary separation; Alexander et al. 2006; Owen et al. 2012; Chesneau 2013). As we shall see below, for a mean disk mass of 1.5\\times 10^{-4}\\,\\mathrm{M}_{\\odot} throughout the evolution -- adopted here as a conservative estimate based on the binary evolution tracks -- the timescale to pump up the eccentricity to e=0.1 is of the order of 10^{4}-10^{5}\\,\\mathrm{yr}, depending on the orbital period. Hence, for all following calculations, I take \\tau_{\\mathrm{CB,150}}^{\\mathrm{max}}=10^{5}\\,\\mathrm{yr} as an upper bound for a disk around a binary with a separation of 150\\,\\mathrm{ls}. This corresponds to an average mass-loss rate of \\dot{M}_{\\mathrm{CB}}\\simeq 10^{-9}\\,\\mathrm{M}_{\\odot}\\,\\mathrm{yr}^{-1}. Furthermore, as photo-evaporation should also depend on the distance to the pulsar, I assume that the disk lifetime scales with the binary's semi-major axis as \\tau_{\\mathrm{CB}}^{\\mathrm{max}}(a)=\\tau_{\\mathrm{CB,150}}^{\\mathrm{max}}( \\frac{a}{150\\,\\mathrm{ls}})^{2}.
+
+### Impact of the Circumbinary Disk on the Orbital Parameters
+
+The influence of a CB disk on the binary orbit has been studied extensively, especially in the context of eccentric post-asymptotic giant branch stars (Artymowicz et al., 1991; Lubow & Artymowicz, 1996, 2000; Dermine et al., 2013). Here, I adopt the approach of Dermine et al. (2013) which is based on the smooth-particle hydrodynamics simulations of Lubow & Artymowicz (2000). In this model, the resonant interactions between the binary and the disk are described using a linear perturbation theory, where the binary potential is approximated with the series expansion:
+
+\\Phi(r,\\theta,t)=\\sum_{m,l}\\phi_{m,l}(r)\\exp[im(\\theta-(l/m)\\Omega_{\\mathrm{b }}r)]. 
+
+Figure 1.— Mass-transfer rate as a function of donor mass for an LMXB with m_{\\mathrm{donor}}=1.4\\,\\mathrm{M}_{\\odot} and P_{\\mathrm{b}}^{\\mathrm{init}}=3.0\\,\\mathrm{days} (see §2.1). The final period of the binary is p_{\\mathrm{b}}^{\\mathrm{init}}\\simeq 274\\,\\mathrm{days}. The red line shows the circularization timescale (Zahn, 1977) and the dashed line corresponds to the neutron-star Eddington accretion rate. The embedded figure displays in more detail the mass-transfer profile during the hydrogen-flash episodes of the donor.
+
+Here, l,m are integers and \\Omega_{\\rm b}=2\\pi/P_{\\rm b}=\\sqrt{GM/a^{3}} is the angular orbital frequency. The disk is assumed to be thin and the kinematic viscosity is taken to be density independent. The inner edge of the disk is equal to the distance at which the resonant torque balances the viscous torque of the disk.
+
+For small eccentricities (\\lesssim 0.2), the rate of change for the orbital separation is given by (Dermine et al., 2013)
+
+\\frac{\\dot{a}}{a}=-\\frac{2l}{m}\\frac{M_{\\rm disk}}{\\mu}\\alpha\\left(\\frac{H}{R }\\right)^{2}\\frac{a}{R}\\Omega_{\\rm b},  where \\mu is the reduced mass of the binary, R is the half orbital angular-momentum radius of the disk, H/R the disk thickness (here fixed to H/R=0.1), and \\alpha(=0.1) the viscosity parameter. The change in eccentricity is given by
+
+\\dot{e}=\\frac{2(1-e^{2})}{e+\\frac{\\alpha}{100e}}\\left(\\frac{l}{m}-\\frac{1}{ \\sqrt{1-e^{2}}}\\right)\\frac{\\dot{a}}{a}. 
+
+For e\\lesssim 0.1\\alpha^{2}, the rate of eccentricity change is primarily determined by the l=1,m=1 resonance, while for large values by the l=1,m=2 resonance (Dermine et al., 2013; Lubow & Artymowicz, 2000). Using Eqs. (2) and 3, one finds that for a typical binary MSP with \\mu=0.24 and P_{\\rm b}=27 days, and for a constant disk mass of 1.5\\times 10^{-4}\\,{\\rm M}_{\\odot} (see above), the time needed to excite the eccentricity to e\\simeq 0.1 is only \\sim 50\\,000 yr, therefore providing a possible explanation for the origin of eccentric MSPs (see Fig. 2).
+
+### Monte-Carlo Simulations and the Origin of the Orbital Period Gap
+
+To assess whether the CB disk scenario can reproduce the observed eccentricities, I perform a Monte Carlo (MC) simulation under certain assumptions for the disk lifetime, distribution of orbital periods and stellar masses.
+
+For the MC, Eqs. (2) and (3) are solved 10 000 times assuming a pulsar mass drawn from a normal distribution with a mean of 1.45\\,{\\rm M}_{\\odot} and \\sigma=0.2\\,{\\rm M}_{\\odot}, and a disk mass of M_{\\rm disk}=1.5\\times 10^{-4}\\,{\\rm M}_{\\odot} (see SS2.1). The orbital period distribution is taken to be flat in \\log(P_{\\rm b}) between 1 and 50 days, which roughly corresponds to He WD masses within the critical range for hydrogen flashes (see SS3 for discussion). m_{\\rm WD} is calculated using the Tauris & Savonije (1999) relation for solar metallicities (Z=0.02).
+
+For the maximum disk lifetime, I adopt \\tau_{\\rm CB,150}^{\\rm max}=10^{5} yr, which is required to explain the eccentricities of the systems shown in Table 1 (see also SS2.1). To simulate the effect of a varying photo-evaporating efficiency, for each orbital separation a, the disk lifetime is conservatively assumed to follow a flat distribution between 0 and \\tau_{\\rm CB,150}^{\\rm max}\\left(\\frac{a}{150{\\rm M}_{\\odot}}\\right)^{2} (see SS2.1).
+
+Finally, the initial binary eccentricity before the CB disk formation is fixed to the Phinney (1992) prediction with a spread following a Boltzmann distribution with \\sigma(e_{0}^{2})=e_{0}^{2}/2.
+
+The main results of the MC study are discussed in the following section.
+
+## 3. Results
+
+Fig. 3 shows a qualitative comparison between the observed eccentricities of MSPs with He WD companions and the results of the MC simulation described in SS2. The most interesting feature of the model distribution is a "jump" in the orbital eccentricities for systems with P_{\\rm b}\\geq 10 days. This jump is a result of higher initial eccentricities for these periods but also requires an increased disk lifetime (10^{4}-10^{5} yr). Interestingly, as the number of circular binaries decreases significantly for longer orbital periods, the CB scenario provides a possible explanation for the under-abundance of circular MSPs with orbital periods between 15 and 50 days (Camilo, 1995). If this is the case, the upper P_{\\rm b} limit of the gap (\\sim 50 days) should mark the critical He WD mass above which hydrogen flashes cease (\\sim 0.31 M{}_{\\odot} based on Tauris & Savonije 1999).
+
+If the disk lifetime is independent of the distance to the pulsar, the orbital period gap should correspond exactly to the mass range for which flashes occur. However, this would not explain the observed abundance of systems at P_{\\rm b}\\leq 14 days with eccentricities larger than the Phinney (1992) prediction. Furthermore, the corresponding lower critical WD mass for flashes (\\sim 0.26 M{}_{\\odot}) is far too high compared to current model predictions (e.g. see: Althaus et al., 2013, and references therein). Finally, note that, albeit less frequent, binaries with e\\leq 10^{-3} can still exist inside the gap, although preferably for small disk lifetimes compared to the maximum value. This may be the case for e.g. MSPs with high spin-down luminosities and/or favorable geometrical alignment (Chen et al., 2013; Guillemot & Tauris, 2014).
+
+Despite the qualitative agreement between the observed and simulated populations, it should be noted that some of the critical features described above depend sensitively on physical parameters that are not yet well constrained observationally. For example, the maximum eccentricity for a given orbital period would change significantly if one varies the disk mass and lifetime (here chosen to fit the existing data, see also Fig 2). Similarly, a different distribution of disk lifetimes and/or a change in the functional form describing the depen
+
+Figure 2.— Change of the orbital elements due to the interaction of a binary with a CB disk based on eqs. 1& 2. The binary shown here has P_{\\rm b}^{\\rm init}=27 days, e_{0}=4\\times 10^{-4} (Phinney, 1992), m_{\\rm PSR}=1.45\\,{\\rm M}_{\\odot} and m_{\\rm WD}=0.281\\,{\\rm M}_{\\odot} (Tauris & Savonije, 1999). The blue lines depict the evolution of eccentricity while the black lines the evolution of orbital period. Solid, dotted and dashed lines represent calculations for disk masses of 1.5\\times 10^{-4}, 10^{-5} and 10^{-3}\\,{\\rm M}_{\\odot} respectively. dence between maximum lifetime and orbital period would impact the relative fraction of eccentric MSPs and the critical orbital period for the transition from circular to eccentric systems. A final point of caution is the model describing the interaction with the CB disk. In particular, a feature of the prescription adopted here is the small growth in eccentricity at the limit e\\to 0, arising because the central cavity of the disk is circular. However, recent high-resolution shock capturing simulations (e.g., Shi et al., 2012; Noble et al., 2012; D'Orazio Haiman & MacFadyen, 2013) suggest that the central cavity may be highly eccentric, even for equal-mass binaries. This would cause eccentricity pumping even for the most circular binaries and remove the dependence to the distribution of initial eccentricities.
+
+## 4. Summary
+
+In this Letter, I demonstrate that eccentric MSPs with He WD companions can form through the interaction of the binary with a CB disk fed by matter escaping the WD during hydrogen-flash episodes. Under this hypothesis, the recently discovered MSPs with e\\simeq 0.01-0.13 require a CB disk interacting with the binary over 10^{4}-10^{5} yr, for the typical mass loss (\\sim 1-9\\times 10^{-4} M{}_{\\odot}) expected during the flash episodes. Based on the MC simulation, conducted here as a proof of concept, the CB disk scenario makes the following predictions:
+
+1. The companions of eccentric MSPs should be He WDs that follow the P_{\\rm b}-m_{\\rm WD} relation for LMXB evolution.
+
+2. Both MSP masses and systemic velocities should closely resemble those of circular binary MSPs.
+
+3. The maximum P_{\\rm b} at which eccentric MSPs can be found should correspond to the maximum critical He WD mass for the occurrence of flashes.
+
+4. There should be a maximum value for the eccentricity, determined primarily by the (product of) CB disk mass and lifetime.
+
+5. Small eccentricities may still exist within the period gap, but preferably for binaries hosting highly energetic MSPs and/or high photo-evaporation efficiencies.
+
+As some of these predictions depend sensitively on underlying assumptions that are loosely constrained by observations, a better sampling of the binary MSP population will provide valuable insights on the scenario and its parameters.
+
+I am grateful to Thomas Tauris, Paulo Freire and Robert Izzard for helpful discussions related to this work. I also thank the anonymous referees for their useful suggestions. The Dunlap Institute is funded by an endowment established by the David Dunlap family and the University of Toronto. This research was funded by the European Research Council Grant BEACON, under contract no. 279702 (PI: Paulo Freire). I have made extensive use of NASA's Astrophysics Data System.
+
+All data and source code can be made available upon request.
+
+Figure 3.— Eccentricities of Galactic field binary MSPs as a function of their orbital periods (data taken from Manchester et al., 2005; Deneva et al., 2013; Barr et al., 2013; Edwards & Bailes, 2001; Bailes, 2010). The dark blue points are the results of the MC simulation based on the CB disk scenario (see the text). Black points show the distribution of eccentricities expected from Phinney (1992).
+
+* () Barr, E. D., Champion, D. J., Kramer, M., et al. 2013, MNRAS, 435, 2234
+
+* () Bhattacharya, D., & van den Heuvel, E. P. J. 1991, Phys. Rev. D, 203, 1
+
+* () Burderi, L., D'Antona, F., & Burgay, M. 2002, ApJ, 574, 325
+
+* () Camilo, E. 1995, Millisecond Pulsar Searches, ed. A. Alpar, U. Kiziloughu, & J. van Paradis (Dordrecht: Kluwer), 243-257
+
+* () Champion, D. J., Ransom, S. M., Lazarus, P., et al. 2008, Science, 320, 1309
+
+* () Chen, H.-L., Chen, X., Tauris, T. M., & Han, Z. 2013, ApJ, 775, 27
+
+* () Chesneau, O. 2013, in Lecture Notes in Physics Series, Vol. 857, Lecture Notes in Physics, Berlin Springer Verlag, ed. J.-P. Rozelot & C.. Neiner, 239
+
+* () D'Antona, F., Ventura, P., Burderi, L., et al. 2006, ApJ, 640, 950
+
+* () D'Orazio, D. J., Haiman, Z. & MacFadyen, A. 2013, MNRAS, 436, 2997
+
+* () Deneva, J. S., Stovall, K., McLaughlin, M. A., et al. 2013, ApJ, 775, 51
+
+* () Dermine, T., Tzarard, R. G., Jorissen, A., & Van Winckel, H. 2013, A&A, 551, A50
+
+* () Dessart, L., Burrows, A., Ott, C. D., et al. 2006, ApJ, 644, 1063
+
+* () Edwards, R. T., & Bailes, M. 2001, ApJ, 553, 801
+
+* () Freire, P. C. C., & Tauris, T. M. 2014, MNRAS, 438, L86
+
+* () Freire, P. C. C., Bassa, C. G., Wex, N., et al. 2011, MNRAS, 412, 2763
+
+* () Guillemot, L., & Tauris, T. M. 2014, MNRAS, 439, 2033
+
+* () Istrate, A., Tauris, T., & Langer, N. 2014, A&A, 571, 13
+
+* () Istrate, A., Tauris, T., Langer, N., & Antoniadis, J. 2014, A&A 571, L3, 6
+
+* () Kitaura, F. S., Janka, H.-T., & Hillebrandt, W. 2006, A&A, 450, 345
+
+* () Lubow, S. H., & Artymowicz, P. 1996, in NATO ASIC Proc. 477: Evolutionary Processes in Binary Stars, ed. R. A. M. J. Wijers, M. B. Davies, & C. A. Tout, 53
+
+* () Lubow, S. H., & Artymowicz, P. 2000, Protostars and Planets IV, 731
+
+* () Manchester, R. N., Hobbs, G. B., Teoh, A., & Hobbs, M. 2005, AJ, 129, 1993
+
+* () Noble, S. C., Mundim, B. C., Nakano, Krolik, J. H., Campanelli, M., Zlochower, Y. & Yunes, N. 2012, ApJ, 755, 51
+
+* () Owen, J. E., Clarke, C. J., & Ercolano, B. 2012, MNRAS, 422, 1880
+
+* () Paxton, B., Bildsten, L., Dotter, A., et al. 2011, ApJS, 192, 3
+
+* () Paxton, B., Cantiello, M., Arras, P., et al. 2013, ApJS, 208, 4
+
+* () Phinney, E. S. 1992, Phil. Trans. Phys. Sc. & Eng., 341, 39
+
+* () Portegies Zwart, S., van den Heuvel, E. P. J., van Leeuwen, J., & Nelemans, G. 2011, ApJ, 734, 55
+
+* () Savonio, G. J. 1987, Nature, 325, 416
+
+* () Shi, J.-M., Krolik, J. H., Lubow, S. H. & Hawley, J. F. 2012, ApJ, 749, 118
+
+* () Tauris, T. M. 2012, Science, 335, 561
+
+* () Tauris, T. M., & Savonio, G. J. 1999, A&A, 350, 928
+
+* () Tauris, T. M., & van den Heuvel, E. P. J. 2006, Formation and evolution of compact stellar X-ray sources, ed. W. H. G. Lewin & M. van der Klis, 623-665
+
+* () Zahn, J. P. 1977, A&A, 57, 383

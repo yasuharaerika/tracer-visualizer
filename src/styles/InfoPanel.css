@@ -140,3 +140,19 @@
 .paper-link-btn:active {
   transform: translateY(0);
 }
+
+/* 链接按钮容器 */
+.link-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* GitHub 链接按钮 */
+.paper-link-btn.github-link {
+  background: #24292e;
+}
+
+.paper-link-btn.github-link:hover {
+  background: #3b434b;
+}

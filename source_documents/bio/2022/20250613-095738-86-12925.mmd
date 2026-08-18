@@ -1,0 +1,333 @@
+# High efficient production of plant flavonoids by microbial cell factories: Challenges and opportunities
+
+## abstract
+Plant flavonoids are secondary metabolites containing a benzo-γ-pyrone structure, which are widely present in plants and have a variety of physiological and pharmacological activities. However, current flavonoid production from plant extraction or chemical synthesis does not meet the requirements of green and sustainable development. Fortunately, microbial synthesis of flavonoids has shown the potential for large-scale production with the advantages of being controllable and environmentally friendly, and a variety of microorganisms have been developed as microbial cell factories (MCFs) to synthesize plant flavonoids owing to the feasibility of genetic manipulations. However, most of MCFs have not yet been commercialized and industrialized because of the challenges posed by unbalanced metabolic flux among various pathways and conflict between cell growth and production. Here, strategies for coping with the challenges are summarized in terms of enzymes, pathways, metabolic networks, host cells. And combined with protein structure prediction, de novo protein design, artificial intelligence (AI), biocatalytic retrosynthesis, and intelligent stress resistance, it provides new insights for the high efficient production of plant flavonoids and other plant natural products in MCFs.
+
+a Key Laboratory for Green Processing of Chemical Engineering of Xinjiang Bingtuan, School of Chemistry and Chemical Engineering, Shihezi University, Shihezi, 832003,   
+PR China   
+b Key Lab for Industrial Biocatalysis, Ministry of Education, Department of Chemical Engineering, Tsinghua University, Beijing, 100084, PR China   
+c Key Laboratory of Medical Molecule Science and Pharmaceutics Engineering, Ministry of Industry and Information Technology, Institute of Biochemical Engineering,   
+School of Chemistry and Chemical Engineering, Beijing Institute of Technology, Beijing, 100081, PR China
+## A R T I C L E  I N F O
+Keywords:   
+Plant flavonoids   
+Microbial cell factories (MCFs)   
+Metabolic balance   
+Artificial intelligence
+## A B S T R A C T
+Plant flavonoids are secondary metabolites containing a benzo- $\cdot\gamma$ -pyrone structure, which are widely present in plants and have a variety of physiological and pharmacological activities. However, current flavonoid production from plant extraction or chemical synthesis does not meet the requirements of green and sustainable develop­ ment. Fortunately, microbial synthesis of flavonoids has shown the potential for large-scale production with the advantages of being controllable and environmentally friendly, and a variety of microorganisms have been developed as microbial cell factories (MCFs) to synthesize plant flavonoids owing to the feasibility of genetic manipulations. However, most of MCFs have not yet been commercialized and industrialized because of the challenges posed by unbalanced metabolic flux among various pathways and conflict between cell growth and production. Here, strategies for coping with the challenges are summarized in terms of enzymes, pathways, metabolic networks, host cells. And combined with protein structure prediction, de novo protein design, artificial intelligence (AI), biocatalytic retrosynthesis, and intelligent stress resistance, it provides new insights for the high efficient production of plant flavonoids and other plant natural products in MCFs.
+## 1. Introduction
+Plant flavonoids are a type of secondary metabolite widely found in plants, with antioxidant (Yao et al., 2004), anti-inflammatory, anti-­ cancer (Hai et al., 2010; Middleton et al., 2000; Raffa et al., 2017), and anticoagulation properties (Lin et al., 2013). Additionally, they play a role in the prevention and treatment of cardiovascular, cerebrovascular diseases (Rice-Evans et al., 1996), obesity, and diabetes (Bedekar et al., 2010; Chemler et al., 2007; Leonard et al., 2008), making them useful in the production of medicine, cosmetics, and food (Can Karaca et al., 2015; Lam and Nickerson, 2013; McClements et al., 2017; Sun et al., 2019). However, the current methods for obtaining flavonoids include plant extraction or chemical synthesis. The disadvantages of plant extraction of flavonoids include high production cost, high energy consumption depending on low flavonoid content, and the composition of plant cultivation being heavily influenced by changes in climate. Chemical synthesis of flavonoids usually involves long reaction steps, harsh reaction conditions, and toxic chemical reagents, which make them unsuitable for the requirements of sustainable development and market supply of plant flavonoids.
+Fortunately, recent advances in omics technology and synthetic biology have greatly promoted the illustration of biosynthetic pathways and the mining of key enzymes for plant flavonoids. Many plant flavo­ noids such as naringenin, kaempferol, and liquiritigenin (Table 1) have been synthesized in microbial cell factories (MCFs). Although the flavonoid production approach is available, it still faces the challenges posed by unbalanced carbon flux among various pathways and conflict between cell growth and production (Fig. 2B), which seriously hampers their commercial production. Therefore, many novel strategies have been developed to continuously innovate the synthesis methods and yield of plant flavonoids. This review comprehensively elaborates on the challenges of flavonoid synthesis in MCFs. And it summarizes the stra­ tegies for coping with the challenges in terms of the mining and modi­ fication of key enzymes, construction and optimization of metabolic pathways, regulation and control of metabolic networks, and selection and design of host cells. Finally, a series of new approaches are discussed to mitigate these challenges by using protein structure prediction, de novo protein design, artificial intelligence (AI), biocatalytic retrosyn­ thesis, and intelligent stress resistance to provide new insights and op­ portunities for the high efficient production of plant flavonoids.
+## 2. Challenges for high efficient production of plant flavonoids in MCFs
+There are two primary challenges in metabolic engineering: the unbalanced metabolic flux among various metabolic pathways and the conflict between cell growth and production (Fig. 2 B). Although the biosynthetic pathway of plant flavonoids has been intensively studied (Fig. 1) and many MCFs have been successfully constructed to synthesize plant flavonoids (Table 1), they still face the same challenges in indus­ trial production and application.
+## 2.1. Unbalanced metabolic flux in MCFs
+One of the main challenges in using MCFs to synthesize plant fla­ vonoids is the unbalanced metabolic flux, resulting in low synthesis ef­ ficiency and low yield. As shown in Table 1, the production of most plant flavonoids is limited to the mg level, hampering the industrial exploi­ tation of these strains. For example, liquiritigenin (Yan et al., 2007) and silybin (Yang et al., 2020b) were only synthesized at final titers of 17.1 $\mathrm{mg/L}$ and $104.9\mathrm{mg/L}$ and did not meet the requirements of industrial production. The main reasons for these challenges are the lack of en­ zymes with high efficiency catalytic activity or high specificity in metabolic pathways, suggesting that a larger metabolic flux is needed for the synthesis of plant flavonoids (Pandey et al., 2016) (Fig. 2A). The competitive pathways that shunt metabolic flux in MCFs are also the main reason for the unbalanced metabolic flux, such as the competition of malonyl coenzyme A (CoA) between the heterologous metabolic pathway and endogenous metabolic networks, resulting in low meta­ bolic flux for naringenin (Fowler et al., 2009)(Fig. 2A). The different hosts used for flavonoid production have different synthesis abilities, including membrane structure, protein production, and cofactor content (Delmulle et al., 2018; Marsafari et al., 2020). For example, Yarrowia lipolytica is considered an ideal host cell for the synthesis of various flavonoids because of its vigorous cell growth and high acetyl-CoA and malonyl-CoA flux (Muhammad et al., 2020). Therefore, the unbalanced metabolic flux in MCFs seriously hinders their industrial application.
+## 2.2. Conflict between cell growth and production in MCFs
+Another major challenge is the conflict between cell growth and production. The overexpression of heterologous or endogenous meta­ bolic pathways and the accumulation of heterologous proteins, pathway intermediates, and products affect the normal metabolic process of MCFs, leading to metabolic burden and disorder (Gao et al., 2021) (Fig. 2C). For example, the synthesis of naringenin (Santos et al., 2011), kaempferol (Rodriguez et al., 2017), and afzelechin (Jones et al., 2017) requires the overexpression of heterologous genes in Escherichia coli and Saccharomyces cerevisiae, leading to cell growth retardation and low productivity. In addition, as shown in Table 1, the synthesis of most plant flavonoids in MCFs requires exogenous addition of $p$ -coumaric acid, phenylalanine, or tyrosine (Leonard et al., 2005, 2006). Their exogenous addition also affected the normal metabolism and growth of MCFs, and they are expensive compared with commonly used fermen­ tation substrates (glucose), which increases the production cost and does not meet the requirements of industrial production. Although the MCFs that could synthesize the $p$ -coumaric acid (Liu et al., 2019), phenylala­ nine (Rodriguez et al., 2015), or tyrosine (Liu et al., 2019) from glucose were constructed, they all required the overexpression of endogenous metabolic pathways, leading to growth retardation and low production efficiency of MCFs (Fig. 2C). Therefore, the conflict between cell growth and production in MCFs severely restricts their industrial application.
+## 3. Strategies for solving these challenges
+To cope with the challenges posed by unbalanced metabolic flux among various metabolic pathways and conflict between cell growth and production, a variety of strategies have been adopted in terms of enzymes, pathways, metabolic networks, and host cells.
+## 3.1. Mining and modifying of key enzymes
+The exploitation of highly active and highly specific enzymes through function-based gene mining or sequence-based protein design is a powerful tool used to keep the balance of metabolic flux among various metabolic pathways in flavonoid production. Omics technology, such as RNA-seq, provides an opportunity to facilitate potential func­ tional prediction by data integration. The genomes or transcriptomes of plants that are rich in specific flavonoids (Song et al., 2017)have been sequenced and analyzed. Flavonoid biosynthetic enzymes for flavonoid synthesis in such plants should be more efficient and highly specific (Fig. 3). For example, Scutellaria baicalensis Georgi, a plant whose active ingredients are mainly flavonoids, such as baicalin or wogonin (Xu et al., 2020b), has been analyzed for its genome and transcriptome. Based on the analysis of transcriptome sequencing, gene expression, and evolu­ tionary trees, a flavone 6-hydroxylase (SbCYP82D1.1) was obtained with an apparent $K_{\mathrm{M}}$ value of $0.121~\upmu\mathrm{M}$ and apparent maximal velocity value of 733.047 pkat $\mathbf{m}{\mathbf{g}}^{-1}$ protein, converting chrysin at high effi­ ciency (Zhao et al., 2018). The evolutionary mechanism of effective components in Scutellaria baicalensis Georgi was also analyzed and found that the candidate gene PFOMT5 (O-methyltransferase of phenyl­ propanoid and flavonoid) was the most effective catalyst for the biosynthesis of wogonin, with an apparent $K_{\mathrm{M}}$ of $4.58\upmu\mathrm{M}$ and a maximal velocity of 10.34 nkat $\mathrm{mg^{-1}}$ . In contrast, PFOMT1 and PFOMT2 had lower activity on norwogonin because of their higher $K_{\mathrm{M}}$ values (29.08 $\upmu\mathrm{M}$ and $11.98~\upmu\mathrm{M}$ , respectively) for norwogonin and their lower maximal velocities (8.07 nkat $\mathrm{mg^{-1}}$ and 7.75 nkat $\mathrm{mg^{-1}}$ , respectively) (Zhao et al., 2019). In addition, protein engineering is the most widely used method to improve enzyme activity and specificity (Fig. 3). Based on the relationship between the structures of protein molecules and their biological functions, chemical, physical, and molecular biology methods, the rational or irrational design of inefficient proteins is an effective method to improve their activity and specificity. For example, a mutant combination of $S m\mathrm{{F}3^{\prime}\mathrm{{H}^{D285N}}}$ (flavonoid $3^{\prime}$ -hydroxylase from Silybum marianum (L) Gaertn) $/S m C P\mathrm{R}^{\mathrm{I453V}}$ (cytochrome P450 reductase from Silybum marianum (L) Gaertn) was obtained using directional evolution to improve the activity and specificity of $S m\mathrm{{F3^{\prime}H}}/S m\mathrm{{CPR}}$ . Combined with promoter optimization and fermentation optimization, the (2S)-eriodictyol titer was improved to $3.3\mathrm{g/L}$ , which was the highest titer currently reported (Gao et al., 2020b). In addition, analyzing the crystal structures of the enzymes and rational design are also important for building efficient enzymes. For example, 15 previously unreported polyketide (PK) molecules were generated by exploring the substrate promiscuity of the wild-type stilbene synthase-like (STS) enzyme and all mutants using unnatural substrates (Bhan et al., 2015a). Meanwhile, a
+Host strain Substrate   
+B. subtilis Genistein   
+C. glutamicum Caffeic acid   
+C. glutamicum Catechin   
+E. coli Glucose   
+E. coli $p$ -Coumaric acid   
+E. coli Glucose   
+E. coli Tyrosine   
+E. coli Tyrosine   
+E. coli Afzelechin   
+E. coli Naringenin   
+E. coli Caffeic acid   
+E. coli Glucose   
+E. coli L-tyrosine   
+E. coli $p$ -Coumaric acid   
+E. coli $p$ -Coumaric acid   
+E. coli Glucose   
+E. coli Phenylalanine   
+E. coli Tyrosine   
+E. coli $p$ -Coumaric acid   
+E. coli Apigenin   
+E. coli Luteolin   
+E. coli Naringenin   
+E. coli Liquiritigenin   
+E. coli Naringenin   
+E. coli Genistein   
+E. coli Daidzein   
+E. coli Genistein   
+E. coli Genistein   
+E. coli Genistein   
+E. coli Genistein   
+E. coli Tyrosine   
+E. coli Taxifolin   
+E. coli Glucose   
+E. coli Glucose   
+E. coli Eriodictyol   
+E. coli Naringenin   
+E. coli Eriodictyol   
+E. coli Naringenin   
+E. coli Eriodictyol   
+E. coli Catechin   
+E. coli Catechin   
+E. coli Glucose $+\left(+\right)$ -catechin $^+$ tyrosine   
+E. coli Glucose $+\left(+\right)$ - catechin   
+E. coli Tyrosine   
+E. coli Glucose   
+E. coli Phenylalanine   
+E. coli Tyrosine   
+E. coli Phenylalanine   
+E. coli Tyrosine   
+E. coli Phenylalanine   
+E. coli Glucose $^+$ Tyrosine   
+E. coli Glucose   
+E. coli Glucose   
+E. coli Glucose   
+E. coli Glucose   
+E. coli Glucose   
+E. coli Cumaric acid   
+E. coli Eriodictyol   
+E. coli Caffeic acid   
+E. coli Cumaric acid   
+E. coli $p$ -Coumaric acid   
+E. coli co-culture $p$ -Coumaric acid   
+L. lactis Tea   
+P. pastoris Genistein   
+P. pastoris Genistein   
+P. pastoris Daidzein   
+P. pastoris Daidzein   
+P. pastoris Daidzein   
+S. albus Glucose   
+S. albus Glucose   
+S. cerevisiae $p$ -Coumaric acid   
+S. cerevisiae Glucose   
+S. cerevisiae Glucose   
+S. cerevisiae Naringenin   
+Product   
+Orobol   
+Eriodictyol   
+Cyanidin 3-O-glucoside   
+Naringenin   
+Naringenin   
+Pinocembrin   
+Naringenin   
+Naringenin   
+Catechin   
+Eriodictyol   
+Eriodictyol   
+Eriodictyol   
+Eriodictyol   
+Apigenin   
+Apigenin   
+Genkwanin   
+Baicalein   
+Scutellarein   
+Apigetrin   
+Isovitexin   
+Isoorientin   
+Genistein   
+Daidzein   
+Genistein   
+$4^{\circ}$ -O-methyl-genistein   
+4’-O-methyl-daidzein   
+5,7,4’ -Trihydroxy-30- methoxyisoflflavone   
+5,7,3’ -Trihydroxy-40- methoxyisoflflavone   
+Genistein 7-O-glucoside   
+Biochanin A 7-O-glucoside   
+Fisetin   
+Silybin and isosilybin   
+Pelargonidin 3-O-glucoside   
+Afzelechin   
+Catechin   
+Pelargonidin 3-O-glucoside   
+Cyanidin 3-O-glucoside   
+Pelargonidin 3-O-glucoside   
+Cyanidin 3-O-glucoside   
+Cyanidin 3-O-glucoside   
+Peonidin 3-O-glucoside   
+pyranocyanidin-3-O-glucoside-phenol   
+pyranocyanidin-3-O-glucoside-catechol   
+Naringenin   
+Naringenin   
+Pinocembrin   
+Apigenin   
+5, 7-dihydroxyflavone   
+Kaempferol   
+Curcumin   
+Eriodictyol   
+4 - Coumaric acid   
+Caffeic acid   
+Ferulic acid   
+4- O-glucosyl resveratrol   
+Sakuranetin   
+Resveratrol   
+Catechin   
+Piceatannol   
+7-O-methyl carnolines   
+Liquiritigenin   
+Isoliquiritigenin   
+Anthocyanins   
+Orobol   
+Orobol   
+8-Hydroxydaidzein   
+3’ -Hydroxydaidzein   
+6-Hydroxydaidzein   
+Luteolin   
+Quercetin   
+Naringenin   
+Naringenin   
+Naringenin   
+Eriodictyol
+novel C17 resorcylic acid was synthesized by a structure-guided Vitis vinifera stilbene synthase (STS) mutant, suggesting an easy-to-employ platform for precursor-directed biosynthesis and identification of un­ natural polyketides by structure-guided mutation of STS-like enzymes (Bhan et al., 2015b). Therefore, highly active and highly specific en­ zymes can be obtained by omics data analysis and protein engineering, resulting in the metabolic flux no longer being dispersed, and instead a large amount of metabolic flux directed towards the synthesis of the target products, solving the problem of unbalanced metabolic flux among various pathways.
+## 3.2. Building of efficient metabolic pathways
+With the development of promoter engineering, cofactor engineer­ ing, and coenzyme engineering, the reconstruction of an efficient metabolic pathway and remodeled process engineering have provided new opportunities to increase metabolic flux and produce flavonoids with high titers (Fig. 4). Promoter engineering is a popular method for coordinating the expression of various enzymes and redox systems. For example, by replacing the IPTG-inducible promoter (pT7) with the constitutive gap promoter (pGAP) and allowing the more efficient genes to be expressed under the control of a gap promoter, the addition of inducers was avoided and the gene could be transcribed together as a polycistronic mRNA strand and translated together in the cytoplasm to form a protein complex. This resulted in a final improved titer of $2.3\mathrm{g/L}$ resveratrol in $E.$ . coli (Lim et al., 2011). Additionally, a promoter library had been constructed and screened for the best promoter to increase the naringenin yield to $1.21{\ g}/\mathrm{L}$ , and the (2S)-eriodyctiol titer was improved to $3.3\mathrm{g/L}$ by using a promoter to regulate the redox system (Gao et al., 2020b, 2020c). In addition, cofactor and coenzyme engineering (Fig. 4) were used to provide an appropriate catalytic environment for key en­ zymes in a metabolic pathway. Based on this, two different model ob­ jectives were used to identify possible genotypes that exhibited either improved overall NADPH production or an improved flux through an artificial reaction coupling NADPH yield to biomass, and provided suf­ ficient cofactors for the dihydroflavonol 4-reductase and leucoantho­ cyanidin reductase. The best-engineered strain accumulated up to 817 $\mathrm{mg/L}$ of leucocyanidin and $39~\mathrm{mg/L}$ $(+)$ -catechin, a 4-fold and 2-fold increase, respectively, compared to the wild-type control (Chemler et al., 2010). In addition, indium phosphide nanomaterials combined with S. cerevisiae to construct a biological hybrid system increased the ratio of $\mathrm{NADPH/NADP^{+}}$ to 87.1 under light conditions and provided sufficient cofactors for the reduction of 3-dehydosashikimic acid to shikimic acid (Guo et al., 2018). Many coenzymes in the metabolic pathway have been identified. For example, two chalcone isomerases (CHIL1 and CHIL2) did not have catalytic activity but participated in and regulated the biosynthesis of flavanol in hops, and it was found that CHIL2 could interact with chalcone synthase (CHS) and membrane located isopentenyl transferase (IPT) in the flavanol synthesis pathway, thereby improving their activities (Ban et al., 2018). In conclusion, promoter engineering, redox adaptation, and matching sufficient co­ factors or appropriate coenzymes for key enzymes in a pathway can coordinate the relationship among key enzymes and maintain a good catalytic environment, solving the problem of unbalanced metabolic flux.
+## 3.3. Coordinating of the conflicts
+The mathematical model and dynamic regulation are effective stra­ tegies for coordinating major conflicts in MCFs. Many researchers have developed a genome-scale metabolic network model, stoichiometric model, and dynamic regulation to increase the supply of precursors and dynamically regulate the relationship between cell growth and pro­ duction (Fig. 5A). For example, an integrated computational and experimental approach was proposed to improve the intracellular availability of malonyl-CoA in E. coli, resulting in a $560\%$ increase in volumetric flavanone production $(474~\mathrm{mg/L})$ . Coupled with an evolu­ tionary search, it demonstrated the utility of a purely stoichiometric network to predict improved $E$ . coli genotypes that more effectively channel carbon flux toward malonyl coenzyme A (CoA) and the specific flavanone production. Finally, the optimally engineered strains were increased by over $660\%$ for naringenin (Fowler et al., 2009). Dynamic regulation was mainly used to coordinate the conflict between cell growth and production in MCFs because of the overexpression of het­ erologous or endogenous metabolic pathways and the accumulation of heterologous proteins, pathway intermediates, and products (Fig. 5B).
+This method allows cells to dynamically sense and process specific sig­ nals by designing and constructing gene pathway units and adaptively adjusting them according to the changes in the signals to achieve the best state of product synthesis or target system (Cress et al., 2015). It has been applied in many studies and has achieved a significant increase in the yield of target products (Table 2) (Gao et al., 2019; Zhou et al., 2019a). For example, lipogenic negative autoregulation with metabolite addiction was built to redistribute carbon flux and improve strain sta­ bility in Y. lipolytica by CRISPRi, fatty acid induction promoter, and flavonoid induction heterozygous promoter, resulting in a flavonoid-producing phenotype that was sustained for up to 320 gen­ erations (Lv et al., 2020). In addition, to maintain the balance of metabolic flux and better coordinate the relationship between cell growth and the high product yield, a quorum-sensing (QS)-based regu­ lation tool for independently regulating multiple metabolic pathways was developed (Dinh and Prather, 2019), combining components of the lux and esa QS systems to simultaneously and dynamically upregulate and downregulate the expression of two sets of genes and successfully address challenges in both the naringenin and salicylic acid synthesis pathways. Overall, mathematical model and dynamic regulation are powerful tools to coordinate the conflict among various metabolic pathways and the conflict between cell growth and production in MCFs.
+## 3.4. Selection and collaboration of host cells
+Selecting an efficient host cell with efficient and specific protein production or metabolic pathways that can synthesize plant flavonoids has proven to be an effective strategy to cope with these challenges (Table 1)(Delmulle et al., 2018; Marsafari et al., 2020). Among them, Y. lipolytica was used as the main host cell to synthesize various natural products, including polyunsaturated fatty acids, flavonoids, and isoprene, because of its vigorous cell growth and high acetyl-CoA and malonyl-CoA flux. Moreover, as an oil-producing yeast, it can synthesize a large number of liposomes and have rich membrane structures and a lipophilic environment, providing an ideal environment for the regio­ selectivity and stereoselectivity of many plant-derived cytochrome P450 enzymes (Muhammad et al., 2020). Taking advantage of the powerful characteristics of Y. lipolytica, liquiritigenin was synthesized at a final titer of $62.4~\mathrm{mg/L}$ (Akram et al., 2021). In addition, S. cerevisiae is generally recognized as safe, has a clear genetic background, and is widely used in the production of plant flavonoids. For example, based on the co-expression of multiple hydroxylases in S. cerevisiae, $246.4~\mathrm{mg/L}$ dihydromyricetin with a total flavonoid of $528.9\mathrm{mg/L}$ was obtained in a $^{5\mathrm{~L~}}$ bioreactor (Li et al., 2020) and the de novo synthesis of baicalein, baicalin, norwogonin, wogonin, isowogonin and moslosooflavone in S. cerevisiae was realized by establishing the production platform of chrysin (Liu et al., 2020). Similarly, many other excellent hosts have been selected to synthesize plant flavonoids (Table 1). Meanwhile, collaboration between many strains (modular co-culture engineering) has been used to reduce the metabolic burden of cells and the conflict between cell growth and production, and cope with the challenges of the unbalanced metabolic flux among various pathways. Modular co-culture engineering is a method that allows multiple species of microbes to grow together to facilitate a divide-and-conquer approach for chemical biosynthesis and to monitor and control the population dynamics of each strain module, increasing the metabolic flux toward the synthesis
+## Efficient metabolic pathway
+of the target products (Fig. 6)(Jones and Wang, 2018; Wang et al., 2020a). It has been widely used in the MCFs of different organisms (Table 3). For example, a co-culture system of $E$ . coli was constructed by segmenting the long metabolic pathway in different strains and opti­ mizing each strain module, reducing the metabolic burden of host cells and ensuring the balance of metabolic flux (Wang et al., 2020a). Using a co-culture system of E. coli, bisdemethoxycurcumin (Fang et al., 2018), anthocyanins (Jones et al., 2017), pyranoanthocyanins (Akdemir et al., 2019b), and sakuranetin (Wang et al., 2020b) were synthesized and a screening method based on high-throughput flow cytometry was developed for the identification of naringenin-overproducing E. coli strains (Xiu et al., 2017). In addition, a S. cerevisiae co-culture platform (Du et al., 2020)suitable for the production of various flavonoids was designed to reduce the metabolic burden of host cells (Jones et al., 2016b)and promote the production of other plant flavonoids with more complex structures. Therefore, the selection and collaboration of host cells are important for improving the catalytic activity of key enzymes, reducing metabolic burden to balance metabolic flux, and coordinating the conflict between cell growth and production.
+## 4. Artificial intelligence creates opportunities for solving these challenges
+With the emergence of big data, an increasing number of computer tools are being developed to cope with various challenges in MCFs. AlphaFold2, de novo protein design, biocatalytic retrosynthesis, artificial intelligence, and intelligent stress resistance have set off a wave of research on biological big data, providing more opportunities for the high efficient production of plant flavonoids in MCFs.
+## 4.1. Structure prediction and de novo protein design
+Precise protein structure (Callaway, 2020) is the foundation of pro­ tein engineering, and currently, AlphaFold2 (Tunyasuvunakool et al., 2021) is the hottest tool for protein structure prediction. The DeepMind team’s AlphaFold2 beat a group of competitors in CASP14 and reached an unprecedented level of accuracy in protein structure prediction. The solution of the 50-year-old problem of protein folding was described as a "revolutionary" breakthrough in structural biology and a milestone in protein research. The breakthrough research of AlphaFold2 would pave the way for protein engineering. Moreover, de novo protein design can completely design new proteins according to the needs of the research. Designing proteins with specific spatial structures and expected func­ tions has become a new key technology in the process of protein function research. In recent years, considerable progress has been made in designing stable proteins based on the principle of protein folding to the lowest free energy state. These efforts were mainly focused on maxi­ mizing the free energy gap between the desired structure and all other structures, producing a variety of unique stable proteins (Huang et al., 2014, 2016). David Baker’s team (Koepnick et al., 2019) optimized the protein design process, enabling even the non-professional researchers to accurately design a new protein structure and making protein design more widely used. Therefore, according to the existing calculation methods and tools, designing a specific functional protein and predicting the crystal structure of the protein will be an important method for improving the catalytic activity and specificity of enzymes and analyzing the catalytic mechanism, providing new opportunities for the high efficient synthesis of plant flavonoids in MCFs.
+## 4.2. Biocatalytic retrosynthesis and artificial intelligence
+Since the end of the 1960s, the pioneering work of Professor E. J. Corey and his collaborators (Corey et al., 1985) laid the foundation for computational retrosynthetic analysis. By applying the same basic principles, computer algorithms can greatly improve the speed and ef­ ficiency. With the rise of artificial intelligence, new machine learning technologies are redefining the process of retrosynthetic planning, and many retrosynthetic algorithms based on deep learning are emerging. In the framework of Bayesian reasoning and calculation, high-precision forward predictions can be made for the combination of given re­ actants through a training of a deep neural network (Guo et al., 2020). Using the Bayesian conditional probability theorem and inverting the forward model into the reverse model, the synthesis route from specific molecules to commercial compounds can be found (Guo et al., 2020). Through manual mining of more than 250,000 publications, more than 100,000 biochemical reactions, routes, and biosynthesis data links were integrated to develop the RxnFinder (Hu et al., 2011) online tool that met the query of most biochemical reactions and saved the time and energy of manual searching. However, these algorithms rely on the integration and manual mining of the database and require considerable manpower and material resources to be updated. The database is still relatively small, especially for complex natural products, resulting in inaccurate predictions. In recent years, new artificial intelligence (AI) technologies (Lin et al., 2020) have emerged in the fields of chemistry and pharmacy and have been gradually used to predict chemical reac­ tion products and perform retrosynthetic analysis, which is expected to break through the bottleneck of looking for efficient enzymes.
+## 4.3. Intelligent stress resistance
+The biological fermentation process is a key and difficult point to realize the industrialization of producing plant flavonoids by MCFs. However, high cost and high energy consumption have gradually become the characteristics of the industry owing to the factors of heat production, pH change, enzyme catalysis, and raw material products. So far, the Bayesian modeling approach (Li et al., 2021) and synthetic biology techniques (Jia et al., 2016; Xu et al., 2018, 2020a) have been used to enhance MCFs’ self-defense systems and design and integrate reprogrammed MCFs. For example, a novel approach was developed to incorporate temperature dependence into an enzyme-constrained GEM (ecGEM) with the resulting model termed enzyme and temperature-constrained GEM (etcGEM)(S´anchez et al., 2017). The approach combines the following steps: (i) etcGEM construction, (ii) flux balance analysis (FBA), and (iii) Bayesian statistical learning. Bayesian modeling greatly improved the etcGEM performance by reducing the parameter statistical uncertainties. Squalene epoxidase (ERG1) was predicted to be the most rate-limiting. By replacing this key enzyme with a homologue of a thermotolerant yeast strain, a thermotolerant strain that outperforms the wild type was obtained, demonstrating the key role of sterol metabolism in yeast thermosensitivity (Li et al., 2021). How­ ever, research in this field is still in its initial stage and has not been widely used in all MCFs. The signal transduction modes of multiple stress factors in the fermentation and production of plant flavonoids are not completely clear. This is an important reason for restricting the development of stress signal transduction. Therefore, to understand the metabolic regulation of MCFs, it is important to study the mechanism of stress resistance at the molecular level and to clarify the molecular mechanism of blocking the cascade conduction of MCFs stress. This will improve the resistance of MCFs in multiple pressure environments, greatly improve the production efficiency, reduce fermentation energy consumption and production cost, and realize the efficiency of artificial biological response systems.
+## 5. Conclusion
+In this paper, two primary challenges are summarized in MCFs: the unbalanced carbon flux among various pathways and the conflict be­ tween growth and production. The main reasons for these two chal­ lenges were analyzed, including lack of enzymes with high activity, high specificity, and efficient metabolic pathways; conflict between the het­ erologous metabolic pathway and the endogenous metabolic network; metabolic burden; overexpression of heterologous or endogenous metabolic pathways and accumulation of heterologous proteins, pathway intermediates, and product; and host with low synthesis abil­ ity. In addition, the strategies developed in recent years to cope with the challenges were summarized in terms of enzymes, pathways, metabolic networks, and host cells, including genome and transcriptome data analysis, protein engineering, promoter engineering, cofactor engi­ neering, coenzyme engineering, metabolic network model, stoichio­ metric model, dynamic regulation, selection of the host cells, and modular co-culture engineering. Finally, the opportunities provided by protein structure prediction, de novo protein design, artificial intelli­ gence (AI), biocatalytic retrosynthesis, and intelligent stress resistance were explored, providing new insights into the high efficient production of plant flavonoids and other natural plant products in MCFs.
+## CRediT authorship contribution statement
+## Declaration of competing interest
+This project was supported by grants from the National Key Research and Development Program of China (No.2018YFA0901800), the Na­ tional Natural Science Foundation of China (No.21736002, No.22108154) and the Natural Science Foundation of Beijing(M21010).
+Abari, A.H., Tayebi, M., 2019. Bioconversion of genistein to orobol by Bacillus subtilis spore displayed tyrosinase and monitoring the anticancer effects of orobol on MCF-7 breast cancer cells. Biotechnol. Bioproc. Eng. 24, 507–512.   
+Akdemir, H., Silva, A., Zha, J., Zagorevski, D.V., Koffas, M.A.G., 2019a. Production of pyranoanthocyanins using Escherichia coli co-cultures. Metab. Eng. 55, 290–298.   
+Akdemir, H., Silva, A., Zha, J., Zagorevski, D.V., Koffas, M.A. J.M.e., 2019b. Production of Pyranoanthocyanins Using Escherichia coli Co-cultures, 55, pp. 290–298.   
+Akram, M., Rasool, A., An, T., Feng, X.D., Li, C., 2021. Metabolic engineering of Yarrowia lipolytica for liquiritigenin production. Chem. Eng. Sci. 230, 12.   
+Amor, I.L., Hehn, A., Guedone, E., Ghedira, K., Engasser, J.M., Chekir-Ghedrira, L., Ghoul, M., 2010. Biotransformation of naringenin to eriodictyol by Saccharomyces cerevisiea functionally expressing flavonoid $_{3}'$ hydroxylase. Nat. Product Commun. 5, 1893–1898.   
+Ban, Z.N., Qin, H., Mitchell, A.J., Liu, B.X., Zhang, F.X., Weng, J.K., Dixon, R.A., Wang, G.D., 2018. Noncatalytic chalcone isomerase-fold proteins in Humulus lupulus are auxiliary components in prenylated flavonoid biosynthesis. Proc. Natl. Acad. Sci. U.S.A. 115, E5223–E5232.   
+Bedekar, A., Shah, K., Koffas, M.A., 2010. Natural products for type II diabetes treatment. Adv. Appl. Microbiol. 71, 21–73.   
+Bhan, N., Cress, B.F., Linhardt, R.J., Koffas, M.J.B., 2015a. Expanding the Chemical Space of Polyketides through Structure-Guided Mutagenesis of Vitis vinifera Stilbene Synthase, 115, pp. 136–143.   
+Bhan, N., Li, L., Cai, C., Xu, P., Linhardt, R.J., Koffas, M.A.J.P.S., 2015b. Enzymatic Formation of a Resorcylic Acid by Creating a Structure-guided Single-point Mutation in Stilbene Synthase, 24, pp. 167–173.   
+Callaway, E., 2020. ’It will change everything’: DeepMind’s AI makes gigantic leap in solving protein structures. Nature 588, 203–204.   
+Can Karaca, A., Low, N.H., Nickerson, M.T., 2015. Potential use of plant proteins in the microencapsulation of lipophilic materials in foods. Trends Food Sci. Technol. 42, 5–12.   
+Chang, T.-S., Chao, S.-Y., Chen, Y.-C., 2013. Production of ortho-hydroxydaidzein derivatives by a recombinant strain of Pichia pastoris harboring a cytochrome P450 fusion gene. Process Biochem. 48, 426–429.   
+Chemler, J.A., Fowler, Z.L., McHugh, K.P., Koffas, M.A. J.M.e., 2010. Improving NADPH Availability for Natural Product Biosynthesis in Escherichia coli by Metabolic Engineering, 12, pp. 96–104.   
+biotechnology Chemler, J.A., Lock, L.T., Koffas, M.A., Tzanakakis, E.S. J.A.m., 2007. Standardized Biosynthesis of Flavan-3-Ols with Effects on Pancreatic Beta-Cell Insulin Secretion, 77, pp. 797–807.   
+Chiang, C.M., Chang, Y.J., Wu, J.Y., Chang, T.S., 2017. Production and anti-melanoma activity of methoxyisoflavones from the biotransformation of genistein by two recombinant Escherichia coli strains. Molecules 22.   
+Corey, E.J., Long, A.K., Rubenstein, S.D., 1985. Computer-assisted analysis in organic synthesis. Science 228, 408–418.   
+Cotner, M., Zhan, J., Zhang, Z., 2021. A computational metabolic model for engineered production of resveratrol in Escherichia coli. ACS Synth. Biol.   
+Cress, B.F., Leitz, Q.D., Kim, D.C., Amore, T.D., Suzuki, J.Y., Linhardt, R.J., Koffas, M.A., 2017. CRISPRi-mediated metabolic engineering of E. coli for O-methylated anthocyanin production. Microb. Cell Factories 16, 10.   
+Cress, B.F., Trantas, E.A., Ververidis, F., Linhardt, R.J., Koffas, M.A., 2015. Sensitive cells: enabling tools for static and dynamic control of microbial metabolic pathways. Curr. Opin. Biotechnol. 36, 205–214.   
+Cui, H., Song, M.C., Ban, Y.H., Jun, S.Y., Kwon, A.S., Lee, J.Y., Yoon, Y.J., 2019. Highyield Production of Multiple O-Methylated Phenylpropanoids by the Engineered Escherichia coli–Streptomyces Cocultivation System. Microb. Cell Factories 18, 1–13.   
+Dae Hwan, K., Bong Gyu, K., Na Ri, J., 2009. Production of genistein from naringenin using Escherichia coli containing isoflavone synthase-cytochrome P450 reductase fusion protein. J. Microbiol. Biotechnol. 19, 1612–1616.   
+Delmulle, T., De Maeseneire, S.L., De Mey, M., 2018. Challenges in the microbial production of flavonoids. Phytochemistry Rev. 17, 229–247.   
+Ding, H.-Y., Chiang, C.-M., Tzeng, W.-M., Chang, T.-S., 2015. Identification of 3′- hydroxygenistein as a potent melanogenesis inhibitor from biotransformation of genistein by recombinant Pichia pastoris. Process Biochem. 50, 1614–1617.   
+Dinh, C.V., Prather, K.L., 2019. Development of an Autonomous and Bifunctional Quorum-Sensing Circuit for Metabolic Flux Control in Engineered Escherichia coli. Proc. Nat. Acad. Sci. 116, 25562–25568.   
+Du, Y., Yang, B., Yi, Z., Hu, L., Li, M., 2020. Engineering Saccharomyces cerevisiae coculture platform for the production of flavonoids. J. Agric. Food Chem. 68, 2146–2154.   
+Eichenberger, M., Hansson, A., Fischer, D., Dürr, L., Naesby, M., 2018. De novo biosynthesis of anthocyanins in Saccharomyces cerevisiae. FEMS Yeast Res. 18.   
+Fang, Z., Jones, J.A., Zhou, J., Koffas, M.A. J.B.j., 2018. Engineering Escherichia coli Cocultures for Production of Curcuminoids from Glucose, 13, p. 1700576.   
+Fowler, Z.L., Gikandi, W.W., Koffas, M.A., 2009. Increased malonyl coenzyme A biosynthesis by tuning the Escherichia coli metabolic network and its application to flavanone production. Appl. Environ. Microbiol. 75, 5831–5839.   
+Gao, C., Xu, P., Ye, C., Chen, X., Liu, L.J. T.i. m., 2019. Genetic Circuit-Assisted Smart Microbial Engineering, 27, pp. 1011–1024.   
+Gao, L., Wu, X., Xia, X., Jin, Z.J. M.b., 2021. Fine-tuning Ethanol Oxidation Pathway Enzymes and Cofactor PQQ Coordinates the Conflict between Fitness and Acetic Acid Production by Acetobacter Pasteurianus, 14, pp. 643–655.   
+Gao, S., Lyu, Y., Zeng, W., Du, G., Zhou, J., Chen, J., 2020a. Efficient biosynthesis of (2S)- Naringenin from $p$ -coumaric acid in Saccharomyces cerevisiae. J. Agric. Food Chem. 68, 1015–1021.   
+Gao, S., Xu, X., Zeng, W., Xu, S., Lyv, Y., Feng, Y., Kai, G., Zhou, J., Chen, J., 2020b. Efficient biosynthesis of (2S)-Eriodictyol from (2S)-Naringenin in Saccharomyces cerevisiae through a combination of promoter adjustment and directed evolution. ACS Synth. Biol. 9, 3288–3297.   
+Gao, S., Zhou, H., Zhou, J., Chen, J., 2020c. Promoter-library-based pathway optimization for efficient (2S)-Naringenin production from p-coumaric acid in Saccharomyces cerevisiae. J. Agric. Food Chem. 68, 6884–6891.   
+Guo, J., Su´astegui, M., Sakimoto, K.K., Moody, V.M., Xiao, G., Nocera, D.G., Joshi, N.S., 2018. Light-driven fine chemical production in yeast biohybrids. Science 362, 813–816.   
+Guo, Z., Wu, S., Ohno, M., Yoshida, R., 2020. Bayesian algorithm for retrosynthesis. J. Chem. Inf. Model. 60, 4474–4486.   
+Hai, L.L., Wen, B.J., Meng, X.X., 2010. Flavonoids: recent advances as anticancer drugs. Recent Pat. Anti-Cancer Drug Discov. 5, 152–164.   
+He, X.-Z., Li, W.-S., Blount, J.W., Dixon, R.A., 2008. Regioselective synthesis of plant (iso)flavone glycosides in Escherichia coli. Appl. Microbiol. Biotechnol. 80, 253–260.   
+Hu, Q.-N., Deng, Z., Hu, H., Cao, D.S., Liang, Y.Z., 2011. RxnFinder: biochemical reaction search engines using molecular structures, molecular fragments and reaction similarity. Bioinformatics 27, 2465–2467.   
+Huang, P.-S., Boyken, S.E., Baker, D., 2016. The coming of age of de novo protein design. Nature 537, 320–327.   
+Huang, P.S., Oberdorfer, G., Xu, C., Pei, X.Y., Nannenga, B.L., Rogers, J.M., DiMaio, F., Gonen, T., Luisi, B., Baker, D., 2014. High thermodynamic stability of parametrically designed helical bundles. Science 346, 481–485.   
+Hwang, E.I., Kaneko, M., Ohnishi, Y., Horinouchi, S.J.A., microbiology, e., 2003. Production of plant-specific flavanones by Escherichia coli containing an artificial gene cluster. Appl. Environ. Microbiol. 69, 2699–2706.   
+Jia, H., Sun, X., Sun, H., Li, C., Wang, Y., Feng, X., Li, C., 2016. Intelligent microbial heatregulating engine (IMHeRE) for improved thermo-robustness and efficiency of bioconversion. ACS Synth. Biol. 5, 312–320.   
+Jones, J.A., Collins, S.M., Vernacchio, V.R., Lachance, D.M., Koffas, M.A., 2016a. Optimization of naringenin and p-coumaric acid hydroxylation using the native E. coli hydroxylase complex. HpaBC. Biotechnol. Prog. 32, 21–25.   
+Jones, J.A., Vernacchio, V.R., Collins, S.M., Shirke, A.N., Xiu, Y., Englaender, J.A., Cress, B.F., McCutcheon, C.C., Linhardt, R.J., Gross, R.A., Koffas, M.A.G., 2017. Complete biosynthesis of anthocyanins using E. coli polycultures. mBio 8, 9.   
+Jones, J.A., Vernacchio, V.R., Sinkoe, A.L., Collins, S.M., Ibrahim, M.H.A., Lachance, D. M., Hahn, J., Koffas, M.A.G., 2016b. Experimental and computational optimization of an Escherichia coli co-culture for the efficient production of flavonoids. Metab. Eng. 35, 55–63.   
+Jones, J.A., Wang, X., 2018. Use of bacterial co-cultures for the efficient production of chemicals. Curr. Opin. Biotechnol. 53, 33–38.   
+Kallscheuer, N., Vogt, M., Stenzel, A., G¨atgens, J., Bott, M., Marienhagen, J., 2016. Construction of a Corynebacterium glutamicum platform strain for the production of stilbenes and (2S)-flavanones. Metab. Eng. 38, 47–55.   
+Kang, S.-Y., Lee, J.K., Choi, O., Kim, C.Y., Jang, J.-H., Hwang, B.Y., Hong, Y.-S., 2014. Biosynthesis of methylated resveratrol analogs through the construction of an artificial biosynthetic pathway in E. coli. BMC Biotechnol. 14, 67.   
+Kim, M.-J., Kim, B.-G., Ahn, J.-H., 2013. Biosynthesis of bioactive O-methylated flavonoids in Escherichia coli. Appl. Microbiol. Biotechnol. 97, 7195–7204.   
+Koepnick, B., Flatten, J., Husain, T., Ford, A., Silva, D.A., Bick, M.J., Bauer, A., Liu, G., Ishida, Y., Boykov, A., Estep, R.D., Kleinfelter, S., Nørgård-Solano, T., Wei, L., Players, F., Montelione, G.T., DiMaio, F., Popovi´c, Z., Khatib, F., Cooper, S., Baker, D., 2019. De novo protein design by citizen scientists. Nature 570, 390–394.   
+Koirala, N., Pandey, R.P., Thuan, N.H., Ghimire, G.P., Jung, H.J., Oh, T.J., Sohng, J.K., 2019. Metabolic engineering of Escherichia coli for the production of isoflavonoid-4’- O-methoxides and their biological activities. Biotechnol. Appl. Biochem. 66, 484–493.   
+Koopman, F., Beekwilder, J., Crimi, B., van Houwelingen, A., Hall, R.D., Bosch, D., van Maris, A.J.A., Pronk, J.T., Daran, J.-M., 2012. De novo production of the flavonoid naringenin in engineered Saccharomyces cerevisiae. Microb. Cell Factories 11, 155.   
+Lam, R.S.H., Nickerson, M.T., 2013. Food proteins: a review on their emulsifying properties using a structure–function approach. Food Chem. 141, 975–984.   
+Lee, H., Kim, B.G., Kim, M., Ahn, J.H., 2015. Biosynthesis of two flavones, Apigenin and Genkwanin, in Escherichia coli. J. Microbiol. Biotechnol. 25, 1442–1448.   
+Leonard, E., Chemler, J., Lim, K.H., Koffas, M.A., 2006. Expression of a soluble flavone synthase allows the biosynthesis of phytoestrogen derivatives in Escherichia coli. Appl. Microbiol. Biotechnol. 70, 85–91.   
+Leonard, E., Koffas, M.A.J.A., microbiology, e., 2007. Engineering of artificial plant cytochrome P450 enzymes for synthesis of isoflavones by Escherichia coli. Appl. Environ. Microbiol. 73, 7246–7251.   
+Leonard, E., Yan, Y., Fowler, Z.L., Li, Z., Lim, C.-G., Lim, K.-H., Koffas, M.A.G., 2008. Strain improvement of recombinant Escherichia coli for efficient production of plant flavonoids. Mol. Pharm. 5, 257–265.   
+Leonard, E., Yan, Y., Lim, K.H., Koffas, M.A., 2005. Investigation of two distinct flavone synthases for plant-specific flavone biosynthesis in Saccharomyces cerevisiae. Appl. Environ. Microbiol. 71, 8241–8248.   
+Levisson, M., Patinios, C., Hein, S., de Groot, P.A., Daran, J.-M., Hall, R.D., Martens, S., Beekwilder, J., 2018. Engineering de novo anthocyanin production in Saccharomyces cerevisiae. Microb. Cell Factories 17, 103.   
+Li, G., Hu, Y., Zrimec, J., Luo, H., Wang, H., Zelezniak, A., Ji, B., Nielsen, J.J. N.c., 2021. Bayesian Genome Scale Modelling Identifies Thermal Determinants of Yeast Metabolism, 12, pp. 1–12.   
+Li, G., Li, H., Lyu, Y., Zeng, W., Zhou, J., 2020. Enhanced biosynthesis of dihydromyricetin in Saccharomyces cerevisiae by coexpression of multiple hydroxylases. J. Agric. Food Chem. 68, 14221–14229.   
+Li, J., Tian, C., Xia, Y., Mutanda, I., Wang, K., Wang, Y., 2019. Production of plantspecific flavones baicalein and scutellarein in an engineered E. coli from available phenylalanine and tyrosine. Metab. Eng. 52, 124–133.   
+Lim, C.G., Fowler, Z.L., Hueller, T., Schaffer, S., Koffas, M.A.J.A., microbiology, e., 2011. High-yield Resveratrol Production in Engineered Escherichia coli, 77, pp. 3451–3460.   
+Lin, K., Xu, Y., Pei, J., Lai, L., 2020. Automatic retrosynthetic route planning using template-free models. Chem. Sci. 11, 3355–3364.   
+Lin, Y., Shen, X., Yuan, Q., Yan, Y.J. N.c., 2013. Microbial biosynthesis of the anticoagulant precursor 4-hydroxycoumarin. Nat. Commun. 4, 1–8.   
+Liu, Q., Yu, T., Li, X., Chen, Y., Campbell, K., Nielsen, J., Chen, Y.J. N.c., 2019. Rewiring Carbon Metabolism in Yeast for High Level Production of Aromatic Chemicals, 10, pp. 1–13.   
+Liu, X., Cheng, J., Zhang, G., Ding, W., Duan, L., Yang, J., Kui, L., Cheng, X., Ruan, J., Fan, W., Chen, J., Long, G., Zhao, Y., Cai, J., Wang, W., Ma, Y., Dong, Y., Yang, S., Jiang, H., 2018a. Engineering yeast for the production of breviscapine by genomic analysis and synthetic biology approaches. Nat. Commun. 9, 448.   
+Liu, X., Cheng, J., Zhu, X., Zhang, G., Yang, S., Guo, X., Jiang, H., Ma, Y., 2020. De novo biosynthesis of multiple pinocembrin derivatives in Saccharomyces cerevisiae. ACS Synth. Biol. 9, 3042–3051.   
+Liu, Y., Tu, X., Xu, Q., Bai, C., Kong, C., Liu, Q., Yu, J., Peng, Q., Zhou, X., Zhang, Y.J. M. e., 2018b. Engineered monoculture and co-culture of methylotrophic yeast for de novo production of monacolin J and lovastatin from methanol, 45, pp. 189–199.   
+Lv, Y., Edwards, H., Zhou, J., Xu, P., 2019a. Combining 26s rDNA and the Cre-loxP system for iterative gene integration and efficient marker curation in Yarrowia lipolytica. ACS Synth. Biol. 8, 568–576.   
+Lv, Y., Gu, Y., Xu, J., Zhou, J., Xu, P., 2020. Coupling metabolic addiction with negative autoregulation to improve strain stability and pathway yield. Metab. Eng. 61, 79–88.   
+Lv, Y., Marsafari, M., Koffas, M., Zhou, J., Xu, P., 2019b. Optimizing oleaginous yeast cell factories for flavonoids and hydroxylated flavonoids biosynthesis. ACS Synth. Biol. 8, 2514–2523.   
+Lv, Y.K., Xu, S., Lyu, Y.B., Zhou, S.H., Du, G.C., Chen, J., Zhou, J.W., 2019c. Engineering enzymatic cascades for the efficient biotransformation of eugenol and taxifolin to silybin and isosilybin. Green Chem. 21, 1660–1667.   
+Lyu, X., Ng, K.R., Lee, J.L., Mark, R., Chen, W.N., 2017. Enhancement of naringenin biosynthesis from tyrosine by metabolic engineering of Saccharomyces cerevisiae. J. Agric. Food Chem. 65, 6638–6646.   
+Lyu, X., Zhao, G., Ng, K.R., Mark, R., Chen, W.N., 2019. Metabolic engineering of Saccharomyces cerevisiae for De novo production of kaempferol. J. Agric. Food Chem. 67, 5596–5606.   
+Malla, S., Koffas, M.A., Kazlauskas, R.J., Kim, B.-G.J.A., microbiology, e., 2012. Production of 7-O-methyl aromadendrin, a medicinally valuable flavonoid, in Escherichia coli. Appl. Environ. Microbiol. 78, 684–694.   
+Marin, L., Gutierrez-del-Rio, I., Entrialgo-Cadierno, R., Villar, C.J., Lombo, F., 2018. De novo biosynthesis of myricetin, kaempferol and quercetin in Streptomyces albus and Streptomyces coelicolor. PLoS One 13, 16.   
+Marín, L., Guti´errez-del-Río, I., Yagüe, P., Manteca, A´., Villar, C.J., Lombo´, F., 2017. De novo biosynthesis of apigenin, luteolin, and eriodictyol in the actinomycete Streptomyces albus and production improvement by feeding and spore conditioning. Front. Microbiol. 8.   
+Marsafari, M., Samizadeh, H., Rabiei, B., Mecrabi, A., Koffas, M., Xu, P., 2020. Biotechnological production of flavonoids: an update on plant metabolic engineering, microbial host selection, and genetically encoded biosensors. Biotechnol. J. 15, 13.   
+McClements, D.J., Bai, L., Chung, C., 2017. Recent advances in the utilization of natural emulsifiers to form and stabilize emulsions. Annu. Rev. Food Sci. Technol. 8, 205–236.   
+Middleton Jr., E., Kandaswami, C., Theoharides, T.C., 2000. The effects of plant flavonoids on mammalian cells: implications for inflammation, heart disease, and cancer. Pharmacol. Rev. 52, 673–751.   
+Miyahisa, I., Funa, N., Ohnishi, Y., Martens, S., Moriguchi, T., Horinouchi, S., 2006. Combinatorial biosynthesis of flavones and flavonols in Escherichia coli. Appl. Microbiol. Biotechnol. 71, 53–58.   
+Miyahisa, I., Kaneko, M., Funa, N., Kawasaki, H., Kojima, H., Ohnishi, Y., Horinouchi, S., 2005. Efficient production of (2S)-flavanones by Escherichia coli containing an artificial biosynthetic gene cluster. Appl. Microbiol. Biotechnol. 68, 498–504.   
+Muhammad, A., Feng, X.D., Rasool, A., Sun, W.T., Li, C., 2020. Production of plant natural products through engineered Yarrowia lipolytica. Biotechnol. Adv. 43, 14.   
+Niu, T., Liu, Y., Li, J., Koffas, M., Du, G., Alper, H.S., Liu, L.J. A.s. b., 2018. Engineering a Glucosamine-6-Phosphate Responsive glmS Ribozyme Switch Enables Dynamic Control of Metabolic Flux in Bacillus Subtilis for Overproduction of NAcetylglucosamine, 7, pp. 2423–2435.   
+Oksik, C., Jae Kyoung, L., Sun-Young, K., Ramesh Prasad, P., Jae-Kyung, S., Jong Seog, A., 2014. Construction of artificial biosynthetic pathways for resveratrol glucoside derivatives. J. Microbiol. Biotechnol. 24, 614–618.   
+Pandey, R.P., Parajuli, P., Koffas, M.A.G., Sohng, J.K., 2016. Microbial production of natural and non-natural flavonoids: pathway engineering, directed evolution and systems/synthetic biology. Biotechnol. Adv. 34, 634–662.   
+Park, S.R., Yoon, J.A., Paik, J.H., Park, J.W., Jung, W.S., Ban, Y.-H., Kim, E.J., Yoo, Y.J., Han, A.R., Yoon, Y.J., 2009. Engineering of plant-specific phenylpropanoids biosynthesis in Streptomyces venezuelae. J. Biotechnol. 141, 181–188.   
+Pei, J., Sun, Q., Gu, N., Zhao, L., Fang, X., Tang, F., Cao, F., 2020. Production of isoorientin and isovitexin from luteolin and apigenin using coupled catalysis of glycosyltransferase and sucrose synthase. Appl. Biochem. Biotechnol. 190, 601–615.   
+Pham, H.L., Wong, A., Chua, N., Teo, W.S., Yew, W.S., Chang, M.W. J.N.c., 2017. Engineering a Riboswitch-Based Genetic Platform for the Self-Directed Evolution of Acid-Tolerant Phenotypes, 8, pp. 1–12.   
+Raffa, D., Maggio, B., Raimondi, M.V., Plescia, F., Daidone, G., 2017. Recent discoveries of anticancer flavonoids. Eur. J. Med. Chem. 142, 213–228.   
+Rice-Evans, C.A., Miller, N.J., Paganga, G., 1996. Structure-antioxidant activity relationships of flavonoids and phenolic acids. Free Radic. Biol. Med. 20, 933–956.   
+Ro, D.-K., Douglas, C.J., 2004. Reconstitution of the entry point of plant phenylpropanoid metabolism in yeast (Saccharomyces cerevisiae): implications for control of metabolic flux into the phenylpropanoid pathway. J. Biol. Chem. 279, 2600–2607.   
+Rodriguez, A., Kildegaard, K.R., Li, M., Borodina, I., Nielsen, J.J. M.e., 2015. Establishment of a Yeast Platform Strain for Production of P-Coumaric Acid through Metabolic Engineering of Aromatic Amino Acid Biosynthesis, 31, pp. 181–188.   
+Rodriguez, A., Strucko, T., Stahlhut, S.G., Kristensen, M., Svenssen, D.K., Forster, J., Nielsen, J., Borodina, I., 2017. Metabolic engineering of yeast for fermentative production of flavonoids. Bioresour. Technol. 245, 1645–1654.   
+S´anchez, B.J., Zhang, C., Nilsson, A., Lahtvee, P.J., Kerkhoven, E.J., Nielsen, J.J. M.s. b., 2017. Improving the phenotype predictions of a yeast genome-scale metabolic model by incorporating enzymatic constraints. Mol. Syst. Biol. 13, 935.   
+Santos, C.N., Koffas, M., Stephanopoulos, G., 2011. Optimization of a heterologous pathway for the production of flavonoids from glucose. Metab. Eng. 13, 392–400.   
+Sgobba, E., Stumpf, A.K., Vortmann, M., Jagmann, N., Krehenbrink, M., DirksHofmeister, M.E., Moerschbacher, B., Philipp, B., Wendisch, V.F. J.B.t., 2018. Synthetic Escherichia Coli-Corynebacterium Glutamicum Consortia for L-Lysine Production from Starch and Sucrose, 260, pp. 302–310.   
+Shrestha, B., Pandey, R.P., Darsandhari, S., Parajuli, P., Sohng, J.K., 2019. Combinatorial approach for improved cyanidin 3-O-glucoside production in Escherichia coli. Microb. Cell Factories 18, 7.   
+Solopova, A., van Tilburg, A.Y., Foito, A., Allwood, J.W., Stewart, D., Kulakauskas, S., Kuipers, O.P., 2019. Engineering Lactococcus lactis for the production of unusual anthocyanins using tea as substrate. Metab. Eng. 54, 160–169.   
+Song, W., Qiao, X., Chen, K., Wang, Y., Ji, S., Feng, J., Li, K., Lin, Y., Ye, M., 2017. Biosynthesis-based quantitative analysis of 151 secondary metabolites of licorice to differentiate medicinal Glycyrrhiza species and their hybrids. Anal. Chem. 89, 3146–3153.   
+Stahlhut, S.G., Siedler, S., Malla, S., Harrison, S.J., Maury, J., Neves, A.R., Forster, J., 2015. Assembly of a novel biosynthetic pathway for production of the plant flavonoid fisetin in Escherichia coli. Metab. Eng. 31, 84–93.   
+Sun, W., Qin, L., Xue, H., Yu, Y., Ma, Y., Wang, Y., Li, C., 2019. Novel trends for producing plant triterpenoids in yeast. Crit. Rev. Biotechnol. 39, 618–632.   
+Thuan, N.H., Chaudhary, A.K., Van Cuong, D., Cuong, N.X., 2018. Engineering co-culture system for production of apigetrin in Escherichia coli. J. Ind. Microbiol. Biotechnol. 45, 175–185.   
+Trantas, E., Panopoulos, N., Ververidis, F., 2009. Metabolic engineering of the complete pathway leading to heterologous biosynthesis of various flavonoids and stilbenoids in Saccharomyces cerevisiae. Metab. Eng. 11, 355–366.   
+Tunyasuvunakool, K., Adler, J., Wu, Z., Green, T., Zielinski, M., ˇZídek, A., Bridgland, A., Cowie, A., Meyer, C., Laydon, A., Velankar, S., Kleywegt, G.J., Bateman, A., Evans, R., Pritzel, A., Figurnov, M., Ronneberger, O., Bates, R., Kohl, S.A.A., Potapenko, A., Ballard, A.J., Romera-Paredes, B., Nikolov, S., Jain, R., Clancy, E., Reiman, D., Petersen, S., Senior, A.W., Kavukcuoglu, K., Birney, E., Kohli, P., Jumper, J., Hassabis, D., 2021. Highly accurate protein structure prediction for the human proteome. Nature.   
+Wang, H., Liu, W., Shi, F., Huang, L., Lian, J., Qu, L., Cai, J., Xu, Z., 2018. Metabolic pathway engineering for high-level production of 5-hydroxytryptophan in Escherichia coli. Metab. Eng. 48, 279–287.   
+Wang, R., Zhao, S., Wang, Z., Koffas, M.A.G., 2020a. Recent advances in modular coculture engineering for synthesis of natural products. Curr. Opin. Biotechnol. 62, 65–71.   
+biotechnology Wang, X., Li, Z., Policarpio, L., Koffas, M.A., Zhang, H.J. A.m., 2020b. De Novo Biosynthesis of Complex Natural Product Sakuranetin Using Modular Coculture Engineering, 104, pp. 4849–4861.   
+Watts, K.T., Lee, P.C., Schmidt-Dannert, C., 2004. Exploring recombinant flavonoid biosynthesis in metabolically engineered Escherichia coli. Chembiochem 5, 500–507.   
+Watts, K.T., Lee, P.C., Schmidt-Dannert, C., 2006. Biosynthesis of plant-specific stilbene polyketides in metabolically engineered Escherichia coli. BMC Biotechnol. 6, 22.   
+Wu, J., Du, G., Chen, J., Zhou, J., 2015. Enhancing flavonoid production by systematically tuning the central metabolic pathways based on a CRISPR interference system in Escherichia coli. Sci. Rep. 5, 13477.   
+Bioengineering Xiu, Y., Jang, S., Jones, J.A., Zill, N.A., Linhardt, R.J., Yuan, Q., Jung, G. Y., Koffas, M.A.J.B., 2017. Naringenin-responsive Riboswitch-based Fluorescent Biosensor Module for Escherichia coli Co-cultures, 114, pp. 2235–2244.   
+Xu, K., Qin, L., Bai, W., Wang, X., Li, F., Ren, S., Gao, X., Chen, B., Tong, Y., Li, J., Li, B.- Z., Yuan, Y.-J., Li, C., 2020a. Multilevel defense system (MDS) relieves multiple stresses for economically boosting ethanol production of industrial Saccharomyces cerevisiae. ACS Energy Lett. 5, 572–582.   
+Xu, K., Yu, L., Bai, W., Xiao, B., Liu, Y., Lv, B., Li, J., Li, C., 2018. Construction of thermotolerant yeast based on an artificial protein quality control system (APQC) to improve the production of bio-ethanol. Chem. Eng. Sci. 177, 410–416.   
+Xu, Z., Gao, R., Pu, X., Xu, R., Wang, J., Zheng, S., Zeng, Y., Chen, J., He, C., Song, J., 2020b. Comparative genome analysis of Scutellaria baicalensis and Scutellaria barbata reveals the evolution of active flavonoid biosynthesis. Dev. Reprod. Biol. 18, 230–240.   
+Yan, Y., Huang, L., Koffas, M.A., 2007. Biosynthesis of 5-deoxyflavanones in Microorganisms. Biotechnol. J.: Healthcare Nutr. Technol. 2, 1250–1262.   
+Yan, Y.J., Li, Z., Koffas, M.A.G., 2008. High-yield anthocyanin biosynthesis in engineered Escherichia coli. Biotechnol. Bioeng. 100, 126–140.   
+Yang, D., Park, S.Y., Park, Y.S., Eun, H., Lee, S.Y., 2020a. Metabolic engineering of Escherichia coli for natural product biosynthesis. Trends Biotechnol. 38, 745–765.   
+Yang, J., Liang, J., Shao, L., Liu, L., Gao, K., Zhang, J.-L., Sun, Z., Xu, W., Lin, P., Yu, R., Zi, J., 2020b. Green production of silybin and isosilybin by merging metabolic engineering approaches and enzymatic catalysis. Metab. Eng. 59, 44–52.   
+Yao, L.H., Jiang, Y.M., Shi, J., TomA´S-BarberA´N, F.A., Datta, N., Singanusong, R., Chen, S.S., 2004. Flavonoids in food and their health benefits. Plant Foods Hum. Nutr. 59, 113–122.   
+Zha, J., Zang, Y., Mattozzi, M., Plassmeier, J., Gupta, M., Wu, X., Clarkson, S., Koffas, M. A.G., 2018. Metabolic engineering of Corynebacterium glutamicum for anthocyanin production. Microb. Cell Factories 17, 143.   
+Zhang, W., Liu, H., Li, X., Liu, D., Dong, X.T., Li, F.F., Wang, E.X., Li, B.Z., Yuan, Y.J., 2017. Production of Naringenin from D-xylose with Co-culture of E. coli and S. cerevisiae. Eng. Life Sci. 17, 1021–1029.   
+Zhao, Q., Cui, M.-Y., Levsh, O., Yang, D., Liu, J., Li, J., Hill, L., Yang, L., Hu, Y., Weng, J.- K., Chen, X.-Y., Martin, C., 2018. Two CYP82D enzymes function as flavone hydroxylases in the biosynthesis of root-specific 4′-deoxyflavones in Scutellaria baicalensis. Mol. Plant 11, 135–148.   
+Zhao, Q., Yang, J., Cui, M.-Y., Liu, J., Fang, Y., Yan, M., Qiu, W., Shang, H., Xu, Z., Yidiresi, R., Weng, J.-K., Pluskal, T., Vigouroux, M., Steuernagel, B., Wei, Y., Yang, L., Hu, Y., Chen, X.-Y., Martin, C., 2019. The reference genome sequence of Scutellaria baicalensis provides insights into the evolution of wogonin biosynthesis. Mol. Plant 12, 935–950.   
+Zhao, S., Jones, J.A., Lachance, D.M., Bhan, N., Khalidi, O., Venkataraman, S., Wang, Z., Koffas, M.A.G., 2015. Improvement of catechin production in Escherichia coli through combinatorial metabolic engineering. Metab. Eng. 28, 43–53.   
+Zhou, L., Ren, J., Li, Z., Nie, J., Wang, C., Zeng, A.-P., 2019a. Characterization and Engineering of a Clostridium glycine Riboswitch and its Use to Control a Novel Metabolic Pathway for 5-aminolevulinic Acid Production in Escherichia coli. ACS Synth. Biol. 8.   
+Zhou, S., Lyu, Y., Li, H., Koffas, M.A.G., Zhou, J., 2019b. Fine-tuning the (2S)-naringenin synthetic pathway using an iterative high-throughput balancing strategy. Biotechnol. Bioeng. 116, 1392–1404.   
+Zhu, S., Wu, J., Du, G., Zhou, J., Chen, J., 2014. Efficient synthesis of eriodictyol from Ltyrosine in Escherichia coli. Appl. Environ. Microbiol. 80, 3072–3080.

@@ -1,0 +1,119 @@
+###### Abstract
+
+Neutron stars are not observed to spin faster than about half their breakup rate. This limiting rotational frequency may be related to the strength of their crusts. As a star spins up from accretion, centrifugal forces stress the crust. We perform finite-element simulations of rotating neutron stars and find that the crust fails at rotation rates about half the breakup rate. Given uncertainties in microphysics, we have not determined the crust configuration after this failure. Instead, we argue that the crust may fail in an asymmetric way and could produce a configuration with a significant ellipticity (fractional difference in moments of inertia). If the ellipticity is large, a rotating star will radiate gravitational waves that may limit further spin up. These stars may be promising sources for LIGO / VIRGO and next generation gravitational wave detectors. gravitational waves - stars: neutron 0000-0002-3182-8072]J.A. Morales
+
+0000-0002-8282-8072]C.J. Horowitz
+
+## 1 Introduction
+
+Neutron stars can gain angular momentum from accretion and spin rapidly (Radhakrishnan & Srinivasan, 1982). Indeed, there are many observed millisecond pulsars (Manchester et al., 2005). However, no neutron star (NS) is observed to spin faster than about half the Keplerian breakup rate (Hessels et al., 2006). Torques from gravitational wave (GW) radiation could limit the rotation rate (Bildsten, 1998). It is unclear what makes a NS asymmetric so that it radiates GW. Some possibilities include asymmetric electron capture reactions (Bildsten, 1998; Ushomirsky et al., 2000) or thermal expansion (Jones & Hutchins, 2024). However, the produced asymmetry may not be large enough to explain the limiting spin (Jones & Hutchins, 2024). In addition to GW radiation, NS spin up may be limited by properties of the accretion disk-NS magnetosphere system (Ushomirsky et al., 2000; Andersson et al., 2005; Haskell & Patruno, 2011) or electromagnetic winds (Parfrey et al., 2016). These effects may be too small to explain the limiting spin without GW radiation (Cikintoglu & Eksi, 2023).
+
+There are many ongoing and near future searches for GW from rotating NS, see for example (Riles, 2023; Pagliaro et al., 2023). A number of these searches focused on the X-ray bright accreting system Scorpius X-1 (Abbott et al., 2017, 2019, 2022a). Many searches did not reach the sensitivity to detect a signal if one assumes torques from GW radiation and accretion balance each other. Recent search s did reach a torque balance limit but only for some values of unknown parameters such as the spin frequency (Zhang et al., 2021; Abbott et al., 2022b). No continuous GW signals have yet been detected. Future searches, with both existing and next generation detectors such as Cosmic Explorer (Reitze et al., 2019), could be very promising.
+
+In this letter we postulate that the maximum rotation rate of a NS is simply related to the breaking of its crust. Axisymmetric stars will not radiate GW and can spin up. However, at some point centrifugal forces will break the crust. We assume that when the crust breaks it does so asymmetrically. The released elastic stresses will producean asymmetric NS that radiates GW. _NS may spin up until their crust breaks._ After that, GW radiation, from the deformed broken crust, may keep the star from spinning faster.
+
+The rotation rate, when the crust breaks, depends on the strength of the crust. Many early works assumed the crust was weak and could break often. These breaks could produce star quakes and possibly explain some glitches in the rotation frequency of pulsars (Baym & Pines, 1971; Ruderman, 1976, 1991). Molecular dynamics simulations find that the crust is very strong with a breaking strain (fractional deformation) of order 0.1 (Horowitz & Kadau, 2009). This strong crust may significantly change the picture. Crust breaking may now be rare. In an unpublished preprint, we estimated, using a simple constant density model, that the crust does not break until the rotation rate is high (Fattoyev et al., 2018). In this letter we perform finite-element simulations, including a large range of crust densities, to more accurately determine when centrifugal forces break the crust.
+
+We first describe our finite-element formalism to calculate rotational perturbations of a Newtonian star with a polytrope equation of state. We then present results for the displacement and strain of the crust and determine the rotational speed when the maximum strain exceeds the breaking strain. Finally, we discuss what might happen when the crust breaks and possible implications for gravitational wave observations.
+
+## 2 Formalism
+
+We begin with a brief summary of our finite-element formalism (Morales & Horowitz, 2024) to obtain the structure of the crust of a Newtonian star with a polytropic equation of state.1 The first step consists of obtaining the zeroth-order stellar structure of a non-rotating, cold, barotropic, and Newtonian NS at mechanical equilibrium:
+
+Footnote 1: Although we use the same formalism, Morales & Horowitz (2024) was focused on a different problem, how a small intrinsic asymmetry in the elastic properties of the crust produces an asymmetry in the shape of a NS.
+
+m^{\\prime} =4\\pi r^{2}\\rho  p^{\\prime} =-\\rho\\Phi^{\\prime} (2) \\Phi^{\\prime} =\\frac{Gm}{r^{2}}. 
+
+Here r is the radial coordinate, \\rho is the mass density, p=K\\rho^{2} is the pressure, K is the polytropic proportionality constant, \\Phi is the gravitational potential, and m is the enclosed mass. The prime ({}^{\\prime}) represents radial derivatives. When the star cools it crystallizes to form the solid crust with an angled-average shear modulus given by \\mu(\\rho)\\approx\\kappa\\rho, where \\kappa=10^{16} cm{}^{2} s{}^{-2}(Haskell et al., 2006). For a fixed composition, the shear modulus of a Coulomb solid is \\propto\\rho^{4/3}. However given changes in composition with density, \\kappa\\rho provides a reasonable fit. We do not expect much sensitivity to the exact form of \\mu(\\rho). We assume that the bottom of the crust is located where the mass density is \\rho_{bottom}=2\\times 10^{14} g/cm{}^{3} while the top of the crust is located where the mass density \\rho_{top}=10^{12} g/cm{}^{3}. As we explained in our previous paper (Morales & Horowitz, 2024), placing the top of the crust at this high density does not affect the main results of the simulations and helps to avoid numerical difficulties.
+
+When the NS rotates, the centrifugal acceleration can be treated as a first-order perturbation against the background structure described by equations (1-3), as long as the rotational speed of the NS is small. The structural changes that stem from spinning up or down the NS can be described by Eulerian perturbations \\delta G_{tot}(\\vec{r})=\\sum_{l}\\delta G_{l}(r)P_{l}(\\cos\\ \\theta), where G_{tot} is a background (zeroth-order) quantity, \\vec{r} is the position of a matter element with respect to the star's center, P_{l}(\\cos\\ \\theta) is the l-th Legendre polynomial, and \\theta is the polar angle with respect to the rotation axis.
+
+The small centrifugal acceleration leads to the perturbed Euler and Laplace equations
+
+\\nabla_{i}\\delta p_{tot}+\\delta\\rho_{tot}\\nabla_{i}\\Phi+\\rho\\nabla_{i}\\delta \\Phi_{tot}-f_{i}=0  and
+
+\\nabla^{2}\\delta\\Phi_{tot}=4\\pi G\\delta\\rho_{tot},  where f_{i}=\\rho\\omega_{\\rm diff}^{2}s\\hat{s} is the centrifugal force, s is the distance from the axis of rotation, \\hat{s} is the corresponding unit vector, \\omega_{\\rm diff}^{2}\\equiv\\omega^{2}-\\omega_{0}^{2}, and \\omega and \\omega_{0} are the final and initial angular frequencies, respectively. The small change in pressure is \\delta p_{tot}=c_{s}^{2}\\delta\\rho_{tot}, where c_{s} is the speed of sound. It is convenient to re-write the centrifugal force as f_{i}=-\\rho\\nabla_{i}\\delta\\chi_{tot}. The centrifugal potential \\delta\\chi_{tot}\\equiv-\\frac{1}{2}\\omega_{\\rm diff}^{2}s^{2}. This definition allows us to encapsulate the perturbed gravitational potential and the centrifugal potential into the variable \\delta U_{tot}\\equiv\\delta\\Phi_{tot}+\\delta\\chi_{tot}. Decomposition into Legendre polynomials and separation of variables applied to Eqs. (4) and (5) yield the radial equation
+
+\\delta U_{l}^{\\prime\\prime}+\\frac{2}{r}\\delta U_{l}^{\\prime}-\\frac{\\beta^{2}}{r^ {2}}\\delta U_{l}=4\\pi G\\delta\\rho_{l}-2\\omega_{\\rm diff}^{2}\\delta_{l0}\\,  where l is the Legendre-polynomial mode, \\beta^{2}\\equiv l(l+1) and \\delta_{l0} is 1 if l=0 and 0 otherwise. The angular part of each l-th Legendre mode of the perturbed Euler equation gives
+
+\\delta\\rho_{l}=-\\frac{\\rho}{c_{s}^{2}}\\delta U_{l}. 
+
+For each Legendre mode, the two boundary conditions that are needed to obtain \\delta U_{l} are the regularity of the perturbed gravitational potential at the origin and the interior-exterior matching of the perturbed gravitational potential. Since the latter boundary condition is implicit, the shooting method is used to solve for \\delta U_{l} in each l-th Legendre mode. With this scheme, the perturbed gravitational potential \\delta\\Phi_{tot} is obtained. Then, we use that perturbed gravitational potential within the equations of hydro-elastic equilibrium to obtain the structure of the deformed crust using the finite-element method. Since the crustal mass is roughly 1 % of the star, we do not expect the crust to influence the perturbed gravitational potential significantly. This is the same approach that references (Franco et al., 2000; Fattoyev et al., 2018) use. We use it in this work because it reduces the computational complexity of the finite-element method significantly.
+
+We write the perturbed hydro-elastic equilibrium equations for the solid crust in the weak form. The variational weak-form formulation of our problem is given by
+
+\\int_{\\Omega_{s}}\\overleftrightarrow{\\sigma}^{\\prime}(\\vec{u}): \\overleftarrow{\\varepsilon}^{\\prime}(\\delta\\vec{u})\\ dV\\ +\\ \\int_{\\Omega_{s}} \\delta\\rho(\\vec{u})\\ \\vec{\\nabla}\\Phi\\cdot\\delta\\vec{u}\\ dV +\\ \\int_{\\Omega_{s}}\\rho\\ \\vec{\\nabla}\\delta\\Phi(\\vec{u})\\cdot \\delta\\vec{u}\\ dV-\\int_{\\partial\\Omega_{s}}(\\overleftarrow{\\sigma}^{\\prime}( \\vec{u})\\cdot\\hat{n})\\cdot\\delta\\vec{u}\\ dS =\\int_{\\Omega_{s}}\\vec{f}\\cdot\\delta\\vec{u}\\ dV\\,  where : represents an inner product between two tensors. In the variational formulation, the displacement \\vec{u} is the trial function that we want to approximate while \\delta\\vec{u} is the test function. \\overleftarrow{\\varepsilon}^{\\prime} is the elastic strain and \\overleftarrow{\\sigma}^{\\prime} is the sum of the elastic stress and the pressure. \\Omega_{s} is the integration domain (the solid crust) and \\partial\\Omega_{s} is the sum of all the boundaries (the bottom and top of the crust). \\hat{n} represents a unit vector that is normal to the boundary surfaces (the bottom and top of the crust). Notice that the fourth term on the left-hand side of Eqn. (8) corresponds to the continuity of the radial traction across the bottom and top of the crust. The mesh to which we apply the finite-element method is an octant of a sphere with elements that have a size of approximately 100 m (Morales & Horowitz, 2024).
+
+## 3 Results
+
+The finite-element method yields the Eulerian displacements. These are shown in Fig. 1 where u_{r} and u_{\\theta} represent the r and \\theta components of the displacement in spherical coordinates. This is for a 1.4 M_{\\odot}, R=10 km star that has been spun up from rest to \\Omega=\\Omega_{K}/2 where \\Omega_{K}=(GM/R^{3})^{1/2} is the (nonrelativistic) Kepler frequency. Material near the poles \\theta\\approx 0 moves in while material near the equator \\theta\\approx\\pi/2 moves out to form the equatorial bulge.
+
+The strain \\varepsilon_{ij} follows from derivatives of the displacement. In Cartesian coordinates \\varepsilon_{ij} is
+
+\\varepsilon_{ij}=\\frac{1}{2}\\left(\\nabla_{i}u_{j}+\\nabla_{j}u_{i}\\right). 
+
+This includes deformations due to changes in shape and volume. We subtract contributions from the change in volume and define the deviatoric strain \\bar{\\varepsilon}_{ij} that only includes contributions from the change in shape,
+
+\\bar{\\varepsilon}_{ij}=\\varepsilon_{ij}-\\frac{1}{3}\\delta_{ij}\\sum_{k=1}^{3} \\varepsilon_{kk}. We assume the crust fails when the von-Mises strain exceeds the breaking strain. The von-Mises strain is defined as \\varepsilon_{vm}=\\sqrt{\\frac{1}{2}\\overrightarrow{\\varepsilon}\\cdot\\overrightarrow{ \\varepsilon}}. In spherical coordinates, this can be written as
+
+\\varepsilon_{vm}=\\sqrt{\\frac{1}{2}\\left(\\vec{\\varepsilon}_{rr}^{2}+\\vec{ \\varepsilon}_{\\theta\\theta}^{2}+\\vec{\\varepsilon}_{\\phi\\phi}^{2}+2(\\vec{ \\varepsilon}_{r\\theta}^{2}+\\vec{\\varepsilon}_{r\\phi}^{2}+\\vec{\\varepsilon}_{ \\theta\\phi}^{2})\\right)}. 
+
+The NS that spins up from rest to \\Omega_{K}/2 has the von-Mises strain field shown in Fig. 2. The von-Mises strain is largest at the base of the crust (r=R_{1}) and at the equator (\\theta=\\pi/2).
+
+We find that the crust breaks first at the equator of the star. This confirms the results that Fattoyev et al. (2018) and Franco et al. (2000) obtained with their simple constant-density NS model. In addition, we find that the crust breaks first at the base (r=R_{1}). This assumes the breaking strain is independent of density. Breaking at the base of the crust is in a high density region where nuclear pasta may be present. The breaking strain of pasta may be similar to that for the lower density crust (Caplan et al., 2018), however elastic properties of pasta should be studied further.
+
+Figure 3 shows that the maximum strain of the crust grows with rotational frequency. A strain of 0.1 is reached when the star is rotating at 0.58 of the Kepler breakup rate. This maximum strain is almost independent of the star's mass. Results for a 2 M{}_{\\odot} star are very similar to those for a 1.4 M{}_{\\odot} star, assuming the same 10 km radius.
+
+Our simulations are for Newtonian gravity. There are many fully relativistic calculations of the shape of rotating _fluid_ stars, for example (Friedman et al., 1986; Konstantinou & Morsink, 2022). Perhaps the largest relativistic effect is a decrease of about one third from the non-relativistic Kepler frequency \\Omega_{K}=(GM/R^{3})^{1/2} to the relativistic Kepler frequency \\Omega_{K}^{r}(Konstantinou & Morsink, 2022), see Table 1. This reduction may also be due in part to an increase in the equatorial radius with increasing spin.
+
+We use a simple polytropic equation of state. Konstantinou & Morsink (2022) find nearly universal relations where the equation of state dependence is primarily through the star's radius R (via the R^{-3/2} dependence of \\Omega_{K}). Given NS radii determinations from X-ray and gravitational wave observations and nuclear experimental and theoretical information (Lim & Holt, 2022; Pang et al., 2023; Huth et al., 2022), we estimate equation of state uncertainties by considering R from 11 to 13 km in Table 1. Perhaps the largest uncertainty is the exact value of the breaking strain. Molecular dynamics simulations predict that the breaking strain is _of order_ 0.1. However the exact value could be somewhat different. For example a breaking strain of 0.05 (Baiko & Chugunov, 2018) is reached at 0.42 of the breakup speed.
+
+Finally as a "sanity check" and to test for large relativistic effects we estimate crustal strain from relativistic calculations of the change in radius with spin of _fluid_ stars. Qualitatively the crustal strain \\varepsilon_{rr} is of order \\Delta R_{e}/R where \\Delta R_{e} is the increase in equatorial radius with spin of a fluid star. Table 1 lists the spin frequencies where R_{e} increases by 5% or 10% (Konstantinou & Morsink, 2022). These values are similar to but slightly smaller than our non-relativistic simulation results. This suggests that there is not a large error in our simulations and relativistic effects are not large.
+
+Our simulations were performed for R=10 km. We scale our results to other radii by assuming \\Omega scales with \\Omega_{K}(R) because Konstantinou & Morsink (2022) find \\Delta R_{e}/R is approximately independent of R for fixed \\Omega/\\Omega_{K}^{r}. This yields the \\Omega values in Table 1. For example, we find the crust fails at \\Omega/\\Omega_{K}=0.42 assuming the breaking strain is 0.05. The nonrelativistic Kepler frequency of a R=12 km star is 1650 Hz. Therefore, we predict that the crust of a R=12 km 1.4M{}_{\\odot} star will fail at \\Omega=0.42\\times 1690=690 Hz. This frequency is comparable to the 716 Hz rotation frequency of the fastest known NS (Hessels et al., 2006). However, Table 1 indicates significant uncertainties.
+
+## 4 Discussion
+
+When the crust breaks, the release of elastic stresses will allow parts of the crust to move. This could produce a nonzero ellipticity \\epsilon. This is a measure of the asymmetry of the star,
+
+\\epsilon=\\frac{I_{1}-I_{2}}{I_{3}}\\,. 
+
+\\begin{table}
+
+\\begin{tabular}{l|c c|c c|c c} R & \\Omega_{K} & \\Omega_{K}^{r} & \\Delta R_{e}/R & \\varepsilon_{\\rm vm}^{\\rm max} & \\\\ (km) & (Hz) & (Hz) & 0.05 & 0.1 & 0.05 & 0.1 \\\\ \\hline
+
+11 & 1890 & 1300 & 690 & 940 & 790 & 1100 \\\\
+
+12 & 1650 & 1130 & 600 & 810 & 690 & 960 \\\\
+
+13 & 1470 & 1000 & 530 & 720 & 620 & 850 \\\\ \\end{tabular}
+
+\\end{table}
+
+Table 1: Rotational frequencies for a 1.4M{}_{\\odot} neutron star of radius R. The non-relativistic (relativistic) Kepler frequency is \\Omega_{K} (\\Omega_{K}^{r}). The columns \\Delta R_{e}/R=0.05(0.1) give the frequency (in Hz) where the equatorial radius of a fluid star increases by 5%(10%) (Konstantinou & Morsink, 2022). Finally, the last two columns give the frequency (in Hz) where the crust fails in our simulations for a breaking strain of 0.05 or 0.1.
+
+Here I_{1},I_{2}, and I_{3} are the principle moments of inertia and the star is rotating about the 3 axis. The ellipticity is the important parameter to determine the characteristic strain amplitude h_{0} of GW radiation from a star with rotational frequency \\Omega at a distance d(Riles, 2023),
+
+h_{0}=\\frac{16\\pi^{2}G}{c^{4}}\\frac{I_{3}}{d}\\Omega^{2}\\epsilon. 
+
+Here G is Newton's constant and c is the speed of light.
+
+We have not attempted to model what happens to the crust as it fails and what the final crust configuration might be. This may require many assumptions about crust breaking microphysics. Therefore, we do not directly calculate \\epsilon. However, we now argue \\epsilon is likely to be significant \\geq 10^{-8} because of the following considerations.
+
+1. Much of the crust is strained to near (or at) the breaking strain so that deformations of the crust are large.
+
+2. The maximum ellipticity the crust can support \\epsilon_{max}\\approx 10^{-5}(Morales & Horowitz, 2022; Horowitz & Kadau, 2009) is much larger that the \\epsilon\\approx 10^{-8} that may be needed for torque balance. Before crust failure the deformations are axisymmetric and \\epsilon=0. If crust failure releases strain on one side of the star, the remaining deformations may have a significant quadrupole pattern so that \\epsilon is nonzero and could be a noticeable fraction of \\epsilon_{max}.
+
+3. The first failures occur near the base of the crust where the density is large. This region involves a significant fraction of the mass of the crust and can source a large ellipticity.
+
+If \\epsilon\\geq 10^{-8} after crust breaking, the system may rapidly reach torque equilibrium between GW radiation and accretion (Ckintoglu & Eksi, 2023) because the GW torque \\propto\\Omega^{5} is a stiff function of the rotation rate. If \\epsilon is initially somewhat too large the star will spin down slightly from GW radiation until it reaches torque equilibrium. Alternatively if \\epsilon is somewhat too small the system may spin up slightly from accretion until it reaches equilibrium. In either case the system will reach torque equilibrium at a rotation rate near where the crust failed. Therefore, _crust breaking may determine the maximum rotation rate of neutron stars_.
+
+An accreting star can have a thick ocean and a magnetic field threading the crust that can respond to crust failure. Surface effects at low densities will likely not contribute significantly to \\epsilon. However, they may produce electromagnetic signals associated with crust breaking, see for example (Tsang, 2013).
+
+We expect \\epsilon to evolve with time. Further crust failures, depending on where they are located, can either increase or decrease \\epsilon. Elastic stress and \\epsilon can decrease with time due to viscoelastic creep (Chugunov & Horowitz, 2010). Further accretion can also decrease \\epsilon as crust material is buried to densities beyond the crust-core transition and melted. These effects could reduce \\epsilon to \\approx 10^{-9} after accretion stops. Woan et al argue that the observed spin down rates of millisecond pulsar populations suggest such a residual ellipticity (Woan et al., 2018).
+
+A population of rapidly rotating NS with significant ellipticity from crust breaking could be very promising sources for continuous GW searches (Pagliaro et al., 2023; Reed et al., 2021). In general, rapidly rotating stars will produce stronger GW because of the factor of \\Omega^{2} in Eq. 13. Furthermore, search sensitivity will improve with improved techniques and with better next generation detectors.
+
+In conclusion, neutron stars (NS) are observed to spin no faster than about half the breakup rate. This may be related to the strength of their crusts. We performed finite-element simulations of rotating neutron stars and find the crust fails at rotation rates about half the breakup rate. This crust failure could produce an asymmetric NS with a significant ellipticity (fractional difference in moments of inertia). Rapidly rotating stars with this ellipticity radiate gravitational waves that could limit further spin up and may be promising sources for LIGO / VIRGO and next generation detectors.
+
+Acknowledgements: We thank Cole Miller and Gianluca Pagliaro for helpful comments. We thank the developers of FEniCSx for their help during the development and implementation of our finite-element simulations. This work is partially supported by the US Department of Energy grant DE-FG02-87ER40365 and National Science Foundation grant PHY-2116686.

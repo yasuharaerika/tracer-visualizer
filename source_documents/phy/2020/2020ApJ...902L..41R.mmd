@@ -1,0 +1,135 @@
+###### Abstract
+
+Binary neutron star mergers, such as the multimessenger GW170817 event, may produce hypermassive compact objects which are supported against collapse by the internal circulation of the fluid within the star. We compute their unstable modes of oscillations driven by gravitational wave radiation and shear viscosity, modeling them as triaxial Riemann ellipsoids. We work in a perturbative regime, where the gravitational radiation reaction force is taken into account at 2.5-post-Newtonian order and find unstable modes with dissipation timescales \\gtrsim 1 ms which are relevant to the transient state of a hypermassive remnant of a merger. We show that the secular instabilities are dominated by gravitational wave radiation. If the shear viscosity is included, it can increase the growth times or even stabilize the unstable modes, but it must have values several orders of magnitude larger than predicted for cold neutron stars. stellar oscillations - gravitational waves - stars: neutron +
+
+Footnote †: journal: ApJL
+
+0000-0002-2762-270X]Peter B. Rau
+
+## 1 Introduction
+
+The observation of gravitational waves (GW) from the binary neutron star (BNS) inspiral event GW170817 by LIGO-VIRGO collaboration (LVC) (Abbott et al., 2017, 2017, 2017) strongly motivates the studies of the post-mergers objects left behind in such events. Numerical simulations (for recent examples see Shibata et al. (2017); Most et al. (2019); Ruiz et al. (2020); Dietrich et al. (2020)) show that after an initial highly non-linear phase of evaluation on time-scales of the order of 10 ms, the star settles into a gravitational equilibrium, which is a hypermassive compact star supported against gravitational collapse by the internal circulation of the fluid (for reviews see Faber and Rasio (2012); Baiotti (2019); Chatziioannou (2020)). The lifetime of such an object is not well known, as it depends on several unknown factors, such as the strength of magnetic fields or the equation of state; however, it is expected that it could last up 100 ms and, for low-mass systems, beyond. The gravitational waves emitted during this "long-term" phase of the evolution of the post-merger object, which can be detected by the advanced LIGO, have the potential of providing information on the integral parameters (mass, radius, etc.) of these objects.
+
+In this work, we report computations of the oscillation modes of hypermassive neutron stars modeled as classical homogeneous ellipsoids with internal circulation, i.e., _Riemann ellipsoids_(Chandrasekhar, 1969). In doing so, we include the effect of shear viscosity and gravitational wave radiation, which allows us to access the secular instabilities of these objects through mode analysis.
+
+Secular instabilities can develop in rapidly rotating compact objects, the classical case being the m=l=2 toroidal (or bar) mode, which becomes unstable for uniformly rotating axisymmetric stars for the ratio of rotational kinetic energy to gravitational potential energy T/W\\geq 0.27(Chandrasekhar, 1969, 1970). Subsequently, it was shown that compact stars undergo the so-called Chandrasekhar-Friedmann-Schutz (CFS) instability due to gravitational radiation under much more general conditions (Friedman and Schutz, 1978, 2017). The corresponding timescales for the CFS instability were studied (including the role played by viscosity) for Maclaurin spheroids (Comins, 1979, 2017) and rigidly rotating axisymmetric Newtonian models (Ipser & Lindblom, 1991).
+
+The case of triaxial objects with internal circulation is more complex: the set of oscillation modes of such objects were computed in the ellipsoidal approximation by Chandrasekhar (1965, 1966) in the non-dissipative limit. The focus of the subsequent studies of these objects shifted towards the problem of their secular evolution under the action of gravitational radiation and (shear) viscosity. Miller (1974) integrated equations of motion Riemann S-type ellipsoids under gravitational radiation-reaction in post-Newtonian formalism and showed that the evolution proceeds towards either axisymmetric or non-axisymmetric bodies without internal circulation. Earlier, Press & Teukolsky (1973) integrated the equations of motion in the case of viscous fluid showing that a secularly unstable, viscous Maclaurin spheroid deforms itself into a stable, Jacobi ellipsoid, whereby the intermediate configurations are Riemann S-type ellipsoids. Detweiler & Lindblom (1977) integrated the relevant equations of motion in the presence of both gravitational radiation-reaction and viscosity. They find that the evolution ends on the axisymmetric zero-circulation Maclaurin sequence. Lai & Shapiro (1995) considered gravitational wave radiation by nascent neutron stars within the compressible ellipsoidal approximation (Lai et al., 1993) in the presence of gravitational radiation reaction and viscosity. Their study was mainly focused on the signatures from gravitational wave generated by a secularly unstable newborn neutron star, although they give analytical results for the oscillations modes of Maclaurin spheroids. It has been acknowledged frequently in the literature quoted above that Riemann ellipsoids are secularly unstable, however, it appears that their oscillation modes have not been studied beyond the non-dissipative limit given in Chandrasekhar (1965, 1966). It is, in part, a purpose of this work to fill in this gap.
+
+Below, motivated by the perspectives of observation of "long-term" oscillations of hypermassive neutron stars in gravitational waves we study the spectrum of oscillation modes of Riemann S-ellipsoids including the secular effects of gravitational radiation reaction and shear viscosity in a perturbative manner. As the hypermassive remnants of mergers are hot, we neglect the effects of superfluidity of their interiors, i.e. the dissipation due to the mutual friction between the superfluid and normal fluid; this can be treated within the ellipsoidal approximation (Sedrakian & Wasserman, 2001). In this report, we focus only on the perturbative treatment of the secular effects whose growth times can be reliably computed using a Newtonian background. The results of the full (non-perturbative) treatment of the modes will be given elsewhere.
+
+## 2 Perturbation Equations
+
+We approximate a post-merger hypermassive compact star as a Riemann S-type ellipsoid (Chandrasekhar, 1969), with principal axes a_{1}\\neq a_{2}\\neq a_{3} and internal circulation \\omega in the (co)rotating frame, which has angular velocity \\mathbf{\\Omega}(t) of principle axis with respect to an observer at rest. For S-type ellipsoids \\omega and \\mathbf{\\Omega} are parallel, and are chosen to lie along the Cartesian x_{3} axis, which is the same in the inertial and rotating frames; without loss of generality we assume a_{1}\\geq a_{2}. Following Chandrasekhar (1969) we assume uniform density \\rho and incompressible fluid flow, \\mathbf{\\nabla}\\cdot\\boldsymbol{\\xi}=0, where \\boldsymbol{\\xi} is the Lagrangian displacement. For small perturbations, keeping terms only linear order in displacements, and assuming time dependence of perturbations given by \\boldsymbol{\\xi}(t)=e^{\\lambda t}\\boldsymbol{\\xi}(\\boldsymbol{x}) the characteristic equation is written as (Chandrasekhar, 1969)
+
+\\lambda^{2}V_{i;j}-2\\lambda Q_{jl}V_{i;l}-2\\lambda\\Omega\\epsilon_ {i\\delta 3}V_{\\ell;j} -2\\Omega\\epsilon_{i\\ell\\delta 3}(Q_{\\ell k}V_{j;k}-Q_{jk}V_{\\ell;k}) +Q_{j\\ell}^{2}V_{i;\\ell}+Q_{i\\ell}^{2}V_{j;\\ell} =\\Omega^{2}(V_{ij}-\\delta_{i3}V_{3j})+\\delta\\mathfrak{W}_{ij}+ \\delta_{ij}\\delta\\Pi-\\delta\\mathfrak{P}_{ij}-\\delta\\mathfrak{G}_{ij},  where
+
+V_{i;j}=\\int_{\\mathcal{V}}d^{3}x\\rho\\xi_{i}x_{j}  is the perturbations of the quadrupole moment tensor, V_{ij}=V_{i;j}+V_{j;i}, Q_{ij} is the matrix relating the background flow velocity inside the star u_{i} to the coordinates in the rotating frame u_{i}=Q_{ij}x_{j}. For the Riemann S-type ellipsoids with aligned spin and circulation vectors u_{1}=Q_{12}x_{2}, u_{2}=Q_{21}x_{1} and u_{3}=0, where
+
+Q_{12}=-\\frac{a_{1}^{2}}{a_{1}^{2}+a_{2}^{2}}\\Omega f,\\quad Q_{21}=\\frac{a_{2}^ {2}}{a_{1}^{2}+a_{2}^{2}}\\Omega f,\\quad f\\equiv\\omega/\\Omega,  and all other elements of Q_{ij} equal to zero. The expression for the perturbed gravitational potential energy tensor \\delta\\mathfrak{W}_{ij} and pressure perturbations \\delta\\Pi are standard, and following Chandrasekhar (1969) we write the perturbation of dissipative part of the stress tensor in the "low Reynolds number approximation"
+
+\\delta\\mathfrak{P}_{ij}=5\\lambda\\nu\\left(\\frac{V_{i;j}}{a_{j}^{2}}+\\frac{V_{j ;i}}{a_{i}^{2}}\\right),  where \\nu is the kinematic shear viscosity, related to the dynamic shear viscosity \\eta by \\nu=\\eta/\\rho. Finally, the last term in Eq. (1) is associated with the perturbations of gravitational radiation back-reaction tensor and is given by (Miller, 1974)
+
+\\delta\\mathcal{G}_{ij}=\\frac{2G}{5c^{5}}\\left(\\mathcal{I}_{i\\ell}^{(5)}V_{\\ell j }+\\mathcal{V}_{i\\ell}^{(5)}I_{\\ell j}\\right), where \\mathbf{\\mathpzc{I}}^{(5)}_{ij} is the fifth time derivative of the reduced quadrupole moment tensor in the inertial frame projected onto the rotating frame,
+
+\\mathbf{\\mathpzc{I}}^{(5)}_{ij}=I^{(5)}_{ij}-\\frac{1}{3}\\delta_{ij}\\text{Tr}(I^{(5)}),  where
+
+I^{(5)}_{ij}=\\sum_{m=0}^{5}\\sum_{p=0}^{m}C^{5}_{m}C^{m}_{p}(-1)^{p}[(\\overline {\\mathbf{\\Omega}}^{*})^{p}]_{ik}\\frac{d^{5-m}I^{(r)}_{k\\ell}}{dt^{5-m}}[(\\overline {\\mathbf{\\Omega}}^{*})^{m-p}]_{\\ell j}  and I^{(r)}_{k\\ell} is the moment of inertia tensor in the rotating frame, C^{m}_{n} are binomial coefficients, and for rotation about the x_{3} axis, the 3\\times 3 matrix \\overline{\\mathbf{\\Omega}}^{*}\\equiv\\Omega\\mathbf{\\sigma} where the matrix \\mathbf{\\sigma} is defined as \\sigma_{ij}=i\\sigma_{y} for ij\\in 1,2 (with \\sigma_{y} being the y-component of Pauli matrix) and \\sigma_{ij}=0 for i=3 or j=3. The quantity \\mathbf{\\mathpzc{V}}^{(5)}_{ij} is defined analogously to (6)
+
+\\mathbf{\\mathpzc{V}}^{(5)}_{ij}=V^{(5)}_{ij}-\\frac{1}{3}\\delta_{ij}\\text{Tr}(V^{(5 )}). 
+
+To simplify the expressions (6) and (8) we note that for a time-independent moment of inertia as measured in the rotating frame, Eq. (7) reduces to
+
+I^{(5)}_{ij}=\\sum_{p=0}^{5}C^{5}_{p}(-1)^{p}[(\\overline{\\mathbf{\\Omega}}^{*})^{p}] _{ik}I^{(r)}_{k\\ell}[(\\overline{\\mathbf{\\Omega}}^{*})^{5-p}]_{\\ell j},  and for a triaxial ellipsoid with the principal axes are aligned with the coordinate axes in the rotating frame I_{ij}=I^{(r)}_{ij}
+
+I_{ij}=\\frac{1}{5}M\\delta_{ij}\\left(\\sum_{m=1}^{3}a_{m}^{2}-a_{i}^{2}\\right). 
+
+Now, since \\Omega and I_{ij} are constant in time, the only nonzero component of \\mathbf{\\mathpzc{I}}^{(5)}_{ij} is (Lai et al., 1994)
+
+\\mathbf{\\mathpzc{I}}^{(5)}_{12}=\\mathbf{\\mathpzc{I}}^{(5)}_{21}=16\\Omega^{2}(I_{11}-I_ {22}). 
+
+In analogous manner we find that
+
+V^{(5)}_{ij} =\\sum_{m=0}^{5}\\sum_{p=0}^{m}C^{5}_{m}C^{m}_{p}(-1)^{p}[(\\overline {\\mathbf{\\Omega}}^{*})^{p}]_{ik}\\frac{d^{5-m}V_{k\\ell}}{dt^{5-m}}[(\\overline{\\mathbf{ \\Omega}}^{*})^{m-p}]_{\\ell j} =\\lambda^{5}V_{ij}-\\phi_{1}(\\lambda,\\Omega)(V_{ik}(\\mathbf{\\sigma}^{ \\prime})_{kj}+\\sigma_{ik}V_{k\\ell}\\sigma_{\\ell j}) +\\phi_{2}(\\lambda,\\Omega)(V_{ik}\\sigma_{kj}-\\sigma_{ik}V_{kj}).  where we have defined the auxiliary functions
+
+\\phi_{1}(\\lambda,\\Omega) \\equiv 20\\lambda\\Omega^{2}(\\lambda^{2}-2\\Omega^{2}),  \\phi_{2}(\\lambda,\\Omega) \\equiv\\Omega(5\\lambda^{4}-40\\lambda^{2}\\Omega^{2}+16\\Omega^{4}). 
+
+## 3 Characteristic Equations and Solution Method
+
+The sequences of Riemann ellipsoids can be characterized by the values of the f (see Eq. (3)) and the value of one of the parameters \\alpha=a_{2}/a_{1} or \\beta=a_{3}/a_{1} (without loss of generality a_{1}=1). Interesting special cases of f-parameter are f=0 corresponding to zero-circulation triaxial bodies (Jacobi ellipsoids), f=\\pm\\infty - triaxial bodies supported by internal circulation only (Dedekind ellipsoids), and f=-2 corresponding to an irrotational ellipsoid in the inertial frame, since the vorticity in this frame is given by \\mathbf{\\omega}_{0}=(2+f)\\mathbf{\\Omega}.
+
+To find the modes described by Eq. (1) we separate the nine distinct equations in the independent subsets which are even and odd with respect to index 3. We will not write down the lengthly expression for each component here. We note only that the even modes should be supplemented with
+
+V_{11}a_{1}^{-2}+V_{22}a_{2}^{-2}+V_{33}a_{3}^{-2}=0,  valid for incompressible flows. We next introduce dimensionless quantities \\tilde{\\Omega}\\equiv\\Omega/\\sqrt{\\pi G\\rho}, \\tilde{\\lambda}\\equiv\\lambda/\\sqrt{\\pi G\\rho}, and \\tilde{\\nu}=\\nu/a_{1}^{2}\\sqrt{\\pi G\\rho} where G is gravitational constant. An estimate for the dimensionless kinematic shear viscosity is
+
+\\tilde{\\nu}=1.35\\times 10^{-13}\\left(\\frac{\\nu}{10^{3}\\ \\text{cm}^{2}\\ \\text{s}^{-1}}\\right)\\left(\\frac{\\rho_{0}}{\\rho}\\right)^{1/2}\\left(\\frac{10\\ \\text{km}}{a_{1}}\\right)^{2},  where \\rho_{0}=2.7\\times 10^{14} g/cm{}^{3} is nuclear saturation density. The timescale associated with the damping via gravitational wave radiation scales as \\widetilde{t}_{c}^{5}, where \\tilde{t}_{c} is the dimensionless light crossing time
+
+\\tilde{t}_{c}\\equiv\\frac{a_{1}\\sqrt{\\pi G\\rho}}{c}=0.251\\left(\\frac{\\rho}{ \\rho_{0}}\\right)^{1/2}\\left(\\frac{a_{1}}{10\\ \\text{km}}\\right). 
+
+Because \\tilde{\\nu} and \\tilde{t}_{c} depend on \\rho, \\tilde{\\lambda}=\\tilde{\\lambda}(\\rho), unlike the case without viscosity or gravitational radiation damping in which \\lambda\\propto\\sqrt{\\rho} and this \\rho-dependence is eliminated by dividing by the characteristic frequency \\sqrt{\\pi G\\rho}=7.52\\times 10^{3}\\times\\left(\\rho/\\rho_{0}\\right)^{1/2} Hz.
+
+We first obtain the equilibrium sequences of Riemann ellipsoids characterized by \\alpha, \\beta, \\tilde{\\Omega} for fixed f. The equilibrium semi-axis values (a_{1}=1) and rotation frequency \\tilde{\\Omega} for representative cases are listed in Table 3. Then the characteristic frequencies are computed separately for the even and odd modes. For the even modes, we eliminate the pressure perturbations and obtain a system of five equations with six unknowns V_{11}, V_{22}, V_{33}, V_{1;2}, V_{2;1} and \\tilde{\\lambda}, which can be solved for \\tilde{\\lambda} by first writing it as a matrix equation
+
+{\\bf M}_{\\rm even}(\\tilde{\\lambda})\\cdot(V_{11},V_{22},V_{33},V_{1;2},V_{2;1})^{ \\rm T}=0,  where T indicates the tranpose, and demanding that the determinant of the matrix {\\bf M}_{\\rm even} is zero. The resulting characteristic equation is a polynomial in \\tilde{\\lambda} of order 17 in the dissipative case, whereas it is of order 8 in the absence of dissipation (i.e. both viscosity and gravitational radiation). Note that for the Riemann S-type ellipsoids four of the roots are zero in the non-dissipative case, whereas only one root is zero when shear viscosity and gravitational radiation damping are included. Similarly, for odd modes we find
+
+{\\bf M}_{\\rm odd}(\\tilde{\\lambda})\\cdot(V_{1;3},V_{3;1},V_{2;3},V_{3;2})^{\\rm T }=0,  which leads to a characteristic equation which is a polynomial in \\tilde{\\lambda} of order 14; in the non-dissipative case this reduces to a polynomial of order 8. In discussing the numerical results for the modes, we define \\tilde{\\sigma}=-i\\tilde{\\lambda} and an associated (dimensionless) dissipation timescale
+
+\\tilde{\\tau}=-\\frac{1}{{\\rm Im}(\\tilde{\\sigma})} 
+
+Thus, for {\\rm Im}(\\sigma)<0 the modes are unstable with characteristic (dimensional) growth time \\tau=(\\pi\\rho G)^{-1/2}\\tilde{\\tau}.
+
+## 4 Numerical Results
+
+To obtain physical values of oscillation frequencies and their damping or growth time-scales we need to evaluate the quantities \\tilde{\\nu} and \\tilde{t}_{c}, i.e., we need to specify physically motivated values of a_{1}, \\rho and \\nu, as well as the mass and the radius of the object. To model a hypermassive compact object resulting from a merger of two neutron stars we choose the value 2.74M_{\\odot} corresponding to the GW170817 event (Abbott et al., 2017a,b,c). We set the uniform density \\rho=3.62\\rho_{0} by enforcing that the f=-2, \\alpha=\\beta=1 star has a radius of a_{1}=11 km. This is a reasonable value for the radius of the semi-homogeneous core of the star- we assume that an outer envelope region of thickness 1-2 km is unimportant for the oscillations. We adjust a_{1} so that each ellipsoid has constant volume and hence the same mass. This results in both \\tilde{\\nu} and \\tilde{t}_{c} varying accordingly.
+
+If we assume that the viscosity of the hypermassive neutron star is due to the (non-superfluid) core (consisting of neutrons, protons and charged leptons in beta equilibrium) then viscosity is dominated by the normal neutron fluid. Taking as a reference value the low-temperature results of Flowers & Itoh (1981); Shternin et al. (2013)\\eta\\sim 10^{19}/T_{8}^{2} g cm{}^{-1} s{}^{-1} for temperature T=10^{8} K and \\rho=\\rho_{0}, we find that the kinematic viscosity would be of the order of \\nu\\sim 4 cm{}^{2} s{}^{-1} for characteristic temperature of a hypermassive neutron star 1 MeV. A kinematic viscosity of this magnitude is far too small compared to the dissipation via gravitational-wave radiation. If the temperature of a hypermassive neutron star is above the neutrino trapping temperature T\\leq 10 MeV, then neutrinos can contribute to the viscosity. This contribution can be estimated using the well-known kinematical formula for classical gases
+
+\\eta=\\frac{1}{5}n_{\\nu}\\ell_{\\nu}p_{\\nu}  where \\ell_{\\nu}, n_{\\nu}, p_{\\nu} are the neutrino mean free path, number density, and momentum respectively. If neutrinos are close to the ballistic regime (in the vicinity of trapping temperature), then we can take \\ell_{\\nu}\\simeq 10 km - the size of the system. Approximating further n_{\\nu}\\simeq 0.1\\rho/m_{N} where m_{N} is the nucleon mass, p_{\\nu}\\simeq 10 MeV/c, we find \\nu\\simeq 10^{13} cm{}^{2}s{}^{-1} and hence \\tilde{\\nu}\\sim 10^{-3}. At this size, the viscosity starts to have a noticeable ef
+
+\\begin{table}
+
+\\begin{tabular}{c|c c|c c|c c|c c|c c} \\hline \\alpha & \\beta & \\tilde{\\Omega} & \\beta & \\tilde{\\Omega} & \\beta & \\tilde{\\Omega} & \\beta & \\tilde{\\Omega} & \\beta & \\tilde{\\Omega} \\\\ \\hline  & f=-3 & & f=-2 & & f=0 & & f=2 & & f=3 & \\\\ \\hline
+
+1.0 & 0.96 & 0.160 & 1.00 & 0.267 & 0.58 & 0.374 & 0.30 & 0.110 & 0.32 & 0.071 \\\\
+
+0.9 & 0.91 & 0.161 & 0.95 & 0.267 & 0.55 & 0.373 & 0.29 & 0.110 & 0.30 & 0.071 \\\\
+
+0.8 & 0.86 & 0.163 & 0.88 & 0.268 & 0.52 & 0.367 & 0.27 & 0.111 & 0.28 & 0.072 \\\\
+
+0.7 & 0.79 & 0.167 & 0.81 & 0.269 & 0.48 & 0.356 & 0.25 & 0.112 & 0.26 & 0.073 \\\\
+
+0.6 & 0.72 & 0.172 & 0.73 & 0.269 & 0.43 & 0.337 & 0.23 & 0.114 & 0.24 & 0.075 \\\\
+
+0.5 & 0.63 & 0.179 & 0.63 & 0.266 & 0.38 & 0.310 & 0.21 & 0.116 & 0.21 & 0.077 \\\\
+
+0.4 & 0.53 & 0.184 & 0.52 & 0.253 & 0.33 & 0.270 & 0.19 & 0.117 & 0.18 & 0.080 \\\\
+
+0.3 & 0.41 & 0.178 & 0.38 & 0.221 & 0.26 & 0.215 & 0.17 & 0.114 & 0.15 & 0.082 \\\\
+
+0.2 & 0.26 & 0.142 & 0.24 & 0.156 & 0.18 & 0.144 & 0.14 & 0.097 & 0.12 & 0.077 \\\\
+
+0.1 & 0.12 & 0.064 & 0.11 & 0.065 & 0.10 & 0.060 & 0.09 & 0.052 & 0.08 & 0.047 \\\\ \\hline \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: The equilibrium structure of Riemann ellipsoids for several values of circulation parameter f; note that f=-2 corresponds to irrotational and f=0 rigidly rotating cases. Listed are the reduced values of semi-axis \\alpha=a_{2}/a_{1} and \\beta=a_{3}/a_{1} and the non-dimensional rotation frequency \\tilde{\\Omega}. fect on the instability growth times [see Fig. (2)]. We use an artificially enhanced kinematic viscosity \\nu^{*}=10^{14} cm{}^{2}s{}^{-1}; given the simplistic nature of (21), which does not take into a number of physical factors (e.g. turbulent viscosity), such a choice is not prohibitive. It has been argued that bulk viscosity can be the dominant mode of dissipation in hot compact stars (Sawyer, 1989) and neutron star mergers (Alford and Harris, 2019; Alford et al., 2019), which however would require a treatment beyond the incompressible limit adopted here.
+
+It has been shown by Chandrasekhar (1969) (see SS49) that Riemann S-type ellipsoids undergo dynamical (i.e. in the absence of dissipation) instability by one of the odd-parity modes when f<-2. Otherwise, the remaining odd and even parity modes were found to be stable. By explicitly solving the characteristic equations for the odd and even parity modes, we find that the Riemann S-type ellipsoids are generically unstable when gravitational radiation and shear viscosity are included. In doing so we extract those modes that are perturbative, in the sense that they have an oscillatory part approximately equal to that of an undamped mode, i.e., their complex frequencies can be expressed as \\sigma=\\sigma_{0}+\\Delta\\sigma where \\sigma_{0}\\in\\mathbb{R} is an undamped mode frequency and \\Delta\\sigma\\in\\mathbb{C} is a small correction. This is in agreement with the computation of gravitational radiation-induced unstable toroidal modes of Maclaurin spheroids by Chandrasekhar (1970). The perturbative treatment is required for two reasons: (a) the gravitational radiation back-reaction force we use is computed to 2.5-post-Newtonian order whereas our background ellipsoids are Newtonian, i.e., post-Newtonian corrections to the background should be added for consistency on the hydrodynamical timescales; (b) the secular effects on the hydrodynamical scales might require a more complete form of the gravitational radiation back-reaction force given by Chandrasekhar and Esposito (1970), than the one employed here (Miller, 1974); these two forms agree in the perturbative limit.
+
+Turning to the results of the mode analysis, we show in Fig. 1 the growth time-scales of unstable odd and even modes for various f values in the absence of viscosity. The growth times are labelled \\tau_{e} for even modes and \\tau_{o} for odd modes. It is seen that there is one unstable odd mode for each f, and that there are even unstable modes only for f>0, with one such mode for each f. In the special case f=0 and \\alpha=1, when the Riemann S-type ellipsoid reduces to a Maclaurin spheroid, there is a point of marginal stability for eccentricity e=0.81267 where \\mathrm{Im}(\\sigma)=0 for one of the even modes, in agreement with Chandrasekhar (1970). In general, the unstable odd modes can have shorter growth times than the unstable even modes and are unstable for a greater subset of the stable Riemann S-type ellipsoids. The unstable even f=1,2 modes start off unstable for large
+
+\\alpha, then are first stabilized and subsequently become unstable again as \\alpha decreases.
+
+The effect of (artificially enhanced) viscosity \\nu^{*}=10^{14} cm{}^{2} s{}^{-1} on the growth times of unstable modes are shown in Fig. 2 for several values of f. It is seen that viscosity has little effect on the growth times of the unstable odd modes. For the even modes, viscosity suppresses the gravitational radiation-induced instability and increases the corresponding growth times, in some cases moving them outside of the physical relevant range. This suppression is in agreement with previous results found for axisymmetric Newtonian stars (Ipser & Lindblom, 1991). Figure 3 show the dimensionless oscillation frequencies {\\rm Re}(\\tilde{\\sigma}) of unstable modes in the absence of viscous dissipation. The changes due to the viscosity are insignificant (Note that the growth timescale and oscillation frequencies in Figs. 1-3 are shown with the same line markers). The dimensionless frequencies of the modes are concentrated mostly the range 0.1\\leq{\\rm Re}(\\tilde{\\sigma})\\leq 0.6, which given the value of the normalization frequency \\Omega_{0}=(\\pi\\rho G)^{1/2}=7.52\\times 10^{3}\\left(\\rho/\\rho_{0}\\right)^{1/2} s{}^{-1}, correspond to frequencies in the kHz range.
+
+## 5 Summary
+
+It is anticipated that hypermassive neutron stars left behind by a binary neutron star merger will be detectable by advanced gravitational wave detectors at kHz frequencies. After a short transient, the star is expected to settle down in an equilibrium configuration supported by internal circulation (provided there is no prompt collapse to a black hole). Here we have modeled a hypermassive neutron star by a classical Riemann ellipsoid - rotating triaxial body supported by internal circulation - and derived the perturbative set of small-amplitude oscillation modes taking into account the dissipation through gravitational wave radiation and viscosity. In general, the obtained characteristic equations have 17 even parity and 14 odd parity modes, among which we identified the class of perturbative unstable modes with growth timescales of the order of \\gtrsim 1 ms and eigenfrequencies in the kHz range (see Figs. 1-3). The instability of the modes is due to the gravitational radiation. Adding (artificially enhanced) viscosity suppresses the instability of the modes, increasing their growth times, in some cases, beyond the physically interesting regime.
+
+A prerequisite of our analysis is that the star is in an approximate equilibrium, which can be tested only through numerical simulations of the post-merger transient. This implies that the growth times of unstable modes are shorter than the timescales over which the unperturbed equilibrium changes appreciably, which is the case, for example, for models of Riemann ellipsoids computed in Miller (1974). Provided that the quasi-equilibrium state has been reached, our analysis accounts for the complete set of the dissipative modes of a hypermassive neutron star within approximations employed.
+
+Our modeling of hypermassive neutron stars can and should be improved in the future by adding more realistic features, such as non-uniform matter distribution, realistic equations of state, and effects of relativity in describing the fluid perturbations and the equilibrium stellar models. However, the current insights into the instabilities that develop in Riemann S-type ellipsoids could be of interest also in more general context of stellar equilibria and oscillations, physics of nuclei as well as trapped atomic clouds.
+
+## Acknowledgements
+
+We thank Ira Wasserman for discussions and the referee for many useful comments. P. B. R. acknowledges the support of the Boochever Fellowship for spring 2020 and the hospitality of Frankfurt Institute for Advanced Studies. A.S. acknowledges the support by the DFG (Grant No. SE 1836/5-1) and the European COST Action "PHAROS" (CA16214).

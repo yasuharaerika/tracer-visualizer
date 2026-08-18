@@ -1,0 +1,137 @@
+###### Abstract
+
+The very long-term evolution of the hierarchical restricted three-body problem with a slightly aligned precessing quadrupole potential is studied analytically. This problem describes the evolution of a star and a planet which are perturbed either by a (circular and not too inclined) binary star system or by one other star and a second more distant star, as well as a perturbation by one distant star and the host galaxy or a compact-object binary system orbiting a massive black hole in non-spherical nuclear star clusters (Hamers & Lai, 2017; Petrovich & Antonini, 2017). Previous numerical experiments have shown that when the precession frequency is comparable to the Kozai-Lidov time scale, long term evolution emerges that involves extremely high eccentricities with potential applications for a broad scope of astrophysical phenomena including systems with merging black holes, neutron stars or white dwarfs. By averaging the secular equations of motion over the Kozai-Lidov Cycles (KLCs) we solve the problem analytically in the neighborhood of the KLC fixed point where the eccentricity vector is close to unity and aligned with the quadrupole axis and for a precession rate similar to the Kozai Lidov time scale. In this regime the dynamics is dominated by a resonance between the perturbation frequency and the precession frequency of the eccentricity vector. While the quantitative evolution of the system is not reproduced by the solution far away from this fixed point, it sheds light on the qualitative behaviour.
+
+0000-0002-8828-7877]Ygal Y. Klein
+
+## 1 Introduction
+
+In this letter we study analytically the dynamics of a test particle orbiting a central mass M on a Keplerian orbit with semimajor axis a which is perturbed by an external quadrupole potential given by:
+
+\\Phi_{outer}=\\frac{\\Phi_{0}}{a^{2}}\\left[3\\left(\\mathbf{\\hat{j}}_{outer}\\cdot \\mathbf{r}\\right)^{2}-r^{2}\\right]  where \\Phi_{0} is constant. In the periodic analytically solved Kozai-Lidov cycles (KLCs) (Lidov, 1962; Kozai, 1962) the external quadrupole potential is constant in time (i.e \\mathbf{\\hat{j}}_{outer} is a constant unit vector) (for a recent review on KLCs see (Naoz, 2016)). We study the case where the quadrupole potential is time dependent and \\mathbf{\\hat{j}}_{outer} is a unit vector which precesses around the z axis at a constant rate \\beta with a constant inclination \\alpha:
+
+\\mathbf{\\hat{j}}_{outer}=\\left(\\begin{array}{c}\\sin\\alpha\\cos\\left(\\beta \\tau\\right)\\\\ -\\sin\\alpha\\sin\\left(\\beta\\tau\\right)\\\\ \\cos\\alpha\\end{array}\\right)  where \\tau\\equiv\\frac{t}{t_{esc}} and t_{sec}=\\frac{\\sqrt{GMa}}{\\Phi_{0}} is the secular timescale.
+
+This problem describes the evolution of a star and a planet which are perturbed either by a (circular and not too inclined) binary star system or by one other star and a second more distant star (Hamers & Lai, 2017), as well as a perturbation by one distant star and the host galaxy or a compact-object binary system orbiting a massive black hole in non-spherical nuclear star clusters (Petrovich & Antonini, 2017). Previous numerical experiments have shown that when the precession frequency is comparable to the Kozai-Lidov time scale, long term evolution emerges that involves extremely high eccentricities (Hamers & Lai, 2017) with potential applications for the formation of planets around white dwarfs (Munoz & Petrovich, 2020; O'Connor et al., 2020; Stephan et al.,2021) and hot planets (Fabrycky & Tremaine, 2007; Katz et al., 2011; Naoz et al., 2011; Grishin et al., 2017). If the test particle assumption is relaxed, the system exhibits similar dynamics and the description is applicable to a broader scope of astrophysical phenomena, including Type Ia supernovae through the merger or collision of white dwarfs in multiple systems (Thompson, 2011; Katz & Dong, 2012; Pejcha et al., 2013; Fang et al., 2018; Grishin & Perets, 2022), gravitational wave emission through the merger of black holes or neutron stars in quadruple systems (Liu & Lai, 2018; Safarzadeh et al., 2019; Hamers & Safarzadeh, 2020) and the formation of close binaries (Antonini & Perets, 2012; Petrovich & Antonini, 2017; Bub & Petrovich, 2020; Grishin & Perets, 2022).
+
+As mentioned, the case of \\alpha=0 is the periodic analytically solved Kozai-Lidov cycles (KLCs) (Lidov, 1962; Kozai, 1962).
+
+## 2 Equations of motion
+
+The dynamics of the test particle can be parameterized by two dimensionless orthogonal vectors \\mathbf{j}=\\mathbf{J}/\\sqrt{GMa}, where \\mathbf{J} is the specific angular momentum vector, and \\mathbf{e} a vector pointing in the direction of the pericenter with magnitude e. In the secular approximation, a is constant with time while \\mathbf{j} and \\mathbf{e} evolve according to the Kozai-Lidov equations (as Eq. 10a-b in (Hamers & Lai, 2017))
+
+\\frac{d\\mathbf{j}}{d\\tau} = \\frac{\\frac{3}{4}\\left(\\left(\\mathbf{j}:\\mathbf{\\hat{J}}_{outer} \\right)\\mathbf{j}-5\\left(\\mathbf{e}\\cdot\\mathbf{\\hat{J}}_{outer}\\right) \\mathbf{e}\\right)\\times\\mathbf{\\hat{J}}_{outer}}{\\frac{d\\mathbf{e}}{d\\tau}} \\frac{d\\mathbf{e}}{d\\tau} = \\frac{3}{2}\\left(\\mathbf{j}\\times\\mathbf{e}\\right)-\\frac{3}{4} \\left(5\\left(\\mathbf{e}\\cdot\\mathbf{\\hat{J}}_{outer}\\right)\\mathbf{j}-\\left( \\mathbf{j}\\cdot\\mathbf{\\hat{J}}_{outer}\\right)\\mathbf{e}\\right)\\times\\mathbf{ \\hat{J}}_{outer} with \\mathbf{\\hat{J}}_{outer} given by Eq. 2 (itself a solution of Eq. 10c in (Hamers & Lai, 2017)). A numerical integration of Eqs. 3 is shown as blue lines in the top two panels of Fig. 1 for \\alpha=0.01^{\\circ} and \\beta\\approx 2.9 (left panel) and \\alpha=5^{\\circ} and \\beta=2.5 (right panel). We remind that in the \\alpha=0 case (pure KLCs), j_{z} (middle panel of Fig. 1) is constant and e (top panel of Fig. 1) is periodically oscillating but with a constant e_{max} (which for e_{0}\\ll 1 can be approximated with e_{max}\\approx\\sqrt{1-\\frac{5}{3}j_{z}^{2}}). As can be seen in the top and middle panels of Fig. 1 the times of zero crossing of j_{z} correspond to the times of extremely high eccentricities, as expected from KLCs.
+
+We restrict the analysis to the regime where \\alpha\\ll 1 (i.e \\alpha being a small parameter around which \\alpha=0 is already analytically solved) and \\left|\\mathbf{e}\\cdot\\mathbf{\\hat{J}}_{outer}\\right|\\sim 1 (i.e \\mathbf{j}\\cdot\\mathbf{\\hat{J}}_{outer}\\approx j_{z}\\ll 1, e\\sim 1 and inclination close to 90^{\\circ}, which is close to the KLC fixed point of e=1, i=90^{\\circ} and j=0). In this regime, the eccentricity vector precesses around the z axis. When the frequencies of the precession of \\mathbf{e} and \\mathbf{\\hat{J}}_{outer} are far from each other - the precession of the quadrupole potential has a minor effect on the KLCs. On the other hand, when these two frequencies are close, long-term resonant dynamics are obtained and are the focus of this letter.
+
+## 3 Approximated equations
+
+In this regime and up to first order in \\alpha one obtains the following 6 equations (neglecting j_{z} in this regime in the rhs of the derivatives of e_{x}, e_{y} and e_{z}):
+
+\\frac{d}{d\\tau}j_{z} =\\frac{15}{4}e_{z}\\alpha\\left(e_{x}\\sin\\left(\\beta\\tau\\right)+e_{ y}\\cos\\left(\\beta\\tau\\right)\\right)  \\frac{d}{d\\tau}e_{z} =\\frac{3}{4}\\left(2\\left(j_{x}e_{y}-j_{y}e_{x}\\right)+5e_{z} \\alpha\\left(j_{x}\\sin\\left(\\beta\\tau\\right)+j_{y}\\cos\\left(\\beta\\tau\\right) \\right)\\right) 
+
+\\frac{d}{d\\tau}e_{x} = -\\tfrac{9}{4}e_{z}j_{y}  \\frac{d}{d\\tau}e_{y} = +\\tfrac{9}{4}e_{z}j_{x} 
+
+\\frac{d}{d\\tau}j_{x} = -\\tfrac{15}{4}e_{z}\\left(e_{y}+e_{z}\\alpha\\sin\\left(\\beta\\tau \\right)\\right)  \\frac{d}{d\\tau}j_{y} = +\\tfrac{15}{4}e_{z}\\left(e_{x}-e_{z}\\alpha\\cos\\left(\\beta\\tau \\right)\\right) 
+
+In the lowest order approximation, \\frac{d}{d\\tau}e_{z}=0, resulting with a forced harmonic oscillator for the vector \\mathbf{e} in the x-y plane with \\tilde{e}_{x}=\\omega_{0}^{2}\\left(L\\cos\\left(\\omega\\tau\\right)-e_{x}\\right) where \\omega=\\beta,L=e_{z}\\alpha and \\omega_{0}=\\sqrt{\\tfrac{135}{16}}e_{z}. Below we solve the next level of approximation where e_{z} is slowly changing.
+
+## 4 Averaged Equations
+
+Since \\alpha is small the dynamics on short time scales follow the known (test particle triple system) Kozai-Lidov Cycles, which have two constants of motion: j_{z} and
+
+C_{K}=e^{2}-\\frac{5}{2}e_{z}^{2}=e^{2}\\left(1-\\frac{5}{2}\\sin^{2}i\\sin^{2} \\omega\\right). 
+
+On longer time scales the parameters of the KLC, j_{z} and C_{K}, evolve.
+
+Consider the following ansatz for the vector \\mathbf{e} in the x-y plane: At any time \\tau, the projection of the vector \\mathbf{e} on the x-y plane can be presented as a point moving on a slowly evolving ellipse with semimajor axis a inclined with an angle \\theta with respect to the x axis and semiminor axis b centered at the origin, i.e
+
+\\mathbf{e}_{x-y}=\\alpha^{\\frac{1}{3}}\\left(\\begin{array}{cc}\\cos\\theta,&- \\sin\\theta\\\\ \\sin\\theta,&\\cos\\theta\\end{array}\\right)\\left(\\begin{array}{c}a\\cos\\left( \\hat{\\beta}\\hat{\\tau}+\\phi\\right)\\\\ b\\sin\\left(\\hat{\\beta}\\hat{\\tau}+\\phi\\right)\\end{array}\\right)  where \\phi is a slowly dynamically evolving phase and
+
+\\hat{\\tau}=\\frac{1}{2}\\alpha^{\\frac{2}{3}}\\tau  and
+
+\\hat{\\beta}=2\\alpha^{-\\frac{2}{3}}\\beta. 
+
+See note after Eq. 24 regarding the choice of normalization prefactors: \\alpha^{\\frac{4}{3}},\\alpha^{\\frac{2}{3}} and \\alpha^{-\\frac{2}{3}}. The ansatz in Eq. 11 has a symmetry under the following transformation (both changes together)
+
+\\left(a-b\\right)\\rightarrow-\\left(a-b\\right) \\left(\\theta-\\phi\\right)\\rightarrow\\left(\\theta-\\phi+\\pi\\right) meaning that without loss of generality \\left(a-b\\right) is non negative.
+
+Using Eqs. 6-7 in the limit e_{z}=1 and neglecting the time derivatives of the slowly varying functions, the projection of the angular momentum on the x-y plane is correspondingly given by
+
+\\mathbf{j}_{x-y}=\\frac{4}{9}\\alpha^{\\frac{1}{3}}\\beta\\left(\\begin{array}{cc }\\cos\\theta,&-\\sin\\theta\\\\ \\sin\\theta,&\\cos\\theta\\end{array}\\right)\\left(\\begin{array}{c}b\\cos\\left( \\hat{\\beta}\\hat{\\tau}+\\phi\\right)\\\\ a\\sin\\left(\\hat{\\beta}\\hat{\\tau}+\\phi\\right)\\end{array}\\right). 
+
+Note the ansatz includes four slowly evolving variables, a,b,\\theta,\\phi, which describe the averaged evolution of the four components e_{x},e_{y},j_{x},j_{y}.
+
+Since the frequency of the precession of \\mathbf{\\hat{j}}_{outer} is \\beta and the driving frequency of the Kozai oscillations is \\sqrt{\\tfrac{135}{16}}e_{z} a resonance is obtained between the two perturbations when the two frequencies approach each other and it is useful to quantify the distance from resonance by a dynamical parameter,
+
+\\delta=\\alpha^{-\\frac{2}{3}}\\frac{1}{\\beta_{0}}\\left(\\left(\\beta_{0}\\bar{e}_{ z}\\right)^{2}-\\beta^{2}\\right)  where \\bar{e}_{z} is the averaged value of e_{z} over KLC which satisfies (using Eq. 5)
+
+e_{z}=\\bar{e}_{z}+\\frac{\\alpha^{\\frac{2}{3}}}{6}\\left(a^{2}-b^{2}\\right)\\cos \\left(2\\left(\\hat{\\beta}\\hat{\\tau}+\\phi\\right)\\right)  and
+
+\\beta_{0}=\\sqrt{\\frac{135}{16}}\\approx 2.9. 
+
+Using the following slow variables
+
+s = -\\frac{45}{2}\\left(a-b\\right)\\sin\\left(\\theta-\\phi\\right)  c = -\\frac{45}{2}\\left(a-b\\right)\\cos\\left(\\theta-\\phi\\right)  and focusing on the resonant limit of \\omega=\\omega_{0} in the forced harmonic oscillator mentioned above, i.e \\beta=\\beta_{0}, the following set of ODEs is obtained:
+
+\\dot{\\delta}= s  \\dot{s}= -\\left(45\\beta_{0}+\\delta c\\right) (21) \\dot{c}= \\delta s  and
+
+\\frac{d\\left(\\theta+\\phi\\right)}{d\\hat{\\tau}}=\\delta  \\frac{d\\left(a+b\\right)}{d\\hat{\\tau}}=0,  where \\dot{} denotes a derivative with respect to \\hat{\\tau}.
+
+Several notes are in order: (1) The parameters s,c,a+b,\\theta+\\phi uniquely determine all the slow variables: a,b,\\theta,\\phi. (2) The evolution of \\delta,s and c can be obtained by solving the closed subset of Eqs. 20-22. (3) The equations obtained have no explicit dependence on the small parameter \\alpha. In fact, the \\alpha dependent prefactors in Eqs. 11-15 were chosen for this reason. (4) j_{z} can be obtained from the demand that \\mathbf{j}\\cdot\\mathbf{e}=0. In fact, the following combination of j_{z} and \\delta is constant:
+
+j_{z}+\\frac{\\delta}{6}\\alpha^{\\frac{2}{3}}=\\text{const.},  allowing j_{z} to be readily obtained using the initial conditions and the time evolution of \\delta. The resulting slow evolution of \\delta for the examples in Fig. 1 is shown in the bottom panel and is used for the solution of j_{z} plotted as a dashed red line in the middle panel. As can be seen in the left panel, the slow evolution of j_{z} agrees to an excellent approximation with the numerical result.
+
+## 5 Analytic Solution
+
+The averaged equations, Eqs. 20-22, admit two constants of the motion, denoted C_{1} and C_{2},
+
+C_{1} =\\tfrac{1}{2}\\left(\\delta^{2}+45\\left(a-b\\right)\\cos\\left(\\theta -\\phi\\right)\\right)  C_{2} =\\qquad\\qquad(a-b)^{2}+\\tfrac{2\\delta}{\\sqrt{15}}  implying that the evolution of the three variables \\delta,a-b and \\theta-\\phi is periodic. Using Eq. 24 we define a third constant
+
+C_{3}=(a+b)^{2}  which together with C_{1} and C_{2} determine the long term evolution of the entire system.
+
+The resulting evolution of \\delta is equivalent to the dynamics of a particle moving in a one dimensional potential with a constant energy
+
+E=\\frac{1}{2}\\dot{\\delta}^{2}+V=\\frac{1}{2}\\left(\\left(\\frac{45}{2}\\right)^{2} C_{2}-C_{1}^{2}\\right)  where (using \\beta_{0}=\\sqrt{\\tfrac{135}{16}}, see Eq. 17)
+
+V=45\\beta_{0}\\delta-\\frac{1}{2}C_{1}\\delta^{2}+\\frac{1}{8}\\delta^{4}. 
+
+This potential has two distinct shapes depending on whether C_{1} is smaller or larger than the critical value
+
+C_{1}^{\\text{crit}}=15\\left(\\frac{3}{2}\\right)^{\\frac{7}{3}}. 
+
+If C_{1}<C_{1}^{\\text{crit}} the potential has no maxima and one minimum (see example in the left upper panel of Fig. 2). If C_{1}>C_{1}^{\\text{crit}} the potential has a maxima and two minima (see example in the right upper panel of Fig. 2 showing the case that is solved in the left panel of Fig. 1) 1. The extremum values of \\delta determined from the potential and energy are marked as red circles in the top panels of Fig. 2 and are plotted as green lines in the bottom panel of Fig. 1. The extremums of (a-b) are readily given using Eq. 27 and are marked as red circles in the bottom panels of Fig. 2.
+
+Footnote 1: For analysis of the different features we equip the reader with a link to a visualization of Eqs. 30, 29: [https://www.desmos.com/calculator/ubgicotddn](https://www.desmos.com/calculator/ubgicotddn)
+
+The slow angle (\\theta-\\phi) can either librate or rotate depending on the constants of motion C_{1} and C_{2}. Examples of trajectories of both cases are plotted as equi-C_{1} curves in the bottom panels of Fig. 2. For rotations, \\cos\\left(\\theta-\\phi\\right) must reach both 1 and -1. Using Eqs. 26-27, we have
+
+\\cos\\left(\\theta-\\phi\\right)=\\frac{1}{(a-b)}\\left(\\frac{2}{45}C_{1}-\\frac{1}{ 12}\\left(C_{2}-\\left(a-b\\right)^{2}\\right)^{2}\\right). 
+
+Given C_{1} and C_{2} the rhs. of Eq. 32 has a global maximal value (in the (a-b)>0 regime) denoted M\\left(C_{1},C_{2}\\right)
+
+If M\\left(C_{1},C_{2}\\right)<-1 - Eq. 32 cannot be satisfied for any \\left(\\theta-\\phi\\right) and so the pair \\left(C_{1},C_{2}\\right) do not represent any set of initial conditions. If M\\left(C_{1},C_{2}\\right)<1 the slow angle \\left(\\theta-\\phi\\right) is librating. If M\\left(C_{1},C_{2}\\right)>1 both \\cos\\left(\\theta-\\phi\\right)=-1 and \\cos\\left(\\theta-\\phi\\right)=1 can be reached (because at \\left(a-b\\right)\\rightarrow\\infty the rhs. of Eq. 32 approaches -\\infty) and \\left(\\theta-\\phi\\right) is rotating 2. Since the rhs. of Eq. 32 is monotonically increasing with C_{1}, for each C_{2} there is therefore a minimal permitted C_{1} and a higher minimal C_{1} above which \\left(\\theta-\\phi\\right) is rotating. The latter threshold is shown as a black dashed curve in the lower panels of Fig. 2.
+
+Footnote 2: For analysis of Eq. 32 we equip the reader with a link to a visualization: [https://www.desmos.com/calculator/waiting5elt6](https://www.desmos.com/calculator/waiting5elt6)
+
+For the regime we solve, e_{z}^{2} close to 1, C_{K}<0 and the minimum and maximum values of the eccentricity during any such Kozai cycle are obtained at \\omega=\\pm\\frac{\\pi}{2}. As a result, these can be calculated using the constants j_{z} and C_{K} through
+
+3e_{extremum}^{4}+\\left(5j_{z}^{2}-3+2C_{K}\\right)e_{extremum}^{2}-2C_{K}=0. 
+
+The long-term evolution of j_{z} is obtained via Eq. 25 and the evolution of C_{K} follows
+
+C_{K}=-\\frac{3}{2}+\\frac{1}{2}\\alpha^{\\frac{2}{3}}\\left(\\frac{1}{2}\\left(C_{2} +C_{3}\\right)-\\sqrt{\\frac{5}{3}}\\delta\\right). 
+
+The extremal values of the eccentricity obtained from j_{z} and C_{K} are plotted (on a semi-log 1-e plot) as red dashed curves in the upper panel of Fig. 1. As can be seen in the left panel, the analytical solution captures the long term evolution of the oscillations to an excellent approximation compared to the numerical integration of Eqs. 3.
+
+## 6 Discussion
+
+In this letter we provide a concise presentation of the analysis and analytic solution for the dynamics of a test particle in a Keplerian orbit perturbed by a precessing quadrupole potential. We explicitly demonstrate the success of the solution vs. full numerical solution of the secular equations for a case that is very close to the assumptions made, i.e extremely small \\alpha, \\beta=\\beta_{0} and e_{z}\\sim 1.
+
+Exploring the validity of the solution for wider scopes of the parameters is beyond the scope of this work, but as an example we present in the right panel of Fig. 1 the capability of the analytic solution to describe and approximately reconstruct the long term evolution even for higher values of \\alpha (5^{\\circ} as is numerically explored in (Hamers and Lai, 2017)) and for a value of \\beta slightly different from \\beta_{0}.
+
+Although the analytical model presented in this letter is directly applicable only to a small region of the parameter space (i.e test particle and small perturbation) and only for the final stages of the evolution (i.e at high eccentricity) - it serves as a basis for understanding the more complex phenomena, when the two bodies have comparable mass, and hints for the evolution farther from resonance (i.e starting with low eccentricity).
+
+In the future, we plan to explore the validity and relevance of this model to the different astrophysical phenomena involving KLCs. In addition, we plan to relax some of the assumptions especially starting with low eccentricity or relaxing the test particle assumption.
+
+We thank the anonymous referee for helpful comments improving this letter. We thank Ido Barth for a useful discussion pointing the connection to coordinate moving in a potential well.

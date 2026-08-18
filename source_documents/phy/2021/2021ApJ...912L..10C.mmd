@@ -1,0 +1,209 @@
+###### Abstract
+
+The joint observation of the gravitational-wave and electromagnetic signal from the binary neutron-star merger GW170817 allowed for a new independent measurement of the Hubble constant H_{0}, albeit with an uncertainty of about 15% at 1\\sigma. Observations of similar sources with a network of future detectors will allow for more precise measurements of H_{0}. These, however, are currently largely limited by the intrinsic degeneracy between the luminosity distance and the inclination of the source in the gravitational-wave signal. We show that the higher-order modes in gravitational waves can be used to break this degeneracy in astrophysical parameter estimation in both the inspiral and post-merger phases of a neutron star merger. We show that for systems at distances similar to GW170817, this method enables percent-level measurements of H_{0} with a single detection. This would permit the study of time variations and spatial anisotropies of H_{0} with unprecedented precision. We investigate how different network configurations affect measurements of H_{0}, and discuss the implications in terms of science drivers for the proposed 2.5- and third-generation gravitational-wave detectors. Finally, we show that the precision of H_{0} measured with these future observatories will be solely limited by redshift measurements of electromagnetic counterparts.
+
+Hubble constant -- Binary neutron-star mergers -- gravitational waves 0000-0002-0882-8672]Juan Calderon Bustillo
+
+## Introduction
+
+The joint detection of gravitational-wave (GW) and electromagnetic (EM) radiation from the binary neutron star (BNS) merger GW170817 is a milestone for astrophysics (Abbott et al., 2017, 2017) that has already driven major leaps forward in a number of research areas. Among the many profound science outcomes, GW170817 provided a new, distance-ladder independent measure of the expansion of the Universe (Abbott et al., 2017; Coughlin et al., 2019; Dietrich et al., 2020), parameterized by the Hubble constant. The number of confirmed and putative BNS candidates in the third observing run (Abbott et al., 2020) of Advanced LIGO (Aasi et al., 2015) and Advanced Virgo (Acernese et al., 2015), and the planned sensitivity increase of current- and future-generation GW detectors (Castelvecchi, 2019; Punturo et al., 2010; Reitze et al., 2019), indicates that we can expect a significant increase in both the number of detected BNS mergers, as well as signal-to-noise ratios of detected events. Improvements in the high-frequency regime (\\gtrsim 1 kHz) will also lead to the first detection of the post-merger phase of BNS mergers (Martynov et al., 2019; Ackley et al., 2020), a stage when matter effects play a significant role and most extreme densities are probed.
+
+Determining the Hubble constant from joint GW-EM observations of BNS mergers relies on measuring the luminosity distance to the source from the GW signal and the redshift of the host galaxy from the EM counterpart ((Schutz, 1986); although see Refs. (Messenger and Read, 2012; Taylor and Gair, 2012) for other methods). A key limitation of the former, however, is the degeneracy between the effects on the GW signal produced by luminosity distance and the inclination of the binary. Here, we study how this degeneracy can be broken in the context of future GW detectors in two ways: (i) via the inclusion of higher-order modes (HMs) in GW parameter estimation, and (ii) by accessing the ratio of the two GW polarisations, known as plus "+" and cross "\\times", using multiple detectors. For face-on binaries, we show that the inclusion of HMs leads to major improvements of the distance and inclination estimates, independently of the detector network configuration. For edge-on binaries, we find that a three-detector network that can constrain the polarisation ratio and sky-location of the binary is key to correctly estimate the distance, regardless of the usage or omission of HMs. In both cases, the H_{0} measurement will _not_ be limited by our ability to infer the luminosity distance via GWs, but by the accuracy of the redshift measurement. With redshift-measurement improvements, 2% level measurements of H_{0} could be possible with the observation of _a single_ BNS located at \\sim 40 Mpc, consistent with the distance of GW170817. We show that for unequal mass systems, these improvements can be achieved with the signal emitted during the inspiral phase alone, independent of whether there is matter in the system or not; i.e., the method works for binary systems containing neutron stars and/or black holes. For equal-mass systems, we show that inclusion of matter effects in the post-merger phase is key to improve distance estimates.
+
+We note that percent-level measurements of H_{0} could be performed in a five year time-frame making use of five second-generation detectors (Chen et al., 2018), namely the two Advanced LIGO detectors (Aasi et al., 2015), Advanced Virgo (Acernese et al., 2015), KAGRA (Aso et al., 2013), and the forthcoming LIGO India (B.Iyer et al., 2011). However, this relies on the combination of many observations, therefore assuming that H_{0} is the same in all directions and distances; i.e., the Universe is statistically isotropic and homogeneous on the scales of interest. Our results help to improve this strategy as we point out that percent-level measurements with a single observation are possible. Therefore, our method paves a way toward the study of anisotropies (Collins et al., 1986) or time variations of H_{0}(Wu et al., 1996), to obtain a significantly better and more detailed understanding of the evolution history of our Universe.
+
+### Higher order modes of compact binary mergers
+
+The "+" and "\\times" polarizations of a GW emitted by a compact binary merger located at a luminosity distance d_{L} can be expressed as a superposition of individual modes, h_{\\ell,m}, weighted by spin -2 spherical harmonics Y_{\\ell,m}^{-2} as
+
+h_{+}-ih_{\\times}=\\frac{1}{d_{L}}\\sum_{\\ell\\geq 2}\\sum_{m=-\\ell}^{m=\\ell}Y_{ \\ell,m}^{-2}(\\iota,\\varphi)h_{\\ell,m}(\\Xi). 
+
+Here, \\Xi denotes the masses m_{i} and dimensionless spins \\tilde{\\chi}_{i} of the individual objects and, for the case of BNSs, the individual tidal deformabilities \\Lambda_{i} characterizing the deformation of each star in the external gravitational field of the companion. The parameters (\\iota,\\varphi) represent the polar and azimuthal angles of a spherical coordinate frame describing the location of the observer around the binary (or conversely, the orientation of the binary with respect to the observer), with \\iota=0 denoting the direction of the orbital angular momentum of the binary and \\iota=\\pi/2 denoting the orbital plane. These values respectively refer to face-on and edge-on oriented binaries. For non-precessing binaries, the above sum is dominated by the quadrupole (\\ell,m)=(2,\\pm 2) modes while higher-order modes become loud only during the final inspiral and merger phase, with increasing relative amplitude as the mass ratio q=m_{1}/m_{2}\\geq 1 increases (Pekowsky et al., 2013; Varma et al., 2014; Bustillo et al., 2015; Calderon Bustillo et al., 2017).
+
+Current parameter estimation of BNS signals makes use of waveform templates including only the quadrupole mode. This causes a degeneracy between the inclination and distance parameters that fundamentally limits our ability to measure each. Several works have shown that inclusion of HMs in templates can break this degeneracy for sources with sufficiently-loud HMs in the detector sensitive band, as the observed combination of modes will depend on the orientation of the binary via the Y_{\\ell,m} factors (Graff et al., 2015; London et al., 2018; Calderon Bustillo et al., 2018; Pang et al., 2018; Calderon Bustillo et al., 2019). For Advanced LIGO and Virgo observations, unfortunately, this is only possible for large mass and asymmetric BBHs (Graff et al., 2015; London et al., 2018; Chatzioannou et al., 2019; LIG, 2020) for which the merger and ringdown emission, rich in HMs, is strong in the detector sensitive band. In contrast, the merger and post-merger of BNSs is un-observable due to its large frequency. This emission will, however, be observable with future high-frequency (Martynov et al., 2019; Ackley et al., 2020) and third-generation (Punturo et al., 2010; Reitze et al., 2019) detectors and, in addition, the pre-merger GW emission will last for several minutes in the sensitive detector band, allowing to accumulate the effect of weak HMs.
+
+## Analysis Setup
+
+### Binary neutron-star Waveforms
+
+We test our ability to measure the source distance and H_{0} using the inspiral and post-merger emission of BNSs. To this, we perform parameter inference on two kinds of simulated GW signals. First, we use 80 ms-long numerical-relativity simulations for the post-merger emission of BNS (Dietrich and Hinderer, 2017). These have mass ratios q=1 and q=1.5 and implement two different equations of state (EOSs): a soft one (SLy) and a stiff one (MS1b1). The left panel of Fig. 1 shows the time domain modes for the equal-mass SLy case located at a distance of 40Mpc. The right panel shows in blue and green the spectra of full waveforms observed face-on (blue) and edge-on (green), together with the contribution of the HMs and the (\\ell,m)=(2,1) mode alone for the edge-on case. It can be noted not only how the face-on signal is stronger, but how the presence of HMs in the edge-on signal leads to noticeable morphological differences. Parameter inference on these short waveforms provides an idea of how the post-merger emission breaks the distance-inclination degeneracy. Restricting to this and ignoring the long inspiral signal, however, would greatly underestimate the signal-to-noise ratio (SNR) accumulated throughout the full minutes-long signal observable by the detector, reducing the accuracy of our measurements.
+
+Footnote 1: While a stiff EOS like MS1b is disfavoured by the observation of GW170817 and its EM counterparts, e.g., (Abbott et al., 2019, 2018; Dietrich et al., 2020), it provides a good test case for our study to show the effect of two different EOSs.
+
+To obtain signals that can cover the full inspiral and post-merger emission from a BNS, we combine (Bustillo et al., 2015) our short numerical-relativity waveforms (Dietrich and Hinderer, 2017) with long analytical waveforms covering the early-inspiral minutes before the merger (e.g., computed using tidal effective-one-body model of Ref. (Nagar et al., 2018)). Unfortunately, parameter inference using these waveforms is computationally prohibitive. As a solution, we implement a two-step approach. First, we consider 128s-long phenomenological (Phenom) waveforms (Khan et al., 2016; Santamaria et al., 2010), constructed with the IMRPhenomHM model (London et al., 2018), covering the inspiral-merger and ringdown stages of non-precessing binary black hole (BBH) mergers. While computationally inexpensive, these waveforms omit the two main characteristic aspects of BNSs: tidal-deformability effects and the post-merger emission shown in Fig. 1. Since, as argued, the latter can improve our distance measurements, results obtained using this BBH signal model are rather conservative. Finally, in order to obtain improved and more realistic results for BNSs, we combine these BBH parameter estimates with those obtained by solely analysing the short numerical-relativity waveforms covering the post-merger stage of BNSs, following the procedure described in (Zimmerman et al., 2019).
+
+### Analysis setup
+
+We inject signals h(\\theta_{true}) with source parameters \\theta_{true}, that include HMs, in zero noise and estimate the source parameters using waveform templates h(\\theta) that omit and include HMs. We compute the posterior Bayesian probability of the parameters \\theta as
+
+p(\\theta|\\theta_{true})=\\frac{\\pi(\\theta)\\mathcal{L}(\\theta|h(\\theta_{true}))}{ \\int\\pi(\\theta)\\mathcal{L}(\\theta|h(\\theta_{true}))d\\theta},  with \\pi(\\theta) denoting the prior probability of the parameters \\theta and \\mathcal{L}(\\theta|h(\\theta_{true})) denoting their likelihood. As usual, the latter is defined as the standard frequency-domain likelihood for GW transients (Finn, 1992; Romano and Cornish, 2017)
+
+\\log\\mathcal{L}(\\theta|h(\\theta_{true}))\\propto-\\sum_{N}\\frac{(h(\\theta_{true} )-h(\\theta)|h(\\theta_{true})-h(\\theta))}{2},  where N runs over the different detectors of our network. As we discuss later, we work with two and three-detector networks. As usual, (a|b) represents the inner product (Cutler and Flanagan, 1994)
+
+(a|b)=4\\Re\\int_{f_{min}}^{f_{max}}\\frac{\\tilde{a}(f)\\tilde{b}^{*}(f)}{S_{n}(f )}df,  where \\tilde{a}(f) denotes the Fourier transform of a(t) and {}^{*} the complex conjugate. The factor S_{n}(f) denotes the one-sided power spectral density of the detector. In this work, we consider a network of detectors, all with noise sensitivity equivalent to that of the proposed 2.5-generation Neutron star Extreme Matter Observatory NEMO (Ackley et al., 2020). We choose a lower frequency cutoff of f_{min}=20Hz and a sampling frequency of 16kHz so that f_{max}=8kHz. The NEMO detector has a proposed sensitivity similar to Cosmic Explorer and Einstein Telescope in the kHz regime; we could equally use those third-generation detectors and achieve similar results for the late inspiral and post-merger, albeit with larger signal-to-noise ratios for the full signal given the better low-frequency (\\lesssim 500 Hz) sensitivity.
+
+In all cases, we assume standard prior probabilities for the sky-location, source orientation and polarisation angle, together with a prior uniform in co-moving volume and an uniform prior on the time-of-arrival, with a width of 0.2 s, centered on the true value. For our analyses making use of 128s-long Phenom waveforms, we impose uniform priors on the individual masses m_{1,2}\\in[1,2]M_{\\odot} and on the components of the individual spins along the orbital angular momentum \\chi^{z}_{1,2}\\in[-0.15,0.15]. Since numerical-relativity waveforms, however, are only produced for a discrete set of intrinsic parameters, we assume the masses and spins to be known in this case. We find this is a reasonable assumption as the individ ual masses and the effective spin parameter (Santamaria et al., 2010)\\chi_{eff}=(\\chi_{1}^{2}m_{1}+\\chi_{2}^{2}m_{2})/(m_{1}+m_{2}) are very well measured from the long inspiral. As an example, with a triple-detector network and using HMs, we determine the total mass, chirp mass and effective-spin parameters of our face-on unequal-mass source with respective uncertainties of <1\\%, <0.01\\% and <0.015 at the 68% level. We perform our parameter inference runs with the software Bilby(Ashton et al., 2019; Smith et al., 2020), sampling the parameter space with the algorithm CPNest(Veitch et al., 2020).
+
+We consider three network configurations. The first (denoted HV) assumes two detectors with the location and orientation of Advanced LIGO Hanford and Virgo. Such a network has each detector sensitive to one of the two independent GW polarisations. The second network (HL) assumes LIGO Hanford and Livingston location and orientations, almost anti-aligned, so that both detectors are sensitive to roughly the same GW polarisation, missing the other one. Finally, we consider an HLV network that is sensitive to both GW polarizations and can pinpoint the sky-location of the source.
+
+The accuracy of our distance measurement is of course limited by the loudness of the injected signals in our detector network, quantified by the optimal network signal-to-noise ratio (SNR), given by
+
+\\rho_{opt}(h(\\theta_{true}))=\\sqrt{\\sum_{N}(h(\\theta_{true})|(h(\\theta_{true}) )_{N}},  which is inversely proportional to the source luminosity distance d_{L}. As we show in Appendix III, for face-on cases we obtain optimal SNRs of \\sim 190 for HL and HLV networks and \\sim 140 for HV. In contrast, for the weaker edge-on cases we obtain respective values \\rho_{opt}\\in[30,65] depending on the mass ratio and network considered. For comparison, the SNR of GW170817, whose source was rather face-on, was only \\simeq 32. We note that while in this study we restrict to sources placed at distances d_{L,true}=40Mpc, our results can be extended to different reference distances. In particular, in our SNR-regime, given fixed source and detector network, the uncertainty of our distance estimates roughly depends on the optimal SNR (and therefore on the reference distance) as \\Delta(d_{L})\\propto 1/\\rho_{opt}^{2}\\propto d_{L,true}^{2}(Cramer, 1999; Rao, 1992; Li, 2013). In addition, uncertainties in the estimated value of the Hubble constant H_{0}=cz/d_{L,true} grow linearly with distance.
+
+### Target binary neutron-star sources
+
+We choose four target sources with total total mass M=2.75M_{\\odot}, mass ratios q=1 and q=1.5, and oriented both face-on (\\iota=0) and edge-on (\\iota=\\pi/2). Signals emitted in these two angles differ in three aspects: morphology, polarisation, and loudness. Face-on signals contain solely the (\\ell,m)=(2,2) mode, are circularly polarised (i.e., both h_{+,\\times} have the same amplitude), and are louder than edge-on signals. On the contrary, edge-on signals have contributions from higher-order emission modes that confer a richer structure, but are weaker in amplitude than face-on ones (see Fig. 1). In addition, edge-on signals contain only one of the two polarisations. Consequently, it has been shown that measuring the ratio of the two polarisations is key to infer correctly the inclination of the source, provided that the detector network can observe both polarisations (Usman et al., 2019). For each of these sources, we consider two EOSs, namely SLy and MS1b, which we assume to be known. Different EOSs trigger post-merger HMs in different ways, varying the accuracy of the distance estimate. Finally, we would ideally consider a wide range of distances and sky locations for all of our target sources. However, given the extreme computational cost of our parameter inference runs, and to allow for a direct comparison of our results, we place all of our sources at the same distance and sky location. For the former, we considered that the most reasonable choice was a value of d_{L}=40Mpc, consistent with that of GW170817, the only conclusive BNS observed to date through GWs. Finally, we placed all of our target sources at the same, arbitrary sky location.
+
+## Results
+
+### Distance estimates
+
+Figure 2 shows the two-dimensional posterior distributions for the luminosity distance and inclination of face-on oriented binaries with mass ratios of q=1 (left) and q=1.5 (right), using an HLV detector configuration. The contours denote the 90% credible regions and the legend provides median estimates with symmetric 68% credible intervals. For unequal masses, and using 128s-long Phenom waveforms, the omission of HMs in the templates h(\\theta) leads to a biased estimate of d_{L}^{\\rm Phenom,\\;22}=36.2^{+2.2}_{-2.5} Mpc. Their inclusion corrects this bias and reduces the uncertainty by \\sim 70\\%, yielding a distance measurement of d_{L}^{\\rm Phenom,\\;HM}=39.4^{+0.4}_{-0.9}. For equal masses, the impact of HMs is significantly milder, as the (usually strongest) odd-m emission modes are suppressed (Pan et al., 2011, 2014; Blanchet, 2014). This leads to a biased estimate of d_{L}^{\\rm Phenom,\\;HM}=37.9^{+1.4}_{-2.3} even if HMs are included. We also note that this remains true even if one would assume the intrinsic source parameters (masses and spins) to be known. This situa tion changes, however, when using 80ms-long numerical-relativity waveforms that can account for the rich post-merger signal morphology. For both mass ratios, and considering a SLy equation of state, results are better than those making use of 128s-long Phenom waveforms omitting HMs. Moreover, for equal-mass, the estimate even improves on that including HMs, yielding a non-biased estimate d_{L}^{\\texttt{SLY}}=38.6^{+1.8}_{-2.7} with smaller uncertainties.
+
+We combine the distance estimates obtained using numerical-relativity waveforms with those obtained analysing Phenom waveforms restricted to frequencies not covered the former. To this, we multiply the respective posterior distributions for the the distance, dividing by one instance of the prior (Zimmerman et al., 2019)2. We obtain joint estimates of d_{L}^{\\text{joint}}=38.6^{+0.9}_{-1.3} Mpc for the q=1 case and d_{L}^{\\text{joint}}=39.4^{+0.4}_{-0.7} for the q=1.5 case. The reason behind this improvement is that matter effects arising during the post-merger of BNSs trigger HMs, helping to break the degeneracy between distance and inclination and even allowing to measure the azimuthal angle (see Appendix II). For the unequal-mass case, these only add a small contribution with respect to the integrated effect of the HMs during the 128s of the signal. For q=1, however, odd-m modes are suppressed during the inspiral and are only triggered during the post-merger of our numerical-relativity simulations due to an effect known as _one-armed spiral instability_ or _21-mode instability_(East et al., 2016; Radice et al., 2016; Lehner et al., 2016) (see Suppl. Material). As a consequence, the inclusion of the post-merger emission can have a large impact. In our study, the distance estimates are much better for SLy compared to MS1b, due to the stronger HM emission.
+
+Footnote 2: Note that this ignores that stronger constraints can be obtained for the inclination and the sky-location by combining both measurements, making our results rather conservative.
+
+Finally, while we have discussed results assuming an HLV detector network, in the Suppl. Material we show results for all studied network configurations. In all cases we obtain similar results, both qualitatively and quantitatively.
+
+#### Edge-on cases
+
+Previous work has shown that the degeneracy between distance and inclination can be broken by computing the ratio h_{\\times}/h_{+}, as this evolves from 1 to 0 as the inclination varies from face-on to edge-on (Usman et al., 2019). We find that for face-on binaries, all HL, HV, and HLV configurations yield almost equivalent distance measurements despite the differences in signal loudness across the network, so that HMs have a much larger impact on the measurement than the polarisation ratio. In contrast, in Fig. 3 we show that for edge-on cases it is key not only to access both signal polarisations but also having a third detector that can pin-point the sky-location of the source. For an HLV configuration, unbiased estimates with uncertainties lower than 4% are obtained regardless of the usage of HMs, while biased estimates are obtained using both two-detector configurations. The reason is that such configurations cannot pin-point the sky location of the source using timing information. This way, Bayesian inference places the source at those patches of the sky, consistent with the two-detector timing, where the detector network is most sensitive to, biasing the distance toward large values. We obtain identical qualitative results for the q=1 case, and when analysing our 80 ms-long numerical-relativity simulations.
+
+#### Hubble constant estimates
+
+Combining our distance estimates with simulated redshift estimates, we can infer H_{0} via H_{0}=cz/d_{L}, with c the speed of light. We assume redshift estimates consisting of Gaussian posterior distributions centered at a value of z_{0}=0.00897, corresponding to d_{L}=40 Mpc in a \\LambdaCDM cosmology with Hubble parameter H_{0}=67.9 km s{}^{-1} Mpc{}^{-1}. We assume that the redshift has an uncertainty with standard deviation \\Delta z ranging from a realistic value of 10^{-3} consistent with that for GW170817 (Abbott et al., 2017c) to an improved value of 10^{-4} which would require higher resolution spectrograms and also the possibility to measure the internal motion of sources within individual galaxies, e.g., (Davis et al., 2019).
+
+Figure 4 shows the H_{0} estimates derived from the distance measurements of our face-on BNSs with mass ratios q=1 and q=1.5 as a function of \\Delta z using an HLV network. Once again, we quote results in terms of symmetric 68% credible intervals centred at the median value. For unequal mass, and for \\Delta z=10^{-3}, the omission of HMs never leads to biased estimates. Their inclusion, however, leads an important improvement from H_{0}=73.8^{+9.0}_{-9.8} to H_{0}=68.3^{+7.5}_{-7.5}. More spectacularly, for the most optimistic \\Delta z=10^{-4} HMs improve the measurement from H_{0}=73.8^{+5.3}_{-4.1} to H_{0}=68.0^{+1.6}_{-1.0}, enabling a 2%-level measurement. This shows that with 2.5G detectors, together with improved detector calibration and waveform models, H_{0} estimates will be limited by EM redshift measurements and not by GW distance ones. Conversely, if HMs are omitted, a significant reduction of \\Delta z will _not_ translate into an improved H_{0} estimate. Moreover, we find that H_{0} estimates would be biased when \\Delta z\\lesssim 0.5. Consistently with the previous section, the inclusion of the post-merger emission in the analysis does not lead to any relevant improvement.
+
+As expected, the situation is different for equal-mass cases. For these, the inclusion of post-merger effects is crucial to obtain visible improvements in the H_{0} measurement. For \\Delta z=10^{-3} we obtain a mild improvement from H_{0}=71.2^{+8.6}_{-8.3} to H_{0}=69.6^{+7.8}_{-7.7}. When \\Delta z is reduced to \\Delta z=10^{-4}, the HMs present in the post-merger emission allow for an estimate H_{0}=69.3^{+2.5}_{-1.5}, with uncertainties at the \\simeq 4\\% percent level, while their omission doubles the uncertainty and biases the measurement.
+
+Almost identical results hold for the HL and HV networks, as shown in the Suppl. Material. For the (weaker) edge-on binaries, we find percent-level measurements are possible using the HLV network regardless of the usage of HMs.
+
+## Conclusions
+
+We have shown that the use of higher-order modes in parameter inference of compact binaries with masses in the BNS range leads to great improvements of the distance and inclination estimates in the context of future detectors sensitive to signals in the \\sim kHz regime, such as the proposed 2.5-generation instruments presented in Refs. (Martynov et al., 2019; Ackley et al., 2020) and full third-generation interferometers (Punturo et al., 2010; Reitze et al., 2019). For face-on binaries with modest mass ratios of q=1.5, we find that the accumulated effect of the higher-order modes during the inspiral reduces the uncertainties by \\approx 70\\%. At the current state-of-the-art of redshift measurements from EM counterparts, this yields an \\approx 25\\% improvement of H_{0} estimates. With improved redshift estimates, HMs can enable measurements of H_{0} near the sub-percent level with a _single observation_. For equal-mass binaries, the higher-order modes emitted during the post-merger stage are crucial to improve H_{0} estimates. A soft EOS like SLy, favoured by current observations, would enable percent-level measurements. For edge-on cases, we find that it is crucial to have a three-detector, HLV-like network, able to constrain the inclination and the sky-location of the binary.
+
+We have focused on single event analyses, assuming a constant value for H_{0}. Significantly more precise measurements of the Hubble constant will be achievable by combining this method with an ensemble of binary neutron star detections in the not-too-distant future. The precision of the estimates we obtain with single events may enable us to study possible time variations (Wu et al., 1996) and anisotropies (Collins et al., 1986) of H_{0}. While we have restricted to the reasonable paradigm of a GW170817-like source located at 40Mpc, we note that current BNS merger-rate estimates suggest that such an event is rather rare, with less than 0.1 such mergers per year (Abbott et al., 2020). Pushing this value to at least 1 per year would require the consideration of sources at \\simeq 90Mpc, halving the SNR of our signals, multiplying by four our distance uncertainties and doubling that for H_{0}. We note however that this would still allow for 4%-level measurements of H_{0}. Furthermore, and most importantly, we have considered the fairly conservative scenario of a network formed by 2.5-generation detectors like NEMO, which resulted in signal-to-noise ratios (SNRs) ranging in 50-200 (see Appendix III). The replacement of two of these detectors by other projected detectors like Cosmic Explorer (Reitze et al., 2019; Abbott et al., 2017) or Einstein Telescope (Punturo et al., 2010; Hild et al., 2010), more sensitive at low frequencies and as sensitive at high frequencies as NEMO, does rise these SNRs to the order of 1000, which would lead to significantly more precise results.
+
+We thank Rory Smith, Avi Vajpeyi and Sylvia Biscoveanu for their help to set up Parallel Bilby (Smith et al., 2020) runs. We thank Nicolas Sanchis-Gual, Ornella Piccinni, Valentin Christiaens and Ricardo Martinez-Garcia for comments on the manuscript and Tjonnie Li for useful discussions. JCB acknowledges support by the Australian Research Council (ARC) Discovery Project DP180103155 and the Direct Grant, Project 4053406, from the Research Committee of the Chinese University of Hong Kong. The project that gave rise to these results also received the support of a fellowship from "la Caixa" Foundation (ID 100010434) and from the European Union's Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 847648. The fellowship code is LCF/BQ/PI20/11760016. PDL is supported through ARC Future Fellowship FT160100112, ARC Discovery Project DP180103155, and ARC Centre of Excellence CE170100004. The authors acknowledge computational resources provided by the LIGO Laboratory and supported by National Science Foundation Grants PHY-0757058 and PHY0823459; and the support of the NSF CIT cluster for the provision of computational resources for our parameter inference runs, and the support of the CUHK Central High Performance Computing Cluster, on which our runs using Parallel Bilby were performed. Part of the work described in this paper was supported by a grant from the Croucher Foundation of Hong Kong. This document has LIGO DCC number LIGO-P2000160.
+
+## Appendix I Measuring the azimuthal angle
+
+The inclusion of HMs in the templates accounts for asymmetries in the GW emission that cannot be reproduced when HMs are omitted. This asymmetry allows to define preferred directions in the orbital plane to determine in an unambiguous way where the observer is sitting on it, providing a clear physical meaning to the azimuth angle \\varphi(Calderon Bustillo et al., 2019). For instance, for the case of BBHs, this was used to determine the direction of the final recoil velocity with respect to the line of sight (Calderon Bustillo et al., 2018). While this would lead to accurate measurements of the kick introduced by GW radiation (Calderon Bustillo et al., 2018), it might not account for the final velocity of the remnant due to the ejection of material during the merger process, e.g., (Kyutoku et al., 2015; Chaurasia et al., 2020). Fig. 5 shows the posterior distributions for the \\varphi for two edge-on binaries with mass ratios q=1
+
+[MISSING_PAGE_FAIL:9]
+
+[MISSING_PAGE_EMPTY:13899]
+
+* [2017a] --. 2017d, Classical and Quantum Gravity, 34, 044001, doi: 10.1088/1361-6382/aa51f4
+
+*  --. 2018, Phys. Rev. Lett., 121, 161101, doi: 10.1103/PhysRevLett.121.161101
+
+* [2020a] --. 2020a. [https://arxiv.org/abs/2001.01761](https://arxiv.org/abs/2001.01761)
+
+* [2020b] Abbott, R., et al. 2020b, Population Properties of Compact Objects from the Second LIGO-Virgo Gravitational-Wave Transient Catalog
+
+*  Acernese, F., et al. 2015, Class. Quant. Grav., 32, 024001, doi: 10.1088/0264-9381/32/2/024001
+
+*  Ackley, K., et al. 2020
+
+*  Ashton, G., et al. 2019, Astrophys. J. Suppl., 241, 27, doi: 10.3847/1538-4365/ab06fc
+
+*  Aso, Y., Michimura, Y., Somiya, K., et al. 2013, Phys. Rev. D, 88, 043007, doi: 10.1103/PhysRevD.88.043007
+
+*  B.Iyer, et al. 2011
+
+*  Blanchet, L. 2014, Living Rev. Rel., 17, 2, doi: 10.12942/lrr-2014-2
+
+*  Bustillo, J. C., Bohe, A., Husa, S., et al. 2015. [https://arxiv.org/abs/1501.00918](https://arxiv.org/abs/1501.00918)
+
+*  Calderon Bustillo, J., Clark, J. A., Laguna, P., & Shoemaker, D. 2018, Phys. Rev. Lett., 121, 191102, doi: 10.1103/PhysRevLett.121.191102
+
+*  Calderon Bustillo, J., Evans, C., Clark, J. A., et al. 2019. [https://arxiv.org/abs/1906.01153](https://arxiv.org/abs/1906.01153)
+
+*  Calderon Bustillo, J., Laguna, P., & Shoemaker, D. 2017, Phys. Rev., D95, 104038, doi: 10.1103/PhysRevD.95.104038
+
+*  Castelvecchi, D. 2019, Nature, 566, 305, doi: 10.1038/d41586-019-00573-4
+
+*  Chatziioannou, K., et al. 2019. [https://arxiv.org/abs/1903.06742](https://arxiv.org/abs/1903.06742)
+
+*  Chaurasia, S. V., Dietrich, T., Ujevic, M., et al. 2020. [https://arxiv.org/abs/2003.11901](https://arxiv.org/abs/2003.11901)
+
+*  Chen, H.-Y., Fishbach, M., & Holz, D. E. 2018, Nature, 562, 545, doi: 10.1038/s41586-018-0606-0
+
+*  Collins, C. A., Joseph, R. D., & Robertson, N. A. 1986, Nature, 320, 506, doi: 10.1038/320506a0
+
+*  Coughlin, M. W., Dietrich, T., Heinzel, J., et al. 2019. [https://arxiv.org/abs/1908.00889](https://arxiv.org/abs/1908.00889)
+
+*  Cramer, H. 1999, Mathematical Methods of Statistics, Princeton University Press
+
+*  Cutler, C., & Flanagan, E. E. 1994, Physical Review D, 49, 2658, doi: 10.1103/physrevd.49.2658
+
+*  Davis, T. M., Hinton, S. R., Howlett, C., & Calcino, J. 2019, Mon. Not. Roy. Astron. Soc., 490, 2948, doi: 10.1093/mnras/stz2652
+
+*  Dietrich, T., Coughlin, M. W., Pang, P. T. H., et al. 2020, Science, 370, 1450, doi: 10.1126/science.abb4317
+
+*  Dietrich, T., & Hinderer, T. 2017, Phys. Rev., D95, 124006, doi: 10.1103/PhysRevD.95.124006
+
+*  East, W. E., Paschalidis, V., & Pretorius, F. 2016, Class. Quant. Grav., 33, 244004, doi: 10.1088/0264-9381/33/24/244004
+
+*  Finn, L. S. 1992, Physical Review D, 46, 5236, doi: 10.1103/physrevd.46.5236
+
+*  Graff, P. B., Buonanno, A., & Sathyaprakash, B. 2015, Phys. Rev., D92, 022002, doi: 10.1103/PhysRevD.92.022002
+
+*  Hild, S., et al. 2010, doi: 10.1088/0264-9381/28/9/094013
+
+*  Khan, S., Husa, S., Hannam, M., et al. 2016, Phys. Rev. D, 93, 044007, doi: 10.1103/PhysRevD.93.044007
+
+*  Kyutoku, K., Ioka, K., Okawa, H., Shibata, M., & Taniguchi, K. 2015, Phys. Rev. D, 92, 044028, doi: 10.1103/PhysRevD.92.044028
+
+*  Lehner, L., Liebling, S. L., Palenzuela, C., & Motl, P. M. 2016, Phys. Rev., D94, 043003, doi: 10.1103/PhysRevD.94.043003
+
+*  Li, T. 2013, Extracting Physics from Gravitational Waves Testing the Strong-field Dynamics of General Relativity and Inferring the Large-scale Structure of the Universe, doi: 10.1007/978-3-319-19273-4
+
+*  London, L., Khan, S., Fauchon-Jones, E., et al. 2018, Phys. Rev. Lett., 120, 161102, doi: 10.1103/PhysRevLett.120.161102
+
+*  Martynov, D., Miao, H., Yang, H., et al. 2019, PhRvD, 99, 102004, doi: 10.1103/PhysRevD.99.102004
+
+*  Messenger, C., & Read, J. 2012, PhRvL, 108, 091101, doi: 10.1103/PhysRevLett.108.091101
+
+*  Nagar, A., et al. 2018, Phys. Rev. D, 98, 104052, doi: 10.1103/PhysRevD.98.104052
+
+*  Pan, Y., Buonanno, A., Boyle, M., et al. 2011, Phys. Rev., D84, 124052, doi: 10.1103/PhysRevD.84.124052
+
+*  Pan, Y., Buonanno, A., Taracchini, A., et al. 2014, Phys. Rev. D, D89, 084006, doi: 10.1103/PhysRevD.89.084006
+
+*  Pang, P. T. H., Calderon Bustillo, J., Wang, Y., & Li, T. G. F. 2018. [https://arxiv.org/abs/1802.03306](https://arxiv.org/abs/1802.03306)
+
+*  Pekowsky, L., Healy, J., Shoemaker, D., & Laguna, P. 2013, Phys.Rev., D87, 084008, doi: 10.1103/PhysRevD.87.084008
+
+* [2010a] Punturo, M., et al. 2010a, Class. Quant. Grav., 27, 194002, doi: 10.1088/0264-9381/27/19/194002
+
+* [2010b] --. 2010b, Classical and Quantum Gravity, 27, 084007, doi: 10.1088/0264-9381/27/8/084007
+
+*  Radice, D., Bernuzzi, S., & Ott, C. D. 2016, Phys. Rev., D94, 064011, doi: 10.1103/PhysRevD.94.064011
+
+*  Rao, R. 1992, Information and the Accuracy Attainable in the Estimation of Statistical Parameters, Springer, New York, NY, doi: 10.1007/978-1-4612-0919-5_16Reitze, D., et al. 2019a, Bull. Am. Astron. Soc., 51, 035. [https://arxiv.org/abs/1907.04833](https://arxiv.org/abs/1907.04833)
+
+* Reitze et al. (2019b) Reitze, D., Adhikari, R. X., Ballmer, S., et al. 2019b
+
+* Romano & Cornish (2017) Romano, J. D., & Cornish, N. J. 2017, Living Reviews in Relativity, 20, doi: 10.1007/s41114-017-0004-1
+
+* Santamaria et al. (2010) Santamaria, L., Ohme, F., Ajith, P., et al. 2010, Phys. Rev., D82, 064016, doi: 10.1103/PhysRevD.82.064016
+
+* Schutz (1986) Schutz, B. F. 1986, Nature, 323, 310, doi: 10.1038/323310a0
+
+* Smith et al. (2020) Smith, R. J. E., Ashton, G., Vajpeyi, A., & Talbot, C. 2020, Monthly Notices of the Royal Astronomical Society, 498, 4492, doi: 10.1093/mnras/staa2483
+
+* Taylor & Gair (2012) Taylor, S. R., & Gair, J. R. 2012, Phys. Rev. D, 86, 023502, doi: 10.1103/PhysRevD.86.023502
+
+* Usman et al. (2019) Usman, S. A., Mills, J. C., & Fairhurst, S. 2019, Astrophys. J., 877, 82, doi: 10.3847/1538-4357/ab0b3e
+
+* Varma et al. (2014) Varma, V., Ajith, P., Husa, S., et al. 2014, Phys.Rev., D90, 124004, doi: 10.1103/PhysRevD.90.124004
+
+* Veitch et al. (2020) Veitch, J., et al. 2020, doi: 10.5281/zenodo.592884
+
+* Wu et al. (1996) Wu, X.-P., Qin, B., & Fang, L.-Z. 1996, The Astrophysical Journal, 469, 48, doi: 10.1086/177756
+
+* Zimmerman et al. (2019) Zimmerman, A., Haster, C.-J., & Chatziioannou, K. 2019, Phys. Rev., D99, 124044, doi: 10.1103/PhysRevD.99.124044

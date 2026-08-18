@@ -1,0 +1,291 @@
+###### Abstract
+
+The Parkes 20 cm Multibeam pulsar surveys have discovered nearly half of the known pulsars and revealed many distant pulsars with high dispersion measures. Using a sample of 1,301 pulsars from these surveys, we have explored the spatial distribution and birth rate of normal pulsars. The pulsar distances used to calculate the pulsar surface density are estimated from the YMW16 electron-density model. When estimating the impact of the Galactic background radiation on our survey, we projected pulsars in the Galaxy onto the Galactic plane, assuming that the flux density distribution of pulsars is uniform in all directions, and utilized the most up-to-date background temperature map. We also used an up-to-date version of the ATNF Pulsar Catalogue to model the distribution of pulsar flux densities at 1400 MHz. We derive an improved radial distribution for the pulsar surface density projected on to the Galactic plane, which has a maximum value at \\sim4 kpc from the Galactic Centre. We also derive the local surface density and birthrate of pulsars, obtaining 47 \\pm 5 kpc{}^{-2} and \\sim 4.7 \\pm 0.5 kpc{}^{-2} Myr{}^{-1}, respectively. For the total number of potentially detectable pulsars in the Galaxy, we obtain (1.1 \\pm 0.2) \\times 10{}^{4} and (1.1 \\pm 0.2) \\times 10{}^{5} before and after applying the Tauris & Manchester (1998) beaming correction model. The radial distribution function is used to estimate the proportion of pulsars in each spiral arm and the Galactic centre. pulsars: general -- Galaxy: structure 0000-0002-2286-1886]J. T. Xie
+
+0000-0002-8882-0858]J. B. Wang
+
+0000-0002-8882-0858]N. Wang
+
+## 1 Introduction
+
+Neutron stars (NSs) are thought to form in core-collapse supernovae with Population I OB stars as progenitors (Baade & Zwicky, 1934). Most of the OB stars are located in the Galactic plane and trace the structure of the Galactic spiral arms (Chen et al., 2019). Many NSs are found as radio pulsars in our Galaxy. The observed pulsars also show an association with the spiral arms, and most of them are close to the Galactic plane.
+
+Many pulsar surveys have been carried out since the discovery of the first pulsar. At the time of writing, more than 3300 radio pulsars have been discovered.1 They represent about 10 to 25 percent of the potentially detectable pulsars beaming towards us in the Galaxy (Faucher-Giguere & Kaspi, 2006; Lorimer et al., 2006a). Models for pulsar the galactocentric radial and height distributions, luminosity distribution, magnetic field evolution and radiation model, etc. have all been established (Yusifov & Kucuk, 2004; Lorimer et al., 2006b; Faucher-Giguere & Kaspi, 2006; Bates et al., 2013; Levin et al., 2013). The properties of the radio pulsar population provide valuable constraints on the evolution of NSs. For instance, these results can be used to estimate the birthrate of pulsars and model the Galactic structure. Since the pulsar progenitors, O-B stars, or their associated HII regions, actually define the spiral structure of our Galaxy (Hou & Han, 2014; Chen et al., 2019), it is expected that at least young pulsars will be concentrated in spiral arms. From the Galactic longitude distribution of known pulsars, Kramer et al. (2003a) and Faucher-Giguere & Kaspi (2006) showed that such concentrations exist. Consequently, it is necessary to model such structures in any realistic pulsar population synthesis simulation.
+
+Pulsars in the Galactic plane (and, in particular, close to the Galactic centre; GC) are relatively hard to detect as the sky background temperature and the interstellar medium (ISM) electron density are higher towards the Galactic plane than in other directions, reducing the survey sensitivity. These issues are less significant at higher observing frequencies, but pulsar flux densities generally decrease with increasing observing frequency. Early pulsar surveys were mostly carried out at relatively low frequencies. Pulsar surveys at 1.4 GHz using Parkes telescope (e.g., Manchester et al., 2001) revealed many pulsars with high dispersion measures (DMs) in the Galactic plane and some close to the GC.
+
+As more and more pulsars were found, the distribution of pulsars in the Galaxy could be studied in more detail. Narayan (1987) proposed that the pulsar radial density profile around the GC is Gaussian. After the completion of the first large-scale high-frequency pulsar survey concentrating on the Galactic plane (Clifton et al., 1992; Johnston et al., 1992), Johnston (1994) concluded that such a model is incompatible with the observed distribution. Instead, they proposed a model in which the pulsar surface density peaks 4 kpc from the GC. Yusifov & Kucuk (2004) (hereafter YK04) proposed a four-parameter pulsar radial distribution model based on the electron density model, NE2001 (Cordes & Lazio, 2002). Lorimer et al. (2006b) (hereafter LF06) found that the pulsar radial density profile is best described by a Gamma function. These studies have generally shown a deficit of pulsars in the inner Galaxy.
+
+Over the last 20 years, many Galactic plane surveys have been carried out at frequencies higher than 1.4 GHz to search pulsars in the inner Galaxy especially around the GC. Johnston et al. (2006) discovered two pulsars less than \\sim40 pc from the GC with the 3.1-GHz Parkes Galactic Centre survey. Deneva et al. (2009) reported three normal radio pulsars close to Sgr A* with 2-GHz observations from the Green Bank Telescope. Pulsars close to the Galactic centre have also been found using space-based telescopes. NuSTAR and Swift discovered SGR J1745-29 (Mori et al., 2013; Kennea et al., 2013), which has a projected distance of only 0.097 pc from Sgr A* (Bower et al., 2015). This source is also a radio-emitting magnetar (Eatough et al., 2013) and likely to be associated with the GC region. The discovery of these pulsars enables us to investigate the pulsar distribution in more detail, especially in the GC region.
+
+Many factors affect the sensitivity of pulsar searches. These effects are often classified into two simplified categories. One is related to distance and the ISM, known as the distance selection effect, includes scattering, dispersion, and pulsar flux densities. The other is related to Galactic latitude and longitude, and is known as the directional selection effect, in which the sky background temperature is the most significant.
+
+In the last decade, there has been great progress in the study of the Galactic background radiation and the Galactic electron-density model, which allows us to better understand the spatial distribution of pulsars in the Galaxy. In this paper, the pulsar distance r is calculated from the Galactic electron density model, YMW16 (Yao et al., 2017). A new high-resolution sky temperature map (Remazeilles et al., 2015) is used in the modeling of the directional selection effect. Contamination from extragalactic radio sources and reduced large-scale striations have been removed from this sky temperature map. We used the latest available version of the ATNF Pulsar Catalogue (Manchester et al., 2005) to obtain data on pulsar flux densities at 1.4 GHz. An empirical method based on that described by YK04 is applied to estimate selection effects.
+
+We describe the pulsar sample and and the process of data pre-processing in Section 2. In Section 3, the flux density distribution of pulsars at 1.4 GHz is modelled and a new directional selection model is established. We derive the radial distribution of pulsars in Section 4 and discuss our results and conclusions in Section 5.
+
+## 2 Pulsar Surface Density in the Galaxy
+
+As mentioned above, the number of pulsars in the ATNF Pulsar Catalogue currently exceeds 3,300. Here, we are interested in the distribution of normal radio pulsars. Therefore, we excluded pulsars that are known to be in globular clusters, binary systems, recycled (P<0.03 s), and extragalactic pulsars. In order to obtain an accurate spatial distribution of pulsars, it is better to select pulsars discovered by surveys with similar sensitivity. For this reason, pulsars discovered by four pulsar surveys with the Parkes "Murriyang" radio telescope including the Parkes (Manchester et al., 2001), Swinburne (Edwards et al., 2001), high-latitude (Burgay et al., 2006), and the Perseus Arm (Burgay et al., 2013) multibeam pulsar surveys (collectively, these four surveys are called MBPS), are selected for our working sample. A total of 1301 pulsars are located in the region of Galactic longitude -160^{\\circ}\\leq l\\leq 50^{\\circ}. The closest pulsar to the GC that was discovered by the PMPS was PSR J0932-5329, at a distance 4.23 kpc. These 1301 pulsars are used to calculate the Galactic pulsar surface density. In addition, six pulsars around the GC discovered by other pulsar surveys are included when calculating the surface density of pulsars in the GC region. See Section 4 for details.
+
+Pulsars discovered by the MBPS and the other surveys are projected on to the Galactic plane using different markers, as shown in Figure 1. Pulsar distances were estimated using the dispersion measure and the YMW16 model. The distance between the GC and the Sun was taken as R_{\\odot}=8.3\\pm 0.23 kpc (Brunthaler et al., 2011). When calculating the pulsar surface density, it is necessary to grid the Galactic plane. The gridding method is as follows:
+
+1. Concentric circles are drawn around the GC and around the Sun. The interval between adjacent circles is set at \\Delta R=R_{\\odot}/5=1.66 kpc.
+
+2. Grid circles are centered at the intersections of these two sets of concentric circles.
+
+3. Distant pulsars are more difficult to detect, and the observed surface density of pulsars decreases rapidly with increasing distance. At large distances, it is inevitable that some grid circles will be empty. Increasing the grid size can help to reduce this effect. The radius of the grid circles increases with the increasing distance from the Sun according to: R_{gi}=\\xi(i-1)+\\eta\\Delta R (1) where i is the circle number from the Sun and ranges from 1 to 12, \\xi=0.098, \\eta=0.83.
+
+A larger grid size will reduce the number of points with zero surface density, but it will also reduce the total number of grid points. On the other hand, a larger number of grid points will lead to a more accurate depiction of the pulsar distribution, but it will also lead to more grid points with zero surface density. To balance the number of grids and minimize the loss of pulsar surface density, we conducted multiple sets of tests to determine the optimal parameters \\Delta R, \\xi, and \\eta for the grid partitioning method described above. We selected the optimal parameters to minimize the loss of pulsar surface density while maintaining a sufficient number of grids. After obtaining the initial surface density, which is based on these optimal parameters, there are still grid points with zero surface density, even when employing larger grid sizes for distant regions. Furthermore, there are fluctuations in pulsar surface density near spiral arms, which are likely attributable to the influence of the Galactic structure. To reduce the impact of these factors, it is necessary to apply smoothing to the initial surface density. Therefore, we smooth the pulsar surface density to reduce the fluctuations, using
+
+\\rho^{\\prime}_{ij}=(\\rho_{1}+\\rho_{2}+4\\rho_{ij}+\\rho_{3}+\\rho_{4})/8,  where \\rho^{\\prime}_{ij} is the smoothed surface density at the intersections of i{}_{th} and j{}_{th} circles from the Sun and the GC, and \\rho_{1},~{}\\rho_{2},~{}\\rho_{3}, and \\rho_{4} are the surface density in four new grid circles at coordinates (x_{ij}, y_{ij} + 1.66), (x_{ij}, y_{ij} - 1.66), (x_{ij} - 1.66, y_{ij}) and (x_{ij} + 1.66, y_{ij}), respectively. We also averaged over the grid circles, normally six in number, surrounding a given grid point:
+
+\\rho^{\\prime}_{ij}=(\\rho_{a1}+\\rho_{a2}+6\\rho_{ij}+\\rho_{a3}+\\rho_{a4}+\\rho_{a5 }+\\rho_{a6})/12,  where \\rho_{a1}, \\rho_{a2}, \\rho_{a3}, \\rho_{a4}, \\rho_{a5}, and \\rho_{a6} are the observed surface density in the six grid circles adjacent to the (i,j) grid circle. The surface density for the local (r\\leq 1.66 kpc) grid circle is not smoothed.
+
+Table 1 gives the average observed surface densities (in units of kpc{}^{-2}) of pulsars in each grid circle as functions of the galactocentric radius (R) and the distance from the Sun (r).
+
+## 3 Selection Effects and Correction Method
+
+In studies of pulsar populations, selection effects are a major source of error, as the observed sample represents a biased subset of the entire Galaxy's pulsar population. To uncover the true nature of pulsar populations, it is crucial to identify and account for selection effects and establish a robust model.
+
+Numerous factors contribute to selection effects, primarily including characteristics of the pulsar population, the distance to observed sources, telescope sensitivity, observation frequency, Galactic background radiation, and dispersion measure. In addition to the effects of observing frequency and instrumental characteristics, the Galactic background radiation and dispersion measure significantly influence pulsar searches (Ankay et al., 2004).
+
+The Galactic background radiation exhibits significant variations along different lines of sight, and its influence can be described as a directional selection effect. In specific directions, the dispersion measure varies as a function of distance, thereby allowing the selection effect induced by dispersion measure to be approximately superimposed on the direction-related impact.
+
+In this context, we define the fraction of missed pulsars due to a specific selection effect as (1-K), where K represents the selection bias factor. Consequently, the observed pulsar density, denoted as \\rho_{o}, is a function of K and the actual pulsar density, \\rho, expressed as follows: \\rho_{o}=K\\times\\rho. Assuming that the Galactic background radiation, denoted as K(l), and the distance-dependent selection effect, denoted as K(r), are uncorrelated, the observed pulsar surface density and the selection effect
+
+\\begin{table}
+
+\\begin{tabular}{c|c c c c c c c c c c c c} \\hline \\hline r (kpc) & 0 & 1.66 & 3.32 & 4.98 & 6.64 & 8.3 & 9.96 & 11.62 & 13.28 & 14.94 & 16.6 & 18.26 \\\\ \\hline
+
+0 & & & & & & 43.89 & & & & & & \\\\
+
+1.66 & & & & & 40.05 & 17.3 & 13.63 & & & & & \\\\
+
+3.32 & & & & 39.48 & 10.98 & 11.60 & 6.48 & 0.45 & & & & \\\\
+
+4.98 & & & 31.07 & 17.47 & 7.77 & 3.45 & 2.22 & 1.74 & 0 & & & \\\\
+
+6.64 & & 13.58 & 8.79 & 9.62 & 6.74 & 1.79 & 0.38 & 0.87 & 0.23 & 0 & & \\\\
+
+8.3 & 3.04 & 3.19 & 4.68 & 4.47 & 3.2 & 2.09 & 0.44 & 0.13 & 0.11 & 0.02 & 0 & \\\\
+
+9.96 & & 1.68 & 2.79 & 2.03 & 1.95 & 1.99 & 1.38 & 0.21 & 0.02 & 0 & 0 & 0 \\\\
+
+11.62 & & & 1.56 & 1.74 & 1.00 & 1.11 & 2.34 & 0.43 & 0.09 & 0.01 & 0.01 & 0 \\\\
+
+13.28 & & & & 1.65 & 0.99 & 0.74 & 1.10 & 0.60 & 0.05 & 0.02 & 0.07 & 0.01 \\\\
+
+14.94 & & & & & 1.13 & 0.65 & 0.31 & 0.27 & 0.13 & 0.01 & 0.01 & 0.01 \\\\
+
+16.6 & & & & & & 0.53 & 0.24 & 0.12 & 0.14 & 0.03 & 0 & 0 \\\\
+
+18.26 & & & & & & & 0.28 & 0.09 & 0.03 & 0.04 & 0.06 & 0.01 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: The average observed surface density of pulsars across the Galactic plane (kpc{}^{-2}). R is the distance from the Galactic Center and r is the distance from the Sun. can be defined as follows:
+
+\\rho_{o}(r,R)=K(l)K(r)\\rho(r,R),  where l is the Galactic longitude associated with the galactocentric distance (R) and heliocentric distance (r), and \\rho_{o}(r,R) and \\rho(r,R) are the observed and true distributions of pulsar surface densities on the Galactic plane. The Galactic longitude is a function of r and R (and Galactic quadrant) and, since we are considering only densities projected on to the Galactic plane, we can take the Galactic latitude b to be zero. Table 1 is a numeric form of \\rho_{o}(r,R).
+
+The survey sensitivity can be described using the relation given by Morello et al. (2020):
+
+S_{\\rm min}=\\frac{\\alpha\\beta\\big{(}T_{\\rm sys}+T_{\\rm sky}\\big{)}}{\\mathcal{ E}G\\sqrt{N_{\\rm p}\\,\\Delta\\nu\\,t_{\\rm obs}}}\\left(\\frac{W_{\\rm eff}}{P-W_{\\rm eff} }\\right)^{\\frac{1}{2}},  where S_{\\rm min} is minimum detectable flux density for a radio pulsar; \\alpha is the required signal-to-noise ratio for a detectable pulsar; \\beta is a degradation factor relating to both non-ideal instrumental responses and offset from the beam center; T_{\\rm sky}=T_{\\rm cmb}+T_{\\rm gal}; T_{\\rm sys} is the system temperature (K); T_{\\rm gal} is the background sky temperature; T_{\\rm cmb} is the cosmic microwave background (CMB) temperature; \\mathcal{E} is the search efficiency factor; G is the gain of the telescope (K/Jy); N_{\\rm p}=2 is the number of polarizations; t_{\\rm obs} is the observation time per pointing (s); \\Delta\\nu is bandwidth (Hz); P is the period of a pulsar (s) and W_{\\rm eff} is the effective pulse width (s). S_{\\rm min} determines the number and distribution of pulsars detected by any given survey. By effectively inverting its effects, the underlying or "true" distribution of pulsars in the Galaxy can be determined.
+
+The longitude-dependent selection factors can be obtained from:
+
+K(l)=1-\\int_{0}^{S_{\\rm min}\\ (\\rm l,\\ b)}f(S_{1400})\\,\\mathrm{d}S_{1400},  where f(S_{1400}) is the flux density distribution function at 1400 MHz. The minimum detectable flux density can be derived from the following equation:
+
+S_{\\rm min\\ (\\rm l,\\ b)}=S_{\\rm min0}\\,\\bigg{(}1+\\frac{T_{\\rm sky,\\nu}-T_{\\rm cmb }}{T_{\\rm cmb}+T_{\\rm sys}}\\bigg{)},  where S_{\\rm min0} is the minimum detectable flux density for a radio pulsar considering only the CMB and radiometer noise. The pulsar with the lowest flux density among those discovered in the MBPS is J1822-0848, with an S1400 \\sim 0.04 mJy. Both Parkes (Manchester et al., 2001) and the Perseus Arm (Burgay et al., 2013) multibeam pulsar surveys cover regions with b\\leq 5^{\\circ} with similar observation time per point. Considering the variation of background radiation with Galactic latitude, the majority of survey areas exhibit similar sensitivity. Therefore, we set S_{\\rm min0} to be 0.04 mJy; T_{\\rm sys} is the telescope system temperature, T_{\\rm sys}=21 K for the Parkes multibeam receiver (Manchester et al., 2001). Equation (5) indicates the background radiation of the Galaxy will lead to increase of the minimum detectable flux density for a pulsar. Therefore, we divide the density of pulsars in each grid circle by its corresponding K(l).
+
+K(l) mainly depends on the effective temperature of the sky background radiation, T_{\\rm sky}. The sky temperature at 408 MHz can be obtained from Remazeilles et al. (2015) and scaled to the observing frequency (1374 MHz) through the following relation:
+
+T_{\\rm sky,\\nu}=\\left(T_{\\rm sky,\\nu_{0}}-T_{\\rm cmb}\\right)\\,\\bigg{(}\\frac{ \\nu}{\\nu_{0}}\\bigg{)}^{-2.6}+T_{\\rm cmb},  where T_{\\rm sky,\\nu_{0}} is the sky temperature at 408 MHz; T_{\\rm cmb} = 2.275 K (Fixsen, 2009).
+
+Figure 3 shows the longitude dependence of K(l) obtained by integrating T_{\\rm sky} over \\pm 5^{\\circ} of Galactic latitude b and substituting into Equation 5. In the calculation of K(l), YK04 assumed the flux densities of normal pulsars to be uniformly distributed, which may lead to an underestimation of the proportion of low-flux pulsars.
+
+We model the pulsar flux density distribution using 2616 normal pulsars. The pulsar flux densities at 1400 MHz are fitted using logarithmic-normal, gamma and hyperbolic-secant distributions, as shown in Figure 2. The pulsar flux density distribution clearly is better fitted by the hyperbolic-secant function. The flux density distribution of normal pulsars at 1400 MHz is expressed as:
+
+f(x;\\mu,\\sigma)=\\frac{1}{\\pi\\sigma}{\\rm sech}(\\frac{x-\\mu}{\\sigma}),  where \\mu=2.17\\pm 0.03, \\sigma=0.45\\pm 0.02, x=\\log_{10}(S_{1400})+2.6. Here, 2.6 is specifically chosen to ensure that x remains positive for the observed sample. Based on the results of Kolmogorov-Smirnov test, the hyperbolic-secant function is the best fit to the observed pulsar flux density distribution at 1400MHz. Then, the pulsar flux distribution is used to estimate the effects of radiometer noise and Galactic background radiation. According to Equation (5) to Equation (9), the longitude-dependant selection factor can be written as:
+
+K(l)=1-\\int_{0}^{\\log_{10}S_{\\rm min\\ (\\rm l,\\ b)}+2.6}f(x;\\beta,\\alpha)\\mathrm{d}x. 
+
+The directional selection-correcting factor K(l) is calculated from Equation (5) \\sim Equation (10), as shown in Figure 3.
+
+Kodaira (1974) proposed a method to calculate the distance selection effect for supernova remnants (SNRs). It was later used to study the distribution of pulsars in the Galaxy (see e.g. Huang et al., 1980; Yusifov, 1981; Gusejnov & Yusifov, 1984; Wu & Leahy, 1989; Yusifov & Kucuk, 2004). We adopt this method to calculate the distance-dependent selection factor. Whether a flux-density-limited survey can detect a pulsar depends on its luminosity. For a given distance (d), the minimum detectable luminosity L_{\\rm min} can be scaled to S_{\\rm min}. The relationship is as follows:
+
+L_{\\rm min}=S_{\\rm min}d^{2},  where S_{\\rm min} can be derived from Equation (5).
+
+S_{\\rm min} is also related to the pulse width. Pulse broadening, scattering and scintillation will reduce the sensitivity of pulsar surveys. These factors strongly depend on distance and reduce the detected number of pulsars. We simply assume that the combined effect of these factors can be described by the exponential law as:
+
+K(r)=K_{1}(r)K_{2}(r)\\cdots K_{i}(r)=e^{-\\alpha_{i}r}e^{-\\alpha_{i}r}\\cdots e^ {-\\alpha_{i}r}=e^{-\\alpha_{i}r},  where K_{1}(r), K_{2}(r), etc. are distance-dependent correction factors resulting from scintillation, scattering, and other effects. The functional form of the distance selection effect conveniently represents the exponential decay of a transmitted electromagnetic wave. It is difficult to quantitatively estimate each of these factors separately. We use the data in Table 1 to estimate their combined effect as described below.
+
+We assume that the surface density of pulsars is symmetrically distributed around the GC. Then the surface density at a distance of R_{\\odot} from GC can be calculated using Equation (4), where \\rho(r,R_{\\odot}), the apparent density at R = 8.3 kpc, is shown in Col. 6 of Table 1.
+
+Figure 4 shows the observed and corrected surface density of pulsars as a function of the heliocentric distance r. K(r) and \\rho_{o}(r,R_{\\odot}) can be derived by fitting the data in Figure 4 with a simple exponential:
+
+K(r)=\\exp(-cr). 
+
+\\rho_{o}(r,R_{\\odot}) is constant and K(l) is known. The local surface density of pulsars \\rho_{o}(r,R_{\\odot}) within r\\leq 0.83 kpc can be estimated using all the available data, taking into account the different survey sensitivities as a function of Galactic longitude and latitude. We obtained 46.8 pulsars kpc{}^{-2} with 1400-MHz flux densities greater than S_{min,1400} as marked by plus signs in Figure 4. K(r) and \\rho_{o}(r,R_{\\odot}) are derived by a least-mean-squares (LMS) fitting of the corrected surface densities shown in Figure 4 with:
+
+\\ln(\\rho_{o}(r,R_{\\odot})/K(l))=\\ln(\\rho(0,R_{\\odot})K(r))=\\ln\\rho(0,R_{\\odot}) -cr,  giving \\ln\\rho(0,R_{\\odot})=3.16\\pm 0.26 and c=0.248\\pm 0.027.
+
+The corrected surface density of pulsars is given in Table 2 using K(l) and K(r) derived from Equation (10) and Equation (13). The local surface density of pulsars is \\rho(0,R_{\\odot})=24^{+7}_{-5} pulsars kpc{}^{-2} obtained by fitting the surface density shown in Figure 5. The true local pulsar density is higher than the fitted value, which may be accounted for in several different ways. One is a possible over-estimation of the electron density near the Sun by the YMW16 model. There appears to be a similar problem with the Carina arm, which would affect the apparent and corrected densities on or near the Solar Circle at distances of 5-8 kpc, and hence also the derived radial distribution.
+
+The surface density of pulsars as a function of radial distance can be derived by averaging the columns in Table 2. The uncertainty of the pulsar surface density can be calculated as follows (Yusifov & Kucuk, 2004):
+
+\\frac{\\sigma^{2}_{\\rho_{ijc}}}{\\rho^{2}_{ijc}}=\\left(\\frac{\\sqrt{N_{ij}}}{N_{ ij}}\\right)^{2}+(r\\sigma_{c})^{2},  where \\sigma_{\\rho_{ijc}} is the error of \\rho_{ijc}, and \\sigma_{c}=0.027 is the standard deviation calculated using Equation (14). The surface density uncertainty in each grid is shown in Table 3. We can obtain the radial distribution of pulsars in the Galaxy by averaging the corrected pulsar surface density in Table 2. As the inferred surface density of pulsars within individual grid circles tends towards zero, the formal uncertainty also tends towards zero. Physically, the uncertainty within these grid circles can be more accurately determined by averaging the uncertainties of neighboring circles. However, when computing the radial distribution function, grid circles with a surface density of zero also possess a weight of zero. Therefore, we did not calculate their uncertainty by averaging the uncertainties of adjacent grid circles.
+
+\\begin{table}
+
+\\begin{tabular}{c|c c c c c c c c c c c c} \\hline \\hline r (kpc) & 0 & 1.66 & 3.32 & 4.98 & 6.64 & 8.3 & 9.96 & 11.62 & 13.28 & 14.94 & 16.6 & 18.26 \\\\ \\hline
+
+0.0 & & & & & & 48.63 & & & & & & \\\\
+
+1.66 & & & & & & 84.62 & 28.42 & 22.35 & & & & & \\\\
+
+3.32 & & & & & 125.9 & 28.01 & 28.93 & 16.02 & 1.11 & & & & \\\\
+
+4.98 & & & & 149.55 & 68.09 & 29.42 & 13.27 & 8.33 & 6.5 & 0.0 & & & \\\\
+
+6.64 & & & 98.66 & 53.52 & 55.49 & 38.9 & 10.18 & 2.15 & 4.91 & 1.3 & 0.0 & & \\\\
+
+8.3 & 33.33 & 29.06 & 43.12 & 39.02 & 28.19 & 17.98 & 3.79 & 1.11 & 0.94 & 0.17 & 0.0 & \\\\
+
+9.96 & & & 27.8 & 37.69 & 27.35 & 25.68 & 25.91 & 17.88 & 2.72 & 0.26 & 0.0 & 0.0 & 0.0 \\\\
+
+11.62 & & & & 38.97 & 36.54 & 19.97 & 21.98 & 45.94 & 8.5 & 1.75 & 0.2 & 0.19 & 0.0 \\\\
+
+13.28 & & & & & 62.21 & 30.64 & 22.15 & 33.56 & 17.75 & 1.49 & 0.59 & 2.06 & 0.29 \\\\
+
+14.94 & & & & & 64.31 & 30.09 & 14.01 & 12.22 & 5.83 & 0.45 & 0.44 & 0.44 \\\\
+
+16.6 & & & & & & 45.52 & 17.13 & 8.2 & 9.48 & 2.02 & 0.0 & 0.0 \\\\
+
+18.26 & & & & & & & 36.3 & 9.62 & 3.1 & 4.1 & 6.09 & 1.02 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Corrected surface densities of pulsars.
+
+\\begin{table}
+
+\\begin{tabular}{c|c c c c c c c c c c c c} \\hline \\hline r (kpc) & 0 & 1.66 & 3.32 & 4.98 & 6.64 & 8.3 & 9.96 & 11.62 & 13.28 & 14.94 & 16.6 & 18.26 \\\\ \\hline
+
+0.0 & & & & & & 4.8 & & & & & & \\\\
+
+1.66 & & & & & 8.97 & 4.34 & 3.81 & & & & & \\\\
+
+3.32 & & & & 15.77 & 5.28 & 5.34 & 3.75 & 0.92 & & & & \\\\
+
+4.98 & & & 24.2 & 12.27 & 6.61 & 4.0 & 3.02 & 2.62 & 0 & & & \\\\
+
+6.64 & & & 21.58 & 12.71 & 12.93 & 9.82 & 3.96 & 1.66 & 2.58 & 1.27 & 0 & & \\\\
+
+8.3 & 11.07 & 9.53 & 12.88 & 11.77 & 9.23 & 6.67 & 2.58 & 1.34 & 1.23 & 0.51 & 0 & \\\\
+
+9.96 & & 11.34 & 13.54 & 10.6 & 10.06 & 10.1 & 7.73 & 2.47 & 0.73 & 0 & 0 & 0 \\\\
+
+11.62 & & & 16.86 & 15.41 & 9.72 & 10.38 & 18.24 & 5.51 & 2.24 & 0.75 & 0.71 & 0 \\\\
+
+13.28 & & & & 28.0 & 15.38 & 12.0 & 16.43 & 10.23 & 2.39 & 1.47 & 2.82 & 1.02 \\\\
+
+14.94 & & & & & 32.71 & 17.28 & 10.03 & 9.18 & 5.82 & 1.49 & 1.46 & 1.46 \\\\
+
+16.6 & & & & & & 28.21 & 13.33 & 8.24 & 8.96 & 3.74 & 0 & 0 \\\\
+
+18.26 & & & & & & & 27.04 & 10.6 & 5.51 & 6.39 & 7.94 & 3.06 \\\\ \\hline \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: Errors of surface densities of pulsars
+
+In Figure 5, the solid line corresponds to the fitted radial distribution (Equation 17). The surface densities for each column in Table 2 are averaged with the weight of each grid based on its uncertainty and calculated as follows:
+
+\\rho(R_{j})=\\frac{\\sum_{i}\\frac{\\sigma_{ijc}}{\\sigma_{ijc}^{2}}}{\\sum_{i}l/\\sigma _{ijc}^{2}}\\quad\\text{ and }\\quad\\sigma^{2}(R_{j})=\\big{(}\\sum_{i}(\\sigma_{ijc}^{-2}) \\big{)}^{-1},  where j and i are the serial numbers of column and row; R_{j} is distance from the GC corresponding to the first row in Tables 1 - 3. As shown in Table 2, the surface density at GC (R<1.2 kpc) is about 33 pulsars kpc{}^{-2} considering only MBPS pulsars and its uncertainty is \\sim11 pulsars kpc{}^{-2}.
+
+We found that no pulsar was detected by the MBPS surveys within 0.53 kpc of the GC. Therefore, we include pulsars discovered by other surveys. There were six pulsars discovered in the GC region, and four more in the region of 0.53 kpc <R<1.1 kpc from the GC. After correcting for the direction and distance selection effects, the surface density of GC region is 14.74\\pm 8.08 pulsars kpc{}^{-2}. These results are used to fit the radial distribution and are shown in Figure 5.
+
+The radial distribution of the pulsar surface density shown in Figure 5 can be fitted by the gamma function:
+
+\\rho(r)=A\\left(\\frac{r+R_{pdf}}{R_{\\odot}+R_{pdf}}\\right)^{a}\\exp{\\left[-b \\left(\\frac{r-R_{\\odot}}{R_{\\odot}+R_{pdf}}\\right)\\right]},  where R_{\\odot} = 8.3 kpc is the Sun-GC distance, A = 20.41 \\pm 0.31 kpc{}^{-2}, a = 9.03 \\pm 1.08, b = 13.99 \\pm 1.36, R_{pdf} = 3.76 \\pm 0.42. The surface density of pulsars increases from the GC and reaches a maximum at a galactocentric radius of \\sim3.91 kpc. According to Hou & Han (2014), the average starting position of the four spiral arms, i.e., the Perseus Arm, the Carina-Sagittarius Arm, the Crux-Scutum Arm and the Norma Arm, is 3.57 kpc, which is close to the position where the pulsar surface density reaches its peak.
+
+## 4 Discussion
+
+The methods we have used to model the pulsar radial distribution can effectively reduce the selection effects when we have a large sample. To validate the method of estimating radial distributions, we simulate a population of pulsars with the Gaussian radial distribution proposed by Narayan (1987). Using PsrPopPy, we generated a simulated pulsar sample from this input distribution and applied the method to the sample. It returned a distribution compatible with Gaussian distribution, as illustrated in Figure 6.
+
+A similar method was used by LF06. However, it is difficult to estimate the radial distribution in the GC region using this method since there are few known pulsars there. In contrast to the sample utilized in the studies conducted by YK04 and LF06, our sample exhibits a two-fold increase in the population of known pulsars, encompassing a substantially larger number of distant pulsars characterized by high dispersion measures. As shown in Table 1, the apparent density of pulsars has increased significantly, especially for grids at a large distance from the Sun and GC.
+
+Distance is crucial for calculating the distribution of pulsars in the Galaxy. We make use of the YMW16 distance model. Compared to NE2001, YMW16 used more independent pulsar distances to calibrate the model, and an improved spiral-arm structure for the Galaxy (Hou & Han, 2014).
+
+Sky temperature is one of the most important factors affecting survey sensitivity. In order to update the scaling relation utilized for calculating the directional selection-correcting factor, we used an improved sky temperature map that effectively mitigates contamination arising from extragalactic radio sources and minimizes the presence of large-scale striations (Remazeilles et al., 2015). This improves on the method used in YK04, which used a continuous function to describe the sky background temperature. We also fit the flux density distribution of the pulsar to calculate directional selection-correcting factor. If, as in YK04, the pulsar flux distribution is assumed to be uniform, the number of pulsars in the GC region will be overestimated. As shown in Figure 2, K(l) exhibits strong fluctuations and the survey sensitivity is severely reduced around the GC. The distance-correcting factor can be calculated using K(l).
+
+Kodaira (1974) proposed an empirical method for correcting distance selection effects to calculate the radial distribution of supernova remnants. This method was based on the assumption of central symmetry in the Galaxy. The association of spiral arms with pulsars may render the assumption of central symmetry no longer valid. To mitigate the influence of spiral arms, we employ the smoothing method outlined in Section 2. Furthermore, the smoothing procedure enhances our adherence to the assumption of symmetry around the GC. After correcting for directional selection effects, the distance selection effect function can be obtained by fitting the pulsar surface densities at the same galactocentric distance but varying heliocentric distances. We obtain c=0.248 for the distance-correcting factor K(r)=e^{-cr} which is smaller than that of YK04. This discrepancy primarily arises from the utilization of different electron-density models for distance estimation.
+
+Isolated neutron stars are believed to originate from supernova events in OB-type Population I stars. Therefore, neutron stars should be located along the spiral arms. In fact, Kramer et al. (2003b) noted that the Galactic spiral structure is clearly visible from the distribution of young pulsars. Chen et al. (2019) also found that most OB stars are located in the Galactic plane, and clearly trace the structure of the Galactic spiral arms.
+
+Figure 1 also shows that the pulsar positions are highly correlated with the spiral arm structure. However, the pulsar positions in Figure 1 are entirely derived from the YMW16 distance model and are not independent evidence for real spiral concentrations. We use the spiral arms as the location for the birth of pulsars outside the GC, but there is still some uncertainty about it.
+
+The results of Hou & Han (2014) are used to model the structure of the Galactic spiral arms. The spiral arms are described in polar coordinates with the GC at the origin. The x-, y-, and z-axes are, respectively, parallel to (l,b)=(90^{\\circ},0^{\\circ}),(180^{\\circ},0^{\\circ}), and (0^{\\circ},90^{\\circ}), in a right-handed Cartesian frame. As usual, x=R\\cos\\theta and y=R\\sin\\theta. There are five spiral arms, described by the following formula:
+
+\\theta=\\frac{\\ln(\\frac{R}{R_{0}})}{\\tan(\\theta_{1})}+\\theta_{0},  where \\theta and r are polar coordinates; R_{0},\\theta_{0} and \\theta_{1} are the initial radii, the starting azimuth angle, and the pitch angle for the i{}_{th} spiral arm, respectively. The parameters of each arm given in Table 4 are taken from Hou & Han (2014) and consistent with those of YMW16.
+
+The location of a simulated pulsar on spiral arm depends on the radial distribution of pulsars and the structure of the spiral arms. The spiral structure is realized by choosing the locations of simulated pulsar so that their projections lie on arms and subsequently adjusting them to simulate a spread around the arm centroids. The number of pulsars in each spiral arm is different because of their different lengths and positions. Therefore, the probability of a simulated pulsar lie on a spiral arm is different for the different spiral arms. The number of pulsars in each spiral arm can be obtained by integrating the pulsar radial distribution function along the spiral arm. We calculate the number of pulsars in each spiral arm in the form of discrete point integral. The number of pulsars in a certain spiral arm divided by the total number of pulsars in all the spiral arm is the probability we mentioned above. The Local arm has been taken into account in the simulation. The probability can be obtained by the following equation:
+
+R_{j}=\\frac{\\sum_{i=1}^{N}\\sqrt{(x_{i+1}-x_{i})^{2}+(y_{i+1}-y_{i})^{2}}\\rho(r _{ij})0.07r_{ij}}{\\sum_{j=1}^{N}\\sum_{i=1}^{N}\\sqrt{(x_{i+1}-x_{i})^{2}+(y_{i+1 }-y_{i})^{2}}\\rho(r_{ij})0.07r_{ij}},  where R_{j} is the probability of a simulated pulsar to lie on the j_{th} spiral arm, N is the number of equally spaced intervals for a spiral arm, r_{ij} is the i_{th} point's galactocentric radius in spiral arm j, \\rho(r_{ij}) is the pulsar surface density at galactocentric radius r_{ij}, and x_{i} and y_{i} are the i_{th} point's Cartesian coordinates.
+
+Ratios of the number of pulsars in each spiral arm are shown in Table 4. A distance r_{\\rm raw} from the GC is then chosen according to the pulsar radial distribution. For a pulsar to lie on the centroid of spiral arm i, the corresponding polar angle \\theta_{\\rm raw} is calculated according to Equation (18). The method used in Faucher-Giguere and Kaspi (2006) is adopted to broaden the distribution to avoid artificial features near GC. The corrected value of \\theta in the polar coordinate system is \\theta_{\\rm corr}\\exp(-0.35r_{\\rm ini}/{\\rm kpc}), where \\theta_{\\rm corr} is a random number uniformly distributed in the interval [0,2\\pi]. Finally, pulsars are spread along the spiral arm centroid. We assume r_{\\rm last} follows the normal distribution with mean r_{\\rm raw} and standard deviation 0.07r_{\\rm raw}.
+
+For the Galactic Center region, considering the difference between it and the spiral arms, we use another method to generate the birth positions of isolated neutron stars. The distance from the Galactic Center and the Galactic longitude are generated by two independent random processes. The probability relation for the distance between the Galactic Center and the pulsar can be obtained as follows (Ronchi et al., 2021):
+
+P(r)\\propto 2\\pi R\\rho(R),  where \\rho(R) is the surface density and R is the distance from the Galactic Center. The Galactic longitudes of the simulated pulsars are randomly chosen in the interval [0,2\\pi] rad. Figure 7 shows the positions of all the simulated pulsars on the x-y plane.
+
+We employed PsrPopPy to simulate the MBPS survey using Equation 17 and the method for generating simulated pulsar positions described in Bates et al. (2014). This allowed us to obtain distances from the Galactic center for pulsars discovered in the simulated MBPS survey. These simulated results were subsequently compared with the actual discoveries of the MBPS survey, as illustrated in Figure 8. It is apparent that the radial distribution of the simulated pulsar population closely aligns with the conclusions drawn from Equation 17.
+
+To assess the agreement between simulated and observed data, hypothesis tests were conducted, including the Kolmogorov-Smirnov (K-S) test and the Anderson-Darling (A-D) test. Both of the tests indicate there is no significant difference between simulated data and observed data.
+
+In the GC region the surface density of pulsars that we derived is higher than that of LF06 but lower than YK04, and reaches its peak at a larger distance, but the overall density is lower than that of YK04 and LF06. After applying the Tauris and Manchester (1998) beaming correction, the pulsar surface density in the GC region that we obtained is almost the same as that obtained by Lorimer et al. (2006b) from a Monte Carlo simulation.
+
+By integrating the radial distribution function, the estimated number of detectable pulsars in the Galaxy is (1.1\\pm 0.2)\\times 10^{4}, with the proportion within the Galactic center region ( R\\leq 3.57 kpc) being about 15%.
+
+Only a small fraction of pulsars have their radiation beams directed towards Earth. Beam selection effects are particularly important to consider when calculating the birth rate of pulsars in the Galaxy. According to (Radhakrishnan and Cooke, 1969), the proportion of pulsar radiation beams towards Earth, referred to as the beam fraction, depends on the radiation beam structure and the magnetic inclination angle. Gould (1994) introduced a relationship between the radius of the pulsar radiation beam and its rotational period: \\rho\\propto P^{-1/2}. Furthermore, Tauris and Manchester (1998; hereafter TM98) proposed an anti-correlation between the magnetic inclination angle \\alpha and the characteristic age \\tau=P/2\\dot{P}.
+
+Based on the evolutionary relationship between the magnetic inclination angle and characteristic age, the timescale for aligning the magnetic axis with the rota tional axis is estimated to be approximately 10{}^{7} years. TM98 conducted an analysis of a substantial dataset of isolated pulsar polarization data. They proposed that the magnetic inclination-angle distribution of the entire pulsar population is not flat but highly concentrated at small angles. Additionally, the average beam fraction is only approximately 10%. Therefore, the estimated number of pulsars in the Galaxy is (1.1\\pm 0.2)\\times 10^{5}, and the birth rate of neutron stars is about 1.1\\pm 0.2 per century. Applying the TM98 beaming correction, the estimated surface density of pulsars near Earth is 470\\pm 50 pulsars kpc{}^{-2}, while the surface density of pulsars near the GC is 150\\pm 80 pulsars kpc{}^{-2}. It can also be estimated that the birth rate of neutron stars in the vicinity of Sun is approximately 4.7 \\pm 0.5 kpc{}^{-2} Myr{}^{-1}.
+
+## 5 Conclusion
+
+Based on pulsars in the latest version of ATNF Pulsar Catalogue (v1.70) that were discovered in the Parkes Multibeam pulsar surveys, we described the radial distribution of pulsars in the Galaxy. Our results are summarized as follows:
+
+(i) The pulsar surface density increases inward from the Sun toward the Galactic Center to the point where the spiral arms begin, reaching its maximum value at a galactocentric radius of 3.91 \\pm 0.13 kpc.
+
+(ii) The surface density of pulsars around the Sun is 47 \\pm 8 and 470 \\pm 50 pulsars kpc{}^{-2}, before and after the TM98 beaming correction, respectively. The birth rate of neutron stars in the vicinity of Sun is estimated to be approximately 4.7 \\pm 0.5 kpc{}^{-2} Myr{}^{-1}.
+
+(iii) The pulsar surface density around the GC region (R\\sim 0.83 kpc) is 18 \\pm 8 and 150 \\pm 80 pulsars kpc{}^{-2} before and after applying beaming correction, respectively. Based on the radial distribution function and Galactic structural parameters (Hou & Han, 2014), the proportion of pulsars in the six structural components of the Galaxy were calculated, as shown in Table 4.
+
+(iv) The total number of detectable pulsars in the Galaxy is (1.1 \\pm 0.2) \\times 10{}^{4} and (1.1 \\pm 0.2) \\times 10{}^{5} before and after the beaming correction, respectively. The birth rate of observable pulsars is estimated to be approximately 0.11 \\pm 0.02 per century, and after applying beaming correction, the birth rate of pulsar is found to be about 1.1 \\pm 0.2 per century.
+
+The QiTai radio Telescope (QTT) in north-western China (Wang et al., 2023), with its 110-meter aperture, has approximately three times the sensitivity of the Parkes radio telescope under the assumption of identical observation parameters and receiver temperature. The FAST radio telescope in south-eastern China (Nan et al., 2011), has an effective aperture of about 300 meters, and achieves a sensitivity approximately 22 times greater than that of Parkes. We can expect the accuracy
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline Galactic structure Number & Name & \\theta_{0} (deg) & \\theta_{1} (deg) & r_{0} (kpc) & Ratio (\\%) \\\\ \\hline
+
+1 & Norma & 44.4 & 11.43 & 3.35 & 19.77 \\\\
+
+2 & Perseus & 120.0 & 9.84 & 3.71 & 20.91 \\\\
+
+3. & Carina-Sagittarius & 218.6 & 10.38 & 3.56 & 21.20 \\\\
+
+4 & Crux-Scutum & 330.3 & 10.54 & 3.67 & 20.17 \\\\
+
+5 & Local arm & 55.1 & 2.77 & 8.21 & 2.87 \\\\
+
+6 & Galactic centre & - & - & - & 15.08 \\\\ \\hline \\hline \\end{tabular}
+
+\\end{table}
+
+Table 4: The proportion of pulsars in the composition of the Galaxy and Spiral Arm Parameters of these numbers to improve as more sensitive pulsar surveys using these radio telescopes increase the available sample of pulsars.
+
+## Acknowledgement
+
+This work is supported the Major Science and Technology Program of Xinjiang Uygur Autonomous Region (No.2022A03013-4), the Zhejiang Provincial Natural Science Foundation of China (No. LY23A030001), the National SKA Program of China (No.2020SKA0120100), the Natural Science Foundation of Xinjiang Uygur Autonomous Region (No.2022D01D85), National Natural Science Foundation of China (No.12041304).

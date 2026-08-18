@@ -11,6 +11,7 @@ export default defineConfig({
       targets: [
         { src: 'data/*', dest: '.' },
         { src: 'favicon.svg', dest: '.' },
+        { src: 'source_documents/**/*', dest: '.' },
       ],
     }),
   ],

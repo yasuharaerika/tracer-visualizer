@@ -1,0 +1,151 @@
+###### Abstract
+
+Very recently a fast radio burst (FRB) 200428 associated with a strong X-ray burst from the Galactic magnetar SGR 1935+2154 has been detected, which is direct evidence supporting the magnetar progenitor models of FRBs. Assuming the FRB radiation mechanism is synchrotron maser emission from magnetized shocks, we develop a specific scenario by introducing a density jump structure of upstream medium, and thus the double-peaked character of FRB 200428 is a natural outcome. The luminosity and emission frequency of two pulses can be well explained in this scenario. Furthermore, we find that the synchrotron emission of shock-accelerated electrons is in the X-ray band, which therefore can be responsible for at least a portion of observed X-ray fluence. With proper upgrade, this density jump scenario can be potentially applied to FRBs with multiple peaks in the future.
+
+Subject headings:radio transient sources - stars: neutron - magnetars
+
+## 1. Introduction
+
+Fast radio bursts are bright millisecond radio pulses that flash randomly in the universe. The first discovery was reported in 2007 (Lorimer et al., 2007) and there are hundreds of FRBs collected now (Petroff et al., 2016). This field is still at an early stage and many aspects of FRBs remain mysterious, especially the origin of them (for reviews, see Katz, 2018; Popov et al., 2018; Petroff et al., 2019; Cordes & Chatterjee, 2019). Tens of progenitor models have been proposed (see Platts et al. (2019) for a theory catalogue), most of which involve compact objects according to the energetics and temporal variability of FRBs. In recent years, a few observational breakthroughs have been made, which greatly help us understand this phenomenon. The localization of ten FRBs has been realized with their host galaxies being identified (Tendulkar et al., 2017; Bannister et al., 2019; Prochaska et al., 2019; Ravi et al., 2019; Chittidi et al., 2020; Marcote et al., 2020; Macquart et al., 2020). The fact that some FRBs lie in the outskirt of host galaxies potentially points to neutron stars (NS). The periodical activity of two FRBs have been found (CHIME/FRB Collaboration et al., 2020; Rajwade et al., 2020; Cruces et al., 2020), which also seems to be in favor of NS progenitors. Moreover, up to now about twenty FRBs have been found to repeat (CHIME/FRB Collaboration et al., 2019, 2019; Fonseca et al., 2020), implying that sustainable energy reservoirs are required. It has been suggested that young flaring magnetars could play this role (Popov & Postnov, 2013; Lyubarsky, 2014; Murase et al., 2016; Beloborodov, 2017; Waxman, 2017).
+
+The above conjecture was supported early in this year, as a special FRB 200428 from the Galactic magnetar SGR 1935+2154 has been detected (Bochenek et al., 2020; The CHIME/FRB Collaboration et al., 2020). Nearly the same time, an associated X-ray burst has been observed by _Insight_-HXMT, INTEGRAL, Konus-Wind and AGILE (Li et al., 2020; Mereghetti et al., 2020; Ridnaia et al., 2020; Tavani et al., 2020). This landmark discovery directly verified that magnetars are progenitors of at least a portion of FRBs. SGR 1935+2154 is a typical magnetar with spin period \\sim 3.24 s and surface magnetic field strength \\sim 2.2\\times 10^{14} G (Israel et al., 2016). Several measurements of its distance gave different values, within the range of 4.4-12.5 kpc (Kothes et al., 2018; Zhou et al., 2020; Zhong et al., 2020; Mereghetti et al., 2020). FRB 200428 has two narrow pulses separated by \\Delta T=28.91 ms. The first pulse was detected only by CHIME and the second was detected simultaneously by CHIME and STARE2. Moreover, the first pulse cuts off quickly beyond 550 MHz while the second pulse spans from 500 MHz up to 1468 MHz. The combined total fluence of second pulse is at least ten times higher than the first one. All these properties need to be addressed properly in a detailed theoretical model.
+
+The radiation mechanism of FRBs is still largely unknown. The high brightness temperature implies that the radiation must be coherent. Generally there are three kinds of astrophysical approaches to generate coherence: coherent curvature emission by bunches, plasma emission by reactive instabilities and maser emission (for a review, see Melrose, 2017). In this work, we mainly consider the synchrotron maser mechanism by magnetized shocks, which was first proposed in the early 1990s. Bunching in gyration phase of incoming particles near shock front has been verified by Particle-in-Cell (PIC) simulations (Hoshino & Arons, 1991; Hoshino et al., 1992; Amato & Arons, 2006; Plotnikov & Sironi, 2019). The distribution of the particles in momentum space can be described as a cold ring form (Alsop & Arons, 1988), which is beneficial to the development of synchrotron maser instability. The growth of electromagnetic (EM) waves can be very effective and thus a maser (FRB) can be produced (Hoshino & Arons, 1991). In this scenario, physical condition of shock upstream medium could have a major impact on observed FRB properties. For instance, Metzger et al. (2019) and Beloborodov (2020) as sumed slow ion tail of flare ejecta and magnetar wind as upstream medium respectively, therefore their predictions are different in many ways. This motivates us to study the influence on FRB emission if a density structure of external medium exists. More intriguingly, recently Kirsten et al. (2020) reported a repetition of FRB 200428 with double-peaked character again after long time monitoring, which supports our hypothesis of a stratified medium.
+
+This letter is organized as follows. We introduce the density jump scenario in Section 2. In Section 3 we discuss the dynamics and constrain the density properties from the radio observation. Then the post-shock high-energy emission is discussed in Section 4. We finish with discussion and conclusions in Section 5.
+
+## 2. Density jump scenario
+
+The matter ejected during magnetar flares usually consists of two components: a relativistic ejecta and a sub-relativistic baryonic shell. The shell could possibly have some structure due to unsteady ejection. For instance, Beloborodov (2020) suggested a distribution of ejected mass over velocity m(v)\\propto v^{\\xi} with \\xi>0, which implies an increasing density gradient with radius. In this work, the radial density profile is simplified as a jump between two constant densities, which is written as
+
+n(r)=\\left\\{\\begin{array}{ll}n_{0},&r<R_{0},\\\\ n_{1},&r\\geqslant R_{0},\\end{array}\\right.  where n_{0}<n_{1} is assumed. Similar to Metzger et al. (2019), the relativistic ejecta collides with the baryonic shell characterized by Eq.(1) from the previous flare. This scenario is illustrated in Figure 1.
+
+The dynamic evolution of the system goes through two phases. In Phase I, forward and reverse shocks are formed when the ejecta collides with the inner shell. The reverse shock crosses the ejecta in a time t_{\\rm cr,I}\\simeq\\delta t(Sari & Piran, 1995), where \\delta t is the flare duration. The first pulse of FRB 200428 is probably produced via synchrotron maser emission at the crossing radius, where both the luminosity and energy of the forward shock is at its maximum. After t_{\\rm cr,I}, the evolution of the shocked region approaches the Blandford-McKee (BM) self-similar form (Blandford & McKee, 1976). When the blast wave arrives at R_{0}, it feels stronger resistance from the denser medium and new forward, reverse shocks are formed. There are four separated regions: unshocked high-density outer shell, forward-shocked outer shell, reverse-shocked inner shell and unshocked hot inner shell, marked as 1, 2, 3, 4 respectively. The main difference with Phase I is that region 4 is hot, leading to the different equations of the jump conditions (Zhang & Meszaros, 2002; Dai & Lu, 2002). The second pulse is produced by the new forward shock near R_{0} since its luminosity decreases with radius.
+
+## 3. Constraining density structure from double-peaked FRB pulses
+
+The energy and duration of the magnetar flare are denoted as E and \\delta t respectively. In Phase I, the reverse shock crossing time is t_{\\rm cr,I}\\simeq\\delta t. Before crossing, the Lorentz factor of the shocked region is \\Gamma_{\\rm I}(t\\leq t_{\\rm cr,I})=(f_{\\rm I}\\Gamma_{\\rm ej}^{2}/4)^{1/4}(Sari & Piran, 1995), where f_{\\rm I}\\equiv E/(4\\pi r^{2}m_{p}n_{0}c^{3}\\delta t\\Gamma_{\\rm ej}^{2}) and \\Gamma_{\\rm ej} is the initial Lorentz factor of the ejecta. Since t_{\\rm cr,I}=R_{\\rm cr,I}/(2\\Gamma_{\\rm cr,I}^{2}c), the crossing radius R_{\\rm cr,I} can be obtained,
+
+R_{\\rm cr,I} = \\left(\\frac{E\\delta t}{4\\pi m_{p}cn_{0}}\\right)^{1/4}  = 3.55\\times 10^{11}E_{40}^{1/4}\\delta t_{-3}^{1/4}n_{0,3}^{-1/4} \\,{\\rm cm}.
+
+The Lorentz factor at crossing radius is then \\Gamma_{\\rm cr,I}=(R_{\\rm cr,I}/(2\\zeta\\delta t))^{1/2}. After crossing, the shock enters the BM self-similar evolution stage that implies \\Gamma\\propto r^{-3/2}. Thus, a smooth transition at R_{\\rm cr,I} indicates
+
+\\Gamma_{\\rm I}(t>t_{\\rm cr,I})=\\Gamma_{\\rm cr,I}(r/R_{\\rm cr,I})^{-3/2}. 
+
+The BM evolution of Phase I suddenly ends as the blast wave encounters the density jump at R_{0}. From observation we have the time separation between two pulses is \\Delta T=28.91\\,{\\rm ms}, thus we can determine R_{0} by letting
+
+\\Delta T=\\int_{R_{\\rm cr,I}}^{R_{0}}\\frac{{\\rm d}r}{2\\Gamma_{\\rm I}^{2}c}. 
+
+Then we get
+
+R_{0}=R_{\\rm cr,I}\\left(\\frac{4\\Delta T}{\\delta t}+1\\right)^{1/4}. 
+
+Since region 4 is hot, the jump conditions between region 3 and 4 are (Zhang & Meszaros, 2002; Dai & Lu, 2002)
+
+\\left(\\frac{n_{3}}{n_{4}}\\right)^{2}= \\frac{(e_{3}/e_{4})(1+3e_{3}/e_{4})}{3+e_{3}/e_{4}},  \\gamma_{34}^{2}= \\frac{(1+3e_{3}/e_{4})(3+e_{3}/e_{4})}{16e_{3}/e_{4}},  where e,\\,n are energy density, particle number density and \\gamma_{34} is the relative Lorentz factor between region 3 and 4. The initial Lorentz factor of region 4 is
+
+Figure 1.— The schematic picture of our density jump scenario. An ultra-relativistic ejecta from a magnetar flare collides with the leftover baryonic shell of previous flares. The shell is stratified and the outer part is denser (n_{0}<n_{1}). The deceleration of the ejecta will go through two phases and two FRB pulses are produced via synchrotron maser emission near the forward shock front (marked as the thick black line).
+
+\\gamma_{4}=\\Gamma_{1}(R_{0}). Defining f\\equiv e_{4}/(n_{1}m_{p}c^{2}) and combing the density jump equations of region 1 and 2, the solution corresponding to a relativistic reverse shock is (Dai & Lu, 2002)
+
+\\gamma_{2} = \\gamma_{3}=\\frac{\\gamma_{4}^{1/2}f^{1/4}}{3^{1/4}},  \\gamma_{34} = \\frac{3^{1/4}\\gamma_{4}^{1/2}}{2f^{1/4}}\\gg 1. 
+
+The above solution requires the density jump ratio n_{1}/n_{0}>64/3 and this will be justified later for FRB 200428 case.
+
+Now we can deduce the densities n_{0},\\,n_{1} from pulse properties. From observation we know pulse I of FRB 200428 was detected only by CHIME and pulse II was detected simultaneously by CHIME and STARE2. The second pulse is found much more luminous than the first one (The CHIME/FRB Collaboration et al., 2020; Bochenek et al., 2020). Here we scale the luminosity ratio as \\sim10. Since the shock luminosity is L_{\\rm sh}\\simeq 4\\pi\\pi^{2}\\Gamma^{4}nm_{p}c^{3}, the peak FRB luminosity can be obtained as \\nu L_{\\nu}|_{\\rm pk}\\simeq f_{\\xi}L_{\\rm sh}, where f_{\\xi} is the maser efficiency. Then the luminosity ratio of two peaks is
+
+\\frac{\\nu L_{\\nu}|_{\\rm pk,II}}{\\nu L_{\\nu}|_{\\rm pk,I}} \\sim \\frac{f_{\\xi{\\rm f}_{4}}4\\pi R_{0}^{2}n_{1}\\gamma_{2}(R_{0})^{4} m_{p}c^{3}}{f_{\\xi{\\rm f}_{4}}4\\pi R_{\\rm cr,I}^{2}n_{0}\\Gamma_{\\rm cr,I}^{4} m_{p}c^{3}}  \\simeq \\frac{4}{3}\\left(\\frac{R_{0}}{R_{\\rm cr,I}}\\right)^{-4}\\frac{f_{ \\xi{\\rm f}_{4}}}{f_{\\xi{\\rm f}_{4}}}, therefore
+
+\\frac{f_{\\xi{\\rm f}_{4}}}{f_{\\xi{\\rm f}_{4}}}=7.5\\left(\\frac{\\nu L_{\\nu}|_{\\rm pk,II}}{\\nu L_{\\nu}|_{\\rm pk,I}}\\right)_{1}\\left(\\frac{4\\Delta T}{\\delta t}+1 \\right). 
+
+PIC simulations suggest that f_{\\xi} depends strongly on the upstream magnetization parameter \\sigma, and f_{\\xi}\\sim 7\\times 10^{-4}/\\sigma^{2} for \\sigma\\geq 1(Plotnikov & Sironi, 2019). For typical flare duration \\delta t\\sim 1 ms, Eq.(11) implies that f_{\\xi{\\rm f}_{4}}\\ll f_{\\xi{\\rm f}_{4}}, thus \\sigma_{\\rm I}>1 is always expected. For instance, if we assume the outer shell has \\sigma_{\\rm II}\\sim 0.1 that corresponds to a maximum maser efficiency of f_{\\xi{\\rm f}_{4}}\\sim 0.05, then f_{\\xi{\\rm f}}\\sim 5.7\\times 10^{-5} and \\sigma_{\\rm I}\\sim 3.5. This makes sense because the inner shell should have higher magnetization (Beloborodov, 2020).
+
+The peak frequency for synchrotron maser emission is \\nu_{\\rm pk}=(3/2\\pi)\\Gamma\\omega_{\\rm p}\\max[1,\\sqrt{\\sigma}](Plotnikov & Sironi, 2019), where \\omega_{\\rm p}=(4\\pi n_{e}e^{2}/m_{e})^{1/2} is the plasma frequency. However, the observed FRB frequency is shifted to a higher value due to absorption of low-energy photons by induced Compton scattering (ICS). The optical depth of ICS near \\nu_{\\rm pk} is approximated as (Lyubarsky, 2008; Metzger et al., 2019)
+
+\\tau(\\nu_{\\rm pk}) \\simeq \\frac{1}{10}\\frac{3}{64\\pi^{2}}\\frac{\\sigma_{\\rm T}}{m_{e}}\\frac {c\\,tn}{r^{2}}\\frac{\\partial}{\\partial\\nu}\\left(\\frac{L_{\\nu}}{\\nu}\\right) \\bigg{|}_{\\rm pk},  \\simeq \\frac{3}{640\\pi^{2}}\\frac{\\sigma_{\\rm T}}{m_{e}}\\frac{\\nu L_{\\nu} |_{\\rm pk}ctn}{\\nu_{\\rm pk}^{3}r^{2}}, where the Thompson cross section \\sigma_{\\rm T}=8\\pi e^{4}/(3m_{e}^{2}c^{4}). Substituting \\nu L_{\\nu}|_{\\rm pk} into Eq.(12), we obtain
+
+\\tau(\\nu_{\\rm pk})\\simeq\\frac{\\pi^{2}m_{p}}{1620m_{e}}f_{\\xi}\\nu_{\\rm pk}t. 
+
+The observed FRB frequency \\nu_{\\rm max} is reached as \\tau\\simeq 3. Since \\tau(\\nu)\\propto\\nu^{-4}, we get
+
+\\frac{\\nu_{\\rm max}}{\\nu_{\\rm pk}}\\simeq 7.81\\left(\\frac{\\tau}{3}\\right)^{-1/4}f _{\\xi,-3}^{1/4}\\left(\\frac{\\nu_{\\rm pk}}{\\rm GHz}\\right)^{1/4}t_{-3}^{1/4},  where the peak frequencies of two pulses
+
+\\nu_{\\rm pk,I}=3\\Gamma_{1}\\omega_{\\rm p,I}\\sqrt{\\sigma_{\\rm I}}/2\\pi,\\quad\\nu _{\\rm pk,II}=3\\gamma_{2}\\omega_{\\rm p,II}/2\\pi. 
+
+Here we implicitly take \\sigma_{\\rm II}<1. The reason is that the effective maser efficiency of pulse I should not be too small since observationally the flux ratio between radio and X-ray band is F_{\\rm radio}/F_{X}\\sim 10^{-6}-10^{-5}(Mereghetti et al., 2020). The observed emission frequency is higher for pulse II and according to the waterfall plots we normalize them as \\nu_{\\rm max,I}=400 MHz, \\nu_{\\rm max,II}=1.4 GHz. Thus
+
+\\nu_{\\rm pk,I} \\simeq 0.092\\left(\\frac{\\tau}{3}\\right)^{1/5}f_{\\xi{\\rm f}_{4},-3}^{-1/5} \\left(\\frac{\\nu_{\\rm max,I}}{400\\,{\\rm MHz}}\\right)^{4/5}t_{{\\rm f}_{1},-3}^{-1 /5}\\,{\\rm GHz}, \\nu_{\\rm pk,II} \\simeq 0.253\\left(\\frac{\\tau}{3}\\right)^{1/5}f_{\\xi{\\rm f}_{4},-3}^{-1 /5}\\left(\\frac{\\nu_{\\rm max,II}}{1.4\\,{\\rm GHz}}\\right)^{4/5}t_{{\\rm f}_{1},-3 }^{-1/5}\\,{\\rm GHz}. 
+
+These two peaks are produced at time t_{\\rm I}\\simeq\\delta t and t_{\\rm II}\\simeq\\delta t+\\Delta T respectively. Substituting into Eq.(16) and combining Eq.(3)(8)(15), we can obtain n_{0}, n_{1} as
+
+n_{0} = 3.23\\times 10^{3}E_{40}^{-1/3}\\delta t_{-3}^{7/15}f_{\\xi{\\rm f}_{ 4},-3}^{2/15}\\,{\\rm cm}^{-3},  n_{1} = 5.27\\times 10^{6}n_{0}^{-1/2}E_{40}^{-1/2}\\delta t_{-3}^{7/10}f_{ \\xi{\\rm f}_{4},-3}^{-4/5} (18) \\times\\left(\\frac{4\\Delta T}{\\delta t}+1\\right)^{3/2}\\left(\\frac{ \\Delta T}{\\delta t}+1\\right)^{-4/5}\\,{\\rm cm}^{-3}.
+
+The above expression for n_{1} is valid only if \\gamma_{2}>1. In the situation of \\gamma_{2}\\simeq 1, from Eq.(15)(16) we get
+
+n_{1}=8.82\\times 10^{7}\\delta t_{-3}^{-2/5}f_{\\xi{\\rm f}_{1},-3}^{-2/5}\\left( \\frac{\\Delta T}{\\delta t}+1\\right)^{-2/5}\\,{\\rm cm}^{-3}. 
+
+The dependences of n_{0},\\,n_{1} on flare parameters E,\\,\\delta t are shown in Figure 2. We adopt five typical values of \\delta t and the behavior of n_{0}, n_{1} follows Eq.(17)(18). From the figure we can see for the parameter space of our interest, n_{1}/n_{0}>64/3 is always ensured and a relativistic reverse shock in Phase II is expected. This can be understood from the ratio of peak frequencies of two pulses
+
+\\frac{\\nu_{\\rm pk,II}}{\\nu_{\\rm pk,I}}=\\frac{1}{\\sqrt{\\sigma_{\\rm I}}}\\frac{ \\gamma_{2}n_{1}^{1/2}}{\\Gamma_{\\rm cr,II}n_{0}^{1/2}}<\\frac{1}{\\sqrt{\\sigma_{ \\rm I}}}\\frac{\\gamma_{4}}{\\Gamma_{\\rm cr,I}}\\left(\\frac{n_{1}}{n_{0}}\\right)^{1 /2}. 
+
+From Eq.(16) we know \\nu_{\\rm pk,II}/\\nu_{\\rm pk,I}\\sim a few, thus
+
+\\frac{n_{1}}{n_{0}}\\gg\\sigma_{\\rm I}\\left(\\frac{4\\Delta T}{\\delta t}+1\\right) ^{3/4} 
+
+Usually with typical parameters n_{1}/n_{0}>64/3 is always satisfied. This validates the expressions of Eq.(8)(9).
+
+The reverse shock crossing radius in Phase II can be evaluated as follows. The initial total particle number in region 4 is the swept-up inner shell before R_{0}, i.e., N_{4}=4\\pi R_{0}^{3}n_{0}/3. The total number in region 3 during crossing is N_{3}(r)=\\int_{R_{0}}^{r}4\\pi r^{2}n_{4}\\gamma_{34}\\beta_{34}/(\\gamma_{3}\\beta _{3}){\\rm d}r(Dai & Lu, 2002). During crossing, region 4 expands adiabatically so n_{4}(r)=4\\gamma_{4}n_{0}(r/R_{0})^{-3}. At the crossing radius R_{\\rm cr,II} we should have N_{3}(R_{\\rm cr,II})=N_{4}. Substituting Eq.(8)(9) we obtain
+
+R_{\\rm cr,II}=R_{0}\\left(1+\\frac{2}{3^{3/2}}n_{0}^{1/2}n_{1}^{-1/2}\\right)^{1/2}. 
+
+The crossing time is then
+
+t_{\\rm cr,II}=\\int_{R_{0}}^{R_{\\rm cr,II}}\\frac{{\\rm d}R}{2\\gamma_{2}^{2}c}. 
+
+For the fiducial values E=10^{40}\\,{\\rm erg}, \\delta t=1\\,{\\rm ms}, we get R_{0}=9.58\\times 10^{11}\\,{\\rm cm}, R_{\\rm cr,II}=9.71\\times 10^{11}\\,{\\rm cm} and t_{\\rm cr,II}=19.6\\,{\\rm ms}. The total mass of the baryonic shell is M=M_{\\rm in}+M_{\\rm out}\\sim(4/3)\\pi m_{p}[R_{0}^{3}n_{0}+(R_{\\rm cr,II}^{3}- R_{0}^{3})n_{1}]\\simeq 1.21\\times 10^{17}\\,{\\rm g}, which is reasonably smaller than the ejected mass of 2004 giant flare from SGR 1806-20 (Gelfand et al., 2005). The mass ratio of two shells is M_{\\rm out}/M_{\\rm in}\\sim 8, while the initial velocity ratio is approximated as v_{\\rm out}/v_{\\rm in}\\sim R_{0}/R_{\\rm cr,I}\\sim 3. Therefore, our scenario is consistent with the power-law mass distribution m(v)\\propto v^{\\xi} with \\xi\\sim 2 if mass distribution is shaped by gravity (Beloborodov, 2020). Note that the mass ejection by magnetar flares is concentrated in short episodes. The ejection rate is not known well and the slower shell might be ejected earlier. In this case the faster shell would catch up and interact with the slower shell. The interaction of two shells could also lead to a density jump and this has been discussed both analytically and numerically in the context of stellar winds (Luo and McCray, 1991; Dwarkadas and Balick, 1998; Ramirez-Ruiz et al., 2001). However, a jump ratio of >20 may be not very common since observationally the upward drifting of FRBs is rarer than downward drifting and till now only appeared for FRB 200428 and FRB 190611 (Day et al., 2020).
+
+## 4. The Associated X-ray Burst
+
+For magnetized shocks, the electrons are likely to be heated to a thermal distribution, with a mean Lorentz factor \\bar{\\gamma}\\sim(1/2)(m_{p}/m_{e})\\Gamma(Giannios and Spitkovsky, 2009). Therefore in Phase I, the typical synchrotron frequency after crossing (t\\geq\\delta t) is
+
+h\\nu_{\\rm syn,I}=h\\frac{\\bar{\\gamma}^{2}eB}{2\\pi m_{e}c}\\Gamma_{\\rm I}=5.94\\, {\\rm MeV}\\,\\sigma_{1,0}^{1/2}E_{40}^{1/2}t_{-3}^{-3/2},  where the post-shock magnetic field strength is B=(64\\pi\\sigma_{1}\\Gamma^{2}m_{p}c^{2}n)^{1/2}. The cooling frequency is
+
+h\\nu_{\\rm c,I} = h\\frac{\\gamma_{e}^{2}eB}{2\\pi m_{e}c}\\Gamma_{\\rm I}=h\\frac{eB}{2 \\pi m_{e}c}\\Gamma_{\\rm I}\\left(\\frac{6\\pi m_{e}c}{\\sigma_{\\rm T}\\Gamma_{\\rm I }B^{2}t}\\right)^{2}  = 11.69\\,{\\rm keV}\\,\\sigma_{1,0}^{-3/2}E_{40}^{-1/6}f_{\\xi_{\\rm i} -3}^{-2/15}\\delta t_{-3}^{-7/15}t_{-3}^{-1/2}.
+
+Initially \\nu_{\\rm syn,I}>\\nu_{\\rm c,I}, so fast cooling is expected. Letting \\nu_{\\rm syn,I}=\\nu_{\\rm c,I}, the transition time to slow cooling is
+
+t_{\\rm c}\\simeq 0.5\\,\\sigma_{1,0}^{2}E_{40}^{2/3}f_{\\xi_{\\rm i},-3}^{2/15} \\delta t_{-3}^{7/15}. 
+
+The observing X-ray band is \\nu_{X}\\sim 20-200\\,{\\rm keV} and from Eq.(24)(25) we know initially \\nu_{\\rm c,I}<\\nu_{X}<\\nu_{\\rm syn,I}. The observed synchrotron luminosity is then \\nu L_{\\nu,{\\rm syn}}\\propto(\\nu_{X}/\\nu_{\\rm syn,I})^{1/2}. As \\nu_{\\rm syn,I} decreases with time, the X-ray luminosity increases until \\nu_{\\rm syn,I}\\simeq\\nu_{X}. The delay of X-ray peak arrival time with respect to radio peak (\\simseveral ms, Mereghetti et al., 2020) is expected. During phase II, regions 2, 3, and 4 are hot and their synchrotron emission can be important. For region 4, its emission is brightest at R=R_{0} where N_{4} is at its maximum. Since \\nu_{\\rm syn,I}\\propto\\Gamma^{4}, we have
+
+\\frac{h\\nu_{\\rm syn,4}}{h\\nu_{\\rm syn,I}(t_{\\rm cr,I})}=\\frac{\\gamma_{4}^{4}}{ \\Gamma_{\\rm cr,I}^{4}}=\\left(\\frac{R_{0}}{R_{\\rm cr,I}}\\right)^{-6}. 
+
+Substituting Eq.(5)(24) we obtain
+
+h\\nu_{\\rm syn,4} = h\\nu_{\\rm syn,I}(\\delta t)\\left(\\frac{4\\Delta T}{\\delta t}+1 \\right)^{-3/2}. 
+
+Furthermore, the synchrotron frequencies of region 2 and 3 are respectively
+
+\\frac{h\\nu_{\\rm syn,2}}{h\\nu_{\\rm syn,4}} = \\frac{\\gamma_{4}^{4}\\sqrt{\\sigma_{1\\rm n}n_{1}}}{\\gamma_{4}^{4} \\sqrt{\\sigma_{1\\rm n}n_{0}}}=\\frac{4}{3}\\sqrt{\\frac{n_{0}\\sigma_{1\\rm I}}{n_{1 }\\sigma_{1}}}\\left(\\frac{R}{R_{0}}\\right)^{-4}, \\frac{h\\nu_{\\rm syn,3}}{h\\nu_{\\rm syn,4}} = \\frac{\\gamma_{4}^{3}\\sqrt{n_{4}}}{\\gamma_{4}^{4}\\sqrt{n_{0}}}=\\frac{8 \\sqrt{\\gamma_{4}}}{3}\\frac{n_{0}}{n_{1}}\\left(\\frac{R}{R_{0}}\\right)^{-11/2}, 
+
+Figure 2.— The numerically-solved densities n_{0}, n_{1} for different flare parameter sets E, \\delta t. Different colored lines corresponds to different adopted \\delta t, which is illustrated in the upper-right corner of lower panel. The behaviour of n_{0}, n_{1} matches Eq.(17)(18) well. The maser efficiency f_{\\xi_{\\rm II}}=5\\times 10^{-21} is assumed and f_{\\xi_{\\rm i}} is obtained according to Eq.(11). For typical parameters of our interest, the requirement of a relativistic reverse shock is always fulfilled.
+
+The emission from these two regions is brightest near R_{0} since the shock luminosity L_{\\rm sh,II}\\propto R^{2}\\gamma_{4}^{4}\\propto R^{-2}, which means that the emission of region 2, 3, 4 reaches their maximum almost simultaneously in the local frame. However, in the observer frame they will be detected at different time. The emission of region 4 will arrive first since \\gamma_{4}>\\gamma_{2}=\\gamma_{3}. The delay time of region 2 & 3 is estimated as
+
+\\Delta t_{2,3}\\sim\\int_{R_{0}}^{R_{\\rm cr,II}}\\frac{{\\rm d}R}{2c}\\left(\\frac{1} {\\gamma_{2}^{2}}-\\frac{1}{\\gamma_{4}^{2}}\\right). 
+
+For typical values E=10^{40}\\,{\\rm erg} and \\delta t=1\\,{\\rm ms} we get \\Delta t_{2,3}\\sim 18\\,{\\rm ms}, being marginally consistent with the time interval between the second and third peak in HXMT and INTEGRAL X-ray light curves (Li et al., 2020; Mereghetti et al., 2020). Moreover, it is possible to adjust parameters E,\\delta t,\\sigma_{\\rm I},\\,\\sigma_{\\rm II} to make sure that h\\nu_{\\rm syn,I}, h\\nu_{\\rm syn,2}, h\\nu_{\\rm syn,4} are in the observing band.
+
+Nevertheless, there are two discrepancies with X-ray observations. First, from Eq.(27)(29) we know h\\nu_{\\rm syn,2}<h\\nu_{\\rm syn,4}<h\\nu_{\\rm syn,I}. However, the peak energy of three peaks in INTEGRAL light curve seems increasing with time (Mereghetti et al., 2020). This problem will be alleviated if non-thermal electrons are present in the downstream and the superposition of two components could change the peak energy of the observed spectrum. On one way, the non-thermal component of the FRB-associated X-ray burst has been identified observationally (Li et al., 2020). On the other way, non-thermal acceleration of electrons by magnetized shocks in the presence of ions has been verified in PIC simulations (Amato and Arons, 2006). The second inconsistency is that the shock luminosity in Phase I is higher than that of Phase II, so the first X-ray peak is expected to be brighter than the second one. Observationally it is the second peak that has the highest luminosity. This contradiction can be reconciled if an efficiency parameter is introduced. PIC simulations show that the non-thermal acceleration efficiency varies with magnetization and number fraction of ions (Amato and Arons, 2006). Therefore, we should expect different X-ray radiation efficiencies of Phase I and II. The fitting of X-ray bursts properties needs additional free parameters thus is left for future work. Moreover, the observed X-ray flux should contain thermal emission from the magnetar and therefore can be merely considered as an upper limit for shock downstream emission.
+
+## 5. Discussion and Conclusions
+
+In this work, we have focused on the temporal behavior of FRB 200428 and the production of two pulses is ascribed to the shock propagation in a stratified medium. Since the second pulse has a higher frequency, a jump from low density shell to high density shell is expected. Both the luminosity and peak frequency of FRB emission can be well explained in the synchrotron maser scenario, assuming typical flare parameters. The density of two shells can be determined self-consistently. Synchrotron emission of different post-shock regions are in the X-ray band and can be responsible for a portion of FRB-associated X-ray burst fluence. Moreover, the arrival times of three peaks of the X-ray bursts could match the model prediction well.
+
+Several previous works have discussed the application of synchrotron maser model to FRB 200428 (Margalit et al., 2020; Yu et al., 2020; Wu et al., 2020), however, none of them have explained how double peaks can be formed. On the contrary, Lu et al. (2020) and Wang (2020) attributed these two peaks to two separated ejectas, and they put strong constraint on this scenario. Different from their assumption, only one ejecta exists in our scenario and it is the density jump that leads to two pulses. The recurrence of double-peaked character (Kirsten et al., 2020) are in favor of our scenario, since one should not expect the magnetar produce multiple ejectas during each flare.
+
+Alternatively, a few works have proposed that coherent curvature emission could be responsible for FRB 200428 (Lu et al., 2020; Yang et al., 2020; Wang et al., 2020; Dai, 2020; Geng et al., 2020). For this mechanism, coherence is achieved if the phases of EM waves emitted by each individual electron in the magnetosphere are near the same (Ginzburg and Zhelezniakov, 1975; Benford and Buschauer, 1977). Lu et al. (2020) and Yang et al. (2020) assumed a disturbance from magnetar surface spreads and launches Alfven waves in the polar region. In their scenario, the NS surface is heated precedently and X-rays should appear earlier than FRB pulses, since FRB is not yet produced until Alfven waves reach the charge starvation radius. This inconsistence with observation also applies to the magnetar-asteroid model of Geng et al. (2020) but not to Dai (2020) since coherent curvature emission occurs before the asteroid matter is accreted onto the magnetar. However, the third X-ray peak in INTEGRAL and _Insight_-HXMT light curves are not expected in all these above models.
+
+The structure of baryonic shell is expected to be ubiquitous since the mass outflow is unsteady during magnetar flares. This density jump scenario can potentially be applied to FRBs with multiple pulses once upgraded properly. We note that the pulse properties depend strongly on the external medium in synchrotron maser models (Metzger et al., 2019; Beloborodov, 2020). Therefore, different density structure can lead to a variety of FRB light curves. Other kinds of density structure can be considered for individual FRBs in the future, which is analogous to afterglow modeling in gamma-ray burst studies.
+
+This work is supported by the National Key Research and Development Program of China (Grant No. 2017YFA0402600) and the National Natural Science Foundation of China (Grant No. 11833003, 11903018 and 11851305). DX is also supported by the Natural Science Foundation for the Youth of Jiangsu Province (Grant NO. BK20180324).

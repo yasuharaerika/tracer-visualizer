@@ -1,0 +1,393 @@
+###### Abstract
+
+Pulsar radio emission may be generated in pair discharges which fill the pulsar magnetosphere with plasma as an accelerating electric field is screened by freshly created pairs. In this Letter we develop a simplified analytic theory for the screening of the electric field in these pair discharges and use it to estimate total radio luminosity and spectrum. The discharge has three stages. First, the electric field is screened for the first time and starts to oscillate. Next, a nonlinear phase occurs. In this phase, the amplitude of the electric field experiences strong damping because the field dramatically changes the momenta of newly created pairs. This strong damping ceases, and the system enters a final linear phase, when the electric field can no longer dramatically change pair momenta. Applied to pulsars, this theory may explain several aspects of radio emission, including the observed luminosity, L_{\\rm rad}\\sim 10^{28}\\,{\\rm erg\\,s^{-1}}, and the observed spectrum, S_{\\omega}\\sim\\omega^{-1.4\\pm 1.0}.
+
+0000-0002-8282-787X]Elizabeth A. Tolman
+
+## 1 Introduction
+
+Pulsars are rapidly rotating, highly magnetized neutron stars, most of which exhibit beamed radio emission. Several characteristics of this emission remain unexplained. Notably, the pulsar radio luminosity L_{\\rm rad} has rough magnitude L_{\\rm rad}\\sim 10^{-7}-10^{-2}\\,L_{\\rm sd}, with L_{\\rm sd} the spindown luminosity, but has negligible dependence on L_{\\rm sd}(Lorimer & Kramer, 2004; Szary et al., 2014). Furthermore, the radio spectrum is S_{\\omega}\\sim\\omega^{-1.4\\pm 1.0}, with \\omega the radiation frequency and S_{\\omega} the intensity emitted at that frequency (Bates et al., 2013).
+
+Compelling observational evidence suggests that in most pulsars radio emission is produced in the polar regions of the neutron star, where the star's rotation induces a strong electric field that extracts electrons from the neutron star surface and accelerates them to high energies (Sturrock, 1971; Ruderman & Sutherland, 1975). These electrons stream along curved magnetic field lines, radiating gamma rays which are absorbed by the pulsar magnetic field, producing electron-positron pairs. The resulting cascade, which includes additional contributions from inverse Compton scattering and synchrotron radiation, leads to the rapid production of a pair plasma in the polar cap region which screens out the initial inductive electric field (Tsai & Erber, 1974; Cheng & Ruderman, 1977; Levinson et al., 2005; Timokhin & Harding, 2015; Cruz et al., 2021). Some process occurring in the pair plasma created in this discharge is likely to produce the pulsar's radio emission (Melrose et al., 2021).
+
+Recently, attention has turned towards the possibility that radio emission could be directly produced by the oscillating electric field that is created as the pair discharge screens the initial electric field (Beloborodov, 2008; Timokhin, 2010; Timokhin & Arons, 2013; Melrose et al., 2020; Philippov et al., 2020). Specifically, direct numerical simulations (Timokhin, 2010; Timokhin & Arons, 2013) of polar cap pair discharges have demonstrated that pair creation is a non-stationary, repeating process in which the accelerating electric field is screened by freshly created pair plasma, which then leaves the polar cap, causing the field to emerge again. Philippov et al. (2020) showed that if pair creation is nonuniform across magnetic field lines, as it will be in any realistic pair cascade, a robust physical mechanism exists which generates coherent radio emission during the screening process. In this Letter, we study the highly relativistic, collisionless, and nonlinear plasma physics governing the evolution of this pair discharge's electric field amplitude and show that this plasma physics may explain the enigmatic pulsar radio luminosity, contribute to the spectrum, and give insight into other aspects ofpulsar physics. We verify our analytic models with direct kinetic simulations.
+
+In particular, during an initial nonlinear phase of the discharge, the electric field experiences strong damping which is roughly exponential. This strong damping ceases when the quiver of newly injected particles in the electric field is small. Quantitative statement of the resulting condition on electric field amplitude yields an expression roughly consistent with the observed magnitude of L_{\\rm rad}. After this point, the discharge experiences a linear phase which only slightly decreases the emission amplitude but creates a relationship between emission amplitude and frequency which is consistent with the observed radio spectrum.
+
+The Letter begins in section 3 by introducing the physical model and equations used to study the discharge plasma. Then, section 4 describes the simulations of the discharge plasma which will be used to check the analytical work that forms the bulk of the paper. Section 5 describes the first screening stage of the discharge; section 6 the following stage of nonlinear, strongly damped oscillations; section 7 the conditions that lead to the end of this stage's strong damping and set the overall emission amplitude; and section 8 the following linear stage which contributes to the pulsar spectrum. Finally, section 9 shows how our model explains observations of pulsar luminosity and may also give insight into the spectrum and other aspects of pulsar behavior.
+
+## 2 Description of model for discharge plasma physics
+
+The discharge occurring in a pulsar polar cap has complex and uncertain spatial structure which inhibits analytic study. In this section, we describe the current understanding of the realistic polar discharge structure and relate it to the more simplified plasma physics problem we study in this Letter. This will lead in section 3 to the statement of the equations studied in this paper.
+
+The actual polar cap discharge proceeds through the cyclic production of clouds of pair plasma (Timokhin, 2010; Timokhin & Arons, 2013; Timokhin & Harding, 2015; Philippov et al., 2020; Cruz et al., 2021). In this picture, an initially unshielded electric field in the pulsar's polar cap extracts electrons from the neutron star surface and accelerates them to significant Lorentz factors
+
+\\gamma_{b}\\sim 10^{7}. 
+
+Here, we have defined
+
+\\gamma\\equiv\\frac{1}{\\sqrt{1-\\beta^{2}}},  with \\beta\\equiv v/c (v is the particle speed). These primary electrons radiate gamma rays which are eventually absorbed in the pulsar magnetic field, creating lower energy electron-positron pairs with an average Lorentz factor (Timokhin & Harding, 2015)
+
+\\gamma_{l}\\sim 10-10^{3} 
+
+(here, the upper limit is more representative for pairs injected at earlier cascade stages, which are studied here) and a thermal spread T\\sim mc^{2}, with m the electron mass (Arendt Jr & Eilek, 2002; Timokhin & Arons, 2013). Though these pairs are much lower energy than the primary electrons, they move at essentially the same speed, such that the primary and secondary pairs form one cloud of plasma moving away from the star. The secondary pairs interact strongly with the electric field, first shielding it, then setting up plasma waves caused by the overshoot of the shielding process. The primary population is barely affected by these plasma waves, such that it maintains a constant \\gamma_{b}\\sim 10^{7} and its ability to create curvature radiation. Thus, there is a nearly constant source of new secondary pairs being added to the oscillations occurring in the pair plasma cloud, and the oscillations damp in response.
+
+Simulations of the two-dimensional polar cap region (Philippov et al., 2020) find that the created plasma waves are superluminal O-mode waves, which consist of an oscillating electric field with components along the background magnetic field and perpendicular to it, and an oscillating magnetic field perpendicular both to the background magnetic field and the oscillating electric field (Arons & Barnard, 1986). In this Letter, we are concerned with understanding the physics governing the evolution of the amplitude of these waves.
+
+The physical mechanism responsible for the generation of these waves works in at least two dimensions, requiring non-uniformity of pair creation across magnetic field lines. However, the electric field driving the waves is the oscillating parallel electric field, which interacts directly with the pair plasma through a plasma current. This parallel electric field is determined by the dynamics of the discharge, i.e. by how the initial accelerating electric field is screened by injected pairs. Hence, wave evolution (at least in its initial stages) is determined by the evolution of the parallel electric field, which we can consider as a one dimensional problem. The waves observed in Philippov et al. (2020) have small spatial frequencies k, so to allow analytic progress, we can also consider only temporal evolution of the electric field, i.e. we can ignore spatial variation along the magnetic field lines in both the initial electric field and in the particle injection rate.1
+
+Footnote 1: We address some effects of a spatially non-uniform initial electric field in direct numerical simulations.
+
+Thus, in this Letter we model the discharge plasma physics with a one dimensional setup in which an initially strong electric field lies parallel to a magnetic field. Low energy pairs with \\gamma_{l} are added to this system uniformly in space at a chosen rate, representing the pairs created in the actual plasma cloud (which, unlike our simplified one dimensional setup, has curved magnetic fields) by the higher energy pairs. In response, the electric field is shielded and begins to oscillate with spatial frequency k=0 (higher k modes are not initially seeded because, unlike in Philippov et al. (2020), the setup does not have spatial structure).
+
+The physics governing the evolution of this oscillating electric field is expected to be roughly equivalent to the physics governing the low k O-mode oscillations observed in Philippov et al. (2020) and presumably also present in actual pulsar polar caps. (Indeed, as we discuss in section 7, simulations of such an initially k=0 setup eventually fragment into higher-k modes similar to those seen in two dimensional systems.) However, a k=0 setup is more tractable analytically and still gives significant insight into the physics of low-k electromagnetic modes controlled by their parallel dynamics.
+
+## 3 Statement of studied equations and key quantities
+
+In this section, we present the specific equations that we use to understand polar cap physics through the picture introduced previously.
+
+The pulsar polar cap region can be represented by a uniform, straight magnetic field B_{\\star} and a uniform parallel initial electric field E_{0}, corresponding to the magnetic field in the pulsar polar region and the unshielded electric field created there by the pulsar's rotation. These fields initially exist in a vacuum. For an aligned rotator, the electric field E has initial strength (Deutsch, 1955; Goldreich and Julian, 1969)
+
+E\\left(t=0\\right)\\equiv E_{0}=-\\frac{\\Omega R_{\\rm pc}}{c}B_{\\star},  with t time, \\Omega the pulsar angular velocity, c the speed of light, and R_{\\rm pc} the polar cap radius, defined by
+
+R_{\\rm pc}=R_{\\star}\\sqrt{\\frac{R_{\\star}\\Omega}{c}},  where R_{\\star} is the neutron star radius, R_{\\star}\\approx 1.2\\times 10^{6}\\,\\rm cm.
+
+In an actual pulsar, the initial electric field E_{0} extracts electrons from the neutron star into the polar cap vacuum and accelerates them to (1), seeding a continual cascade of lower energy pairs of (3). The high Lorentz factor \\gamma_{b} strongly suppresses the interaction of the high energy population with any plasma waves, so we neglect this population. Instead, we consider how (4) evolves as lower energy pairs at \\gamma_{l} are added to the initial vacuum. The lower energy population will damp the electric field; the coupled evolution of the electric field and the lower energy pair population can be described by the relativistic Vlasov-Maxwell equations.
+
+Specifically, the evolution of the electric field is governed by Ampere's law, which for a curl-free magnetic field reads
+
+\\partial_{t}E+4\\pi j=0,  with j the plasma current. The plasma consists of two species s=+,-: electrons (with charge q_{-}=-e), and positrons (with charge q_{+}=+e). Both have mass m. Furthermore, we define
+
+u\\equiv\\gamma\\beta  as the particle momentum, equal to its component along the magnetic field.2 The electrons and positrons are each described by their corresponding distributions
+
+Footnote 2: In the strong pulsar magnetic field, any perpendicular momentum is rapidly radiated away, meaning that it is appropriate to consider only parallel momentum.
+
+f_{s}(u,t),  so that the plasma current in (6) is given by
+
+j=c\\sum_{s}q_{s}\\int_{-\\infty}^{\\infty}\\beta f_{s}\\left(u,t\\right)du,  which couples Ampere's law to the Vlasov equation.
+
+The evolution of f_{s}\\left(u,t\\right) is given by the Vlasov equation with a source term representing the injection of lower energy pairs:
+
+\\partial_{t}f_{s}+\\frac{q_{s}E\\left(t\\right)}{mc}\\partial_{u}f_{s}=\\frac{ \\mathcal{S}\\left(u-u_{l}\\right)}{2}, 
+
+Here, u_{l} is the mean momentum of the newly injected lower-energy pairs
+
+u_{l}\\equiv\\gamma_{l}\\beta_{l},  with \\beta_{l} the value of \\beta corresponding to \\gamma_{l}. The form of \\mathcal{S} characterizes the thermal spread of the newly injected pairs about their mean injection momentum; its integral gives the rate of increase of species density n_{s} due to the addition of new pairs, i.e. \\partial_{t}n_{s}=\\int_{-\\infty}^{\\infty}\\left[\\mathcal{S}\\left(u-u_{l}\\right)/2 \\right]du. For our analytical arguments, we will take a simplified source model with all pairs injected at one velocity, i.e.,
+
+\\partial_{t}f_{s}+\\frac{q_{s}E\\left(t\\right)}{mc}\\partial_{u}f_{s}=\\frac{S \\delta\\left(u-u_{l}\\right)}{2},  with S/2 giving the rate per species of pair creation. (The effect of thermal spread is considered in appendix C.) For simplicity we assume this rate to be constant in time.
+
+Next, we apply a set of normalizations to Eqs. (6), (9), and (12). Let us define t_{0} as the time it takes to change a pair's momentum by an amount \\Delta u=1 in the initial electric field, i.e.
+
+t_{0}\\equiv\\frac{mc}{\\left|E_{0}\\right|e},  with \\left|E_{0}\\right| the absolute value of the initial electric field. Then, we normalize time to this value,
+
+\\hat{t}\\equiv\\frac{t}{t_{0}}, 
+
+f_{s} to the density injected in that time,
+
+\\hat{f}_{s}\\equiv\\frac{f_{s}}{St_{0}/2},  and E to its initial strength,
+
+\\hat{E}\\equiv\\frac{E}{\\left|E_{0}\\right|}. 
+
+(Later, when we wish to refer to the amplitude of an oscillating electric field, we will use \\widehat{E}.) Then, (12) reduces to
+
+\\partial_{t}\\hat{f}_{s}+\\frac{q_{s}}{e}\\hat{E}\\left(\\hat{t}\\right)\\partial_{u} \\hat{f}_{s}=\\delta\\left(u-u_{l}\\right)  and (6) to
+
+\\partial_{\\hat{t}}\\hat{E}\\left(\\hat{t}\\right)+\\hat{j}=0,  where (9) becomes
+
+\\hat{j}\\equiv\\frac{1}{\\xi}\\sum_{s}\\frac{q_{s}}{e}\\int_{-\\infty}^{\\infty}\\beta \\hat{f}_{s}du. 
+
+Here, we have defined a parameter of key importance in determining the discharge dynamics:
+
+\\xi\\equiv\\frac{2\\left(E_{0}^{2}/8\\pi\\right)}{mc^{2}\\left(St_{0}/2\\right)},  which relates the energy in the initial pulsar electric field to the rest mass energy in the pairs injected during the time interval t_{0}. To find the appropriate value of this parameter to describe a pulsar, we introduce the Goldreich-Julian density (Goldreich & Julian, 1969), n_{\\rm GJ}\\equiv\\left(\\Omega B_{\\star}\\right)/\\left(2\\pi ce\\right), and state that
+
+S\\sim\\frac{\\lambda n_{\\rm GJ}}{R_{\\star}/c},  with \\lambda the multiplicity. Then, the value of \\xi in a pulsar with magnetic field B_{\\star}, multiplicity \\lambda, and period P is
+
+\\xi\\sim 10^{12}\\left(\\frac{B_{\\star}}{10^{12}\\,{\\rm G}}\\right)^{2}\\left(\\frac{10 ^{5}}{\\lambda}\\right)\\left(\\frac{1\\,{\\rm s}}{P}\\right)^{7/2},  a large value.
+
+To analyze the nonlinear and linear stages of the electric field oscillations, it will be useful to combine (17), (18), and (19) to obtain another relationship for the electric field. Noting that the current, represented by the second term in (18), receives no contribution from particles newly injected at u_{l}, we can trivially use (17), without reference to the source term, to find the exact, nonlinear relationship
+
+\\partial_{\\hat{t}}^{2}\\hat{E}+\\hat{\\omega}^{2}\\left(\\hat{t}\\right)\\hat{E} \\left(\\hat{t}\\right)=0,  where
+
+\\hat{\\omega}^{2}\\left(\\hat{t}\\right)\\equiv\\frac{\\hat{n}_{+}}{\\xi}\\left\\langle \\frac{1}{\\gamma^{3}}\\right\\rangle_{+}+\\frac{\\hat{n}_{-}}{\\xi}\\left\\langle\\frac {1}{\\gamma^{3}}\\right\\rangle_{-}; 
+
+\\hat{\\omega} is the normalized relativistic plasma frequency characterizing k=0 oscillations (which may be nonlinear or linear). 3 The normalized density \\hat{n}_{s} is defined by
+
+Footnote 3: We note that for the case of a plasma where the electron and positron distributions are the same, this expression becomes, with normalization removed, \\omega^{2}=\\left(8\\pi e^{2}n_{+}\\left\\langle 1/\\gamma^{3}\\right\\rangle\\right)/m, an expression helpful in obtaining (60).
+
+\\int_{-\\infty}^{\\infty}du\\hat{f}_{s}\\equiv\\hat{n}_{s}=\\hat{t}  and the expected values \\left\\langle 1/\\gamma^{3}\\right\\rangle_{+}, \\left\\langle 1/\\gamma^{3}\\right\\rangle_{-} by
+
+\\int_{-\\infty}^{\\infty}\\frac{du}{\\gamma^{3}}\\hat{f}_{s}\\equiv\\hat{n}_{s} \\left\\langle\\frac{1}{\\gamma^{3}}\\right\\rangle_{s}. 
+
+In deriving (23), we have used the relation
+
+d\\beta=\\frac{du}{\\gamma^{3}}  and integrated by parts. The rest of the paper will consider the solutions to equations (17), (18), and (23), which describe the damping of the electric field in the polar cap by the newly injected pairs, and thus determine the radio emission characteristics. We emphasize that the relationships in this section are derived without linearization. They describe the oscillation of the plasma throughout all stages of the discharge, including the earliest stages, when the pair production rate is faster than the frequency \\hat{\\omega}.
+
+## 4 Direct Numerical Simulations
+
+The goal of the paper is the analytical study of the equations introduced previously, leading to relationships which can be used to characterize the radio emission produced in a pulsar polar cap discharge. To confirm these relationships, we compare them to kinetic particle-in-cell simulations with TRISTAN-MP v2 (Spitkovsky, 2005; Hakobyan and Spitkovsky, 2020).
+
+We initialize a one dimensional box with a uniform electric field and no plasma. At each subsequent timestep, pair plasma of momentum u_{l}=10 [at the lower end of the range described by (3)] and small temperature T=0.1\\ mc^{2} (the effect of larger temperatures is considered in Appendix C) is injected into the box. The initial electric field amplitude and injection rate determine the value of \\xi; as expected, the appropriately-normalized simulation results depend only on the value of \\xi and not on the electric field amplitude or source rate separately. (For convenience, after an initial test, only electric field strength was varied to vary \\xi.) We run a set of simulations with values of \\xi ranging from \\xi=2.8\\times 10^{6} to \\xi=4.4\\times 10^{7}.
+
+After two time steps, there are ten skin depths in the simulation box, with each resolved by 700 cells. The simulation is continued, with density increasing and evolving, until the discharge is well past the transition to linearity; in all runs, the skin depth is resolved by at least 35 cells at the end of the simulation.
+
+## 5 Screening of Initial Electric Field
+
+As pair creation begins in an unshielded electric field, the first event that occurs is the screening of the initial electric field, a process which has been considered previously in Levinson et al. (2005) and Cruz et al. (2021). In this section, we examine the physics of this stage, leading to an expression for screening time, (30), which agrees with previous results in the literature, and a new expression for the pair distribution function, (31).
+
+The strong electric field initially present in the polar cap rapidly accelerates the first newly-injected lower energy pairs to large speeds, such that \\beta\\to 1 and in (18) \\hat{j}, defined in (19), approaches
+
+\\hat{j}=\\frac{2}{\\xi}\\int_{-\\infty}^{\\infty}\\hat{f}_{+}\\left(u,\\hat{t}\\right)du =\\frac{2\\hat{t}}{\\xi},  where in the second equality we have applied definition (25). Integration of (18) in time then gives that
+
+\\hat{E}\\left(\\hat{t}\\right)=-1+\\frac{\\hat{t}^{2}}{\\xi}. 
+
+The initial electric field is fully screened when \\hat{E}=0, which occurs at time
+
+\\hat{t}_{screen}=\\xi^{1/2}. 
+
+As the electric field screens, particles are accelerated. Solving (17) using (29) shows the electron distribution function during the screening period is given by:
+
+\\hat{f}_{-}(u,\\hat{t})=\\begin{cases}0,&u-u_{l}<0\\\\ \\frac{1}{1-\\hat{\\tau}_{source}^{2}\\left(u-u_{l},\\hat{t}\\right)/\\xi},&0<u-u_{l}< \\hat{t}-\\frac{\\hat{t}^{3}}{3\\xi}\\\\ 0,&u-u_{l}>\\hat{t}-\\frac{\\hat{t}^{3}}{3\\xi},\\end{cases}  where the parameter \\hat{\\tau}_{source}\\left(u-u_{l},t\\right) is defined by the cubic equation
+
+u-u_{l}=\\left(\\hat{t}-\\hat{\\tau}_{source}\\right)-\\frac{1}{3\\xi}\\left(\\hat{t}^{ 3}-\\hat{\\tau}_{source}^{3}\\right). 
+
+The positron distribution function has the same form, but consists of negative values of u-u_{l}. We plot the analytic electron distribution function at the time of screening \\hat{t}_{screen} with the distribution function from a direct numerical simulation in Figure 1, finding good agreement. The largest disagreement with our analytic prediction occurs at low u-u_{l}, which corresponds to particles injected just before \\hat{t}_{screen}, when the electric field is weak and (28) begins to break down. The maximum u obtained by the secondary pairs during the discharge is given by the maximum u at which (36) has support at \\hat{t}_{screen}, i.e., u-u_{l}=2\\sqrt{\\xi}/3.
+
+At the time of screening, the electric field reaches zero, but the velocities obtained by the electrons and positrons continue to separate them, re electric field in the plasma and beginning the oscillations capable of creating radio emission, which we study next, beginning in the next section with study of the first, large oscillations.
+
+## 6 Nonlinear Stage
+
+The initial oscillations in the plasma following screening are, for large values of \\xi, highly nonlinear and occur in a medium which changes quickly in comparison to the speed of the oscillation. As these oscillations proceed, they are damped by the continual creation of pairs, which are spun up into the wave oscillation, removing energy from the wave electric field. This section examines wave damping during this period.
+
+The electric field amplitude in this stage evolves according to (23), which was derived without making any assumption of linearity. The behavior of the electric field is thus specified by the behavior of the frequency \\hat{\\omega}^{2}, defined in (24). Consideration of (24) shows that \\hat{\\omega}^{2} depends on density \\hat{n}_{s}, which grows linearly as new pairs are added to the system, and on the values of \\left\\langle 1/\\gamma^{3}\\right\\rangle_{s}, which evolve both due to the addition of new pairs at u=u_{l} to the system and due to the large displacements in particle momentum that occur in response to a nonlinear wave.
+
+This evolution of \\hat{\\omega}^{2} can be seen in the results of a simulation of the nonlinear stage, shown in the first panel of Figure 2. Here, \\hat{\\omega}^{2} has large spikes, which represent times when the second derivative of the electric field increases and decreases dramatically in a short period of time. These spikes are caused by particles added at times when the electric field goes through zero. These newly added pairs are not initially accelerated, so they contribute to a build up of a large number of particles near u=u_{l}. Slightly later, one sign of pairs participating in this build up is dragged by the electric field through u=0, where the built up pairs contribute to a dramatic spike in \\left\\langle 1/\\gamma^{3}\\right\\rangle. Afterwards, as the particles are accelerated to high u in the opposite direction, \\hat{\\omega}^{2} decreases rapidly as pairs are accelerated to high \\gamma. Crucially, the peak of the spike occurs slightly after the zero of the electric field.
+
+In (23) a frequency which is described by this shifted spikes structure corresponds to efficient damping of the electric field. Let us first consider an elementary demonstration of this effect; later, we will build a more involved model of the damping for the specific case of the polar discharge.
+
+Define time \\hat{t}=\\hat{T}_{h} as a point of zero-crossing for \\hat{E} that occurs at the end of half-period h of oscillation. We endeavor to determine how a spiked frequency such as that observed in our simulation will change the derivative and amplitude of \\hat{E} between period h=k and h=k+1. Let us consider a simplified form of \\hat{\\omega}^{2} containing only delta function spikes, offset by an amount \\Xi from \\hat{t}=\\hat{T}_{k}:
+
+\\hat{\\omega}^{2}=\\delta\\left(\\hat{t}-\\hat{T}_{k}-\\Xi\\right). 
+
+Plugging this expression into (23) and integrating the resulting equation over a small region \\hat{t}-\\hat{T}_{k}\\in[-\\kappa,\\kappa], where \\kappa>\\Xi, gives
+
+\\partial_{\\hat{t}}\\hat{E}\\left(\\hat{T}_{k}+\\kappa\\right)-\\partial_{\\hat{t}} \\hat{E}\\left(\\hat{T}_{k}-\\kappa\\right)=-\\hat{E}\\left(\\hat{T}_{k}+\\Xi\\right). 
+
+This equation represents a decrease in the magnitude of \\partial_{\\hat{t}}\\hat{E} between successive half-periods h=k and h=k+1 of an electric field oscillation, causing the maximum amplitude of the electric field in the later half-period to be smaller, constituting damping of the electric field. The physical mechanism for this damping is the extraction of energy from the electric field to decelerate pairs in a way that causes a spike in the frequency.
+
+This mechanism is at play in the nonlinear stage of the polar cap discharge. To obtain more specific results, we now build a more involved model; this model includes study of the specific evolution of \\hat{f}_{-}, yielding a more specific form for \\hat{\\omega}^{2} than (33) and, via (23), a functional form for electric field damping, which we will present in (48). The treatment is imprecise due to the nonlinear physics involved.
+
+To develop a model for \\hat{f}_{-}, let us call the amplitude of the electric field during half-period h\\widetilde{E}_{h}; also, we consider the change in electric field amplitude and in \\hat{\\omega} away from the zeros in \\hat{E} to be negligible. The electric field is approximately sinusoidal,4 so that in half-period h (17) becomes
+
+Footnote 4: Note that sawtooth-shaped electric field oscillations, observed in Levinson et al. (2005), do not occur in a kinetic treatment. We consider this point further in Appendix A.
+
+\\partial_{\\hat{t}}\\hat{f}_{-}+\\left[\\widetilde{E}_{h}\\cos\\left(\\hat{\\omega} \\hat{t}\\right)\\right]\\partial_{u}\\hat{f}_{-}=\\delta\\left(u-u_{l}\\right). 
+
+Solving (35) gives
+
+\\hat{f}_{-}=\\hat{f}_{-,new}\\left(u-u_{l},\\hat{t}\\right)+\\hat{f}_{-,old}\\left[u \\hat{\\omega}-\\overline{\\widetilde{E}}_{h}\\sin\\left(\\hat{\\omega}\\hat{t}\\right) \\right]. 
+
+Here, \\hat{f}_{-,old}, corresponding to the homogeneous solution of (35), represents the evolution of particles already present at the beginning of half-period h of the oscillation. The term \\hat{f}_{-,new}\\left(u,\\hat{t}\\right) gives the evolution of newly-added particles, and is given, in a half-period in Figure 2: Quantities relevant to the nonlinear phase, all for a simulation with \\xi=2.8\\times 10^{6}: 2a) The early evolution of \\hat{\\omega}^{2} and \\hat{E}. The peaks in \\hat{\\omega}^{2} occur later than the zeros of \\hat{E}. 2b) Comparison of \\hat{f}_{-} at the second zero-crossing with the analytic model for \\hat{f}_{-,new} in (37). The value of \\hat{f}_{-} at negative u is larger than that of \\hat{f}_{-,new} in part because \\hat{f}_{-} includes electrons already present at the time of screening, which are part of \\hat{f}_{-,old}, that have backwashed to negative u. 2c) Phase space at the second zero-crossing, with every five hundredth particle marked. 2d) An exponential decay fit, \\overline{\\hat{E}\\left(\\hat{t}\\right)}=e^{-0.0016\\hat{t}}. The simulated \\hat{E} diverges from the fit near the transition to linearity, discussed in Section 7. 2e) The value of \\hat{f}_{+} near the end of the nonlinear period, \\hat{t}=5130, showing several bounces stacked on top of each other. 2f) Fit of the decay constant in \\overline{\\hat{E}\\left(\\hat{t}\\right)}=e^{-a\\left(\\hat{t}-\\hat{t}_{screen}\\right)} as found in the simulation and predicted by the fit presented in (49). which electrons are decelerated, by
+
+\\hat{f}_{-,new}(u-u_{l},\\hat{t})= \\begin{cases}0,&u-u_{l}>u_{h}\\left(\\hat{t}\\right)\\\\ \\frac{1/\\overline{E}_{h}}{\\sqrt{g_{+}\\left(u-u_{l},\\hat{t}\\right)}g_{-}\\left(u-u _{l},\\hat{t}\\right)},&u_{h}\\left(\\hat{t}\\right)<u-u_{l}<0\\\\ 0,&u-u_{l}>0,\\end{cases}  where
+
+g_{+}\\left(u-u_{l},\\hat{t}\\right)=1+\\frac{\\left(u-u_{l}\\right)\\hat{\\omega}}{ \\overline{\\hat{E}}_{h}}-\\sin\\left(\\hat{\\omega}\\hat{t}\\right)\\!, 
+
+g_{-}\\left(u-u_{l},\\hat{t}\\right)=1-\\frac{\\left(u-u_{l}\\right)\\hat{\\omega}}{ \\overline{\\hat{E}}_{h}}+\\sin\\left(\\hat{\\omega}\\hat{t}\\right)\\!,  and
+
+u_{h}\\left(\\hat{t}\\right)\\equiv\\frac{\\overline{\\hat{E}}_{h}\\sin\\left(\\hat{ \\omega}\\hat{t}\\right)-\\overline{\\hat{E}}_{h}}{\\hat{\\omega}}\\leq 0. 
+
+The second panel of Figure 2 shows a comparison between (37) and the distribution function at the second zero-crossing in the simulation illustrated in the first panel of Figure 2, indicating rough agreement. For convenience, phase space in the simulation at this time is presented in the third panel of Figure 2.
+
+Let us consider how this distribution function changes the electric field between half-period h=k and h=k+1; then, we will spread this change across a whole half period to obtain a continuous expression for the damping.
+
+Consideration of (36) reveals that the frequency (24), represented in our elementary demonstration by (33), is better represented near the transition between half-period h=k and h=k+1 by
+
+\\hat{\\omega}^{2}\\left(\\hat{t}\\right)=\\frac{1}{\\xi}\\left[g\\left(\\hat{t}\\right)+A \\delta\\left(\\frac{\\hat{t}-\\hat{T}_{k}-\\Xi}{\\hat{t}_{b}}\\right)\\right]. 
+
+(Recall that \\hat{T}_{k} occurs at the end of half-period k.) Here, g reflects the slow change in the frequency due to the evolving nature of \\hat{f}_{-,old} from one half-period to the next as the particles in each \\hat{f}_{-,new} enter the old particles in the next half-period. This evolution includes a linear-in-time addition of density to the discharge and a slow increase in the overall value of \\left\\langle 1/\\gamma^{3}\\right\\rangle. The second term models the spikes in \\left\\langle 1/\\gamma^{3}\\right\\rangle caused by \\hat{f}_{-,new}, which have characteristic height A and width \\hat{t}_{b}. In Appendix B, we roughly estimate the scaling of these quantities with \\xi:
+
+A\\sim\\xi^{0.2}  and
+
+\\hat{t}_{b}\\sim\\xi^{0.3}. 
+
+Most damping is due to the delta function in (41) via the physics described in our elementary demonstration. As in (34) we integrate over a small region \\hat{t}-\\hat{T}_{k}\\in[-\\kappa,\\kappa] to state (neglecting factors of order unity),
+
+\\partial_{\\hat{t}}\\hat{E}\\left(\\hat{T}_{k}+\\kappa\\right)-\\partial_{\\hat{t}} \\hat{E}\\left(\\hat{T}_{k}-\\kappa\\right)=-\\xi^{-0.5}\\hat{E}\\left(\\hat{T}_{k}+ \\Xi\\right). 
+
+The left side of the previous expression can be restated in terms of the frequency and the change in electric field amplitude:
+
+\\partial_{\\hat{t}}\\hat{E}\\left(\\hat{T}_{k}+\\kappa\\right)-\\partial_{\\hat{t}} \\hat{E}\\left(\\hat{T}_{k}-\\kappa\\right)=\\hat{\\omega}\\overline{\\hat{E}}_{k+1}- \\hat{\\omega}\\overline{\\hat{E}}_{k}. 
+
+(Recall that \\overline{\\hat{E}}_{k+1} represents the wave amplitude in the next half-period of the oscillation.) Then, by representing the total change in amplitude as a rate multiplied by a time, we also state
+
+\\tilde{\\omega}\\overline{\\hat{E}}_{k+1}-\\tilde{\\omega}\\overline{\\hat{E}}_{k}= \\tilde{\\omega}\\left[\\frac{\\Delta\\overline{\\hat{E}}_{h}}{\\Delta\\hat{t}_{h}} \\Delta\\hat{t}_{h}\\right],  with \\Delta\\overline{\\hat{E}}_{h} representing the change in electric field amplitude from one half-period to the next, and \\Delta\\hat{t}_{h} the length of a half-period. In (46), we can make the replacement \\Delta\\overline{\\hat{E}}_{h}/\\Delta\\hat{t}_{h}\\to d\\overline{\\hat{E}}/d\\hat{t}, with d\\overline{\\hat{E}}/d\\hat{t} representing a continuous change in the amplitude of the electric field oscillations; furthermore, we note that \\Delta\\hat{t}_{h}\\sim 1/\\hat{\\omega} (again neglecting order unity factors). The continuous analog of (44), that is, an expression which spreads the localized damping caused by a spiked frequency across time, is then:
+
+\\frac{d\\overline{\\hat{E}}}{d\\hat{t}}=-\\xi^{-0.5}\\overline{\\hat{E}}. 
+
+The evolution of the electric field amplitude during the nonlinear phase is then described by
+
+\\overline{\\hat{E}}\\left(\\hat{t}\\right)=e^{-\\left(\\xi^{-0.5}\\right)\\hat{t}},  where the initial electric field amplitude is \\overline{\\hat{E}}=1. The initial period of electric field evolution during the polar cap discharge is thus marked by strong, exponential damping of the amplitude of the electric field oscillations. This is caused by particles added during zero-crossings of the electric field having their momenta reversed and accelerated to high values in the opposite direction, sapping energy from the electric field. This damping grows weaker with higher values of \\xi, which correspond to weaker pair damping.
+
+To verify this model, we use our set of simulations with several values of \\xi to fit an exponential decay \\overline{\\hat{E}}\\left(\\hat{t}\\right)=e^{-a\\hat{t}} to the peaks of the first three peaks of electric field amplitude. An example of this fit is shown in the fourth panel of Figure 2. Then, we assemble the set of fit exponential decay constants a and fit these constants to a power law function of \\xi. The resulting fit is
+
+\\overline{\\widetilde{E}}\\left(\\hat{t}\\right)=e^{-\\left(0.4\\xi^{-0.5}\\right)\\hat{ t}},  in agreement with (48). The fit for a compared with the values of a measured from simulation data can be seen in the final panel of Figure 2.
+
+## 7 Transition to linearity
+
+As the discharge proceeds, the initial stage of slow, large-amplitude oscillations, which experience the exponential damping described by (48), will cease, and the discharge will proceed to a phase of smaller oscillations at higher frequency. We call this later regime the "linear" stage, which we analyze in Section 8, revealing significantly weaker damping than in the nonlinear stage.5 In this section, we discuss the conditions that cause the transition between the nonlinear stage and the linear stage.
+
+Footnote 5: Oscillations with k=0, including those observed in our simulations before a late fragmentation into finite k modes discussed in this section, are exact nonlinear solutions to (23) no matter their amplitude. For such a special wave, the techniques discussed in Section 8 require only that the timescale of background plasma variation be significantly longer than the period of oscillation. However, this condition is roughly equivalent to one requiring that the effect of the wave on particle motion be small, which is necessary for the linearization of the Vlasov equation.
+
+In the nonlinear stage, damping is caused by sharp spikes in \\hat{\\omega}^{2}. These strong spikes will cease to exist when, in (23),
+
+\\frac{\\partial_{\\hat{t}}\\hat{\\omega}^{2}}{\\hat{\\omega}^{3}}\\sim 1,  where \\hat{\\omega}^{2}, defined in (24), varies in time like (41). The time variation in \\hat{\\omega} comes from two sources: the change in the values of \\hat{n}_{s} and in the values of \\left\\langle 1/\\gamma^{3}\\right\\rangle_{s}. The component of \\partial_{\\hat{t}}\\hat{\\omega}^{2} coming from the change in \\hat{n}_{s} is already small at the time of screening, and does not contribute to the spiking behavior. Instead, the spiking results from large displacements in the particle momentum as the wave electric field grows from zero to its full amplitude over the course of a half-period of oscillation, changing the values of \\left\\langle 1/\\gamma^{3}\\right\\rangle_{s}.
+
+These displacements become negligible roughly at the point where the displacement in particle u caused by the wave is insufficient to reverse the typical u of the injected particles, u_{l}. The variation in a particle's momentum, \\delta u, is found by considering the second term in (36) or the maximum magnitude u-u_{l} with support in (37),
+
+\\delta u\\sim\\frac{\\overline{\\widetilde{E}}}{\\hat{\\omega}}. 
+
+This quantity is a relativistic version of the quiver or jitter velocity familiar from classical plasma physics (Catto and Myra, 1989). That this quantity no longer be large enough to reverse u_{l} requires
+
+\\frac{\\overline{\\widetilde{E}}}{\\hat{\\omega}u_{l}}\\sim 1. 
+
+After this point, spiking activity and the concomitant strong exponential damping considered in Section 6 cease. We will show that the subsequent discharge evolution is characterized by much weaker damping, such that the final radio emission amplitude is roughly determined by the electric field amplitude at the time (50) and (52) are satisfied.
+
+Additional simplification is possible when stronger conditions than (50) and (52) hold, specifically,
+
+\\frac{\\partial_{\\hat{t}}\\hat{\\omega}^{2}}{\\hat{\\omega}^{3}}\\ll 1,  and
+
+\\frac{\\overline{\\widetilde{E}}}{\\hat{\\omega}u_{l}}<<1,  which state, respectively, that the timescale of background plasma variation be significantly longer than the period of oscillation, and that the displacement in particle momentum caused by the wave be very small.
+
+We can observe the onset of (50) and (52), and a later progression to (53) and (54), in our simulation. Figure 3 displays the values of \\hat{\\omega}^{2}, the root mean square value of the electric field in the simulation box divided by the frequency, \\sqrt{\\left\\langle\\hat{E}^{2}\\right\\rangle}/\\hat{\\omega}, and \\partial_{\\hat{t}}\\hat{\\omega}^{2}/\\hat{\\omega}^{3} in two simulations. Considering the simulation with \\xi=2.8\\times 10^{6} (a higher value of \\xi, which displays similar trends, is shown in the right panel of Figure 3), we observe an initial stage where \\overline{\\widetilde{E}}/\\left(\\hat{\\omega}u_{l}\\right)>>1, the plasma frequency changes quickly, and the electric field damps rapidly. Once the simulation obeys (52), around \\hat{t}=6000, the strong damping ceases. The frequency still has significant variation, resulting from coherent displacements in the plasma distribution function caused by an electric field that, though not able to reverse newly injected particles, is able to cause noticeable momentum changes. This means that although (50) roughly holds, (53) is not satisfied. This situation is difficult to understand analytically, but corresponds in our simulation to negligible damping.
+
+Later, around \\hat{t}=11000, our simulation of k=0 electric field oscillations fragments into superluminal finite-k modes, which may be a result of a parametric-type instability like that considered in Cruz et al. (2021). An illustration of this fragmentation is given in Figure 4. After this point, the value of \\hat{\\omega}^{2}, where here \\hat{\\omega}^{2} is given by (24) evaluated across the simulation box, which is proportional to, but not the same as, the frequency of a given k mode, does change slowly. This evolution occurs because the electric field is no longer able to cause coherent changes in the plasma distribution function. Conditions (53) and (54) hold, and a new method of analysis, to be explained in Section 8, becomes possible.
+
+We note here that we also ran simulations beginning with a finite k mode. Specifically, we ran simulations starting from a sinusoidal electric field with one period in the simulation box (equivalent to a wave number k=0.63\\ d_{e}^{-1} with skin depth calculated from the plasma density two time steps into the simulation); the maximum initial electric field in these simulations is \\sqrt{2} larger than the uniform electric field in the normal simulations, such that the root mean square electric field amplitude is the same. Plasma is injected in the same way and at the same rate as in the k=0 simulations. The discharge in the nonzero-k simulation quickly evolves into even higher-k oscillations because the initial field is more quickly screened near the zeros of the electric field. There is no later fragmentation, and the oscillations remain superluminal throughout the discharge.
+
+The resulting damping of these simulations is shown in Figure 3 by the orange dashed line. The nonzero-k discharge exhibits a strong exponential damping phase, which ends when the root mean square amplitude of the electric field in the box approximately satisfies (52). This damping is followed by a weak damping phase, without the intermediate stage of minimal damping and
+
+\\overline{\\hat{E}}/\\left(u_{l}\\hat{\\omega}\\right)\\sim 1 exhibited by the k=0 simulations. However, the value of (24) evaluated across the simulation box in finite-k simulations does not show the spiking behavior considered in Section 6, since the picture we advanced in that section will hold only locally.
+
+## 8 Linear Stage
+
+In a plasma where (53) and (54) are satisfied, the system enters a period in which the plasma wave is a small perturbation on the background and the frequency of the oscillation changes slowly, as quantified by (53). In our simulations, this occurs after the fragmentation of the k=0 mode into finite k oscillations; however, since the observed oscillations still have low values of k, the evolution of their amplitude can be roughly analyzed in the same way as a k=0 mode.
+
+Specifically, the electric field differential equation, (23), can be analyzed directly using textbook WKB techniques (Stix, 1992), giving
+
+\\overline{\\hat{E}}^{2}\\sim\\frac{1}{\\hat{\\omega}},  with the electric field oscillation frequency determined by the current value of (24). In this stage, \\hat{\\omega}^{2} changes due to increasing plasma density and evolving \\left\\langle 1/\\gamma^{3}\\right\\rangle_{+,-}, which together yield an overall-increasing frequency, such that (55) represents a slow damping of the electric field. [Neglecting the effect of changing \\left\\langle 1/\\gamma^{3}\\right\\rangle_{+,-}, (55) gives \\overline{\\hat{E}}\\sim 1/\\hat{t}^{1/4}, a dramatically weaker damping than (48).]
+
+Further physical insight into this damping can be obtained by arriving at (55) via energy arguments. Using (18), we can state
+
+\\frac{1}{2}\\partial_{\\hat{t}}\\hat{E}^{2}=-\\hat{j}\\hat{E},  which relates the change in the energy in the electric field to the power exerted on the current by the electric field. Via the same method used to obtain (23), we also have
+
+\\partial_{\\hat{t}}\\hat{j}=\\hat{\\omega}^{2}\\hat{E}  with \\hat{\\omega} defined in (24). Using (57) to substitute for \\hat{E} in (56), we can arrive at
+
+\\partial_{\\hat{t}}\\left(\\frac{\\hat{E}^{2}}{2}+\\frac{\\hat{j}^{2}}{2\\hat{\\omega }^{2}}\\right)=-\\frac{\\hat{j}^{2}}{2\\hat{\\omega}^{2}}\\left(\\frac{1}{\\hat{\\omega }^{2}}\\frac{\\partial\\hat{\\omega}^{2}}{\\partial\\hat{t}}\\right). 
+
+The first term on the left side represents the wave energy in the electric field and the second the energy from the velocity of particles in the wave. When the wave frequency changes slowly, we can say these are roughly equal on average and replace (58) with an expression in terms of electric field amplitude:
+
+\\partial_{\\hat{t}}\\overline{\\hat{E}}^{2}=-\\frac{\\overline{\\hat{E}}^{2}}{2} \\left(\\frac{1}{\\hat{\\omega}^{2}}\\frac{\\partial\\hat{\\omega}^{2}}{\\partial\\hat {t}}\\right). 
+
+From this equation, we can reproduce (55).
+
+The relationship (55), with a frequency calculated from the current value of (24) across the whole simulation box, and the squared electric field strength given by its average value in the box, is compared to simulation in Figure 5, showing good agreement.
+
+In summary, the linear stage, which occurs late in the discharge, is marked by weak damping. The nature of this damping is such that the relationship between electric field strength and frequency throughout the linear stage is given by (55).
+
+## 9 Conclusion with Implications for Pulsar Radio Emission
+
+We have developed a one-dimensional model for the evolution of wave amplitude during a pulsar polar cap discharge. In this model, the initial inductive electric field in the pulsar polar cap is screened by the creation of electron-positron pairs, setting up oscillations which continue to be damped by pair creation. This damping process has three phases: a screening phase, described in Section 5, a nonlinear phase, described in Section 6, and a linear phase, described in Section 8. The conditions for the transition between the nonlinear stage and the linear stage are considered in Section 7.
+
+In a realistic, two-dimensional pulsar polar cap, the discharge waves are initially electromagnetic (Philippov et al., 2020); in addition, they will refract and may develop an even larger electromagnetic component as they also encounter cross-field gradients after their creation (Melrose et al., 2020). These electromagnetic waves eventually escape the plasma as Poynting flux. Our one-dimensional model does not consider the magnetic component of the plasma oscillations, and cannot treat the escape process, which will be the focus of future work. However, the electromagnetic oscillations interact with the pair plasma through a parallel wave electric field and resulting plasma current, and this interaction, in which the physics of our model is key, is responsible for the evolution of the amplitude of the radio emission. In this conclusion, we will thus use the physics understanding from our model to give new insight into multiple elements of pulsar observations.
+
+To start, we develop an expression for the frequency of the pulsar's emission. We note that in the linear phase of the discharge, the pair distribution function approaches a Maxwell-Juttner (Juttner, 1911) distribution drifting at u_{l} (at the large Lorentz factors (3) characterizing the lower energy pairs, \\gamma_{l}\\approx u_{l}, and we will present results in terms of u_{l}). For such a distribution, \\left<1/\\gamma^{3}\\right> depends on u_{l} and on the thermal spread of newly injected pairs, which is defined by the temperature, T. In particular, for pulsar conditions, where u_{l}\\gg 1, T\\gtrsim mc^{2} and T/(mc^{2})\\ll u_{l}, the plasma frequency (24) can be roughly represented by (Rafat et al., 2019)
+
+\\omega\\approx\\sqrt{\\left(\\frac{8\\pi n_{+}e^{2}}{mu_{l}^{3}}\\right)\\left(\\frac {2T}{mc^{2}}\\right)}. 
+
+The pulsar's radio emission is in the form of a super-luminal O-mode, which has a frequency \\omega_{O} above the plasma frequency. Pair multiplicity in polar cap cascades of active pulsars relatively quickly reaches values of \\sim 10^{3} and continues to grow until reaching the maximum multiplicity of \\sim\\mathrm{few}\\times 10^{5}(Timokhin and Harding, 2015; Timokhin and Harding, 2019). Electromagnetic waves likely escape the plasma when it is characterized by a pair multiplicity between these values.6 Evaluating (60) numerically for a pair multiplicity at the bottom of this range we get
+
+Footnote 6: For a number of reasons, waves might escape the pair-forming blob, i.e. the region where the plasma density increases and the wave amplitude drops, before the pair multiplicity there saturates at \\kappa\\sim 10^{5}. The wave numbers k of waves in our full discharge simulations (Philippov et al., 2020) are a non-negligible fraction of \\omega/c, similar to the superluminal waves observed in the simulations which start with a non-zero k discussed in this paper. Hence, the group velocity of oblique electromagnetic O-mode waves in hot plasma will be significant, and they should be able to outrun the region with increasing plasma density. The waves might also escape from the sides of the pair forming blob—the freshly created pair plasma is highly non-uniform, so the waves would refract towards regions of smaller density and might escape the blob (a scenario discussed in Melrose et al., 2021). On the other hand, for some magnetic field lines, the pair-forming blob will be moving towards the NS (see Timokhin and Arons, 2013) and the waves propagating towards the magnetosphere would not need to go through the region of increasing plasma density.
+
+\\nu_{O}\\geq 5\\,\\mathrm{MHz}\\left(\\frac{\\mathrm{n_{+}/n_{\\mathrm{GJ}} }}{10^{3}}\\right)^{1/2}\\left(\\frac{\\mathrm{B_{*}}}{10^{12}\\,\\mathrm{G}}\\right) ^{1/2}\\\\ \\times\\left(\\frac{P}{1\\,\\mathrm{s}}\\right)^{-1/2}\\left(\\frac{u_{l }}{10^{3}}\\right)^{-3/2}\\left(\\frac{T}{mc^{2}}\\right)^{1/2},  with \\nu_{O} representing the frequency of O-mode waves. Pulsar radio emission has been observed at frequencies as low as 15 MHz (see, for example, Pilia et al., 2016), making (61) possibly consistent with observation. O-mode oscillations with higher wave numbers have higher frequencies; in addition, later in the discharge process, when the plasma multiplicity increases above \\sim 10^{3} and u_{l} drops down to \\sim 10, the frequency will increase. Both of these effects push (61) towards the radio range.
+
+To continue, we present a set of arguments leading to an expression for pulsar radio luminosity. The luminosity depends on the amplitude of the emission when it leaves the pulsar. As we described in Section 6, all strong damping of the plasma waves occurs in the nonlinear stage. Considering (52), the end of the nonlinear phase occurs when
+
+\\frac{e\\overline{E}_{*}}{u_{l}m\\omega_{l}c}\\sim 1,  where \\overline{E}_{*} is the electrostatic component of the wave amplitude at the point of transition between the nonlinear and linear stages, u_{l}\\sim 10^{3} is the injection momentum of the lower energy pairs, and \\omega_{l}\\sim 10^{9}\\,\\mathrm{rad}\\,\\mathrm{s}^{-1} defines the characteristic wave frequency at the end of the nonlinear phase. Evaluation gives that \\overline{E}_{*}=u_{l}m\\omega_{l}c/e\\sim 10^{5}\\,\\mathrm{G}. The time to reach the end of the nonlinear phase, t_{s}, can be found from (49), t_{s}\\sim 2\\sqrt{\\xi}\\ln(E_{0}/\\overline{E}_{*})t_{0}. Estimating\\ln(E_{0}/\\overline{E}_{\\star})\\lesssim 10 and using (20), one obtains
+
+t_{s}\\lesssim 0.5\\left(\\frac{P}{1\\,{\\rm s}}\\right)^{1/4}\\left(\\frac{R_{\\rm pc}}{c }\\right). 
+
+This time is shorter than the light-crossing time across the polar cap, R_{\\rm pc}/c, so the nonlinear phase of the discharge completes in all active pulsars.
+
+As described in Section 8, the damping of the electric field is weak during the linear stage, so the rough overall radio luminosity is likely to be set at the end of the nonlinear phase. (The end of the nonlinear phase also corresponds to the lowest frequencies of emission, because u_{l} will decrease and multiplicity will increase in the linear phase. The pulsar spectrum declines with frequency, such that luminosity is dominantly determined by the low-frequency contributions occuring at the end of the nonlinear stage.) Emission across the pulsar polar cap gives a radio luminosity of L_{\\rm rad}\\sim c\\left(\\overline{E}_{\\star}\\sin\\alpha\\right)^{2}(\\eta\\pi R_{ \\rm pc}^{2})\\left/(4\\pi\\right), where \\alpha is the typical angle between the direction of wave propagation and the background magnetic field (see Philippov et al., 2020) and \\eta characterizes the fraction of pair producing field lines in the polar cap. Using (62), one obtains
+
+L_{\\rm rad}\\sim 10^{28}{\\rm erg\\,s^{-1}}\\left(\\frac{\\omega_{t}}{1 0^{9}\\,{\\rm rad\\,s^{-1}}}\\right)^{2}\\left(\\frac{P}{1\\,{\\rm s}}\\right)^{-1}\\\\ \\times\\left(\\frac{u_{l}}{10^{3}}\\right)^{2}\\eta\\sin^{2}\\alpha. 
+
+This luminosity is towards the lower end of the range of observed radio luminosity (Szary et al., 2014; Wu et al., 2020); higher values of luminosity may be explained by the escape of some radiation before the end of the nonlinear stage. The prediction (64) can also be expressed as a fraction of the pulsar's spindown luminosity, L_{\\rm sd}=cE_{0}^{2}\\pi R_{\\rm pc}^{2}/(4\\pi)(Spitkovsky, 2006):
+
+\\frac{L_{\\rm rad}}{L_{\\rm sd}}\\sim\\frac{\\overline{E}_{\\star}^{2} }{E_{0}^{2}}(\\eta\\sin^{2}\\alpha)\\sim 2\\times 10^{-4}\\left(\\frac{P}{1\\,{\\rm s}} \\right)^{3}\\times\\\\ \\left(\\frac{B_{\\star}}{10^{12}\\,{\\rm G}}\\right)^{-2}\\left(\\frac{ \\omega_{t}}{10^{9}\\,{\\rm rad\\,s^{-1}}}\\right)^{2}\\left(\\frac{u_{l}}{10^{3}} \\right)^{2}(\\eta\\sin^{2}\\alpha). 
+
+Observations show practically no dependence of radio luminosity on pulsar parameters (Szary et al., 2014; Wu et al., 2020); however, (64) shows a non-negligible dependence on B_{\\star} and \\Omega. We should note that the uncertainties in our simplified estimate for \\omega_{t} and the numerical factors \\eta and \\alpha may substantially reduce this dependence. For example, in young energetic pulsars with large \\Omega (and B_{\\star}) the pair creation front is expected to be less inclined with respect to the background magnetic field, which reduces \\alpha and hence the dependence of radio luminosity on these parameters. We will refine these dependencies in our future multi-dimensional studies.
+
+Next, although the overall radio luminosity is set at the transition between the nonlinear and linear phases, some modification in amplitude does occur in the linear phase. We expect that radiation will escape the plasma throughout the linear stage (and possibly during the nonlinear stage as well) in a continuous process that occurs concurrently with the generation of the plasma waves. The relationship between amplitude and frequency in the linear stage, given by (55), would thus be visible to an observer if, across the polar cap, the wave amplitude became unaffected by the plasma at a variety of different points in the linear damping process, when the value of the plasma frequency is different. This relationship roughly agrees with the observed spectrum of emission, S_{\\omega}\\sim\\omega^{-1.4\\pm 1.0}, with S_{\\omega} the intensity emitted at that frequency (Bates et al., 2013). This suggests that the pulsar radio spectrum may result in part from the linear damping physics of the pair discharge.
+
+Finally, the distribution of particles right after the end of the initial screening, (31), can be used as a model for the spectrum of particles flowing back from the discharge to the pulsar surface, allowing greater understanding of the X-ray hotspots observed by NICER (Gendreau et al., 2016; Salmi et al., 2020).
+
+E.T. is indebted to a helpful comment on Math Stack-Exchange from user "DinosaurEgg." This research made use of the "Tristan-MP v2" particle-in-cell code. We thank Peter Catto, Lev Arzamasskiy, Carolyn Raithel, and Fabio Cruz for helpful conversations. Hayk Hakobyan provided expert advice on code usage. E.T. was supported by the W.M. Keck Foundation Fund at the Institute for Advanced Study. A.P. was supported by NSF grant no. PHY-2010145. A.T. was supported by the grant 2019/35/B/ST9/03013 of the Polish National Science Centre.
+
+## Appendix A Discussion of sawtooth oscillations
+
+Works that study pulsar polar cap discharges using a fluid treatment observe sawtooth-shaped oscillations, where electric field evolution is linear except at turning points (Levinson et al., 2005). There have been tentative suggestions in the literature that such sawteeth may be a generic feature of relativistic pair discharges, extending also to kinetic treatments (Cruz et al., 2021). In fact, sawteeth do not occur in a kinetic treatment.
+
+To understand why, let us first consider the origin of sawteeth in a fluid treatment. We can define a Lorentz factor associated with the electron and positron fluids as, with s=+,- again indicating species,
+
+\\gamma_{s}\\equiv\\frac{1}{\\sqrt{1-\\frac{v_{s}^{2}}{e^{2}}}}, (A1) with v_{s} the velocity of species s; furthermore, we define N_{s} as the density of fluid species s measured in the pulsar frame. The equations governing this system are (Levinson et al., 2005)
+
+m\\partial_{t}\\left(N_{s}\\gamma_{s}v_{s}\\right)=N_{s}q_{s}E, (A2)
+
+\\partial_{t}N_{s}=S/2, (A3) and
+
+\\partial_{t}E+4\\pi\\sum_{s}q_{s}N_{s}v_{s}=0, (A4) with m again representing the pair mass, q_{s} the species charge, E the electric field, and S/2 the source rate. Under equivalent normalizations to those used in Section 3, these become
+
+\\partial_{\\hat{t}}\\left(\\hat{N}_{s}\\gamma_{s}\\beta_{s}\\right)=\\hat{N}_{s}\\frac {q_{s}}{e}\\hat{E}, (A5)
+
+\\partial_{\\hat{t}}\\hat{N}_{s}=1, (A6) and
+
+\\partial_{\\hat{t}}\\hat{E}+\\frac{1}{\\xi}\\sum_{s}\\frac{q_{s}}{e}\\hat{N}_{s}\\beta _{s}=0. (A7)
+
+Except over short timescales when the pair fluid velocities reverse direction, the electron and positron fluids are highly relativistic, such that (A7) approaches
+
+\\partial_{\\hat{t}}\\hat{E}=-\\frac{1}{\\xi}\\sum_{s}\\frac{q_{s}}{e}\\hat{N}_{s}; (A8) with constant or slowly changing density, this represents linear or nearly-linear change in the magnetic field, giving the sawtooth form seen in the first panel of Figure 1 of Levinson et al. (2005).
+
+A kinetic description of the polar cap oscillations, presented in Section 3, differs fundamentally from a fluid one in that it takes into account that a plasma is composed of particles of many different velocities, unlike a fluid, which has a single velocity. Thus, the replacement presented in (A8) is not possible, and the electric field evolution is sinusoidal, with a frequency given by (24). We note that to obtain a fluid-like result, i.e. one with linear oscillations of \\partial_{\\hat{t}}^{2}\\hat{E}=0, we could take the limit \\left\\langle 1/\\gamma^{3}\\right\\rangle_{+,-}\\to 0 in the frequency (24), which corresponds to the artificial situation of a plasma composed just of particles moving with c, which bears some resemblance to a fluid moving at at c.
+
+As further illustration of the difference between kinetic and fluid oscillations, we present in Figure 6 a comparison between the first kinetic bounce shown in Figure 2 and a calculation of the fluid analog evolution of the electric field which would occur if (A8) governed the system. The difference in the two lines is significant.
+
+## Appendix B Estimate of scaling of A and \\hat{T}_{B}
+
+In this appendix, we develop a rough model for A and \\hat{t}_{b}. To do this, we consider the behavior of (37) near the beginning of a period in which electrons are decelerated, \\hat{t}=\\frac{\\pi}{2\\tilde{\\omega}}. Specifically, consider that the contribution of new particles to the frequency is
+
+\\hat{\\omega}_{new}^{2}\\left(\\hat{t}\\right)=\\left(\\frac{\\hat{n}_{+}}{\\xi}\\left< \\frac{1}{\\gamma^{3}}\\right>_{+}\\right)_{new}+\\left(\\frac{\\hat{n}_{-}}{\\xi} \\left<\\frac{1}{\\gamma^{3}}\\right>_{-}\\right)_{new}\\approx\\frac{1}{\\xi}\\int_{ u_{max}\\left(i\\right)}^{u_{l}}du\\hat{f}_{-,new}\\left(u,\\hat{t}\\right)\\left(1+u^{2} \\right)^{-3/2}, (B9) with \\hat{f}_{-,new} defined in (37) and u_{max}\\left(\\hat{t}\\right) defined in (40). The frequency is dominated by contributions from the electrons because positrons are accelerated to even higher u than their injection momentum u_{l}, increasing their Lorentz factor and decreasing their contribution to the frequency. The value of A represents the height of the spike in \\xi\\hat{\\omega}^{2} that occurs just past \\hat{t}=\\frac{\\pi}{2\\tilde{\\omega}}, at the time where particles added near the zero of the electric field are pulled through u=0. The value of A\\hat{t}_{b} represents the area under this spike. Specifically, we can write
+
+A\\sim\\xi\\underset{\\frac{\\pi}{2\\tilde{\\omega}}<\\tilde{t}<\\frac{\\pi}{2\\tilde{ \\omega}}}{\\max}\\left[\\hat{\\omega}_{new}^{2}\\left(\\hat{t}\\right)\\right]. (B10) and
+
+A\\hat{t}_{b}\\sim\\xi\\int_{\\pi/2\\hat{\\omega}}^{3\\pi/2\\hat{\\omega}}\\hat{\\omega}_{ new}^{2}\\left(\\hat{t}\\right)d\\hat{t}. (B11)
+
+We numerically evaluate these quantities for \\hat{E}_{n}\\sim 1 at several values of \\hat{\\omega} and fit the resulting data, giving
+
+A\\sim\\hat{\\omega}^{-0.5} (B12) and
+
+\\hat{t}_{b}\\sim\\hat{\\omega}^{-0.7}. (B13)
+
+We note from (41) that at times of zero-crossing \\hat{\\omega}^{2}\\sim A/\\xi, and use (B12) to write
+
+\\hat{\\omega}^{2}\\sim\\frac{1}{\\xi\\hat{\\omega}^{0.5}}, (B14) whence,
+
+A\\sim\\xi^{0.2} (B15) and
+
+\\hat{t}_{b}\\sim\\xi^{0.3}. (B16)
+
+Simulation confirms that the height and width of the spikes increase slowly with \\xi.
+
+## Appendix C Effect of Finite Temperature
+
+All analysis after (12) assumes negligible injection temperature; our simulations use a small injection temperature of T=0.1\\,mc^{2}, as described in Section 4. However, as noted in Section 3, newly injected pairs in fact have a thermal spread of roughly T\\gtrsim mc^{2}. To examine the effect of this thermal spread, we run two more cases of our \\xi=2.8\\times 10^{6} simulation with injection temperatures of T=1\\,mc^{2} and T=10\\,mc^{2}. The effect of finite injection temperature on these simulations can be seen in Figure 7. The left figure, which depicts the quantity also shown in Figure 5, shows that higher temperature simulations have a lower frequency and a higher saturation amplitude. In addition, the fragmentation into finite k modes occurs later in the higher temperature simulation. The right plot in Figure 7 displays the spatial profile of \\tilde{E} at a time late in the discharge, after the simulation fragments into finite-k modes, and should be compared to the quantities in Figure 4, showing that higher temperature simulations have slightly larger wavelength modes.

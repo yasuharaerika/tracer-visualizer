@@ -1,0 +1,221 @@
+###### Abstract
+
+We introduce a new technique to constrain the line-of-sight integrated electron density of our Galactic halo \\rm DM_{\\rm MW,halo} through analysis of the observed dispersion measure distributions of pulsars \\rm DM_{\\rm pulsar} and fast radio bursts \\rm DM_{\\rm FRB}. We model these distributions, correcting for the Galactic interstellar medium, with kernel density estimation--well-suited to the small data regime--to find lower/upper bounds to the corrected \\rm DM_{\\rm pulsar}/DM_{\\rm FRB} distributions: \\rm max\\,[DM_{\\rm pulsar}]\\approx 7\\pm 2\\,(stat)\\pm 9\\,(sys)\\,pc\\,cm^{-3} and \\rm min\\,[DM_{\\rm FRB}]\\approx 63^{+27}_{-21}\\,(stat)\\pm 9\\,(sys)\\,pc\\,cm^{-3}. Using bootstrap resampling to estimate uncertainties, we set conservative limits on the Galactic halo dispersion measure -2<\\rm DM_{\\rm MW,halo}<123\\,pc\\,cm^{-3} (95% c.l.). The upper limit is especially conservative because it may include a non-negligible contribution from the FRB host galaxies and a non-zero contribution from the cosmic web. It strongly disfavors models where the Galaxy has retained the majority of its baryons with a density profile tracking the presumed dark matter density profile. Last, we perform Monte Carlo simulations of larger FRB samples to validate our technique and assess the sensitivity of ongoing and future surveys. We recover bounds of several tens \\rm pc\\,cm^{-3} which may be sufficient to test whether the Galaxy has retained a majority of its baryonic mass. We estimate that a sample of several thousand FRBs will significantly tighten constraints on \\rm DM_{\\rm MW,halo} and offer a valuable complement to other analyses.
+
+## 1 Introduction
+
+In the early universe the majority of baryons resided in a cool, diffuse plasma, which is predicted to have collapsed into sheetlike and filamentary structures that make up the intergalactic medium (IGM). Around the time of structure formation, dark matter collapses into halos, pulling baryons with it. As the gas falls inwards, it is shock-heated to form a hot, diffuse plasma, known as halo gas or the circumgalactic medium (CGM). Approximately 10% of the gas cools and falls into the center of the halo to form stars and the interstellar medium (ISM; e.g. White and Rees, 1978).
+
+Comparing the baryonic mass fraction detected for galaxies (M_{b}/M_{\\rm halo}) to the cosmic mean (\\Omega_{b}/\\Omega_{m}), however, reveals a baryonic deficit (e.g. Dai et al., 2010). The missing baryons may have been ejected back into the IGM before forming stars or perhaps have yet to be detected (e.g. Prochaska et al., 2011; Booth et al., 2012). In the latter scenario, the CGM presents itself as a possible refuge.
+
+This issue holds for the CGM of our Galaxy. While it is evident that its stars and ISM correspond to \\lesssim 25% of the baryonic mass available to a halo with mass M_{\\rm halo}=10^{12.2}\\rm M_{\\odot} (the current estimate; Boylan-Kolchin et al., 2013), the mass and distribution of gas within our Galactic halo are not well determined even despite our close proximity. The key observables that constrain the Galactic CGM include soft X-ray emission from the plasma (Henley et al., 2010), X-ray and UV absorption-lines of oxygen ions (Faerman et al., 2017; Kovacs et al., 2019), density constraints from ram-pressure stripping of the Large Magellanic Cloud (LMC; Salem et al., 2015), and dispersion measure (DM) observations from pulsars towards the LMC (Manchester et al., 2006). These have provided valuable constraints for models of the Galactic halo, but still allow for large variations in the mass and spatial extent of the gas (Fang et al., 2013; Bregman et al., 2018; Faerman et al., 2013; Prochaska and Zheng, 2019).
+
+A primary challenge to assessing the Galactic CGM is that the gas is too diffuse (especially at large radii) to be imaged directly. Furthermore, the absorption-line measurements (e.g. O vi and O vii) require substantial ionization and/or metallicity corrections to infer the total gas. In this respect, the DM measurements towards the LMC provide the most direct probe of the ionized gas, yet it lies at only \\approx 1/4 the virial radius r_{200} of the Galaxy. Ideally, one would prefer to record DM measurements to r_{200} and also across the sky to search for asymmetries in the halo gas distribution. Just such an opportunity is now afforded (albeit with caveats, as we will discuss) by the transients known as fast radio bursts (FRBs).
+
+FRBs are the population of \\simmillisecond chirps of bright radio emission at approximately GHz frequencies discovered serendipitously (Lorimer et al., 2007) and now pursued in earnest with dedicated projects and facilities (Caleb et al., 2016; Law et al., 2018; CHIME/FRB Collaboration et al., 2018; Kocz et al., 2019). Recorded in each FRB event is its DM value \\rm DM_{FRB}. The majority greatly exceed estimates for our Galactic ISM and CGM, blending strong statistical support that FRBs have an extragalactic origin (Petroff et al., 2019; Cordes & Chatterjee, 2019). This inference has been confirmed by a small but growing set of FRBs localized to \\approx 1\\arcsec and then shown to reside in a distant galaxy (Tendulkar et al., 2017; Bannister et al., 2019; Ravi et al., 2019; Prochaska et al., 2019; Marcote et al., 2020). As a result, the community now recognizes FRBs as a viable tool to probe ionized gas across the universe, e.g. to conclusively detect the so-called "missing" baryons of the present-day universe (Fukugita et al., 1998; Macquart, 2018).
+
+Owing to its integral nature, \\rm DM_{FRB} includes contributions from all of the electrons along the sightline: the intergalactic medium, gas in distant Galactic halos, the ionized gas of the system hosting the FRB, and our Milky Way. Indeed, the host and Galaxy contributions (\\rm DM_{host}, \\rm DM_{MW}) are frequently considered a "nuisance" to proposed analyses of the cosmic web. In this manuscript, however, we view them as a highly desired signal, i.e. a new opportunity to constrain the Galactic CGM.
+
+There are two primary challenges that this paper addresses: how to use pulsars and FRBs to probe the dispersion measure of Galactic halos, and how to do so with a limited data set. The first problem is addressed by constraining the DM contribution of the MW halo to the total observed DM of pulsars and FRBs.
+
+For the second challenge, only \\sim 100 FRBs have been observed to date; this necessitates techniques that are well suited to dealing with small data sets. We propose the use of standard kernel density estimation (KDE; Silverman, 1986) and asymmetric, variable-bandwidth KDE (Chen, 2000; Hoffmann & Jones, 2015) to find probability density functions (PDFs) of the DM distribution of pulsars and of FRBs, respectively. Other density estimation techniques are explored--namely, density estimation using field theory (DEFT; Kinney, 2014, 2015; Chen et al., 2018) and a generalized extreme value (GEV), but prove to be insufficient (see SS B and SS C for details). From the PDFs one can estimate the maximum MW halo DM given by pulsars, and the minimum MW halo and host halo DM given by FRBs. This infers constraints on the DM of the MW CGM and part of the host CGM.
+
+We measure a MW halo DM of 63^{+27}_{-21}\\,(\\rm stat)\\pm 9\\,(\\rm sys)\\,pc\\,cm^{-3}, corresponding to a 1\\sigma confidence detection. The precision of this measurement is limited by the FRB sample size and we predict a robust detection of the MW halo with the incorporation of FRB detections anticipated in the coming year. The techniques presented here will make the best precision and least ambiguous measurement of the MW halo in several years with samples of 10^{4} FRBs.
+
+The paper is structured as follows. SS 2 outlines the core concepts of this work. SS 3 details the density estimation techniques used in the analysis. The methodology and results are presented in SS 4, where SS 4.2 provides constraints based on observed data and SS 4.3 provides an analysis based on simulations. The results and implications are discussed in SS 5, and conclusions are summarized in SS 6.
+
+## 2 The Framework
+
+Pulsars and FRBs are both millisecond radio transients. The former lie in the disk of the MW galaxy and the latter are extragalactic. Since the group velocity of the electromagnetic wave depends on the free electron density (n_{e}) along the path of propagation, the arrival time of the transient signal is extended. This spread is described by the dispersion measure:
+
+\\rm DM=\\int\\frac{n_{e}ds}{1+z}. 
+
+DMs can therefore be used to study the distribution of baryons along the line of sight between a transient source and an observer.
+
+Figure 1 shows a schematic of how electrons are distributed relative to pulsars and FRBs. Galactic halos are assumed to be devoid of radio transients, but contain a significant column density of electrons. Pulsars have been detected predominantly in the Galactic disk or nearby globular clusters1(Manchester et al., 2005). Those with known distance have been used to create detailed models of the electron density distribution of the
+
+Milky Way disk (Cordes and Lazio, 2002, 2003; Gaensler et al., 2008; Yao et al., 2017). In the following we adopt both the NE20012 and YMW163 algorithms.
+
+Footnote 2: Available in Python at [https://github.com/FRBs/ne2001](https://github.com/FRBs/ne2001)
+
+Footnote 3: Available in Python at [https://github.com/telegraphic/pygedm](https://github.com/telegraphic/pygedm)
+
+If we assume FRBs are distributed throughout their host galaxies and throughout space, then the lowest \\rm DM_{FRB} values set a bound on the electron column density associated with the halos of the Milky Way and the typical host galaxy. This measurement is the focus of the manuscript. Table 1 provides a summary of the notation used in this paper.
+
+### Constraints from Pulsars
+
+We consider
+
+\\rm DM_{pulsar}=\\rm DM_{ISM}^{\\delta}\\ +\\rm DM_{MW,halo}^{\\delta}\\ \\,  with \\rm DM_{ISM}^{\\delta} the ISM contribution and \\rm DM_{MW,halo}^{\\delta} the halo contribution. We then define an ISM-corrected quantity \\rm\\Delta DM_{pulsar}, which subtracts the total ISM contribution along the pulsar sightline,
+
+\\rm\\Delta DM_{pulsar}=\\rm DM_{pulsar}-\\rm DM_{ISM}\\ . 
+
+Most pulsars have unknown distances yet are expected to lie predominantly in the Galactic disk, with a scale height of 100 pc (Faucher-Giguere and Kaspi, 2006). Therefore, \\rm DM_{ISM} is generally larger than \\rm DM_{pulsar} and the majority of \\rm\\Delta DM_{pulsar} values will be negative. Any positive values could be attributed to the halo, and therefore the maximum \\rm\\Delta DM_{pulsar} yields a lower limit:
+
+\\rm DM_{MW,halo}>\\rm max\\left[\\rm\\Delta DM_{pulsar}\\right]\\ . 
+
+Such an analysis must allow for uncertainties in the modeling of \\rm DM_{ISM}, but for high Galactic latitudes these uncertainties are expected to be less than 10 pc cm{}^{-3}.
+
+### Constraints from FRBs
+
+\\rm DM_{FRB} has contributions from the ISM, the MW halo, cosmic gas, and the FRB host galaxy,
+
+\\rm DM_{FRB}=\\rm DM_{ISM}+\\rm DM_{MW,halo}+\\rm DM_{cosmic}+\\rm DM_{host}\\ . 
+
+Similar to the pulsars, we define an ISM-corrected measure:
+
+\\rm\\Delta DM_{FRB}=\\rm DM_{FRB}-\\rm DM_{ISM}\\ . 
+
+From the full distribution of \\rm\\Delta DM_{FRB}, we will examine the lowest values on the expectation that these have lower \\rm DM_{cosmic} contributions. For reference, an FRB at z=0.03(e.g. Marcote et al., 2020) has an average \\rm\\langle DM_{cosmic}\\rangle\\,\\approx\\,25pc\\,cm^{-3}.
+
+The lowest values of \\rm\\Delta DM_{FRB} should also reflect the lowest combinations of \\rm DM_{MW,halo} and \\rm DM_{host}. We expect significant variations in the latter both due to the distribution of host galaxy masses and also from variations in the FRB location within the galaxy. We express \\rm DM_{host}^{min} as the minimum of this distribution which may be 10 to several tens pc cm{}^{-3}.
+
+Regarding variations in \\rm DM_{MW,halo}, galaxy formation models tend to predict a nearly spherical distribution of gas, especially beyond the inner halo (but see Yamasaki and Totani (2020) which includes a non-spherical component). Spherically symmetric models of our Galaxy yield less than 10 pc cm{}^{-3} variations in \\rm DM_{MW,halo} even though the Sun is located off-center (Prochaska and Zheng, 2019). In the following, we will assume a single \\rm DM_{MW,halo} unless otherwise discussed. One recovers
+
+\\rm DM_{MW,halo}+\\rm DM_{host}^{min}=min\\left[\\rm\\Delta DM_{FRB}\\right]\\ \\,  and therefore
+
+\\rm DM_{MW,halo}<\\rm min\\left[\\rm\\Delta DM_{FRB}\\right]\\ . 
+
+## 3 Kernel Density Estimation
+
+KDE is a non-parametric technique that estimates an unknown density by constructing a kernel at each data point and summing their contributions. Owing to their shapes, the distributions of \\rm\\Delta DM_{pulsar} and \\rm\\Delta DM_{FRB} are each suited to a different class of KDE. \\rm\\Delta DM_{pulsar} has smooth edges and can be adequately modelled with a Gaussian kernel and a fixed bandwidth. The sharp edge of \\rm\\Delta DM_{FRB}, however, necessitates a varying bandwidth and a kernel with a steep cut-off.
+
+In SS 3.1 we outline standard KDE and in SS 3.2 we describe the modifications for asymmetric, bandwidth-varying KDE.
+
+\\begin{table}
+
+\\begin{tabular}{c|c} Quantity & Description \\\\ \\hline \\rm DM_{pulsar} & The total DM measurement of a pulsar \\\\ \\rm DM_{FRB} & The total DM measurement of an FRB \\\\ \\rm DM_{ISM}^{\\delta} & DM from a fraction of the Galactic ISM \\\\ \\rm DM_{ISM} & Total sightline DM for the Galactic ISM \\\\ \\rm DM_{MW,halo} & DM of all gas in our Galactic halo \\\\ \\rm DM_{MW,halo}^{\\delta} & DM from a fraction of gas in our Galactic halo \\\\ \\rm DM_{IGM} & DM from the IGM (gas between halos) \\\\ \\rm DM_{cosmic} & DM from all cosmic gas (IGM+halos) \\\\ \\rm\\langle DM_{cosmic}\\rangle & Average DM from all cosmic gas \\\\ \\rm DM_{host} & DM from FRB host galaxy halo \\\\ \\end{tabular}
+
+\\end{table}
+
+Table 1: Notation
+
+### Standard KDEs
+
+Consider an independent and identically distributed sample \\{X_{i}:i=1,...,n\\} drawn from some unknown distribution f(x). We wish to obtain an estimate \\hat{f}(x) of this distribution using KDE:
+
+\\hat{f}(x)=\\frac{1}{n}\\sum_{i=1}^{n}K_{h}\\left(X_{i}-x\\right)=\\frac{1}{nh}\\sum_ {i=1}^{n}K\\left(\\frac{X_{i}-x}{h}\\right)\\ \\,  where K is the kernel and h>0 is the bandwidth. The kernel is the underlying distribution function and the bandwidth is a smoothing parameter. In standard KDE symmetric kernels are used, such as Gaussian, triangular, cosine, biweight, triweight, or Epanechnikov. While an Epanechnikov kernel is most optimal in terms of the mean squared error, a Gaussian kernel is the most widely used: the loss of efficiency is marginal (\\sim 5\\%) and the distribution offers convenient mathematical properties. As such, a Gaussian kernel is used in our analysis of \\Delta\\mathrm{DM}_{\\mathrm{pulsar}}. Bandwidth selection is a trade-off between the bias of the KDE and its variance. Often the bandwidth is chosen to minimize the mean integrated squared error (MISE),
+
+\\mathrm{MISE}(h)=\\mathrm{E}\\left[\\int\\left(\\hat{f}(x)-f(x)\\right)^{2}dx\\right]\\ \\,  which is equivalent to the expected L_{2} risk function. f(x) is unknown, however it can be approximated through various techniques (see Jones et al. (1996)). One can also use rule-of-thumb bandwidth estimators, such as Silverman's (Silverman, 1986) and Scott's (Scott, 1979), however these assume the underlying distribution is Gaussian. In our analysis we use scikit-learn to select the optimal bandwidth via cross-validation.
+
+The KernelDensity() function invokes a nearest neighbors based approach: instead of using the full data set to estimate the density at each point, a number of neighboring points are selected based on the bandwidth. This improves the algorithm efficiency by ignoring distant points that have a negligible effect. KDEs are generated for a range of bandwidths, and GridSearchCV() is used to find the optimal bandwidth. Here n-fold cross-validation is performed. The pulsar data is divided into n subsets, a KDE is generated using the data from n-1 subsets (training data), and the performance of the KDE is evaluated on the remaining subset (test data) by calculating the log-likelihood, \\sum\\log\\hat{p}(x_{i}). This process is repeated n times, using a different subset as the test set each time, to give a final (averaged) log-likelihood score. In this manner, scores are calculated for a range of bandwidths. The bandwidth with the maximum log-likelihood is selected for the analysis (h\\approx 10).
+
+### Asymmetric KDEs
+
+Standard KDE performs well when the underlying distribution is unbounded and the density of data is relatively uniform. We will show, however, that the \\Delta\\mathrm{DM}_{\\mathrm{FRB}} distribution has data concentrated towards the front of the distribution and is bounded on [0,\\infty). This presents two problems that standard KDE cannot resolve. Firstly, a fixed bandwidth h entails a trade-off between large and small scale structure: over-dense regions will be over-smoothed by a large h, and under-dense regions will be over fitted if h is too small. Secondly, symmetric kernels have significant bias at or near a boundary, known as edge or boundary effects. A fixed and symmetric kernel will allocate weight outside of the density region when smoothing the distribution.
+
+Various techniques have been developed that attempt to resolve this issue, eg. data reflection (Schuster, 1985), boundary kernels (Muller, 1991, 1993; Muller & Wang, 1994), the hybrid method (Hall & Wehrly, 1991), generating pseudo-data (Cowling & Hall, 1996), data binning and local polynomial fitting (Cheng et al., 1997), and others. One can also invoke asymmetric kernels (such as gamma, lognormal and inverse Gaussian) and variable bandwidths. In this work we use gamma estimators developed by Chen (2000) and expanded upon by Jeon & Kim (2013) and Hoffmann & Jones (2015).
+
+The gamma PDF with standard gamma function \\Gamma(\\cdot) is given by
+
+K_{k,\\theta}(x)=\\frac{x^{k-1}\\exp(-\\frac{x}{\\theta})}{\\theta^{k}\\Gamma(k)}\\;\\;,  with scale parameter k and shape parameter \\theta. Chen (2000) take k=\\rho_{h}(x) and \\theta=h with random gamma variables X_{i} to obtain
+
+K_{\\rho_{h}(x),h}(X_{i})=\\frac{X_{i}^{\\rho_{h}(x)-1}\\exp(-\\frac{X_{i}}{h})}{h^ {\\rho_{h}(x)}\\Gamma(\\rho_{h}(x))}\\;\\;,  with
+
+\\rho_{h}(x)=\\begin{cases}\\dfrac{x}{h}\\,,&\\text{if}\\qquad x\\geq 2h\\quad,\\\\ \\left(\\dfrac{x}{2h}\\right)^{2}+1\\,,&\\text{if}\\qquad x\\in[0,2h)\\end{cases}\\;\\;.
+
+The resulting gamma estimator is given by
+
+\\hat{f}(x)=\\frac{1}{n}\\sum_{i=1}^{n}K_{\\rho_{h}(x),h}(X_{i})\\;\\;. 
+
+The shape of gamma kernels vary naturally, allowing for different smoothness at different points of the distribution. Further, because gamma kernels are non-negative, the gamma estimator itself is unlikely to deviate below zero. The bandwidths h depend either on the point of estimation (h(x); a balloon estimator), or on the sample associated with a kernel (h(X_{i}); sample-smoothing estimator). In this analysis we consider the former.
+
+Another challenge for standard KDEs is that regions with few samples have overestimated densities and regions with many are underestimated. Shifted KDEs minimize this bias by moving samples from higher to lower density regions. Combining this with balloon estimators (Hoffmann & Jones, 2015), one has
+
+\\hat{f}(x)=\\frac{1}{n}\\sum_{i=1}^{n}K_{\\rho_{h}(x),h(x)}\\left(X_{i}-h^{p}(x) \\delta(x)\\right)\\;\\;,  where p is the order of the kernel and \\delta(x) is the shift. The kernel is shifted by h^{p}(x)\\delta(x), which vanishes for small bandwidths. For our analyses, we use Python code by Hoffmann & Jones (2015)4, where the optimal bandwidth for each kernel is chosen by minimizing the MISE.
+
+Footnote 4: Available at [https://github.com/tillahoffmann/asymmetric_kde](https://github.com/tillahoffmann/asymmetric_kde)
+
+## 4 Methodology and Results
+
+### Bounding the DM Distributions
+
+As described in SS 2, we wish to estimate a maximum \\Delta\\text{DM}_{\\text{pulsar}} and a minimum \\Delta\\text{DM}_{\\text{FRB}} from the observed distributions. We will first apply the appropriate formalism to derive a PDF for each. The minimum/maximum of the PDF, however, is not a precisely posed quantity. Here we introduce a metric tailored primarily for \\Delta\\text{DM}_{\\text{FRB}} as an estimator after experimenting on simulated distributions (SS 4.3 and SS A): the maximum gradient of the distributions, \\max\\left[f^{\\prime}(\\Delta\\text{DM})\\right]. This approach is based on the physical prior that the \\text{DM}_{\\text{FRB}} distributions will have sharp cut-offs, which will hold if the variance in \\text{DM}_{\\text{MW,halo}} is much less than its average. It is further supported by the current set of FRB observations. The observed \\Delta\\text{DM}_{\\text{pulsar}} PDF, on the other hand, is more evenly distributed with smoother edges. As such, estimates for \\max\\left[\\Delta\\text{DM}_{\\text{pulsar}}\\right] given by the metric are more conservative. This effect is discussed in SS A.
+
+In SS 4.2, KDE analysis is performed on observed transient samples to place current constraints on \\text{DM}_{\\text{MW,halo}} from \\Delta\\text{DM}_{\\text{pulsar}} and \\Delta\\text{DM}_{\\text{FRB}}. In 4.3, the KDE (gamma) methodology is analysed by simulating \\Delta\\text{DM}_{\\text{FRB}}. Random samples of size n=100,1000 and 10,000 are taken and \\min\\left[\\Delta\\text{DM}_{\\text{FRB,sim}}\\right] compared to the known inputs. This analysis also offers insight into the statistical power of future samples.
+
+### Observed Sample
+
+To define our sample of pulsars and FRBs, we use the largest aggregation sites for each type of object. For pulsars, we downloaded the ATNF pulsar catalog (version 1.61; Manchester et al., 2005). For FRBs, we downloaded the FRBCat (downloaded 25 February 2020, verified events only; Petroff et al., 2016).
+
+The Milky Way electron distribution is more complex at low Galactic latitudes owing to contributions from spiral arms, HII regions, and supernova remnants. Electron density models are most complex on size scales smaller than 200 pc and within 1 kpc of the Sun (Cordes & Lazio, 2003). To minimize systematic error introduce by the model, we only consider sources more than 200/1000\\approx 20 deg from the galactic plane; we also compare the results with a second, more conservative cut to estimate systematic error. We also remove all pulsars within 5 deg of the Magellanic clouds. For a latitude limit of |b|>20 deg, the samples include 371 pulsars and 83 FRBs. For a latitude limit of |b|>30 deg, the samples include 215 pulsars and 64 FRBs. Owing to the significant decrease in FRB data for |b|>30 deg, the final results presented in this paper use a Galactic cut of |b|>20 deg.
+
+This analysis requires correcting by the total \\rm DM_{ISM} contribution estimated from the Milky Way. Even at high Galactic latitudes, the electron density models have systematic uncertainties on the order of tens of percent due to modeling errors (Schnitzeler, 2012). We estimate \\rm DM_{ISM} with both the NE2001 (Cordes & Lazio, 2002, 2003) and YMW16 (Yao et al., 2017) models as a way of estimating potential systematic errors.
+
+We then generated distributions of \\rm\\Delta DM_{pulsar} and \\rm\\Delta DM_{FRB}, as given by Equations 2.3 and 2.6. These are shown in Figure 1(a) and 1(b). As expected, the majority of \\rm\\Delta DM_{pulsar} values are negative with a small tail to positive values. In contrast, the \\rm\\Delta DM_{FRB} distribution is exclusively positive and rises sharply at \\rm\\Delta DM_{FRB}\\approx 64 pc cm{}^{-3}.
+
+We applied KDE (with Gaussian and gamma kernels, respectively) to the observed \\rm\\Delta DM_{pulsar} and \\rm\\Delta DM_{FRB} distributions to derive PDFs for each. The dark, thick curves in Figures 1(a) and 1(b) show the results. Also overlaid on the figures are a series of distributions derived from 1000 resampled data sets (100 shown). Table 2 reports the final results for both models on both Galactic latitude samples. In general, we find that the uncertainty on \\rm\\Delta DM_{FRB} values are dominated by the size of the FRB sample. However, the uncertainty on the two distributions is largely insensitive to Galactic latitude cut. The YMW16 model tends to have slightly smaller \\rm DM_{ISM} values for this sample, which yields larger \\rm max\\,[\\Delta DM_{pulsar}] and \\rm min\\,[\\Delta DM_{FRB}] estimates. However, the separation of these distributions is not sensitive to the Galactic electron density model.
+
+### Simulated Sample
+
+We now simulate \\rm\\Delta DM_{FRB} to explore how the estimation of \\rm min[\\Delta DM_{FRB}] is likely to improve as more FRB data becomes available and to assess our choice of metric for \\rm min\\,[\\Delta DM_{FRB}]. From Equation 2.5,
+
+\\rm\\Delta DM_{FRB}=DM_{MW,halo}+DM_{cosmic}+DM_{host}\\ . 
+
+\\rm DM_{MW,halo} has a positive minimum, whereas \\rm DM_{cosmic} and \\rm DM_{host}--in principle--have minimums of zero. As such, \\rm DM_{MW,halo} provides a zero-point offset for \\rm\\Delta DM_{FRB}, i.e. \\rm min\\,[\\Delta DM_{FRB}]>0. For the following simulation, \\rm DM_{MW,halo} is chosen to be a delta function at 30 pc cm{}^{-3}  and \\rm DM_{host} is approximated by a lognormal distribution with a mean of \\mu=40 pc cm{}^{-3} and a standard deviation of \\sigma=0.5. Other models for these quantities are explored in SS A.
+
+To generate a cosmic DM contribution to the simulation, we must adopt a distribution of redshifts for the FRBs. We choose to estimate it from the observed \\rm DM_{FRB} values. Specifically, we adopt a DM-z relation5 to convert the observed sample of \\rm DM_{FRB} values to a set of redshifts. Here the observed sample set has |b|>20 deg and \\rm DM_{ISM} is subtracted off with NE2001. We then applied standard KDE with a Gaussian kernel to build a PDF of the z values from which random draws may be taken. The draws are fed back into the DM-z relationship to obtain the average cosmic contribution to the DM,
+
+Footnote 5: Code available at [https://github.com/FRBs/FRB](https://github.com/FRBs/FRB)
+
+\\langle\\rm DM_{cosmic}(z)\\rangle=\\int\\frac{\\bar{n}_{e}ds}{1+z}\\ \\,  where \\bar{n}_{e}=f_{d}(z)\\rho_{b}(z)\\mu_{e}/\\mu_{m}m_{p} is the average electron density, f_{d} is the fraction of cosmic baryons in diffuse
+
+\\begin{table}
+
+\\end{table}
+
+Table 2: Constraints derived from (a) pulsar and (b) FRB observations. NE2001 and YMW16 are used to model \\rm DM_{ISM} with |b|>20 deg and |b|>30 deg. \\rm max\\,[\\Delta DM_{pulsar}] and \\rm min\\,[\\Delta DM_{FRB}] are calculated at 1\\sigma, and upper and lower limits for \\rm DM_{MW,halo} at 95% c.l.. Systematic errors are taken to be the difference between NE2001 and YMW16 estimates. KDE with Gaussian kernels and fixed bandwidths are used to model \\rm\\Delta DM_{pulsar}, and KDE with gamma kernels and varying bandwidths are used to model \\rm\\Delta DM_{FRB}. ionised gas, \\rho_{b}\\equiv\\Omega_{b}\\rho_{c} is the cosmic baryonic mass density, and \\mu_{m} and \\mu_{c} describe properties of helium.
+
+We allow for deviations of DM{}_{\\rm cosmic} from the average value following the formalism presented in Macquart and Ekers (2018). Our treatment is simpler than theirs; specifically, we assume that the fractional standard deviation of \\langleDM{}_{\\rm cosmic}\\rangle is \\sigma_{\\rm DM}=Fz^{-1/2} with F=0.2. We may then generate a simulated DM{}_{\\rm cosmic} distribution based on the z distribution and random draws from a Gaussian characterized by \\sigma_{\\rm DM}=1 and truncated at \\pm 1\\sigma. Throughout, we enforce DM{}_{\\rm cosmic}>0. The resultant DM{}_{\\rm cosmic} values are added to DM{}_{\\rm halo} and DM{}_{\\rm host} to give the simulated PDF of \\DeltaDM{}_{\\rm FRB}.
+
+Figure 3a shows a realization of this simulated PDF for n=10,000 draws. This realization has an absolute minimum of \\DeltaDM{}_{\\rm FRB}=30\\,{\\rm pc}\\,{\\rm cm}^{-3} and rises sharply due to the host and DM{}_{\\rm cosmic} contributions. The dark red curve is the KDE (gamma) using the original data set and the other red curves are distributions generated with resampled data.
+
+We explore the sensitivity of the analysis and results to samples size n as follows. For n=100,1000 and 10,000, we draw a random set of \\DeltaDM{}_{\\rm FRB} values and model the distributions with KDE (gamma). We then estimate a minimum value from the gradients of the PDFs, i.e. min [DM{}_{\\rm FRB}] is the value which maximizes the slope of the KDE. Since each n PDF is complemented by 1000 PDFs resampled from the original data set, 1000 minima are available for error estimation. The distribution of min[\\DeltaDM{}_{\\rm FRB}] values are shown in Table 3. As n increases, the dispersion in min[\\DeltaDM{}_{\\rm FRB}] decreases and the central values approach \\approx 34\\,{\\rm pc}\\,{\\rm cm}^{-3} (Figure 3b). Adding more than 10,000 samples has no notable effect on the results.
+
+The simulation estimates are skewed to the left for small n and approach a Gaussian distribution with increased confidence as n increases (Figure 3b). While the mean values of the distributions are similar (Table 3), a sample size of n=100 is inadequate to place a constraint with reasonable confidence. The confidence level does however improve significantly as n approaches 10,000.
+
+Other choices for DM{}_{\\rm host} are explored to ensure the metric min[\\DeltaDM{}_{\\rm FRB}] = max [f^{\\prime}(\\DeltaDM{}_{\\rm FRB}]) is reasonably robust to changes in the FRB simulation. Results are consistent, as detailed in SS A. The smoother the leading edge of \\DeltaDM{}_{\\rm FRB} i.e. the smoother DM{}_{\\rm host}), the more conservative the limits become, and a very sharp edge for \\DeltaDM{}_{\\rm FRB} i.e. a delta function for DM{}_{\\rm host}) is described well by the metric. These cases represent extreme examples of possible host galaxy DM distributions.
+
+\\begin{table}
+
+\\begin{tabular}{c|c|c} No. FRBs & min [\\DeltaDM{}_{\\rm FRB}] & DM{}_{\\rm MW,halo} \\\\ \\hline
+
+100 & 37\\pm 24\\,(\\rm stat)\\,{\\rm pc}\\,{\\rm cm}^{-3} & <114\\,{\\rm pc}\\,{\\rm cm}^{-3} \\\\
+
+1000 & 35\\pm 7\\,(\\rm stat)\\,{\\rm pc}\\,{\\rm cm}^{-3} & <55\\,{\\rm pc}\\,{\\rm cm}^{-3} \\\\
+
+10000 & 34\\pm 2\\,(\\rm stat)\\,{\\rm pc}\\,{\\rm cm}^{-3} & <44\\,{\\rm pc}\\,{\\rm cm}^{-3} \\\\ \\end{tabular}
+
+\\end{table}
+
+Table 3: Simulation estimates for different sample sizes with min [\\DeltaDM{}_{\\rm FRB,sim}] = 30 pc cm{}^{-3}. The second column gives the recovered measurements for min [\\DeltaDM{}_{\\rm FRB}] at 1\\sigma and the last column gives an upper limit for DM{}_{\\rm MW,halo} (95% c.l.).
+
+## 5 Discussion
+
+The principle empirical result of our work is a conservative upper limit on the DM contribution of the Milky Way halo. At 1\\sigma, \\rm DM_{MW,halo}=63^{+27}_{-21}\\,(stat)\\pm 9\\,(sys)\\,pc\\,cm^{-3} (|b|>20 deg, YMW16). This can be converted to a conservative upper limit of \\rm DM_{MW,halo}<123pc\\,cm^{-3} (95% c.l.). This includes the ISM and halo, and potentially a non-zero contribution from the FRB host galaxy, which is plausibly several tens \\rm pc\\,cm^{-3} (see below). This limit also includes a non-zero contribution from the cosmic web (\\rm DM_{cosmic}). That contribution is difficult to estimate at present but we note that the lowest redshift FRB (z=0.03; Marcote et al. 2020) would yield an average \\rm DM_{cosmic} of \\approx 25\\,pc\\,cm^{-3}. A more realistic, yet speculative, upper limit to \\rm DM_{MW,halo} may therefore be \\approx 50\\,pc\\,cm^{-3}.
+
+The results presented include two measurements of uncertainty: systematic uncertainties related to ISM models and statistical uncertainties related to the estimation techniques. Another point to consider is the effect that Galactic latitude has on results. Owing to the complexity of the electron distribution at lower Galactic latitudes, we consider cuts of |b|>20 deg and |b|>30 deg. Results are largely insensitive to this cut, however the loss of data at |b|>30 deg (371 to 215 pulsars, and 83 to 64 FRBs), motivates a cut of |b|>20 deg for our final analysis.
+
+Pulsar constraints are dominated by uncertainties in modeling \\rm DM_{ISM}. We find that, on average, \\rm DM_{ISM} values recovered from NE2001 are \\approx 10 pc cm{}^{-3} lower than those from YMW16. Given the expectation that \\rm DM_{MW,halo}>0, we use YMW16 in our analysis (see Table 2b). This gives a final result of \\rm DM_{MW,halo}>-2 pc cm{}^{-3} (95% c.l.). We note that characterizing the line of sight to MW pulsars may help find HII regions that bias the \\rm DM_{ISM} estimate, allowing for improvement in the pulsar sample.
+
+FRB constraints are predominantly limited by sample size n, i.e., our simulations show a significant improvement as n increases. For an absolute value of \\rm DM_{MW,halo}=30 pc cm{}^{-3}, limits for n=100, 1000 and 10,000 are \\rm DM_{MW,halo}<114 pc cm{}^{-3}, \\rm DM_{MW,halo}<55 pc cm{}^{-3}, and \\rm DM_{MW,halo}<44 pc cm{}^{-3}, respectively (95% c.l.). This suggests that once thousands of FRBs have been observed, the constraints will greatly improve.
+
+Even the conservative limit of \\rm DM_{MW,halo}<123 pc cm{}^{-3} offers a valuable bound to models of the Galactic halo and the Local Group that our Galaxy resides within. Scenarios that adopt a Galactic halo mass M_{\\rm halo}\\approx 10^{12.2} M{}_{\\odot} which has retained all of its cosmic average of baryons estimate \\rm DM_{MW,halo}>50 pc cm{}^{-3}(Prochaska and Zheng (2019), but see Keating and Pen (2020)). Furthermore, models which would predict the gas traces the dark matter profile would yield \\rm DM_{MW,halo}>200 pc cm{}^{-3} (Figure 4); these are ruled out by our FRB analysis, and also their over-estimated X-ray emission (e.g. Fang et al. 2015). Our results also place an upper bound on the average contribution from the Local Group medium, consistent with current estimates (Prochaska and Zheng 2019). Clearly, as the observed FRB sample increases--one expects a dramatic leap from the CHIME survey (CHIME/FRB Collaboration et al. 2018)--the resultant limits may well distinguish between models where the Galaxy has retained the majority of its baryons from those where they have been expelled.
+
+To illustrate the potential constraints, Figure 4 shows a model-based estimate for \\rm DM_{MW,halo} for a dark mat ter halo with mass M_{\\rm halo}=10^{12.2}\\rm M_{\\odot}, baryonic mass M_{b}=\\Omega_{b}/\\Omega_{m}M_{\\rm halo}\\approx 2.4\\times 10^{11}\\rm M_{\\odot} and that 75% of those baryons are in a diffuse, ionized halo. The density profile is assumed to follow a modified Navarro-Frenk-White (NFW) profile parameterized by y_{0} and \\alpha(see Mathews and Prochaska, 2017; Prochaska and Zheng, 2019). The upper limit to \\rm DM_{MW,halo} estimated from our analysis prefers larger \\alpha,y_{0} with a strict NFW profile (\\alpha=0,y_{0}=1) ruled out at high confidence unless M_{b}\\ll\\Omega_{b}/\\Omega_{m}M_{\\rm halo}. Larger \\alpha,y_{0} are inferred for our Galaxy and external ones from absorption-line analyses (e.g. Faerman et al., 2017; Mathews and Prochaska, 2017).
+
+We emphasize that ongoing FRB projects will offer complementary constraints on the magnitude and distribution of contributions from the host and the cosmic web to the upper limit on \\rm DM_{MW,halo}. In particular, well-localized FRBs reveal the host galaxy population and the redshift distribution of FRB events. From follow-up observations of the hosts, one may estimate the DM contribution from the host galaxy ISM through measurements of the Balmer line emission (e.g. Tendulkar et al., 2017; Chittidi et al., 2020). The two systems analyzed thus far yield \\rm DM_{host,ISM}\\approx 50-200\\,pc\\,cm^{-3}. There are other FRBs (e.g. FRB 180924; Bannister et al., 2019) where the Balmer emission is low or even negligible at the FRB location and we infer \\rm DM_{host,ISM}<50\\,pc\\,cm^{-3}. Within the next year, we expect to have a sample of \\sim 20 hosts to derive the distribution.
+
+One may additionally translate the estimated stellar mass of the host galaxy into a model-based estimate for the DM contribution from the halo gas of the host (Bannister et al., 2019; Prochaska and Zheng, 2019). Current estimates range from \\approx 50\\,pc\\,cm^{-3} for the most massive hosts (Bannister et al., 2019) to <20\\,pc\\,cm^{-3} for FRB 181112 (Prochaska and Zheng, 2019). From the redshift distribution of the localized FRBs, one may estimate the minimum typical contribution of \\rm DM_{cosmic} to the \\rm DM_{MW,halo} limit. This bears an important caveat that the selection biases of the localized sample will not match those of the larger ensemble (e.g. due to differences in the radio frequencies and/or flux limit). One will need to account for these differences. Alternatively, one may focus on the analysis of the a localized sample alone once it grows to a sufficient sample size.
+
+Last, we emphasize that other, future observations will also offer constraints on \\rm DM_{MW,halo} independent of FRB analyses. We anticipate high-precision X-ray absorption-line spectroscopy of the Galactic halo from the upcoming Japanese XRISM mission. With a spectral resolution that will greatly exceed current X-ray satellites, the data will yield much more reliable estimates of \\rm O^{+5} and \\rm O^{+6} column densities across the sky. At the least, these yield conservative lower limits to \\rm DM_{MW,halo}. Another promising yet still unrealized opportunity is to discover pulsars in Andromeda or any other Local Group galaxy. These would offer a strict upper bound on \\rm DM_{MW,halo} or even a well-informed value along that sightline.
+
+## 6 Concluding remarks
+
+We have demonstrated how density estimation techniques can be used to probe the DM--i.e. the line-of-sight electron column density--of the MW Galactic halo. For the corrected \\rm DM_{pulsar} and \\rm DM_{FRB} distributions, we recover \\rm max\\,[DM_{pulsar}]\\approx 7\\pm 2\\,(stat)\\pm 9\\,(sys)\\,pc\\,cm^{-3} and \\rm min\\,[DM_{FRB}]\\approx 63^{+27}_{-21}\\,(stat)\\pm 9\\,(sys)\\,pc\\,cm^{-3} (1\\sigma uncertainty). Conservative upper and lower limits on the Galactic halo dispersion measure are also derived: \\rm DM_{MW,halo}>-2\\,pc\\,cm^{-3} and \\rm DM_{MW,halo}<123\\,pc\\,cm^{-3} (95% c.l.). Here the lower bound given by pulsars reflects only a fraction of the MW halo DM, and the upper bound given by FRBs includes a nominal contribution from the FRB host galaxy and IGM. In the latter case, the localization of FRBs at very low distances and/or on the outskirts of galaxies would establish that the minimum DM would be more representative of the MW halo. Scenarios consistent with this include the collapse of compact objects (e.g. Falcke & Rezzolla, 2013) that have been expelled from a host galaxy, as well as more exotic theories such as tiny electromagnetic explosions (which may occur in dark matter halos; Thompson, 2017, 2017) and cosmic strings (e.g. Vachaspati, 2008; Yu et al., 2014; Zadorozhna, 2015; Brandenberger et al., 2017).
+
+We do not consider how \\rm DM_{MW,halo} may vary as a function of Galactic latitude. It may be possible with a sample of a couple thousand FRBs per region of sky, but is left to future work.
+
+Our current estimates cannot yet discern whether the Milky Way has retained its cosmic average of baryons (\\rm DM_{MW,halo}>50\\,pc\\,cm^{-3}), however in the near future, as more FRBs are reported, results may offer a valuable complement to other analyses. In the least, the methodology provides a reasonable--albeit conservative--estimate of \\rm DM_{MW,halo} and a minimum contribution from \\rm DM_{host}. This may discern the viability of Galactic halo models and aid in the search for missing baryons.
+
+We would like to thank the anonymous referee for their insightful, thorough and valuable input. EP and JXP, as members of the Fast and Fortunate for FRB Follow-up team F{}^{4}, acknowledge support from NSF grant AST-1911140. CJL acknowledges support under NSF grant 2022546. This work was initiated as a project for the Kavli Summer Program in Astrophysics held at the University of California, Santa Cruz in 2019. The program was funded by the Kavli Foundation, The National Science Foundation, UC Santa Cruz, and the Simons Foundation. We thank them for their generous support. EP is supported by a L'Oreal-UNESCO For Women in Science Young Talents Fellowship, by a PhD fellowship from the South African National Institute for Theoretical Physics (NITheP), and by a top-up bursary from the South African Research Chairs Initiative of the Department of Science and Technology (SARChI) and the National Research Foundation (NRF) of South Africa. Any opinion, finding and conclusion or recommendation expressed in this material is that of the authors and the NRF does not accept any liability in this regard.

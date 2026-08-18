@@ -1,0 +1,155 @@
+###### Abstract
+
+The duration of a gamma-ray burst (GRB) is a key indicator of its physics origin, with long bursts perhaps associated with the collapse of massive stars and short bursts with mergers of neutron stars. However, there is substantial overlap in the properties of both short and long GRBs and neither duration nor any other parameter so far considered completely separates the two groups. Here we unambiguously classify every GRB using a machine-learning, dimensionality-reduction algorithm, t-distributed stochastic neighborhood embedding (t-SNE), providing a catalog separating all _Swift_ GRBs into two groups. Although the classification takes place only using prompt emission light curves, every burst with an associated supernova is found in the longer group and bursts with kilonovae in the short, suggesting along with the duration distributions that these two groups are truly long and short GRBs. Two bursts with a clear absence of a supernova belong to the longer class, indicating that these might have been direct-collapse black holes, a proposed phenomenon that may occur in the deaths of more massive stars.
+
+(stars:) gamma-ray burst: general 0000-0002-3876-1886]Christian K. Jespersen
+
+0000-0002-8862-8677]Johann B. Severin
+
+0000-0002-4719-7473]Charles L. Steinhardt
+
+0000-0002-8882-8773]Jonas Vinther
+
+0000-0002-4719-7473]Johann P. U. Fynbo
+
+0000-0002-4719-7473]Jonatan Selsing
+
+## 1 Introduction
+
+The duration of a \\gamma-ray burst (GRB) is a key indicator of its origin, with long-duration bursts typically associated with the core-collapse of a stripped massive star (Hjorth et al., 2003; Stanek et al., 2003) and the short-duration bursts with mergers of neutron stars (Tanvir et al., 2013; Berger et al., 2013; Ghirlanda et al., 2018). The dividing line is usually set at T_{90}\\approx 2\\,\\mathrm{s}(Kouveliotou et al., 1993; Tavani et al., 1998; Paciesas et al., 1999). However the long and short distributions are known to overlap substantially and neither duration nor any other parameter so far considered such as spectral hardness (Kouveliotou et al., 1993) or lag (Norris et al., 1986; Norris and Bonnell, 2006) gives a clean separation of the progenitor type based on the prompt properties.
+
+Considerable effort has been expended in trying to find a clean separation of burst types based on many other burst properties (Fruchter et al., 2006; Nakar, 2007; Bromberg et al., 2011; Zhang et al., 2012; Bromberg et al., 2013). However, a complete separation has not yet been possible.
+
+Ideally, classifying bursts should be done from the entirety of the light curve. However, the full light curve is a high-dimensional dataset, which makes comparing bursts hard because it is difficult to determine which information is most important. As a result, proposed classifications have previously relied on a small number of easily-described summary statistics such as duration, spectral hardness and lag. This has led to significant progress, but not to a clean separation between short and long GRBs.
+
+It has been hoped that with the right choice of summary statistics, there would be a clear separation into short and long GRBs. This work uses the dimensionality reduction algorithm t-distributed Stochastic neighbour Embedding (t-SNE; Maaten and Hinton, 2008; van der Maaten, 2015) to instead reduce full GRB light curves to points in a two-dimensional space. The location each light curve is mapped to in these two coordinates does not represent properties of that light curve, but rather can only be calculated from information about all of the light curves in the entire dataset. Applying this technique to light curve data from the _Swift_ satellite, we find a clear separation into two groups, with possible additional subgroups.
+
+In SS 2, we describe t-SNE and the process of assembling a map from the _Swift_ dataset. The resulting map and implied classification into short and long GRBs is shown in SS 3, along with a comparison between each group with expected properties. In SS 4 we discuss how this classification works for GRBs of special interest. These results are discussed further in SS 5, including an application of this categorization to GRBs whose classification has been the subject of past debate.
+
+## 2 Methods: Applying t-SNE to GRB light curves
+
+The classification proposed here takes the entirety of the normalized _Swift_ light curves from prompt emission and in an unsupervised way determines which GRBs should be considered similar based on the prompt data alone. This is done using t-SNE, a dimensionality reduction algorithm which can take complex, high-dimensional data and produce a faithful representation of that data in a low-dimensional space.
+
+### t-Distributed Stochastic Neighbour Embedding t-SNE takes a set of high dimensional vectors, \\{\\vec{x}_{i}\\}, and calculates the probability that each \\vec{x}_{j} should be considered a neighbour of \\vec{x}_{i} from the set of Euclidean distances \\{|\\vec{x}_{j}-\\vec{x}_{i}|\\} and the _perplexity_, a hyperparameter which determines the sizes of the neighbourhoods based on the density of the data in the respective regions and can be approximately interpreted as the typical number of neighbours which should be considered similar when computing distances. _Perplexity_ is formally defined (Maaten and Hinton, 2008) as
+
+\\mathrm{Perp}(P_{i})=2^{H(P_{i})},  where P_{i} represents the conditional probability distribution over all other \\{\\vec{x}_{j}\\} given \\{\\vec{x}_{i}\\}, and H(P_{i}) is the Shannon entropy of P_{i} in bits. A higher _perplexity_ increases the values for points further away and promotes global structure, whereas a lower _perplexity_ is used to look for local structures and groupings of only a few vectors. The introduction of _perplexity_ is necessary since dimensionality reduction cannot simultaneously preserve both small and large scale structure in lower dimensions, and perplexity controls their relative importance. It should be noted that generating probabilities from Euclidean distances requires that every \\vec{x}_{i} have identical dimensionality, with none missing.
+
+These probabilities are then used to map the set of \\{\\vec{x}_{i}\\}\\rightarrow\\{\\vec{y}_{i}\\} in the lower-dimensional space, such that the probability of \\vec{y}_{i} and \\vec{y}_{j} being neighbours in the new mapping is as similar as possible to the probability that \\vec{x}_{i} and \\vec{x}_{j} were considered neighbours. This process depends upon random initialization and running t-SNE on an identical dataset can produce a variety of maps with similar toplogy (cf. Steinhardt et al., 2020, Figure 1). Thus, the axes of this low-dimensional space have no proper labels or meaning; unlike principal component analysis, an object further to the right on a t-SNE map is not in some sense more 'x-like', but merely more similar to nearby objects and less similar to more distant ones. Essentially, the goal of t-SNE is to produce a simplified map which can be easily visualized while preserving the structure of the original dataset, not to find a vector basis.
+
+Although t-SNE is considered an unsupervised algorithm, in practice the final map depends upon not the data and hyperparameters alone, but also a series of human selections in preparing that data. Producing a dataset of vectors with identical components requires a combination of removing individual objects for which some properties are poorly measured or unmeasured and instead removing some properties from the calculation altogether (or choosing an alternative metric for calculating neighbour probabilities). A choice of how to format and scale the raw data can change the relative weighting of various components in calculating neighbour probabilities. These human influences can often be minimized by running t-SNE on highly standardized datasets, such as the catalog produced by one survey or one observatory.
+
+### Data Preparation for the _Swift_ Catalog
+
+Here, t-SNE is run on the full _Swift_ GRB catalog 1(Lien et al., 2016) in an attempt to classify all detected bursts. _Swift_ measures the light curve of each burst in four bands, 15-25 keV, 25-50 keV, 50-100 keV, and 100-350 keV. The _Swift_ data are released as four binned, background-subtracted light curves with temporal resolution 64 ms, and the start of the burst may vary slightly from the trigger time. Because bursts vary greatly in duration, there is a very wide range in the number of time bins with statistically significant flux, where the reported flux for _Swift_ is measured as photon count/cm{}^{2}/s.
+
+Footnote 1: available at [https://swift.gsfc.nasa.gov/results/batgrbcat/](https://swift.gsfc.nasa.gov/results/batgrbcat/)
+
+Therefore, it is essential to standardise the dataset prior to running t-SNE, ideally in a manner which preserves meaningful differences but erases differences which should not have physical origin. For example, a translation of all light curves by the same constant time offset should be ignored. A similar problem is tackled when analysing the benchmark **M**odified **N**ational **I**nstitute of **S**tandards and **T**echnology (MNIST) hand written digit dataset with machine learning, since the data needs a large amount of preprocessing (e.g. normalization, deskewing, noise removal) in order to be effectively analysed (LeCun et al., 1998; Deng, 2012). The goal is therefore to prepare data for t-SNE in a way that retains all of the useful information but removes irrelevant information that the analysis might otherwise use for classification. The end result of this process must be a set of vectors of identical dimension, for which it is still proper to expect that bursts with similar physical origin will be similar when compared component by component.
+
+In our data, the main possible distractions would be (1) the total time-integrated flux, which would only return the known result that long GRBs typically but not always have higher fluence; (2) different lengths of light curve measurements, which can depend upon noise in the tail of the _Swift_ light curves and is therefore extremely important; and (3) the possibility of a trigger time offset common to all four _Swift_ bands, although any relative time delay between different bands is still meaningful.
+
+To remove these, light curves are normalized in every band by the total time-integrated flux across all bands of that specific burst (removing (1)), zero-padded in order to ensure a common axis and length (partly removing (2)2; cf. Shen and Wang, 2006; Sacchi and Ulrych, 1998), then concatenated before taking the discrete-time Fourier transform (DTFT) of the light curve measured in each individual band (removing (3)). Because t-SNE relies on Euclidean distances, omitting these steps would group bursts almost solely by effects which are known not to produce a meaningful classification, e.g. omitting the normalization would effectively group bursts nearly solely by the magnitude of the flux, which would render only a known result; that long GRBs typically, but not always, have higher fluence than short GRBs (e.g., Ghirlanda et al., 2009), but instead here bursts are grouped using the entirety of the remaining information.
+
+Footnote 2: The remainder of (2) is completely accounted for by the fact that an erroneous bias in duration would only, at worst, include noise-dominated measurements which do not affect the FT significantly, and do not add any significant fluence.
+
+It should be noted that the DTFT is not necessarily an optimal preprocessing solution for separating GRBs. Other preprocessing techniques which preserve the information content in the lightcurve would yield equally valid representations of GRB classes, though possibly not as cleanly separated. As explained in the previous paragraph, the main motivation for the DTFT is that it suppresses some of the biases in the light curves, while building on previous successful descriptors (duration, hardness, spectral lag) indicating that the general shape of the light curve could be a defining characteristic.
+
+The DTFT also does not formally guarantee that similar light curves end up as close neighbours, but rather that light curves with similar DTFT end up close together, as t-SNE acts on Fourier components rather than flux measurements. Although in principle one could imagine constructing a function which would render a DTFT similar to a GRB light curve despite looking dissimilar, this is unlikely to occur in real data. Thus, having similar DTFTs is equivalent to having similar shapes, since the DTFT in essence is just a change in basis.
+
+Previous attempts at classification have typically focused on summary data, such as duration (typically T_{90}, the duration containing 90% of the statistically-significant flux, or T_{100}, containing 100% of the flux), spectral lag, flux or fluence, and hardness. These are properties which can be calculated from the light curves in each band, and therefore part of what is available to t-SNE, but represent only a small subset of the full dataset. Here, the full _Swift_ light curves are encoded then used, and neighbour probabilities are ultimately produced from \\approx 30000-dimensional vectors, encoding far more information than summary data.
+
+### Summary of Classification Scheme
+
+Using the background-subtracted light curves, _Swift_ bursts can be classified with the following procedure:
+
+1. The 64 ms-binned light curve in each band is limited to the interval out to T_{100}.3 Afterwards they are padded with zeros, placing light curves of different length on a standard basis. Footnote 3: The DTFT would be unaffected by the additional extra bins containing solely noise, and thus the limited information between T_{90} and T_{100} can be included.
+
+2. Individual light curves are normalized by the total fluence, obtained as the numerical integral of the flux across all bands, preserving spectral hardness.
+
+3. The resulting light curves are concatenated and the DTFT is applied, producing vectors suitable for input into t-SNE.
+
+4. t-SNE is applied to the vectors x_{i}, consisting of the Fourier amplitudes, with _perplexity_ set to 30 (a choice specific to the _Swift_ catalog), terminating once no improvement is made on the cost function.
+
+5. The resulting map is examined, in the hopes that bursts will be clearly separated into clusters which can be interpreted as arising from a similar physical origin.
+
+The success of this procedure is evaluated in the following sections.
+
+## 3 Classification
+
+The procedure described in SS 2.3 indeed maps the GRBs in the _Swift_ catalogue to a two-dimensional space (Fig. 1). As a result, light curves with similar Fourier amplitudes end up as close neighbours, which translates to light curves with similar shape being grouped close together, as per the discussion in SS 2.2.
+
+Even more promisingly, there is discernible structure in the resulting map. The exact mapping can change depending upon random seeds or the order in which data are presented to t-SNE, but structure such as grouping and topology remains (see Fig. 1 and related discussion in Steinhardt et al., 2020). Bursts are divided into two groups, with a clear separation between the larger group at top and a smaller group at bottom as presented in Fig. 2a. Further substructure exists as well, discussed in SS 3.1.
+
+A closer examination of the duration (T{}_{90}) of each burst indicates that the t-SNE map has grouped objects approximately (but not entirely) by duration (Fig. 1). The larger group at top is generally of longer duration, while the smaller group at bottom is shorter. Both groups have possibly (skewed) Gaussian distributions in log duration (Fig. 2b), with some overlap in the T{}_{90}\\sim 1-10 s range.
+
+In short, the mapping cleanly divides _Swift_ GRBs into two groups, with the duration distributions of the two groups similar to what might be expected for a classification into short and long bursts. To avoid confusion with pre-existing classifications, the two t-SNE groups will be referred to as type-S and type-L.
+
+A full list of our classification of _Swift_ GRBs is given in Table 1.
+
+### Comparison with Other Classifications
+
+Although the classification of many individual GRBs as short or long is uncertain, particularly for bursts of intermediate duration, many bursts can be unambiguously classified as short or long on the basis of other observations. It is therefore necessary to confirm that the classification proposed here matches these previous results.
+
+Perhaps the strongest association is that between supernovae and long GRBs, with every GRB with detection of an associated supernova unambiguously being long (Hjorth & Bloom, 2012; Cano et al., 2017). Eleven bursts in the _Swift_ catalog, GRB 060218A, GRB 071112C, GRB 100316D, GRB 111209A, GRB 111228A, GRB 120714B, GRB 120729A, GRB 130215A, GRB 130831A, GRB 161219B and GRB 171010A have clearly detected associated supernova that are well-characterized by spectroscopy (Bufano et al., 2012; Cano et al., 2017; Cano et al., 2014; Klose et al., 2019; Kann et al., 2019). Due to a corrupted files for GRB 060218A, not having BAT light curve data available for GRB071112C 4 and GRB171010A 5, these are not included. The remaining eight are all classified as type-L by the t-SNE map (Fig. 4).
+
+Footnote 4: Since its emission overlapped with 071112B
+
+Footnote 5: GRB171010A is a Fermi burst that was followed up by _Swift_
+
+It has also been suggested that there may be a link between the hardness of the GRB spectrum and classification (Kouveliotou et al., 1993; Ghirlanda et al., 2009). It is known that this does not produce a clean, unambiguous separation between short and long GRBs. However, there is still likely a strong correlation between hardness and type, particularly since the hardness of a burst should be closely related to its physical origin.
+
+The t-SNE mapping indeed shows that bursts with similar light curves tend to have similar hardness (Fig. 3). Bursts with harder spectra group together in tight clusters on the t-SNE map, and the hardest bursts lie in a tight cluster and are all categorized as type-S. However, clusters of hard bursts exist both in the type-S and type-L group. In general, most type-S bursts are harder than most type-L bursts, but hardness alone is insufficient to determine whether a burst is type-S or type-L. Rather, the t-SNE map (Fig. 4, bottom) at lower _perplexity_ suggests that there might be substructure in both the type-S and type-L classes. The cause for this is currently undetermined, but could be associated with spectral hardness. Another measure of this feature could be the peak energy in \\nu f(\\nu), E_{peak}. However, _Swift_ frequently is unable to reliably measure E_{peak} due
+
+\\begin{table}
+
+\\begin{tabular}{l|l l}
+
+**GRB** & T_{90}**[s]** & **Type** \\\\ \\hline GRB 190727B & 39.2 & L \\\\ GRB 190719C & 185.8 & L \\\\ GRB 190718A & 704.0 & L \\\\ GRB 190706B & 43.6 & L \\\\ GRB 190701A & 38.4 & L \\\\... &... &... \\\\ \\end{tabular}
+
+\\end{table}
+
+Table 1: Classification of _Swift_ GRBs as either type-S or type-L based on the separation in the DTFT-based t-SNE map. A complete, machine-readable table is available online. to the relatively low energy bandpass of _Swift_-BAT. As a result, there is less structure in maps colored by E_{peak} than in maps using spectral hardness ratio compared across the _Swift_-BAT bandpass, although hardness also is an incomplete diagnostic.
+
+## 4 GRBs of special interest
+
+The clear separation on the t-SNE map into two groups, namely type-S and type-L, provides labels for all GRBs, including ones which were previously difficult to classify.
+
+In addition to providing this broad classification, there is considerable additional information provided by the t-SNE map. Because each burst is placed close to other, similar bursts, it is possible to determine both whether an object is typical (many neighbours) or atypical (fewer neighbours, and often on the edges of a cluster). If some bursts have additional information available such as an observed afterglow or host galaxy, it may be natural to ascribe similar properties to neighbouring bursts for which those observations are unavailable.
+
+A full discussion of the various groups indicated is beyond the scope of this paper. However, here we briefly describe the t-SNE classification of several GRBs which have previously been the subject of debate, as different analysis techniques have disagreed on their proper categorization.
+
+### Supernova-less long GRBs
+
+GRB 060505 and GRB 060614 are of special interest, since they are long duration GRBs with no observed optical counterpart (Della Valle et al., 2006; Fynbo et al., 2006). They have therefore been suggested to have their own progenitor mechanism, constituting their own class of Extended Emission Short Gamma Ray Bursts (EE sGRB; Norris and Bonnell, 2006; Ofek et al., 2007). The t-SNE map classifies GRB 060614 as a type-L burst. It lies close to GRB 111209A, which has an associated luminous SN (Kann et al., 2019), and in the same cluster as GRB 111209A. This suggests that GRB 060614 would not have a separate progenitor mechanism, but is instead a more standard long GRB.
+
+GRB 060505 lies far away from the cluster of type-S GRBs and clusters with type-L GRBs. This indicates that GRB 060505 was a long GRB. However, it doesn't group cleanly with the confirmed SNe, suggesting there may have been a different physical origin.
+
+### Short GRB association with Kilonovae
+
+GRB 130603B is a short GRB with a kilonova (KN) counterpart Tanvir et al. (2013). GRB 130603B lies in the type-S GRB group close to GRB 160821B, which has also been theorized to have had an associated KN (Troja et al., 2019; Lamb et al., 2019). This suggests that GRB 160821B may indeed be associated with a KN.
+
+Another proposed KN candidate is GRB 050509B, which is unfortunately removed from our catalogue due to having a duration of 1 time bin or less, making the DTFT meaningless.
+
+Since only one burst with an optical KN counterpart is included in the catalogue, extrapolation is not very useful. As more KN are discovered, this method will become an increasingly important feature of the t
+
+SNE map. GRB170817A, the burst associated with GW170817 is not a _Swift_ burst and thus is not included in our analysis (Abbott et al., 2017; Goldstein et al., 2017).
+
+## 5 Discussion
+
+The application of the dimensionality reduction algorithm t-SNE to GRB light curves observed by _Swift_ is used to group bursts based upon similarities with their neighbours. The resulting map (Fig. 2a) suggests that bursts should be classified into two broad groups. An analysis of the duration distribution, optical counterparts, and previous proposed classifications strongly suggests that these two groups correspond to short and long GRBs. If so, this technique would provide a complete, unambiguous separation of the GRB population into short and long bursts. A natural next step is to determine which properties best correlate with classification and use this to develop astrophysical models, although such a study is beyond the scope of this letter.
+
+The t-SNE algorithm can be tuned to instead focus on substructure, and it is possible that further subgroups exist within these two populations (Fig. 4). Substructure might be associated with distinctions between bursts belonging to these groups, perhaps indicating that a long GRB could be produced by multiple physical causes. Because relatively few bursts have known counterparts or other additional information, it is difficult to connect these groups with physical origins. However, the few bursts known to have a common origin, such as supernovae, are indeed mapped to nearby locations. Similarly, the confirmed kilonova GRB 130603B is a near neighbour of GRB 160821B (Lamb et al., 2019), proposed as a kilonova candidate.
+
+If these substructures indeed correspond with physical origin, then the t-SNE map can be used to select bursts for targeted followup. For example, it would be straightforward to determine whether a new burst is a kilonova candidate based upon whether it is placed close to GRB 130603B.
+
+With small modifications to avoid recalculating the entire map for a new object, t-SNE could also easily be used in an automatic classification pipeline along with a suitable clustering algorithm. However, GRBs are sufficiently rare to warrant individual human attention, with good choice of parameters, a t-SNE map will have sufficient separation that human visual classification is both possible and likely preferable.
+
+### Implications for anomalous GRBs
+
+This study demonstrates that GRB 060614, long-debated as a possible extended emission short GRB, is indeed a long-duration type GRB. Its lack of a supernova down to 5 magnitudes below SN1998bw presents a real challenge to standard jet-driven supernova models and suggests a direct collapse black hole, as originally postulated by Fynbo et al. (2006). The same is true for GRB 060505, which was at least 6 magnitudes fainter than SN1998bw and is found unequivocally to belong to the long-duration category. The most compelling interpretation would be that GRB 060505 and GRB 060614 were direct-collapse black holes (Adams et al., 2017; Liu et al., 2019), a possibility which has been theorized but not yet observed.
+
+The methods developed in this work can be used to cleanly divide all _Swift_ light curves into two distinct classes. Based upon the duration distribution and other properties it is tempting to label type-S and type-L GRBs as short and long. However, this classification is entirely empirical, based upon the distribution of light curve properties rather than on astrophysics. One of the drawbacks of t-SNE is that it is not immediately clear which properties of the full light curves have been most influential in this classification or how those properties might relate to underlying GRB astrophysics. Whether these indeed have distinct astrophysical origins, perhaps one arising from collapse and the other from collision, will therefore require additional followup studies of each group. It is hoped that this process will be far more straightforward now that every GRB, even at duration \\sim 2 seconds, can be unambiguously classified.
+
+## Acknowledgements
+
+The authors would like to thank Chryssa Kouveliotou, Jens Hjorth, Adam Jermyn, and Georgios Magdis for helpful discussions. CLS is supported by ERC grant 648179 "ConTExt". The Cosmic Dawn Center (DAWN) is funded by the Danish National Research Foundation under grant No. 140.

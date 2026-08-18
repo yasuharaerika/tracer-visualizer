@@ -1,0 +1,349 @@
+###### Abstract
+
+Gravitational wave (GW) neutron star mergers with an associated electromagnetic counterpart constitute powerful probes of binary evolution, the production sites of heavy elements, general relativity, and the expansion of the universe. Only a handful of candidate GW binary mergers during the fourth LIGO/Virgo/KAGRA observing run (O4) so far are believed to include a neutron star. We present optical-near infrared follow-up observations of the candidate neutron-star black hole GW merger S250206dm. This is the first high-significance mass gap neutron star-black hole candidate observed by multiple GW detectors (thus having a significantly smaller sky localization than one-detector events), offering the first opportunity to effectively follow up a GW event of this kind. Our GW Multi-Messenger Astronomy DECam Survey (GW-MMADS) campaign consisted of a wide-field search using the Dark Energy Camera (DECam) and T80-South (T80S), as well as galaxy-targeted observations using the Southern Astrophysical Research (SOAR) imager and the Wendelstein 2.1m 3-channel camera. No viable kilonova counterpart was found in our observations. We use our observation depths to place competitive constraints on kilonova models similar to or brighter than the GW170817 kilonova AT 2017gfo within our observed fields, ruling out 100% of such models with SOAR galaxy-targeted observations and \\sim 43\\% (48%) with DECam (DECam and T80S).
+
+Gravitational wave astronomy (675) -- Transient detection (1957)
+
+## 1 Introduction
+
+Multimessenger observations of gravitational wave (GW) events can enable a wide range of scientific analyses, from stellar evolution studies to measurements of fundamental physical and cosmological parameters. This has been exemplarily demonstrated with the first multimessenger GW detection, GW170817 (Abbott et al., 2017), observed by the Laser Interferometer Gravitational-wave Observatory (LIGO; LIGO Scientific Collaboration, 2015), Virgo (Acernese et al., 2014), and a large number of multiwavelength EM facilities (LIGO Scientific Collaboration et al., 2017). GW events arising from binary neutron star (BNS) or black hole-neutron star (BHNS) mergers can give rise to a variety of electromagnetic (EM) counterparts at different wavelengths. Notably, in the optical to infrared range, these objects can emit EM radiation from a kilonova (KN; e.g. Metzger, 2019), a transient powered by the radioactive decay of heavy r-process elements produced in the merger ejecta (Lattimer and Schramm, 1974). At the time of writing, one high-confidence BNS GW merger was detected after GW170817 (Abbott et al., 2020), but no EM counterpart was found for this event, likely due to its larger distance and sky localization (Coughlin et al., 2019).
+
+Depending on the compact objects' masses, the neutron star equation of state, and the black hole spin, BHNS mergers can also give rise to a kilonova (Fou-cart, 2012; Kyutoku et al., 2013; Fernandez et al., 2017; Kawaguchi et al., 2016; Kasen et al., 2015). BHNS binaries with a low mass black hole are more likely to produce a KN, while higher mass black holes cause the NS to fall into the black hole without significant disruption and therefore little to no EM emission. Because black hole observations predating those by LIGO and Gaia, predominantly based on EM data, indicate that black holes typically have masses >5~{}M_{\\odot}, a "mass-gap" between the neutron star and the black hole population was conjectured to exist between 3-5 M_{\\odot}. A dearth of BHNS mergers with black holes in that mass range would render multimessenger prospects for BHNS extremely challenging. Follow-up campaigns for BHNS with black hole mass >5~{}M_{\\odot} have not yielded any EM counterpart discovery (Anand et al., 2021). The fourth LIGO/Virgo/KAGRA observing run (O4; 2023-2025) recently revealed the first BHNS likely containing a mass-gap black hole, GW230529 (The LIGO Scientific Collaboration et al., 2024). The existence of mass-gap BHNS mergers renders BHNS mergers an invaluable source of multimessenger kilonova detections (Kunnumkai et al., 2024, 2024, 2024). Unfortunately only one GW detector was online at the time of GW230529, so that its sky localization is extremely poor, challenging most EM follow up efforts. The non-detection of a Gamma-Ray Burst enabled constraints on the jet luminosity and opening angle (Ronchini et al., 2024), while some kilonova constraints were only possible for a small fraction of the sky and models (Pillas et al., 2025).
+
+On February 6, 2025 at 21:25:30 UT, the LIGO and Virgo detectors observed S250206dm (Ligo Scientific Collaboration et al., 2025, 2024, 2024, 2024), a candidate GW event with a marginalized luminosity distance of 373 \\pm 104 Mpc and a sky localization of 38 and 547 deg{}^{2} at 50 and 90% credible interval respectively. With a 55% probability of being a BHNS merger, a 37% chance of being a BNS (based on the latest pycbc alert estimates), as well as a 62% probability of hosting a black hole in the mass gap and a 30% chance of having disrupted material outside of the innermost stable circular orbit of the black hole, this is likely the most promising multimessenger source in O4 thus far. Other GW alerts during O4 have not been confidently associated with any EM counterpart (Cabrera et al., 2024; Ahumada et al., 2024; Pillas et al., 2025; Darc et al., 2025). No gamma-ray emission associated with S250206dm was detected by Fermi-GBM (Mukherjee et al., 2025).
+
+In this work, we present the follow-up campaign carried out as part of the Gravitational Wave MultiMessenger DECam Survey (GW-MMADS; Proposal ID 2023B851374, PI: Andreoni & Palmese), in coordination with other facilities, namely the Southern Astrophysical Research (SOAR) 4m, the T80S 0.8m, and the Wendelstein 2.1m telescopes, and the South African Large Telescope (SALT). A companion work (Ahumada et al., in prep.) described the campaign and results from the Zwicky Transients Facility (ZTF), which, combined with ours, covers the majority of the high probability region for this event. See also Frostig et al. (2025) for near-infrared constraints on this event. In SS2 we describe our follow-up strategy and observations, in SS3 we present the candidates identified from the campaign, in SS4 we constrain kilonova models based on our findings, and in SS5 we report our conclusions.
+
+## 2 Observations
+
+### Galaxy-targeted Search with SOAR/Goodman
+
+Approximately 9 hours after the GW trigger, we conducted a galaxy-targeted search using the Goodman High Throughput Spectrograph (HTS; Clemens et al., 2004) mounted on the Southern Astrophysical Research (SOAR) 4.1 m telescope1, operated in imaging mode for Target of Opportunity (ToO) observations (PI: Andreoni). We observed 33 galaxies located in the highest-probability region of S250206dm in both g and i bands (Freeburn et al., 2025a), with corresponding pointings shown in Figure 1. These galaxies were selected by cross-matching the sky localization with the NED Local Volume Sample (NED-LVS; Cook et al., 2023), taking into account the NED galaxy list of S250206dm from Cook et al. (2025a). Data acquisition started on 2025 February 7 at 06:36:12.51 UT and lasted for about two hours, reaching typical depths of 22.2 and 21.7 mag for g and i bands, respectively. On 2025 February 9, SOAR revisited 30 galaxies in the highest probability region, conducting i-band observations from 06:48 UT to 09:18 UT with comparable depths as the previous night (Freeburn et al., 2025b). The details of SOAR pointings are available in TreasureMap2.
+
+Footnote 1: [https://noirlab.edu/science/programs/ctio/telescopes/soar-telescope](https://noirlab.edu/science/programs/ctio/telescopes/soar-telescope)
+
+Footnote 2: [https://treasuremap.space/alerts?gracedés=S250206dm](https://treasuremap.space/alerts?gracedés=S250206dm)
+
+### Galaxy-targeted Search with Wendelstein
+
+In the Northern Hemisphere, a galaxy-targeted search for the optical and near-infrared counterpart of S250206dm was initialized with the Three Channel Imager (3KK; Lang-Bardl et al., 2016) on the 2.1 mm Fraunhofer Telescope at Wendelstein Observatory (FTW; Hopp et al., 2014). The 3KK imager enables simultaneous observations in three channels with a 7\\arcmin\\times 7\\arcmin FoV. For S250206dm, we configured the r, i and J bands for blue, red and near-infrared channels, respectively. Beginning 19 hr after the event, on 2025 February 7 at 19:00:21 UT, Wendelstein 3KK commenced observations on 50 targets selected from the NED Galaxies in the Localization Volume in Cook et al. (2025a). The selection was based on ranking galaxies by the product of the 3D localization probability and WISE W1 luminosity, retaining only targets located in the Northern Hemisphere (with Decl. >0). On the same night, Wendelstein 3KK in addition observed the 90% localization region of EPWXT trigger 01709131361, which lies within the 70% localization of S250206dm, beginning at 2025 February 7 at 17:52:05 UT (20.4 hours after the merger) (Busmann et al., 2025). On 2025 February 8, Wendelstein observations proceeded with observations of 12 targets from the updated NED Galaxies in the Localization Volume (Cook et al., 2025b), including 11 from the original sample and one new addition. We also followed up the candidate AT 2025baz reported by ZTF (Ahumada et al., 2025). In the subsequent weeks, intermittent follow-ups were conducted on a subset of transient candidates. Figure 1 shows the footprints of the galaxy-targeted search with the Wendelstein 3KK observations overlaid on the LVK skymap of S250206dm. The details of Wendelstein pointings are available in TreasureMap3.
+
+Footnote 3: Observations affected by poor weather and resulting in unsuccessful data reduction were excluded from the TreasureMap pointings.
+
+### DECam Search
+
+Since S250206dm occurred on the day the DECam camera was taken off the Blanco 4-meter telescope at Cerro Tololo Interamerican Observatory (CTIO) for engineering, DECam was unavailable during the early follow-up phase of the event. GW-MMADS commenced ToO observations with DECam immediately following the camera's reinstallation. The DECam observations began on 2025 February 13 at 06:15:00.30 UT - approximately six days after the binary merger - and lasted for three hours.
+
+On the first night, we adopted an exposure sequence of i-r-i band for each pointing, with exposure times of 60 s in the r band and 140 s in the i band, reaching typical depths of 22.6 and 23.0 mag, respectively. The relatively deep i-band observations were designed to enhance the detection sensitivity to a potential red counterpart associated with the GW event at this phase. To minimize contamination from moving objects, we maintained a typical gap of 90 minutes between two i-band observations of each pointing. As shown in Figure 1, we used 23 pointings to fully cover the 50% probability region and the majority of the 90% probability region in the southern hemisphere. We note that our DECam coverage is slightly redundant, particularly within the 50% probability region, as the pointings were intentionally selected with significant overlap to mitigate the risk of candidate loss due to CCD chip gaps. The details of DECam pointings are available in TreasureMap.
+
+We repeated the observations on the following night using the same strategy, with a slightly longer r-band exposure of 70 s, beginning on 2025 February 14 at 06:22:17.23 UT. DECam follow-up observations resumed three days later, starting on 2025 February 17 at 07:48:50.60 UT, consisting of a single round of i-band imaging with the same 140 s exposure time. The final DECam observations were conducted on 2025 February 27, beginning at 07:04:25.54 UT, using the same i-r-i exposure sequence as the first night, but with increased exposure times of 280 s in the i band and 70 s in the r band.
+
+### T80-South search
+
+We conducted observations using the T80Cam on board the T80-South Telescope located at CTIO, triggered via a Target of Opportunity (ToO) approximately 9 hours after the gravitational wave alert. We observed 9 tiles inside the lobe located in the southern hemisphere, using 300-second exposures in the i-band. This observation strategy provided a total coverage of 18 deg{}^{2} during the night. The choice of exposure time and filter was optimized to enhance sensitivity to a potential kilonova emission expected in the early times post-merger. The tiling of the GW skymap was performed using Teglon(Coulter, 2021), an open-source tool developed for optimized planning of electromagnetic follow-up observations of GW events. Teglon improves upon the original LVK localization by incorporating a completeness metric derived using a galaxy catalog - in our case, the GLADE catalog(Dalya et al., 2018) - to estimate the spatial distribution of potential host galaxies in three dimensions. This results in a reweighted localization map that accounts for galaxy density and distance priors. Teglon then subdivides the updated probability map into fields corresponding to the field of view of the T80-South telescope, generating a ranked list of pointings for observations. However, after our observing sequence was submitted to the T80-South queue, an updated version of the GW skymap was released. This revised localization slightly shifted the position of the highest-probability region within the southern lobe. As a result, a fraction of the most probable sky area was not included in our executed pointings.
+
+## 3 Candidates
+
+### Candidates from SOAR/Goodman
+
+We performed image differencing analysis for the SOAR/Goodman observations using Saccadic Fast Fourier Transform (SFFT1; Hu et al., 2022). Two approaches were implemented to search for a potential counterpart on the difference images: (i) using the SOAR/Goodman observations from the first epoch (2025 February 7) as science images and the observations from second epoch (2025 February 9) as templates (Freeburn et al., 2025); (ii) subtracting SOAR images of both epochs using the best available archival DECam images as templates. All SOAR/Goodman images were photometrically calibrated to SkyMapper DR4 (Onken et al., 2024). For the first approach, candidates were identified by visual inspection of each difference image. A total of 22 candidates were initially flagged. After removing artifacts caused by bad subtractions, cosmic rays and known variable stars, only one candidate remained: AT 2025ber. Near-infrared follow-up observations of AT 2025ber was carried out by NEWFIRM on 2025 February 12, resulting in a non-detection at the site of the candidate, with a 3\\sigma depth of H\\sim 23 AB magnitude (Coulter et al., 2025). We therefore assessed AT2025ber to be spurious or a moving object, likely not associated with S250206dm. Visual inspection was also performed for the second approach on the difference images from two epochs of SOAR observations. No convincing transient-like signals were identified.
+
+Footnote 1: [https://github.com/thomasvrussell/sfft](https://github.com/thomasvrussell/sfft)
+
+### Candidates from Wendelstein
+
+Wendelstein data were reduced using a custom analysis pipeline based on Gossl and Riffeser (2002), which applies standard image processing, including the common CCD-level corrections. The calibrated images were subsequently stacked using the AstrOmatic software suite (Bertin and Arnouts, 1996; Bertin et al., 2002; Bertin, 2006). To search for variable sources, image differencing analysis was conducted on the stacked images using SFFT, employing Wendelstein images taken from the same field as reference, mostly at a late phase in March. No variability was detected upon careful inspections, except for a nuclear transient candidate (with internal name S250206dm_022200_p503737) at R.A. = 02:22:00.28, decl. = +50:37:37.10. However, a brightening of the transient candidate was detected on March 8, which does not match the expected photometric behavior of a kilonova, suggesting it may be related to AGN variability. For the EP-WXT trigger 01709131361, we did not identify any objects that brightened with respect to archival Legacy Survey r-band data or 2MASS J-band data, except for the flaring star reported by Levan et al. (2025), which is likely the progenitor of the EP-WXT trigger.
+
+### Candidates from DECam
+
+We analyzed the DECam observations using our GPU-enabled image differencing pipeline for rapid transient detection and photometry (Hu et al., in prep.), based on the high-efficiency SFFT algorithm (Hu et al., 2022). The DECam data processing and candidate vetting for S250206dm using our pipeline is summarized as follows:
+
+* For each scheduled DECam pointing in a specific band, we retrieved the best available archival DECam images with overlapping coverage from the NOIRLab data archive. Multiple exposures were requested to enable subsequent image stacking, ensuring sufficient depth for transient detection in our data. For the case of S250206dm, we typically retained a reference coverage contributed from five archival DECam exposures. Reference catalogs from Gaia DR3 (Gaia Collaboration et al., 2021) and DELVE (Drlica-Wagner et al., 2021) were also obtained for photometric calibration and source classification. These preparatory steps were carried out once the observing plan was finalized.
+
+* The pipeline acquired newly observed DECam images calibrated by the NOIRLab DECam Community Pipeline (CP; Valdes et al., 2014) during the night of observations. Each image was photometrically calibrated to Gaia DR3 with a color transformation from Gaia to DECam following a polynomial-fitting prescription introduced in George et al. (2020).
+
+* Rapid image differencing was then performed using SFFT on each science image and its overlapping individual reference images, after align ment with SWarp (Bertin, 2010). The resulting difference images for each pointing and filter were median-combined per night to generate a deep difference image, improving sensitivity of transient detection5. We note that the difference images were normalized to a common photometric zero-point before stacking. Footnote 5: This approach is robust, albeit less computationally efficient than performing image differencing between stacked reference and science images. Since the reference exposures are generally not aligned with one another, stacking them can introduce significant PSF discontinuities—particularly across chip gaps—which are typically not directly handled by image differencing algorithms.
+
+* We preformed transient detection on the stacked difference images using SourceExtractor (Bertin and Arnouts, 1996) to generate an initial pool of candidate detections. We first removed the detections contaminated by bad pixels (e.g., due to saturated sources) recorded in the DECam CP data quality mask products. To further eliminate artifacts, we employed a rotation-invariant convolutional neural network-based real/bogus classifier, adapted from the implementation in Sun et al. (2022) and retrained on DECam data. Detections with a real/bogus score \\geqslant 0.3 are considered transient alerts by our pipeline.
+
+* Our pipeline executed an automated filtering process on transient candidates with at least one alert. (i) **Not stellar**: We excluded stellar objects by cross-matching with the Gaia DR3 and DELVE catalogs, removing sources flagged as stars based on proper motion in Gaia and morphological classification in DELVE. (ii) **Not MPC**: The pipeline accessed the Minor Planet Center (MPC) database to eliminate known moving objects. (iii) **Not artifact**: We then required that each transient candidate include at least one high-confidence detection with a real/bogus score \\geqslant 0.7. The results of the automated filtering process are outlined in Table 1. We note the automated vetting process eliminated over 90% of the initial transient candidates.
+
+* We performed forced aperture photometry on the stacked difference images for each candidate that passed the automated vetting to extract its light curves. The centroid of the detection with the highest signal-to-noise ratio (SNR) was adopted as the center for forced photometry with a fixed aperture of six pixels.
+
+* Finally, we applied a series of event-based vetting criteria to the remaining candidates to identify potential counterparts of S250206dm. These criteria included: (i) **Early detection**: The candidate must have been discovered during the first night of observations.6 (ii) **Multiple detections**: Candidates with only one detection in both the stacked and individual difference images were excluded, as such detections are likely spurious or caused by moving objects. (iii) **Visual inspection**: We visually inspected the subtractions and light curves to further exclude artifacts and probable variable stars. (iv) **Fading behavior**: We computed the steepest decline rate in the candidate's light curve across the four DECam epochs and retained only those with a decline rate >0.3 mag/day. (v) **No prior variability**: We checked the DECam archive, ATLAS forced photometry, and the Transient Name Server (TNS) to ensure there was no previous variability for the candidate. (vi) **Red color**: We required a red color, r-i>0, in the light curve after correcting for Milky Way extinction, as expected for a plausible kilonova at 6 days post merger. The results of the event-based filtering are summarized in Table 1. Footnote 6: Our DECam observations reached similar depths across the first three epochs; thus, requiring detection on the first night is a reasonable criterion for identifying a fading counterpart.
+
+No compelling candidates meeting all vetting criteria were identified in the DECam observations for S250206dm. The 37 candidates that passed visual inspection are listed in the Appendix A, with several were circulated via GCN Cabrera et al. (2025). SALT spectroscopic follow-up observations were conducted for four of these DECam candidates (see Appendix B for details).
+
+### Candidates from T80-South
+
+All exposures acquired with T80-South were processed using the S-PLUS Transient Extension Program pipeline (Santos et al., 2024). The raw images from the T80-South telescope went through a pre-reduction process that includes bias subtraction, flat-field correction, overscan removal, and image trimming. Once pre-processed, all images go through the reduction pipeline, which applies a nonlinear astrometric correction over the images and performs zero-point calibrations. In order to find variable sources, we perform difference imaging using hotpants(Becker, 2015) and DECam archival images as templates. After image subtraction and inspection of detailed candidate vetting, no transient sources con sistent with an EM counterpart were identified within our search region. Given our criteria for finding viable candidates for the following epoch, observations on the following night were not acquired.
+
+## 4 Upper limits and Kilonova constraints
+
+### Upper Limits and Completeness
+
+Figure 2 shows the 5\\sigma limiting magnitudes we measured on the difference images for SOAR, Wendelstein, DECam and T80S observations. We employ these measurements to derive constraints on kilonova parameters using both BNS and BHNS kilonova models. Based on the three-dimensional localization probability using W1-band luminosity from Cook et al. (2025), we performed an approximate estimate to assess the likelihood that our galaxy-targeted observations covered the true host of S250206dm. The SOAR observations cover approximately 1.3% of the probability, and the Wendelstein 3KK observations about 1.5%. The estimation is performed against a luminosity function, capturing a true completeness including the 3D localization of the individual galaxies (Gassert et al., in prep.). It is based on the idea of using luminosities (here in r-band/W1-band) as a proxy for stellar mass. By using a luminosity function as expectation and comparing the true luminosities of the individual galaxies in the target catalog we estimate the completeness in the specific 3D volume of the GW event. This approach incorporates not only the luminosity function as is, but weighs the contributions based on their 3D localization such that galaxies with high luminosity in the outskirts of the localization volumes count less towards the completeness compared to similar galaxies (in terms of luminosity) in a high-probability region. Complementing these targeted observations, the DECam observations covered a broader region, comprising 9.3 % of the cumulative localization probability in the LVK skymap. T80S observations cover 4.9 % of the cumulative localization probability from the LVK skymap, with 4.5 % overlapping the DECam footprint.
+
+### Kilonova models
+
+We use state-of-the-art kilonova models computed with the 3D Monte Carlo radiative transfer code possis(Bulla, 2019, 2023), as also done in Ahumada et al. (in prep.). In summary, ejecta are modeled under the assumption of axial symmetry and are composed of two components (Nakar, 2020): the first is ejected on dynamical timescales during the merger ("dynamical ejecta"), while the second is launched afterward from an accretion disk formed around the merger remnant ("disk wind ejecta"). Angular profiles for the ejecta density and composition are implemented following suggestions from numerical relativity simulations, which lead to a viewing angle dependence of the signal. The BNS kilonova dynamical ejecta follow a density \\rho\\propto\\sin^{2}\\theta and an electron fraction Y_{\\rm e}(\\theta)\\propto\\cos^{2}\\theta profile, where \\theta is the polar angle with respect to the binary angular momentum, while the wind ejecta have uniform Y_{\\rm e} and spherically symmetric density (Perego et al., 2017; Radice et al., 2018; Setzer et al., 2023). For what concerns the BHNS models, the dynamical ejecta are more strongly focused around the merger plane - \\rho\\propto 1/\\{1+\\exp[-20\\,(\\theta-1.2)]\\} - and their electron fraction is fixed to Y_{\\rm e}=0.1, whereas the wind ejecta are spherical and have a flat distribution of Y_{\\rm e} values between 0.2 and 0.3 (Kawaguchi et al., 2020, and reference therein). The viewing angle dependence is explored by computing kilonova observables for 11 different viewing angles equally spaced in cosine from the merger plane (\\cos\\theta_{\\rm obs}=0, edge-on case) to the pole (\\cos\\theta_{\\rm obs}=1, face-on). The heating rates are updated compared to previous work and consistent with those from Rosswog and Korobkin (2024).
+
+Inspired by Anand et al. (2023), a grid of 3072 BNS kilonova models is generated by varying the mass, velocity, and electron fraction of both ejecta components within ranges suggested by numerical rela
+
+\\begin{table}
+
+\\begin{tabular}{c c c} \\hline \\hline  & Number & Fraction \\\\ Vetting Filter & passed & passed \\\\ \\hline \\multicolumn{3}{c}{_Regular pipeline cuts_} \\\\ \\hline Alert produced on difference image & 608,054 & 1.00 \\\\ Not stellar in Gaia/DELVE & 77,094 & 0.115 \\\\ Not MPC object & 77,094 & 0.115 \\\\ Real/bogus score \\geq 0.7 & 40,645 & 0.061 \\\\ \\hline \\multicolumn{3}{c}{_Event-based cuts_} \\\\ \\hline Discovered in the first night & 16,750 & 0.025 \\\\ Multiple detections & 3,589 & 0.005 \\\\ Visual inspection & 37 & 6.1\\times 10^{-5} \\\\ Fast decline in the light curve & 2 & 3.0\\times 10^{-6} \\\\ No previous history & 1 & 1.5\\times 10^{-6} \\\\ Red color in the light curve & **0** & 0 \\\\ \\hline \\end{tabular} Note. – The quantities listed in the table represent the number of objects that passed each step in the filtering process. Due to limited coverage of the observed sky fields, the MPC database was insufficient for removing moving objects in this case.
+
+\\end{table}
+
+Table 1: Candidate filtering results for DECam search. tivity simulations: dynamical ejecta mass M_{\\rm dyn}=(0.001,0.005,0.01,0.02)\\,M_{\\odot}, mass-weighted dynamical ejecta velocity \\bar{v}_{\\rm dyn}=(0.12,0.15,0.2,0.25)\\,\\rm c, mass-weighted dynamical ejecta electron fraction \\bar{Y}_{\\rm e,dyn}=(0.15,0.20,0.25,0.30), wind ejecta mass M_{\\rm wind}=(0.01,0.05,0.09,0.13)\\,M_{\\odot}, mass-weighted wind ejecta velocity \\bar{v}_{\\rm wind}=(0.03,0.05,0.10,0.15)\\,\\rm c, and fixed wind ejecta electron fraction Y_{\\rm e,wind}=(0.20,0.30,0.40).
+
+Following Mathias et al. (2024), a separate grid of 108 BHNS kilonova models is constructed by varying the masses of the two compact objects, the black hole spin, and the equation of state, with the follow
+
+[MISSING_PAGE_EMPTY:9622] stiff to soft)=(DD2, AP3, SFHo+H\\Delta) (Hempel & Schaffner-Bielich, 2010; Akmal et al., 1998; Drago et al., 2014). Numerical relativity fitting formulae are used to determine the properties of the ejecta, with only 37 out of 108 BHNS models leading to material being ejected and therefore resulting in a kilonova signal. When taking into account the viewing angle as an additional free parameter, the total number of simulated kilonovae in the two grids is 33 792 and 407, respectively.
+
+A uniform grid of \\cos\\theta_{\\rm obs} is adopted to account for different viewing angles for both BHNS and BNS models. However, this set-up does not reflect the expected probability distribution of viewing angles for such binary systems. Given the absence of specific constraints on the inclination with respect to the line of sight for this event, here we incorporate a prior distribution of viewing angles of compact binary coalescences introduced by Schutz (2011), which peaks at \\sim 30^{\\circ}. We assign to each model a weight corresponding to the probability of its viewing angle under the Schutz distribution. Throughout this paper, all reported fractions of model constraints are weighted accordingly to account for this effect.
+
+### Kilonova constraints
+
+In Fig. 3 we show lightcurves from our model grids (across different viewing angles) at a distance of 323 Mpc, the mean of the luminosity distance posterior distribution over the southern sky lobe of high probability covered by DECam and SOAR. The 1\\sigma luminosity distance constraint around this median is 82 Mpc in this region. We compare these lightcurves with our upper limits, and show in color the lightcurves that are excluded by our non-detections. Milky Way extinction at the location (E(B-V)=0.1\\pm 0.02 mag using Cardelli et al., 1989) is accounted for in the observed upper limits before evaluating model viability. In the upper row, we show the BHNS kilonova models in griJ bands. It is clear that the BHNS models can only be constrained by the SOAR g band observations, and marginally by the SOAR i band. Overall, 15% of the models are disfavored by the SOAR data. Had the DECam observations been possible at the same time as the SOAR ones instead of 6 days later, they would have ruled out 51% of BHNS models over a significantly larger high probability area, showing the importance of early observations.
+
+In the middle and lower rows of Fig. 3 we show the BNS kilonova lightcurves along with those ruled out by SOAR and DECam observations respectively. A larger fraction of models can be ruled out in this case by both follow up campaigns. Again, the early SOAR g band observations exclude the largest fraction of kilonova models (55%), though over a much smaller area than the DECam observations, which in this case constrain 1.4% of the kilonova models thanks to the deep i band pointings. The models excluded by the DECam follow up comprise 43% of all the kilonova models at least as bright as AT 2017gfo, the kilonova associated to GW170817, within the first week after merger7, whereas SOAR observations rule out the full set of such kilonova models. At 6 days post-merger, the kilonova is expected to be redder than earlier epochs, e.g., AT 2017gfo had an r-i color of \\sim 0.10 mag at 0.5 days and \\sim 0.76 mag at 6 days (Villar et al., 2017), which coupled to our deeper limits in i compared to r, rendered our i band depths more constraining. DECam + T80S jointly rule out 4% of the kilonova models, which comprise 48% of all the kilonova models at least as bright as AT 2017gfo.
+
+Footnote 7: The time window is chosen to match the timing of the SOAR observations and the first (most constraining) DECam epoch were conducted within the first week post-merger. Beyond this period, an AT 2017gfo-like kilonova at 323 Mpc typically fades too much in optical bands to be detectable by ground-based telescopes.
+
+The Wendelstein observations, which were galaxy-targeted over the northern high-probability region of the sky map, correspond to a luminosity distance of 383\\pm 96 Mpc. Assuming the event occurred at the optimistic closest 1\\sigma end of the distance distribution, i.e. 287 Mpc, the Wendelstein data would marginally constrain kilonova models - ruling out the brightest \\sim 0.1\\% models at \\sim 1 day post-merger.
+
+In Fig. 4 we show how the excluded models translate into constraints on physical parameters. As our fiducial scenario, we consider the case where the viewing angle is off-axis with \\cos(\\theta)=0.9 (the grid point nearest to the peak of the Schutz distribution of viewing angles), and present the percentage of models ruled out in each parameter combination. The value of \\cos(\\theta)=0.9 corresponds to a viewing angle of \\sim 26 deg, which is close to both the GW170817 viewing angle (e.g. Mooley et al., 2018; Margutti & Chornock, 2021; Palmese et al., 2024) and the expected peak of the distribution of angles from an observed population of GW events (Schutz, 2011). To account for the uncertainty in the event's distance, we sample 256 values from the posterior distribution of the luminosity distance over the southern sky lobe of high probability (with a mean distance of 323 Mpc). The exclusion fraction is computed at each sampled distance and then averaged to yield the overall constraint illustrated in Fig. 4. The upper panel shows the constraints from SOAR on the BHNS models. EoS numbers 1, 2, and 3 correspond to DD2 (Hempel & Schaffner-Bielich, 2010), AP3 (Akmal et al., 1998), and SFHo+HDelta(Drago et al., 2014) respectively, going from stiffer to softer. As expected, the largest fraction of models ruled out lies in the lowest NS mass bin and stiffer EoS, since in this case the neutron star is expected to be more easily disrupted by the black hole, producing a brighter counterpart. With a DD2 EoS and a \\sim 1.2~{}M_{\\odot} neutron star, about 37% of our models are excluded. From 21% to 56% of our models are excluded for our highest spinning black holes, at a 0.6 dimensionless spin magnitude, and a 1.2-1.6 M_{\\odot} neutron star. This is due to the Inner-most Circular Orbit (ISCO) radius reduction for highly spinning black holes compared to the non-spinning case, leading to more favorable disruption of the neutron star around it. About 0-39\\% (where the range is due to the EOS considered; if one accounts for all EOSs then this number is 28%) of models with black holes in the mass gap are also excluded, which is a larger fraction than those at higher masses, as they will also have a larger ISCO.
+
+For what concerns the BNS kilonova models, shown in the lower panels of Fig. 4, the SOAR observations rule out a large fraction, about 90% of massive (M_{\\rm wind}\\gtrsim 0.09M_{\\odot}) slow winds (\\bar{v}_{\\rm wind}<0.1c). This is because, as expected, the larger wind ejecta mass gives rise to the brighter kilonovae that we can exclude, while the slower wind ejecta give rise to the longer-lasting emission. Large electron fractions are also significantly excluded by our observations (70% of models with \\bar{Y}_{\\rm e,dyn}\\gtrsim 0.2 and Y_{\\rm e,wind}\\gtrsim 0.3). These models are in fact expected to give rise to blue, short-lived kilonovae that are well constrained by the early deep SOAR g band limits.
+
+The DECam observations also rule out a significant fraction of massive (M_{\\rm wind}\\gtrsim 0.09M_{\\odot}), slow (\\bar{v}_{\\rm wind}\\sim 0.03c) wind ejecta, albeit for a smaller number of models (\\sim 30\\% for DECam and DECam+T80S). We also find a slight trend where a larger fraction of models are ruled out at lower dynamical ejecta masses (M_{\\rm dyn}\\lesssim 0.001~{}M_{\\odot}) compared to higher masses, as smaller dynamical ejecta lead to a lower "shielding" effect the inner wind ejecta and hence a brighter kilonova (Kawaguchi et al., 2020). This is also observed at the larger viewing angles explored in this work. As opposed to the SOAR case, the DECam limits do not have significant constraining power on the highest wind electron fraction Y_{\\rm e,wind}\\sim 0.4 (ruling out less than 1% of models since they lack the early blue observations), but they are relatively more constraining at Y_{\\rm e,wind}\\lesssim 0.3 (rejecting \\sim 7\\%) thanks to the late i band observations. Combining DECam and T80S increases the exclusion fractions to 8% for Y_{\\rm e,wind}\\sim 0.4 and 15% for Y_{\\rm e,wind}\\lesssim 0.3, respectively. We do not show kilonova constraints for the Wendelstein observations as they can only constrain a few models at the low-end tail of the luminosity distance posterior due to the shallow depths reached in poor observing conditions.
+
+As expected, the BHNS models we consider are fainter and therefore a smaller fraction is ruled out by our observations compared to the BNS ones. The BHNS kilonovae used here go down to ejecta masses of 10^{-4}~{}M_{\\odot}(Mathias et al., 2024), which is about an order of magnitude below the lowest value we assume for BNSs. Moreover, the BHNS kilonova is expected to lack a polar dynamical ejecta component, as reflected by our models, so an on axis observer is more likely to be able to observe a brighter BNS than NSBH kilonova, all kilonova parameters but the squeezed polar component being equal.
+
+Results from our BNS model grid can be compared to the work of Anand et al. (2021), which derived kilonova constraints for BHNS mergers in O3. Overall, their constraints on S200115j (GW200115_042309) are less stringent than ours as only some massive ejecta (>0.05~{}M_{\\odot}) models are ruled out at the lower end of the luminosity distance estimate, while S200105ae (GW200105_162426, later deemed a sub-threshold event) follow-up did not allow for any constraint of kilonova models. A major difference between the two analyses consists in the grid values, for which the ejecta masses (in the range 0.01-0.09~{}M_{\\odot}) are higher than in our models (0.001-0.02~{}M_{\\odot}), therefore giving rise to brighter EM counterparts. Bright kilonovae for BHNS mergers (at least compared to BNS mergers) are motivated by previous findings (e.g. Rosswog et al., 2017; Barbieri et al., 2019; Kawaguchi et al., 2020), however, this is highly dependent on the components' mass, spin, and neutron star EOS. More stringent constraints were possible on GW190814 using DECam observations (Andreoni et al., 2020; Morgan et al., 2020; Anand et al., 2021), thanks to the availability of early observations and the small localization are of the event. However, GW190814 is likely a binary black hole merger, thus it may have not produced a kilonova (Abbott et al., 2020; Tews et al., 2021).
+
+The angular dependence of the models we use is such that the most stringent constraints are obtained for on-axis systems. Since the lanthanide-rich ejecta are launched around the plane of the binary within some angle, emission from kilonovae observed edge-on will face a larger optical depth than those observed on-axis, and will therefore appear significantly fainter (e.g., Bulla, 2019; Darbha & Kasen, 2020; Korobkin et al., 2021; Mathias et al., 2024). We show kilonova constraints at different viewing angles in Appendix C. We note that results in the \\cos(\\theta_{\\rm obs})=0.9 scenario are qualitatively similar to but less stringent (in terms of model constraints) than the on-axis case.
+
+## 5 Discussion and Conclusions
+
+We have presented our observational campaign aimed at identifying a kilonova associated with the high-significance gravitational-wave event candidate S250206dm, which is a probable BHNS or BNS merger. In the BHNS case, this event is interesting in light of the possibility that the black hole had a low mass, 3-5 M_{\\odot}, which would place it within the mass gap as well as increasing the likelihood of an EM counterpart as compared to other BHNS systems. This event likely represents the most exciting event of LIGO/Virgo/KAGRA O4 so far for multimessenger searches, given its low False Alarm Rate and significant probability of having ejected matter outside of the remnant ISCO.
+
+Under the assumption of an off-axis viewing angle with \\cos(\\theta)=0.9, assuming that this event is a mass gap BHNS, we rule out up to \\sim 40\\% of simulated models conditional on the neutron star mass and EoS around the top 33 host galaxies in the Southern lobe of this event's localization. Assuming BNS kilonovae described by Bulla (2023) instead, we are able to rule out about 90% of models for those galaxies with massive (\\gtrsim 0.09M_{\\odot}) and slow (\\bar{v}_{\\rm wind}<0.1c) wind ejecta. 74% of models with wind ejecta mass \\gtrsim 0.05M_{\\odot} are also ruled out.
+
+Our DECam (DECam + T80S) constraints on the other hand cover \\sim 9.3\\% (4.5%) of the sky probability and constrain \\sim 43\\% (48%) of BNS models brighter or similar to the GW170817 kilonova. Combined with ZTF limits, kilonova models brighter than -15 mag that rise (with evolution rate \\alpha<0 mag/day), as well as those brighter than -16.5 mag slowly fading (\\alpha>0.3 mag/day), can be ruled out over the majority (77%) of the sky probability of this event (Ahumada et al., in prep.). If DECam observations had been allowed on the day of trigger, and a similar depth was reached, 51% of our BHNS and 82% of our BNS models would have been constrained. This work shows the potential for detection of kilonovae associated with both BNS and NSBH mergers at distances >300 Mpc, provided that deep and prompt observations can be carried out.
+
+## Acknowledgments
+
+LH, TC, and AP acknowledge that this material is based upon work supported by NSF Grant No. 2308193. BO gratefully acknowledges support from the McWilliams Postdoctoral Fellowship at Carnegie Mellon University. MB acknowledges the Department of Physics and Earth Science of the University of Ferrara for the financial support through the FIRD 2024 grant. IA acknowledges support from the National Science Foundation Award AST 2505775 and NASA grant 24-ADAP24-0159. This work was supported by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-2094 - 390783311. M.W.C. acknowledges support from the National Science Foundation with grant numbers PHY-2117997, PHY-2308862 and PHY-2409481.
+
+This work used resources on the Vera Cluster at the Pittsburgh Supercomputing Center (PSC). We thank the PSC staff for help with setting up our software on the Vera Cluster.
+
+This project used data obtained with the Dark Energy Camera (DECam), which was constructed by the Dark Energy Survey (DES) collaboration. Funding for the DES Projects has been provided by the US Department of Energy, the US National Science Foundation, the Ministry of Science and Education of Spain, the Science and Technology Facilities Council of the United Kingdom, the Higher Education Funding Council for England, the National Center for Supercomputing Applications at the University of Illinois at Urbana-Champaign, the Kavli Institute for Cosmological Physics at the University of Chicago, Center for Cosmology and Astro-Particle Physics at the Ohio State University, the Mitchell Institute for Fundamental Physics and Astronomy at Texas A&M University, Financiadora de Estudos e Projetos, Fundacao Carlos Chagas Filho de Amparo a Pesquisa do Estado do Rio de Janeiro, Conselho Nacional de Desenvolvimento Cientifico e Tecnologico and the Ministerio da Ciencia, Tecnologia e Inovacao, the Deutsche Forschungsgemeinschaft and the Collaborating Institutions in the Dark Energy Survey.
+
+The Collaborating Institutions are Argonne National Laboratory, the University of California at Santa Cruz, the University of Cambridge, Centro de Investigaciones Energeticas, Medioambientales y Tecnologicas-Madrid, the University of Chicago, University College London, the DES-Brazil Consortium, the University of Edinburgh, the Eidgenossische Technische Hochschule (ETH) Zurich, Fermi National Accelerator Laboratory, the University of Illinois at Urbana-Champaign, the Institut de Ciencies de l'Espai (IEEC/CSIC), the Institut de Fisica d'Altes Energies, Lawrence Berkeley National Laboratory, the Ludwig-Maximilians Universit at M unchen and the associated Excellence Cluster Universe, the University of Michigan, NSF's NOIRLab, the University of Nottingham, the Ohio State University, the OzDES Membership Consortium, the University of Pennsylvania, the University of Portsmouth, SLAC National Accelerator Laboratory, Stanford University, the University of Sussex, and Texas A&M University.
+
+Based on observations at Cerro Tololo Inter-American Observatory, NSF's NOIRLab (NOIRLab Prop. ID 2023B-851374, PI: Andreoni & Palmese), which is managed by the Association of Universities for Research in Astronomy (AURA) under a cooperative agreement with the National Science Foundation. We thank Kathy Vivas, Alfredo Zenteno, and CTIO staff for their support with DECam observations. Some of the observations reported in this paper were obtained with the Southern African Large Telescope (SALT).
+
+This research has made use of the NASA/IPAC Extragalactic Database (NED), which is funded by the National Aeronautics and Space Administration and operated by the California Institute of Technology. CTIO:4m, SOAR, FTW:2.1m, SALT
+
+_Software:_ Astropy (Astropy Collaboration et al. 2013, 2018, 2022), SciPy (Virtanen et al. 2020), Numpy (Harris et al. 2020), MatPlotLib (Hunter 2007), CuPy (Okuta et al. 2017), Scikit-image (Van der Walt et al. 2014), SourceExtractor (Bertin & Arnouts 1996), SWarp (Bertin 2010), SFFT (Hu et al. 2021), dustmap (Green 2018), ligo.skymap (Singer et al. 2016a,b), healpy (Zonca et al. 2019), Treasure Map (Wyatt et al. 2020)
+
+[MISSING_PAGE_FAIL:15]
+
+[MISSING_PAGE_FAIL:17]
+
+* Akmal et al. (1998) Akmal, A., Pandharipande, V. R., & Ravenhall, D. G. 1998, PhRvC, 58, 1804, doi: 10.1103/PhysRevC.58.1804
+
+* Anand et al. (2021) Anand, S., Coughlin, M. W., Kasliwal, M. M., et al. 2021, Nature Astronomy, 5, 46, doi: 10.1038/s41550-020-1183-3
+
+* Anand et al. (2023) Anand, S., Pang, P. T. H., Bulla, M., et al. 2023, arXiv e-prints, arXiv:2307.11080, doi: 10.48550/arXiv.2307.11080
+
+* Andreoni et al. (2020) Andreoni, I., Goldstein, D. A., Kasliwal, M. M., et al. 2020, ApJ, 890, 131, doi: 10.3847/1538-4357/ab6a1b
+
+* Astropy Collaboration et al. (2013) Astropy Collaboration, Robitaille, T. P., Tollerud, E. J., et al. 2013, A&A, 558, A33, doi: 10.1051/0004-6361/201322068
+
+* Astropy Collaboration et al. (2018) Astropy Collaboration, Price-Whelan, A. M., Sipocz, B. M., et al. 2018, AJ, 156, 123, doi: 10.3847/1538-3881/aabc4f
+
+* Astropy Collaboration et al. (2022) Astropy Collaboration, Price-Whelan, A. M., Lim, P. L., et al. 2022, ApJ, 935, 167, doi: 10.3847/1538-4357/ac7c74
+
+* Barbieri et al. (2019) Barbieri, C., Salafia, O. S., Colpi, M., et al. 2019, ApJL, 887, L35, doi: 10.3847/2041-8213/ab5c1e
+
+* Becker (2015) Becker, A. 2015, HOTPANTS: High Order Transform of PSF ANd Template Subtraction, Astrophysics Source Code Library, record ascl:1504.004
+
+* Bertin (2006) Bertin, E. 2006, in Astronomical Society of the Pacific Conference Series, Vol. 351, Astronomical Data Analysis Software and Systems XV, ed. C. Gabriel, C. Arviset, D. Ponz, & S. Enrique, 112
+
+* Bertin (2010) Bertin, E. 2010, SWarp: Resampling and Co-adding FITS Images Together. [http://ascl.net/1010.068](http://ascl.net/1010.068)
+
+* Bertin & Arnouts (1996) Bertin, E., & Arnouts, S. 1996, A&AS, 117, 393, doi: 10.1051/aas:1996164
+
+* Bertin et al. (2002) Bertin, E., Mellier, Y., Radovich, M., et al. 2002, in Astronomical Society of the Pacific Conference Series, Vol. 281, Astronomical Data Analysis Software and Systems XI, ed. D. A. Bohlender, D. Durand, & T. H. Handley, 228
+
+* Buckley et al. (2006) Buckley, D. A. H., Swart, G. P., & Meiring, J. G. 2006, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 6267, Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, ed. L. M. Stepp, 62670Z, doi: 10.1117/12.673750
+
+* Bulla (2019) Bulla, M. 2019, MNRAS, 489, 5037, doi: 10.1093/mnras/stz2495
+
+* Bulla (2023) --. 2023, MNRAS, 520, 2558, doi: 10.1093/mnras/stad232
+
+* Burgh et al. (2003) Burgh, E. B., Nordsieck, K. H., Kobulnicky, H. A., et al. 2003, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 4841, Instrument Design and Performance for Optical/Infrared Ground-based Telescopes, ed. M. Iye & A. F. M. Moorwood, 1463-1471, doi: 10.1117/12.460312
+
+* Busmann et al. (2025) Busmann, M., Gruen, D., O'Connor, B., et al. 2025, GRB Coordinates Network, 39214, 1
+
+* Cabrera et al. (2025) Cabrera, T., Hu, L., Hall, X., et al. 2025, GRB Coordinates Network, 39318, 1
+
+* Cabrera et al. (2024) Cabrera, T., Palmese, A., Hu, L., et al. 2024, PhRvD, 110, 123029, doi: 10.1103/PhysRevD.110.123029
+
+* Cardelli et al. (1989) Cardelli, J. A., Clayton, G. C., & Mathis, J. S. 1989, ApJ, 345, 245, doi: 10.1086/167900
+
+* Clemens et al. (2004) Clemens, J. C., Crain, J. A., & Anderson, R. 2004, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 5492, Proc. SPIE, ed. A. F. M. Moorwood & M. Iye, 331-340, doi: 10.1117/12.550069
+
+* Cook et al. (2025a) Cook, D. O., Ebert, R., Helou, G., et al. 2025a, GRB Coordinates Network, 39185, 1
+
+* Cook et al. (2025b) --. 2025b, GRB Coordinates Network, 39235, 1
+
+* Cook et al. (2023) Cook, D. O., Mazzarella, J. M., Helou, G., et al. 2023, ApJS, 268, 14, doi: 10.3847/1538-4365/acdd06
+
+* Coughlin et al. (2019) Coughlin, M. W., Ahumada, T., Anand, S., et al. 2019, ApJL, 885, L19, doi: 10.3847/2041-8213/ab4ad8
+
+* Coulter (2021) Coulter, D. A. 2021, Teglon: A Pixel-level Gravitational Wave Search Optimization and Analysis Code, v0.0, ed. Zenodo, doi: 10.5281/zenodo.5683508
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline TNS ID & SALT obs. date & Identified lines & Redshift & Notes \\\\ \\hline AT 2025bnp & 2025-02-14 & H\\alpha, H\\beta, O[III] & 0.1\\pm 0.01 & Low SNR, increased uncertainty in line identification \\\\ AT 2025bnj & 2025-02-15 & H\\beta, O[II], O[III] & 0.14\\pm 0.001 & Observability conditions not met \\\\ AT 2025bnj & 2025-02-16 & H\\beta, O[II], O[III] & 0.14\\pm 0.001 & Repeat observation \\\\ AT 2025bnt & 2025-02-17 & - & - & No lines identified \\\\ AT 2025bnuh & 2025-02-22 & H\\beta, O[II], O[III] & 0.14\\pm 0.001 & - \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: SALT spectroscopy for S250206dm. See the text for details on the instrumental configuration, which was identical for all spectra.
+
+* Coulter et al. (2025) Coulter, D. A., Kilpatrick, C. D., Andreoni, I., et al. 2025, GRB Coordinates Network, 39303, 1
+
+* Darbha & Kasen (2020) Darbha, S., & Kasen, D. 2020, ApJ, 897, 150, doi: 10.3847/1538-4357/ab9aa34
+
+* Darc et al. (2025) Darc, P., Bom, C. R., Kilpatrick, C. D., et al. 2025, arXiv e-prints, arXiv:2506.02224, doi: 10.48550/arXiv.2506.02224
+
+* Drago et al. (2014) Drago, A., Lavagno, A., Pagliara, G., & Pigato, D. 2014, PhRvC, 90, 065809, doi: 10.1103/PhysRevC.90.065809
+
+* Drlica-Wagner et al. (2021) Drlica-Wagner, A., Carlin, J. L., Nidever, D. L., et al. 2021, ApJS, 256, 2, doi: 10.3847/1538-4365/ac079d
+
+* Dalya et al. (2018) Dalya, G., Galgoczi, G., Dobos, L., et al. 2018, Monthly Notices of the Royal Astronomical Society, 479, 2374, doi: 10.1093/mnras/sty1703
+
+* Fernandez et al. (2017) Fernandez, R., Foucart, F., Kasen, D., et al. 2017, Classical and Quantum Gravity, 34, 154001, doi: 10.1088/1361-6382/aa7a77
+
+* Foucart (2012) Foucart, F. 2012, Phys. Rev. D, 86, 124007, doi: 10.1103/PhysRevD.86.124007
+
+* Freeburn et al. (2025a) Freeburn, J., Carney, J., Andreoni, I., & Cook, D. 2025a, GRB Coordinates Network, 39196, 1
+
+* Freeburn et al. (2025b) Freeburn, J., Teague, S., Carney, J., et al. 2025b, GRB Coordinates Network, 39286, 1
+
+* Frostig et al. (2025) Frostig, D., Karambelkar, V. R., Stein, R. D., et al. 2025, WINTER on S250206dm: A near-infrared search for an electromagnetic counterpart. [https://arxiv.org/abs/2504.12384](https://arxiv.org/abs/2504.12384)
+
+* Gaia Collaboration et al. (2021) Gaia Collaboration, Brown, A. G. A., Vallenari, A., et al. 2021, A&A, 649, A1, doi: 10.1051/0004-6361/202039657
+
+* George et al. (2020) George, K., Vassallo, T., Mohr, J., et al. 2020, in Astronomical Society of the Pacific Conference Series, Vol. 527, Astronomical Data Analysis Software and Systems XXIX, ed. R. Pizzo, E. R. Deul, J. D. Mol, J. de Plaa, & H. Verkouter, 701, doi: 10.48550/arXiv.2001.03987
+
+* Gossl & Riffeser (2002) Gossl, C. A., & Riffeser, A. 2002, A&A, 381, 1095, doi: 10.1051/0004-6361:20011522
+
+* Green (2018) Green, G. M. 2018, Journal of Open Source Software, 3, 695, doi: 10.21105/joss.00695
+
+* Harris et al. (2020) Harris, C. R., Millman, K. J., van der Walt, S. J., et al. 2020, Nature, 585, 357-362, doi: 10.1038/s41586-020-2649-2
+
+* Hempel & Schaffner-Bielich (2010) Hempel, M., & Schaffner-Bielich, J. 2010, NuPhA, 837, 210, doi: 10.1016/j.nuclphysa.2010.02.010
+
+* Hopp et al. (2014) Hopp, U., Bender, R., Grupp, F., et al. 2014, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 9145, Ground-based and Airborne Telescopes V, ed. L. M. Stepp, R. Gilmozzi, & H. J. Hall, 91452D, doi: 10.1117/12.2054498
+
+* Hu et al. (2021) Hu, L., Wang, L., & Chen, X. 2021, sfft, 1.0.3, Zenodo, doi: 10.5281/zenodo.5521634
+
+* Hu et al. (2022) Hu, L., Wang, L., Chen, X., & Yang, J. 2022, ApJ, 936, 157, doi: 10.3847/1538-4357/ac7394
+
+* Hunter (2007) Hunter, J. D. 2007, Computing in Science Engineering, 9, 90, doi: 10.1109/MCSE.2007.55
+
+* Kasen et al. (2015) Kasen, D., Fernandez, R., & Metzger, B. D. 2015, Monthly Notices of the Royal Astronomical Society, 450, 1777, doi: 10.1093/mnras/stv721
+
+* Kawaguchi et al. (2016) Kawaguchi, K., Kyutoku, K., Shibata, M., & Tanaka, M. 2016, The Astrophysical Journal, 825, 52, doi: 10.3847/0004-637X/825/1/52
+
+* Kawaguchi et al. (2020) Kawaguchi, K., Shibata, M., & Tanaka, M. 2020, The Astrophysical Journal, 889, 171, doi: 10.3847/1538-4357/ab6116
+
+* Korobkin et al. (2021) Korobkin, O., Wollaeger, R. T., Fryer, C. L., et al. 2021, ApJ, 910, 116, doi: 10.3847/1538-4357/abe1b5
+
+* Kunnumkai et al. (2024a) Kunnumkai, K., Palmese, A., Bulla, M., et al. 2024a, arXiv e-prints, arXiv:2409.10651, doi: 10.48550/arXiv.2409.10651
+
+* Kunnumkai et al. (2024b) Kunnumkai, K., Palmese, A., Farah, A. M., et al. 2024b, arXiv e-prints, arXiv:2411.13673, doi: 10.48550/arXiv.2411.13673
+
+* Kyutoku et al. (2013) Kyutoku, K., Ioka, K., & Shibata, M. 2013, Phys. Rev. D, 88, 041503, doi: 10.1103/PhysRevD.88.041503
+
+* Lang-Bardl et al. (2016) Lang-Bardl, F., Bender, R., Goessl, C., et al. 2016, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 9908, Ground-based and Airborne Instrumentation for Astronomy VI, ed. C. J. Evans, L. Simard, & H. Takami, 990844, doi: 10.1117/12.2232039
+
+* Lattimer & Schramm (1974) Lattimer, J. M., & Schramm, D. N. 1974, ApJ, 192, L145, doi: 10.1086/181612
+
+* Levan et al. (2025) Levan, A. J., van Hoof, A., Martin-Carrillo, A., et al. 2025, GRB Coordinates Network, 39218, 1
+
+* LIGO Scientific Collaboration (2015) LIGO Scientific Collaboration. 2015, Classical and Quantum Gravity, 32, 074001, doi: 10.1088/0264-9381/32/7/074001
+
+* Ligo Scientific Collaboration (2025a) Ligo Scientific Collaboration, VIRGO Collaboration, & Kagra Collaboration. 2025a, GRB Coordinates Network, 39175, 1
+
+* Ligo Scientific Collaboration (2025b) --. 2025b, GRB Coordinates Network, 39184, 1
+
+* Ligo Scientific Collaboration (2025c) --. 2025c, GRB Coordinates Network, 39178, 1
+
+* Ligo Scientific Collaboration (2025d) --. 2025d, GRB Coordinates Network, 39231, 1
+
+* Ligo Scientific Collaboration (2017) LIGO Scientific Collaboration, Virgo Collaboration, GBM, F., et al. 2017, ApJ, 848, L12, doi: 10.3847/2041-8213/aa91c9
+
+* Margutti & Chornock (2021) Margutti, R., & Chornock, R. 2021, ARA&A, 59, 155, doi: 10.1146/annurev-astro-112420-030742* Mathias et al. (2024) Mathias, L. W. P., Di Clemente, F., Bulla, M., & Alessandro, D. 2024, MNRAS, 527, 11053, doi: 10.1093/mnras/stad3919
+
+* Metzger (2019) Metzger, B. D. 2019, Living Reviews in Relativity, 23, 1, doi: 10.1007/s41114-019-0024-0
+
+* Mooley et al. (2018) Mooley, K. P., Deller, A. T., Gottlieb, O., et al. 2018, Nature, 561, 355, doi: 10.1038/s41586-018-0486-3
+
+* Morgan et al. (2020) Morgan, R., Soares-Santos, M., Annis, J., et al. 2020, The Astrophysical Journal, 901, 83, doi: 10.3847/1538-4357/abafaa
+
+* Mukherjee et al. (2025) Mukherjee, O., Hamburg, R., & Fermi-GBM Team. 2025, GRB Coordinates Network, 39183, 1
+
+* Nakar (2020) Nakar, E. 2020, PhR, 886, 1, doi: 10.1016/j.physrep.2020.08.008
+
+* Okuta et al. (2017) Okuta, R., Unno, Y., Nishino, D., Hido, S., & Loomis, C. 2017, in Proceedings of Workshop on Machine Learning Systems (LearningSys) in The Thirty-first Annual Conference on Neural Information Processing Systems (NIPS). [http://learningsys.org/nips17/assets/papers/paper_16.pdf](http://learningsys.org/nips17/assets/papers/paper_16.pdf)
+
+* Onken et al. (2024) Onken, C. A., Wolf, C., Bessell, M. S., et al. 2024, PASA, 41, e061, doi: 10.1017/pasa.2024.53
+
+* Palmese et al. (2024) Palmese, A., Kaur, R., Hajela, A., et al. 2024, PhRvD, 109, 063508, doi: 10.1103/PhysRevD.109.063508
+
+* Perego et al. (2017) Perego, A., Radice, D., & Bernuzzi, S. 2017, ApJL, 850, L37, doi: 10.3847/2041-8213/aa9ab9
+
+* Pillas et al. (2025) Pillas, M., Antier, S., Ackley, K., et al. 2025, arXiv e-prints, arXiv:2503.15422, doi: 10.48550/arXiv.2503.15422
+
+* Radice et al. (2018) Radice, D., Perego, A., Hotokezaka, K., et al. 2018, ApJ, 869, 130, doi: 10.3847/1538-4357/aaf054
+
+* Ronchini et al. (2024) Ronchini, S., Bala, S., Wood, J., et al. 2024, The Astrophysical Journal Letters, 970, L20, doi: 10.3847/2041-8213/ad5d74
+
+* Rosswog et al. (2017) Rosswog, S., Feindt, U., Korobkin, O., et al. 2017, Classical and Quantum Gravity, 34, 104001, doi: 10.1088/1361-6382/aa68a9
+
+* Rosswog & Korobkin (2024) Rosswog, S., & Korobkin, O. 2024, Annalen der Physik, 536, 2200306, doi: 10.1002/andp.202200306
+
+* Santos et al. (2024) Santos, A., Kilpatrick, C. D., Bom, C. R., et al. 2024, MNRAS, 529, 59, doi: 10.1093/mnras/stae466
+
+* Schutz (2011) Schutz, B. F. 2011, Classical and Quantum Gravity, 28, 125023, doi: 10.1088/0264-9381/28/12/125023
+
+* Setzer et al. (2023) Setzer, C. N., Peiris, H. V., Korobkin, O., & Rosswog, S. 2023, MNRAS, 520, 2829, doi: 10.1093/mnras/stad257
+
+* Singer et al. (2016a) Singer, L. P., Chen, H.-Y., Holz, D. E., et al. 2016a, The Astrophysical Journal Letters, 829, L15, doi: 10.3847/2041-8205/829/1/L15
+
+* Singer et al. (2016b) --. 2016b, The Astrophysical Journal Supplement Series, 226, 10, doi: 10.3847/0067-0049/226/1/10
+
+* Sun et al. (2022) Sun, T., Hu, L., Zhang, S., et al. 2022, Frontiers in Astronomy and Space Sciences, 9, 897100, doi: 10.3389/fspas.2022.897100
+
+* Tews et al. (2021) Tews, I., Pang, P. T. H., Dietrich, T., et al. 2021, ApJL, 908, L1, doi: 10.3847/2041-8213/abdaae
+
+* The LIGO Scientific Collaboration (2024) The LIGO Scientific Collaboration, the Virgo Collaboration, & the KAGRA Collaboration. 2024, arXiv e-prints, arXiv:2404.04248, doi: 10.48550/arXiv.2404.04248
+
+* Valdes et al. (2014) Valdes, F., Gruendl, R., & DES Project. 2014, in Astronomical Society of the Pacific Conference Series, Vol. 485, Astronomical Society of the Pacific Conference Series, ed. N. Manset & P. Forshay, 379
+
+* Van der Walt et al. (2014) Van der Walt, S., Schonberger, J. L., Nunez-Iglesias, J., et al. 2014, PeerJ, 2, e453
+
+* Villar et al. (2017) Villar, V. A., Guillochon, J., Berger, E., et al. 2017, ApJL, 851, L21, doi: 10.3847/2041-8213/aa9c84
+
+* Virtanen et al. (2020) Virtanen, P., Gommers, R., Oliphant, T. E., et al. 2020, Nature Methods, 17, 261, doi: 10.1038/s41592-019-0686-2
+
+* Wyatt et al. (2020) Wyatt, S. D., Tohuvavohu, A., Arcavi, I., et al. 2020, The Astrophysical Journal, 894, 127, doi: 10.3847/1538-4357/ab855e
+
+* Zonca et al. (2019) Zonca, A., Singer, L. P., Lenz, D., et al. 2019, Journal of Open Source Software, 4, 1298, doi: 10.21105/joss.01298

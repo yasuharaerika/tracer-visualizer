@@ -1,0 +1,103 @@
+###### Abstract
+
+Recent modeling of _Neutron Star Interior Composition Explorer_(_NICER_) observations of the millisecond pulsar PSR J0030+0451 suggests that the magnetic field of the pulsar is non-dipolar. We construct a magnetic field configuration where foot points of the open field lines closely resemble the hotspot configuration from _NICER_ observations. Using this magnetic field as input, we perform force-free simulations of the magnetosphere of PSR J0030+0451, showing the three-dimensional structure of its plasma-filled magnetosphere. Making simple and physically motivated assumptions about the emitting regions, we are able to construct the multi-wavelength lightcurves that qualitatively agree with the corresponding observations. The agreement suggests that multipole magnetic structures are the key to modeling this type of pulsars, and can be used to constrain the magnetic inclination angle and the location of radio emission.
+
+X-ray sources, Millisecond pulsars, Neutron stars +
+
+Footnote †: journal: ApJL
+
+0000-0002-2282-1887]Alexander Y. Chen
+
+0000-0002-2282-0807]Yajie Yuan
+
+## 1 Introduction
+
+PSR J0030+0451 (hereafter J0030) is an isolated millisecond pulsar with a spin period of P\\approx 4.87 ms. Recently the _NICER_ collaboration mapped out the surface of J0030 with unprecedented detail (Riley et al., 2019; Miller et al., 2019) by modelling the pulsed thermal X-ray emission. They revealed that in order to match the observed X-ray lightcurve, the hotspots on the surface have to be in the same rotational hemisphere, not antipodal as naively expected. Furthermore, one of the hotspots needs to be elongated in the azimuthal direction. Both features suggest that higher multipole components are present near the stellar surface, channeling current and energetic particles to heat the surface at these particular spots.
+
+J0030 has been observed in all available wavelengths including radio, X-rays, and gamma-rays (see, e.g. Abdo et al., 2009). As pointed out by Bilous et al. (2019), there is an apparent discrepancy between the observation angles from the _NICER_ fit and previous radio/gamma-ray modelling (Johnson et al., 2014). A model taking into account the non-dipolar field line geometry near the star may be key to settling this discrepancy.
+
+Such theoretical effort already exists. Gralla et al. (2017) developed an analytic prescription to find the current carrying regions on the stellar surface when the magnetic field is axisymmetric around a magnetic axis. Lockhart et al. (2019) applied this prescription to map out hot regions on the stellar surface. However the _NICER_ hotspots clearly call for a non-axisymmetric configuration. Due to the wealth of observational data for PSR J0030+0451, any magnetospheric model should strive to not only explain the X-ray emission, but to reproduce the multi-wavelength lightcurves simultaneously.
+
+In this Letter, we attempt to use the new results from _NICER_ collaboration, together with recent insights from pulsar theory, to construct a coherent emission model of J0030 in all observed wavelengths. We first map out open field line regions using vacuum dipole and quadrupole magnetic fields so that they resemble the _NICER_ hotspots. Then we use force-free simulations to determine the global magnetosphere structure and compute the numerical lightcurves.
+
+## 2 Vacuum Field Configuration
+
+We expect that the hotspots on the surface of J0030 are externally heated by plasma flow in the magnetosphere. In a plasma-filled magnetosphere, electric current flows on open field lines, and hits the star at the polar caps. A good starting point is therefore to find a magnetic field configuration that has "polar caps" 1 with shapes and positions similar to the reported hotspot patterns.
+
+Footnote 1: Apparently the _NICER_ hotspots are no longer associated with magnetic poles, so ”polar cap” is a misnomer. We will simply use this term to denote the collective foot points of open field lines.
+
+The hotspots found by the _NICER_ collaboration clearly require multipole moments beyond the simple rotating dipole. Our first question is whether they can be reproduced by simply using quadrupoles and not higher multipole moments. To facilitate this, we developed a simple interactive tool that integrates field lines originating from a pool of seed points on the stellar surface, showing which field lines extend to the light cylinder. We introduce the dipole moment vector \\mathbf{p} and the traceless symmetric quadrupole tensor \\mathbf{Q}:
+
+\\mathbf{Q}=\\begin{pmatrix}q_{11}&q_{12}&q_{13}\\\\ q_{12}&q_{22}&q_{23}\\\\ q_{13}&q_{23}&-q_{11}-q_{22}\\end{pmatrix}. 
+
+The most general static quadrupole field is defined to be:
+
+\\mathbf{B}_{q}=-\\nabla\\left(\\frac{\\mathbf{rQ}\\mathbf{r}^{T}}{r^{5}}\\right)=- \\frac{2}{r^{5}}\\mathbf{Q}\\mathbf{r}+\\frac{5}{r^{7}}(\\mathbf{rQ}\\mathbf{r}^{T}) \\mathbf{r}. 
+
+Without loss of generality, we put the dipole moment in the y-z plane, so that p_{x}=0. We also observe that in both the hotspot configurations by Riley et al. (2019) and Miller et al. (2019) the two regions are approximately spaced by 180^{\\circ} in \\phi. Therefore, we attempt to keep everything symmetric with respect to the y-z plane, setting q_{12}=q_{13}=0. We seek a pair of polar caps that: 1. are both in the southern rotational hemisphere; 2. one almost circular while the other significantly elongated in the azimuthal direction.
+
+We were initially unable to find vacuum configurations that satisfy the above criteria with a combination of only dipolar and quadrupolar fields. However, when we introduce an offset z_{\\mathrm{offset}} for the center of the quadrupole component, we are able to find a range of solutions with polar caps similar to the _NICER_ results. Figure 1 shows an example of the vacuum magnetic field obtained using our interactive tool. There is, however, a degeneracy in the inclination angle for the dipole component. We can find such a polar cap configuration using a dipole inclination angle between 65^{\\circ}\\sim 90^{\\circ}. We attempt to settle this degeneracy using the gamma-ray lightcurves in the next section.
+
+## 3 Force-Free Simulations and Dipole Gamma-Ray Lightcurves
+
+PSR J0030+0451 is a strong pulsar that can easily produce e^{\\pm} pairs in the current sheets near the light cylinder through \\gamma-\\gamma collision (Chen & Beloborodov, 2014; Philippov & Spitkovsky, 2018; Hakobyan et al., 2019). As a result, the magnetosphere is expected to be plasma-filled and well described by the force-free limit. The observed gamma-ray emission is likely produced in these current sheets (e.g., Bai & Spitkovsky, 2010; Cerutti et al., 2015; Philippov & Spitkovsky, 2018). Since the dipole field dominates over quadrupole near the light cylinder, we first calculate the gamma-ray lightcurves from pure dipoles, and compare them with the observed one to constrain the dipole inclination angle.
+
+We use our own code _Coffee_ (COmputational Force FreE Electrodynamics)2 to solve the force-free equations: (e.g., Gruzinov, 1999; Blandford, 2002)
+
+Footnote 2: [https://github.com/fizban007/CoffeeGPU](https://github.com/fizban007/CoffeeGPU)
+
+\\frac{\\partial\\mathbf{E}}{\\partial t} =\\nabla\\times\\mathbf{B}-\\mathbf{J},  \\frac{\\partial\\mathbf{B}}{\\partial t} =-\\nabla\\times\\mathbf{E}, (4) \\mathbf{J} =\\nabla\\cdot\\mathbf{E}\\frac{\\mathbf{E}\\times\\mathbf{B}}{B^{2}}+ \\frac{(\\mathbf{B}\\cdot\\nabla\\times\\mathbf{B}-\\mathbf{E}\\cdot\\nabla\\times \\mathbf{E})\\mathbf{B}}{B^{2}},  with the constraints \\mathbf{E}\\cdot\\mathbf{B}=0 and E<B (we employ Heaviside-Lorentz units and set c=1). Our algorithm is similar to East et al. (2015); Zrake & East (2016): we use fourth-order central finite difference stencils on a uniform Cartesian grid and a five-stage fourth-order low storage Runge-Kutta scheme for time evolution (Carpenter & Kennedy, 1994). We use hyperbolic divergence cleaning (Dedner et al., 2002) to damp any violations of \\nabla\\cdot\\mathbf{B}=0. 3 To enforce the force-free condition, we explicitly remove any \\mathbf{E}_{\\parallel} by setting \\mathbf{E}\\rightarrow\\mathbf{E}-(\\mathbf{E}\\cdot\\mathbf{B})\\mathbf{B}/B^{2} at every time step. We apply standard sixth order Kreiss-Oliger numerical dissipation to all hyperbolic variables to suppress high frequency noise from truncation error (Kreiss & Oliger, 1973). To avoid stair stepping at the pulsar surface, we force the fields to known values inside the star with a smoothing kernel
+
+[MISSING_PAGE_FAIL:4] where \\phi_{e} is the azimuthal direction of the emission direction \\mathbf{e}. We sum the contribution from each particle with a weight factor equal to j_{C}B, which place the emphasis on the current sheet as well as taking into account the local magnetic field.
+
+To determine the dipole inclination \\alpha, we ran a series of simulations with pure dipole magnetic field and vary \\alpha from 60^{\\circ} to 90^{\\circ}. Figure 2 shows the skymaps and lightcurves from these simulations using the above prescription. Since we have a separate constraint on viewing angle from the _NICER_ observations, we could use the positions of the two gamma-ray peaks as well as the amount of emission between peaks to determine the inclination angle. The comparison seems to indicate that 75^{\\circ}<\\alpha<90^{\\circ}. We chose \\alpha=80^{\\circ} which indeed gives a reasonable description for the observed lightcurve, as can be seen in the top panel of Figure 4.
+
+## 4 Numerical Model for Psr J0030+0451
+
+The final parameters we settle with are:
+
+\\mathbf{p} =(p_{x},p_{y},p_{z})=p_{0}(0,0.985,0.174),  \\mathbf{Q} =p_{0}\\left(\\begin{matrix}0.6&0&0\\\\ 0&-0.8&-2\\\\ 0&-2&0.2\\end{matrix}\\right), (10) z_{\\text{offset}} =-0.4R_{*}. 
+
+This set of parameters corresponds to a dipole inclination angle of 80^{\\circ}. The quadrupole component is shifted and centered at (0,0,z_{\\text{offset}}).
+
+Figure 3 shows a global view of the force-free magnetosphere. The force-free parameter \\lambda is indeed small everywhere except in current sheets, providing a reliable way to identify them. The closed field lines remain similar to the vacuum configuration, whereas open field lines become mostly toroidal outside the light cylinder. These features agree with force-free simulations reported by Spitkovsky (2006), and kinetic simulations by Cerutti et al. (2016), Philippov and Spitkovsky (2018), and Kalapotharakos et al. (2018). The global magnetosphere also remains dipole-like, but the magnetospheric current is redirected to modified polar caps due to the presence of higher multipole fields, in agreement with the prediction by Gralla et al. (2017). Note that we did not include general relativistic corrections to \\rho_{\\text{GJ}}, which will likely reduce \\rho_{\\text{GJ}} and enhance j_{B}/c\\rho_{\\text{GJ}}(Philippov et al., 2015; Chen et al., 2020).
+
+The bottom panel of Figure 3 shows the polar caps from both force-free and vacuum fields. The force-free polar caps are obtained by integrating open field lines towards the star. Since the simulation boundary condition is applied at r<2R_{*}, we use the vacuum field for the integration between R_{*}<r<2R_{*}. j_{B}/c\\rho_{\\text{GJ}} changes sign across both polar caps, and is either negative or larger than unity. Note that although the force-free polar caps closely resemble the vacuum ones, they are larger and slightly shifted. It is difficult to match the force-free polar caps directly with _NICER_ results since a full fit using simulation results would take a prohibitive amount of computational resources.
+
+Figure 4 shows a comparison of different lightcurves from our numerical model compared with the observations. The peaks of the numerical lightcurves naturally line up with the data, without the need to individually shift each component. In the rest of this section, we discuss our method to compute the radio and X-ray lightcurves from the simulation results.
+
+### Radio Emission
+
+To obtain the radio lightcurve, we adopt a prescription similar to the gamma-rays, and use equation (8) to compute the arrival phase of the signals emitted by test particles. Instead of identifying the emitting region using |\\lambda|, we assume all open field lines between r_{\\rm min}=2R_{*} and a variable r_{\\rm max} are emitting. We sum up all the emission in this region and vary r_{\\rm max} to try to determine the likely radii for radio emission.
+
+There still remains a significant degree of freedom in the weight we assign to each emitting particle. We attempted several different weighting schemes:
+
+* Uniform emission weight.
+
+* Particle emission weight is proportional to \\lambda.
+
+* For all the cells between r and r+R_{*} we define a mean emission direction by averaging the emission vector {\\bf e}. The emission weight is proportional to \\sin^{2}\\Delta\\theta where \\Delta\\theta is the angle between the emission direction and the mean direction. This "ring-like" scheme emphasizes the emission at the edge of the polar caps.
+
+* Similar as above, but weight proportional to \\cos^{2}\\Delta\\theta. This "center" scheme emphasizes the geometric centers of the polar caps.
+
+Figure 5 shows the results from the four schemes above. In general, we always produce two radio peaks, one large and one small, separated by approximately a half cycle. This is consistent with the observed pattern. It can be seen that in general larger r_{\\rm max} leads to higher interpulse. For each scheme, the relative strengths of the two radio pulses single out an optimal r_{\\rm max}. The \\lambda scheme reflects the current structure of the polar caps, showing split patterns on the skymap, a direct result of the split polar caps shown in Figure 3. The ring-like weighting scheme does indeed show a ring-like pattern on the skymap, and tends to produce a double peak for the main radio peak. The center scheme does not produce an appreciable interpulse between the main peaks until r_{\\rm max}=10R_{*}. At this point both radio peaks are too wide and arrive systematically earlier than the observed ones. The \\lambda weighting is the most physically motivated, since the magnetospheric current is what drives pair production (Beloborodov, 2008; Timokhin & Arons, 2013) and as a result, radio emission. We find the \\lambda scheme with r_{\\rm max}=5 is closest to the observations (see middle panel of Figure 4).
+
+The main radio peak in our best model is still wider than the observed one. We believe this is because we assume the whole open field line bundle is radio-emitting. Since this peak corresponds to the elongated polar cap, it is conceivable that at the two corners of the polar cap the parallel voltage is limited by the geometry, and pairs can only be produced in the central region of the polar cap, resulting in a much narrower radio-emitting region. This possibility needs to be investigated further using self-consistent simulations. We focus mostly on relatively large radii for radio emission, ignoring the relativistic light bending effect which is important for the X-rays. This effect may influence the contribution to the observed radio emission from lower altitudes r\\lesssim 2R_{*}.
+
+### Hotspots and X-ray Lightcurve
+
+We obtain the force-free polar caps by tracing open field lines back to R_{*}. The resulting polar caps are close to the vacuum polar caps that we started with, which is a good consistency check. Both polar caps are split into halves with different signs of current flowing, reminiscent of near-orthogonal dipole rotators (see, e.g. Timokhin & Arons, 2013). In both polar caps, j_{B}/c\\rho_{\\rm GJ} is either negative (anti-GJ) or larger than unity (super-GJ), suggesting that the whole polar cap should be active. As a first approximation, we simply assume that both polar caps are heated uniformly by the current flowing in the magnetosphere.
+
+We construct the X-ray lightcurve using the X-PSI package developed by the Amsterdam group (Riley & Watts, 2019)4. The current version of X-PSI lacks the ability to handle arbitrary-shaped hotspots. Instead, we discretized the two hotspots on a \\theta-\\phi grid, then put a small circular hotspot at the center of each occupied grid point with uniform temperature T=1.3\\times 10^{6}\\,{\\rm K}. The shape of the polar caps can be found in the bottom panel of Figure 3 (we used the FFE configuration). The stellar surface is taken to be cold (T=10^{3}\\,{\\rm K}) and does not contribute to the _NICER_ observing band. This ensemble of circular hotspots is then fed into X-PSI to produce an ensemble of lightcurves. We sum all the lightcurves to produce the one shown in the bottom panel of Figure 4. Again as a consistency check, the lightcurve we obtained using this process is close to the observations.
+
+Footnote 4: [https://github.com/ThomasEdwardRiley/xpsi](https://github.com/ThomasEdwardRiley/xpsi)
+
+## 5 Conclusion
+
+We presented a numerical model that can reasonably reproduce the lightcurves of PSR J0030+0451 at all observed frequencies including radio, X-ray, and gamma-ray (Figure 4). To achieve this, it is sufficient to include only up to quadrupole magnetic field near the star with an offset. We find that a dipole inclination angle Figure 5: Comparison of the four weighting schemes for radio emission described in section 4.1. From top to bottom are weighting schemes based on (a) the force-free current \\lambda, (b) proximity to the edge of the polar cap, (c) proximity to the center of the polar cap, (d) uniform weight. The left panels are skymaps with r_{\\rm max}=5R_{\\star} and right panels are the light curves seen by an observer at \\zeta=54^{\\circ}. The different colors correspond to different r_{\\rm max}. The stripe features in the skymaps are artifacts due to sampling a spherical emission region on a Cartesian grid. of \\sim 80^{\\circ} reproduces well the relative positions of the gamma-ray peaks.
+
+The agreement of the new numerical model with observations strongly suggests that electric current is indeed the driving factor for the multi-wavelength emission in the pulsar magnetosphere. In addition, we developed a method to simultaneously compute radio and gamma-ray emission from a given magnetic field configuration using the force-free current ratio \\lambda. The radio emission height we obtained are not inconsistent with the phenomenological calculations by Kijak and Gil (2003), suggesting that our recipe can be potentially applied to other pulsars as well.
+
+The simulations presented in this Letter are limited in resolution due to our constraints on computation power. Future large-scale force-free simulations should be able to better resolve the star, with stellar surface at R_{*} instead of 2R_{*}. This will give a better representation of the current distribution on the stellar surface and better map to the configuration of hotspots. It could even be possible to perform direct Particle-in-cell simulations of J0030 in the foreseeable future, which will be able to pin-point the regions of dissipation in the magnetosphere. PIC simulations will be able to measure the amount of energy dissipated in the magnetosphere, and the fraction of it which goes to heat the stellar surface, explaining the origin and temperature of the hotspots on the star.
+
+We thank Anatoly Spitkovsky for helpful discussions and comments on the manuscript. We also thank Jonathan Zrake for sharing the force-free algorithm. The code _Coffee_ was developed initially during the Princeton GPU hackathon in June 2019 by AC, YY, Hayk Hakobyan, Patrick Crumley, and Vassilis Tsiolis. This work was supported by NASA grant 80NSSC18K1099. YY acknowledges support by a Flatiron Research Fellowship at the Flatiron Institute, Simons Foundation.

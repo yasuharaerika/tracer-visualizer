@@ -1,0 +1,69 @@
+###### Abstract
+
+Recently, Pulsar Timing Arrays (PTAs) reported a signal at nanohertz frequencies consistent with a stochastic gravitational wave background. Here, I show that the Brownian motion of the Sun as a result of its random gravitational interactions with the cluster of thousands of unmodeled Main-belt asteroids of diameters \\lesssim 80 km, combined with small inaccuracies in the estimated masses of larger asteroids, introduces timing noise for pulsars which is up to 20% of the reported signal at frequencies of \\sim 1/(few years). The asteroid contribution needs to be modeled better in order to obtain accurate inferences from the PTA signal.
+
+## 1 Introduction
+
+Pulsar Timing Arrays (PTAs) monitor a population of millisecond radio pulsars (Foster & Backer, 1990) in an attempt to detect correlated shifts in the arrival times of their radio pulses (Hellings & Downs, 1983; Finn et al., 2009). Several PTAs reported recently the discovery of a correlated signal at frequencies of 1-10 nanohertz (Antoniadis et al., 2022; Agazie et al., 2023; Reardon et al., 2023). The signal was interpreted as a stochastic gravitational wave background, potentially from mergers of supermassive black hole binaries throughout cosmic history (Agazie et al., 2023; Padmanabhan & Loeb, 2024).
+
+Here, I show that the detected stochastic signal is contaminated by the Brownian motion of the Sun as a result of its interactions with unmodeled Main-belt asteroids of diameters \\lesssim 80 km, as well as mass inaccuracies for larger asteroids.
+
+The PTAs identification of a stochastic gravitational wave background (Antoniadis et al., 2022; Agazie et al., 2023; Reardon et al., 2023) used the Hellings & Downs (1983) angular correlations among pulsars, based on the quadrupolar nature of gravitational waves. The Doppler noise considered here is expected to produce dipolar angular correlations among pulsars. However, given the small number of independent correlation times (\\sim 5 periods of \\sim 3 years) available during the 15 years of PTA observations, it is challenging to separate the 3D random walk of a dipole (with a \\cos\\theta angular correlation of the pulsars) sourced by asteroids around the Sun from a quadrupolar random walk sourced by a stochastic gravitational wave background; the resultant high uncertainty is evident from the large error bars in the Hellings-Down correlation data plotted in Fig. 1c of Agazie et al. (2023). Another distinguishing feature is that the asteroid noise is constrained to the orbital period range of 3-10 yr, whereas the gravitational wave background has a wider range. Finally, because the Main belt asteroids lie within 30 degrees of the ecliptic plane, which is inclined relative to the Galactic plane, the Brownian motion that they induce could be separated from a stochastic gravitational wave background.
+
+In SS 2, I derive the amplitude and frequencies of the resulting Doppler noise in pulsar timing, and in SS 3, I discuss future prospects for characterizing this unmodeled noise.
+
+## 2 Brownian Motion of the Sun
+
+The Brownian motion of a massive object embedded in a gravitationally bound cluster of low-mass perturbers was studied both analytically and using N-body simulations in the context of massive black holes in star clusters (Chatterjee et al., 2002, 2002, 2007). Here, I apply these results to the Solar system, where the Sun is embedded in a cluster of unmodeled Main-belt asteroids (Novakovic et al., 2022; Raymond & Nesvorny, 2022). The many-body system of asteroids with diameters \\lesssim 80km represent objects that are not included in the Solar systemephemeris (Park et al., 2021) and is known to have a substantial spread in inclinations and eccentricities (Davis et al., 2002; Maeda et al., 2021).
+
+Previous analysis of PTA data was based on the Solar system ephemeris calculated from well-studied objects in the Solar system (see Agazie et al. (2023) and Vallisneri et al. (2020), and references therein). The Solar system ephemeris model includes 343 asteroids (Park et al., 2021), but according to the cumulative asteroid number versus diameter in Bottke et al. (2015), there are many more than 343 Main belt asteroids below a mass scale of \\sim 10^{21} g.
+
+Caballero et al. (2018) derived limits on individual unmodeled objects with masses as small as \\sim 10^{-11}M_{\\odot}=2\\times 10^{22} g in Keplerian orbits around the Sun. However, a cluster of unmodeled perturbers which are not included in the Solar system ephemeris (Park et al., 2021), is known to exist in the Main asteroid belt (Davis et al., 2002; Maeda et al., 2021; Novakovic et al., 2022; Raymond and Nesvorny, 2022). These unmodeled objects, which are not part of the Solar system ephemeris (Park et al., 2021), result in a Brownian motion of the Sun and introduce a stochastic noise to the PTA signal that cannot be picked up through a fit to a Keplerian orbit of a single unmodeled object, as done by Caballero et al. (2018) or Guo et al. (2018, 2019). Below I derive the characteristic amplitude and frequencies of this unmodeled noise based on known properties of the Main asteroid belt (Davis et al., 2002; Bottke et al., 2015; Maeda et al., 2021; Novakovic et al., 2022; Raymond and Nesvorny, 2022).
+
+The motion of the Sun relative to the Solar system barycenter satisfies momentum conservation with all objects of masses m_{i} and velocity \\mathbf{v}_{i} in the Solar system,
+
+M_{\\odot}\\mathbf{v}_{\\odot}=\\Sigma_{i}m_{i}\\mathbf{v}_{i}.  where \\mathbf{v}_{\\odot} is the Sun's velocity. The effects of the planets, minor planets, moons and massive asteroids is already included in the ephemeris model of the Solar system used by PTAs (Park et al., 2021; Agazie et al., 2023; Vallisneri et al., 2020).
+
+Here, I consider the large population of unmodeled asteroids (\\lesssim 80km in diameter) as a source of residual noise in correlated pulsar timing (see also Fedderke et al. (2021)). Squaring both sides of equation (1), taking a statistical average (denoted hereafter by angular brackets, following the ergodic theorem) and ignoring velocity correlations among the many asteroids, I get the dispersion in random velocity fluctuations of the Sun as a result of its stochastic gravitational interactions with the cluster of unmodeled asteroids,
+
+\\langle|v_{\\odot}^{2}|\\rangle=\\frac{N_{a}m_{a}^{2}}{M_{\\odot}^{2}}\\langle|v_{a }^{2}|\\rangle\\,  where m_{a} and v_{a} are the characteristic mass and velocity of the unmodeled asteroids and N_{a}\\gg 1 is their total number.
+
+As expected, equation (2) yields kinetic-energy equipartition between the central mass and its perturbers if the total mass of the perturbers equals the central mass,N_{a}m_{a}=M_{\\odot}. However, for a smaller perturber population, as in the case of the Solar system, Poisson (\\sim\\sqrt{N_{a}}) fluctuations yield a reduced velocity dispersion for the central mass.
+
+Main-belt asteroids with a typical mass m\\lesssim 10^{-12}M_{\\odot} and a characteristic speed \\sim 20 km s{}^{-1}, yield a Brownian motion of the Sun with a velocity dispersion of order,
+
+\\delta v\\equiv\\langle|v_{\\odot}^{2}|\\rangle^{1/2}=3.2\\times 10^{-5}\\ \\mathrm{cm}\\ \\mathrm{s}^{-1}\\left(\\frac{N_{a}}{10^{3}}\\right)^{1/2}\\left(\\frac{m_{a}}{10^{21}\\ \\mathrm{g}}\\right)\\left(\\frac{\\langle|v_{a}^{2}|\\rangle^{1/2}}{20\\ \\mathrm{km}\\ \\mathrm{s}^{-1}}\\right). 
+
+Assuming a median mass density for asteroids of \\sim 3 g cm{}^{-3}, the mass of a spherical asteroid with a diameter D is, m_{a}(D)=0.8\\times 10^{21} g(D/80 km){}^{3}. Adopting the differential number per diameter distribution of Main belt asteroids (Bottke et al., 2015), dN_{a}/dD=10\\ \\mathrm{km}^{-1}(D/80\\ \\mathrm{km})^{-3.5} for D\\gtrsim 8 km,
+
+(\\delta v)^{2}=\\frac{\\langle|v_{a}^{2}|\\rangle}{M_{\\odot}^{2}}\\int_{8\\ \\mathrm{km}}^{80\\ \\mathrm{km}}\\frac{dN_{a}}{dD}m_{a}^{2}(D)dD=(1.2\\times 10^{-5}\\ \\mathrm{cm}\\ \\mathrm{s}^{-1})^{2}\\left(\\frac{\\langle|v_{a}^{2}|\\rangle^{1/2}}{20\\ \\mathrm{km}\\ \\mathrm{s}^{-1}}\\right)^{2}. 
+
+A fractional uncertainty \\epsilon in the masses of asteroids with D>80 km up to a maximum diameter of D_{\\mathrm{max}}, gives a correction factor of F=\\{1+\\epsilon^{2}[(D_{\\mathrm{max}}/80\\ \\mathrm{km})^{3.5}-1]\\}^{1/2} in the value of \\delta v in equation (4). Based on the mass uncertainties listed in Baer & Chesley (2008, 2017), F\\approx 1.4. However, there are additional modeling errors as a result of spacecraft tracking inaccuracies (Fienga et al., 2009; Kuchynka et al., 2010; Vallisneri et al., 2020) and chaotic behavior of the Solar system (Laskar, 2008; Souami & Souchay, 2012; Zeebe, 2015). To effectively incorporate these uncertainties, we adopt \\epsilon\\sim 10\\% and D_{\\mathrm{max}}\\sim 500 km, which yields F\\sim 2.7 and the final estimate,
+
+\\delta v=3.2\\times 10^{-5}\\ \\mathrm{cm}\\ \\mathrm{s}^{-1}\\left(\\frac{F}{2.7} \\right)\\left(\\frac{\\langle|v_{a}^{2}|\\rangle^{1/2}}{20\\ \\mathrm{km}\\ \\mathrm{s}^{-1}}\\right). 
+
+The PTA observatories are located on Earth but the differential effect between the Earth and the Sun is suppressed by more than an order of magnitude relative to the jitter of the Sun as a result of a spatial tidal factor \\sim(r_{\\mathrm{E}}/r_{a})^{3} as well as an orbital time-averaging factor, because the Earth-Sun separation, r_{\\mathrm{E}}, is a few times smaller than orbital radii of the perturbing asteroids, r_{a}. Therefore, it is sufficient to consider the Brownian motion of the Sun which is tracked to zeroth order by the Earth, as done here.
+
+For semi-major axes in the range of 2-4 au, the characteristic frequency of the perturbations would be of order the typical orbital frequency of the perturbing asteroids, f\\sim(3\\ \\mathrm{yr})^{-1}=10^{-8} Hz.
+
+The unmodeled random walk of the Sun's velocity vector in 3D is characterized by a correlation time of f^{-1}\\sim 3\\ \\mathrm{yr}. It leads to Doppler-shift fluctuations in pulsar timing that is correlated among different pulsars. The resulting Doppler vector fluctuations with a stochastically varying orientation, could mascarade as a stochastic gravitational wave background of a characteristic strain,
+
+h_{c}\\sim\\left(\\frac{\\delta v}{c}\\right)\\sim 1.1\\times 10^{-15}\\left(\\frac{F}{2.7}\\right)\\left(\\frac{\\langle|v_{a}^{2}|\\rangle^{1/2}}{20\\ \\mathrm{km}\\ \\mathrm{s}^{-1}}\\right)\\, which makes up to a \\sim 20\\% contribution to the amplitude to the gravitational wave signal at \\sim 10^{-8} Hz reported by PTAs (Antoniadis et al., 2022; Agazie et al., 2023; Reardon et al., 2023).
+
+Each individual asteroid induces by itself a much smaller Solar velocity fluctuation of order (Binney & Tremaine, 1987),
+
+\\frac{\\Delta v_{\\odot}}{c}\\sim\\left(\\frac{2Gm_{a}}{b_{a}v_{a}c}\\right)\\sim 5 \\times 10^{-17}\\left(\\frac{m_{a}}{10^{21}\\ \\mathrm{g}}\\right)\\left(\\frac{b_{a}}{3 \\ \\mathrm{au}}\\right)^{-1}\\,  where b_{a} is its distance of closest approach to the Sun (perihelion).
+
+At any given time, the distribution of unmodeled or improperly mass-calibrated asteroids would be randomly lopsided towards one hemisphere around the Sun, with a Poisson excess of \\sim(N_{a}/2)^{1/2} asteroids. Indeed, this enhancement yields the larger cumulative signal expressed in equation (6). The direction and amplitude of the Poisson fluctuations accelerating the Sun would change randomly over asteroid orbital times in the range, \\sim 10-3 yr, corresponding to the frequency range of f\\sim 3-10 nHz.
+
+## 3 Discussion
+
+I have shown that unmodeled or improperly mass-calibrated asteroids result in a Brownian motion of the Sun relative to the Solar system barycenter with a velocity dispersion given by equation (5). This leads to a non-negligible noise for correlated timing residual of pulsars at an amplitude (6) and frequencies relevant to PTAs (Antoniadis et al., 2022; Agazie et al., 2023; Reardon et al., 2023).
+
+When squaring the right-hand-side of equation (1), we ignored correlations between the velocities of different unmodeled asteroids. Any such correlations as a result of the phase-space clustering of asteroids would enhance the expected noise. For example, there are more than 100 Jupiter's Trojans with diameters in the range 40-80km exceeding 10^{22}g in total mass, and there are many known families in the Main asteroid belt (such as Flora, Eunomia, Eos, Hungaria, Karin, Koronis, Phocaea, Vesta and Themis; see Lemaitre (2005)) in addition to the Trojans of Earth and Mars. Planetary Trojans might already be accounted for in the mass budget uncertainty of the corresponding planets. But for families with other orbital periods (Novakovic et al., 2022), the collective mass of a perturber will be that of a physical cluster of asteroids rather than a single asteroid. The additional effect of these clusters is an enhancement of the noise amplitude in equation (3), which can be accounted for by using the cluster mass and number in place of m_{a} and N_{a}. This enhancement cannot exceed an extra factor of \\sqrt{N_{a}} relative to the independent asteroids account of equation (3), as this extra factor saturates the upper limit associated with placing all asteroids in a single cluster.
+
+An increase in the number of Main-belt asteroids included in the Solar system ephemeris (Park et al., 2021) and more accurate mass and orbit determinations of asteroids by the Legacy Survey of Space and Time (LSST) of the Vera C. RubinObservatory in Chile (Schwamb et al., 2023), would allow better modeling of the noise they introduce to PTAs.
+
+## Acknowledgements
+
+I thank two anonymous referees for excellent suggestions, Michael Fedderke for correcting a typo and sharing insights, and Matt Holman and Peter Veres for helpful comments. This work was supported in part by Harvard's _Black Hole Initiative_, which is funded by grants from JFT and GBMF.

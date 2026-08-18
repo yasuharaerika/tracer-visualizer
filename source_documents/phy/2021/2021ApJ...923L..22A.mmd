@@ -1,0 +1,493 @@
+###### Abstract
+
+We search NANOGrav's 12.5-year data set for evidence of a gravitational wave background (GWB) with all the spatial correlations allowed by general metric theories of gravity. We find no substantial evidence in favor of the existence of such correlations in our data. We find that scalar-transverse (ST) correlations yield signal-to-noise ratios and Bayes factors that are higher than quadrupolar (tensor transverse, TT) correlations. Specifically, we find ST correlations with a signal-to-noise ratio of 2.8 that are preferred over TT correlations (Hellings and Downs correlations) with Bayesian odds of about 20:1. However, the significance of ST correlations is reduced dramatically when we include modeling of the Solar System ephemeris systematics and/or remove pulsar J0030+0451 entirely from consideration. Even taking the nominal signal-to-noise ratios at face value, analyses of simulated data sets show that such values are not extremely unlikely to be observed in cases where only the usual TT modes are present in the GWB. In the absence of a detection of any polarization mode of gravity, we place upper limits on their amplitudes for a spectral index of \\gamma=5 and a reference frequency of f_{\\rm yr}=1{\\rm yr}^{-1}. Among the upper limits for eight general families of metric theories of gravity, we find the values of A_{TT}^{95\\%}=(9.7\\pm 0.4)\\times 10^{-16} and A_{ST}^{95\\%}=(1.4\\pm 0.03)\\times 10^{-15} for the family of metric spacetime theories that contain both TT and ST modes.
+
+Gravitational waves - Alternative theories of gravity - Alternative polarization modes of gravity - Methods: data analysis - Pulsars: general +
+
+Footnote †: slugcomment: The NANOGrav Collaboration
+
+## 1 Introduction
+
+Pulsar timing experiments (Sazhin, 1978; Detweiler, 1979) allow us to explore the low-frequency (\\sim 1-100 nHz) part of the gravitational-wave (GW) spectrum. By measuring deviations from the expected arrival times of radio pulses from an array of millisecond pulsars, we can search for a variety of GW signals and their sources. The most promising sources in the nHz part of the GW spectrum are super-massive binary black holes (SMBHBs) that form via the mergers of massive galaxies. Orbiting SMBHBs produce a stochastic GW background (GWB) (Lommen & Backer, 2001; Jaffe & Backer, 2003; Wyithe & Loeb, 2003; Volonteri et al., 2003; Enoki et al., 2004; Sesana et al., 2008; Sesana, 2013; McWilliams et al., 2012; Ravi et al., 2015;Rosado et al. 2015; Sesana et al. 2016; Kelley et al. 2016; Kelley et al. 2017; Dvorkin & Barausse 2017; Ryu et al. 2018; Bonetti et al. 2018), individual periodic signals or continuous waves (CWs) (Sesana et al., 2009; Sesana & Vecchio, 2010; Roedig & Sesana, 2012; Ravi et al., 2012; Mingarelli et al., 2012; Ravi et al., 2015; Rosado et al., 2015; Schutz & Ma, 2016; Mingarelli et al., 2017; Kelley et al., 2018), and transient GW bursts (Becsy & Cornish, 2021; van Haasteren & Levin, 2010; Cordes & Jenet, 2012; Ravi et al., 2015; Madison et al., 2017; Islo et al., 2019). We expect to detect the GWB first, followed by detection of individual SMBHBs (Rosado et al., 2015; Siemens et al., 2013; Taylor et al., 2016; Mingarelli et al., 2017) that stand out above the GWB. Detection of GWs from SMBHBs will yield insights into galaxy mergers and evolution not possible through any other means. Other potential sources in the nanohertz band include cosmic strings (Berezinsky et al., 2004; Damour & Vilenkin, 2000, 2001, 2005; Siemens et al., 2006, 2007; Olmez et al., 2010; Sanidas et al., 2013; Blanco-Pillado et al., 2018; Chang & Cui, 2021; Gorghetto et al., 2021; Wu et al., 2021; Blanco-Pillado et al., 2021; Lin, 2021; Chiang & Lu, 2021; Lazarides et al., 2021; Chakraborty et al., 2021; Ellis & Lewicki, 2021; Ghayour et al., 2021), **phase** transitions in the early universe (Witten, 1984; Caprini et al., 2010; Arzoumanian et al., 2021; Addazi et al., 2020; Di Bari et al., 2021; Borah et al., 2021; Nakai et al., 2021; Brandenburg et al., 2021; Neronov et al., 2021), and relic GWs from inflation (Starobinskii, 1979; Allen, 1988; Ashoorioon et al., 2021; Yi & Zhu, 2021; Li et al., 2021; Poletti, 2021; Lazarides et al., 2021b; Vagnozzi, 2021; Sharma, 2021), all of which would provide unique insights into high-energy and early-universe physics.
+
+NANOGrav, the North American Nanohertz Observatory for Gravitational Waves, has been taking pulsar timing data since 2004, and currently monitors over 70 pulsars (Ransom et al., 2019). NANOGrav is one of several pulsar timing arrays (PTAs) around the world, which include the European PTA (EPTA; Desvignes et al., 2016), the Parkes PTA (PPTA; Kerr et al., 2020), the Indian PTA (InPTA; Joshi et al., 2018), and the Chinese PTA (Lee, 2016). Two additional telescope-centered pulsar timing programs are ongoing which use the MeerKAT telescope in South Africa (Bailes et al., 2018) and the CHIME telescope in Canada (Ng, 2018). These collaborations form the International Pulsar Timing Array (IPTA; Perera et al., 2019). In recent years, PTAs have produced increasingly longer and more sensitive data sets, resulting in upper limits on the GWB that have continued to improve (van Haasteren et al., 2011; Demorest et al., 2013; Shannon et al., 2013; Lentati et al., 2015; Shannon et al., 2015; Verbiest et al., 2016; Arzoumanian et al., 2016; Arzoumanian et al., 2018). Very recently, NANOGrav detected a common red noise process in our 12.5-year data set (Arzoumanian et al., 2020). This common process could be the first hints of a stochastic background of GWs; but unfortunately, the data were not sufficiently sensitive to show statistically significant evidence for quadrupolar correlations (Hellings & Downs, 1983a), the tell-tale sign of a GWB.
+
+PTAs provide an important test bed for theories of gravity (Yunes & Siemens, 2013). By modifying Einstein's theory of General Relativity, alternative theories of gravity are often invoked to explain the origin of cosmic acceleration, provide an alternative to dark matter, and reconcile quantum mechanics and gravity, some of the most profound challenges facing fundamental physics today (Yunes & Siemens, 2013). General Relativity predicts the existence of GWs which travel at the speed of light, are transverse, and have two polarizations. Other theories of gravity generically predict the existence of GWs with different properties: additional polarization modes and modified dispersion relations. For instance, metric theories of gravity can have up to six possible GW polarization modes (Eardley et al., 1973c, a). PTA searches for alternative polarization modes of gravity can therefore shed light on important foundational questions by exploring the different types of correlations that these additional modes produce.
+
+LIGO has already made possible a number of GW tests of General Relativity (Abbott et al., 2021, 2019, 2018). Until very recently (Chen et al., 2021; Wu et al., 2021; Chen et al., 2021a), PTA data had not been used to perform GW tests of gravity due to the absence of a strong signal that can be attributed to GWs. However, as we mentioned, this situation has changed (NG12.5), (Goncharov et al., 2021). Even though NANOGrav's 12.5-year dataset did not contain strong evidence for quadrupolar correlations, the detection of a common red noise process brings PTAs to a regime where the exploration of non-Einstenian theories could prove to be fruitful.
+
+Due to the nature of pulsar timing experiments, PTAs offer advantages over interferometers for detecting new polarizations or constraining the polarization content of GWs. For instance, each line of sight to a pulsar can be used to construct an independent projection of the various GW polarizations, and since PTAs typically observe tens of pulsars, linear combinations of the data can be formed to measure or constrain each of the six polarization modes many times over (Yunes & Siemens, 2013; Lee et al., 2008; Chamberlin & Siemens, 2012; Gair et al., 2015). Additionally, PTAs have an enhanced response to the longitudinal polarization modes (Chamberlin and Siemens, 2012; Cornish et al., 2018; O'Beirne et al., 2019). Indeed, the constraint on the energy density of longitudinal modes inferred from recent NANOGrav data is about three orders of magnitude better than the constraint for the transverse modes (Cornish et al., 2018).
+
+In this paper, we complement our work in NG12.5 by searching for evidence of non-Einsteinian modes of gravity. We start our analyses by studying simulated PTA datasets similar to NANOGrav's 12.5-year dataset (Pol et al., 2021) and show that for current datasets (with tens of pulsars having observational baselines less than 15 years and for typical amplitudes of the GWB signal \\sim 2\\times 10^{-15}), the correlations induced by transverse modes of GWs can be hard to distinguish from one another. These results are shown first to set our expectations for our analyses of the dataset in hand as well as future datasets.
+
+We then report on the results of detection analyses on our 12.5-year data set. We analyze the data assuming that the observed stochastic common red noise process across pulsars is due to various combinations of the possible modes available in metric theories of gravity and perform a suite of Bayesian and frequentist searches on our data.
+
+We find that a model with a phenomenological correlation pattern, the GW-like monopole 1, is the most favored model (being preferred by an odds ratio of over 100 to 1 compared to a model without correlations), followed by a model with correlations induced entirely by the scalar-transverse mode of gravity (the breathing mode). The latter finding was first reported by Chen et al. (2021), though we disagree with some aspects of their methodology and conclusions. Note that on theoretical grounds, we expect the presence of these types of correlations to be accompanied by the standard quadrupolar +- and \\times-modes of General Relativity: metric theories of gravity have at least the +- and \\times-modes and possibly additional modes. In addition, our simulations show that at short observational baselines, for weak correlations, it is hard to distinguish between the different polarization modes; specifically, we show that when only the +- and \\times-modes of General Relativity are present, one can nevertheless, by chance, find evidence in favor of scalar-transverse (breathing modes) modes. We also find that the significance of non-quadrupolar correlations is reduced significantly (the Bayes factor drops to about 20) when the pulsar J0030+0451 is removed from our analyses. This pulsar has a history of being problematic in detection searches (Hazboun et al., 2020), and our results point to the possibility of noise modeling issues involving this MSP. We conclude that the apparent (and weak) presence of non-Einsteinian modes of gravity is likely unphysical, though worth following up in analyses of future data sets.
+
+Footnote 1: GW-like monopole is a phenomenological correlation pattern (introduced first in this paper) that we have found to be the most preferred among all other tested correlation patterns by our 12.5 year data set. This correlation patterns follows the equation \\Gamma_{ab}^{\\rm mono}=\\frac{\\delta_{ab}}{\\delta^{2}}+\\frac{1}{2}, in which \\delta_{ab} is the Kronecker delta function, and a and \\delta are two pulsars. Refer to §2.3.1 for more information.
+
+Finally, since we do not find statistically significant evidence in favor of any correlations, we place upper limits on the amplitudes of all possible subsets of polarization modes of gravity predicted by metric spacetime theories.
+
+The structure of this paper is as follows. In SS2, we summarize alternative theories of gravity in the context of pulsar timing experiments. We begin the section with a discussion of the most general form the polarization tensor of gravitational waves can have in a general metric theory of gravity and show the effects these generalized gravitational waves have on PTA data. In SS3, we apply these results to a series of simulated data sets and to NANOGrav's 12.5 year data set. In SS4, we present our conclusions.
+
+## 2 Background
+
+In this section, we review some of the concepts related to pulsar timing and GWs in general metric theories of gravity necessary to lay the foundations for the stochastic GWB detection pipeline. We begin with the form of the most general gravitational wave GW polarization tensor and discuss the signature of a GWB in PTA data. We then present a way to integrate pulsar timing and non-Einsteinian modes of gravity into a single framework that we can use to search a PTA data set for the GWB.
+
+### Polarization Modes in Metric Theories of Gravity
+
+In a general metric theory of gravity, GWs can have up to six independent polarization modes (Eardley et al., 1973). Using the notation of Newman and Penrose (Newman and Penrose, 1962) and adapting a coordinate system in which the GW travels along the +z axis, these modes can be written in terms of the electric components of the Riemann tensor through the follow ing relations (Eardley et al. 1973b; Will 1993)
+
+\\psi_{2}(u) \\equiv-\\frac{1}{6}R_{0303},  \\psi_{3}(u) \\equiv-\\frac{1}{2}R_{0103}+\\frac{1}{2}iR_{0203}, (2) \\psi_{4}(u) \\equiv-R_{0101}+R_{0202}+2iR_{0102}, (3) \\phi_{22}(u) \\equiv-R_{0101}-R_{0202}, (4) A_{spatial} =\\begin{bmatrix}A_{B}+A_{+}&A_{\\times}&A_{V1}\\\\ A_{\\times}&A_{B}-A_{+}&A_{V2}\\\\ A_{V1}&A_{V2}&A_{L}\\end{bmatrix},  where u=t-z is the retarded time, \\text{Re}(\\psi_{4})=A_{+}, \\text{Im}(\\psi_{4})=A_{\\times}, \\phi_{22}=A_{B}, \\text{Re}(\\psi_{3})=A_{V1}, \\text{Im}(\\psi_{3})=A_{V2}, and \\psi_{2}=A_{L} are the plus, cross, breathing, x-vector, y-vector, and longitudinal modes of gravity, respectively. This particular choice of the six independent components has the advantage of yielding the standard result of General Relativity in the transverse-traceless gauge when all modes except cross and plus are set to zero:
+
+A_{spatial}^{E}=\\begin{bmatrix}A_{+}&A_{\\times}&0\\\\ A_{\\times}&-A_{+}&0\\\\ 0&0&0\\end{bmatrix}. 
+
+Eq. (5) is sufficient to search for all six modes of gravity in pulsar timing data in a fully general way, i.e, without constraining ourselves to a particular metric theory of gravity.
+
+### Isotropic Gravitational Wave Background and Pulsar Timing
+
+GWs perturb the geodesics of photons traveling from a pulsar to our radio telescopes on earth. In the late 1970s, Sazhin (1978) and Detweiler (1979) first calculated this effect and expressed it in terms of the redshifting and blue-shifting induced by a continuous gravitational wave propagating through the earth-pulsar system. Setting the speed of light as well as Newton's constant to unity (c=G=1), the GW-induced redshifts for signals from pulsar a are of the form
+
+z_{a}=\\frac{\\hat{n}_{a}^{i}\\hat{n}_{a}^{j}}{2(1+\\hat{\\Omega}\\cdot\\hat{n}_{a})}[ h_{ij}^{e}-h_{ij}^{p}],  where h_{ij}^{e}=h_{ij}(t,\\vec{X}=0) is the metric perturbation at the earth when the pulse is received, h_{ij}^{p}=h_{ij}(t-d_{a},\\vec{X}=d_{a}\\hat{n}_{a}) is the metric perturbation at the pulsar when the pulse is emitted, \\hat{n}_{a} is a unit vector pointing from the earth to the pulsar a, \\hat{\\Omega} is a unit vector in the direction of propagation of the gravitational wave, and d_{a} is the distance to pulsar a. The terms proportional to h_{ij}^{e} and h_{ij}^{p} are usually referred to as the earth and pulsar terms. The metric perturbation can be written in terms of a plane wave expansion as
+
+h_{ij}(x^{\\mu})=\\sum_{A}\\int_{-\\infty}^{\\infty}df\\int d\\hat{ \\Omega}\\,\\tilde{h}_{A}(f,\\hat{\\Omega})\\varepsilon_{ij}^{A}(\\hat{\\Omega})e^{-2 \\pi if(t-\\vec{X}\\cdot\\hat{n})},  where A denotes the polarization mode, \\varepsilon_{ij}^{A}(\\hat{\\Omega}) is the polarization tensor of the GW coming from \\hat{\\Omega} direction, and f is the frequency of GW. Using this expansion, we can re-express the total redshift induced by GWs in the form
+
+z_{a}(t)=\\sum_{A}\\int_{-\\infty}^{\\infty}df\\int d\\hat{\\Omega}\\, \\tilde{h}_{A}(f,\\hat{\\Omega})F_{a}^{A}(\\hat{\\Omega})e^{-2\\pi ift}U_{a}(f,\\hat{ \\Omega}),  with
+
+F_{a}^{A}(\\hat{n}) =\\frac{\\hat{n}_{a}^{i}\\hat{n}_{a}^{j}\\varepsilon_{ij}^{A}(\\hat{ \\Omega})}{2(1+\\hat{\\Omega}\\cdot\\hat{n}_{a})},  U_{a}(f,\\hat{\\Omega}) =\\left[1-e^{2\\pi ifd_{a}(1+\\hat{\\Omega}\\cdot\\hat{n}_{a})}\\right],  where the F_{a}^{A} are the so-called _antenna pattern_ functions.
+
+In pulsar timing, we measure the pulsar timing R(t) residuals rather than the redshifts. The GW contribution to the residuals are simply the integral of the GW-induced redshifts, i.e,
+
+R_{a}^{GW}(t)=\\int_{0}^{t}dt^{\\prime}\\,z_{a}(t^{\\prime}). 
+
+Taking the stochastic gravitational wave background to be isotropic, unpolarized, and stationary, the correlation function for the strain can be written as
+
+\\begin{split}\\left\\langle\\tilde{h}_{A}^{*}f,\\hat{ \\Omega}\\right\\rangle\\!\\tilde{h}_{A^{\\prime}}(f^{\\prime},\\hat{\\Omega}^{\\prime} )\\right\\rangle&=\\delta(f-f^{\\prime})\\frac{\\delta^{2}(\\hat{\\Omega},\\hat{\\Omega}^{\\prime})}{4\\pi}\\delta_{AA^{\\prime}}\\\\ &\\times\\frac{1}{2}H(f),\\end{split}  where H(f) is the one-sided _power spectral density_ of the GWB. This quantity is related to the fractional energy density spectrum in GWs, \\Omega_{GW}(f), through the equation
+
+H\\left(f\\right)=\\frac{3{H_{0}}^{2}}{2\\pi^{2}}\\frac{\\Omega_{GW}\\left(f\\right)}{ f^{3}},  where H_{0} is the present value of the Hubble parameter and
+
+\\Omega_{GW}\\left(f\\right)=\\frac{1}{\\rho_{c}}\\frac{d\\rho_{GW}}{d\\ln\\left(f \\right)}, for critical density \\rho_{c} and GW energy density \\rho_{GW}. Combining Eq. (9), Eq. (12), and Eq. (13) results in
+
+\\left\\langle R_{a}^{GW}R_{b}^{GW}\\right\\rangle=\\frac{1}{2}\\sum_{A} \\int_{f_{L}}^{f_{H}}df\\frac{H(f)}{(2\\pi f)^{2}}\\Gamma_{ab}^{A}\\left(\\xi_{ab},f\\right)  for
+
+\\Gamma_{ab}^{A}\\left(\\xi_{ab},f\\right) =\\int_{0}^{2\\pi}d\\phi\\int_{0}^{\\pi}d\\theta\\gamma_{ab}^{A} \\gamma_{ab}^{A} =\\sin(\\theta)U_{a}\\left(f,\\Omega\\right)U_{b}^{*}\\left(f,\\Omega \\right)F_{a}^{A}\\left(\\hat{n}\\right)F_{b}^{A}\\left(\\hat{n}\\right),  where f_{H} and f_{L} are the upper and lower bounds of frequency, and \\Gamma_{ab}^{A} is the so called _overlap reduction function_ (ORF). The ORF is a function of the angular separation \\xi_{ab} between two pulsars and the GW frequency f. This function plays a key role in GW stochastic background searches in a PTA data set.
+
+### Explicit Form of the GWB Signal in a PTA Data Set
+
+Here we discuss i) the properties of the ORFs for each of the polarization modes, and ii) the characterization of the power spectral density of GWs. These provide the final set of tools for creating the framework that enables us to search our 12.5-year data set for evidence of existence of non-Einstenian polarization modes of gravity.
+
+#### 2.3.1 Overlap Reduction Functions
+
+The ORFs for all polarization modes of gravity have been studied extensively in the literature (see e.g, Chamberlin & Siemens, 2012; Gair et al., 2015). In the following, we summarize the most important results of these studies.
+
+For the tensor transverse mode of gravity (TT mode), the ORF is found to be
+
+\\Gamma_{ab}^{TT}=\\Gamma_{ab}^{\\times}+\\Gamma_{ab}^{+}\\simeq\\frac{ \\delta_{ab}}{2}+C(\\xi_{ab}),  where \\delta_{ab} is the Kronecker delta function and C(\\xi_{ab}) is best known as the Hellings and Downs (HD) correlations (Hellings & Downs, 1983):
+
+C(\\xi_{ab})=\\frac{3}{2}\\left\\{\\frac{1}{3}+k_{ab}\\left[\\ln\\left( k_{ab}\\right)-\\frac{1}{6}\\right]\\right\\},  for
+
+k_{ab}=\\frac{1-\\cos\\left(\\xi_{ab}\\right)}{2}. 
+
+To an excellent approximation, the HD correlation curve is frequency- and pulsar-distance-independent for all angular separations over the range of fd_{a} values relevant to pulsar timing experiments (Anholm et al., 2009). This can be understood by noting that the ratio of pulsar distances to the GW wavelengths at nHz frequencies is large (typically larger than 100); hence, the exponential terms of Eq. (17) oscillate rapidly while making a negligible contribution to the overall integral. Also, in case of \\xi_{aa}=0 (i.e, a=b), the product of U_{a}(f,\\hat{\\Omega}) and U_{a}^{*}(f,\\hat{\\Omega}) doubles the ORF to relative to what is predicted by C(\\xi_{ab}) alone, hence the need for \\delta_{ab} in Eq. (18).
+
+For the scalar-transverse (ST) mode, also known in literature as the breathing mode, the ORF is found to be (Chamberlin & Siemens, 2012)
+
+\\Gamma_{ab}^{ST}\\approx\\frac{\\delta_{ab}}{2}+\\frac{1}{8}(3+\\cos( \\xi_{ab})). 
+
+Similar to the case of the TT modes, the ST mode ORF is frequency and pulsar-distance-independent to an excellent approximation. Fig. 1 shows the transverse ORFs as a function of angular separation for the case of a\\neq b.
+
+For the vector longitudinal (VL) modes, the ORF is found to be (Lee et al., 2008)
+
+\\Gamma_{ab}^{VL} =\\Gamma_{ab}^{(VL)_{y}}+\\Gamma_{ab}^{(VL)_{x}} \\approx 3\\log\\left(\\frac{2}{1-\\cos\\left(\\xi_{ab}\\right)}\\right)-4 \\cos\\left(\\xi_{ab}\\right)-3,  where a normalization factor of 3/(4\\pi) has been applied for consistency with the transverse ORFs (see Fig. 2) and a\\neq b. These modes are also frequency independent in the limit of large fd_{a} values relevant to pulsar timing, albeit to a lesser extent than the transverse modes. The approximation fails at zero angular separations requiring the inclusion of the pulsar (exponential) terms in the calculation of ORF to cancel the divergence. For the case of a=b (i.e, the case of a pulsar correlated with itself), \\Gamma_{aa}^{VL} is (Chamberlin and Siemens, 2012)
+
+\\Gamma_{aa}^{VL}=2\\ln\\left(4\\pi d_{a}f\\right)-\\frac{14}{3}+2\\gamma_{E},  where \\gamma_{E} is Euler's constant, and fd_{a}\\gg 1.
+
+Finally, for the scalar longitudinal (SL) mode, the ORF cannot be evaluated analytically for all angular separations. Hence, the integral in Eq. (17) needs to be evaluated numerically given a set of pulsar distances, frequencies and angular separations. Fig. 3 shows the strong dependence of \\Gamma_{ab}^{SL} to fd_{a} values. However, similar to the case of vector longitudinal modes, for the same pulsar and large fd_{a} values relevant to pulsar timing experiments, an estimate of the \\Gamma^{SL} can be found (Chamberlin and Siemens, 2012)
+
+\\Gamma_{aa}^{SL}=\\frac{\\pi^{2}}{4}fd_{a}-\\ln\\left(4\\pi fd_{a}\\right)+\\frac{37}{ 24}-\\gamma_{E}. 
+
+So far, we have only discussed ORFs that result from generic metric theories of gravity. In light of recent observations of ST correlations in NANOGrav's 12.5 year data set (Chen et al., 2021), it will be useful to define other ORFs that are more phenomenological in nature and are not necessarily due to any single metric theory of gravity. Two of such ORFs are the _GW-like monopole_ and _GW-like dipole_ with explicit forms
+
+\\Gamma_{ab}^{\\text{GW-mono}} =\\frac{\\delta_{ab}}{2}+\\frac{1}{2},  \\Gamma_{ab}^{\\text{GW-dipole}} =\\frac{\\delta_{ab}}{2}+\\frac{\\cos\\xi_{ab}}{2}. 
+
+We will use these ORFs when searching NANOGrav's 12.5 year data set and compare them to the different polarization modes of gravity, specifically the results of ST mode searches. These ORFs should not be confused with systematic monopole (e.g, clock-error-induced) or dipole (e.g, ephemerides-induced) uncertainties, as those produce correlations that do not distinguish between co-aligned pulsars (i.e, \\Gamma(\\xi_{ab}=0)) and a pulsar paired with itself (i.e, \\Gamma(\\xi_{aa}=0)). Namely, the type of correlations in Eqs. (25) and (26) only affect half of the signal, the earth term, whereas clock and ephemerides errors affect the entire signal. This is the reason we introduce the terminology _GW-like_ to these phenomenological ORFs.
+
+It is worth noting that even though a pure monopole of the form of Eq. (25) is not predicted by any metric theory of gravity, massive GWs originating from a scalar-tensor metric theory of gravity could alter the form of ST ORF into more of a monopolar looking correlation pattern (Qin et al., 2021). For example, a metric theory of gravity can have two types of contributions to the GWB, a massive scalar-transverse wave contribution of the form
+
+\\sigma_{ij}(x^{\\mu})=\\int_{-\\infty}^{\\infty}df\\int d\\hat{\\Omega}\\tilde{\\sigma}( f,\\hat{\\Omega})\\varepsilon_{ij}^{\\text{ST}}(\\hat{\\Omega})e^{Y_{\\sigma}(f,m)}, 
+
+Y_{\\sigma}(f,m)=-2\\pi if\\Bigg{(}t-d\\sqrt{1-\\frac{m^{2}}{4\\pi^{2}f^{2}}}\\Bigg{)},  and a massless transverse tensor contribution of the form
+
+h_{ij}(x^{\\mu}) =\\int_{-\\infty}^{\\infty}df\\int d\\hat{\\Omega}\\tilde{h}_{\\text{TT}} (f,\\hat{\\Omega})\\varepsilon_{ij}^{\\text{TT}}(\\hat{\\Omega})e^{Y_{h}},  Y_{h} =-2\\pi if(t-d),  where d is the distance to a pulsar. Depending on the values of the mass and the frequency, the resulting ORF due to the scalar-transverse mode could approach a monopolar form (see Qin et al., 2021 for a detailed discussion).
+
+#### 2.3.2 Spectral Density of Gravitational Waves and Correlations in Timing Residuals
+
+In PTA analyses, the spectral density H is often written in terms of the dimensionless characteristic strain h_{c} defined by
+
+h_{c}(f)\\equiv\\sqrt{fH(f)}. 
+
+NANOGrav analyses have included various models for the characterization of h_{c} including a power-law model, free-spectral model, and broken power-law model depending on the nature of the analysis (see e.g, the 12.5-yr GWB analysis Arzoumanian et al., 2020). In this paper we will restrict ourselves to the power-law model as it is the simplest model to implement and interpret. Namely, for each polarization mode of gravity we will use
+
+h_{c}\\left(f\\right)=A\\left(\\frac{f}{f_{\\rm yr}}\\right)^{\\alpha},  where A is a dimensionless amplitude, f_{\\rm yr} is a reference frequency chosen to be 1/1(yr), and \\alpha is the spectral index. The values of the amplitude and spectral index depend on the sources that produce the GWs and the polarization content of the metric theory under consideration. The expected correlation in the timing residual time-series for two pulsars can be written as follows
+
+\\langle R_{a}R_{b}\\rangle=\\int_{f_{L}}^{f_{H}}dfS_{ab}(f),  where
+
+S_{ab}=\\sum_{m}\\Gamma_{ab}^{m}A_{m}^{2}\\bigg{(}\\frac{f}{f_{yr}}\\bigg{)}^{3- \\gamma_{m}}\\frac{1}{8\\pi^{2}f^{3}},  for the sum ranging over all six polarization modes and
+
+\\gamma_{m}\\equiv 3-2\\alpha_{m}. 
+
+Hereon, the term _spectral index_ will refer to the value of \\gamma_{m} rather than \\alpha_{m}.
+
+Before proceeding with analyzing PTA data sets using the framework presented in this section, it is worth mentioning that Eq. (34) can be written in a more general form encapsulating the frequency-dependent effects of differing emission rates of binary sources of GWs. One such effect relevant to the study of alternative theories of gravity is caused by dipole radiation. To leading order in the post-Newtonian approximation and in \\vartheta (i.e, the difference in the self-gravitational binding energy per unit mass), the rate of change of orbital energy of a binary source is (Will, 1977)
+
+\\frac{dE}{dt}=\\frac{2}{3}\\lambda\\mu\\vartheta^{2}\\bigg{(}\\frac{2\\pi}{P}\\bigg{)}^ {2}K\\left(e\\right)E  where \\mu is the reduced mass, \\lambda is the dipole parameter, P is the orbital period of the binary system, K(e) is a function of the binary's eccentricity e, and E is system's instantaneous energy. Applying the Newtonian approximation, E=-\\frac{1}{2}M^{\\frac{2}{3}}(2\\pi f_{s})^{\\frac{2}{3}}\\mu, where M is the total mass and f_{s} is the orbital frequency, Eq. (36) can be used to calculate the rate of change of orbital frequency:
+
+\\frac{d\\ln f_{s}}{dt}=8\\pi^{3}\\vartheta^{2}\\lambda K\\left(e\\right)\\mu{f_{s}}^ {2}. 
+
+Assuming a Keplerian rest frame, the instantaneous GW characteristic strain radiated by a circular binary system is (Sampson et al., 2015)
+
+h_{c}\\left(f\\right)=2(4\\pi)^{\\frac{1}{3}}\\frac{f^{\\frac{2}{3}}M^{\\frac{5}{3}}}{ D_{L}},  where D_{L} is the luminosity distance to the source. This alongside Eq. (37) and the fact that f_{s}=f/2 can be used to yield
+
+h_{c}^{D}=C_{D}f^{-\\frac{2}{3}}  in which h_{c}^{D} is the characteristic amplitude of the GWB due to dipole radiation and C_{D} is a constant related to parameters introduced in Eq. (36) such that \\lambda=0 results in C_{D}=0. Adding the quadrupolar contribution to the characteristic amplitude and treating it as more dominant than the dipole contribution results in (Cornish et al., 2018)
+
+S_{ab}=\\left(\\frac{1+\\kappa^{2}}{1+\\kappa^{2}\\Big{(}\\frac{f}{f_{\\rm yr}}\\Big{)} ^{\\frac{2}{3}}}\\right)\\sum_{m}\\Gamma_{ab}^{m}A_{m}^{2}\\bigg{(}\\frac{f}{f_{\\rm yr }}\\bigg{)}^{3-\\gamma_{m}}\\frac{1}{8\\pi^{2}f^{3}},  for a constant parameter \\kappa denoting the relative value of the amplitude of dipole radiation over the amplitude of quadrupolar radiation driving the binary system to a merger. In this paper, we set \\lambda, and consequently \\kappa, to zero and use Eq. (34) instead. See SS3.2.1 for a justification of this choice.
+
+Real pulsar timing data sets require significantly more complex modeling than what Eq. (34) might suggest. Eq. (34) only includes the GWB content of the pulsar timing residuals; other chromatic (radio-frequency-dependent) and achromatic noise contributions to the timing residuals need to be included in a robust detection analysis. To accomplish this goal, we add the stochastic GW signal modeling presented here to our already existing detection pipeline and pulsar inference tool, ENTERPRISE (Ellis et al., 2020), and search for various modes of gravity using NANOGrav's 12.5-year data set.
+
+The detection procedure for the ST and VL modes does not require significant modifications to the already existing tools for searches for isotropic gravitational-wave backgrounds in ENTERPRISE. This is due to the fact that the cross-correlation curves are a function of angular separation only, and not frequency. However, the similarities between some of the tensorial ORFs such as the GW-like dipole, GW-like monopole, HD, and ST correlations can pose a significant detection challenge: distinguishing between these ORFs requires high-significance measurements of the cross-correlated power as a function of the angular separation. Fig. 4 shows the ORFs for the TT and ST modes, as well as the GW-like monopole and dipole. It is easy to see that given large enough uncertainties in the cross-correlations, the detection of a data set's actual correlation pattern can become problematic.
+
+To address the challenge of reduction of the uncertainties of the cross-correlations, improvements in four key areas can be pursued: i) increasing the observation time; ii) improving the observing instrumentation used at our radio telescopes; iii) increasing the number of pulsars being observed; and iv) improving noise modeling of individual pulsars. All these avenues are actively being pursued by NANOGrav.
+
+In this section, we will use our detection pipeline to search for, and set upper limits on, the polarization modes present in general metric theories of gravity. We start by performing our analyses on simulated data sets and then proceed to perform similar analyses on NANOGrav's 12.5 year data set. In this paper, we only perform upper limit analyses (not detection analyses; see SS3.3) for the vector and scalar-longitudinal modes of gravity. This is for three reasons: i) large correlations at small angular separations predicted for the longitudinal (VL, SL) polarization modes, are absent in the current data set, ii) as shown in Fig. 3, the values of the ORF for the SL mode are very sensitive to pulsar distances (which are not well known) for most angular separations, and, iii) the addition of frequency-dependent terms to our current detection pipeline required for the SL mode demands significant modifications, testing, and simulations which are outside the scope of this work. These additions to our detection pipeline are currently under development and will be deployed in analyses of future data sets.
+
+### Detection of Additional Polarization Modes of Gravity in Simulated Pulsar Timing Data
+
+It is useful to test our detection techniques on simulated data sets in order to set our expectations for the analysis presented in this paper and future projects.
+
+The first simulated PTA data set we have analyzed is obtained from NANOGrav's Astro4cast project (Pol et al., 2021). The data set is made out of simulated pulsar time of arrivals (TOAs) for the same 45 pulsars as used in NG12.5, with similar noise characteristics as are present in our real data set along with an injected GWB signal of amplitude of A_{TT}=2\\times 10^{-15} and spectral index of \\gamma=13/3. The observational baseline for this simulated data set is 20 years. Hereon we refer to this data set as SIM1.
+
+The second (SIM2) and the third (SIM3) simulated data sets are identical to SIM1 except for the polarization-mode content and spectral indices of the injected GW signals. SIM2 has a GWB of ST GWs with A_{ST}=2\\times 10^{-15} and \\gamma_{ST}=5, and SIM3 has both ST and TT type GWB with amplitudes of A_{ST}=A_{TT}=2\\times 10^{-15} and spectral indices of \\gamma_{ST}=5, and \\gamma_{TT}=13/3 respectively. All of the simulated data sets have been analyzed using NANOGrav's ENTERPRISE to search for a common correlated red noise process.
+
+One of the most powerful and computationally inexpensive analyses is the noise-marginalized optimal statistic technique (Vigeland et al., 2018). Fig. 5 shows the distributions for S/N of the optimal statistic with HD, monopole, and ST correlations and all three simulated data sets. We conclude the following as a result of these S/N calculations:
+
+1. The relative high value of S/N of HD correlations relative to monopole and ST correlations observed in SIM1 at late observational times gives us confidence that if significant HD correlations are present in our data, our current techniques are capable of detection without mistaking HD correlations for ST or GW-like monopole correlations.
+
+2. The large value of the S/N of the TT mode observed in SIM2 suggests that a ST GWB signal could be mistaken for a TT GWB signal if the ST mode is excluded from a noise-marginalized optimal statistic analysis. Given that the optimal statistic and Bayesian analyses used by NG12.5 yield consistent results, ST mode and monopolar correlations of Eq. (25) need to be included in searches for a GWB signal to ensure an unbiased determination of the type of correlations present in a particular data set.
+
+3. ST and GW-like monopolar correlations yield broadly similar S/Ns. In fact, in the absence of a ST mode (as in SIM1), the two correlations give nearly identical S/Ns. Thus, distinguishing ST correlations from GW-like monopole correlations is challenging. This result requires further investigation and will be the subject of a future publication. See appendix SSA for a brief discussion of one technique to distinguish ST from GW-like monopole correlations in the noise marginalized optimal static.
+
+To conclude this subsection, we discuss the evolution of the distributions for the S/N in SIM1 as a function of observational baseline, shown in Fig. 6 and Fig. 7. One hundred different realizations of 10 to 20 year slices of SIM1 are treated as independent data sets in which we find the S/N for HD and ST correlations (GW-like monopolar correlations are almost identical to ST correlations and hence are not shown) through the noise-marginalized optimal statistic technique. Each slice of SIM1 has 100 different realizations making the total number of data sets to be 1100. These results confirm our earlier expectation for the degeneracy of ST and HD correlations (and GW-like monopole correlations) at short observational baselines. If a GWB signal with HD correlations is weak (in the case of SIM1, "weak" can be defined as having amplitude of and baseline of less than 15 years), a GWB with HD correlations can be easily mistaken for a ST and GW-like monopolar GWB. This is due to the stochastic nature of the gravitational-wave background and the non-isotropic sky distribution of pulsars used in the analyses. As can be seen in Fig. 6, there is a significant overlap between S/Ns calculated for ST and TT modes suggesting that we should not be surprised to observe a high relative S/N value of ST or GW-like monopole over the TT mode when only HD correlations are present but weak.
+
+### Searching for Non-Einstenian Polarization Modes of Gravity in NANOGrav's 12.5 Year data set
+
+The NANOGrav 12.5-year data set was searched for an isotropic gravitational wave background consistent with Einstein's gravity in 12.5. In this subsection, we extend the analyses presented in 12.5 by including searches for common red noise processes with ST, HD, and GW-like monopole correlations and their expected spectral indices. A few issues are worth keeping in mind while interpreting the results of our searches:
+
+1. When the correlations are weak, the transverse modes of gravity can be easily mistaken for one another as seen in the S/N evolution analysis of SIM1. It is possible to obtain S/Ns as high as 3 for the ST (or GW-like monopole) mode even in the case of absence of such a mode in a PTA data set so long as the TT mode is present.
+
+2. Though a large optimal statistic S/N value for a particular mode of gravity can be significant, the amplitude of that mode as seen in the correlations needs to be consistent with the amplitude of the common red noise process. For instance, in 12.5 we showed that a process with monopolar cross-correlations has a S/N distribution with a peak around 2.8 for spectral index of \\gamma=13/3. However, the amplitude of this monopolar process was shown to be significantly smaller than the amplitude of the uncorrelated common red noise process indicating that the majority of the common signal did not have monopolar correlations. This is because the optimal statistic estimate of the amplitude does not include the auto-correlation terms in the covariance matrix, only the cross-correlation terms. We show further examples of this below. In 12.5, a monopolar process was disfavored in the full Bayesian analysis which includes both auto- and cross-terms of the covariance matrix, due to the inconsistency of the amplitude of the common process with the best-fit cross-correlation-based estimate of the monopole amplitude.
+
+3. The threshold for detection has to be large enough that it is robust to the modeling of uncertainties in the Solar System Ephemeris, _BayesEphem_(Vallisneri et al., 2020). Long term, this will not be a problem for detection of the TT mode; the impact of BayesEphem has been shown to be minimal as the observation time increases (see Vallisneri et al., 2020). This is likely true for the other modes, but the impact of BayesEphem on other polarization modes has not been fully explored to date.
+
+4. Bayes factors, S/Ns, and upper-limits are all model dependent. Extreme care must be taken when interpreting Bayes factors, S/N values, or upper-limit estimates: different choices for spectral indices, priors, and competing models can significantly affect the results of these calculations.
+
+#### 3.2.1 Bayesian Analyses
+
+In SS2.3.2, we stated that we approximate Eq. (40) with Eq. (34) by setting the dipole parameter \\lambda (and conse quently \\kappa) to zero. This approximation follows from our analysis of the 12.5-year data set using Eq. (40), with the choice of \\gamma_{m} of 13/3 for the TT mode and \\gamma_{m} of 5 for the ST, VL, and SL modes which is appropriate for binary sources (Cornish et al., 2018). The result of such modeling is shown in Fig. 9. The posterior for \\kappa is uninformative for large values, and shows a slight preference for values close to zero. Hence, for simplicity, we set the \\kappa parameter to zero for all analyses in this paper.
+
+Before describing the results of the rest of the Bayesian analyses, it is worth defining our Bayesian modeling terminology clearly. Following the naming convention of NG12.5, two general types of Bayesian models have been used in this paper: _M2A_ and _M3A_. M2A includes a _common red noise process_, pulsar intrinsic red noises, plus various backend-dependent white noise terms such as EFAC, ECORR, and EQUAD2. M2A does not include correlations between pulsars so the full PTA covariance matrix is block-diagonal. M3A includes the same noise processes as M2A with the addition of _correlations_ of the common red noise process, i.e, the off-diagonal terms in the full PTA covariance matrix are populated. The type of correlations considered for a M3A model are specified in square brackets preceding the term "M3A". Furthermore, for both M2A and M3A, the choice of the spectral index of the common process is specified inside square brackets following "M2A" or "M3A". For example, [HD]M3A refers to a M3A model in which the type of the correlations considered for the common process is Hellings-Downs (quadrupolar) and the spectral index of this common correlated process is fixed at 5. Some M3A models may include more than one type of common correlated red noise process. For these models, we include more than one type of ORF in the square bracket preceding the term "M3A". For instance, [HD,ST]M3A[13/3,5] means that the M3A contains two different correlated common signals: the first being a red noise process with spectral index of 13/3 following HD type correlations, and second being a red noise process with spectral index of 5 following ST type correlations. Fig. 8 shows a visual illustration of our used terminology.
+
+Extending upon the work presented in NG12.5, we show the results of 14 different Bayesian analyses that allow us to compare several models of interest. These models follow the structure outlined in Fig. 8, and the resulting Bayes factors are presented in Figs. 10 and 11 for the choices of ephemeris model DE438 and DE438 with BayesEphem corrections, respectively. Note that like NG12.5, for computational convenience, we have fixed all the pulsar intrinsic white noise values for the analyses in this section.
+
+As shown in Fig. 10, the most favored Bayesian model is a GWB with GW-like monopolar correlations of Eq. (25) with a Bayes factor greater than 100. Additionally, as a cross-check, we have reproduced the results of Chen et al. (2021), where a model with ST correlations with a spectral index of 5, [ST]M3A, was compared to a model without correlations and a spectral index of 13/3, M2A[13/3]. We obtain a Bayes factor of around 94 in favour of [ST]M3A, which is consistent with their results.
+
+We note, however, that the calculation of the [ST]M3A to M2A[13/3] Bayes factor is not the right one to make to answer the question of whether or not the data prefer ST correlations to no correlations. This is because the difference in spectral indices between the two models accounts for a significant fraction of the Bayes factor. A more appropriate comparison is obtained by calculating the Bayes factor for [ST]M3A vs M2A, where both models have the same spectral index. For this model comparison, we obtain a Bayes factor of around 65 in favour of [ST]M3A. Though tantalizing, this Bayes factor is not sufficient to claim the detection of ST modes in the NANOGrav 12.5-yr data set. There are several reasons for this. Firstly, the Laplace approximation (see Romano and Cornish, 2017) gives a S/N of around 2.9 for a Bayes factor of 65, which we do not deem sufficient for a detection claim. Furthermore, given the degeneracy between TT and ST modes when correlations are present but weak (see Fig. 6 and the discussion in SS3.1), a S/N \\sim 2.9 in favour of ST correlations is not surprising even when only TT modes are present in our data. Additionally, accounting for uncertainties in the Solar System ephemeris, we show that BayesEphem significantly reduces the Bayes factors to 14 as shown in Fig. 113. Finally, as we will show below (see SS3.2.3), this result is very sensitive to the inclusion of one MSP, J0030+0451.
+
+Footnote 3: See Vallisneri et al. (2020) and Aggarwal et al. (2019) for a discussion of how BayesEphem changes our sensitivity to the detection of Einsteinian GWs.
+
+We note that the data slightly prefers the GW-like monopole to ST correlations; this is again unsurprising given the analyses of simulated data in SS3.1 which show that the ST and GW-monopole to be more or less interchangeable. Though these results are not compelling enough to claim a detection of any mode, they are sufficiently interesting to warrant follow-up analyses in future data sets currently under preparation.
+
+Taking advantage of the transitive nature of Bayes factors, Fig. 10 allows us to compute Bayes factors for model pairs that are not featured explicitly in Fig. 10. For instance, Bayes factor obtained from comparing [ST]M3A to [HD]M3A can be estimated by dividing the Bayes factor obtained from [ST]M3A over M2A by the Bayes factor obtained from [HD]M3A over M2A. The result is about 65/3\\approx 21.
+
+Before we conclude this section, it is worth noting that not all models shown in Fig. 10 are equally plausible from a theoretical standpoint. All metric theories of gravity must contain, at a minimum, the two Einsteinian +- and \\times-modes. Thus, even though a model with only ST spatial correlations yields a high Bayes factor, ST GWs are not predicted on their own by any metric theory of gravity. On the other hand, a compound model such as [HD,ST]M3A[13/3,5] is theoretically more well-motivated.
+
+#### 3.2.2 Frequentist Analyses and S/N Estimation
+
+As we discussed in SS3.1, the noise-marginalized optimal statistic offers a very robust and computationally inexpensive alternative to the Bayesian techniques by estimating the S/N. The S/N can be related to the Bayes factor using the Laplace approximation (Romano and Cornish, 2017); specifically,
+
+\\ln B\\approx\\rho^{2}/2  where, B is the Bayes factor and \\rho is the S/N. Later, we will show how our calculated Bayes factors are consistent with our S/N estimates through this Laplace relation.
+
+Fig. 12 shows the distribution of S/N for ST, GW-like monopole, and HD correlations obtained by calculating the noise-marginalized optimal statistic for the 12.5 year data set. The S/N calculation is performed for two choices of the spectral index, 13/3 and 5. Even though the choice of spectral index does not affect the results of S/N estimation significantly, the estimates for the amplitude of the red noise process change because of the covariance between amplitudes and spectral indices: the amplitude of a red noise process is lower with spectral index of 5 compared to a spectral index of 13/3. Figure 13 shows distributions of the amplitudes for spectral indices of 13/3 and 5. In the case of \\gamma=5, none of the correlated models match the amplitude of the common red noise process suggesting that despite the high S/N value of ST and GW-like monopole at this spectral index, these modes do not makeup much of the observed common process. The best match occurs in the case of \\gamma=13/3 where the amplitude of a model with HD correlations overlaps somewhat significantly with the amplitude of the uncorrelated common red noise process. This is noted in NG12.5 as well.
+
+#### 3.2.3 MSP J0030+0451 and GW-monopole/ST Correlations
+
+NG12.5 identified 10 of the 45 pulsars included in the analysis to be the most significant contributors to the common red noise process that was detected. These pulsars are J1909-3744, J2317+1439, J2043+1711, J1600-3053, J1918-0642, J1744-1134, J1910+1256, J0030+0451, J2145-0750, and J1640+2224. We performed our analyses anew, this time removing each of the above pulsars one at a time, and identified a main culprit for the GW-monopole/ST correlations we find in our data: MSP J0030+0451.
+
+Removing this pulsar from our analyses results in the most significant changes to the S/N, recovered amplitude, and Bayes factor estimation. This effect can be seen in Figs. 14 and 15 for the choice of spectral indices 13/3 and 5, respectively.
+
+As shown in Fig. 14 and Fig. 15, the optimal statistic analyses show that the S/N of GW-like monopole (as well as ST) drops from about 2.8 to 2 when MSP J0030+0451 is removed. Simultaneously, the S/N of HD increases from 1 to about 2. Furthermore, the amplitude recovery for HD seems to be more consistent with the common red noise process, while the amplitudes of GW-like monopole and ST become less consistent. Our Bayesian analyses agree with the optimal statistic results: when dropping MSP J0030+0451 from the analysis, the Bayes factor for [GW-like Monopole]M3A to M2A drops from about 100 to about 15 and the Bayes factor obtained for [HD]M3A[13/3] to M2A[13/3] increases from about 5 to about 10. It is worth pointing out that the changes in the optimal statistic and the Bayes factors are consistent with what we expect from the Laplace approximation.
+
+We do not yet understand why MSP J0030+0451 is causing this effect but we suspect incomplete noise modeling of this pulsar as the most plausible cause; MSP J0030+0451 has been shown to be problematic in detection analyses in the past (see Hazboun et al., 2020). However, we do not believe that omitting MSP J0030+0451 from our analyses is the right solution to this problem. Rather, a thorough investigation of MSP J0030+0451's data, along with improved and more sophisticated noise modeling for this pulsar (and probably others) is the more robust path forward. NANOGrav is actively working on advanced noise modeling of the pulsars used in the 12.5-year data set and the results of these efforts are in preparation.
+
+### Upper Limit Estimation
+
+In the absence of a detection of any polarization mode of gravity, we place constraints on the amplitude of these modes using our Bayesian techniques for specific choices of spectral index and the number of expected polarization modes. As mentioned at the beginning of this section, upper limits are model dependent. Different choices of priors, number of polarization modes considered, and spectral indices can affect the results. We have chosen to report our 95% upper limits for eight different models. Details of the models are discussed below.
+
+_Common red noise prior_: All modes have uniform priors for their amplitude. More specifically,
+
+A_{\\rm TT} = {\\rm Uniform}(10^{-18},10^{-12}), A_{\\rm ST} = {\\rm Uniform}(10^{-18},10^{-12}), A_{\\rm VL} = {\\rm Uniform}(10^{-18},10^{-15}), A_{\\rm SL} = {\\rm Uniform}(10^{-18},10^{-16}), in all selected models. The VL and SL modes have a narrower and lower range of prior because we expect their amplitudes to be lower than that of transverse modes. For the models in which the pulsar distances are needed (VL, SL), pulsar distances follow a normal distribution with mean at 1 kpc and standard deviation of 0.2 kpc, and we marginalize over the pulsar distance.
+
+_Naming convention_: The naming convention adopted for the models considered in this subsection seeks to categorize all metric theories of gravity into eight families based on their predicted polarization content. The prefix "MG" is short for _Metric theory of Gravity_ and the succeeding four digits speak to the existence, denoted by 1, or lack of existence, denoted by 0, of the possible four polarization modes TT, ST, VL, and SL.
+
+For example, MG1000 is Einstein's general theory of relativity, and MG1100 is a theory with TT and ST modes (e.g, Brans-Dicke gravity). Note that all of the eight families of theories possess the TT mode since this is required for all valid metric theories of gravity.
+
+_Spectral index_: For convenience we have taken the power in all modes to have a spectral index of \\gamma=5, which corresponds to flat spectrum in \\Omega_{GW}, the ratio of the density in GWs to the critical density.
+
+_Intrinsic pulsar noise prior_: All 45 pulsars in our analyses have log-uniform priors on the amplitude from -20 to -11. The choice of log-uniform priors on the intrinsic red noise is conservative, in the sense that it favours lower amplitudes for the intrinsic red noise relative to the common process (which has uniform priors), and results in larger upper limits on the common red noise process (see Hazboun et al., 2020). The spectral indices of intrinsic pulsar red noises vary uniformly from 0 to 7.
+
+_Spatial cross-correlations in the models_: For computational convenience we have not included correlations in most of our upper limit analyses. The minor improvements that are possible with the inclusion of cross-correlations do not justify the computational cost of performing such upper-limit analyses. These improvements are particularly small in the case of the non transverse modes of gravity because the auto-correlation terms dominate the cross terms significantly.
+
+The upper limit values listed in Fig. 17 can be used to place constraints on the detailed parameters of theories that couple to those modes as well as the astrophysical sources that are capable of producing those modes. Such studies are not within the scope of this work.
+
+We have also performed an additional analysis that includes correlations for one of our models, MG1100. Unlike the VL and SL modes, the magnitude of the cross-correlations for the TT and ST modes are of the same order as the auto-correlations. We therefore expect the inclusion of the cross terms for theories with TT and ST modes to have the largest effect on their upper limits. The contour plot for the amplitude posterior of TT and ST in this model is shown in Fig. 17. The upper limits obtained from this model (A_{TT}^{95\\%}=(9.7\\pm 0.4)\\times 10^{-16} and A_{ST}^{95\\%}=(1.4\\pm 0.03)\\times 10^{-15}), are slightly smaller than the ones obtained from the MG1100 model without correlations (see Fig. 16). Although we expect the corrections to our upper limits to be small, for future data sets we will develop and implement correlations for the VL and SL polarization modes in our pipeline.
+
+## 4 Summary
+
+NANOGrav's 12.5-year data set shows strong evidence for a common stochastic process, a red noise process with the same amplitude and spectral index across all pulsars. This common process, however, does not show strong evidence in favor of any spatial correlations that we have considered. The slight preferences for ST and GW-like monopolar correlations are not robust to the modeling of uncertainties in the solar system ephemeris, and seem to be associated with one particular pulsar, J0030+0451. A thorough investigation of MSP J0030+0451 data set, along with improved and more sophisticated noise modeling for this and other pulsars is likely to shed more light on this issue. Additionally, as our simulations show, given the baseline, amplitude of the common process, and the levels of white and other noise present in the 12.5 year data, it is possible to misconstrue a weak GWB with HD correlations as a GWB with ST or GW-like monopolar correlations.
+
+Thus, we disagree with Chen et al. (2021) on the existence of strong evidence in favor of a GWB with ST correlations in the NANOGrav 12.5-year data set. Strong evidence for such correlations would require greater Bayes factors and S/N estimations, a higher consistency between the amplitude of the uncorrelated common red noise process and the process with ST correlations, robustness to the modeling of ephemerides uncertainties, and robustness to the removal of individual pulsars. As mentioned, we found MSP J0030+0451 to be a significant contributor to the existence of the observed GW-like monopole (or ST correlations): removing this pulsar results in significant reduction of S/N (from 2.8 to 2) and Bayes factor (from 100 to 10) in the case of GW-like monopole. This issue will be followed up in detail in analyses of the upcoming more sensitive 15-year data set.
+
+In the absence of a detection, we place upper limits on the amplitudes of the various modes present in metric theories gravity. Each of the models in this paper have their own set of upper limits which varies from model to model. For sources of GWs that can produce a GWB background signal with spectral index of 5, the estimated upper limits are reported in Fig. 16. The reported upper limits can be used to place constraints on the parameters of theories that lead to such GW polarization content and the sources that are capable of producing GWs with the various polarization modes. We do not attempt to make such connections in this paper, but they should be useful in studies of alternative theories of gravity.
+
+With the release of a new data set on the horizon, NANOGrav's 15 year data set, we will continue to search for evidence of additional polarization modes of gravity. We anticipate that more pulsars, longer observation times, and improved noise modeling of pulsars will aid us greatly in finding and distinguishing the spatial correlation patterns in our data.
+
+## Acknowledgments
+
+_Author contributions_. An alphabetical-order author list was used for this paper in recognition of the fact that a large, decade timescale project such as NANOGrav is necessarily the result of the work of many people. All authors contributed to the activities of the NANOGrav collaboration leading to the work presented here, and reviewed the manuscript, text, and figures prior to the paper's submission. Additional specific contributions to this paper are as follows. ZA, HB, PRB, HTC, MED, PBD, TD, JAE, RDF, ECF, EF, NG-D, PAG, DCG, MLJ, MTL, DRL, RSL, JL, MAM, CN, DJN, TTP, NSP, SMR, KS, IHS, RS, JKS, RS and SJV developed the 12.5-year data set through a combination of observations, arrival time calculations, data checks and refinements, and timing model development and analysis; additional specific contributions to the data set are summarized in Alam et al. (2020).
+
+NL coordinated the writing of the paper and led the search. NSP developed the simulated data sets featured in this paper. SCS and DMG cross replicated the most significant results of this paper. SRT helped in development of the code for Bayesian runs. SV helped in development of the code for the optimal statistic runs, and along with JDR developed the optimal statistic technique for the case of multiple correlations. JS provided feedback and guidance on how to resolve issues in the early Bayesian and frequentist analyses. NJC, XS, SRT, and SV provided feedback on searches and new analysis techniques. NJC and XS provided the first insights on the inclusion of GW-like monopole correlations. NL provided all of the figures and performed all of the analyses featured in this paper. NL and XS wrote the paper and collected the bibliography.
+
+_Acknowledgments_. This work has been carried out by the NANOGrav collaboration, which is part of the International Pulsar Timing Array. We thank the anonymous reviewers for useful suggestions and comments, which improved the quality of the manuscript. The NANOGrav project receives support from National Science Foundation (NSF) Physics Frontiers Center award number 1430284 and 2020265. The Arecibo Observatory is a facility of the NSF operated under cooperative agreement (#AST-1744119) by the University of Central Florida (UCF) in alliance with Universidad Ana G. Mendez (UAGM) and Yang Enterprises (YEI), Inc. The Green Bank Observatory is a facility of the NSF operated under cooperative agreement by Associated Universities, Inc. The National Radio Astronomy Observatory is a facility of the NSF operated under cooperative agreement by Associated Universities, Inc. This work is supported in part by NASA under award number 80GSFC17M0002. We also acknowledge support received from NSF AAG award number 2009468. T.D. and M.T.L. are supported by an NSF Astronomy and Astrophysics grant (AAG) award No. 2009468. Portions of this work performed at NRL were supported by ONR 6.1 basic research funding. The work of NL, XS, JPS, and DD was partly supported by the George and Hannah Bolinger Memorial Fund in the College of Science at Oregon State University.
+
+_Facilities:_Arecibo, GBT
+
+ENTERPRISE (Ellis et al., 2020), enterprise_extensions (Taylor et al., 2020), libstempo (Vallisneri, 2020), matplotlib (Hunter, 2007), PTMCMC (Ellis & van Haasteren, 2017), tempo2 (Hobbs & Edwards, 2012), plotly (Inc., 2015)
+
+## Appendix A Distinguishing Scalar-Tensor from GW-like Monopole correlations in the noise
+
+Marginalized Optimal Statistic
+
+Separating ST from GW-like monopole correlations introduces new challenges to the usual detection procedure as outlined in SS3.1. These two correlations seem to overlap significantly to the point where they can be used interchangeably in our Bayesian and frequentist analyses. One way to mitigate this problem is to search for such modes simultaneously as opposed to separately, which has been the default procedure thus far for the noise marginalized optimal statistic technique to compute signal-to-noise values. There are two benefits to searching for degenerate correlations simultaneously: i) we avoid the over-estimation of the S/N of mode, ii) we achieve a significant reduction in the overlap of S/N distributions for the various correlation patterns. For instance, searching for ST and GW-like correlation patterns simultaneously in SIM2 results in reduction of the high S/N value of 17 to 7 for ST and 17 to -4 for GW-like monopole (see Fig. 18). The addition of this new feature to the noise marginalized optimal statistic technique will be explored in depth in a separate paper.
+
+## Appendix B Bayesian Methods
+
+We used Markov chain Monte Carlo (MCMC) methods to stochastically sample the joint posterior of our model parameter spaces, and use Monte Carlo integration to deduce marginalized distributions, where \\int f(\\theta)p(\\theta|d)d\\theta\\approx\\langle f(\\theta_{i})\\rangle for the integral of an arbitrary function f(\\theta) over the posterior p(\\theta|d) of which the samples \\{\\theta_{i}\\} are randomly drawn. Where necessary, we estimated the uncertainty on the marginalized posterior value to be the Monte Carlo sampling error of the location \\hat{\\theta}_{x} of the x-th quantile:
+
+\\frac{\\sqrt{x(1-x)/N}}{p(\\theta=\\hat{\\theta}_{x}|d)}, (B1) where N is the number of (quasi-)independent samples in our MCMC chain.
+
+As described in NG11gwb, we employ two techniques for model selection based on the relationship between the competing models. For _nested_ models that compare the additional presence of a signal to that of noise alone, we used the _Savage-Dickey approximation_(Dickey, 1971). This requires adequate sampling coverage of low amplitude posterior regions in order to compute the Savage-Dickey density ratio, which corresponds to the prior to posterior density at zero amplitude: Bayes factor =p(A=0)/p(A=0|d). In practice this means that the method is only useful for moderate model odds contrasts, and while this was used extensively in NG11gwb, the strength of the recovered signal in this paper exceeds the reliability of the Savage-Dickey approximation without additional sampling strategies to explore the low amplitude posterior region. For _disjoint_ models, models that are not easily distinguished parametrically, and indeed all model selection in this paper, we used the _product-space method_(Carlin and Chib, 1995; Godsill, 2001; Hee et al., 2015; Taylor et al., 2020). This recasts model selection as a parameter estimation problem, introducing a model indexing variable that is sampled along with the parameters of the competing models, and which controls which model likelihood is active at each MCMC iteration. The ratio of samples spent in each bin of the model indexing variable returns the posterior odds ratio between models. The efficiency of
+
+[MISSING_PAGE_FAIL:21]
+
+* Cornish et al. (2018a) Cornish, N. J., O'Beirne, L., Taylor, S. R., & Yunes, N. 2018a, Physical Review Letters, 120, 181101, doi: 10.1103/PhysRevLett.120.181101
+
+* Cornish et al. (2018b) --. 2018b, Phys. Rev. Lett., 120, 181101, doi: 10.1103/PhysRevLett.120.181101
+
+* Damour & Vilenkin (2000) Damour, T., & Vilenkin, A. 2000, Physical Review Letters, 85, 3761, doi: 10.1103/PhysRevLett.85.3761
+
+* Cornish et al. (2001) --. 2001, Phys. Rev. D, 64, 064008, doi: 10.1103/PhysRevD.64.064008
+
+* Cornish et al. (2005) --. 2005, Phys. Rev. D, 71, 063510, doi: 10.1103/PhysRevD.71.063510
+
+* Demorest et al. (2013) Demorest, P. B., Ferdman, R. D., Gonzalez, M. E., et al. 2013, ApJ, 762, 94, doi: 10.1088/0004-637X/762/2/94
+
+* Desvignes et al. (2016) Desvignes, G., Caballero, R. N., Lentati, L., et al. 2016, MNRAS, 458, 3341, doi: 10.1093/mnras/stw483
+
+* Detweiler (1979) Detweiler, S. 1979, ApJ, 234, 1100, doi: 10.1086/157593
+
+* Di Bari et al. (2021) Di Bari, P., Marfatia, D., & Zhou, Y.-L. 2021, arXiv e-prints, arXiv:2106.00025. [https://arxiv.org/abs/2106.00025](https://arxiv.org/abs/2106.00025)
+
+* Dickey (1971) Dickey, J. M. 1971, The Annals of Mathematical Statistics, 42, 204. [http://www.jstor.org/stable/2958475](http://www.jstor.org/stable/2958475)
+
+* Dvorkin & Barausse (2017) Dvorkin, I., & Barausse, E. 2017, MNRAS, 470, 4547, doi: 10.1093/mnras/stx1454
+
+* Eardley et al. (1973a) Eardley, D. M., Lee, D. L., & Lightman, A. P. 1973a, Phys. Rev. D, 8, 3308, doi: 10.1103/PhysRevD.8.3308
+
+* Eardley et al. (1973b) --. 1973b, Phys. Rev. D, 8, 3308, doi: 10.1103/PhysRevD.8.3308
+
+* Eardley et al. (1973) Eardley, D. M., Lee, D. L., Lightman, A. P., Wagoner, R. V., & Will, C. M. 1973c, Physical Review Letters, 30, 884, doi: 10.1103/PhysRevLett.30.884
+
+* Ellis & Lewicki (2021) Ellis, J., & Lewicki, M. 2021, Phys. Rev. Lett., 126, 041304, doi: 10.1103/PhysRevLett.126.041304
+
+* Ellis & van Haasteren (2017) Ellis, J., & van Haasteren, R. 2017, jellis18/PTMCMCSampler: Official Release, doi: 10.5281/zenodo.1037579
+
+* Ellis et al. (2020) Ellis, J. A., Vallisneri, M., Taylor, S. R., & Baker, P. T. 2020, ENTERPRISE: Enhanced Numerical Toolbox Enabling a Robust PulsaR Inference Suite, v3.0.0, Zenodo, doi: 10.5281/zenodo.4059815
+
+* Ellis et al. (2020) Ellis, J. A., Vallisneri, M., Taylor, S. R., & Baker, P. T. 2020, ENTERPRISE: Enhanced Numerical Toolbox Enabling a Robust PulsaR Inference Suite, Zenodo, doi: 10.5281/zenodo.4059815
+
+* Enoki et al. (2004) Enoki, M., Inoue, K. T., Nagashima, M., & Sugiyama, N. 2004, ApJ, 615, 19, doi: 10.1086/424475
+
+* Gair et al. (2015) Gair, J. R., Romano, J. D., & Taylor, S. R. 2015, Phys. Rev. D, 92, 102003, doi: 10.1103/PhysRevD.92.102003
+
+* Ghayour et al. (2021) Ghayour, B., Khodagholizadeh, J., Afkani, M., Torkamani, M. R., & Vahedi, A. 2021, International Journal of Modern Physics D, 30, 2150023, doi: 10.1142/S0218271821500231
+
+* Godsill (2001) Godsill, S. J. 2001, Journal of Computational and Graphical Statistics, 10, 230. [http://www.jstor.org/stable/1391010](http://www.jstor.org/stable/1391010)
+
+* Goncharov et al. (2021) Goncharov, B., et al. 2021, doi: 10.3847/2041-8213/ac1764
+
+* Gorghetto et al. (2021) Gorghetto, M., Hardy, E., & Nicolaescu, H. 2021, J. Cosmology Astropart. Phys, 2021, 034, doi: 10.1088/1475-7516/2021/06/034
+
+* Hazboun et al. (2020a) Hazboun, J. S., Simon, J., Siemens, X., & Romano, J. D. 2020a, ApJ, 905, L6, doi: 10.3847/2041-8213/abca92
+
+* Hazboun et al. (2020b) Hazboun, J. S., Simon, J., Taylor, S. R., et al. 2020b, ApJ, 890, 108, doi: 10.3847/1538-4357/ab68db
+
+* Hee et al. (2015) Hee, S., Handley, W. J., Hobson, M. P., & Lasenby, A. N. 2015, Monthly Notices of the Royal Astronomical Society, 455, 2461, doi: 10.1093/mnras/stv2217
+
+* Hellings & Downs (1983a) Hellings, R. W., & Downs, G. S. 1983a, ApJ, 265, L39, doi: 10.1086/183954
+
+* Hellings & Downs (1983b) --. 1983b, ApJ, 265, L39, doi: 10.1086/183954
+
+* Hobbs & Edwards (2012) Hobbs, G., & Edwards, R. 2012, Tempo2: Pulsar Timing Package. [http://ascl.net/1210.015](http://ascl.net/1210.015)
+
+* Hunter (2007) Hunter, J. D. 2007, Computing in Science and Engineering, 9, 90, doi: 10.1109/MCSE.2007.55
+
+* Inc. (2015) Inc., P. T. 2015, Collaborative data science, Montreal, QC: Plotly Technologies Inc. [https://plot.ly](https://plot.ly)
+
+* Islo et al. (2019) Islo, K., Simon, J., Burke-Spolaor, S., & Siemens, X. 2019, arXiv e-prints, arXiv:1906.11936. [https://arxiv.org/abs/1906.11936](https://arxiv.org/abs/1906.11936)
+
+* Jaffe & Backer (2003) Jaffe, A. H., & Backer, D. C. 2003, ApJ, 583, 616, doi: 10.1086/345443
+
+* Joshi et al. (2018) Joshi, B. C., Arumugasamy, P., Bagchi, M., et al. 2018, Journal of Astrophysics and Astronomy, 39, 51, doi: 10.1007/s12036-018-9549-y
+
+* Kelley et al. (2016) Kelley, L. Z., Blecha, L., & Hernquist, L. 2016, Monthly Notices of the Royal Astronomical Society, 464, 3131-3157, doi: 10.1093/mnras/stw2452
+
+* Kelley et al. (2017) Kelley, L. Z., Blecha, L., Hernquist, L., Sesana, A., & Taylor, S. R. 2017, MNRAS, 471, 4508, doi: 10.1093/mnras/stx1638
+
+* Kelley et al. (2018) --. 2018, MNRAS, 477, 964, doi: 10.1093/mnras/sty689
+
+* Kerr et al. (2020) Kerr, M., Reardon, D. J., Hobbs, G., et al. 2020, arXiv e-prints, arXiv:2003.09780. [https://arxiv.org/abs/2003.09780](https://arxiv.org/abs/2003.09780)
+
+* Lazarides et al. (2021a) Lazarides, G., Maji, R., & Shafi, Q. 2021a, arXiv e-prints, arXiv:2104.02016. [https://arxiv.org/abs/2104.02016](https://arxiv.org/abs/2104.02016)
+
+* Lee (2016) Lee, K. J. 2016, in Astronomical Society of the Pacific Conference Series, Vol. 502, Frontiers in Radio Astronomy and FAST Early Sciences Symposium 2015, ed. L. Qain & D. Li, 19
+
+* Lee et al. (2008) Lee, K. J., Jenet, F. A., & Price, R. H. 2008a, ApJ, 685, 1304, doi: 10.1086/591080
+
+* Lee et al. (2008) --. 2008b, ApJ, 685, 1304, doi: 10.1086/591080
+
+* Lentati et al. (2015) Lentati, L., Taylor, S. R., Mingarelli, C. M. F., et al. 2015, MNRAS, 453, 2576, doi: 10.1093/mnras/stv1538
+
+* Li et al. (2021) Li, H.-H., Ye, G., & Piao, Y.-S. 2021, Physics Letters B, 816, 136211, doi: 10.1016/j.physletb.2021.136211
+
+* Lin (2021) Lin, C.-M. 2021, J. Cosmology Astropart. Phys, 2021, 056, doi: 10.1088/1475-7516/2021/05/056
+
+* Lommen & Backer (2001) Lommen, A. N., & Backer, D. C. 2001, ApJ, 562, 297, doi: 10.1086/323491
+
+* Madison et al. (2017) Madison, D. R., Chernoff, D. F., & Cordes, J. M. 2017, Phys. Rev. D, 96, 123016, doi: 10.1103/PhysRevD.96.123016
+
+* McWilliams et al. (2012) McWilliams, S. T., Ostriker, J. P., & Pretorius, F. 2012, arXiv e-prints, arXiv:1211.4590. [https://arxiv.org/abs/1211.4590](https://arxiv.org/abs/1211.4590)
+
+* Mingarelli et al. (2012) Mingarelli, C. M. F., Grover, K., Sidery, T., Smith, R. J. E., & Vecchio, A. 2012, Physical Review Letters, 109, 081104, doi: 10.1103/PhysRevLett.109.081104
+
+* Mingarelli et al. (2017) Mingarelli, C. M. F., Lazio, T. J. W., Sesana, A., et al. 2017, Nature Astronomy, 1, 886, doi: 10.1038/s41550-017-0299-6
+
+* Nakai et al. (2021) Nakai, Y., Suzuki, M., Takahashi, F., & Yamada, M. 2021, Physics Letters B, 816, 136238, doi: 10.1016/j.physletb.2021.136238
+
+* Neronov et al. (2021) Neronov, A., Pol, A. R., Caprini, C., & Semikoz, D. 2021, Phys. Rev. D, 103, L041302, doi: 10.1103/PhysRevD.103.L041302
+
+* Newman & Penrose (1962) Newman, E., & Penrose, R. 1962, Journal of Mathematical Physics, 3, 566, doi: 10.1063/1.1724257
+
+* Ng (2018) Ng, C. 2018, in IAU Symposium, Vol. 337, Pulsar Astrophysics the Next Fifty Years, ed. P. Weltevrede, B. B. P. Perera, L. L. Preston, & S. Sanidas, 179-182, doi: 10.1017/S1743921317010638
+
+* O'Beirne et al. (2019) O'Beirne, L., Cornish, N. J., Vigeland, S. J., & Taylor, S. R. 2019, Phys. Rev. D, 99, 124039, doi: 10.1103/PhysRevD.99.124039
+
+* Olmez et al. (2010) Olmez, S., Mandic, V., & Siemens, X. 2010, Phys. Rev. D, 81, 104028, doi: 10.1103/PhysRevD.81.104028
+
+* Perera et al. (2019) Perera, B. B. P., DeCesar, M. E., Demorest, P. B., et al. 2019, MNRAS, 490, 4666, doi: 10.1093/mnras/stz2857
+
+* Pol et al. (2021) Pol, N. S., Taylor, S. R., Kelley, L. Z., et al. 2021, ApJ, 911, L34, doi: 10.3847/2041-8213/abf2c9
+
+* Poletti (2021) Poletti, D. 2021, J. Cosmology Astropart. Phys, 2021, 052, doi: 10.1088/1475-7516/2021/05/052
+
+* Qin et al. (2021) Qin, W., Boddy, K. K., & Kamionkowski, M. 2021, Phys. Rev. D, 103, 024045, doi: 10.1103/PhysRevD.103.024045
+
+* Ransom et al. (2019) Ransom, S., Brazier, A., Chatterjee, S., et al. 2019, in Bulletin of the American Astronomical Society, Vol. 51, 195. [https://arxiv.org/abs/1908.05356](https://arxiv.org/abs/1908.05356)
+
+* Ravi et al. (2012) Ravi, V., Wyithe, J. S. B., Hobbs, G., et al. 2012, ApJ, 761, 84, doi: 10.1088/0004-637X/761/2/84
+
+* Ravi et al. (2015) Ravi, V., Wyithe, J. S. B., Shannon, R. M., & Hobbs, G. 2015, Monthly Notices of the Royal Astronomical Society, 447, 2772-2783, doi: 10.1093/mnras/stu2659
+
+* Roedig & Sesana (2012) Roedig, C., & Sesana, A. 2012, Journal of Physics Conference Series, 363, 012035, doi: 10.1088/1742-6596/363/1/012035
+
+* Romano & Cornish (2017) Romano, J. D., & Cornish, N. J. 2017, Living Reviews in Relativity, 20, 2, doi: 10.1007/s41114-017-0004-1
+
+* Rosado et al. (2015) Rosado, P. A., Sesana, A., & Gair, J. 2015, Monthly Notices of the Royal Astronomical Society, 451, 2417-2433, doi: 10.1093/mnras/stv1098
+
+* Ryu et al. (2018) Ryu, T., Perna, R., Haiman, Z., Ostriker, J. P., & Stone, N. C. 2018, Mon. Not. Roy. Astron. Soc., 473, 3410, doi: 10.1093/mnras/stx2524
+
+* Sampson et al. (2015) Sampson, L., Cornish, N. J., & McWilliams, S. T. 2015, Phys. Rev. D, 91, 084055, doi: 10.1103/PhysRevD.91.084055
+
+* Sanidas et al. (2013) Sanidas, S. A., Battye, R. A., & Stappers, B. W. 2013, ApJ, 764, 108, doi: 10.1088/0004-637X/764/1/108
+
+* Sazhin (1978) Sazhin, M. V. 1978, Soviet Ast., 22, 36
+
+* Schutz & Ma (2016) Schutz, K., & Ma, C.-P. 2016, MNRAS, 459, 1737, doi: 10.1093/mnras/stw768
+
+* Sesana (2013) Sesana, A. 2013, MNRAS, 433, L1, doi: 10.1093/mnrasl/slt034
+
+* Sesana et al. (2016) Sesana, A., Shankar, F., Bernardi, M., & Sheth, R. K. 2016, Mon. Not. Roy. Astron. Soc., 463, L6, doi: 10.1093/mnrasl/slw139
+
+* Sesana & Vecchio (2010) Sesana, A., & Vecchio, A. 2010, Phys. Rev. D, 81, 104008, doi: 10.1103/PhysRevD.81.104008
+
+* Sesana et al. (2008) Sesana, A., Vecchio, A., & Colacino, C. N. 2008, MNRAS, 390, 192, doi: 10.1111/j.1365-2966.2008.13682.x
+
+* Sesana et al. (2009) Sesana, A., Vecchio, A., & Volonteri, M. 2009, MNRAS, 394, 2255, doi: 10.1111/j.1365-2966.2009.14499.x
+
+* Shannon et al. (2013) Shannon, R. M., Ravi, V., Coles, W. A., et al. 2013, Science, 342, 334. [https://arxiv.org/abs/1310.4569](https://arxiv.org/abs/1310.4569)
+
+* Shannon et al. (2015) Shannon, R. M., Ravi, V., Lentati, L. T., et al. 2015, Science, 349, 1522, doi: 10.1126/science.aab1910
+
+* Sharma (2021) Sharma, R. 2021, arXiv e-prints, arXiv:2102.09358. [https://arxiv.org/abs/2102.09358](https://arxiv.org/abs/2102.09358)
+
+* Siemens et al. (2006) Siemens, X., Creighton, J., Maor, I., et al. 2006, Phys. Rev. D, 73, 105001, doi: 10.1103/PhysRevD.73.105001Siemens, X., Ellis, J., Jenet, F., & Romano, J. D. 2013, Classical and Quantum Gravity, 30, 224015, doi: 10.1088/0264-9381/30/22/224015
+
+* Siemens et al. (2007) Siemens, X., Mandic, V., & Creighton, J. 2007, Physical Review Letters, 98, 111101, doi: 10.1103/PhysRevLett.98.111101
+
+* Starobinskii (1979) Starobinskii, A. A. 1979, Soviet Journal of Experimental and Theoretical Physics Letters, 30, 682
+
+* Taylor et al. (2020a) Taylor, S. R., Baker, P. T., Hazboun, J. S., Simon, J. J., & Vigeland, S. J. 2020a, enterprise extensions. [https://github.com/nanograv/enterprise_extensions](https://github.com/nanograv/enterprise_extensions)
+
+* Taylor et al. (2016) Taylor, S. R., Vallisneri, M., Ellis, J. A., et al. 2016, ApJ, 819, L6, doi: 10.3847/2041-8205/819/1/L6
+
+* Taylor et al. (2020b) Taylor, S. R., van Haasteren, R., & Sesana, A. 2020b, Phys. Rev. D, 102, 084039, doi: 10.1103/PhysRevD.102.084039
+
+* Vagnozzi (2021) Vagnozzi, S. 2021, MNRAS, 502, L11, doi: 10.1093/mnrasl/slaa203
+
+* Vallisneri (2020) Vallisneri, M. 2020, libstempo: Python wrapper for Tempo2. [http://ascl.net/2002.017](http://ascl.net/2002.017)
+
+* Vallisneri et al. (2020) Vallisneri, M., Taylor, S. R., Simon, J., et al. 2020, ApJ, 893, 112, doi: 10.3847/1538-4357/ab7b67
+
+* van Haasteren & Levin (2010) van Haasteren, R., & Levin, Y. 2010, MNRAS, 401, 2372, doi: 10.1111/j.1365-2966.2009.15885.x
+
+* van Haasteren et al. (2011) van Haasteren, R., Levin, Y., Janssen, G. H., et al. 2011, MNRAS, 414, 3117, doi: 10.1111/j.1365-2966.2011.18613.x
+
+* Verbiest et al. (2016) Verbiest, J. P. W., Lentati, L., Hobbs, G., et al. 2016, MNRAS, 458, 1267, doi: 10.1093/mnras/stw347
+
+* Vigeland et al. (2018) Vigeland, S. J., Islo, K., Taylor, S. R., & Ellis, J. A. 2018, Phys. Rev. D, 98, 044003, doi: 10.1103/PhysRevD.98.044003
+
+* Volonteri et al. (2003) Volonteri, M., Haardt, F., & Madau, P. 2003, ApJ, 582, 559, doi: 10.1086/344675
+
+* Will (1977) Will, C. M. 1977, ApJ, 214, 826, doi: 10.1086/155313
+
+* Will (1993) --. 1993, Theory and Experiment in Gravitational Physics
+
+* Witten (1984) Witten, E. 1984, Phys. Rev. D, 30, 272, doi: 10.1103/PhysRevD.30.272
+
+* Wu et al. (2021) Wu, L., Gong, Y., & Li, T. 2021, arXiv e-prints, arXiv:2105.07694. [https://arxiv.org/abs/2105.07694](https://arxiv.org/abs/2105.07694)
+
+* Wu et al. (2021) Wu, Y.-M., Chen, Z.-C., & Huang, Q.-G. 2021. [https://arxiv.org/abs/2108.10518](https://arxiv.org/abs/2108.10518)
+
+* Wyithe & Loeb (2003) Wyithe, J. S. B., & Loeb, A. 2003, ApJ, 590, 691, doi: 10.1086/375187
+
+* Yi & Zhu (2021) Yi, Z., & Zhu, Z.-H. 2021, arXiv e-prints, arXiv:2105.01943. [https://arxiv.org/abs/2105.01943](https://arxiv.org/abs/2105.01943)
+
+* Yunes & Siemens (2013) Yunes, N., & Siemens, X. 2013, Living Reviews in Relativity, 16, 9, doi: 10.12942/lrr-2013-9

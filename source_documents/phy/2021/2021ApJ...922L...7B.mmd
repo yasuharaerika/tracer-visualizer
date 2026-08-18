@@ -1,0 +1,177 @@
+###### Abstract
+
+We examine the possibility that fast radio bursts (FRBs) are emitted inside the magnetosphere of a magnetar. On its way out, the radio wave must interact with a low-density e^{\\pm} plasma in the outer magnetosphere at radii R=10^{9}-10^{10}\\,\\mathrm{cm}. In this region, the magnetospheric particles have a huge cross section for scattering the wave. As a result, the wave strongly interacts with the magnetosphere and compresses it, depositing the FRB energy into the compressed field and the scattered radiation. The scattered spectrum extends to the \\gamma-ray band and triggers e^{\\pm} avalanche, further boosting the opacity. These processes choke FRBs, disfavoring scenarios with a radio source confined at R\\ll 10^{10}\\,\\mathrm{cm}. Observed FRBs can be emitted by magnetospheric flare ejecta transporting energy to large radii.
+
+Neutron stars (1108); Magnetars (992); Radiative processes (2055); Radio bursts (1339) 0000-0002-3876-1708]Andrei M. Beloborodov
+
+## 1 Introduction
+
+Fast radio bursts (FRBs) are a big puzzle. They are detected from cosmological distances with luminosities up to 10^{43}\\mathrm{erg/s} and ms durations (Petroff et al., 2019). Spectacular progress in FRB observations, in particular by CHIME, has provided a wealth of data which miss theoretical explanation.
+
+Recent FRB detection from SGR 1935+2154 (The CHIME/FRB Collaboration et al., 2020; Bochenek et al., 2020) supports the association of FRBs with magnetars. However, their emission mechanism is not established. Possible scenarios are (1) a radio source confined near the magnetar, inside its ultrastrong magnetosphere ("near-field") and (2) emission at much larger radii from explosions launched by magnetospheric flares into the magnetar wind ("far-field"). The far-field models include a robust radiative mechanism--synchrotron maser emission from the blast wave (Lyubarsky, 2014; Beloborodov, 2017, 2020; Metzger et al., 2019; Sironi et al., 2021) and possible emission from the magnetic flare ejecta (Lyubarsky, 2020). On the other hand, it has been argued that the complex temporal structure detected in FRBs (assuming it forms inside the source, not via propagation effects) favors the near-field scenario (The CHIME/FRB Collaboration et al., 2021; Nimmo et al., 2021).
+
+Cosmological FRBs are 10^{10}-10^{12} times brighter than radio pulsations detected in several magnetars (Kaspi and Beloborodov, 2017), and proposals for magnetospheric radio emission mechanisms (Thompson, 2008; Beloborodov, 2013; Lyutikov et al., 2016; Lu et al., 2020) face challenges when applied to FRBs (Lyubarsky, 2021). In this _Letter_, we do not rely on any concrete emission mechanism, and instead examine a generic constraint.
+
+A simple and essential requirement for any near-field FRB scenario is the successful escape of the radio wave. The emitted wave must propagate through the plasma in the closed magnetosphere, which extends to the light cylinder
+
+R_{\\mathrm{LC}}=\\frac{c}{\\Omega}\\approx 5\\times 10^{9}\\,\\left(\\frac{P}{1\\, \\mathrm{s}}\\right)\\mathrm{cm},  where P=2\\pi/\\Omega is the rotation period of the magnetar. The plasma is immersed in the magnetospheric field B_{\\mathrm{bg}} and has gyro-frequency
+
+\\omega_{B}=\\frac{eB_{\\mathrm{bg}}}{m_{e}c}\\approx\\frac{e\\mu}{m_{e}cR^{3}} \\approx 1.8\\times 10^{13}\\,\\frac{\\mu_{33}}{R_{9}^{3}}\\,\\mathrm{rad/s},  where e and m_{e} are the electron charge and mass, and the magnetic dipole moment \\mu\\approx B_{\\mathrm{bg}}R^{3}\\sim 10^{33}\\,\\mathrm{G\\,cm^{3}} corresponds to a surface magnetic field B_{\\star}\\sim 10^{15}\\,\\mathrm{G}. The radio wave frequency \\nu=\\omega/2\\pi\\sim 1 GHz satisfies \\omega<\\omega_{B} at radii up to R_{\\mathrm{LC}} if P<3\\,\\mu_{33}^{12}\\,\\mathrm{s}.
+
+The magnetosphere is normally assumed to allow free escape of radio waves polarized perpendicular to the background magnetic field B_{\\mathrm{bg}}, especially for \\omega\\ll\\omega_{B}. A standard calculation of the electron cross section for wave scattering gives \\sigma_{\\mathrm{sc}}\\approx(\\omega/\\omega_{B})^{2}\\sigma_{\\mathrm{T}}\\ll\\sigma _{\\mathrm{T}}(Canuto et al., 1971) where \\sigma_{\\mathrm{T}} is the Thomson cross section. Recent discussions of FRB interaction with the magnetosphere (Lyutikov, 2020; Kumar and Lu, 2020) also concluded that the interaction is suppressed by \\omega_{B}\\gg\\omega.
+
+However, the small \\sigma_{\\mathrm{sc}} holds only for wave amplitudes E_{0}<B_{\\mathrm{bg}}. In fact, as the wave propagates away from the magnetar in the decreasing background B_{\\mathrm{bg}}\\propto R^{-3}, its amplitude E_{0}\\propto R^{-1} eventually exceeds B_{\\mathrm{bg}}:
+
+\\frac{E_{0}}{B_{\\mathrm{bg}}}=\\left(\\frac{R}{R_{0}}\\right)^{2},\\qquad R_{0} \\approx 3.5\\times 10^{8}\\,\\frac{\\mu_{33}^{1/2}}{L_{42}^{1/4}}\\,\\mathrm{cm}, where L=cR^{2}E_{0}^{2}/2 is the isotropic equivalent of the FRB luminosity. Hereafter we focus on the wave propagation at radii R>R_{0} where E_{0}>B_{\\rm bg}. This condition is equivalent to a_{0}>\\omega_{B}/\\omega, where
+
+a_{0}=\\frac{eE_{0}}{m_{e}c\\,\\omega}\\approx 2.3\\times 10^{4}\\,\\frac{L_{42}^{1/2}}{ R_{9}\\,\\nu_{9}}. 
+
+Waves with E_{0}>B_{\\rm bg} are scattered with \\sigma_{\\rm sc} exceeding \\sigma_{\\rm T} by many orders of magnitude (Beloborodov, 2021, hereafter B21). This occurs because particles (e^{\\pm}) exposed to the wave are quickly accelerated to huge Lorentz factors, exceeding 10^{4}, and emit \\gamma-rays at the expense of the radio wave energy. Below we examine implications of these processes for FRBs. For definiteness we consider a plane wave propagating perpendicular to \\mathbf{B}_{\\rm bg}; for different propagation angles \\theta\\neq\\pi/2 one should replace \\omega_{B}\\to\\omega_{B}\\sin\\theta.
+
+## 2 Scattering of the wave
+
+### Magnetospheric plasma density n_{0}
+
+The scattering opacity of the magnetosphere depends on its initial plasma density n_{0} before it is exposed to the outgoing ultrastrong wave. One characteristic density in the problem is n_{\\rm co}=|\\nabla\\cdot\\mathbf{E}_{\\rm co}|/4\\pi e, the minimum needed to sustain the co-rotation electric field \\mathbf{E}_{\\rm co}=\\mathbf{B}_{\\rm bg}\\times(\\mathbf{\\Omega}\\times\\mathbf{R})(Goldreich & Julian, 1969),
+
+n_{\\rm co}\\sim\\frac{\\mu}{ceR^{3}P}\\approx 7\\times 10^{4}\\,\\frac{\\mu_{33}}{R_{9 }^{3}}\\left(\\frac{P}{1\\,{\\rm s}}\\right)^{-1}{\\rm cm}^{-3}. 
+
+As shown below, even this low density is sufficient to choke FRBs emitted at R\\ll R_{\\rm LC}.
+
+The actual density around active magnetars is higher than n_{\\rm co}. The e^{\\pm} plasma is created near the neutron star, at a radius R_{\\pm}\\lesssim 10R_{\\star}, and fills the outer magnetosphere by flowing out along the extended magnetic field lines. The particle flow \\dot{\\mathcal{N}} at a radius R\\gg R_{\\pm} scales with the number of field lines connecting R_{\\pm} and R, which implies \\dot{\\mathcal{N}}(R)\\propto R^{-1}(Beloborodov, 2020).
+
+The value of \\dot{\\mathcal{N}} may be estimated using observations of known magnetars in our galaxy. Their typical persistent luminosity in the keV band is L_{\\rm keV}\\sim 10^{35}\\,{\\rm erg/s}, and their spectra are nonthermal, extending with a hard slope to energies \\gg 10\\,{\\rm keV}(Kaspi & Beloborodov, 2017). The spectrum is emitted by the magnetospheric e^{\\pm} flow, which radiates its energy away via resonant cyclotron scattering (Thompson et al., 2002; Beloborodov, 2013, 2013). The flow decelerates to a mildly relativistic speed at radius R_{\\rm keV}\\approx 2\\times 10^{7}\\mu_{33}^{1/3} cm (where \\hbar\\omega_{B}\\sim 1\\,{\\rm keV}), and the e^{\\pm} supply to R_{\\rm keV} may be roughly estimated as \\dot{\\mathcal{N}}(R_{\\rm keV})\\sim L_{\\rm keV}/m_{e}c^{2}. This estimate is also consistent with the theoretically expected multiplicity of e^{\\pm} production around magnetars (Beloborodov, 2013).
+
+Then, using the scaling \\dot{\\mathcal{N}}(R)\\propto R^{-1}, one can estimate the e^{\\pm} density in the outer magnetosphere as
+
+n_{0}(R)\\sim\\frac{\\dot{\\mathcal{N}}(R)}{cR^{2}}\\sim 10^{10}\\,R_{9}^{-3}\\left( \\frac{L_{\\rm keV}}{10^{35}\\,{\\rm erg/s}}\\right)\\,{\\rm cm}^{-3}. 
+
+Note that Eqs. (5) and (6) both give a density \\propto R^{-3}. Therefore, a convenient density parameter is
+
+\\mathcal{N}\\equiv n_{0}R^{3}. 
+
+Eqs. (5) and (6) give \\mathcal{N}\\sim 10^{32} and 10^{37}, respectively.
+
+### Bulk acceleration and compression
+
+Before discussing the scattering opacity of the plasma, it is useful to look at the response of the magnetosphere to a force exerted by the wave. The basic response is the sudden bulk acceleration and compression.
+
+The magnetic field B_{\\rm bg} plays a key role in the wave-plasma interaction (even when B_{\\rm bg}\\ll E_{0}). Without B_{\\rm bg}, an initially static e^{\\pm} plasma exposed to the ultrastrong radio burst would immediately develop outward bulk motion with a huge Lorentz factor \\gamma_{p}\\approx a_{0}(B21). Most of the radio wave would not even interact with the plasma, as the plasma would surf the leading front of the wave, unable to penetrate it. B_{\\rm bg}\\neq 0 plays a key role by arresting the ultra-relativistic bulk motion and so enforcing wave-plasma interaction. Larmor rotation of particles in B_{\\rm bg} effectively couples the plasma to the background magnetic field lines. On scales larger than the Larmor scale, the plasma behaves as an MHD fluid. This fluid still experiences some acceleration as it interacts with the wave, but now the bulk acceleration is controlled by the effective inertial mass of the magnetic field, B_{\\rm bg}^{2}/4\\pi c^{2}, which exceeds the plasma rest mass density n_{0}m_{e} by many orders of magnitude.
+
+The cross section for wave scattering will be defined in the fluid rest frame. We now evaluate the speed of this frame (plasma bulk speed \\beta_{p}=v_{p}/c) assuming \\mathbf{B}_{\\rm bg} perpendicular to the wave propagation direction (\\theta=\\pi/2). Extension to oblique \\mathbf{B}_{\\rm bg} is straightforward: one should make an additional Lorentz boost along \\mathbf{B}_{\\rm bg} such that the wave propagation becomes perpendicular to \\mathbf{B}_{\\rm bg} in the boosted frame.
+
+The MHD coupling implies that the momentum received by the plasma from the wave is shared with the background field, so there appears an outward Poynting flux \\mathbf{S}_{\\rm bg}=(c/4\\pi)\\hat{\\mathbf{E}}_{\\rm bg}\\times\\hat{\\mathbf{B}}_{\\rm bg} and the magnetic field lines begin to drift with speed \\beta_{\\rm bg}=\\hat{E}_{\\rm bg}/\\hat{B}_{\\rm bg}. Here, \\hat{\\mathbf{E}}_{\\rm bg} and \\hat{\\mathbf{B}}_{\\rm bg} are the new values of the background field, changed from the pre-wave values \\mathbf{B}_{\\rm bg} and \\mathbf{E}_{\\rm bg}=0. In the ideal MHD approximation, the plasma and the background field drift with equal speed,
+
+\\beta_{p}=\\beta_{\\rm bg}=\\frac{\\hat{E}_{\\rm bg}}{\\hat{B}_{\\rm bg}}. 
+
+Acceleration to \\beta_{p} is accompanied by compression,
+
+\\frac{\\hat{B}_{\\rm bg}}{B_{\\rm bg}}=\\frac{n}{n_{0}}=\\frac{1}{1-\\beta_{p}}. 
+
+The wave compresses the magnetosphere of radius R into a shell of thickness (1-\\beta_{p})R.
+
+Let {\\cal E} be the isotropic equivalent of the FRB energy and \\tau_{\\rm sc}<1 be the scattering optical depth encountered by the radio wave as it propagates out to a radius R. Momentum lost by the wave \\tau_{\\rm sc}{\\cal E}/c is mostly taken by the magnetospheric field, which dominates over plasma,
+
+(1-\\beta_{p})R\\,\\frac{S_{\\rm bg}}{c^{2}}\\approx\\frac{\\tau_{\\rm sc}{\\cal E}}{4 \\pi R^{2}c},  where S_{\\rm bg}/c^{2}=\\beta_{p}\\hat{B}_{\\rm bg}^{2}/4\\pi c is the momentum density of the background field. This gives the equation for \\beta_{p},
+
+\\frac{\\beta_{p}}{1-\\beta_{p}}\\approx\\frac{\\tau_{\\rm sc}{\\cal E}}{R^{3}B_{\\rm bg }^{2}}\\approx\\tau_{\\rm sc}\\,R_{0}^{3}\\,\\frac{{\\cal E}_{3g}}{\\mu_{33}^{2}}. 
+
+One can see that any significant scattering at R>10^{9}\\,{\\rm cm} is accompanied by sweeping the outer magnetosphere to a high Lorentz factor \\gamma_{p}=(1-\\beta_{p}^{2})^{-1/2}. This bulk acceleration must be self-consistently taken into account when calculating the wave scattering.
+
+The wave has a small duration T\\sim 1\\,{\\rm ms}\\ll R/c. The compressed magnetospheric shell crosses the wave and exits behind it on the timescale t_{\\rm cross}=T/(1-\\beta_{p}). As long as t_{\\rm cross}<R/c, the plasma is not stuck in a leading portion of the wave, and the entire wave interacts with the plasma. The condition t_{\\rm cross}<R/c is satisfied at
+
+R<R_{\\rm surf}\\approx 6\\times 10^{9}\\,\\tau_{\\rm sc}^{-1/2}\\,{\\cal E}_{3g}^{-1/ 2}T_{-3}^{-1/2}\\mu_{33}\\ {\\rm cm}. 
+
+For typical parameters, R_{\\rm surf} is comparable to R_{\\rm LC}, and t_{\\rm cross}<R/c is satisfied in the entire magnetosphere.
+
+### Scattering optical depth
+
+For a successfully escaping wave, the net energy lost to scattering {\\cal E}_{\\rm sc} must be small compared with the wave energy {\\cal E}=4\\pi R^{2}FT, where F=cE_{0}^{2}/8\\pi is its energy flux. The lost energy fraction may be written as
+
+\\tau_{\\rm sc}=\\frac{{\\cal E}_{\\rm sc}}{{\\cal E}}\\sim n_{0}R\\,\\sigma^{\\prime}_{ \\rm sc},\\qquad{\\cal E}=LT,  where n_{0} is the initial (pre-wave) plasma density, and \\sigma^{\\prime}_{\\rm sc} is the scattering cross section of e^{\\pm} measured in frame K^{\\prime} that moves with speed \\beta_{p} (the rest frame of the accelerated and compressed magnetospheric shell).
+
+Hereafter all quantities with primes refer to frame K^{\\prime}. In this frame, the background field is purely magnetic: {\\mathbf{B}}^{\\prime}_{\\rm bg}\\neq 0, {\\mathbf{E}}^{\\prime}_{\\rm bg}=0. Transformations of the wave frequency \\omega and field \\hat{B}_{\\rm bg} to frame K^{\\prime} give
+
+\\omega^{\\prime}=\\frac{\\omega}{\\gamma_{p}(1+\\beta_{p})},\\qquad\\omega^{\\prime}_{ B}=\\frac{\\hat{\\omega}_{B}}{\\gamma_{p}}=\\gamma_{p}(1+\\beta_{p})\\omega_{B}. 
+
+Wave strength parameter a^{\\prime}_{0}=a_{0} is Lorentz invariant.
+
+In frame K^{\\prime}, a minimum Lorentz factor developed by particles oscillating in the wave is \\gamma^{\\prime}\\sim a_{0}.1 Each particle emits curvature radiation with power {\\hat{\\cal E}}^{\\prime}_{e}={\\hat{\\cal E}}_{e}, which determines the effective scattering cross section \\sigma^{\\prime}_{\\rm sc}={\\hat{\\cal E}}_{e}/F^{\\prime}. To get an idea of the importance of scattering, one can start with a simple guess that particles in waves with E^{\\prime}_{0}\\gg B^{\\prime}_{\\rm bg} emit similarly to the known result at B^{\\prime}_{\\rm bg}=0: {\\hat{\\cal E}}_{e}\\sim e^{2}\\omega^{\\prime 2}\\gamma^{\\prime 4}\\sim e^{2}\\omega^{ \\prime 2}a_{0}^{4}, which gives \\sigma^{\\prime}_{\\rm sc}\\sim a_{0}^{2}\\sigma_{\\rm T} (Landau & Lifshitz, 1975). Then, one finds
+
+Footnote 1: \\omega^{\\prime}_{B}>\\omega^{\\prime} does not prevent particle acceleration by E^{\\prime}_{0}\\gg B^{\\prime}_{\\rm bg}. The wave accelerates the particle to a high \\gamma^{\\prime} and reduces its Larmor frequency \\omega^{\\prime}_{\\rm L}=\\omega^{\\prime}_{\\rm B}/\\gamma^{\\prime} before the particle has a chance to complete one gyration in B^{\\prime}_{\\rm bg} (B21).
+
+\\tau_{\\rm sc}\\sim\\frac{\\sigma^{\\prime}_{\\rm sc}{\\cal N}}{R^{2}}\\sim\\frac{3 \\times 10^{3}}{R_{9}^{4}}\\,\\frac{L_{42}}{\\nu_{9}^{2}}\\left(\\frac{\\sigma^{\\prime}_{ \\rm sc}}{a_{0}^{2}\\sigma_{\\rm T}}\\right){\\cal N}_{37}. 
+
+The actual effect of B^{\\prime}_{\\rm bg}\\ll E^{\\prime}_{0} on \\sigma^{\\prime}_{\\rm sc} is not small and can give \\sigma^{\\prime}_{\\rm sc}\\gg a_{0}^{2}\\sigma_{\\rm T} (Section 2.4). Furthermore, we will show below that even a much smaller n_{0}\\sim n_{\\rm co} ({\\cal N}\\sim 10^{32}) provides sufficient seeds for e^{\\pm} avalanche, which again leads to \\tau_{\\rm sc}\\gg 1.
+
+### Scattering cross section
+
+Cross section \\sigma^{\\prime}_{\\rm sc}={\\hat{\\cal E}}_{e}/F^{\\prime} expresses irreversible energy losses of the radio wave, caused by the radiative power {\\hat{\\cal E}}_{e} of each particle oscillating in it. The produced radiation has a huge characteristic frequency \\omega^{\\prime}_{e}\\approx a_{0}\\gamma^{\\prime 2}\\omega^{\\prime} (B21) and a small radiation formation length l^{\\prime}_{f}\\sim\\gamma^{\\prime 2}c/\\omega^{\\prime}_{e}\\sim(c/\\omega^{\\prime}a_{0}). The inter-particle distance l^{\\prime}\\sim n^{\\prime-1/3}\\approx 10^{-3}R_{9}(\\gamma_{p}{\\cal N}_{36})^{-1/3}\\,{ \\rm cm} is smaller than c/\\omega^{\\prime}, but far greater than c/\\omega^{\\prime}_{e}. The radiative process is not coherent -- each particle radiates \\gamma-rays independently (besides, the oscillation of the particles becomes incoherent when their orbits develop chaos, as described in B21). Therefore, \\sigma^{\\prime}_{\\rm sc} can be found by examining the behavior of a single particle in the wave.
+
+One can also verify that the plasma is unable to screen the radio wave, as the maximum electric current j^{\\prime}_{\\rm max}=cen^{\\prime} is far below the wave displacement current \\omega^{\\prime}E^{\\prime}_{0}/4\\pi. Their ratio equals (\\omega^{\\prime}_{p}/\\omega^{\\prime})^{2}(\\gamma^{\\prime}/a_{0}), where
+
+\\omega^{\\prime}_{p}=\\left(\\frac{4\\pi e^{2}n^{\\prime}}{m_{e}\\gamma^{\\prime}} \\right)^{1/2}  is the plasma frequency and n^{\\prime}=n/\\gamma_{p}=\\gamma_{p}(1+\\beta_{p})n_{0} is the particle density in frame K^{\\prime}. Any collective processes on the plasma timescale \\omega^{\\prime-1}_{p} are slow and negligible compared to wave scattering by individual particles. This is an interesting special feature of strong waves.
+
+B21 calculated the particle motion in frame K^{\\prime} and found \\sigma^{\\prime}_{\\rm sc} for two regimes (which approximately correspond to the olive and pink regions in Fig. 1):
+
+(I) If \\omega^{\\prime}_{B}<\\omega^{\\prime}, the particle motion is dominated by the \\omega^{\\prime}-oscillations in the wave. Then,
+
+\\frac{\\sigma^{\\prime}_{\\rm sc}}{a_{0}^{2}\\sigma_{\\rm T}}\\approx\\left\\{\\begin{array}[ ]{ll}1&\\quad a_{0}<a^{\\prime}_{1}\\\\ (a_{0}/a^{\\prime}_{1})^{-0.6}&\\quad a_{0}>a^{\\prime}_{1}\\end{array}\\right. 
+
+a^{\\prime}_{1}\\equiv\\left(\\frac{c}{r_{e}\\omega^{\\prime}}\\right)^{1/4}\\sim 3 \\times 10^{3},\\qquad r_{e}\\equiv\\frac{e^{2}}{m_{e}c^{2}}. (II) If \\omega^{\\prime}_{B}>\\omega^{\\prime} and the wave has strength a_{0}<a^{\\prime}_{*}\\approx(c\\,\\omega^{\\prime 2}_{B}/r_{e}\\omega^{\\prime 3})^{1/5}, the particle motion becomes simple Larmor rotation in B^{\\prime}_{\\rm bg} with frequency \\omega^{\\prime}_{\\rm L}=\\omega^{\\prime}_{B}/\\gamma^{\\prime}<\\omega^{\\prime} (with superimposed subdominant \\omega^{\\prime}-oscillations in the wave). The Larmor rotation is pumped because the particle experiences a resonance with the wave every Larmor period, as shown in detail in B21. As a result, the particle's Lorentz factor is quickly pushed to the radiation reaction limit (RRL),
+
+\\gamma^{\\prime}_{\\rm RRL}\\approx\\left(\\frac{c}{r_{e}\\omega^{\\prime}a_{0}} \\right)^{3/8}\\left(\\frac{\\omega^{\\prime}_{B}}{\\omega^{\\prime}}\\right)^{1/4},  and the resulting scattering cross section is
+
+\\frac{\\sigma^{\\prime}_{\\rm sc}}{\\sigma_{\\rm T}}\\sim\\gamma^{\\prime 2}_{\\rm RRL }\\approx 2\\times 10^{8}\\,\\frac{[\\gamma_{p}(1+\\beta_{p})]^{7/4}\\mu_{33}^{1/2}} {R_{9}^{3/4}L_{42}^{3/8}\\nu_{9}^{1/2}}. 
+
+The condition a_{0}<a^{\\prime}_{*} implies \\sigma^{\\prime}_{\\rm sc}\\gg a_{0}^{2}\\sigma_{\\rm T}. It is satisfied for FRBs with L\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$<$}}{\\lower 2.1973pt\\hbox{$ \\sim$}}}10^{41}\\gamma_{p}^{2} erg/s, as seen from the relation
+
+\\frac{a^{\\prime}_{*}}{a_{0}}\\approx\\frac{\\gamma_{p}(1+\\beta_{p})}{2.3}\\,\\frac {\\mu_{33}^{2/5}\\nu_{9}^{2/5}}{R_{9}^{1/5}L_{42}^{1/2}}. 
+
+These results for \\sigma^{\\prime}_{\\rm sc} hold for a wave packet with a characteristic frequency \\omega (numerical examples in B21 used a modulated sine wave). Note also that the approximate Eqs. (17) and (20) do not match at \\omega^{\\prime}_{B}=\\omega^{\\prime} -- there is a sharp change of \\sigma^{\\prime}_{\\rm sc} across this transition.
+
+The above expressions for \\sigma^{\\prime}_{\\rm sc} assume that the radio wave propagates with vacuum speed c. Deviations from c are small, as follows from the dispersion relation \\omega^{\\prime 2}=c^{2}k^{\\prime 2}+\\omega^{\\prime 2}_{p}, where k^{\\prime} is the wavenumber of a Fourier mode.2 Phase speed v^{\\prime}_{\\rm ph}=\\omega^{\\prime}/k^{\\prime}>c and group speed v^{\\prime}_{\\rm gr}=d\\omega^{\\prime}/dk^{\\prime}<c are related by v^{\\prime}_{\\rm ph}v^{\\prime}_{\\rm gr}=c^{2}, and their deviations from c are small if \\gamma^{\\prime}_{\\rm gr}\\equiv(1-v^{\\prime 2}_{\\rm gr}/c^{2})^{-1/2}\\gg 1. In particular, in regime II we find (using \\gamma^{\\prime}\\sim\\gamma^{\\prime}_{\\rm RRL}):
+
+Footnote 2: Density n^{\\prime}_{\\rm p} and the corresponding \\omega^{\\prime}_{p} are not modulated by Larmor rotation in B_{\\rm bg} even in regime II, where particle motion is dominated by gyration with \\omega^{\\prime}_{\\rm L}\\ll\\omega^{\\prime}. The plasma accelerated in the wave initially forms a thin stream in the phase space, but it quickly broadens as particles develop chaos in \\gamma^{\\prime} (B21).
+
+\\gamma^{\\prime}_{\\rm gr}\\approx\\frac{\\omega^{\\prime}}{\\omega^{\\prime}_{p}} \\sim\\frac{5\\times 10^{3}\\,\\mu_{33}^{3/8}\\,\\nu_{9}^{5/8}}{\\tau_{\\rm sc}^{1/2} \\,[\\gamma_{p}(1+\\beta_{p})]^{3/16}R_{9}^{1/16}L_{42}^{9/32}},  where we substituted n_{0}=\\tau_{\\rm sc}/R\\sigma^{\\prime}_{\\rm sc} and \\sigma^{\\prime}_{\\rm sc}\\sim\\gamma^{\\prime 2}_{\\rm RRL}\\sigma_{\\rm T}. The huge \\gamma^{\\prime}_{\\rm gr} at \\tau_{\\rm sc}=1 shows that scattering of the wave is a much stronger effect than dispersion. (Strong dispersion of the wave packet would require time \\sim\\gamma^{\\prime}_{\\rm gr}T^{\\prime}, far exceeding the burst age in frame K^{\\prime}, t^{\\prime}\\sim R/\\gamma_{p}.) It also justifies the use of v^{\\prime}_{\\rm ph}=c in the calculation of \\sigma^{\\prime}_{\\rm sc}.
+
+## 3 Avalanche of pair creation
+
+A magnetospheric particle exposed to the strong radio wave radiates the power {\\cal E}_{e}=\\sigma^{\\prime}_{\\rm sc}F^{\\prime} in photons with characteristic frequency \\omega^{\\prime}_{c}=(3/2)\\gamma^{\\prime 3}c/r^{\\prime}_{c}, where r^{\\prime-1}_{c}=(3\\dot{\\cal E}_{c}/2ce^{2}\\gamma^{\\prime 4})^{1/2} is the curvature of the particle's trajectory. Using the results of B21, we find in regime I:
+
+\\epsilon^{\\prime}_{c}\\equiv\\frac{\\hbar\\omega^{\\prime}_{c}}{m_{e}c^{2}}\\approx \\,a_{0}^{3}\\,\\frac{\\hbar\\omega^{\\prime}}{m_{e}c^{2}}\\approx\\frac{100}{\\gamma_ {p}(1+\\beta_{p})}\\frac{L_{3}^{3/2}}{R_{9}^{3}\\nu_{9}^{2}},  and in regime II:
+
+\\epsilon^{\\prime}_{c}\\approx\\frac{1}{\\alpha}\\left(\\frac{r_{e}\\omega^{\\prime 2 }_{B}a_{0}}{c\\omega^{\\prime}}\\right)^{1/4}\\approx 44\\,\\frac{[\\gamma_{p}(1+\\beta_{p})]^{3/4} \\mu_{33}^{1/2}L_{42}^{1/8}}{R_{9}^{7/4}\\nu_{9}^{1/2}},  where \\alpha=e^{2}/\\hbar c. We conclude that the wave generates \\gamma-rays with \\epsilon^{\\prime}_{c}\\gg 1. Their spectrum has a peak with a half-width extending from 0.01\\epsilon^{\\prime}_{c} to 1.5\\epsilon^{\\prime}_{c} (e.g. Longair 2011). This broad peak extends over the MeV band where photon-photon collisions \\gamma+\\gamma\\to e^{+}+e^{-} occur with cross section \\sigma^{\\prime}_{\\gamma\\gamma}\\sim 0.1\\sigma_{\\rm T}.
+
+It is convenient to view e^{\\pm} creation in frame K^{\\prime}, where the emitted \\gamma-rays are quasi-isotropic.3 The energy emitted as the wave expands to radius R, {\\cal E}^{\\prime}_{\\rm sc}={\\cal E}_{\\rm sc}/\\gamma_{p} occupies radial thickness \\Delta R^{\\prime}\\sim R/\\gamma_{p}, so the \\gamma-rays have energy density
+
+U^{\\prime}_{\\gamma}\\approx\\frac{\\tau_{\\rm sc}\\mathcal{E}}{4\\pi R^{3}}. 
+
+They exit behind the wave on a timescale comparable to the wave duration T^{\\prime}=\\gamma_{p}(1+\\beta_{p})T, and a fraction of \\gamma-rays convert to e^{\\pm} pairs before exiting. The number of converting \\gamma-rays per primary particle is
+
+\\mathcal{M}_{\\pm}=\\frac{\\bar{\\sigma}^{\\prime}_{\\gamma\\gamma}U^{\\prime}_{\\gamma }cT^{\\prime}}{m_{e}c^{2}}\\frac{\\dot{\\mathcal{E}}_{\\rm c}T^{\\prime}}{m_{e}c^{2} }\\approx\\zeta\\,\\frac{cT}{R}\\frac{\\sigma^{\\prime}_{\\rm sc}}{\\sigma_{\\rm T}}\\, \\ell^{2}\\,\\tau_{\\rm sc},  where
+
+\\ell\\equiv\\frac{\\sigma_{\\rm T}\\mathcal{E}}{4\\pi R^{2}m_{e}c^{2}}\\approx 66\\, \\frac{\\mathcal{E}_{39}}{R_{9}^{2}},  and \\bar{\\sigma}^{\\prime}_{\\gamma\\gamma}=\\zeta\\,\\sigma_{\\rm T} is an effective cross section for \\gamma\\gamma collisions. The numerical factor \\zeta may be found by integrating the \\gamma\\gamma reaction rate over the spectrum of curvature emission. It depends on \\epsilon^{\\prime}_{c} and varies around \\zeta\\sim 10^{-2} at radii where \\epsilon^{\\prime}_{c}>1.
+
+The e^{\\pm} created by \\gamma-rays oscillate in the wave and emit secondary \\gamma-rays just like the primary particles do. An avalanche of e^{\\pm} creation develops if \\mathcal{M}_{\\pm}\\gg 1, boosting the plasma density by e^{\\mathcal{M}_{\\pm}}. One can see that \\mathcal{M}_{\\pm} is large, even if one chooses a low density n_{0}=n_{\\rm co},
+
+\\mathcal{M}_{\\pm}\\sim\\frac{10^{8}\\zeta}{R_{9}^{7}}\\;\\mathcal{E}_{39}^{2}\\,T_{- 3}\\,\\sigma_{8}^{2}\\,\\mathcal{N}_{32}\\gg 1,  where \\sigma_{8}=\\sigma^{\\prime}_{\\rm sc}/10^{8}\\sigma_{\\rm T}. The wave becomes immersed in the exponentially enriched e^{\\pm} plasma with \\tau_{\\rm sc}\\gg 1.
+
+## 4 Discussion
+
+We have found \\tau_{\\rm sc}\\gg 1 for FRBs emitted deep inside the magnetosphere and attempting to escape through the outer magnetosphere. This result is obtained for a given strong radio burst, not including the feedback of energy losses on its luminosity L. In reality the burst luminosity must drop to satisfy \\tau_{\\rm sc}\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$<$}}{\\lower 2.1973pt \\hbox{$\\sim$}}}1, respecting energy conservation \\mathcal{E}_{\\rm sc}\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$<$}}{ \\lower 2.1973pt\\hbox{$\\sim$}}}\\mathcal{E}. Alternatively, the condition \\tau_{\\rm sc}(L,R)\\sim 1 may be used to define a minimum emission radius for a given L. Our results imply that observed FRBs cannot be released deep inside the magnetospheres of magnetars, at radii R\\ll 10^{10}\\,cm. This constraint is based on established laws of electrodynamics and should be robust.
+
+The constraint should hold for FRBs with any temporal structure, including double FRBs. The first burst will accelerate and displace the outer magnetosphere outside R\\sim 10^{9}\\,cm (Eq. 11). Yet, this displacement creates no holes that could save the second burst from scattering -- it still must pass through the quasi-static magnetosphere just outside R_{0} and then through the expanding layers at R\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$>$}}{\\lower 2.1973pt\\hbox{$\\sim$ }}}10^{9}\\,cm. Note that the magnetospheric outflow launched by the scattering of the first FRB has a smooth radial profile: its speed increases from v_{p}\\approx 0 in the inner layers to v_{p}\\sim c in the outer layers, and such smooth outflows do not develop holes. In addition, the outflow will get loaded with e^{\\pm} plasma created by \\gamma-rays trailing the first FRB. Then, the perturbed magnetosphere will begin to relax toward a new equilibrium. Thus, the burst will fail to clear out an escape route and save subsequent FRBs from scattering.
+
+Interestingly, lowering L may not help FRBs escape, because \\sigma^{\\prime}_{\\rm sc}\\propto L^{-3/8}_grows_ at lower L (Eq. 20), and \\epsilon^{\\prime}_{c}\\propto L^{1/8} weakly changes. The main helping effect of lowering L is the growth of R_{0}\\propto L^{-1/4} (Fig. 1). When L\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$<$}}{\\lower 2.1973pt\\hbox{$\\sim$ }}}10^{36}\\,erg/s, R_{0} reaches \\sim 10^{10}\\,cm, the zone of strong particle acceleration 1<a_{0}<\\omega_{B}/\\omega disappears, and the wave scattering practically vanishes. The FRBs detected from SGR 1935+2154 are close to this transition.
+
+We conclude that the scenario of a radio source confined in the inner magnetosphere is not satisfactory for FRBs in a broad range of observed luminosities. A remaining possibility for FRB emission by magnetars is a magnetic explosion -- the ejection of a large-scale electromagnetic pulse from the inner magnetosphere. The pulse has a size of 10^{7}-10^{8}\\,cm and is much more energetic than the observed GHz burst. Beloborodov (2017, 2020) proposed that the pulse drives an ultra-relativistic shock in the magnetar wind and the shock emits coherent radio waves by the synchrotron maser mechanism. A version of this model (a shock striking slow ion ejecta) was developed by Metzger et al. (2019). Alternatively, Lyubarsky (2014, 2020) argued that the ejected pulse will freely propagate through the magnetar wind, like a vacuum electromagnetic wave (this can happen under certain conditions which will be discussed elsewhere). The field in the pulse is expected to have small-scale perturbations, and they may be released at a large radius as escaping radio waves (Lyubarsky, 2020).
+
+Calculations of wave scattering in this _Letter_ focused on the closed magnetosphere at R<R_{\\rm LC}. In a similar way, one can evaluate \\tau_{\\rm sc} in the wind at radii R\\gg R_{\\rm LC}, where n_{0}\\sim\\mathcal{N}/R_{\\rm LC}R^{2}, B_{\\rm kg}\\approx\\mu/R_{\\rm LC}^{2}R, and scattering occurs in regime I (\\omega^{\\prime}_{B}<\\omega^{\\prime}) with \\sigma^{\\prime}_{\\rm sc}\\approx a_{0}^{2}\\sigma_{\\rm T}. With increasing radius, \\hbar\\omega^{\\prime}_{c}\\approx a_{0}^{3}\\hbar\\omega^{\\prime} quickly falls below m_{e}c^{2}, so secondary e^{\\pm} creation becomes suppressed, and one finds
+
+\\tau_{\\rm sc}\\sim\\frac{a_{0}^{2}\\sigma_{\\rm T}\\mathcal{N}}{R_{\\rm LC}R}\\approx \\frac{0.7\\,L_{42}\\mathcal{N}_{37}}{R_{10}^{3}\\nu_{9}^{2}(P/1\\,{\\rm s})}\\quad( R>10^{10}\\,{\\rm cm}). 
+
+In particular, \\tau_{\\rm sc} is negligible if the observed FRBs are emitted by blast waves in the magnetar wind, which generate coherent radio emission at R\\sim 10^{13}-10^{14}\\,cm, although _induced_ scattering could still be important in this model (Beloborodov, 2020).
+
+I thank Yuri Levin, Brian Metzger, and the referee for comments which helped improve the manuscript. This work is supported by NSF grant AST 2009453, Simons Foundation grant #446228, and the Humboldt Foundation.

@@ -1,0 +1,153 @@
+###### Abstract
+
+We present the results of a search in LIGO O2 public data for continuous gravitational waves from the neutron star in the low-mass X-ray binary Scorpius X-1. We search for signals with \\approx constant frequency in the range 40-180 Hz. Thanks to the efficiency of our search pipeline we can use a long coherence time and achieve unprecedented sensitivity, significantly improving on existing results. This is the first search that has been able to probe gravitational wave amplitudes that could balance the accretion torque at the neutron star radius. Our search excludes emission at this level between 67.5 Hz and 131.5 Hz, for an inclination angle 44^{\\circ}\\pm 6^{\\circ} derived from radio observationsticularly if accreting material is channeled unevenly onto the surface by the star's magnetic field. This can lead to thermal and compositional gradients in the crust that generate a crustal'mountain' (Bildsten, 1998; Ushomirsky et al., 2000; Haskell et al., 2006; Singh et al., 2020). Accretion-induced deformation of the star's magnetic field might also result in asymmetries (Melatos & Payne, 2005; Vigelius & Melatos, 2009). Accretion could also drive the excitation of some kind of internal oscillation that results in gravitational wave emission (Andersson et al., 1999; Haskell, 2015). Uncertainty about the accretion process and the stellar response makes it hard to compute firm estimates for the expected size of the resulting ellipticities, but they could be large enough for the resulting gravitational wave emission to be detectable with the current generation of detectors (Lasky, 2015).
+
+What effect might such a gravitational wave torque have on an accreting neutron star? It has long been noted (Papaloizou & Pringle, 1978; Wagoner, 1984) that neutron stars in low mass X-ray binaries, in spite of having accreted matter for millions of years, spin well below the maximum possible spin frequency (Cook et al., 1994; Haensel et al., 2009), with the fastest accreting neutron star spinning at 620 Hz (Hartman et al., 2003; Patruno & Watts, 2012; Watts, 2012; Patruno et al., 2017). Since gravitational wave torques scale with a high power of the frequency, as the spin rate increases, they naturally provide a mechanism that kicks-in more strongly than other mechanisms, preventing further spin-up. This has led to the idea of torque balance, where gravitational wave and accretion torques reach equilibrium, preventing further spin-up and ensuring continuous gravitational wave emission (Bildsten, 1998). Indeed Gittins & Andersson (2019) have shown that a synthetic population of neutron stars evolved without the gravitational wave torque contribution does not produce the observed spin distribution.
+
+The accretion torque on a neutron star having mass M is
+
+N_{\\rm acc}=\\dot{M}\\sqrt{GMr_{m}},  where G is the gravitational constant, r_{m} is the torque arm and \\dot{M} the accretion rate. The correct value to use for r_{m} is not known a priori, but is typically assumed to be either the neutron star radius R or the radius at which the star's magnetic field starts to disrupt the accretion flow.
+
+The maximum accretion luminosity is \\frac{GM\\dot{M}}{R}. If some fraction X of this is radiated away by an X-ray flux F_{X} observed at a distance d, then
+
+X\\frac{GM\\dot{M}}{R}=4\\pi d^{2}F_{X}\\rightarrow\\dot{M}=\\frac{1}{X}\\frac{4\\pi d ^{2}F_{X}R}{GM}. 
+
+The gravitational wave intrinsic amplitude h_{0} at a distance d, for a gravitational wave signal at twice the spin frequency of the star (which is the case if the ellipticity is caused by a magnetic or crustal mountain) and balancing the accretion torque, is
+
+h_{0}^{torq.bal.}=\\sqrt{\\frac{5G}{2\\pi^{2}c^{3}}\\frac{\\dot{E}_{\\rm GW}}{d^{2} f_{\\rm GW}^{2}}}\\ \\ {\\rm with}\\ \\ \\dot{E}_{\\rm GW}=\\pi f_{\\rm GW}N_{\\rm acc},  where f_{\\rm GW} is the gravitational wave frequency. Substituting Eq. 1 and 2 in Eq. 3 one finds
+
+h_{0}^{torq.bal.}=\\sqrt{\\frac{10}{Xc^{3}}\\frac{F_{X}R}{f_{\\rm GW }}}\\sqrt{\\frac{Gr_{m}}{M}}=  =3.4\\times 10^{-26}\\left(\\frac{1.4\\,M_{\\odot}}{M}\\right)^{\\frac{1}{ 4}}\\left(\\frac{r_{m}}{10\\,{\\rm km}}\\right)^{\\frac{1}{4}}\\times \\times\\left(\\frac{F_{X}/X}{3.9\\times 10^{-7}\\,{\\rm erg}\\ {\\rm cm}^{- 2}{\\rm s}^{-1}}\\right)^{\\frac{1}{2}}\\left(\\frac{R}{10\\,{\\rm km}}\\right)^{\\frac {1}{2}}\\left(\\frac{600\\,{\\rm Hz}}{f_{\\rm GW}}\\right)^{\\frac{1}{2}}.
+
+We note that Eq. 15 in Abbott et al. (2019) and Eq. 10 in Abbott et al. (2017) are incorrect and yield the correct numerical value only if r_{m}=R. In those papers such mistake propagates to the Alfven radius torque balance amplitude curve of Fig. 5 (yellow curve in Abbott et al., 2019), which is over-estimated. This in turn makes it look like the constrained inclination angle upper limits from that search (for \\iota=\\iota_{\\rm orb}\\ \\approx 44^{\\circ}) probe the Alfven radius torque balance limit, when in fact they do not.
+
+For ease of notation we define
+
+\\begin{cases}M_{1}=\\left(\\frac{M}{1.4\\,M_{\\odot}}\\right)\\\\ R_{1}=\\left(\\frac{R}{10\\,{\\rm km}}\\right)\\\\ r_{m1}=\\left(\\frac{r_{m}}{10\\,{\\rm km}}\\right)\\\\ B_{1}=\\left(\\frac{R}{10^{9}\\,\\,{\\rm G}}\\right)\\\\ f_{\\rm GW1}=\\left(\\frac{f_{\\rm GW}}{600\\,{\\rm Hz}}\\right)\\\\ F_{X1}=\\left(\\frac{F_{X}}{3.9\\times 10^{-7}\\,\\,{\\rm erg}\\ {\\rm cm}^{-2}{\\rm s}^{-1}} \\right)\\\\ d_{1}=\\left(\\frac{d}{2.8{\\rm kpc}}\\right)\\end{cases}  and re-write Eq. 4 as
+
+\\begin{split} h_{0}^{torq.bal.}=&\\,3.4\\times 10^{-26}\\,X^{- \\frac{1}{2}}\\\\ M_{1}^{-\\frac{1}{4}}\\,r_{m1}^{\\frac{1}{4}}\\,F_{X1}{}^{\\frac{1}{2}}\\,R_{1} ^{\\frac{1}{2}}\\,f_{\\rm GW1}{}^{-\\frac{1}{2}}.\\end{split} 
+
+Scorpius X-1 (Sco X-1) is the brightest persistent X-ray source after the Sun and hence, given the scaling of gravitational wave amplitude with X-ray flux, it is a particularly promising continuous wave source. The flux value of 3.9\\times 10^{-7}\\,\\rm erg/cm^{2}/s used in Eq. 4 is the long-term average X-ray luminosity of Sco X-1 measured from Earth (see Watts et al., 2008, for details of how this value was derived1). This value yields a torque balance h_{0} well within the reach of searches for continuous waves from known pulsars (Abbott et al., 2019, 2020; Nieder et al., 2019, 2020).
+
+Footnote 1: The flux of Sco X-1 during the O2 observations was comparable to the earlier observations used to generate the flux estimate, see [http://maxi.riken.jp/star_data/J1619-156/J1619-156.html](http://maxi.riken.jp/star_data/J1619-156/J1619-156.html).
+
+Many searches have targeted continuous gravitational wave emission from Sco X-1 (Meadors et al., 2017; Abbott et al., 2017; Abbott et al., 2017; Abbott et al., 2017; Abbott et al., 2017), but none have yet been sensitive enough to probe the torque balance amplitudes of Eq. 4. This is because in contrast to the known pulsars targeted in Abbott et al. (2019, 2020); Nieder et al. (2019, 2020), the rotation frequency and frequency derivative of the Sco X-1-neutron star, as well as some binary parameters, are unknown. This means that a broad range of waveforms must be tested against the data, and this degrades the attainable sensitivity, through the increased trials factor.
+
+Another aspect that makes the Sco X-1 signal search challenging is its computational cost: as illustrated in Watts et al. (2008) our ignorance of the system parameters results in a parameter space so broad that the most sensitive search method, a coherent matched filter over the entire observation time, is computationally prohibitive. This is a frequent predicament in searches for continuous gravitational waves and the standard solution is to adopt semi-coherent search methods, where one trades sensitivity in favour of computational efficiency (Messenger et al., 2015; Dergachev & Papa, 2019).
+
+In semi-coherent searches the observation time is partitioned in segments spanning the same duration. If data from several instruments is used, these partitions are \\approx coincident in time. The most important quantity is the duration of such partitions, T_{\\rm coh}. The larger T_{\\rm coh} is, the more sensitive and the more computationally expensive the search is going to be.
+
+We use for this search a cross-correlation method (Whelan et al., 2015, and references therein). Thanks to the much improved computational efficiency of our new search (Meadors et al., 2018), we are able to use a significantly longer T_{\\rm coh} than ever used before and reach unprecedented levels of sensitivity. In particular for the first time a search is sensitive to signals at the torque balance limit at both the stellar radius and for reasonable estimates of the magnetospheric radius.
+
+## 2 The search
+
+We use LIGO O2 open data from the Hanford and Livingston detectors (LIGO, 2019; Vallisneri et al., 2015) between GPS time 1167984930 (January 2016) and GPS time 1187733514 (August 2016). Overall we have 5090 hours of data, 2496  from Livingston and 2594  from Hanford.
+
+We search for a nearly monochromatic signal from the neutron star in Sco X-1 - below we qualify this assumption further. At the detector the signal appears frequency-modulated due to the relative motion between the star and the detector, and amplitude-modulated due to the sensitivity-response of the detectors, which depends on the line-of-sight direction and hence for a fixed source changes with time. If all the source parameters were known, the gravitational waveform at the detector would also be known, and the search would be a perfectly matched filter, like those carried out for known pulsars. This is not the case.
+
+The low-mass X-ray binary (LMXB) Sco X-1 consists of a 1.4^{+1.4}_{-0.5}M_{\\odot} neutron star and a 0.7^{+0.8}_{-0.3}M_{\\odot} companion star (Wang et al., 2018, 95% confidence intervals). No accretion-powered pulsations or thermonuclear burst oscillations have been so far detected from the neutron star, so its spin frequency is unknown. The orbital parameters projected semi-major axis, a\\sin i, time of ascending nodes, T_{\\rm asc}, and orbital period, P_{\\rm orb}, are constrained within ranges larger than our search resolution on those parameters, so these need to be explicitly searched (Wang et al., 2018).
+
+The search parameters are given in Table 1. We search for gravitational wave signal frequencies between 40 Hz and 180 Hz. The computational cost per unit frequency interval is smaller at lower frequencies, so concentrating computational resources in the lower frequency range makes for the highest return in sensitivity. In fact this is the frequency range in which we can match the torque balance limit, even with an unrestricted prior on the star's inclination angle.
+
+We do not explicitly search over frequency derivatives, reflecting the assumption that the system is close to equilibrium. With our search set-up we have measured an average loss in SNR at the 15% level for gravitational wave first frequency derivative |\\dot{f}_{\\rm GW}|\\simeq 2\\times 10^{-13} Hz/s. This sets the scale for the maximum rate of change of the spin frequency that would not affect our ability to detect a signal, at |\\dot{f}_{\\rm spin}|\\lesssim 1\\times 10^{-13} Hz/s. We recall that for crustal mountains f_{\\rm GW}=2f_{\\rm spin}.
+
+The orbital parameter ranges are taken from Table 2 of Wang et al. (2018). T_{\\rm asc} is propagated to 1178556229 GPS which is \\approx the weighted middle of the LIGO data observation span. We note that this is 206 epochs after the T_{\\rm asc} in (Abbott et al., 2019). Following Eq. 5 of Galloway et al. (2014), we expand the uncertainty associated with T_{\\rm asc} to 139  seconds and then consider the 3\\sigma confidence interval.
+
+The grid spacings in every dimension d\\lambda are chosen so that the loss due to signal-template mismatch is at the m=25\\% level. The spacings are estimated based on the metric g_{\\lambda\\lambda} as d\\lambda=\\sqrt{\\frac{m}{g_{\\lambda\\lambda}}}. Expressions for the metric can be found in Whelan et al. (2015). This approach results in an overestimate of the actual mismatch (Allen, 2019), and in fact we measure an overall average SNR loss of 16%. The grid spacings are given in Table 1.
+
+Our search employs a fixed T_{\\rm coh}\\simeq 19 hrs, which is a factor of 4.5 (10) longer than the longest (shortest) baseline used by Abbott et al. (2017). This choice, enabled by the efficiency of our code (see Section 1) is the reason for the higher sensitivity of our search.
+
+We consider search results with detection statistic values above the expected Gaussian-noise fluctuations. Since the number of searched waveforms increases with frequency, noise fluctuations alone produce higher fluctuations at higher frequencies. For this reason our threshold for candidate consideration is not constant but rather increases with frequency.
+
+We find over 97 million results above the threshold. As often happens in this type of search, these results are not uniformly distributed in frequency but tend to come in groups, with the elements of each group having similar signal frequency, and due to the same root cause. We cluster these together and examine each cluster. We find 32  such groups, which we will refer to as "outlier clusters". 23  of them are associated with known spectral contaminations (Covas et al., 2018). The rest of the clusters are discarded based on cross-checking the multi-detector detection statistics with the single-detector statistics: When an outlier is due to a disturbance in one of the detectors, the single-detector statistics will often be larger than the multi-detector one. On the contrary a signal produces a higher value when the data from both detectors is used. Most of these discarded clusters also present a range of signal frequencies with enhanced values of the detection statistic, that is much larger than it would be for a signal. The complete list of outlier clusters is given in Table 2.
+
+## 3 Results
+
+### Upper limits on GW amplitude
+
+As no significant candidate is found, we set upper limits at the 95% confidence level, on the gravitational wave intrinsic amplitude h_{0}^{95\\%} at the detectors, in half-Hz bands. The upper limits are determined by adding fake signals with a fixed amplitude h_{0} to the data, and by measuring the detection efficiency, C(h_{0}). The detection criterion is determined by the value of the detection statistic of the most significant result in the band. The procedure is repeated for various values of h_{0} and a sigmoid fit is used to determine the value corresponding to 95% confidence: C(h_{0}^{95\\%})=.95(Fesik & Papa, 2020).
+
+Two sets of upper limits are derived, reflecting two assumptions: 1) an arbitrary value of the inclination angle, with \\cos\\iota uniformly distributed -1\\leq\\cos\\iota\\leq 1, and 2) the inclination angle \\iota is equal to the orbital inclination angle and hence drawn from a Gaussian distribution with mean 44^{\\circ} and standard deviation 6^{\\circ}(Fomalont et al., 2001; Wang et al., 2018). The latter scenario is equivalent to assuming that the spin axis of the neutron star is perpendicular to the orbital plane. The \\iota=44^{\\circ}\\pm 6^{\\circ} is a more favourable inclination than average for coupling to the gravitational wave detector (Jaranowski et al., 1998, see for instance Eq.s 21 and 22 ) and the resulting upper limits are a factor \\approx 1.7 smaller than those for arbitrary orientation.
+
+Both upper limits are plotted in Fig. 1 and provided in machine-readable format in Zhang et al. (2020, and Suppl. Mat.). For comparison Fig. 1 also shows upper limits from a previous cross-correlation search on O1 LIGO data (Abbott et al., 2017) and from a recent Viterbi algorithm search on the same O2 data that we use (Abbott et al., 2019). The most sensitive of the two searches is the Abbott et al. (2017) search. It employed variable coherence lengths, with longer T_{\\rm coh} in the low frequency range, which explains why at lower frequency it is comparatively more sensitive than at higher frequency. The Abbott et al. (2019) search is less sensitive than a cross-correlation search but is more robust to de
+
+\\begin{table}
+
+\\begin{tabular}{c c c} \\hline \\hline  Parameter & Range & Grid spacing \\\\ \\hline f_{\\rm GW} (Hz) & [40, 180] & \\sim 2\\times 10^{-6} \\\\ a\\sin i (lt-s) & [1.45, 3.25] & \\sim\\frac{0.17\\ [{\\rm lt}_{\\rm s}\\,{\\rm Hz}]}{f_{\\rm GW}} \\\\ T_{\\rm asc} (GPS s)a  & 1178556229 \\pm 3\\times 139 & \\sim\\frac{1576\\ [{\\rm lt}_{\\rm GW}\\,{\\rm s}\\sin i}{f_{\\rm GW}\\,{\\rm s}\\sin i} \\\\ P_{\\rm orb} (s) & 68023.86 \\pm 3\\times 0.04 & \\sim\\frac{18\\ [{\\rm lt}_{\\rm s}]}{f_{\\rm GW}\\,{\\rm a}\\sin i} \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Waveform parameter rangesviations of the signal waveform from the assumed model (Suvorova et al., 2016, 2016). In particular the method of Abbott et al. (2019) is robust with respect to loss of phase coherence in the signal.
+
+One of the ways in which the signal could lose phase coherence with respect to the template waveforms of the search is through spin-wandering. This is a non-deterministic "jitter" in the spin of star, caused, for instance, by small changes in the mass accretion rate. The resulting frequency variation depends on the accretion torque, hence on the spin frequency of the star, its moment of inertia, the ratio between the torque arm and the co-rotation radius and the mass accretion rate.
+
+Based on RXTE/ASM observations of Sco X-1, Mukherjee et al. (2018) have explored different system-parameter combinations and the gravitational wave fre quency changes that may accumulate over different observation periods, due to spin wandering. Their results indicate that, in our frequency range, the maximum frequency change during an observation time of 2\\times 10^{7} s (our observation time) is less than 2\\,\\muHz (our frequency resolution) for the vast majority of the simulated systems. This means that the sensitivity of this search should not be impacted by spin-wandering effects.
+
+Our results improve on existing ones by more than a factor \\approx 1.8. This is an extremely large sensitivity improvement in a large parameter space search like this one. For instance consider that in a broad all-sky search on O2 data, Abbott et al. (2019c) improve over the most sensitive results on O1 data (Dergachev & Papa, 2019) by a factor of \\approx 1.1.
+
+### Interpretation in terms of torque balance model
+
+Our results are also remarkable in absolute terms because they probe gravitational wave amplitudes that could support emission at the torque balance level. It is the first time that this milestone is reached.
+
+From Eq.s 4 or 6 we see that the torque balance gravitational wave amplitude depends on the torque arm and it is smallest at the star surface. If this minimum torque balance amplitude is _larger_ than our h_{0}^{95\\%} upper limits it means that our search should have detected a signal; The fact that it has not, means that we can exclude such mass-radius combination:
+
+[M_{1}^{-\\frac{1}{4}}R_{1}^{\\frac{3}{4}}]^{\\rm excl}\\geq X^{\\frac{1}{2}}\\frac {h_{0}^{95\\%}}{3.4\\times 10^{-26}}f_{\\rm GW_{1}}^{\\frac{1}{2}}F_{1}^{-\\frac{1}{ 2}}. 
+
+The lower panel of Figure 4 shows the mass-radius regions excluded by the \\iota\\approx 44^{\\circ} gravitational wave upper limits for f_{\\rm GW}=117.5 Hz and X=1.
+
+If the torque arm is larger than the star radius, the torque balance amplitude increases, and our gravitational wave upper limits constrain the magnetic field strength of the mass-radius combinations not excluded by 7. We illustrate this point in the next paragraphs.
+
+We take the torque arm to be at the magnetospheric radius r_{m}=\\max(\\xi r_{A},R), with 0.5\\leq\\xi\\leq 1 and r_{A} the Alfven radius
+
+r_{A}=25.6\\,X^{\\frac{2}{7}}\\,B_{1}{}^{\\frac{4}{7}}\\,R_{1}{}^{\\frac{10}{7}}\\,M_ {1}{}^{\\frac{1}{7}}\\,d_{1}{}^{-\\frac{4}{7}}\\,F_{X1}{}^{-\\frac{2}{7}}\\,\\,{\\rm km},  where B_{1} is the normalised polar magnetic field strength, defined in Eq. 5. We note that in the gravitational wave literature the Alfven radius has often been placed at 35 km, corresponding to \\dot{M}=10^{-8}M{}_{\\odot}/yr, or X=0.3 in Eq. 2. The Eddington limit is at \\dot{M}=2\\times 10^{-8}M{}_{\\odot}/yr, for a fiducial 1.4 M{}_{\\odot} and 10 km radius neutron star.
+
+By combining Eq. 4 and Eq. 8 we find the torque-balance amplitude when r_{m}\\geq R:
+
+\\begin{cases}h_{0}^{torq.bal.}=&4.3\\times 10^{-26}\\,\\frac{\\xi^{\\frac{1}{4}}}{X^ {\\frac{3}{8}}}\\\\ &\\times F_{X1}{}^{\\frac{3}{7}}\\,M_{1}{}^{-\\frac{1}{4}}\\,R_{1}{}^{\\frac{6}{7}} \\,B_{1}{}^{\\frac{1}{7}}\\,d_{1}{}^{-\\frac{1}{7}}f_{\\rm GW_{1}}{}^{-\\frac{1}{2}} \\\\ B_{1}\\geq&0.19d_{1}\\xi^{-7/4}(F_{1}/X)^{1/2}(R_{1}^{3}M_{1})^{-1/4},\\end{cases}  the last equation simply reflecting the condition r_{m}\\geq R. We note that h_{0}^{torq.bal.}(\\xi,X)=h_{0}^{torq.bal.}(1,1)\\frac{\\xi^{1/4}}{X^{3/7}} and this factor is plotted in Fig. 2 to aid evaluate how the torque balance amplitude changes under different assumptions for torque arm r_{m} and the accretion luminosity.
+
+When this torque balance amplitude is _larger_ than our h_{0}^{95\\%} upper limits it means that our search should have detected a signal; The fact that it has not, means that we can exclude the associated mass-radius-magnetic field strength combinations:
+
+[M_{1}^{\\frac{3}{4}}R_{1}^{\\frac{6}{7}}B_{1}^{\\frac{1}{7}}]^{\\rm excl}\\geq X^{ \\frac{3}{7}}\\,\\frac{h_{0}^{95\\%}}{4.3\\times 10^{-26}}f_{\\rm GW_{1}}^{\\frac{1}{2}}F_{ 1}^{-\\frac{9}{7}}d_{1}^{\\frac{4}{7}}. 
+
+This translates, for every mass-radius, into an upper limit on the magnetic field strength.
+
+Figure 4 shows the magnetic field upper limits from Eq. 10 from the \\iota\\approx 44^{\\circ} gravitational wave upper limits for f_{\\rm GW}=117.5 Hz, X=1 and \\xi=1, for different equations of state. The upper limits for different gravitational wave frequencies can be easily derived from the gravitational wave upper limit values using Eq. 10. For the specific example shown in Figure 4, provided that the field is higher than \\sim 2\\times 10^{8} G, the torque balance limit can be matched for all of the considered equations of state, but magnetic fields above \\sim 6\\times 10^{8} G can be ruled out.
+
+At Zhang et al. (2020, and Suppl. Mat.) we provide plots like the one of Figure 4 for gravitational wave frequencies in the searched range, at 2 Hz intervals.
+
+The gravitational wave upper limits marginalised over all possible inclination angles lead to less stringent constraints on the physical parameters of the neutron star: the torque balance amplitude with torque arm at the neutron star surface is smaller than our upper limits for all equations of state, so no mass-radius combination can be ruled out. Torque-balance amplitudes larger than our upper limits can only be obtained for larger torque arms corresponding to magnetic field strengths \\gtrapprox 10^{9} G, which are higher than those expected from LMXBs.
+
+If the gravitational wave signal is due to a triaxial ellipsoid rotating around a principal moment of inertia axis I, say along the \\hat{z} axis, the gravitational wave intrinsic amplitude h_{0} is proportional to the ellipticity \\varepsilonof the star:
+
+\\begin{cases}h_{0}=\\frac{4\\pi^{2}G}{c^{4}}\\frac{I\\epsilon f_{\\rm GW}^{2}}{d}\\\\ \\text{with}\\ \\ \\varepsilon=\\frac{I_{xx}-I_{yy}}{I}\\end{cases} 
+
+We convert the h_{0}^{95\\%} upper limits into ellipticity upper limits with Eq. 11, with d=2.8kpc and a fiducial value of I=10^{38}kg m{}^{2}. We also derive the ellipticity required for torque balance under the two previous assumptions on the lever arm. All these quantities are plotted in Fig. 3, as a function of the gravitational wave signal frequency.
+
+Above \\sim 90 Hz the values of the ellipticity that we are exploring are a few \\times 10^{-5} and smaller. Deformations which are this large may be sustained by a neutron star crust (Johnson-McDaniel and Owen, 2013), although very recent work suggests that the maximum deformations may be smaller (Gittins et al., 2020).
+
+## 4 Discussion
+
+This search has placed upper limits on stable GW emission that are tighter than the level predicted by torque balance models for Sco X-1, for \\iota\\sim 44^{\\circ}. This conclusion is robust to spin wandering at the level expected for this source. If the accretion torque is applied at the neutron star surface, the GW frequency range for which the torque balance limit is beaten is between 67.5-131.5  Hz, for a 1.4 \\rm M_{\\odot} and 10 km radius fiducial star. If on the other hand the torque is applied at a magnetospheric radius at 25.6 km (see Eq.s 5 and 8), then the range for which the limit is beaten is the entire searched range, 40-180 Hz, for the fiducial star, as shown in Fig. 1.
+
+If we consider a wider range of masses and radii, consistent with our current best understanding of viable equation of state models, we are able to place constraints on mass-radius-magnetic field strength combinations:
+
+* independently of the magnetic field value, our results exclude certain mass-radius combinations. Our tightest limits come for spin periods of \\sim 21 ms (f_{\\rm GW}\\sim 96 Hz, at twice the spin frequency) with a narrow range of allowed masses extending only between 1.9-2.2 \\rm M_{\\odot} and magnetic fields larger than \\sim 3\\times 10^{8} G being ruled out for all considered equations of state.
+
+* if the magnetic field is larger than 0.19d_{1}\\xi^{-7/4}(F_{1}/X)^{1/2}(R_{1}^{3}M_{1})^{-1/4} (r_{m}>R) we can place upper limits on the magnetic field strength. The upper limit on the magnetic field is highest for the highest mass in the range. Stiffer equations of state have a smaller range of masses (and magnetic field strengths) for which balance can still be possible at the level of our upper limits, than softer equations of state. We find that the field must be smaller than (4-10)\\times 10^{8} G, depending on frequency (but excluding too disturbed frequency ranges, e.g. 60 Hz), for all equations of state models considered.
+
+It is the first time that constraints on the magnetic field, mass and radius are obtained through continuous wave observations. This is interesting because the magnetic field is in general very poorly constrained and because observations like these probe mass-radius and magnetic fields through an entirely different mechanism than gravitational wave binary inspiral signals (see e.g. Abbott et al., 2019; Capano et al., 2020).
+
+If the spin of Sco X-1 is such that it is in the range where the limit is beaten (half the GW frequency for mountain models) and torque balance applies, this means that GW emission is not strong enough to balance the assumed accretion torque. This implies that the accretion torque must be less strong than predicted by the models presented in this paper, which could happen if, for example, strong radiation pressure modifies the structure of the inner disk (Andersson et al., 2005) or due to the effect of winds (Parfrey et al., 2016).
+
+The result also puts limits on the size of thermal/compositional crustal or magnetic mountains in Sco X-1. Limits can also be placed on internal oscillation amplitude for models where that is the mechanism that provides the GW torque (for a different range of spin frequencies since the relationship between spin and GW frequency is different for mode models).
+
+An alternative, of course, is that the spin of Sco X-1 is outside the range searched, perhaps at higher frequencies more in line with the spin rates measured for the accretion-powered millisecond pulsars and thermonuclear burst oscillation sources (Patruno & Watts, 2012; Watts, 2012).
+
+At 1 kHz the torque balance upper limit for the "fiducial star" is between 2.6-3.3 \\times 10^{-26}, for r_{m}\\in[10-25.6] km. This is about a factor of 5-10 lower than a signal that we could detect at that frequency with a search like this one - the variation depending on the torque arm and on the inclination angle, and assuming that one could actually perform this search at such high frequencies. If all the parameters of Sco X-1 were known, a search on the same O2 data as used here could probably detect signals at 2.6-3.3 \\times 10^{-26}. We are however quite far from having a complete ephemeris for Sco X-1. The next best thing would be to know the rotation frequency of the neutron star. The reason is that the torque balance amplitude decreases with frequency (so the sensitivity requirement increases, to match the torque balance limit), and the sensitivity of the searches decreases with frequency due to the shot noise in the detectors and to the increased template resolution per-Hz searched. These factors make it difficult to search very broad frequency bands. If it were possible to identify the spin frequency, for example via the detection of weak or intermittent pulsations (a major goal for future large-area X-ray telescopes Watts et al., 2019; Ray et al., 2019), we might be able to carry out a search like this one, that could begin to probe the torque balance limit when the noise level at 1 kHz reaches its design value of \\sim 5.5\\times 10^{-24}\\,1/\\sqrt{\\rm Hz}(Abbott et al., 2018) and with \\sim two years of data.
+
+## 5 Acknowledgments
+
+The computation of the work was run on the ATLAS computing cluster at AEI Hannover AEI (2017) funded by the Max Planck Society and the State of Niedersachsen, Germany. A.L.W. acknowledges support from ERC Consolidator Grant No. 865768 AEONS (PI: Watts).
+
+This research has made use of data, software and/or web tools obtained from the LIGO Open Science Center ([https://losc.ligo.org](https://losc.ligo.org)), a service of LIGO Laboratory, the LIGO Scientific Collaboration and the Virgo Collaboration. LIGO is funded by the U.S. National Science Foundation. Virgo is funded by the French Centre National de Recherche Scientifique (CNRS), the Italian Istituto Nazionale della Fisica Nucleare (INFN) and the Dutch Nikhef, with contributions by Polish and Hungarian institutes.
+
+## Appendix A Outlier Table

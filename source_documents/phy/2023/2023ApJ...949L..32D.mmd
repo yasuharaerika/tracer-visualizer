@@ -1,0 +1,461 @@
+###### Abstract
+
+Gamma-ray bursts (GRBs), both long and short, are explosive events whose inner engine is generally expected to be a black hole or a highly magnetic neutron star (magnetar) accreting high density matter. Recognizing the nature of GRB central engines, and in particular the formation of neutron stars (NSs), is of high astrophysical significance. A possible signature of NSs in GRBs is the presence of a plateau in the early X-ray afterglow. Here we carefully select a subset of long and short GRBs with a clear plateau, and look for an additional NS signature in their prompt emission, namely a transition between accretion and propeller in analogy with accreting, magnetic compact objects in other astrophysical sources. We estimate from the prompt emission the minimum accretion luminosity below which the propeller mechanism sets in, and the NS magnetic field and spin period from the plateau. We demonstrate that these three quantities obey the same universal relation in GRBs as in other accreting compact objects switching from accretion to propeller. This relation provides also an estimate of the radiative efficiency of GRBs, which we find to be several times lower than radiatively efficient accretion in X-ray binaries and in agreement with theoretical expectations. These results provide additional support to the idea that at least some GRBs are powered by magnetars surrounded by an accretion disc.
+
+Gamma-ray bursts - Neutron stars: magnetars - relativistic shocks - accretion discs: propeller 0000-0002-1726-2867]Simone Dall'Osso
+
+0000-0002-8862-7877]Giulia Stratta
+
+0000-0002-3732-2774]Rosalba Perna
+
+0000-0002-3232-2774]Giovanni De Cesare
+
+## 1 Introduction
+
+After several decades of observations, modeling and theoretical investigations, Gamma-Ray Bursts (GRBs), the most energetic explosions in the Universe, still leave open questions. The two generally distinctive classes of long and short GRBs have been securely associated with the collapse of massive stars for the former (Hjorth et al., 2003; Stanek et al., 2003), and with the merger of two neutron stars (NSs) for the latter (Abbott et al., 2017). However, the fate of the remnant compact object left behind after the stellar collapse or the binary NS merger still remains to be deciphered, a problem with implications also for the equation of state of ultra-dense matter (Lattimer and Prakash, 2001) and the generation of gravitational wave signals (e.g. Dall'Osso et al., 2015, 2018).
+
+If the remnant compact object is a NS, it is likely to be highly magnetized. In the case of formation in the collapse of a massive star, this is because of the fast rotation likely necessary to drive a long GRB (MacFadyen and Woosley, 1999; Heger et al., 2003), which facilitates magnetic field amplification due to dynamo action (Thompson and Duncan, 1995; Raynaud et al., 2020; Aloy and Obergaulinger, 2021; Obergaulinger and Aloy, 2021; Guilet et al., 2022). In the case of NS-NS mergers, magnetic field amplification via dynamo has been demonstrated in general relativistic magnetohydrodynamic simulations of the merger (Giacomazzo and Perna, 2013; Zrake and MacFadyen, 2013; Giacomazzo et al., 2015; Palenzuela et al., 2015; Kawamura et al., 2016; Ciolfi et al., 2017; Radice, 2017; Aguilera-Miret et al., 2020; Palenzuela et al., 2022; Aguilera-Miret et al., 2022).
+
+The possibility that the inner engine driving the GRB emission may be a fast-spinning and highly magnetized NS rather than a black hole has received considerable attention in recent years (Thompson et al., 2004; Metzger et al., 2007; Bucciantini et al., 2007, 2012; Dall'Osso et al., 2011; Rowlinson et al., 2013; Beniamini et al., 2017; Metzger et al., 2018; see however, e.g., Kumar et al., 2008; Siegel et al., 2014; Beniamini & Mochkovitch, 2017; Oganesyan et al., 2020; Beniamini et al., 2020). If GRBs are indeed powered by a magnetar, there are observational signatures that may point to their presence (e.g., Dai & Lu, 1998; Zhang & Meszaros, 2001). In particular, since the early-time spindown luminosity of a NS has a plateau, this behaviour may be reflected in the initial plateau of the X-ray afterglow, assuming that its luminosity tracks the energy injection from the NS. By fitting the observed light curves, in particular the plateau luminosity and duration, these models provide estimates of the magnetic fields and spin periods of the putative magnetars (e.g. Dall'Osso et al., 2011; Rowlinson et al., 2013; Gompertz et al., 2014; Lu & Zhang, 2014; Gibson et al., 2017). The resulting P- and B-values in the population are found to be correlated in a way that matches the well-established "spin-up line" of radio pulsars and magnetic accreting NSs in galactic X-ray binaries (e.g. Bhattacharya & van den Heuvel, 1991; Pan et al., 2013), once re-scaled for the much larger mass accretion rates of GRBs (Stratta et al., 2018).
+
+In this work we re-examine the impact of a magnetar central engine by considering both prompt and afterglow emissions jointly. Similarly to previous studies (e.g. Bernardini et al., 2013; Stratta et al., 2018), we assume the prompt is powered by accretion energy while the afterglow plateau by the injection of the NS spin energy into the external shock. During the prompt phase, the newly born magnetar strongly interacts with the accretion disc left behind by the progenitor, and may undergo transitions to a propeller regime (Illarionov & Sunyaev, 1975; Stella et al., 1986), where disc material cannot enter the magnetosphere and the accretion power is reduced. We thus set to study whether this scenario is compatible with the general luminosity evolution observed in prompt GRB lightcurves, which can also explain the B-P correlation found by Stratta et al. (2018). Previous suggestions to interpret GRB precursors in a similar framework gave encouraging results in a few GRBs (Bernardini et al., 2013, 2014).
+
+As shown by Stella et al. (1986) and Campana et al. (1998a), for transient X-ray binaries hosting different populations of NSs, the onset of propeller is characterized by a distinctive knee in the decaying phase of the light curve, from which the transition luminosity can be determined. By independently measuring the spin (via their pulsed emission) and magnetic field (via cyclotron absorption lines and/or spindown timing) of central objects in a variety of accreting sources, Campana et al. (2018) demonstrated the existence of a universal relation between luminosity, magnetic field and spin period for the onset of propeller, as theoretically predicted (eq. 2 below), spanning many orders of magnitude in each of these quantities. Their sample included low and high-mass X-ray binaries, cataclysmic variables, and young stellar objects.
+
+Here we select a sample of GRBs that are promising candidates for having a magnetar engine, in that their afterglow light curves show clear evidence for a plateau. Among these, we select only the ones with an accurate estimate of the jet opening angle, and with a prompt emission light curve which is well sampled in time, and has a good spectral coverage to allow an accurate determination of the true bolometric luminosity after correcting for beaming. By measuring the B-field and the spin period from the plateau in the X-ray afterglow, and the transition luminosity from the prompt radiation, we test whether these GRBs verify the same relation as the known accreting sources in propeller. Through this relation we are able to verify the proposed scenario in which accretion energy powers the prompt emission, and the NS spin energy powers the afterglow plateau once accretion subsides. Moreover, we are able to independently constrain the radiative efficiency of accretion in GRBs.
+
+Our paper is organized as follows: Sec. 2 describes the basics of the theory and the accretor-propeller transition. Sec. 3 describes the GRB sample, clearly highlighting our selection criteria, and then individually describing the properties of each source. We connect theory to observations in Sec. 4, where we assess the significance of the correlation that we find. We summarize and conclude in Sec.5.
+
+## 2 The Accretor-Propeller Transition
+
+### General theory
+
+Matter forming an accretion disc flows towards the accretor by transferring angular momentum outwards, and by releasing (half of) its gravitational potential energy. If the accretor is a magnetic NS (with mass M and radius R), the disc may not reach its surface, being truncated at the magnetospheric radius, r_{m}>~{}R, inside which the NS magnetic field controls the dynamics of the inflowing plasma. In disc geometry r_{m} is a fraction \\xi of the Alfven radius, r_{A}, at which magnetic pressure balances the ram pressure in a spherical flow (e.g. Pringle & Rees, 1972, Frank et al., 2002)
+
+r_{m}=\\xi r_{A}=\\xi\\left(\\frac{\\mu^{4}}{2G\\dot{m}^{2}}\\right)^{1/7}. 
+
+Here \\dot{m} is the mass accretion rate, \\mu=BR^{3}/2 the NS magnetic moment, B the dipole magnetic field at the pole, and the parameter \\xi\\sim 0.5(e.g. Ghosh & Lamb, 1979; Campana et al., 2018) encodes the microphysics of the interaction between the accreting plasma and the B-field co-rotating with the NS.
+
+When the disc is truncated at r_{m}>R, two cases can occur: (i) if the disc (Keplerian) rotation at r_{m} is faster than the NS rotation, the NS is in the _accretor_ phase, matter enters the magnetosphere transferring its excess angular momentum to the NS, gradually approaching corotation; (ii) if the disc rotation is slower, the NS enters the _propeller_ regime, in which the plasma experiences a centrifugal barrier at r_{m} and is either flung out (Illarionov & Sunyaev, 1975), absorbing in the process some of the stellar angular momentum, or piled up near r_{m} (e.g. D'Angelo & Spruit, 2010).
+
+What differentiates these two cases is the ordering of r_{m} and of the corotation radius, r_{\\rm co}, defined as the distance from the NS at which the disc rotation equals the NS angular frequency (\\omega), r_{\\rm co}=(GM/\\omega^{2})^{1/3}. In the accretor regime, r_{m}<r_{\\rm co}, matter falls all the way to the NS surface releasing its remaining gravitational potential energy and producing the accretion luminosity L=\\epsilon GM\\dot{m}/R, where we accounted for a radiative efficiency (\\epsilon\\leq 1). The corresponding, frequently used conversion efficiency of rest mass, \\eta in the relation L=\\eta\\dot{n}c^{2}, is \\eta=\\epsilon GM/(c^{2}R). In the propeller regime, r_{m}>r_{\\rm co}, accretion is halted at r_{m} and the source has a lower luminosity, L_{\\rm prop}=\\epsilon\\dot{m}(GM/2r_{m}), at the same mass inflow rate.
+
+The minimum accretion luminosity, L_{\\rm min}, is obtained by first equating r_{m} to r_{\\rm co}: the resulting mass accretion rate, \\dot{m}_{\\rm min}, is fed into the expression for L, yielding
+
+\\log_{10}L_{\\rm min}+\\frac{7}{3}\\log_{10}P+\\log_{10}R_{6}~{}=37.15 +2\\log_{10}\\mu_{30}+ +\\log_{10}\\epsilon+\\frac{7}{2}\\log_{10}\\left(\\frac{\\xi}{0.5} \\right)-\\frac{2}{3}\\log_{10}M_{1.4}  where Q_{x}=Q/10^{x} in c.g.s. units, M_{1.4}=M/(1.4M_{\\odot}), and P=2\\pi/\\omega is the NS spin period (in seconds).
+
+Conversely, the maximum propeller luminosity is obtained by plugging r_{\\rm co} and \\dot{m}_{\\rm min} in the expression of L_{\\rm prop},
+
+L_{\\rm prop}^{\\rm(max)}=\\frac{\\epsilon\\dot{m}_{\\rm min}}{2}\\,(GM\\omega)^{2/3}= \\frac{\\sqrt{2}}{4}\\frac{\\epsilon\\xi^{7/2}\\mu^{2}\\omega^{3}}{GM}\\,. 
+
+The ratio L_{\\rm min}/L_{\\rm prop}^{\\rm(max)}\\approx 250M_{1.4}^{1/3}R_{6}^{-1}P^{2 /3}, depends mainly on the NS spin (Corbet, 1996). The corresponding luminosity drop, which is typically used as a signature of the propeller transition, is expected to be small for millisecond spins and smoothed out by the finite time of the transition, thus hardly recognizable in the rapidly variable GRB prompt emission. Theory predicts another transition, the onset of the so-called "ejector", when the disc edge extends farther out, approaching the light cylinder at r_{L}=c/\\omega; then the source luminosity becomes dominated by the NS spindown, which for ideal magnetic dipole radiation is (Spitkovsky, 2006)
+
+L_{\\rm sd}=\\frac{\\mu^{2}}{c^{3}}\\omega^{4}(1+\\sin^{2}\\alpha)\\,, 
+
+\\alpha being the angle between the magnetic and rotation axes of the NS. Combining eqs. 2 and 4 for \\alpha=\\pi/2 gives the ratio
+
+\\kappa=L_{\\rm min}/L_{\\rm sd}\\approx 1.2\\times 10^{5}\\epsilon P^{5/3}\\left(R_{ 6}M_{1.4}^{2/3}\\right)^{-1}(\\xi/0.5)^{7/2}\\,. 
+
+This ratio too is a function of the NS spin alone1 (for given NS mass and radius) but, in contrast to L_{\\rm min}/L_{\\rm prop}^{\\rm(max)}, it is robustly determined in our case, as the NS spindown luminosity is well tracked by the luminosity of the afterglow plateau.
+
+Footnote 1: Eq. 5 assumes the same NS spin at L_{\\rm min} and at the ejector onset.
+
+### Peculiar properties of accretion in GRBs
+
+Fig. 1 depicts the lightcurve shape expected as a result of the above-mentioned transitions. The theory has been developed for and verified in accreting NSs in High-Mass X-ray Binaries (HMXBs) Be transients (Stella et al., 1986), Low-Mass X-ray Binaries (LMXBs; Stella et al., 1994; Campana et al., 1998a,b), cataclismic variables (CVs) and young stellar objects (YSOs; Campana et al., 2018), which established the universal character of eq. 2. Compared to such systems, disk accretion in GRBs is expected to present important differences.
+
+In all the sources studied by Campana et al. (2018), the disk material that enters the magnetosphere of the accretor is channeled onto its surface where it releases the gravitational potential energy from r_{m} to R. The emission we receive comes from the accretion column, close to the stellar surface, with a typical conversion efficiency of energy to radiation \\epsilon\\sim~{}1.
+
+In our proposed scenario the GRB prompt emission is still a proxy of the mass accretion rate, yet it comes from shocks in a relativistic jet, much farther away from the central engine. Thus, GRB lightcurves do not show the characteristic pulsations of accreting NSs signalling their spin periods2, and their (featureless) spectra do not offer means for directly measuring the NS B-field, in contrast to what occurs in other magnetic accreting stellar objects (e.g., Campana et al., 2018). Furthermore, radiation is believed to come from the conversion of the jet's kinetic energy with an intrinsically low efficiency (\\epsilon_{\\gamma}\\lesssim 0.1) and the gravitational potential energy released by accretion is only partially converted into the jet kinetic energy (\\epsilon_{\\rm jet}<1). Thus, it is generally expected that \\epsilon=\\epsilon_{\\rm jet}\\epsilon_{\\gamma}\\ll 1.
+
+Footnote 2: See, however, Chirenti et al. (2023).
+
+We will not deal with the details of the interaction between the disk plasma and the ms-spinning NS magnetosphere or with the mechanism by which a relativistic jet is launched. We simply assume that the jet will be launched, powered by the energy of accretion and with the known properties of GRB jets, both during the accretion and propeller phases.
+
+While the relativistic jet carries only a minor amount of baryons, the characteristic mass accretion rate envisioned in the collapsar scenario is \\sim(0.001-1)M_{\\odot}s{}^{-1}, implying a total accreting mass \\Delta M\\sim(0.001-10)M_{\\odot} for typical prompt durations \\sim 1-30 s. Most of the latter may be entrained in a slow-moving and wide outflow or end up onto the NS surface, thus releasing its potential gravitational energy and increasing the NS mass. In this latter case, at the typical GRB mass accretion rates, the infalling material will form a very hot and high-density accretion column in which neutrino emission is dominant (e.g. Piro & Ott, 2011; Metzger et al., 2018) while the escaping high-energy radiation is negligible.
+
+Finally, because the maximum gravitational mass allowed by the NS EOS is M_{\\rm g,max}\\gtrsim 2.2 M{}_{\\odot}(Cromartie et al., 2020), the mass increase of the NS may impact its stability against gravitational collapse. In case of core-collapse, if the mass of the NS remnant is \\sim 1.4 M{}_{\\odot}, like in the observed NS population (Kiziltan et al., 2013), then there is significant room for accretion before collapse sets in. In short GRBs, on the other hand, the merger remnant is likely to be close to, or above, the maximum NS mass. The probability of a stable NS would depend critically on both the initial component masses in the binary progenitor and the NS EOS (e.g. Dall'Osso et al., 2015; Piro et al., 2017; Margalit & Metzger, 2017).
+
+### Main observables
+
+If the GRB central engine is a millisecond-spinning magnetar, we expect to observe in the prompt light curve the characteristic steep flux decays of switching-off relativistic jets (e.g. Kumar & Zhang, 2015) when the NS enters the propeller regime. The minimum accretion flux F_{\\rm min}, and hence L_{\\rm min}, can thus be estimated directly from the data (as described in Sec. 3). Within the magnetar scenario it then becomes possible to verify, in a way that parallels the method of Campana et al. (2018), whether the putative NSs in GRBs follow the universal relation (2).
+
+With this goal in mind, we searched the prompt light curves of the GRBs in our sample for prolonged and steep flux decays, spanning at least one order of magnitude, in analogy to what is typically done in other classes of accreting compact objects (e.g. Campana et al., 2018 and references therein). Assuming these drops are associated to the propeller onset, we set F_{\\rm min} to be limited by the lowest minimum and the lowest maximum prior to the flux decay or by the occurrence, after the decay, of a new peak signalling a new temporary transition to the accretor phase. With these criteria we defined an allowed range for F_{\\rm min}, and set the fiducial values at the midpoint of the range. In SS 3 we provide more details on this procedure for each GRB. Our results, illustrated in Fig. 2, are reported in Tab. 2. Moreover we estimated the NS spin period P at the end of the prompt phase, and its magnetic dipole field strength B by fitting the observed plateau in the X-ray afterglow with a model of energy injection by a spinning down magnetar, as further discussed in sec. 3.3 (cf. Dall'Osso et al., 2011; Bernardini et al., 2013; Stratta et al., 2018).
+
+Note that here we estimate L_{\\rm min} directly from the prompt light curve, independently of the B- and P-values derived from the afterglow, whereas Bernardini et al. (2013) used the latter values to infer L_{\\rm min} in the prompt phase. Ultimately, this allows us to verify the validity of eq. 2 using independent quantities, while at the same time constraining the radiative efficiency, \\epsilon=\\epsilon_{\\rm jet}\\epsilon_{\\gamma}.
+
+## 3 Data analysis
+
+We selected a sample of both long and short GRBs detected with the Swift satellite and at known distances that present (i) clear evidence of an X-ray plateau in the afterglow light curve, (ii) a well sampled prompt emission light curve, to allow the study of flux variations consistent with transitions to the propeller phase, (iii) a good spectral coverage of the prompt emission with a measure of the peak energy, (iv) an accurate estimate of the jet opening angle \\theta_{j} from multi-band afterglow data. Meeting these four criteria is challenging. For this reason, the resulting sample is made of only 9 events, so of which are short GRBs (140903A, 130603B; see Tab. 1).
+
+### Estimating F_{\\rm min}
+
+To estimate the minimum flux level F_{\\rm min} associated with the accretion phase, we used the publicly available Swift/BAT 15-150 keV prompt light curves3 with temporal resolution that guarantees a signal to noise ratio >5. Following SS2.3, for each prompt light curve, we identified a maximum and minimum flux within which we could confidently constrain the propeller transition. Specifically, the maximum flux was associated with the faintest of the peaks that characterise the bright prompt phase, while the minimum flux with minima prior to the steep flux decrease. Results are quoted in Table 2.
+
+Below we describe, for each GRB, the prompt emission features based on which we estimate F_{\\rm min}, as well as the studies from which the \\theta_{j}-values were adopted.
+
+#### 3.1.1 Grb 060614
+
+This peculiar GRB at z=0.125 has a duration, T_{90}=102 s, suggesting a long GRB classification, while the lack of an associated supernova down to very deep limits, and its location in the time-lag/peak-luminosity plane, are more consistent with the properties of short GRBs (Mangano et al., 2007).
+
+The prompt emission light curve is very well sampled, the X-ray afterglow has a clear plateau and an excellent multi-band data set is also available. The jet opening angle was taken from Mangano et al. (2007) that quote \\sim 10.5 deg from a very robust achromatic temporal break observed in the afterglow light curve 117 ks after the burst onset.
+
+The prompt light curve shows two bright intervals separated by a hollow minimum at \\lesssim 10 s. Starting at \\sim 50 s post-trigger, an extended and steep flux decay is observed. Prior to it, the hollow minimum and the lowest peak at \\lesssim 10 s indicate a narrow range of possible F_{\\rm min}-values, consistent with the flux in the first part of the steep decay. We extended this range to include even the lowest peak at \\gtrsim 100 s, a choice that has only a minor effect on the fiducial value of F_{\\rm min}.
+
+#### 3.1.2 Grb 060729a
+
+The Swift/BAT light-curve of this GRB, at z=0.543, shows clear evidence of a precursor followed by a long quiescence time (\\sim100s), which is ended by a typical burst lasting \\sim 40s. The X-ray light curve of its afterglow is characterized by a long plateau4 (\\gtrsim 4\\times 10^{4} s) and post-plateau power-law decay, with a very late break (Racusin et al., 2009). From the X-ray lightcurve alone (no multi-band data available) these authors classified GRB 060729A as a "prominent jet break" case, and measured its \\theta_{j} accounting for the effect of prolonged energy injection, which may extend the power-law decay beyond the time expected in the standard scenario. Given the accurate determination of \\theta_{j}=6.5^{+0.25}_{-0.15} deg, we included this event in our sample despite the lack of multi-band data.
+
+Footnote 4: Incidentally, a NASA press release of this burst highlighted its peculiar plateau, suggesting a magnetar central engine [https://www.nasa.gov/centers/goddard/news/topstory/2007/gammaburst_challenge.html](https://www.nasa.gov/centers/goddard/news/topstory/2007/gammaburst_challenge.html)
+
+The F_{\\rm min}-range in this GRB is constrained between the lowest peak at \\approx 160 s and the flux at the onset of the steep flux decay; the latter feature appears to be repeated twice in the Swift/BAT light curve (upper central panel in Fig. 2).
+
+#### 3.1.3 Grb 061222a
+
+This is the brightest long GRB in our sample. Its light curve was recognized by Bernardini et al. (2013) as a prototypical example of the way in which the propeller mechanism can switch a GRB central engine on and off. The prompt phase, lasting \\sim 150 s, is characterized by three main pulses of which the latest is the brightest. We identified F_{\\rm min} as being contrained between the lowest peaks and the lowest minima observed prior to the steep flux decays occurring at \\lesssim 30 s and at \\lesssim 100 s.
+
+An half-opening angle \\sim~{}2.4 deg was inferred, like for GRB 100906A, in the multi band afterglow analysis by Chandra & Frail (2012). The more recent and detailed study by Ryan et al. (2015) quoted a similar result, providing \\theta_{j}=3.7^{+0.8}_{-0.4} deg, the value adopted here.
+
+#### 3.1.4 Grb 091029
+
+This bright long burst has a prompt duration T_{90}=(39\\pm 5) s in the Swift/BAT range (Barthelmy et al., 2009). At \\sim 35 s we identify the characteristic flux drop indicating the onset of the propeller regime. Comparing with the lowest peaks and minima prior to this transition (in particular at T-T_{\\rm obs}<10 s), we determined a narrow range for F_{\\rm min} with a central value of F_{\\rm min}\\approx 1.3\\times 10^{-8} erg cm{}^{-2} s{}^{-1}.
+
+The afterglow of this GRB was monitored in several bands (e.g. Filgas et al., 2012). The optical light-curve shows a few rebrightenings that challenge the measure of the jet break epoch in this band. Lu et al. (2012) determined \\theta_{j}\\sim 0.058 rad (\\sim 3.3 deg) in a Swift GRB sample study on the selection effects in the apparent \\theta_{j}-z dependence. Ryan et al. (2015) obtained \\theta_{j}=12^{+11}_{-8} deg, and a viewing angle \\theta_{\\rm v}=0.75^{+0.18}_{-0.47}\\times\\theta_{j}, modelling the X-ray afterglow by means of a high-resolution hydrodynamical model with no angular structure in the jet (top-hat), and imposing a narrow prior on \\theta_{j}\\sim[2.6-28.6] deg.
+
+By studying the optical/X-ray afterglows of a sample of GRBs, Wang et al. (2018) identified an achromatic temporal break at (30.0\\pm 6.8) ks for this burst. By assuming a constant density circumburst medium (ISM), and the standard jet-break formula (e.g. eq. 1 in Sari et al., 1999), an half-opening angle \\theta_{j}=1.24\\pm 0.92 deg was inferred. In Fig. 4 and in the next sections we adopt this result, which was obtained from the identification of an achromatic break in a multi-band study.
+
+#### 3.1.5 Grb 100906a
+
+This is a long GRB among the brightest of our sample. Its Swift/BAT prompt duration is T_{90}=(114.4\\pm 1.6) s (Barthelmy et al., 2010) and its light-curve shows a main bursting episode followed by a flux decay and then by multiple lower peaks (Fig.2). The steep flux decay at t\\approx(10-30) s marks the onset of the propeller regime, from which we estimate a fiducial value of F_{\\rm min}\\sim 6\\times 10^{-8} erg cm{}^{-2}s{}^{-1}, further supported by the later peaks, at t\\approx 120 s, reaching a similar flux.
+
+The jet half-opening angle \\theta_{j}=2.9 deg for this burst is taken from the multi-band afterglow study by Chandra & Frail (2012), who assumed a constant density circumburst environment following Sari et al. (1999).
+
+#### 3.1.6 Grb 120404a
+
+The prompt duration of this long GRB is 38.7\\pm 4.1 s in the 15-150 keV Swift/BAT band (Ukwatta et al., 2012). The light curve shows a mildly fluctuating flux up to \\sim 20 s, when a steep flux decay begins. Peaks and dips in the early 20 s constrain F_{\\rm min} in a range that is perfectly consistent with the turning point of the flux decay at F_{\\rm min}\\approx 2\\times 10^{-8} erg cm{}^{-2} s{}^{-1}.
+
+Guidorzi et al. (2014) measured \\theta_{j}\\sim 23 deg fitting broadband, high-quality optical/NIR data with the hydrodynamical code of van Eerten et al. (2012). Their fit, which did not include energy injection, was found to underpredict the X-ray flux compared to the optical, and required a very steep power-law slope p\\sim 3.4 for the electron energy distribution.
+
+Laskar et al. (2015) described the broadband afterglow light curve (radio, NIR, optical, X-rays) with a phenomenological energy injection model. They obtained \\theta_{j}=3.1\\pm 0.3 deg and p\\approx 2.1, interpreting the optical/X-ray decline \\sim t^{-2} seen at \\sim 0.1 d as indicative of a jet break. For these reasons we adopt in the following this latter value of \\theta_{j}.
+
+#### 3.1.7 Grb 130603b
+
+For this short GRB at z=0.36 a kilonova component was identified in the optical/NIR afterglow \\sim one week after the event (Tanvir et al., 2013), consistent with a binary NS merger. The possible range of F_{\\rm min} is limited from above by the flux at the onset of the steep flux decay, at 0.085 s, and from below by the occurrence of a late peak at T-T_{\\rm obs}\\approx 0.2 s. Accordingly, we determined a fiducial value F_{\\rm min}\\approx 3.8\\times 10^{-7} erg cm{}^{-2} s{}^{-1}.
+
+The jet half-opening angle was measured from multi-band jet break observations as \\theta_{j}\\sim 4-8 deg assuming a constant density circumburst medium with n<1 cm{}^{-3}(Fong et al., 2015). Adopting the same method and setting n=1 cm{}^{-3}, Wang et al. (2018) obtained \\theta_{j}=(4.47\\pm 0.68) deg.
+
+Recently, the afterglow lightcurve was re-analyzed by Aksulu et al. (2022) by means of ScaleFit hydrodynamical simulations (Ryan et al., 2015), obtaining \\log\\theta_{j}=-0.97^{+0.28}_{-0.54}, _i.e._\\theta_{j}=6.3^{+1.7}_{-5.1} deg. In this work we assume the latter result.
+
+#### 3.1.8 Grb 140903a
+
+This short GRB is more than 20 times less energetic than the other one in our sample (130603B) and at a similar redshift (z=0.35). Its Swift/BAT light curve is roughly constant, with minor fluctuations, up to about \\lesssim 0.3 s, after which it decays close to the detection limit. We interpret the early behaviour as being due to accretion at various luminosity levels, and the later decay as due to the onset of propeller. Accordingly, we set F_{\\rm min} at \\approx 1.5\\times 10^{-7} erg cm{}^{-2} s{}^{-1}.
+
+There are no Konus-Wind data for this burst. However, its Swift/BAT 15-150 keV spectrum is consistent with a power law F(E)\\propto E^{-\\Gamma}, with photon index \\Gamma=1.99\\pm 0.08(Troja et al., 2016). The relation \\log(E_{\\rm peak})=3.258-0.829\\Gamma, for 1.3<\\Gamma<2.3(Sakamoto et al., 2009), can thus be used to derive a rough estimate of the peak energy. Accordingly, we assumed a Band model (Band et al., 1993) with observed peak energy \\sim 40 keV, and spectral indices \\alpha=-1 and \\beta=-2.
+
+The multi-band afterglow monitoring shows indications for an achromatic break at t\\sim 10^{5} s (Troja et al., 2016). Using the hydrodynamic simulations of van Eerten et al. (2015), the multi-band data fitting by Troja et al. (2016) determined a jet half-opening angle \\theta_{j}=5.0\\pm 0.7 deg. A consistent value, 4.0^{+5.0}_{-1.6} deg, was determined by Aksulu et al. (2022) using a different set of hydrodynamical simulations of structured jets. Here we adopt the latter, more recent result.
+
+#### 3.1.9 Grb 151027a
+
+The duration of this long GRB derived from its Swift/BAT lightcurve is 130\\pm 6 s (Palmer et al., 2015). The bright peak in the first \\sim 3 s is followed by a steep decay up to \\sim 10 s, and then by a minor re-brightening between \\sim 15 s and \\sim 25 s, where it reaches a peak \\sim 30\\% of the one at 3 s. About \\sim 60 s after the burst trigger the light curve shows a new substantial flux increase, strongly suggestive of a new temporary onset of accretion. This interpretation is supported by the flux level reached in this second bright episode, which is comparable to the one at \\sim 3 s. Therefore, we adopt the flux measured at 3 s as F_{\\rm min}, with a value of \\approx 6.6\\times 10^{-8} erg cm{}^{-2} s{}^{-1}.
+
+A comprehensive multi-band study of this bus was carried out assuming a wind environment, as suggested by late radio data, deriving \\theta_{j}\\sim 6.3 deg (Nappo et al., 2017).
+
+### Determination of L_{\\rm min}
+
+We proceed to compute the 1-10{}^{4} keV minimum luminosity L_{\\rm min} of each GRB as
+
+L_{\\rm min}=KF_{\\rm min}4\\pi D_{L}^{2}f_{b}\\,  where f_{b}=(1-\\cos\\theta_{j}) is the beaming factor and D_{L} the luminosity distance. The K-correction converts the (15-150) keV observed fluxes to the (1-10^{4}) keV rest-frame ones
+
+K=\\frac{\\int_{1\\ {\\rm keV}/(1+z)}^{10^{4}{\\rm keV}/(1+z)}F(E)dE}{\\int_{15\\ {\\rm keV }}^{150\\ {\\rm keV}}F(E)dE}\\,  where F(E) is the prompt emission best fit spectral model5, taken from the joint Konus-Wind (20 keV-15 MeV) and
+
+\\begin{table}
+
+\\begin{tabular}{|c|c|c|c|c|c|c|c|c|} \\hline GRB & z & T_{90,100} & F(E) & E_{\\rm peak,obs} & \\alpha & \\beta & K & E_{\\rm iso,51} \\\\  & & [s] & & [keV] & & & & 1/(1+\\times) keV-10MeV \\\\ \\hline
+
+091029 & 2.75 & 50 & BAND & 66 & -1.56 & -2.38 & 2.39 & 156.5 \\\\
+
+100906A & 1.73 & 90 & CPL & 195 & -1.6 & – & 2.54 & 249 \\\\
+
+151027A & 0.81 & 117 & CPL & 173 & -1.44 & – & 2.23 & 33.0 \\\\
+
+061222A & 2.09 & 60 & CPL & 298 & -0.89 & – & 2.95 & 259.9 \\\\
+
+120404A & 2.88 & 43 & CPL & 70 & -1.61 & – & 2.09 & 103.1 \\\\
+
+060729A & 0.54 & 126 & BAND & 8.7 & -1.14 & -2.05 & 2.94 & 58 \\\\
+
+060614 & 0.13 & 123.6 & CPL & 76 & -1.92 & – & 2.82 & 2.7 \\\\ \\hline
+
+130603B & 0.36 & 0.07 & CPL & 607 & -0.67 & – & 6.64 & 1.96 \\\\
+
+140903A{}^{a} & 0.35 & 0.3 & BAND & 40 & -1 & -2 & 3.14 & 0.06 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Prompt emission properties taken from the Swift/Konus-Wind GRB catalog (Tsvetova et al., 2017, 2020) for the GRBs of our sample. The best fit prompt emission spectral model F(E) is taken as the one corresponding to the integrated spectra (flag ‘i’), where BAND is the Band model (Band et al., 1993) and CPL is the cut-off power law model with cut-off energy E_{\\rm cut}=E_{\\rm peak}/(2+\\alpha) and \\alpha is the power law photon index. The last two lines indicate the two short GRBs present in our sample.
+
+Swift/BAT (15-150 keV) GRB catalogues6(Tsvetkova et al., 2017, 2021). Table 1 reports the adopted spectral model and its parameters, the observed prompt peak energy E_{p} and the isotropic equivalent energy E_{\\rm iso} in the (1-10^{4})/(1+z) keV band from the same catalogue.
+
+Footnote 6: GRB 140903 is the only event not present in these catalogues. Its spectral model is discussed in sec. 3.1.8.
+
+The uncertainty on L_{\\rm min} includes the one on the jet opening angle as well as the uncertainty inherent in the adopted value of F_{\\rm min}, and is computed as:
+
+dL_{\\rm min}=K4\\pi D_{L}^{2}\\sqrt{[(f_{b}dF_{\\rm min})^{2}+(F_{\\rm min}d_{f_{b }})^{2}]}. 
+
+Here we adopted df_{b}\\approx\\sin\\theta_{j}d\\theta_{j} if d\\theta_{j}<0.5\\ \\theta_{j}, otherwise df_{b}=(f_{b,\\rm max}-f_{b,\\rm min})/2 where f_{b,\\rm max} and f_{b,\\rm min} are the collimation factors corresponding to \\theta_{j}+d\\theta_{j} and \\theta_{j}-d\\theta_{j}. When \\theta_{j} is provided in the literature without an error, we assume a conservative d\\theta_{j}=0.5\\theta_{j} and apply the latter formula. In general, we find that both the uncertainties on \\theta_{j} and on F_{\\rm min} contribute significantly to the resulting uncertainties in L_{\\rm min}.
+
+### Parameter estimation for magnetars
+
+To estimate the NS B-field and spin period we fit the X-ray afterglow plateaus with the model of energy injection from a spinning down magnetar developed by Dall'Osso et al. (2011) and further generalised in Stratta et al. (2018). In the model, the plateau luminosity (L_{p}) and duration (T_{p}) are proxies of the same quantities in the magnetar spindown law, which in turn are determined by B and P (e.g. Fig. 1 in Dall'Osso et al., 2011). In particular, a straightforward interpretation of fit results is enabled by use of the standard approximations
+
+(e.g. Dall'Osso and Stella, 2022),
+
+T_{p} \\sim 6.8\\times 10^{4}\\left(\\frac{P_{\\rm ms}}{B_{14}}\\right)^{2}\\ {\\rm s} L_{p}(t) \\sim \\epsilon_{\\rm sd}\\frac{E_{\\rm spin,i}}{T_{p}}\\left(1+\\frac{t}{T_{p }}\\right)^{-2}\\,,  where B_{14} is the NS dipole magnetic field in units of 10^{14} G, P_{\\rm ms} its initial spin period in milliseconds, E_{\\rm spin,i} its initial spin energy, and we added \\epsilon_{\\rm sd}, the conversion efficiency from the NS spindown power to afterglow X-ray emission.
+
+The plateau X-ray luminosity is computed as L_{p,X}(t)=K^{\\prime}F_{X}(t)4\\pi D_{L}^{2}f_{b}, where the X-ray flux F_{X}(t) is taken from the Swift/XRT Burst Analyzer repository (corrected for absorption, see Evans et al., 2010). Here the K-correction converts from the observed (0.3-10) keV band to the rest frame (0.3-30) keV band. The beaming factor f_{b} is the same as that adopted for the prompt emission in eq. 6 (see Tab. 2).
+
+The magnetar luminosity is assumed to be released isotropically during the plateau, as typically done in the literature (e.g. Rowlinson et al., 2013; Piro et al., 2019). Consequently, in order to calculate the rate of energy injection in the external shock, the luminosity L_{\\rm sd} was reduced by the fraction of solid angle intercepted by the GRB jet, _i.e._ the beaming factor f_{b}. Fig. 3 shows the beaming-corrected afterglow light curves of the 9 GRBs in our sample in the 0.3-30 keV rest-frame energy range. Superposed are the best fit energy injection models. The best fit B and P values are reported in Tab. 2.
+
+## 4 Results: connecting theory to the data
+
+With the derived values of L_{\\rm min}, B and P, reported in Tab. 2, each GRB is plotted in the L_{\\rm min}P^{7/3}R_{6} vs. \\mu plane, for a NS radius of 12 km, in order to test their consistency with the universal relation (Eq. 2).
+
+### Universal relation
+
+We find a strong correlation for the GRBs in our sample in the \\log_{10}(L_{\\rm min}P^{7/3}R_{6}) vs \\log_{10}\\mu_{30} plane, with a Pearson correlation coefficient r=0.948 and two-tailed p-value =9.7\\times 10^{-5}. If we discard the two short GRBs (GRB 130603B and GRB 140903A), for which L_{\\rm min} is more uncertain, the correlation remains significant, r=0.891 and p-value =0.007. The correlation has the form7y=(2.3\\pm 0.3)x+(35\\pm 1) in the plane of Fig. 4; the slope is consistent, within the uncertainties, with the one expected from theory (Eq. 2) and observationally confirmed by Campana et al. (2018) for other types of accretion-powered sources hosting a magnetic stellar object, y=2x+(37.12\\pm 0.20) with \\xi=0.5 and \\epsilon=1. Compared to the latter, the GRBs in our sample require a lower normalization, which is readily interpreted in terms of a reduced radiative efficiency of their central engines (Eq. 2), as predicted by theory. Indeed, as discussed in sec. 2.2, the efficiency of conversion of gravitational potential energy to prompt radiation (\\epsilon) is expected to be low in GRB discs. From Eq. 2 we estimate for each GRB the value of8\\epsilon implied by its position in the plane of Fig. 4,
+
+Footnote 7: It is y=(1.8\\pm 0.3)x+(36.2\\pm 1.2) if we remove the two short GRBs.
+
+\\log_{10}\\epsilon=\\log_{10}y-2\\log_{10}\\mu_{30}-\\frac{7}{2}\\log_{10}\\left( \\frac{\\xi}{0.5}\\right)-37.15  and derive typical values of \\epsilon\\sim(0.03-0.26), as reported in Tab. 2. The corresponding conversion efficiencies from rest-mass to prompt radiation, \\eta\\sim(0.5-4)\\times 10^{-2}M_{1.4}R_{6}^{-1}, are remarkably consistent with the range estimated from analysis of GRB prompt and afterglow lightcurves (e.g. Zhang et al., 2007), with the two short GRBs in the sample requiring the largest efficiencies.
+
+Factors like the mass and radius of each individual NS may contribute to the scatter of the correlation; a more crucial role in eqs. (2) and (10) may be played by the \\xi-value. Campana et al. (2018) showed that the data point to \\xi\\approx~{}0.5 in their composite sample of sub-Eddington sources. We note that, if \\xi\\approx 1, as some authors suggest for very high accretion rates (e.g. Andersson et al., 2005; Kulkarni and Romanova, 2013), then the estimated \\epsilon in Eq. 10 could be further reduced by up to a factor \\lesssim 10.
+
+### Testing the energy source: disc accretion and NS spin
+
+We further corroborate this scenario by showing that, for each GRB, the accretion luminosity L_{\\rm min} in the prompt phase and the afterglow luminosity at the onset of the plateau (as measured in its first temporal bin) satisfy the theoretically expected value (eq. 5), once the accretion radiative efficiency (\\epsilon) for that GRB is factored in. To this aim we calculate, for each GRB in our sample, the ratio L_{\\rm min}/L_{p,\\rm iso}=L_{\\rm min}/(\\epsilon_{\\rm sd}L_{\\rm sd})=\\kappa/ \\epsilon_{\\rm sd} using the L_{\\rm min}-values from the previous section and the isotropic-equivalent plateau luminosity, L_{p,\\rm iso}=\\epsilon_{\\rm sd}L_{\\rm sd}, as a proxy for the NS spindown power. As in eq. 9, we include the efficiency \\epsilon_{\\rm sd} to allow for non-perfect conversion of spindown power into plateau emission. We then equate the observationally-determined L_{\\rm min}/L_{p,\\rm iso} to its expected value (see eq. 5), \\kappa/\\epsilon_{\\rm sd}\\approx 10^{5}~{}\\epsilon/\\epsilon_{\\rm sd}P^{5/3}( \\xi/0.5)^{7/2} (for R=12 km and M=1.4M_{\\odot}) and derive the ratio \\epsilon/\\epsilon_{\\rm sd}. For each GRB, Tab. 2 reports the resulting value of \\epsilon_{\\rm sd} adopting the best-fit spin period from the plateau and the \\epsilon derived from Eq. 10. We obtain typical values of \\epsilon_{\\rm sd}\\sim 0.12-0.34, remarkably similar for all the GRBs in our sample, confirming within the uncertainties the self-consistency of the proposed scenario.
+
+Note that, if the spindown were enhanced by a factor \\beta relative to the ideal magnetic dipole formula of Eq. 4 (e.g., Parfrey et al., 2016; Metzger et al., 2018), then a somewhat lower \\epsilon_{\\rm sd}/\\beta would result. In addition, our results would be weakly affected even if the magnetar wind, responsible for energy injection, were mildly beamed e.g. by a factor f_{w}>0.14 (_i.e._\\theta_{w}>30^{\\circ}) along the jet axis. At a fixed jet half-opening \\theta_{j}, beaming of the magnetar wind would imply that a larger fraction of its spindown power is intercepted by the jet, relative to an isotropic wind. Thus, the required luminosity of the magnetar would also be lower by a factor f_{w}. We have verified that, as a result of this change, each point in Fig. 4 will shift towards regions of slightly lower radiative efficiency. In particular, \\epsilon would be reduced by just f_{w}^{1/6}, while \\epsilon_{\\rm sd} would increase by f_{w}^{-2/3}, relative to our fiducial values in Tab. 2.
+
+### Propeller, ejector and NS dynamics
+
+At time T_{\\rm min} the prompt luminosity drops below L_{\\rm min} and the NS enters the propeller regime. Here the interaction of the magnetosphere with the (slower) material in the Keplerian disc causes a phase of enhanced spindown with respect to eq. 4. This phase will end only when the NS switches to the ejector regime, in which the disc is expelled from the magne
+
+\\begin{table}
+
+\\begin{tabular}{|c|c|c|c|c|c|c|c|} \\hline GRB & \\theta_{j} & F_{\\rm min,15-150\\;keV} & L_{\\rm min,1-10^{4}\\;keV} & P & B & \\epsilon & L_{p,X,0.3-30\\;{\\rm keV}} & \\epsilon_{\\rm sd} \\\\  & [rad] & [10^{-7} cgs] & [10^{47} erg/s] & [ms] & [10^{14} G] & & [10^{44} erg/s] & \\\\ \\hline
+
+060614 & 0.18 & 0.32^{+0.3}_{-0.2} & 0.6^{+0.7}_{-0.5} & 30.3\\pm 0.5 & 50.3\\pm 1.9 & 0.07^{+0.10}_{-0.07} & 0.08\\pm 0.04 & 0.17\\pm 0.04 \\\\
+
+060729A & 0.114^{+0.004}_{-0.004} & 0.16^{+0.09}_{-0.09} & 3.5^{+2.0}_{-2.0} & 2.90\\pm 0.03 & 4.63\\pm 0.08 & 0.23^{+0.14}_{-0.14} & 2.6\\pm 0.2 & 0.16\\pm 0.04 \\\\
+
+061222A & 0.0684^{+0.014}_{-0.006} & 0.08^{+0.04}_{-0.04} & 18.8^{+10.0}_{-1.20} & 0.87\\pm 0.02 & 7.01\\pm 0.35 & 0.03^{+0.02}_{-0.02} & 500\\pm 200 & 0.27\\pm 0.07 \\\\
+
+091029 & 0.022^{+0.016}_{-0.016} & 0.13^{+0.03}_{-0.03} & 7.0^{+3.7}_{-3.7} & 1.54\\pm 0.09 & 9.5\\pm 0.5 & 0.024^{+0.01}_{-0.01} & 6.0\\pm 3.8 & 0.17\\pm 0.06 \\\\
+
+100906A & 0.05 & 0.6^{+0.3}_{-0.5} & 38^{+33}_{-27} & 1.72\\pm 0.07 & 16.2\\pm 0.9 & 0.06^{+0.05}_{-0.05} & 110\\pm 70 & 0.34\\pm 0.09 \\\\
+
+120404A & 0.054^{+0.005}_{-0.005} & 0.17^{+0.05}_{-0.05} & 36^{+13}_{-13} & 2.54\\pm 0.23 & 34.1\\pm 1.8 & 0.03^{+0.01}_{-0.01} & 43\\pm 9 & 0.12\\pm 0.05 \\\\
+
+130603B & 0.11^{+0.03}_{-0.09} & 3.8^{+3.0}_{-1.5} & 126^{+110}_{-0.9} & 13.3\\pm 1.1 & 153\\pm 11 & 0.26^{+0.25}_{-0.16} & 8.7\\pm 3.6 & 0.22\\pm 0.09 \\\\
+
+140903A & 0.07^{+0.09}_{-0.03} & 1.5^{+0.5}_{-1.2} & 5.1^{+2.9}_{-2.9} & 13.7\\pm 1.5 & 39\\pm 5 & 0.17^{+0.13}_{-0.13} & 0.3\\pm 0.2 & 0.32\\pm 0.16 \\\\
+
+151027A & 0.11 & 0.66^{+0.44}_{-0.14} & 28^{+20}_{-20} & 2.00\\pm 0.01 & 12.7\\pm 0.2 & 0.10^{+0.10}_{-0.08} & 150\\pm 90 & 0.29\\pm 0.04 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Selected sample of 9 GRBs analyzed in this work. The magnetar energy output is assumed to be emitted isotropically and the NS angular momentum is assumed to be orthogonal to the magnetic axis. The second column gives the jet opening angle, while the third and fourth columns quote the minimum flux (Swift/BAT) and corresponding (bolometric) luminosity in the prompt phase before the NS enters the propeller regime. P and B are the magnetar spin period and dipole B-field strength obtained by fitting the X-ray afterglow light curves, and \\epsilon the conversion efficiency from gravitational potential energy to \\gamma-rays. The eighth column quotes the (beaming-corrected) plateau luminosity in the earliest time bin, while the last column reports the inferred conversion efficiency from NS spindown power to plateau luminosity. tosphere9 (as its inner edge approaches the light cylinder) and the NS spins down due to magnetic dipole radiation (eq. 4). As a result the spin period P estimated from the plateau may be longer than P(T_{\\rm min}), _i.e._ the spin period at time T_{\\rm min}. Moreover, the luminosity evolution from T_{\\rm min} through T_{\\rm pl}, the plateau start time, will track the power released in the disc down to r_{m}. We check here the consistency of observed GRB light curves with the above expectations. A more systematic study of light curve shapes as a function of model parameters is deferred for future investigation.
+
+Footnote 9: Matter flung out by the propeller, if not unbound, may return to the disc and drift inward on viscous timescales (e.g. Li et al., 2021), by which time the ejector sweeps away the residual disk together with any recycled material, thus preventing significant effects on source luminosity.
+
+Our first step is to check the impact of propeller-induced spin down on the NS rotation from T_{\\rm min} to T_{\\rm pl}. For each GRB we estimate \\dot{m}_{\\rm min}=L_{\\rm min}R/(GM\\epsilon) at time T_{\\rm min}, and the corresponding r_{m}(T_{\\rm min}). However, we do not use here the previously calculated radiative efficiency since, as eq. 10 shows, \\epsilon\\sim L_{\\rm min}RP(T_{\\rm min})^{7/3}/(\\mu^{2}\\xi^{7/2}); thus \\epsilon, \\dot{m}_{\\rm min} and r_{m}(T_{\\rm min}), will all depend on the unknown P(T_{\\rm min}).
+
+For the mass inflow rate in the propeller phase we adopt the standard scaling \\dot{m}\\propto t^{-5/3} for fallback (e.g. Rees, 1988; MacFadyen & Woosley, 1999). The correspoding accretion power released in the disc is L_{\\rm prop}(t)=\\epsilon GM\\dot{m}(t)/2r_{m}(t). Writing \\dot{m}(t)=\\dot{m}_{\\rm min}(t/T_{\\rm min})^{-5/3}, and since r_{m}\\propto\\dot{m}^{-2/7} (eq. 1), then
+
+L_{\\rm prop,47}(t)\\approx\\frac{M_{1.4}^{8/7}\\epsilon_{-2}\\dot{m}_{\\rm min,-4}^ {9/7}}{(\\xi/0.5)\\mu_{33}^{4/7}}\\left(t/T_{\\rm min}\\right)^{-15/7}\\,,  with \\dot{m}_{\\rm min,-4}=\\dot{m}_{\\rm min}/(10^{-4}M_{\\odot}/\\rm s) and \\mu_{33}=\\mu/(10^{33}{\\rm Gcm}^{3}).
+
+The maximum rate of angular momentum transfer from the NS to disc material is (e.g. Piro & Ott, 2011; Parfrey et al., 2016; Metzger et al., 2018)\\dot{J}_{\\rm prop}(t)=\\dot{m}(t)\\omega(t)r_{m}(t)^{2}=-I\\dot{\\omega}(t), from which we obtain the evolution of the NS spin frequency,
+
+\\omega(t)=\\omega(T_{\\rm min})\\exp\\left[-\\frac{\\int_{\\rm min}^{t}\\dot{m}(t^{ \\prime})r_{m}^{2}(t^{\\prime})dt^{\\prime}}{I}\\right]\\,. 
+
+After some manipulation the integrand in eq. 12 becomes
+
+\\dot{m}(t)r_{m}^{2}(t)=\\frac{\\pi\\sqrt{2}\\xi^{7/2}\\mu^{2}}{GMP(T_{\\rm min})} \\left(t/T_{\\rm min}\\right)^{-5/7}\\,,  which is solved for P(T_{\\rm min}) once we determine the start time of the plateau (T_{\\rm pl}) and impose that P(T_{\\rm pl}) equals the best-fit value P from Tab. 2. Thus, for each GRB in our sample we first estimated T_{\\rm min} and T_{\\rm pl} from the light curves, and then solved eq. 12 for P(T_{\\rm min}). We show in Tab. 3 the resulting P(T_{\\rm min}) for each GRB in our sample, along with the values of T_{\\rm min}, T_{\\rm pl}, and the implied \\dot{m}_{\\rm min}. In all but one case the spin change is small or negligible, compared to the fit error, and the same holds for the \\epsilon-value. Only GRB 060614 requires a \\sim 2 times faster spin at T_{\\rm min} owing to its longer initial spin period which leads to a prolonged propeller phase.
+
+This result fully supports the robustness of the universal relation, and its interpretation discussed in previous sections10. Moreover, the proposed scenario provides us with a simple self-contained model for GRB lightcurves from the onset of the prompt steep decay to the end of the afterglow plateau, which depends only on three parameters: L_{\\rm min}, B and P. As an example, we show here the application of this model to the light curve of GRB 091029: having determined B and P from the afterglow plateau, and L_{\\rm min} from the prompt emission, we obtain \\epsilon through eq. 10, which then fixes \\dot{m}_{\\rm min}, hence the propeller luminosity evolution and the propeller end time, _i.e._
+
+\\begin{table}
+
+\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|} \\hline GRB & \\dot{m}_{\\rm min} & T_{\\rm min} & r_{m}(T_{\\rm min})/R & T_{\\rm pl} & r_{L}(T_{\\rm pl})/R & r_{m}/r_{L}(T_{\\rm pl}) & P(T_{\\rm min}) & \\Delta M_{\\rm acc} \\\\  & (10^{-4}\\ M_{\\odot}/\\rm s) & (\\rm s) & (\\rm s) & & & & (ms) & (10^{-3}M_{\\odot}) \\\\ \\hline
+
+060614 & 0.15 & 85 & 8.5 & <4500 & 120.4 & <0.75 & 15.1 & 30.3 & 1.6 \\\\
+
+060729A & 0.05 & 90 & 2.82 & 500 & 11.5 & 0.57 & 2.88 & 2.9 & 0.5 \\\\
+
+061222A & 2.2 & 35 & 1.24 & 100 & 3.5 & 0.6 & 0.84 & 0.87 & 5.8 \\\\
+
+091029 & 1.0 & 10.5 & 1.83 & 130 & 6.1 & 0.99 & 1.50 & 1.54 & 1.3 \\\\
+
+100906A* & 2.6 & 35 & 1.86 & 130 & 6.8 & 0.52 & 1.54 & 1.72 & 7.9 \\\\
+
+120404A* & 5.6 & 6.5 & 2.3 & 110 & 10.1 & 0.9 & 2.13 & 2.54 & 4.6 \\\\
+
+130603B & 1.7 & 0.09 & 7.7 & <30 & 52.9 & <2.3 & 12.9 & 13.3 & 0.02 \\\\
+
+140903A & 0.1 & 0.15 & 7.95 & <100 & 54.5 & <3.2 & 13.6 & 13.7 & 0.005 \\\\
+
+151027A & 1.3 & 60 & 2.01 & 350 & 7.95 & 0.6 & 1.73 & 2.00 & 8.1 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: Additional physical parameters of magnetar central engines derived in our GRB sample. The mass accretion rate \\dot{m}_{\\rm min} at T_{\\rm min} is calculated using \\epsilon from Tab. 2. The times T_{\\rm min} and T_{\\rm pl} are obtained directly from the prompt lightcurve. The magnetospheric radius r_{m} (in units of the NS radius, R) at T_{\\rm min} uses \\dot{m}_{\\rm min} and the B-field derived from fits to the X-ray plateau. The light-cylinder radius r_{L} at the start time of the plateau (T_{\\rm pl}) uses the best-fit spin period for the X-ray plateau, _i.e._P(T_{\\rm pl}). The value of r_{m}(T_{\\rm pl}) is calculated from r_{m}(T_{\\rm min}) using \\dot{m}_{\\rm min} and the scaling \\dot{m}\\propto t^{-5/3}. P(T_{\\rm min}) is the NS spin period at T_{\\rm min}, calculated with our model for the propeller-induced spindown. The last column features the total amount of mass that went through the disc during the propeller phase, _i.e._ between T_{\\rm min} and T_{\\rm pl}. the onset of the ejector phase. Two conclusions are apparent: (i) L_{\\rm prop}(t)\\propto t^{-15/7} is well consistent with the steep decay observed at the end of the prompt phase and (ii) the onset of the plateau occurs at the time when r_{m}\\approx r_{L}.
+
+Similar results are obtained for all GRBs in our sample. For each of them, Tab. 3 shows the location of r_{m} at T_{\\rm min} and at the start of the plateau (T_{\\rm pl}): GRB 091029 and GRB 120404A match very well our model prediction, and the two short GRBs 130603B and 140903A are well consistent with it, given the time coverage of the available data. In the remaining 5 GRBs the plateau appears to start when r_{m}, though expanded by a large factor, is still \\sim(0.5-0.7)r_{L}. In all of these 5 events, the prompt emission displays two or more peaks well separated in time, suggesting distinct accretion episodes with different start times relative to the GRB trigger. As shown, e.g., in Dall'Osso et al. (2017), such a temporal offset offers a simple interpretation for the apparent mismatch and may help reconcile these 5 GRBs with the basic picture proposed here. In particular, in order for r_{m}\\sim(0.9-1)r_{L} at the start of the plateau in these GRBs, an offset time \\sim(0.5-0.7)T_{\\rm min} is typically required. A detailed modelling of this and other effects that may contribute to the light curve shape is under way and will be presented in a forthcoming paper.
+
+## 5 Summary & Conclusions
+
+Several GRBs, characterized by a plateau in their X-ray afterglow light curves, have been modeled under the assumption of energy injection by a magnetar. In this work we have gone one step further in testing the presence of a magnetar central engine, by singling out a physical mechanism for accretion onto magnetic neutron stars - the transition to propeller - that has long been verified for NS in X-ray binaries and more recently validated for other classes of accreting stellar-mass objects (Campana et al., 2018). Under the assumption that the prompt emission of GRBs is powered by a phase of mass accretion towards a fast-spinning magnetar, we identified signatures of propeller transitions in the prompt light curves of GRBs. Based on such signatures, we estimated the minimum accretion luminosity, L_{\\rm min}, in a sample of 9 GRBs for which sufficient data are available.
+
+We then estimated the dipolar magnetic field and the spin period of the NSs through fits to the X-ray afterglow plateaus. By combining these _independently_ determined parameters according to Eq. 2, we showed that the GRBs in our sample follow the same universal relation between L_{\\rm min}, P and B as other accreting, magnetic stellar-mass objects, albeit at a lower radiative efficiency \\epsilon\\sim 10^{-2}-10^{-1}. The latter is also in good agreement with independent observational constraints (e.g. Zhang et al., 2007) and theoretical expectations.
+
+Moreover, by simply comparing the isotropic-equivalent luminosity of the X-ray plateau with that predicted by the NS spindown model, we have estimated a conversion efficiency of spindown power to afterglow emission \\sim 0.12-0.34, remarkably consistent throughout our sample. This illustrates the diagnostic power of the ratio L_{\\rm min}/L_{p,X} (Eq. 5), which depends only on the NS spin period and the ratio of the radiative efficiencies \\epsilon/\\epsilon_{\\rm sd} in each source. Our results demonstrate that a magnetar central engine can account at once for: (i) the prompt luminosity at the onset of the steep decay, the plateau duration and its luminosity in each individual GRB and (ii) a correlation among these properties in the GRB population, while simultaneously deriving radiative efficiencies of both accretion and spindown in agreement with standard values and (iii) the slope of the prompt steep decay, as well as the onset time of the plateau. The magnetar scenario we discussed - where accretion powers the GRB prompt emission and, once accretion subsides, the NS spindown powers the afterglow plateau - is amenable to further development aimed at fitting the different stages of GRB lightcurves with a minimal set of model parameters. This will be the subject of future work.
+
+[MISSING_PAGE_FAIL:13]
+
+Dall'Osso, S., Stella, L., & Palomba, C. 2018, MNRAS, 480, 1353, doi: 10.1093/mnras/sty1706
+
+* Dall'Osso et al. (2011) Dall'Osso, S., Stratta, G., Guetta, D., et al. 2011, A&A, 526, A121, doi: 10.1051/0004-6361/201014168
+
+* D'Angelo & Spruit (2010) D'Angelo, C. R., & Spruit, H. C. 2010, MNRAS, 406, 1208, doi: 10.1111/j.1365-2966.2010.16749.x
+
+* Evans et al. (2010) Evans, P. A., Willingale, R., Osborne, J. P., et al. 2010, A&A, 519, A102, doi: 10.1051/0004-6361/201014819
+
+* Filgas et al. (2012) Filgas, R., Greiner, J., Schady, P., et al. 2012, A&A, 546, A101, doi: 10.1051/0004-6361/201219583
+
+* Fong et al. (2015) Fong, W., Berger, E., Margutti, R., & Zauderer, B. A. 2015, ApJ, 815, 102, doi: 10.1088/0004-637X/815/2/102
+
+* Frank et al. (2002) Frank, J., King, A., & Raine, D. J. 2002, Accretion Power in Astrophysics: Third Edition
+
+* Ghosh & Lamb (1979) Ghosh, P., & Lamb, F. K. 1979, ApJ, 234, 296, doi: 10.1086/157498
+
+* Giacomazzo & Perna (2013) Giacomazzo, B., & Perna, R. 2013, ApJ, 771, L26, doi: 10.1088/2041-8205/771/2/L26
+
+* Giacomazzo et al. (2015) Giacomazzo, B., Zrake, J., Duffell, P. C., MacFadyen, A. I., & Perna, R. 2015, ApJ, 809, 39, doi: 10.1088/0004-637X/809/1/39
+
+* Gibson et al. (2017) Gibson, S. L., Wynn, G. A., Gompertz, B. P., & O'Brien, P. T. 2017, MNRAS, 470, 4925, doi: 10.1093/mnras/stx1531
+
+* Gompertz et al. (2014) Gompertz, B. P., O'Brien, P. T., & Wynn, G. A. 2014, MNRAS, 438, 240, doi: 10.1093/mnras/stt2165
+
+* Guidorzi et al. (2014) Guidorzi, C., Mundell, C. G., Harrison, R., et al. 2014, MNRAS, 438, 752, doi: 10.1093/mnras/stt2243
+
+* Guilet et al. (2022) Guilet, J., Reboul-Salze, A., Raynaud, R., Bugli, M., & Gallet, B. 2022, MNRAS, 516, 4346, doi: 10.1093/mnras/stac2499
+
+* Heger et al. (2003) Heger, A., Fryer, C. L., Woosley, S. E., Langer, N., & Hartmann, D. H. 2003, ApJ, 591, 288, doi: 10.1086/375341
+
+* Hjorth et al. (2003) Hjorth, J., Sollerman, J., Moller, P., et al. 2003, Nature, 423, 847, doi: 10.1038/nature01750
+
+* Illarionov & Sunyaev (1975) Illarionov, A. F., & Sunyaev, R. A. 1975, A&A, 39, 185
+
+* Kawamura et al. (2016) Kawamura, T., Giacomazzo, B., Kastaun, W., et al. 2016, PhRvD, 94, 064012, doi: 10.1103/PhysRevD.94.064012
+
+* Kiziltan et al. (2013) Kiziltan, B., Kottas, A., De Yoreo, M., & Thorsett, S. E. 2013, ApJ, 778, 66, doi: 10.1088/0004-637X/778/1/66
+
+* Kulkarni & Romanova (2013) Kulkarni, A. K., & Romanova, M. M. 2013, MNRAS, 433, 3048, doi: 10.1093/mnras/stt945
+
+* Kumar et al. (2008) Kumar, P., Narayan, R., & Johnson, J. L. 2008, Science, 321, 376, doi: 10.1126/science.1159003
+
+* Kumar & Zhang (2015) Kumar, P., & Zhang, B. 2015, PhR, 561, 1, doi: 10.1016/j.physrep.2014.09.008
+
+* Laskar et al. (2015) Laskar, T., Berger, E., Margutti, R., et al. 2015, ApJ, 814, 1, doi: 10.1088/0004-637X/814/1/1
+
+* Lattimer & Prakash (2001) Lattimer, J. M., & Prakash, M. 2001, ApJ, 550, 426, doi: 10.1086/319702
+
+* Li et al. (2021) Li, S.-Z., Yu, Y.-W., Gao, H., & Zhang, B. 2021, ApJ, 907, 87, doi: 10.3847/1538-4357/abcc70
+
+* Lu & Zhang (2014) Lu, H.-J., & Zhang, B. 2014, ApJ, 785, 74, doi: 10.1088/0004-637X/785/1/74
+
+* Lu et al. (2012) Lu, R.-J., Wei, J.-J., Qin, S.-F., & Liang, E.-W. 2012, ApJ, 745, 168, doi: 10.1088/0004-637X/745/2/168
+
+* MacFadyen & Woosley (1999) MacFadyen, A. I., & Woosley, S. E. 1999, ApJ, 524, 262, doi: 10.1086/307790
+
+* Mangano et al. (2007) Mangano, V., Holland, S. T., Malesani, D., et al. 2007, A&A, 470, 105, doi: 10.1051/0004-6361:20077232
+
+* Margalit & Metzger (2017) Margalit, B., & Metzger, B. D. 2017, ApJ, 850, L19, doi: 10.3847/2041-8213/aa991c
+
+* Metzger et al. (2018) Metzger, B. D., Beniamini, P., & Giannios, D. 2018, ApJ, 857, 95, doi: 10.3847/1538-4357/aab70c
+
+* Metzger et al. (2007) Metzger, B. D., Thompson, T. A., & Quataert, E. 2007, ApJ, 659, 561, doi: 10.1086/512059
+
+* Nappo et al. (2017) Nappo, F., Pescalli, A., Oganesyan, G., et al. 2017, A&A, 598, A23, doi: 10.1051/0004-6361/201628801
+
+* Obergaulinger & Aloy (2021) Obergaulinger, M., & Aloy, M. A. 2021, MNRAS, 503, 4942, doi: 10.1093/mnras/stab295
+
+* Oganesyan et al. (2020) Oganesyan, G., Ascenzi, S., Branchesi, M., et al. 2020, ApJ, 893, 88, doi: 10.3847/1538-4357/ab8221
+
+* Palenzuela et al. (2022) Palenzuela, C., Aguilera-Miret, R., Carrasco, F., et al. 2022, PhRvD, 106, 023013, doi: 10.1103/PhysRevD.106.023013
+
+* Palenzuela et al. (2015) Palenzuela, C., Liebling, S. L., Neilsen, D., et al. 2015, PhRvD, 92, 044045, doi: 10.1103/PhysRevD.92.044045
+
+* Palmer et al. (2015) Palmer, D. M., Barthelmy, S. D., Cummings, J. R., et al. 2015, GRB Coordinates Network, 18496, 1
+
+* Pan et al. (2013) Pan, Y. Y., Wang, N., & Zhang, C. M. 2013, Ap&SS, 346, 119, doi: 10.1007/s10509-013-1432-3
+
+* Parfrey et al. (2016) Parfrey, K., Spitkovsky, A., & Beloborodov, A. M. 2016, ApJ, 822, 33, doi: 10.3847/0004-637X/822/1/33
+
+* Piro et al. (2017) Piro, A. L., Giacomazzo, B., & Perna, R. 2017, ApJ, 844, L19, doi: 10.3847/2041-8213/aa7f2f
+
+* Piro & Ott (2011) Piro, A. L., & Ott, C. D. 2011, ApJ, 736, 108, doi: 10.1088/0004-637X/736/2/108
+
+* Piro et al. (2019) Piro, L., Troja, E., Zhang, B., et al. 2019, MNRAS, 483, 1912, doi: 10.1093/mnras/sty04710.48550/arXiv.1810.04664
+
+* Pringle & Rees (1972) Pringle, J. E., & Rees, M. J. 1972, A&A, 21, 1
+
+* Racusin et al. (2009) Racusin, J. L., Liang, E. W., Burrows, D. N., et al. 2009, ApJ, 698, 43, doi: 10.1088/0004-637X/698/1/43
+
+* Radice (2017) Radice, D. 2017, ApJ, 838, L2, doi: 10.3847/2041-8213/aa6483
+
+* Raynaud et al. (2020) Raynaud, R., Guilet, J., Janka, H.-T., & Gastine, T. 2020, Science Advances, 6, eaay2732, doi: 10.1126/sciadv.aay2732
+
+* Rees (1988) Rees, M. J. 1988, Nature, 333, 523, doi: 10.1038/333523a0
+
+* Rowlinson et al. (2013) Rowlinson, A., O'Brien, P. T., Metzger, B. D., Tanvir, N. R., & Levan, A. J. 2013, MNRAS, 430, 1061, doi: 10.1093/mnras/sts683
+
+* Ryan et al. (2015) Ryan, G., van Eerten, H., MacFadyen, A., & Zhang, B.-B. 2015, ApJ, 799, 3, doi: 10.1088/0004-637X/799/1/3
+
+* Sakamoto et al. (2009) Sakamoto, T., Sato, G., Barbier, L., et al. 2009, ApJ, 693, 922, doi: 10.1088/0004-637X/693/1/922* Sari et al. (1999) Sari, R., Piran, T., & Halpern, J. P. 1999, ApJ, 519, L17, doi: 10.1086/312109
+
+* Siegel et al. (2014) Siegel, D. M., Ciolfi, R., & Rezzolla, L. 2014, ApJ, 785, L6, doi: 10.1088/2041-8205/785/1/L6
+
+* Spitkovsky (2006) Spitkovsky, A. 2006, ApJ, 648, L51, doi: 10.1086/507518
+
+* Stanek et al. (2003) Stanek, K. Z., Matheson, T., Garnavich, P. M., et al. 2003, ApJ, 591, L17, doi: 10.1086/376976
+
+* Stella et al. (1994) Stella, L., Campana, S., Colpi, M., Mereghetti, S., & Tavani, M. 1994, ApJ, 423, L47, doi: 10.1086/187232
+
+* Stella et al. (1986) Stella, L., White, N. E., & Rosner, R. 1986, ApJ, 308, 669, doi: 10.1086/164538
+
+* Stratta et al. (2018) Stratta, G., Dainotti, M. G., Dall'Osso, S., Hernandez, X., & De Cesare, G. 2018, ApJ, 869, 155, doi: 10.3847/1538-4357/aadd8f
+
+* Tanvir et al. (2013) Tanvir, N. R., Levan, A. J., Fruchter, A. S., Hjorth, J., & Wiersema, K. 2013, GRB Coordinates Network, 14893, 1
+
+* Thompson & Duncan (1995) Thompson, C., & Duncan, R. C. 1995, MNRAS, 275, 255, doi: 10.1093/mnras/275.2.255
+
+* Thompson et al. (2004) Thompson, T. A., Chang, P., & Quataert, E. 2004, ApJ, 611, 380, doi: 10.1086/421969
+
+* Troja et al. (2016) Troja, E., Sakamoto, T., Cenko, S. B., et al. 2016, ApJ, 827, 102, doi: 10.3847/0004-637X/827/2/102
+
+* Tsvetkova et al. (2017) Tsvetkova, A., Frederiks, D., Golenetskii, S., et al. 2017, ApJ, 850, 161, doi: 10.3847/1538-4357/aa96af
+
+* Tsvetkova et al. (2021) Tsvetkova, A., Frederiks, D., Svinkin, D., et al. 2021, ApJ, 908, 83, doi: 10.3847/1538-4357/abd569
+
+* Ukwatta et al. (2012) Ukwatta, T. N., Dhuga, K. S., Stamatikos, M., et al. 2012, MNRAS, 419, 614, doi: 10.1111/j.1365-2966.2011.19723.x
+
+* van Eerten et al. (2012) van Eerten, H., van der Horst, A., & MacFadyen, A. 2012, ApJ, 749, 44, doi: 10.1088/0004-637X/749/1/44
+
+* Wang et al. (2018) Wang, X.-G., Zhang, B., Liang, E.-W., et al. 2018, ApJ, 859, 160, doi: 10.3847/1538-4357/aabc13
+
+* Zhang & Meszaros (2001) Zhang, B., & Meszaros, P. 2001, ApJ, 552, L35, doi: 10.1086/320255
+
+* Zhang et al. (2007) Zhang, B., Liang, E., Page, K. L., et al. 2007, ApJ, 655, 989, doi: 10.1086/510110
+
+* Zrake & MacFadyen (2013) Zrake, J., & MacFadyen, A. I. 2013, ApJ, 769, L29, doi: 10.1088/2041-8205/769/2/L29

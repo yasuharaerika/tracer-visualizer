@@ -1,0 +1,103 @@
+###### Abstract
+
+We present the first self-consistent model for the dynamics and the radiative transfer occurring in bright X-ray pulsar accretion columns, with a special focus on the role of the shock in energizing the emerging X-rays. The pressure inside the accretion column of a luminous X-ray pulsar is dominated by the photons, and consequently the equations describing the coupled radiative-dynamical structure must be solved simultaneously. Spectral formation in these sources is therefore a complex, nonlinear phenomenon. We obtain the analytical solution for the Green's function describing the upscattering of monochromatic radiation injected into the column from the thermal mound located near the base of the flow. The Green's function is convolved with a Planck distribution to model the X-ray spectrum resulting from the reprocessing of blackbody photons produced in the thermal mound. These photons diffuse through the infalling gas and eventually escape out the walls of the column, forming the observed X-ray spectrum. We show that the resulting column-integrated, phase-averaged spectrum has a power-law shape at high energies and a blackbody shape at low energies, in agreement with the observational data for many X-ray pulsars.
+
+Subject headings:pulsars: general -- stars: neutron -- shock waves -- radiation mechanisms: non-thermal -- methods: analytical -- X-rays: stars +
+
+Footnote †: slugcomment: accepted by ApJ Letters
+
+## 1. Introduction
+
+The first pulsating X-ray sources, Her X-1 and Cen X-3, were discovered in 1971. Since then, over 50 sources have been detected in the Galaxy and the Magellanic Clouds, with luminosities in the range L_{\\rm X}\\sim 10^{34-38}\\:{\\rm ergs\\:s^{-1}} and pulsation periods in the range 0.1\\:{\\rm s}\\lower 2.15pt\\hbox{$\\;\\buildrel<\\over{\\sim}\\;$}P\\lower 2.15pt \\hbox{$\\;\\buildrel<\\over{\\sim}\\;$}10^{3}\\:{\\rm s}. In many cases the X-ray spectra are well fit by a combination of a power-law spectrum plus a blackbody component (e.g., Coburn et al. 2002; di Salvo et al. 1998; White et al. 1983). Most spectra also display quasi-exponential cutoffs at E\\sim 20-30\\:{\\rm keV}, and in some cases cyclotron lines are observed near the cutoff energy, implying magnetic field strengths \\sim 10^{12} G. Iron emission lines also appear to be present in certain sources. The X-ray emission from bright X-ray pulsars is powered by accretion of material from the "normal" binary companion onto the neutron star.
+
+Efforts to calculate theoretical X-ray pulsar spectra based on either static or dynamic models have generally yielded results that do not agree very well with the observed power-law profiles (e.g., Meszaros & Nagel 1985a,b; Nagel 1981; Yahel 1980; Klein et al. 1996), which is probably due to the neglect of the central role of the shock in upscattering the radiation. Consequently no satisfactory theoretical model for the production of X-ray pulsar spectra has yet emerged (Coburn et al. 2002).
+
+Motivated by the problems with the current models, we reconsider here the physical picture originally proposed by Davidson (1973), in which the accreting gas passes through a radiative, radiation-dominated shock before settling onto the surface of the star. In this situation, most of the photons are produced in a dense "thermal mound" at the base of the column, just above the stellar surface. These relatively low-energy photons are upscattered in the shock and eventually diffuse through the walls of the column, carrying away the kinetic energy of the gas. This Fermi mechanism characteristically produces a power-law continuum at high energies.
+
+In this Letter, we demonstrate for the first time how the _accretion shock itself_ can directly produce spectra very similar to the continuum emission seen in many X-ray pulsars. Although this approach has been suggested before (e.g., Burnard, Arons, & Klein 1991), it has not been carried out quantitatively. The work presented here therefore represents a significant step in the development of a detailed theory for the spectral formation process in X-ray pulsars.
+
+## 2. Dynamics of Radiation-Dominated Flow
+
+Radiation pressure plays a crucial role in determining the dynamical structure of the accretion flows in bright X-ray pulsars. In order for the accreting gas to be bought to rest at the surface of the star by the radiation pressure gradient, the X-ray luminosity must satisfy the constraint L_{\\rm X}\\sim L_{\\rm crit}, with the critical luminosity given by (Becker 1998; Basko & Sunyaev 1976)
+
+L_{\\rm crit}\\equiv\\frac{2.72\\times 10^{37}\\sigma_{{}_{\\rm T}}}{\\sqrt{\\sigma_{ \\perp}\\sigma_{{}_{||}}}}\\left(\\frac{M_{*}}{M_{\\odot}}\\right)\\left(\\frac{r_{0} }{R_{*}}\\right)\\:\\:\\:{\\rm ergs\\:s^{-1}}\\,  where M_{*} is the stellar mass, R_{*} is the stellar radius, r_{0} is the radius of the cylindrical accretion column, \\sigma_{{}_{\\rm T}} is the Thomson cross section, and \\sigma_{{}_{||}} and \\sigma_{{}_{\\perp}} denotethe mean values of the electron scattering cross sections for photons propagating parallel or perpendicular to the magnetic field, respectively. The observation of many X-ray pulsars with L_{\\rm X}\\sim 10^{36-38}\\,{\\rm ergs\\,s^{-1}} implies the presence of radiation-dominated shocks close to the stellar surfaces (White et al. 1983; White et al. 1995).
+
+The accretion flow is assumed to be cylindrical and highly supersonic in the upstream region. In this case the exact solution for the flow velocity v is given by (Becker 1998; Basko & Sunyaev 1976)
+
+v(x)=\\frac{7}{4}\\left[1-\\left(\\frac{7}{3}\\right)^{-1+x/x_{\\rm st}}\\right]v_{c }. 
+
+The coordinate x increases in the direction of the flow, and v_{c} is the flow velocity at the sonic point (x=0), where the Mach number with respect to the radiation sound speed equals unity. The quantity x_{\\rm st} represents the distance between the sonic point and the stellar surface, which is related to the other parameters via
+
+x_{\\rm st}=\\frac{r_{0}}{2\\sqrt{3}}\\left(\\frac{\\sigma_{\\perp}}{\\sigma_{{}_{||} }}\\right)^{1/2}\\ln\\left(\\frac{7}{3}\\right). 
+
+In the far upstream region, x\\rightarrow-\\infty and v\\rightarrow(7/4)\\,v_{c} according to equation (2). Since the incident (upstream) velocity is expected to be close to the free-fall velocity onto the stellar surface, we find that the sonic point velocity v_{c} is given by
+
+v_{c}=\\frac{4}{7}\\left(\\frac{2\\,GM_{*}}{R_{*}}\\right)^{1/2}. 
+
+## 3 Calculation of the radiation spectrum
+
+In a steady-state, one-dimensional model, the Green's function f_{{}_{\\rm G}} representing the response to the injection of \\dot{N}_{0} photons per second, each with energy \\epsilon_{0}, from a source located at x=x_{0} satisfies the transport equation
+
+v\\frac{\\partial f_{{}_{\\rm G}}}{\\partial x}=\\frac{dv}{dx}\\,\\frac {\\epsilon}{3}\\frac{\\partial f_{{}_{\\rm G}}}{\\partial\\epsilon}+\\frac{\\partial}{ \\partial x}\\left(\\frac{c}{3n_{e}\\sigma_{\\parallel}}\\,\\frac{\\partial f_{{}_{\\rm G }}}{\\partial x}\\right)-\\frac{f_{{}_{\\rm G}}}{t_{\\rm esc}} +\\frac{\\dot{N}_{0}\\delta(\\epsilon-\\epsilon_{0})\\delta(x-x_{0})}{ \\pi r_{0}^{2}\\epsilon_{0}^{0}}-\\beta\\,v_{0}\\,f_{{}_{\\rm G}}\\delta(x-x_{0})\\,  where \\epsilon is the photon energy, n_{e} is the electron number density, v_{0}\\equiv v(x_{0}) is the flow velocity at the source location, and \\epsilon^{2}f_{{}_{\\rm G}}\\,d\\epsilon gives the number density of photons in the energy range between \\epsilon and \\epsilon+d\\epsilon. From left to right, the terms in equation (5) represent the comoving (advective) time derivative, first-order Fermi energization ("bulk Comptonization") in the converging flow, spatial diffusion parallel to the column axis (i.e., in the x-direction), escape of radiation from the column, photon injection, and the absorption of radiation at the thermal mound, respectively.
+
+The quantity t_{\\rm esc} appearing in equation (5) represents the mean escape timescale for photons to diffuse out through the walls of the accretion column. If the column cross section is optically thick to electron scattering as expected, we find that t_{\\rm esc}=r_{0}/w_{\\perp}, where w_{\\perp}=c/\\tau_{\\perp} is the diffusion velocity perpendicular to the x-axis, and \\tau_{\\perp}(x)=n_{e}(x)\\,\\sigma_{\\perp}\\,r_{0} is the perpendicular optical thickness of the accretion column at location x. The dimensionless parameter \\beta in equation (5) controls the amount of absorption occurring at the thermal mound. In our application, \\beta must be computed self-consistently since the mound is a blackbody surface that acts as both a source and a sink of radiation. We will use an energy balance argument to determine \\beta below.
+
+Our primary goal is to calculate the radiation spectrum f resulting from the injection of blackbody radiation at the thermal mound. Once the solution for the Green's function f_{{}_{\\rm G}} has been determined, we can easily compute f by convolving f_{{}_{\\rm G}} with a Planck distribution. If \\epsilon^{2}S(\\epsilon)d\\epsilon denotes the number of photons injected into the accretion column per second in the energy range between \\epsilon and \\epsilon+d\\epsilon from the blackbody surface at x=x_{0}, we have (Rybicki & Lightman 1979)
+
+S(\\epsilon)=\\frac{2\\,\\pi^{2}\\,r_{0}^{2}}{h^{3}\\,c^{2}}\\,\\frac{1}{\\epsilon^{ \\epsilon/kT_{0}}-1}\\,  where T_{0}\\equiv T(x_{0}) denotes the gas temperature at the mound "photosphere." The corresponding particular solution for f is then given by the integral (Becker 2003)
+
+f(\\epsilon,x)=\\int_{0}^{\\epsilon}\\frac{f_{{}_{\\rm G}}(x_{0},x,\\epsilon_{0}, \\epsilon)}{\\dot{N}_{0}}\\ \\epsilon_{0}^{2}\\,S(\\epsilon_{0})\\,d\\epsilon_{0}. 
+
+The accretion column in a bright X-ray pulsar is radiation-dominated, and therefore no net energy can be emitted or absorbed at the thermal mound. Instead, the absorption of radiation energy is almost perfectly balanced by the production of fresh blackbody emission. Most of the energy appearing in the emergent X-rays is transferred to the photons via collisions with the infalling electrons while the radiation is diffusing through the column. Based on the energy balance requirement at the mound (x=x_{0}), we can write the dimensionless absorption constant \\beta in equation (5) as
+
+\\beta=\\frac{\\int_{0}^{\\infty}\\epsilon^{3}\\,S(\\epsilon)\\,d\\epsilon}{\\pi r_{0}^{2 }\\,v_{0}U_{0}}=\\frac{\\sigma T_{0}^{4}}{v_{0}U_{0}}\\,  where U_{0}\\equiv U(x_{0}) denotes the radiation energy density at the top of the thermal mound.
+
+Calculation of the radiation spectrum is simplified considerably if we work in terms of the new spatial variable y, defined by
+
+y(x)\\equiv 1-\\frac{4}{7}\\,\\frac{v(x)}{v_{c}}=\\left(\\frac{7}{3}\\right)^{-1+x/x _{\\rm st}}\\,  which has the convenient property that y\\to 0 in the far upstream region (x\\rightarrow-\\infty), and y\\to 1 at the surface of the star (x\\rightarrow{x_{\\rm st}}). Equation (5) is separable in energy and space using the functions
+
+f_{\\lambda}(\\epsilon,y)=\\epsilon^{-\\lambda}\\,g(\\lambda,y)\\,  where \\lambda is the separation constant and the spatial function g satisfies the differential equation
+
+y(1-y)\\,\\frac{d^{2}g}{dy^{2}}+\\frac{1-5\\,y}{4}\\,\\frac{dg}{dy}+ \\left[\\frac{\\lambda}{4}+\\frac{y-1}{4\\,y}\\right]\\,g =\\frac{3\\,\\beta\\,v_{0}\\,\\delta(y-y_{0})}{7\\,v_{c}}\\,g\\,  with solutions given by
+
+g(\\lambda,y)=\\left\\{\\begin{array}{l}\\varphi_{1}(\\lambda,y)\\,\\ \\ \\ \\ y\\leq y_{0}\\ \\,\\\\ B\\,\\varphi_{2}(\\lambda,y)\\,\\ \\ \\ y\\geq y_{0}\\ \\,\\end{array}\\right. where y_{0}\\equiv y(x_{0}) and B=\\varphi_{1}(\\lambda,y_{0})/\\varphi_{2}(\\lambda,y_{0}) to ensure continuity of g at y=y_{0} as required. The functions \\varphi_{1} and \\varphi_{2} are combinations of hypergeometric functions satisfying the appropriate upstream and downstream boundary conditions (Becker & Wolff 2005). The system must also satisfy the eigenvalue relation
+
+\\varphi_{1}\\,\\frac{\\partial\\varphi_{2}}{\\partial y}-\\varphi_{2}\\,\\frac{ \\partial\\varphi_{1}}{\\partial y}-\\left.\\frac{3\\,\\beta\\,v_{0}\\,\\varphi_{1}\\, \\varphi_{2}}{7\\,v_{c}\\,y\\,(1-y)}\\ \\right|_{y=y_{0}}=0. 
+
+Equation (13) determines the eigenvalues \\lambda_{n} and the associated set of orthogonal eigenfunctions g_{n}(y)\\equiv g(\\lambda_{n},y). The first eigenvalue \\lambda_{0} is especially important because it characterizes the shape of the high-energy spectrum emerging from the column.
+
+Once the eigenvalues and eigenfunctions are determined, the solution for the Green's function can be expressed as the infinite series
+
+f_{\\mbox{\\tiny G}}(y_{0},y,\\epsilon_{0},\\epsilon)=\\sum_{n=0}^{\\infty}\\,C_{n}\\, \\left(\\frac{\\epsilon}{\\epsilon_{0}}\\right)^{-\\lambda_{n}}g_{n}(y)\\,  where the expansion coefficients C_{n} depend on the strength and location of the source. The phase-averaged spectrum emitted by the X-ray pulsar is computed by integrating the particular solution f over the height of the column to obtain
+
+\\Phi_{\\epsilon}(\\epsilon)=\\pi r_{0}^{2}\\,\\epsilon^{2}\\int_{-\\infty}^{r_{n}}t_ {\\rm esc}^{-1}\\,f(\\epsilon,x)\\ dx\\,  where \\Phi_{\\epsilon}(\\epsilon)\\,d\\epsilon gives the number of photons escaping from the column per unit time with energy between \\epsilon and \\epsilon+d\\epsilon, and f is computed using equation (7). The associated high-energy photon spectral index, \\alpha_{0}\\equiv\\lambda_{0}-2, is plotted in Figure 1 as a function of the model parameters \\beta and y_{0}. Note that a broad range of indices can be produced, although we must have \\alpha_{0}>2 in order to avoid an infinite photon energy density since the model considered here does not include a high-energy cutoff.
+
+## 4. Astrophysical Applications
+
+For given values of the stellar mass M_{*} and the stellar radius R_{*}, our model has three free parameters, namely the column radius r_{0}, the temperature at the top of the thermal mound T_{0}, and the accretion rate \\dot{M}. The first step in calculating the photon number spectrum \\Phi_{\\epsilon} is to determine the value of x_{0} (or, equivalently, y_{0}) in terms of r_{0}, T_{0}, and \\dot{M}, which fixes the location of the thermal mound. The velocity and density at the top of the mound, v_{0} and \\rho_{0}, respectively, are related via the continuity equation \\dot{M}=\\pi r_{0}^{2}\\,v_{0}\\,\\rho_{0}. The density \\rho_{0} can be calculated by setting the Rosseland mean of the free-free absorption optical thickness across the column equal to one, which yields for pure, fully-ionized hydrogen (Rybicki & Lightman 1979)
+
+\\rho_{0}=J\\,v_{0}^{-1}=4.05\\times 10^{-12}\\,\\,T_{0}^{7/4}\\,\\,r_{0}^{-1/2}\\,  in cgs units, where we have set the Gaunt factor equal to unity and introduced the conserved mass flux \\dot{J}\\equiv\\dot{M}/(\\pi r_{0}^{2}). Once v_{0} is computed, we can combine equations (4) and (9) to obtain
+
+y_{0}=1-v_{0}\\left(\\frac{2\\,GM_{*}}{R_{*}}\\right)^{-1/2}\\,  which determines the location of the mound. For typical X-ray pulsar parameters, we find that y_{0}\\lower 2.15pt\\hbox{$\\;\\buildrel<\\over{\\sim}\\;$}1, and therefore the mound is situated very close to the surface of the star as expected. The final parameter that needs to be evaluated is \\beta. Using equations (4) and (9), along with equation (3.11) from Becker (1998), we find that the spatial variation of the radiation energy density is given by
+
+U(y)=\\frac{3\\dot{M}y}{\\pi r_{0}^{2}}\\,\\left(\\frac{2\\,GM_{*}}{R_{*}}\\right)^{1 /2}. 
+
+Combining equations (8) and (18), we find that
+
+\\beta=\\frac{\\pi r_{0}^{2}\\,\\sigma T_{0}^{4}}{3\\dot{M}\\,y_{0}\\,v_{0}}\\left( \\frac{2\\,GM_{*}}{R_{*}}\\right)^{-1/2}. 
+
+Taken together, equations (4), (16), (17), and (19) allow the determination of the four model parameters v_{c}, v_{0}, y_{0}, and \\beta in terms of R_{*}, M_{*}, r_{0}, T_{0}, and \\dot{M}. This closes the system and facilitates the calculation of the emergent photon number spectrum \\Phi_{\\epsilon} using equation (15).
+
+In Figure 2 we plot the theoretical predictions for the observed count-rate flux distribution, F_{\\epsilon}\\equiv\\Phi_{\\epsilon}/(4\\pi D^{2}), along with the observed spectra for the X-ray pulsars 4U 1258-61 (GX 304-1) and 4U 0352+30 (X Persei), respectively, where \\Phi_{\\epsilon} is computed using equation (15) and D is the distance to the source. The 4U 1258-61 data was reported by White et al. (1983), and the 4U 0352+30 data is the result of XSPEC analysis of an archival RXTE observation taken in July 1998 and reported by Delgado-Marti et al. (2001). The observational data represent the de-convolved (incident) spectra, and consequently there is some weak model dependence in these results. In both cases we set M_{*}=1.4\\,M_{\\odot} and R_{*}=10\\,km. For 4U 1258-61, the model parameters used are r_{0}=6\\,km, T_{0}=7.3\\times 10^{6}\\,K, \\dot{M}=2.69\\times 10^{16}\\,{\\rm g\\,s^{-1}}, and D=2.5\\,kpc, which yields for the photon index \\alpha_{0}=2.04. For 4U 0352+30, we set r_{0}=1.3\\,km,
+
+Figure 1.— High-energy power-law spectral index \\alpha_{0} of the emitted photon number distribution \\Phi_{\\epsilon} (eq. ) plotted as a function of the source location y_{0} for the indicated values of the absorption parameter \\beta. Note the steepening of the radiation spectrum that occurs when \\beta is increased for a fixed value of y_{0}, which reflects the decreasing residence time for the photons in the plasma due to the enhanced absorption.
+
+T_{0}=9\\times 10^{6} K, \\dot{M}=3.23\\times 10^{13} g s{}^{-1}, and D=0.35 kpc, which yields \\alpha_{0}=2.64. The distance estimates are taken from Negueruela (1998), and various amounts of interstellar absorption are included as indicated in the plots. The second source (X Per) is included due to its low luminosity, which presents an interesting test for the model. Although the results presented here are not fits to the data, we note that the general shape of the spectra predicted by the theory agrees fairly well with the observations for both sources, including the turnover at low energies and the power law at higher energies. Several other sources yield similar agreement. In our model, the turnover at \\sim 2 keV is due to Planckian photons that escape from the accretion column without experiencing many scatterings. This effect will tend to reduce the amount of absorption required to fit the observational data.
+
+## 5 Conclusions
+
+We have shown that a simplified model comprising a radiation-dominated accretion column with a blackbody source/sink at its base and a radiative shock is able to reproduce the power-law spectra observed in accretion-powered X-ray pulsars with a range of luminosities and power-law indices. The power-law plus blackbody form for pulsar spectra has previously been adopted in a purely ad hoc manner, but the new model described here provides a firm theoretical foundation for this general result. Our work represents the first ab initio calculation of the X-ray spectrum associated with the physical accretion scenario first suggested by Davidson (1973).
+
+Our goal in this Letter is to highlight the direct role of the accretion shock in producing the observed spectra, and therefore we have not included many other details that are certainly relevant in some sources. For example, the observed spectrum of Her X-1 has a very flat power-law shape up to a sharp exponential cutoff. The photon index in this case is \\alpha_{0}\\sim 1, which is outside the range allowed by our model since no high-energy cutoff is included here. In order to explain this shape, additional effects need to be included such as thermal Comptonization, cyclotron features, iron emission lines, and the possibility of an ultrasoft component produced by the accretion disk or the surrounding stellar surface. The inclusion of cyclotron cooling is particularly interesting since it connects the magnetic field with the flow dynamics by altering the pressure distribution, which can lead to further changes in the spectrum. We intend to explore these issues in future work.
+
+The authors are grateful to the anonymous referee for several suggestions that led to improvements in the manuscript. PAB would also like to acknowledge the generous support from the Office of Naval Research.

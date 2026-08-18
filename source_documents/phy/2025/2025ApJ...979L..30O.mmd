@@ -1,0 +1,915 @@
+###### Abstract
+
+We present the results of our multi-wavelength (X-ray to radio) follow-up campaign of the _Einstein Probe_ transient EP240408a. The initial 10 s trigger displayed bright soft X-ray (0.5-4 keV) radiation with peak luminosity L_{\\rm X}\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,10^{49} (10^{50}) erg s{}^{-1} for an assumed redshift z\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,0.5 (2.0). The _Neil Gehrels Swift Observatory_ and _Neutron star Interior Composition ExploreR_ discovered a fading X-ray counterpart lasting for \\sim5 d (observer frame), which showed a long-lived (\\sim4 d) plateau-like emission (t^{-0.5}) before a sharp powerlaw decline (t^{-7}). The plateau emission was in excess of L_{\\rm X}\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,10^{46} (10^{47}) erg s{}^{-1} at z\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,0.5 (2.0). Deep optical and radio observations resulted in non-detections of the transient. Our observations with Gemini South revealed a faint potential host galaxy (r\\,\\approx 24 AB mag) near the edge of the X-ray localization. The faint candidate host, and lack of other potential hosts (r\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,26 AB mag; J\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,23 AB mag), implies a higher redshift origin (z\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,0.5), which produces extreme X-ray properties that are inconsistent with many known extragalactic transient classes. In particular, the lack of a bright gamma-ray counterpart, with the isotropic-equivalent energy (10-10,000 keV) constrained by _GECam_ and _Konus-Wind_ to E_{\\rm\\gamma,iso}\\,\\hbox{\\hbox{$<$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,4 \\times 10^{50} (6\\times 10^{51}) erg at z\\,\\approx 0.5 (2.0), conflicts with known gamma-ray bursts (GRBs) of similar X-ray luminosities. We therefore favor a jetted tidal disruption event (TDE) as the progenitor of EP240408a at z\\,\\hbox{\\hbox{$>$}\\kern-8.0pt\\lower 4.3pt\\hbox{$\\sim$}}\\,1.0, possibly caused by the disruption of a white dwarf by an intermediate mass black hole. The alternative is that EP240408a may represent a new, previously unknown class of transient.
+
+X-ray astronomy (1810) -- X-ray transient sources (1852) -- Relativistic jets (1390) -- Gamma-ray bursts (629) -- Black holes (162) +
+
+Footnote †: slugcomment: Submitted to ApJL
+
+## 1 Introduction
+
+The extragalactic high-energy transient sky, spanning from X-rays to gamma rays, is a diverse collection of phenomena with timescales typically ranging from seconds to days. Among the most common are gamma-ray bursts (GRBs; Kouveliotou et al. 1993), which arise either from the merger of two compact objects (Abbott et al. 2017; Savchenko et al. 2017; Goldstein et al. 2017) or the collapse of massive stars (Woosley 1993; MacFadyen & Woosley 1999). GRBs exhibit two distinct phases: an initial prompt gamma-ray emission lasting typically on the order of seconds to tens of seconds (Kouveliotou et al. 1993), and an afterglow produced by the newly launched jet and its interaction with the surrounding medium (Meszaros & Rees 1997; Wijers & Galama 1999).
+
+Dedicated space telescopes such as _Fermi_ (Meegan et al. 2009) and _Swift_ (Gehrels et al. 2004) have revolutionized the field. With hundreds of high-energy transients detected by these missions, some have displayed unusual behaviors. For instance, many GRBs exhibit an extended plateau phase following the prompt emission, lasting from a few hundred seconds to several hours before rapidly declining in X-rays (e.g., Zhang et al. 2006; Troja et al. 2007; Rowlinson et al. 2010). This plateau phase is thought to result from long-lived central engine activity, potentially due to the spin-down of a newborn magnetar's dipole field (Zhang et al. 2006; Liang et al. 2006; Troja et al. 2007; Lyons et al. 2010; Metzger et al. 2011; Rowlinson et al. 2010, 2013), though other interpretations exist (Shen & Matzner 2012; Duffell & MacFadyen 2015; Beniamini & Mochkovitch 2017; Beniamini et al. 2017, 2020a; Oganesyan et al. 2020; Dereli-Begue et al. 2022).
+
+In 2011, _Swift_ identified three peculiar gamma-ray transients, later found to have long-lasting X-ray emission, with peak X-ray luminosities of 10^{47-49} erg s{}^{-1} at a few days after discovery, several orders of magnitude higher than typical GRB afterglows at a similar time (Bloom et al. 2011; Levan et al. 2011; Burrows et al. 2011; Zauderer et al. 2011; Burrows et al. 2011; Cenko et al. 2012; Brown et al. 2015; Pasham et al. 2015). These events also featured prolonged high-energy activity, lasting months instead of hours - far exceeding the duration of the longest GRB plateau phases (e.g., Levan et al., 2014; Cucchiara et al., 2015). These systems have been hypothesized to be relativistic jetted Tidal Disruption Events (TDEs) where a star is disrupted by a massive black hole and the resulting jet is fortuitously pointed along our line of sight akin to a Blazar (Bloom et al., 2011; Levan et al., 2011; Cenko et al., 2012; Andreoni et al., 2022; Pasham et al., 2023; Rhodes et al., 2023; Yao et al., 2024).
+
+The launch of the _Einstein Probe_(Yuan et al., 2015, 2022) has opened a new window into the soft X-ray Universe, especially for fast transients. The Wide-field X-ray Telescope (WXT), with a field of view of approximately 3,600 square degrees, monitors soft X-rays in the 0.5-4 keV range. Since February 2024, EP has detected a variety of intriguing fast X-ray transients (Zhang et al., 2024). While a number of fast transients discovered by EP have turned out to be Galactic (e.g., stellar flares or X-ray binaries) in nature (e.g., Potter et al., 2024; Gaudin et al., 2024), there are a variety that show clear GRB-like properties (e.g., EP240315a/GRB 240315C, Levan et al., 2024; Liu et al., 2024; Gillanders et al., 2024; Ricci et al., 2024; EP240414a, Srivastav et al., 2024; van Dalen et al., 2024; Bright et al., 2024; Sun et al., 2024) or have been associated with GRBs in a post-trigger, ground-based analysis (e.g., Yin et al., 2024; Liu et al., 2024).
+
+In this paper, we present a multi-wavelength (ultraviolet, optical, near-infrared, radio, X-ray and gamma-ray) study of the EP discovered X-ray transient EP240408a. EP240408a has properties distinct from any previously known high-energy transient. We argue that it is likely extragalactic in nature and has properties that are challenging to explain either as a GRB or jetted TDE.
+
+The manuscript is laid out as follows. In SS2 we highlight the results of the X-ray, ultraviolet, optical, near-infrared, and radio data obtained for EP240408a. We analyze the multiple possible interpretations for EP240408a in SS3 and present our conclusions in SS4.
+
+All upper limits are presented at the 3\\sigma level and all magnitudes are in the AB photometric system. We use a flat cosmology (Planck Collaboration et al., 2020). We further adopt the standard convention F_{\\nu}\\!\\propto\\!\\nu^{-\\beta}t^{-\\alpha}.
+
+## 2 Data Reduction and Analysis
+
+### Einstein Probe Trigger and Gamma-ray Constraints
+
+The Wide-field X-ray Telescope (WXT) onboard the _Einstein Probe_(EP; Yuan et al., 2015, 2022) discovered EP240408a at 2024-04-08 at 17:56:30 UT or MJD 60408.7471(Hu et al., 2024). The peak flux and average flux in the soft X-ray (0.5-4.0 keV) band over the \\sim\\!\\!10 s duration were reported to be \\sim\\!1.4\\times 10^{-8} ergs s{}^{-1} cm{}^{-2} and (4.0\\pm 1.3)\\times 10^{-9} erg cm{}^{-2} s{}^{-1}, respectively (Hu et al., 2024). This roughly translates to a soft X-ray fluence of \\sim\\!4\\times 10^{-8} erg cm{}^{-2}.
+
+Footnote 1: All times in this work are relative to this trigger time.
+
+EP240408a was not detected or localized by any other high energy monitor. _Konus-Wind_(Aptekar et al., 1995) and _GECam_(Li et al., 2023) were observing the location of EP240408a at the time of the EP trigger, but did not detect any emission (Dmitry Svinkin, private communication). The _Fermi_ Gamma-ray Burst Monitor (GBM; Meegan et al., 2009) and _AstroSat_/CZTI (Bhalerao et al., 2017) have no data covering the location of EP240408a at the EP trigger time, while EP240408a was out of the field of view of _Swift_'s Burst Alert Telescope (BAT; Barthelmy et al., 2005) (Jimmy DeLaunay/_Swift_ and Gaurav Waratkar/_Astrosat_, private communication).
+
+_Konus-Wind_ was observing the position of EP240408a for 1000 s before and after the trigger time. The 90% confidence upper limit to the peak flux (20-1500 keV) is <\\!1.5\\times 10^{-7} erg cm{}^{-2} s{}^{-1} for a typical long GRB spectrum and assuming a timescale of 2.944 s (Dmitry Svinkin, private communication). This is consistent with the typical fluence upper limits for _Konus-Wind_ based on all-sky searches for GRBs associated to gravitational waves (GWs) which has typical limits of <\\!6\\times 10^{-7} erg cm{}^{-2} and <\\!2\\times 10^{-7} erg cm{}^{-2} for short and long GRBs, respectively, in the 20-1500 keV energy range (Ridnaia et al., 2020). _GECam-B_ reported a slightly less sensitive 3\\sigma upper limit of <\\!2.4\\times 10^{-6} erg cm{}^{-2} for the gamma-ray fluence in the 15-300 keV energy range (Wang et al., 2024).
+
+Despite being out of the field of view of _Swift_/BAT, and therefore lacking event data, the NITRATES pipeline (DeLaunay & Tohuvavohu, 2022) can constrain the gamma-ray properties. The upper limit to the peak flux is <\\!3.4\\times 10^{-7} erg cm{}^{-2} s{}^{-1} for a 3.2 s timescale in the 15-350 keV energy band, corresponding to <\\!5.5\\times 10^{-7} erg cm{}^{-2} s{}^{-1} over 20-1500 keV for comparison to _Konus-Wind_(Jimmy DeLaunay, private communication).
+
+We further ran the _Swift_/BAT Hard X-ray Transient Monitor (Krimm et al., 2013) source detection (15-50 keV) and lightcurve production algorithm for a period corresponding to approximately 1 month before to 2 months after the EP trigger (MJD 60374-60461) and found no significant detections in the daily binned lightcurve. The source was out of the BAT field of view from approximately -19 d to -4 d prior to the EP trigger.
+
+### Swift/XRT
+
+The position of EP240408a was observed by the _Neil Gehrels Swift Observatory_ (hereafter _Swift_; Gehrels et al. 2004) X-ray Telescope (XRT; Burrows et al. 2005) starting on 2024-04-10 (1.4 days after the EP trigger; (Hu et al. 2024b)). In total observations were obtained across 5 epochs between 2024-04-10 and 2024-04-26 in Photon Counting (PC) mode for a total of 8.9 ks, see Table 1. An X-ray source is detected only in the first observation at 1.4 d with a total exposure of 1.8 ks in PC mode. The following XRT observations at 10.4, 12.4, 15.4, and 17.5 d (lasting for between 1-2.5 ks) after the EP trigger did not result in a detection of the X-ray source. We used the _Swift_/XRT data products generator2 and upper limit server3(Evans et al., 2022) to produce 3\\sigma upper limits on the unabsorbed X-ray flux.
+
+Footnote 2: [https://www.swift.ac.uk/user_objects/](https://www.swift.ac.uk/user_objects/)
+
+Footnote 3: [https://www.swift.ac.uk/LSXPS/ulserv.php](https://www.swift.ac.uk/LSXPS/ulserv.php)
+
+_Swift_/XRT data taken 1.4 d after the EP trigger yielded a standard position (Evans et al., 2009) of RA, DEC (J2000) = 10^{h}35^{m}24^{s}.28, -35^{\\circ}44^{\\prime}49.9\\arcsec with an uncertainty of 3.5\\arcsec (90% confidence level; CL). However, a more refined enhanced position (Goad et al., 2007; Evans et al., 2009) is derived as RA, DEC (J2000) = 10^{h}35^{m}23^{s}.96, -35^{\\circ}44^{\\prime}55.1\\arcsec with an uncertainty of 2.2\\arcsec (90% CL). The enhanced position shifts by \\sim 6.5\\arcsec with respect to the initially reported standard position (Wenda Zhang, private communication).
+
+### Nicer
+
+EP240408a was monitored by the _Neutron star Interior Composition ExploreR_ (_NICER_) using the X-ray timing instrument (XTI; Gendreau et al. 2016) between 2024-04-10 (MJD 60410.564) and 2024-05-16 (MJD 60447.259), corresponding to 1.8 to 38 d after trigger, with a near daily cadence (ObsIDs 7204340101 to 7204340131; Table 1). During this period _NICER_ made several visits per day that typically lasted for a few hundred seconds. This resulted in an on-source exposure time of 109 ks. The initial four days of data were first reported in Rea et al. (2024a), and have been re-analyzed here along with the full dataset.
+
+We retrieved the data from the _NICER_ data archive. The data were processed using NICERDAS v12 within HEASOFT v6.34 and the latest calibration files. After retrieving the latest geomagnetic data, we applied processed the nicerl2 task to generate cleaned event files with the default screening criteria. The late time data was severely impacted by increased solar activity and all data was impacted by a significant Oxygen line from Earth's atmosphere. We attribute this to significant background fluctuations due to solar activity and the atmospheric Oxygen line, which we discuss further in SS2.12.
+
+_NICER_ data consisted of both the International Space Station's (ISS's) night and the day time data. As per the _NICER_ data analysis guide4, for each ObsID, we extracted separate "clean" event files for both night and day data. Then using the nicerl3-spect tool and the SCOREPCON background modeling framework we extracted separate night and day spectra from individual ObsIDs. We discuss our spectral modeling of the _NICER_ data in SS2.12.
+
+Footnote 4: [https://heasarc.gsfc.nasa.gov/docs/nicer/analysis_threads/](https://heasarc.gsfc.nasa.gov/docs/nicer/analysis_threads/)
+
+### NuSTAR
+
+We observed EP240408a through a Director's Discretionary Time request (ObsID: 91001622; PI: O'Connor) for a total of 42 ks starting on 2024-04-22 at 00:36:09 UT (T_{0}+13.3 d). The data were reduced using the _NuSTAR_ Data Analysis Software pipeline (NuSTARDAS) within HEASOFT v6.33.2. At the location of EP240408a we do not detect a source in either FPMA or FPMB. As there are no sources detected in the image we cannot correct for the pointing accuracy of _NuSTAR_ or any offsets between FPMA and FPMB. We extract the total observed counts using a 30\\arcsec circular region centered on EP240408a and a nearby background region of 80\\arcsec for both FPMA and FPMB. Using the formalism presented by Kraft et al. (1991), we derive a 3\\sigma upper limit of < 1.4\\times 10^{-3} cts s{}^{-1} ( 3-79 keV). Adopting an absorbed powerlaw with photon index \\Gamma = 2 and Hydrogen column density N_{H} = 1\\times 10^{21} cm{}^{-2}, we derive a 3\\sigma upper limit of < 9.98 \\times 10^{-14} erg cm{}^{-2} s{}^{-1} ( 3-79 keV) to the unabsorbed flux of EP240408a at \\sim13.3 d after the EP trigger.
+
+### Archival X-ray Data
+
+We utilized the High-Energy Lightcurve Generator (HILIGT; Konig et al. 2022; Saxton et al. 2022)5 to determine whether the source has experienced any archival outburst potentially caught by _ROSAT_, _INTEGRAL_, or the _XMM-Newton_ Slew Survey (e.g., Saxton et al. 2008). The source position was observed by _XMM-Newton_ during slews 6 times between 2005-05-20 and 2024-05-18 with short \\sim 5-8 s exposures. Each observation has a similar limit in the three energy ranges (0.2-2, 2-12and 0.2-12 keV), but the latest observation serendipitously occurred on 2024-05-18 at 21:34:05 UT yielding a 3\\sigma upper limit of < 2\\times 10^{-12} erg cm{}^{-2} s{}^{-1} in the 0.2-12 keV energy range. An absorbed powerlaw with photon index \\Gamma = 2 and Hydrogen column density N_{H} = 1\\times 10^{20} cm{}^{-2} was used. The HILIGT also identified upper limits (3\\sigma) from past _ROSAT_ and _INTEGRAL_ observations, assuming the same spectral shape, with <2\\times 10^{-13} erg cm{}^{-2} s{}^{-1} (0.2-2 keV) from _ROSAT_ on 1990-10-28 and < 7\\times 10^{-12} erg cm{}^{-2} s{}^{-1} (20-40 keV) from _INTEGRAL_ on 2006-06-18. Therefore we have found no evidence for past X-ray outbursts from this source.
+
+We likewise checked the _eROSITA_ upper limit server6 (Tubin-Arenas et al., 2024). No source is detected at the location of the XRT source with 3\\sigma upper limits < 6.7\\times 10^{-14} erg cm{}^{-2} s{}^{-1} (0.2-6 keV) and < 6.5\\times 10^{-14} erg cm{}^{-2} s{}^{-1} (0.2-2.3 keV). The non-detection in _eROSITA_ was first reported by (Rea et al., 2024).
+
+Footnote 6: [https://erosita.mpe.mpg.de/dr1/erodat/upperlimit/single/](https://erosita.mpe.mpg.de/dr1/erodat/upperlimit/single/)
+
+### Gemini
+
+We observed EP240408a with Gemini-South through a DDT request (GS-2024A-DD-104; PI: O'Connor) using the Gemini Multi-Object Spectrograph (GMOS) and FLAMINGOS-2 (F2). We carried out observations across three epochs on 2024-04-25, 2024-05-02, and 2024-06-30. We observed in the _riJ_ filters with a total exposure of 720, 720, and 900 s for the first two epochs. The third epoch was perform only in ri filters for 960 and 1,000 s, respectively. The third epoch serves as a template for image subtraction, and achieved the best observing conditions and seeing.
+
+The data were reduced using standard tasks within the Dragons software package (Labrie et al., 2019, 2023), including using the ultradeep recipe for F2 images. At the South-East edge of the XRT enhanced position we identify a candidate host galaxy (Figure 1). In order to gauge variability between epochs, we performed difference imaging with the Saccadic Fast Fourier Transform (SFFT) software7(Hu et al., 2022). We performed image subtraction between all epochs for each filter and identify no optical or near-infrared variability in either the initial (standard) XRT position, the enhanced XRT position, or at the location of the candidate host galaxy. Our 3\\sigma upper limits based on using our third epoch (2024-06-30) as the template for the ri filters and second epoch (2024-05-02) for J-band are reported in Table 1.Aperture photometry was performed using SExtractor(Bertin and Arnouts, 1996) and photometric zeropoints calibrated to the SkyMapper (Keller et al., 2007; Wolf et al., 2018) and 2MASS Skrutskie et al. (2006) catalogs.
+
+Footnote 7: [https://github.com/thomasvrussell/sfft](https://github.com/thomasvrussell/sfft)
+
+To determine its nature and distance scale, we obtained spectroscopic observations of the bright source (Rau, 2024), see Appendix C, lying within the initial (standard) XRT localization (Figure 1) using Gemini GMOS-S through program GS-2024A-FT-113 (PI: Andreoni) starting on 2024-06-30 at 23:59:20 UT. The data were acquired with the R400 grating with 2\\times 1,000 s exposure at central wavelength \\sim 8,000 A  and 2\\times 1,000 s centered at \\sim 8,200 A. A 1^{\\prime\\prime} slit width was used at a position angle of 127^{\\circ} chosen to minimize contamination from the nearby bright star. The data were reduced using Dragons. An inspection of the stacked 2D spectrum reveals no clear narrow emission lines in the observed wavelength range between \\sim 5,700-10,500 A(Appendix C). The red end of the spectrum is severely impacted by bright sky emission lines.
+
+### Keck
+
+A near-infrared spectrum of the bright source (Rau, 2024), see Appendix C, within the initial standard XRT position was obtained with the Near-Infrared Echellette Spectrometer (NIRES; Wilson et al., 2004) on the Keck II telescope starting on 2024-04-19 at 06:57:36 UT (10.54 d post-trigger). The spectrum (1.0-2.4\\mum) was obtained at airmass 1.77 using the 0.55 arcsec slit with 4\\times300 s exposures. Data were reduced using standard reduction procedures within pypeit(Prochaska et al., 2020). The spectrum has a very low signal-to-noise ratio and is dominated by sky emission lines. We heavily re-binned the spectrum (9 pixels) and find no discernible features.
+
+### Swift/UVOT
+
+As described in SS2.2, the _Swift_ Ultra-Violet Optical Telescope (UVOT; Roming et al., 2005) observed EP240408a during the same time intervals as _Swift_/XRT due to its simultaneous instrument operation. The exposure time was split between the various optical/UV filters: v, b, u, wvw1, uvm2, and uvw2 (Table 1). We used a circular source extraction region centered on the XRT position with a radius of 3.5^{\\prime\\prime}, which is the XRT positional uncertainty and a typical source extraction radius for faint sources. EP240408a was not detected in any observations, in any filters. The upper limits are given in Table 1. For the background regions, we use a circular region of at least 20^{\\prime\\prime} radius, placed near EP240408a's position. The exact position and size of the background region varies between observations, as it has to be placed differently in different/stacked observations in order to order to avoid image artifacts (e.g.,readout streaks, smoke rings) caused by nearby bright sources which are roll-angle and pointing dependent, as well as bright sources and their large PSFs which are present in some filters and not others. In order to obtain deeper limits, we also stacked all observations (of the same filter) from different epochs using the HEASOFT tool uvotimsum. No source was detected, and these limits are given in Table 2.
+
+### Dark Energy Camera (DECam)
+
+We retrieved publicly available imaging obtained with the Dark Energy Camera (DECam). The data were obtained through the NOIRLab Astro Data Archive8(McManus and Olsen, 2021). There is available imaging of the field of EP240408a in the grz filters (see Table 2 for details). Aperture photometry was performed using the SExtractor software and photometric zeropoints calibrated to the SkyMapper catalog. We find no source at the location of the updated (enhanced) XRT localization or at the location of our candidate host galaxy (Figure 1).
+
+Footnote 8: [https://astroarchive.noirlab.edu/](https://astroarchive.noirlab.edu/)
+
+### Very Large Array (VLA)
+
+We carried out observations with the Karl J. Jansky Very Large Array (VLA) on 2024-04-19, 2024-09-13, and 2024-12-12 (24A-320; PI: O'Connor), see Table 3. The observations we performed in X-band with a central frequency of 10 GHz and a bandwith of 4 GHz with the array in C configuration during the first observation (2024-04-19), B configuration on 2024-09-13, and A configuration on 2024-12-12. The time on source was \\sim24 minutes in both observations. The data were retrieved from the National Radio Astronomical Observatory (NRAO) archive, and processed using the VLA CASA pipeline in CASA v6.5.4(McMullin et al., 2007). We used the sources 3C286 and J1051-3138 as primary and phase calibrators. EP240408a does not show any radio emission (Table 3) with deep 3\\sigma upper limits obtained with the Very Large Array (VLA) on 2024-04-19 (11 days), 2024-09-13 (158 days), and 2024-12-12 (258 days) of < 17 \\muJy, < 21 \\muJy, and < 20 \\muJy, respectively.
+
+### Australia Telescope Compact Array (ATCA)
+
+We observed the location of EP240408a with the ATCA between 2024-05-01T04:51:05 and 2024-05-01T10:32:05 (C3589; PI: Dobie). The observation was split into four groups of 2\\times12 minute observations across that period, for 96 minutes on-source in total. Observations were carried out with 2\\times2048 MHz bands centered on 5.5 and 9 GHz. We used an observation of the ATCA primary calibrator, 1934-638, as the bandpass and flux scale calibrator and 1034-374 as the gain calibrator. We carried out standard ATCA data reduction with miriad(Sault et al., 1995) and found no emission at the transient location with a 3\\sigma upper limit of 60 \\muJy in both bands.
+
+EP240408a was also observed with the ATCA by an independent group under a target-of-opportunity program (CX570; PI: Shu) on two occasions. The first observation was conducted on 2024-05-08 with 2\\times 2048 MHz bands centered on 5.5 and 9 GHz. The second observation was conducted on 2024-05-10 with 2\\times 2048 MHz bands centered on 17 and 19 GHz. Neither observation has an associated observation of the ATCA primary calibrator (1934-638), nor were there any observations of it within a day of either observation. Hence, standard flux calibration of these observations is not possible. We have not analysed the 2024-05-08 data because of this, and the proximity to our more sensitive observation on 2024-05-01.
+
+Nevertheless, we reduced the data obtained on 2024-05-10 because it provides coverage at higher observing frequencies. We used 1034-293 as the flux and bandpass calibrator and 1048-313 as the gain calibrator. Both bands were reduced independently in miriad and then scaled to have a consistent flux scale using mfboot before being combined and imaged as a single contiguous band. We do not detect any radio emission at the position of the transient. We set the absolute flux scale by setting the flux density of 1034-293 to 2 Jy based on its typical flux density in the ATCA calibrator database9. However, 1034-293 appears to be significantly variable (with previously observed flux densities ranging from 1-3 Jy) and hence this scaling is likely unreliable. Based on this calibration the image noise is \\sim 15\\,\\muJy, which is four times more sensitive than the noise estimate reported by the ATCA sensitivity calculator. We consider the ATCA sensitivity to be a more reliable (albeit, optimistic) estimate of the overall flux scale, and hence we report a 3\\sigma upper-limit of 180 \\muJy on the source flux density for this observation.
+
+Footnote 9: [https://www.narrabri.atnf.csiro.au/calibrators/calibrator_database_viewcal?source=1034-293](https://www.narrabri.atnf.csiro.au/calibrators/calibrator_database_viewcal?source=1034-293)
+
+### X-ray Spectroscopy
+
+#### 2.12.1 Swift/XRT
+
+The first X-ray observation and detection following the initial EP trigger was by _Swift_/XRT approximately 1.4 d later (Hu et al., 2024; Chandra, 2024). We retrieved the XRT spectra using the _Swift_/XRT data products generator. The data were modeled in XSPEC(Arnaud, 1996) using the C-statistic (Cash, 1979). Previous reports of the spectra (Hu et al., 2024; Chandra, 2024) assumed redshift z = 0. For the same assumptions (a z = 0 absorbed powerlaw; tbabs*pow), we confirm the prior reports of a hydrogen column density N_{\\rm H} = (1.4\\pm 0.5)\\times 10^{21} cm{}^{-2}, photon index \\Gamma = 2.10\\pm 0.18, and unabsorbed flux F_{\\rm X} = (2.5^{+0.3}_{-0.2})\\times 10^{-11} erg cm{}^{-2} s{}^{-1} in the 0.3-10 keV band.
+
+Here we model the data with an absorbed power-law model ztbabs*zashit*(clumin*pow) assuming either z = 0.5 or z = 2 due to the unknown distance (SS3.1). For z = 0.5, we find N_{\\rm H} = (3.0\\pm 0.6)\\times 10^{21} cm{}^{-2}, \\Gamma = 2.09\\pm 0.08, and a 0.3-10 keV rest frame X-ray luminosity of L_{X} = (5.85^{+0.40}_{-0.24})\\times 10^{46} erg s{}^{-1}. For z = 2, we instead derive N_{\\rm H} = (1.1\\pm 0.3)\\times 10^{22} cm{}^{-2}, \\Gamma = 1.85\\pm 0.11, and a 0.3-10 keV rest frame K-corrected X-ray luminosity of L_{X} = (4.8\\pm 0.6)\\times 10^{48} erg s{}^{-1}. We compare this to the _NICER_ results below.
+
+#### 2.12.2 Nicer
+
+Here we focus on the analysis of the full _NICER_ dataset of EP240408a. We introduced the _NICER_ dataset in SS2.3. Here we provide a detailed description of the data extraction and analysis, specifically with regard to the spectra.
+
+As per the _NICER_ data analysis guide, for each obsID we extracted separate "clean" event files for both the night and day time data. We used the nicerl3-spect tool to extract separate night and day spectra from each ObsID. We started our spectral analysis by inspecting these spectra, several of which showed excess in the 0.5-0.6 keV band. This is a known contamination issue originating from the foreground Oxygen line complex from the Earth's atmosphere. This can happen in both the day and night time data and at present, there is no tool provided by the _NICER_ team to mitigate this problem.
+
+In order to reduce contamination from the Oxygen line we designed the following methodology. First, we divided the entire _NICER_ light curve into 18 sub-intervals whose boundaries were chosen based on the Bayesian blocks algorithm (Scargle et al., 2013) on the 0.3-10 keV light curve extracted from nicerl3-lc tool. We extract both night and day time spectra from each of the 18 Bayesian blocks, resulting in 36 X-ray spectra.
+
+For each spectrum we applied the following procedure. We ignored spectra with less than 300 seconds of exposure and only focus on the most reliable data. If the exposure is more than 300 s, we fit the spectrum in XSPEC(Arnaud, 1996), using the C-statistic (Cash, 1979), with the SCOREON background model. Following the Figure 2: **Top:** Time-averaged _NICER_ spectrum of EP240408a using all data between MJDs 60410.567515 to 60416.699. The top panel shows the logarithm of counts vs energy. The energy range where the source is above the SCORPEON background is shown, but the full 0.38-10.0 keV was used for fitting as per _NICER_ data analysis guidelines. **Middle:** Ratio (data to best-fit model) plots corresponding to a powerlaw and a broken powerlaw fit, respectively. **Bottom:** Same as middle plots, now showing a summary of spectral modeling of early _NICER_ spectra. The time from EP trigger are shown at the top of each column. The top panels show the ratio of data to the best-fit powerlaw model while the bottom panels are ratios of data to best-fit broken powerlaw model. The break energy (in the rest frame) is listed in the bottom panels. These plots were generated using a redshift z=0.5, but the residuals are similar for z=2.0, though the rest frame location of the break is modified. recommendation of the _NICER_ team10, we fit the day time and night time spectra in the 0.25-10 keV and 0.38-10 keV bands, respectively. We fit the spectrum twice: first allowing for the normalization of the Oxygen K foreground emission line to vary and second with the normalization fixed to 0. We then use the Akaike Information Criterion (AIC) to determine whether there is significant contamination from the Oxygen line (requiring \\DeltaAIC <-20 between the two models).
+
+Footnote 10: [https://heasarc.gsfc.nasa.gov/docs/nicer/analysis_threads/cal-recommend/](https://heasarc.gsfc.nasa.gov/docs/nicer/analysis_threads/cal-recommend/)
+
+We then fit the spectrum again using an absorbed powerlaw model ztbabs*zashift(clumin*pow), including an Oxygen line if \\DeltaAIC <-20 from the previous fit. In order to determine whether the source is detected in an individual spectrum we require \\DeltaAIC <-20 when comparing the fit with and without the powerlaw model in addition to the SCORPENO background model. We note that automated procedures within the NICERDAS software (e.g., nicerl3-lc) detect flaring periods at later times, but we determine these are due to the Earth's atmosphere (Oxygen K emission). This is consistent with the deeper non-detections by _Swift_/XRT over similar time periods (see Table 1).
+
+Some of the spectra yielded a reduced C-statistic of >2 for our powerlaw model, see the bottom panel in Figure 2. The ratio plots indicated the presence of a break in the spectrum. Thus, we followed the same methodology using \\DeltaAIC for a broken powerlaw model (ztbabs*zashift(clumin*bknpow)) as well. We then compared the \\DeltaAIC between the powerlaw (pow) and broken powerlaw (bknpow) models. We find a broken powerlaw is the preferred model in epochs 3, 4, 5, 6, and 8 (referred to as, e.g., E3, E4, etc.). Using a broken powerlaw model resulted in reduced C-statistic values close to unity (Figure 2; bottom panel), without the significant residuals observed in the powerlaw only model. This spectral break is observed in both day and night spectra.
+
+For each spectral fit, we derived a count rate to unabsorbed K-corrected 0.3-10 keV luminosity conversion factor. We then use this to estimate a light curve (luminosity versus time) on a per good time interval (GTI) basis. The lightcurve is shown in Figure 3.
+
+Based on our spectral analysis (for z=0.5), we find a typical Hydrogen column density of N_{\\rm H} \\approx (1.5-2.5) \\times 10{}^{21} cm{}^{-2}, photon index \\Gamma_{1}=1.5-2.0, and an observer frame spectral break at E_{\\rm break} \\approx 4.5 keV where the spectra steepens to \\Gamma_{2}=2.5-3.0. The evolution of the spectral index is rather unconstrained by the data, due to the decreasing source count statistics at higher energies and a variable background rate. The photon index \\Gamma_{1} and column density N_{\\rm H} are comparable to that derived from the initial _Swift_/XRT detection. There is marginal evidence that the photon index \\Gamma_{1} decreases from \\sim 2 to \\sim 1.5 over the first few days.
+
+The _NICER_ spectra also revealed the requirement of an intrinsic absorption component in excess of the Galactic value of N_{\\rm H,gal} = 8.5\\times 10^{20} cm{}^{-2} along the line-of-sight (Willingale et al., 2013). The expected optical extinction A_{V} from the inferred hydrogen column density N_{\\rm H} \\approx (1.5-2.5) \\times 10{}^{21} cm{}^{-2} is A_{V} \\approx 1 mag at z \\approx 0.5 (Guver & Ozel, 2009), with larger values required at higher redshifts (Appendix 2.12).
+
+### NICER X-ray Lightcurve
+
+_NICER_ observed EP240408a at high-cadence between 1.8 and 38 d post trigger. The overall light curve shows a slow decline over the first few days followed by a rapid drop off (see Figure 3). The count rate lightcurve decays from \\sim 8 cts s{}^{-1} to \\sim 5 cts s{}^{-1} over \\sim 2 d before steepening and rapidly fading below detection over the course of \\sim 1 day. We can model the count rate lightcurve with a broken powerlaw of t^{-0.5} breaking to t^{-5} around \\sim4.1 to 4.3 d after the EP trigger. This steep break is seen in both day and night time data.
+
+However, the luminosity lightcurve (see SS2) is significantly steeper (t^{-7}; Figure 3) as it properly accounts for the background, in particular the Oxygen line (SS2.12.2). We used the dynesty(Speagle, 2020) nested sampling package to fit the X-ray (0.3-10.0 keV) flux lightcurve with a broken powerlaw which yields a slope of t^{-0.51\\pm 0.05} early-on, which breaks to t^{-6.7\\pm 0.2} around an observer frame time of 4.19\\pm 0.02 d post-trigger. We infer a timescale \\delta\\tau/\\tau \\approx 0.2 for the plateau's decline.
+
+We briefly consider other possible explosion times for EP240408a, prior to the EP trigger. If we allow for an explosion (or disruption; depending on interpretation) time of \\sim 3 d prior to the trigger the lightcurve can be roughly modeled with a broken power-law of t^{-5/3} and t^{-15}. If taken to be 10 d prior, these slopes are instead t^{-2.2} and t^{-25} with the break occurring at \\sim 14.1 - 14.3 d (observer frame). It is possible for EP to miss the X-ray transient in prior observations accounting for natural variability of the X-ray lightcurve as shown by Sw J1644+57 at early times. However, the significant difficulty in this case is explaining the EP trigger as a \\sim 1,000\\times brighter flare at \\sim 3 - 10 d after the initial onset.
+
+## 3 Discussion
+
+Our deep Gemini imaging (SS2.6) uncovers a candidate host galaxy at the South-East edge of the updated XRT enhanced localization (Figure 1). We detect this source only in our optical r-band and i-band images with brightness r \\approx 24 AB mag (Table 2). The source is not detected in our near-infrared imaging to depth J > \\sim 23.2 AB mag. As we detect this source only in two filters, no robust constraints on its spectral energy distribution or distance scale can be obtained, and there is no existing optical or near-infrared spectroscopy of this source. We performed difference imaging between the Gemini observation epochs with the Saccadic Fast Fourier Transform (SFFT) software (Hu et al., 2022), but did not identify any optical or near-infrared variability near either the initial position, enhanced XRT position, or the location of this candidate host (SS2.6 and Table 2).
+
+The probability of chance coincidence P_{\\rm cc} of the candidate host with the 3\\sigma XRT localization is P_{\\rm cc} \\approx 0.15 (Bloom et al., 2002; Berger, 2010a). This is generally considered an inconclusive association for an extragalactic transient. A typical cutoff for a conclusive association is P_{\\rm cc} < 0.1 (e.g., Berger, 2010a; Fong et al., 2013, 2022; O'Connor et al., 2022). In this case, the lack of a sub-arcsecond localization prevents a robust determination, but we identify this source as the most likely host for EP240408a among the sources we are able to resolve in our deep optical and near-infrared images. If we expand our search for other potential host galaxies to all sources within \\sim 90\\arcsec following the methods outlined in O'Connor et al. (2022), we find 6 clearly extended galaxies within this region with the closest offsets of 25 - 26''. We compute the probability of chance coincidence
+
+(Bloom et al., 2002; Berger, 2010) for these galaxies using their r-band apparent after correcting for Galactic extinction E(B-V)=0.076 mag (Schlafly and Finkbeiner, 2011). Each of these galaxies has P_{\\rm cc}>0.6-0.95 and all are unlikely hosts to EP240408a. We therefore conclude that EP240408a is extragalactic in nature and likely related to the faint galaxy lying at the edge of the XRT localization (Figure 1).
+
+From Gemini we have deep upper limits on any other underlying source within the XRT localization of r>26, i>26.1, and J>23.2 AB mag. These limits are capable of excluding the majority of GRB (e.g., Palmerio et al., 2019; Schneider et al., 2022; O'Connor et al., 2022; Nugent et al., 2022), and TDE (Hammerstein et al., 2021) host galaxies out to z\\sim 0.5-1, and imply a higher redshift for EP240408a. The brightness of our candidate host galaxy, when compared to other high-energy extragalactic transient host galaxies, also potentially places it at higher redshifts z\\gtrsim 1 in the range of 0.1-1.0L_{*} galaxies (see, e.g., O'Connor et al., 2022). However, we cannot exclude that it is a small galaxy (10^{8-9}M_{\\odot}) at z\\approx 0.5. For example, adopting galaxy correlations between the i-band absolute magnitude and stellar mass (Taylor et al., 2020), our observations are sensitive to a 10^{8}M_{\\odot} galaxy out to z\\approx 0.5 and a 10^{9}M_{\\odot} galaxy out to z\\approx 2. Future optical spectroscopy of this source can constrain its distance scale, though given its brightness such observations are challenging. In what follows (SS3.3 and 3.4) we treat the distance scale of EP240408a as unconstrained and consider redshifts between z\\approx 0.5-2. Lower redshifts are strongly disfavored by the lack of bright optical, near-infrared, or radio counterparts.
+
+### Disfavoring a Galactic Origin
+
+Here we argue that the observed brightness of the initial EP trigger strongly disfavors a Galactic nature for the source as the luminosity and other properties are inconsistent with Galactic transients such as cataclysmic variables (CVs), high-mass X-ray binaries (HMXBs), low-mass X-ray binaries, and Galactic magnetars.
+
+The lack of a bright optical counterpart, evidence for a hydrogen column density larger than the line-of-sight Galactic value (see SS2.12.2), lack of X-ray periodicity (Appendix B and Rea et al., 2024), and smooth decline of the lightcurve lacking any short timescale X-ray variability, all strongly disfavor accreting binaries such as CVs, HMXBs, or LMXBs. The X-ray luminosity of the source at 20 kpc approaches L_{X}\\approx 10^{39} erg s{}^{-1} (0.5-4 keV) which would be at the high end of the luminosity function for XRBs, though not completely unreasonable. One reason to consider a Galactic scenario is that EP240408a is located at a relatively low Galactic latitude with Galactic coordinates l, b=274.16 deg, 19.41 deg. However, as there is almost no Galactic dust in this field (A_{V}\\approx 0.2 mag; Schlafly and Finkbeiner, 2011), which could hide luminous Galactic objects, we should have detected a high mass star in our Gemini images out to even > 100 kpc, and M dwarf stars should be detected out to 15 kpc even in quiescence.
+
+The lack of X-ray periodicity (Appendix B) and lack of a low temperature X-ray spectrum (or blackbody excess) can also be used to strongly disfavor a Galactic magnetar as the origin of EP240408a. The archival X-ray limit on a quiescent X-ray flux from _eROSITA_(Tubin-Arenas et al., 2024) assuming a distance of 1-10 kpc is \\lesssim 10^{31-33} erg s{}^{-1} (0.2-6 keV). For comparison the observed quiescent X-ray luminosity for Galactic magnetars is in the range 10^{30-35} erg s{}^{-1}(Coti Zelati et al., 2017).
+
+An extensive literature search for similar lightcurves revealed that the X-ray outbursts of accreting millisecond X-ray pulsars (MSPs) display comparable behavior (Wijnands, 2004). Their outbursts can be modeled by multiple exponential decays defined by e^{-t/\\tau}, where the initial exponential decay timescale \\tau is typically on the order of 5-10 d and can steepen to a decay timescale of 1-2 d (Gilfanov et al., 1998; Markwardt et al., 2002; Falanga et al., 2005; Jonker et al., 2010; Sanna et al., 2018). The break time is usually around 10-20 d after discovery. We find EP240408a's X-ray luminosity lightcurve (Figure 3) can be fit with e^{-t/6} breaking to e^{-t/0.8} after \\sim 4 d. However, the major difference between transient MSP outbursts and EP240408a lies in the X-ray spectra. The MSP outbursts display spectral cutoff energies in excess of 100 keV, significantly higher than the \\sim 4 keV spectral break observed by _NICER_(Figure 2). We also found no evidence for periodicity in the X-ray data, even performing an accelerated pulsar search (see Appendix B). For these reasons, we disfavor a MSP as the explanation for EP240408a. If EP240408a is Galactic in origin, which we disfavor, it would represent a peculiar, and potentially unique, X-ray transient.
+
+### Extragalactic Scenarios for EP240408a
+
+We consider a number of possible extragalactic scenarios capable of explaining EP240408a's observed properties (high X-ray luminosity, sharp X-ray decay, and lack of optical or radio counterpart to deep limits).
+
+#### 3.3.1 Constraints on Prompt Gamma-ray Emission
+
+As EP240408a is likely a luminous extragalactic transient (peak X-ray luminosity L_{X}\\approx 10^{49} erg s{}^{-1} at z=0.5; 0.5-4 keV), the natural first interpretation is a long duration GRB. This is simply due to the frequent observed rate of long GRBs, approximately one per day detected by all-sky monitors such as _Fermi_ and _Swift_, and the similar prompt timescale of \\sim10 s. Moreover, since the launch of EP there have been a number of likely GRBs that lack hard gamma-ray detections (e.g., Yin et al., 2024), though we note that given the soft X-ray trigger these are not effectively true "orphan" GRBs (Nakar et al., 2002; Huang et al., 2002; Dalal et al., 2002).
+
+In Figure 4 (left panel), we compare the constraints on the prompt gamma-ray energy (isotropic-equivalent) from _GECam-B_ and _Konus-Wind_ to a population of long and short GRBs. We also show the estimated gamma-ray energy (10-10,000 keV) for EP240408a adopting a typical range of long GRB prompt emission spectra (E_{\\rm p}=70-300 keV; \\alpha=-1; \\beta=-3; Band et al., 1993). This comparison shows that there exist a variety of short and long GRBs consistent with the _GECam-B_ limits, but that the expected _Konus-Wind_ limits are only marginally consistent with the expected prompt emission of EP240408a (if interpreted as a GRB).
+
+A more informative diagnostic comes from combining limits on the prompt emission with observations of the X-ray afterglow. A standard diagnostic is the ratio of the X-ray flux at 11 hours F_{\\rm X,11} to the gamma-ray fluence \\phi_{\\gamma}(Nysewander et al., 2009; Berger, 2014; O'Connor et al., 2020, 2022; Yang et al., 2024; Perley et al., 2024), which is approximately distance independent with only a slight correction for redshift (see O'Connor et al., 2020, for a discussion). We find that E240408a has a high ratio F_{\\rm X,11}/\\phi_{\\gamma}>10^{-5}, already higher than the most luminous GRBs (e.g., Nysewander et al., 2009; Berger, 2014). This implies that the X-rays are very bright compared to any possible gamma-ray emission. We further show this in Figure 4 (right) which displays the X-ray luminosity at rest frame 11 hours L_{\\rm X,11} versus the isotropic-equivalent gamma-ray energy. The allowed space for EP204048a (blue shaded region) is clearly separate from any short or long GRB at all redshifts, though the difference increases at z>1. We note that this comparison would become even more significant if the X-ray luminosity at > 1 day was compared instead of the earlier time of 11 hours as the majority of GRBs decay as t^{-1} whereas EP240408a displays a slower fading plateau-like decay.
+
+The constraints on EP240408a (Figure 4) push it towards the region occupied by the relativistic jetted TDE Sw J1644+57 (Bloom et al., 2011; Levan et al., 2011). We converted the 15 - 150 keV fluence of the initial BAT trigger (Sakamoto et al., 2011) of Sw J1644+57 to the 10 - 10,000 keV energy range assuming a peak energy of E_{\\rm p} \\approx 70 keV (Levan et al., 2011). We further consider the jetted TDE scenario in SS3.6.
+
+#### 3.3.2 The Multi-wavelength Properties of EP240408a
+
+Here we briefly compare the observed multi-wavelength properties of EP240408a to other classes of high-energy extragalactic transients. A more detailed discussion of each transient class is presented in SS3.4. We focus here on a few possible candidates including GRBs, jetted TDEs, and FBOTs.
+
+Figure 3 compares the rest frame X-ray (0.3-10 keV; K-corrected) lightcurve of EP240408a (assuming either redshifts z \\approx 0.5 or 2.0) to GRBs and jetted TDEs. While the peak X-ray luminosity of GRBs can be orders of magnitude higher (> 10{}^{50} erg s{}^{-1}), jetted TDEs clearly separate themselves from long GRBs in their luminous, long lasting X-ray emission. The X-ray emission of EP240408a is also more long-lived than a typical GRB, and for a redshift z \\approx 1-3 appears to be consistent with the X-ray luminosity of jetted TDEs. We also note that the observed X-ray spectral break (Figure 2) is characteristic of non-thermal emission, and observed in both GRBs and jetted TDEs (e.g., AT2022cmc; Yao et al., 2024), see SS3.7 for further discussion of this point.
+
+While we did not detect EP240408a in deep optical, near-infrared, or radio observations we can still compare these limits (focusing again on z \\approx 0.5 or 2.0) to these classes of transients. In Figure 5 (right panel) we compare our Gemini limits to a variety of optical transients, finding that we can exclude most classes (e.g., GRBs, FBOTS, TDEs) out to z \\sim 0.5 (and beyond), and significantly disfavoring a low redshift z < 0.5 for any of these classes. In addition, for z < 0.5 the inferred hydrogen column density predicts a decreasing intrinsic extinction A_{V} < 1.4 mag with decreasing redshift, making luminous optical emission even less likely to be missed. This further motivates considering higher redshift interpretations for EP240408a (see also SS3.1).
+
+In Figure 5 (left panel) we show the rest frame radio lightcurves of multiple well-known transients to our VLA and ATCA upper limits. Both jetted TDEs and long GRBs produce long-lasting luminous radio emission that should likely be detected out to z \\approx 2. We discuss potential reasons for delayed radio emission from a jetted TDE in SS3.6. We also explore the implications of a non-detection on the jet's kinetic energy and the density of the surrounding environment in SS3.5.
+
+### Disfavored Extragalactic Interpretations of EP240408a
+
+Here we consider a few classes of extragalactic high-energy transients that we disfavor as the progenitor of EP240408a. In SS3.5 and SS3.6 we focus on two more likely interpretations in GRBs and TDEs, respectively.
+
+#### 3.4.1 Active Galactic Nuclei (AGN)
+
+The most luminous X-ray bright AGN have luminosities as high as L_{\\rm X} = 10{}^{46} erg s{}^{-1}(Donnarumma et al., 2009; Pineau et al., 2011), and generally display X-ray variability on timescales of hours to days (Uttley et al., 1999, 2005). The short timescale (10 s) and high luminosity for EP240408a at z > 0.5 clearly disfavor the interpretation of the source as an AGN. A more distant source (z > 0.5) would lead to X-ray luminosities higher than the most luminous X-ray bright AGN. Moreover, the most X-ray luminous AGN also display bright optical luminosities of \\approx -28 to -30 AB mag which would be detected by Gemini at any reasonable distance. We therefore strongly disfavor an AGN flare as the cause of EP240408a.
+
+#### 3.4.2 Fast Blue Optical Transient (FBOT)
+
+FBOTs are characterized by a rapidly fading (\\sim 0.3 mag d{}^{-1}), blue (g-r \\lesssim 0.2 mag) optical transient (e.g., Drout et al., 2014; Pursiainen et al., 2018) with comparable absolute magnitudes (\\approx -20 mag) to super-luminous supernovae (SLSN). Following the discovery of AT2018cow (Prentice et al., 2018; Margutti et al., 2019; Perley et al., 2019), the canonical FBOT, they are now commonly identified in wide-field optical surveys. They have also been found with luminous X-ray emission (Prentice et al., 2018; Margutti et al., 2019; Perley et al., 2019, 2021; Ho et al., 2019, 2020; Coppejans et al., 2020; Yao et al., 2022; Ho et al., 2023). In the case of AT2018cow, the peak X-ray luminosity was L_{\\rm X} = 10{}^{43} erg s{}^{-1} and displayed slow fading emission t^{-1} until \\sim20 d (rest frame) before a sharp decay t^{-4}(Margutti et al., 2019). While the characteristic timescale is longer than the plateau-like emission observed from EP240408a, the behavior of a sharp break after a standard temporal decline is similar. Due to selection effects related to detecting a similar prompt X-ray transient to that identified for EP24048a, it cannot be excluded that FBOTs display similar features. Therefore we compare the luminosity of the X-ray plateau phase of EP240408a to the peak flux of AT2018cow. EP240408a would exceed AT2018cow11 for z > 0.015 (\\sim 60 Mpc), similar to the actual distance to AT2018cow, where a bright host galaxy would be visible and a large amount of dust would be required to miss a luminous cow-like optical transient in our deep, multi-epoch riJ images (Figure 1 and Table A2). This does not fit with the inferred intrinsic A_{V} from the X-ray spectrum, which at such low redshifts is almost negligible compared to the expected brightness of a typical FBOT. In fact, the strongest constraint on an FBOT-like explosion lies in the lack of bright optical emission, which implies a higher redshift (z \\gtrsim 0.5) where the X-rays are orders of magnitude larger than from observed FBOTs. We therefore strongly disfavor an FBOT-like transient to explain EP240408a.
+
+Footnote 11: Another X-ray luminous FBOT, AT2024qfm, was recently discovered with luminosity as high as 8\\times 10^{43} erg s{}^{-1}(Margutti et al., 2024).
+
+#### 3.4.3 Fast X-ray Transient (FXT)
+
+The last decade has seen the detection of a new class of X-ray transients discovered serendipitously in deep X-ray imaging, largely with _Chandra_ and _XMM-Newton_(Jonker et al., 2013; Glennie et al., 2015; Bauer et al., 2017; Xue et al., 2019; Alp & Larsson, 2020; Ai & Zhang, 2021; Sarin et al., 2021; Quirola-Vasquez et al., 2022, 2023, 2024a). Referred to as Fast X-ray Transients (FXTs) they are characterized by short-lived (100 - 10,000 s) X-ray emission with typical peak X-ray luminosities in the range 10^{44-47} erg s{}^{-1}(Wichern et al., 2024). The low luminosity and short timescales of some of these events have led them to be characterized as supernova shock breakout emission (Alp & Larsson, 2020) or stellar flares (Glennie et al., 2015), while some display similarities (such as plateaus) to short GRBs, potentially linking them to binary neutron star mergers (e.g, Ai & Zhang, 2021; Sarin et al., 2021; Eappachen et al., 2023; Quirola-Vasquez et al., 2024a).
+
+We note that not only are the timescales of the X-ray detections of EP240408a significantly longer than known FXTs (Figure 7), EP240408a has a peak X-ray flux two to three orders of magnitude higher than the brightest FXTs, which if drawn from the same population should imply a low redshift with an obvious host galaxy association. For example, CDF-S XT1(Bauer et al., 2017) is associated to an extremely faint host galaxy in deep _HST_ and _JWST_ imaging with a photometric redshift of z \\approx 2.8 (Quirola-Vasquez et al., 2024b). Even at this large distance, the peak X-ray luminosity is only 3\\times 10^{47} erg s{}^{-1}(Quirola-Vasquez et al., 2024b). In contrast, already at z \\approx 0.1 (\\sim 460 Mpc) the peak X-ray luminosity (> 10^{47} erg s{}^{-1}) of EP240408a already exceeds that of the most luminous FXTs making this interpretation unlikely.
+
+### A Peculiar Gamma-ray Burst
+
+GRBs are extreme transients with isotropic-equivalent energies in the range of 10^{48-55} erg. They are thought to be produced by either the merger of compact objects (Abbott et al., 2017; Savchenko et al., 2017; Goldstein et al., 2017) or the collapse of massive stars (collapsars; Woosley, 1993; MacFadyen & Woosley, 1999). Historically, GRBs have been separated into the classes of short versus long duration GRBs based on the duration of their prompt gamma-ray emission with the divide at either shorter or longer than 2 seconds (Kouveliotou et al., 1993). However, there is growing evidence (e.g., GRBs 060614, 211211A and 230307A; Della Valle et al. 2006; Gal-Yam et al. 2006; Yang et al. 2015; Rastinejad et al. 2022; Troja et al. 2022; Yang et al. 2022; Gompertz et al. 2023; Levan et al. 2023; Yang et al. 2024; Gillanders et al. 2023; Dichiara et al. 2023) that the duration separation is not a robust classifier of the GRB's progenitor. Therefore, despite the \\sim 10 s duration of the "prompt" phase of EP240408a we do not automatically exclude the merger of two compact objects (e.g., two neutron stars) as its progenitor.
+
+#### 3.5.1 A "Naked" GRB
+
+The prompt phase of GRBs is generally shortly followed by a multi-wavelength "afterglow" from the forward shock (FS) produced by the interaction of the relativistic jet and the surrounding environment (Meszaros & Rees, 1997; Sari et al., 1998; Wijers & Galama, 1999). Standard GRB afterglows at optical and X-ray wavelengths are characterized by a decay of t^{-1} followed by a t^{-2} break due to the collimation of the outflow (Rhoads, 1999; Sari et al., 1999; Frail et al., 2001). This afterglow phase is not observed in the X-ray lightcurve of EP240408a, and instead we identify a plateau followed by a steep decline.
+
+A significant fraction of both short and long GRBs also display X-ray plateaus in their early lightcurves, many of which are followed by extremely fast decays (even as steep as t^{-9}; Troja et al. 2007) that are similar to EP240408a, which shows \\delta\\tau/\\tau \\approx 0.2. The standard FS emission is incapable of decays steeper than t^{-p}(e.g., Sari et al. 1999), where p is the slope of the electron's powerlaw energy distribution, or, in the "best case scenario" t^{-(2+\\beta)} \\approx t^{-3} if the source somehow stops emitting abruptly and only high-latitude emission is observed (Kumar & Panaitescu, 2000). Therefore, plateaus followed by such steep declines, referred to as "internal plateaus" (e.g., Zhang et al. 2006; Troja et al. 2007), are generally interpreted as being due to long-lived central engine activity.
+
+Provided the observed X-rays are due to an internal plateau, this requires that the FS emission from the jet must be fainter than the observed X-ray detections (Figure 3) as well as all upper limits at any wavelength. In a standard GRB interpretation the FS component must exist, but in this case it is likely extremely faint due either to a low density (a "naked" burst, e.g., Kumar & Panaitescu 2000; Perley et al. 2009), low fraction of energy in magnetic fields \\varepsilon_{B}(e.g., Barniol Duran, 2014), or an early jet break (which should also impact the emission from the long-lived engine).
+
+The lack of a known distance and the known degeneracy and broad allowed parameter range in afterglow modeling preclude a conclusive diagnostic of this possibility though experience has shown that it is generally not difficult to "hide" a forward shock, especially when applying a rarefied environment (e.g., Kumar & Panaitescu 2000; Perley et al. 2009). In what follows we briefly test this possibility.
+
+In the standard fireball model (e.g., Meszaros & Rees 1997; Wijers & Galama 1999; Granot & Sari 2002), where an on-axis tophat jet propagates into an external medium \\rho_{\\rm ext}(R) = A R^{-k}, the forward shock emission at each time and frequency is determined by a set of 6 parameters: \\{z,p,E_{\\rm kin},A,\\varepsilon_{\\rm e},\\varepsilon_{\\rm B}\\}, where p is the slope of the electron's powerlaw energy distribution, E_{\\rm kin} is the kinetic energy, and \\varepsilon_{\\rm e} and \\varepsilon_{\\rm B} represent the fraction of shock energy in electrons and magnetic fields, respectively. While the powerlaw index k determining the structure of the surrounding environment is a free parameter for simplicity we adopt k = 0 for a uniform density environment and k = 2 for a wind-like environment (e.g., Chevalier & Li 2000). These are the standard limiting cases, and we apply the analytic results of Granot & Sari (2002) in our analysis. We have assumed a post-deceleration and pre-jet-break behavior of the outflow. We neglect the effect of viewing angle, inverse Compton corrections, or reverse shock emission.
+
+The observed synchrotron emission from the forward shock at a given time and frequency depends on the relation between the characteristic synchrotron frequencies: the self-absorption frequency \\nu_{\\rm a}, the injection frequency \\nu_{\\rm m}, and the cooling frequency \\nu_{\\rm c}. We account for Spectra 1-5 as outlined in Figure 1 of Granot & Sari (2002). We consider a range of redshifts z = \\{0.5,1.0,2.0\\} and kinetic energies E_{\\rm kin} = \\{10^{51},10^{52},10^{53}\\} erg, and fix p=2.2 and \\varepsilon_{\\rm e}=0.1 for simplicity (Beniamini & van der Horst, 2017; Duncan et al., 2023). We compute the afterglow flux at the time and frequency of our VLA and ATCA upper limits (10-260 d; observer frame) and include the X-ray limits from _Swift_ (>10 d). We also use the observed X-ray detections from _Swift_ (1.4 d) and _NICER_ as upper limits to the forward shock emission. While we do not account for the optical and near-infrared upper limits as they can be significantly impacted by intrinsic dust in the host galaxy we do find that generally these limits are automatically satisfied. We compute the detectability over a grid of 100 log-uniform steps between n=\\{10^{-5},1000\\} cm{}^{-3} for a uniform environment (k=0), A_{*}=\\{10^{-5},1000\\} for a wind environment (k=2), and \\varepsilon_{\\rm B}=\\{10^{-8},0.5\\} for both values of k.
+
+We emphasize that these calculations are relevant to both GRB and TDE interpretations for EP240408a (see also SS3.6). In general the most constraining limit is from the VLA at 10.34 d (observer frame) post-trigger, and the late-time VLA observations at 158 d and 258 d (observer frame) only excludes a small parameter space (for a wind environment) at high densities where \\nu_{\\rm a} was \\sim 100 GHz at early times. The late-time VLA upper limits are more constraining in a TDE interpretation (see SS3.6), as most GRBs experience a jet break before 158-258 d and we have not accounted for post-jet-break behavior in our calculations which would lead to dim radio emission at late times.
+
+We find that for a uniform environment the forward shock emission is generally in the regime \\nu_{\\rm a}<\\nu_{\\rm m}<\\nu_{\\rm c} (Spectrum 1 from Granot & Sari, 2002) whereas for a wind environment solutions are also found for \\nu_{\\rm m}<\\nu_{\\rm a}<\\nu_{\\rm c} (Spectrum 2 from Granot & Sari, 2002). In either case (see Figure 6) the solutions require either very low density environments or low values of \\varepsilon_{\\rm B}. We note that values of \\varepsilon_{\\rm B} in the range 10^{-1} to 10^{-4} are generally considered standard, but have been found to be as low as 10^{-8} in some GRBs (Barniol Duran et al., 2013; Santana et al., 2014; Beniamini et al., 2015; Zhang et al., 2015).
+
+The solutions can span a larger amount of parameter space if \\varepsilon_{\\rm e} and p are allowed to vary over a larger range of values. In general these calculations show that we cannot completely exclude an on-axis forward shock emission from a post-deceleration jet. The allowed parameter space would be greatly expanded by allowing for off-axis viewing angles.
+
+#### 3.5.2 An Off-axis Jet
+
+In Figure 7 we compare the rest frame duration and luminosity of X-ray plateaus observed from both short and long GRBs to EP240408a. EP240408a is an outlier and would have the longest plateau ever discovered from a GRB, even longer than the class of ultralong GRBs (e.g., GRBs 060729, 101225A, 121027A, 130925A, 141121A), which are though to have the longest lasting central engines (e.g., Levan et al., 2014; Cucchiara et al., 2015). However, the major difference from ultralong GRBs is the lack of energetic \\approx 10{}^{54-55} erg (isotropic-equivalent) gamma-ray emission.
+
+The lack of gamma-rays is hard, though not impossible, to explain in the context of a GRB. For example, an off-axis viewing angle would decrease the observed, line-of-sight (isotropic-equivalent) energy of the GRB, potentially allowing for consistency with the upper limits in Figure 4, which are compared to a sample of on-axis bursts. An additional, and quite relevant, impact of viewing a GRB off-axis is a likely decrease in the observed peak energy E_{\\rm p} towards soft X-rays (assuming E_{\\rm p} is constant in the comoving frame; see, e.g., Parsotan and Lazzati 2024 for a discussion of the results of numerical simulations, and Xu et al. 2023; Gao et al. 2024 for discussions on the observational impact), though this will depend on the exact Lorentz factor profile of the jet. The obvious alternative is a low gamma-ray efficiency, which could be either an impact of an off-axis viewing angle (Beniamini and Nakar 2019; Beniamini et al. 2020; Gill et al. 2020; O'Connor et al. 2024) or due to inefficient breakout of the jet from the progenitor star(s).
+
+The tension between the length of the X-ray plateau of EP240408a and those of the larger sample (Figure 7) can also be reduced if EP240408a is seen off-axis. An off-axis viewing angle delays the arrival of radiation to the observer and can extend this phase (e.g., Nakar et al. 2002; Panaitescu and Kumar 2003; van Eerten et al. 2010). This would also produce less luminous X-ray emission compared to the on-axis cases shown in Figure 4 (right panel), which would likely require a very nearby event as far off-axis angles are strongly disfavored for the observed cosmological GRB sample (e.g., Ryan et al. 2015; Matsumoto et al. 2019; O'Connor et al. 2024).
+
+In addition, the lack of a likely host galaxy, or even any potential low redshift host, excludes a low luminosity GRB such as GRB 060218 (Soderberg et al. 2006) which at z = 0.033 had a gamma-ray energy of 6\\times 10^{49} erg and 11 hour X-ray luminosity of L_{\\rm X,11} \\approx 10{}^{42} erg s{}^{-1}. At a similar redshift EP204048a would have a gamma-ray energy < 10{}^{48-49} erg and an X-ray luminosity at 11 hr of \\sim 10{}^{44} erg, quite different from even the lowest luminosity GRBs. Such low redshifts (even up to z < 0.5) are also excluded by the lack of detection of a coincident supernova (Figure 5; right panel) in our deep multi-epoch Gemini imaging which probes the typical peak times of known GRB-SN (e.g., Galama et al. 1998; Soderberg et al. 2006; Hjorth and Bloom 2012; Cano et al. 2017; Srinivasaragavan et al. 2023, 2024).
+
+#### 3.5.3 A Long-lived Magnetar
+
+The most commonly adopted mechanism to explain the long-lived engine required by internal plateaus is a newborn, rapidly spinning (P \\approx 1 - 10 ms) magnetar (Usov 1992; Duncan and Thompson 1992) with a high magnetic field B \\approx 10{}^{15-16} G (Zhang et al. 2006; Liang et al. 2006; Troja et al. 2007; Lyons et al. 2010; Metzger et al. 2011; Rowlinson et al. 2010, 2013; Giacomazzo and Perna 2013; Lu et al. 2015; Chen et al. 2017). In many cases the required magnetar approaches the maximum theoretical limits, and other interpretations for internal plateaus have been suggested (e.g., black hole powered photospheric emission or low Lorentz factor leading to a late deceleration of the jet; Shen and Matzner 2012; Duffell and MacFadyen 2015; Beniamini and Mochkovitch 2017; Beniamini et al. 2017, 2020; Oganesyan et al. 2020; Dereli-Begue et al. 2022).
+
+In this case of a magnetar, the plateau is produced by spin-down of the magnetar's dipole field (Zhang and Meszaros 2001)
+
+L_{\\rm sd}=1.0\\times 10^{49}\\,B_{15}^{2}P_{-3}^{-4}R_{6}^{6}\\,{\\rm erg\\,s}^{-1},  where R is the radius of the neutron star. We have adopted the convention B_{15} = B/(10^{15}\\,{\\rm G}), and similar for the other parameters using cgs units. We note that the efficiency of converting the spin-down power to the observed X-ray luminosity L_{\\rm X}=\\eta L_{\\rm sd} is generally a challenge (Granot et al. 2015; Beniamini and Mochkovitch 2017). The end of the plateau phase is typically taken to be the spin-down timescale of the magnetar (Zhang & Meszaros, 2001)
+
+t_{\\rm sd}=2.0\\times 10^{3}\\,I_{45}\\,B_{15}^{-2}P_{-3}^{2}R_{6}^{-6}\\;{\\rm s}.  where I is the moment of inertia of the neutron star. The temporal decay following the spin-down time is (Beniamini & Mochkovitch, 2017)
+
+L=L_{\\rm sd}\\Bigg{(}1+\\frac{n-1}{2}\\frac{t-t_{\\rm o}}{t_{\\rm sd}}\\Bigg{)}^{ \\frac{t+n}{1-n}}  where t_{\\rm o} is the start of the spin-down, and n is the magnetic braking index which for n\\!=\\!3 yields the standard \\propto\\!t^{-2} decay. A t^{-7} decay as observed for EP240408a requires n\\!\\approx\\!1.33, consistent with that inferred for some isolate pulsars (Hamil et al., 2015). In addition, the temporal decline can steepen if the magnetar collapses to a black hole, but this would limit the allowed energy reservoir, which considering the estimate P\\!\\sim\\!1\\,{\\rm ms} is already constraining.
+
+Despite the long-lasting plateau (\\sim\\!3.5\\times 10^{5} s), we find a suitable match to the required luminosity and duration for a magnetar with B\\!\\approx\\!10^{14} G and P\\!\\approx\\!1 ms assuming z\\!\\approx\\!1. These solutions are degenerate with redshift and radiative efficiency, and thus we only provide a single example. In any case, the initial spin period of the neutron star would have to be close to the breakup limit (Lattimer & Prakash, 2004). These values, in particular the magnetic field, are slight outliers when compared to those inferred for either short (B\\!\\approx\\!10^{16} G; Rowlinson et al., 2010, 2013; Gompertz et al., 2014; Lu et al., 2015) or long GRBs (B\\!\\approx\\!10^{15} G; Lyons et al., 2010; Yi et al., 2014) and fall closer to SLSN (B\\!\\approx\\!10^{13-14} G; Nicholl et al., 2017). This is not surprising given the longer plateau duration t_{\\rm sd}\\!\\propto\\!B^{-2} which requires a smaller magnetic field.
+
+#### 3.5.4 A Dissipative Photosphere
+
+There are other possible explanations for the observed plateau other than a long-lived magnetar or an off-axis jet. A black hole engine was proposed for GRB 070110 (Beniamini & Mochkovitch, 2017) whereas the central engine launches a second lower Lorentz factor outflow which produces photospheric emission (Beniamini & Kumar, 2016), leading to the observed plateau. We note however that this model is independent of the class of central engine, which simply provides an energy source that must then be transformed (e.g., a dissipative photosphere) into the observed radiation. Beniamini & Mochkovitch (2017) considered a jet which efficiently dissipates energy below the photosphere leading to a thermal Comptonized X-ray spectrum with peak energy E_{\\rm p,X}\\!\\lesssim\\!0.5-1 keV. In the observed 0.3-10 keV bandpass such a spectrum would appear as F_{\\nu}\\!\\approx\\!\\nu^{-1} (similar to EP240408a). However, in the case of EP240408a, the peak energy is \\sim\\!4 keV (Figure 2).
+
+Applying the model from Beniamini & Mochkovitch (2017), we can derive the Lorentz factor \\Gamma at the photosphere required to produce the observed X-ray plateau luminosity L_{\\rm th} as
+
+\\Gamma=15\\frac{\\lambda^{1/2}}{\\epsilon_{\\rm rad,-2}^{1/4}}(1+\\sigma)^{-1/4}L_{ \\rm th,47}^{1/8}E_{\\rm p,X}^{1/2}  where \\lambda is an order unity factor determined by the exact emission spectrum12, \\epsilon_{\\rm rad} is approximately the efficiency of a non-dissipative photosphere, and (1+\\sigma) is the magnetization parameter. In this model, we find that the observations of EP240408a could be roughly reproduced by a photosphere with Lorentz factor \\Gamma\\!\\approx\\!30.
+
+Footnote 12: The parameters \\lambda is 1 for a pure non-Comptonized photosphere and less than 1 for a Comptonized photosphere.
+
+As discussed in Beniamini & Mochkovitch (2017) the Lorentz factor is not severely impacted by the allowed ranges of \\lambda, \\epsilon_{\\rm rad}, or (1+\\sigma). These parameters instead have a larger impact on the (observer frame) geometric timescale (Beniamini & Mochkovitch, 2017)
+
+t_{\\rm geo}=0.25\\frac{1+z}{2}\\frac{\\epsilon_{\\rm rad,-2}(1+\\sigma)^{1/4}}{ \\lambda^{5/2}}\\frac{L_{\\rm th,47}^{3/8}}{E_{\\rm p,X}^{5/2}}\\;{\\rm s} 
+
+However, the geometric timescale is always significantly shorter than the plateaus decay timescale, which strongly suggests that the rapid t^{-7} decay is due to the cessation of the central engine.
+
+### A High Redshift Jetted Tidal Disruption Event
+
+The population of relativistic jetted TDEs is small, with only four candidates (Bloom et al., 2011; Levan et al., 2011; Zauderer et al., 2011; Burrows et al., 2011; Cenko et al., 2012; Brown et al., 2015; Pasham et al., 2015; Andreoni et al., 2022; Pasham et al., 2023) uncovered since their initial discovery in 2011 (Bloom et al., 2011; Levan et al., 2011; Burrows et al., 2011). They are produced by the tidal shredding of a stellar mass star by a massive black hole (M_{\\rm BH}\\!\\approx\\!10^{5-8}M_{\\odot}). These TDEs are generally characterized by luminous X-ray and radio emission (Figures 3 and 5). At X-ray wavelengths they display rapid short term variability (\\sim hours) on top of a powerlaw decay of \\approx\\!t^{-2}.
+
+Only Sw J1644+57 (z\\!=\\!0.35) was detected by a gamma-ray satellite (_Swift_/BAT; Cummings et al., 2011) in flight, as opposed to a ground analysis. Even then, SwJ1644+57 was identified through a \\sim 1000 s long image trigger (Cummings et al., 2011; Sakamoto et al., 2011; Levan et al., 2011) and not bright enough to trigger _Swift_/BAT as a normal GRB. Accompanying its multiple gamma-ray triggers, Sw J1644+57 exhibited exceptional soft X-ray (0.3-10 keV) radiation with peak luminosity L_{\\rm X} \\approx 3\\times 10^{48} erg s{}^{-1} and an average luminosity over 10^{6} s of 9\\times 10^{46} erg s{}^{-1}(Bloom et al., 2011). We note that the observed peak X-ray flux of the initial trigger of EP240408a is a factor of \\sim 10 higher than the brightest soft X-ray detection of Sw J1644+57.
+
+Two additional jetted TDEs, Sw J2058+05 at z= 1.19 (Cenko et al., 2012) and Sw J1112-82 at z= 0.89 (Brown et al., 2015), were both identified in an automated ground based analysis by the _Swift_/BAT Hard X-ray Transient Monitor (Krimm et al., 2013) in 4 day binned windows (15-50 keV). As such their gamma-ray variability or spectra could not be measured, and they cannot be obviously compared to the population of GRBs in Figure 4.
+
+In contrast to the other three jetted TDEs, AT2022cmc was discovered as a rapidly fading optical transient and was not detected in gamma-rays (z= 1.19; Andreoni et al., 2022; Pasham et al., 2023; Rhodes et al., 2023; Yao et al., 2024). Andreoni et al. (2022) estimated a < 5% chance of _Swift_/BAT detecting similar gamma-ray flares to those observed from Sw J1644+57 at redshift z= 1.19. Due to its larger distance AT2022cmc remains hostless to depth 24.5 AB mag (Andreoni et al., 2022). In the case of AT2022cmc, despite the subarcsecond localization, the lack of an underlying host precluded the determination as to whether it was truly a nuclear transient. In the case of EP240408a, the lack of subarcsecond localization (Figure 1) is the limiting factor, and the slight offset from the XRT enhanced position similarly does not rule out EP240408a as a nuclear transient.
+
+Therefore, we find that the lack of gamma-rays does not immediately disfavor a jetted TDE interpretation, nor does the prompt soft X-ray detection. If indeed the X-rays can shutoff on timescales of \\sim 4 d there is a strong bias against finding such fast X-ray transients. In fact, there are selection biases that exist, especially prior to the launch of _Einstein Probe_(Yuan et al., 2015, 2022), towards detecting similar prompt X-ray transients to EP240408a (Hu et al., 2024) or relativistic jetted TDEs in general.
+
+#### 3.6.1 The Nature of the X-ray Emission
+
+While the X-ray radiation observed from EP240408a can match the luminosity of known relativistic jetted TDEs (Figure 3) at z\\approx 1 - 2, the observed timescales are significantly shorter (Figure 3). While after \\sim 10 d, Sw J1644+57 transitioned to an approximately t^{-5/3} decay (Burrows et al., 2011; Bloom et al., 2011), EP240408a appears to potentially shut off with an extremely fast decay (\\delta\\tau/\\tau\\approx 0.2). In particular, central engine cessation of other jetted TDEs is on the order of hundreds of days (100-400 d in the rest frame; Mangano et al., 2016; Levan et al., 2016; Eftekhari et al., 2018, 2024), whereas a sharp decline is observed in EP240408a after only \\lesssim 4 d when considering the impact of redshift. It is unclear whether this is natural variability in X-rays, like the sharp variability observed at early times for Sw J1644+57 (Figure 3), at high-z that then fades below _NICER, Swift_, and _NuSTAR_ sensitivity.
+
+For starters, if we assume a typical black hole mass for the observed relativistic jetted TDEs M_{\\rm BH} \\approx 10^{6-8}M_{\\odot} the Eddington luminosity is in the range 10^{44-46} erg s{}^{-1}. Even ignoring the initial EP trigger, the X-ray plateau luminosity implies a highly super-Eddington outflow with Eddington ratio \\lambda \\approx 5-500 (20-2,000) at z \\approx 1.0 (2.0). This may favor redshifts more similar to AT2022cmc at z= 1.19 as the Eddington ratio at z\\gtrsim 2 is quite extreme. We note that the initial EP trigger is \\sim 500 times brighter and would require extreme super-Eddington accretion. For reference, Sw J1644+57 exhibited an Eddington ratio (beaming corrected) of only \\sim 1,200(Beniamini et al., 2023).
+
+If we assume the emission comes from a highly collimated, relativistic jet (similar to Sw J1644+57), it significantly decreases the required energy budget. For instance, the beaming factor of a tophat jet is f_{b} \\approx \\theta_{\\rm c}^{2}/2, where \\theta_{\\rm c} is the jet's core half-opening angle. Adopting a typical opening angle of \\theta_{\\rm c} = 0.1 rad yields a beaming correction of f_{b}^{-1} \\approx 200. Applying this to the initial flare detection of EP240408a leads to an Eddington ratio of between \\lambda_{\\rm peak} \\approx 13-1,250 (50-5,000) at z \\approx 1.0 (2.0). These ratios can be decreased further if the opening angle of the jet is smaller than 0.1 rad (6 deg). This implies the observed X-ray emission requires a relativistic jet (with likely a small viewing angle) and that we are observing X-rays from an internal dissipation process (due to the short variability timescales observed for the plateau).
+
+#### 3.6.2 Fallback Timescale
+
+The end of the plateau can be associated to the fallback timescale of the disrupted stellar material (e.g., Burrows et al., 2011; Bloom et al., 2011; Cenko et al., 2012) from a main sequence star in which case the fallback accretion rate begins to decay as \\approx t^{-\\alpha} where \\alpha= 5/3 (complete disruption) or 2.2 (partial disruption) is generally adopted (Guillochon and Ramirez-Ruiz, 2013).
+
+[MISSING_PAGE_FAIL:20] to a smooth decay of the X-ray lightcurve as observed from AT2022cmc and EP240408a.
+
+#### 3.6.4 Delayed Radio Emission
+
+Due to the lack of radio emission detected for EP240408a (Figure 5) and the short variability timescales (\\delta\\tau/\\tau\\approx 0.2), we interpret the X-rays as arising from an internal process within the jet. The lack of optical emission (Figure 5) can be due to intrinsic extinction in the host galaxy, as was the case for Sw J1644+57. The expected A_{V} from the inferred X-ray hydrogen column density (SS2.12) is 1.4 (6.3) mag (Guver and Ozel, 2009) at z\\approx 0.5 (2.0), and can easily lead to a non-detection at higher redshifts. Harder to explain is the lack of bright radio in our sensitive multi-epoch VLA and ATCA observations. It is possible that these observations occur too early (i.e., pre-deceleration) and that eventually rising radio emission could become detectable, or that the self-absorption frequency is above our observations at 5-18 GHz out to \\sim 260 d (observer frame).
+
+Delayed radio emission has been uncovered in a variety of TDEs (Horesh et al., 2021, 2021; Perlman et al., 2022; Saradi et al., 2022; Cendes et al., 2022, 2024) on timescales of > 100 - 1,000 d. This delayed radio emission has been interpreted either as either late-jet launching from a long-lived central engine (van Velzen et al., 2016; Horesh et al., 2021; Cendes et al., 2022, 2024), an off-axis relativistic jet with Lorentz factor on the order of tens (Matsumoto and Piran, 2023; Beniamini et al., 2023; Sfaradi et al., 2024), or delayed breakout due early jet precession (Teboul and Metzger, 2023). The further off-axis the viewing angle the later the time of the peak and the steeper the temporal slope of the rising emission (e.g., AT2018hyz with a t^{6} rise around 1,000 d after discovery; Cendes et al., 2022; Sfaradi et al., 2024). Due to the inferred range of Eddington ratios, it is likely that the jet of EP240408a cannot be very far off-axis. In addition, the alternative explanation that is typically invoked requires an outflow launched at late times (e.g., Cendes et al., 2022, 2024), which conflicts with the already existing jet inferred from the X-rays.
+
+As the jet is unlikely to be very far off-axis, we conclude that this is an unlikely reason for delaying the radio emission and that instead plausible interpretations include synchrotron self-absorption or late jet deceleration due to a low initial Lorentz factor \\Gamma\\lesssim 10. We note that an equipartition analysis (Barniol Duran et al., 2013; Barniol Duran and Piran, 2013; Matsumoto and Piran, 2023) is not constraining as we have no robust limit on either the peak frequency \\nu_{\\rm peak} or the peak flux F_{\\nu,\\rm peak}. Instead, we simply compute the synchrotron emission from a forward shock propagating into an external medium \\rho_{\\rm ext}(R)=A(R/R_{0})^{-k} for a range of parameters (Granot and Sari, 2002). We focus for simplicity on the limiting cases of k=0 for a uniform density environment and k=2 for a wind-like environment, though the exact index does not have to be either. The non-detection of forward shock emission requires low external densities or small fractions of energy in magnetic fields, as previously noted in SS3.5 and Figure 6. These solutions are not impossible for a TDE jet and we therefore cannot rule out a post-deceleration forward shock. An initially high synchrotron self-absorption (> 100 GHz) frequency allows for non-detection of radio emission in a wind environment for large densities (Figure 6; right panel), but requires a significant amount of dust to not be detected in the optical. This solution would predict luminous radio emission at higher frequencies or at the same frequencies at later times and is mainly ruled out by the late-time VLA upper limits (158 d and 258 d; observer frame). This high density solution disappears for higher kinetic energies (e.g., 10{}^{53} erg) or lower redshifts (e.g., z<0.5). Therefore, only for a wind-like environment with high densities A_{*}> 100 and E_{\\rm kin}< 10{}^{53} erg do we predict detectable radio emission at later times or higher frequencies.
+
+While these calculations (Figure 6) assume that the jet is already in a post-deceleration phase, this may not be the case for a TDE jet. Thus we also consider the possibility that the jet has a low Lorentz factor and has not decelerated until > 260 d (observer frame). In this case, the peak of the afterglow has not occurred and the emission is rising with time. This analysis mainly refers to a TDE interpretation, but could be relevant to GRBs in relation to low Lorentz factor dirty fireballs. We consider here the case of an on-axis jet, but note that off-axis viewing angles will delay the observed deceleration time further (e.g., Nakar et al., 2002; O'Connor et al., 2024). The (on-axis) deceleration time (observer frame) of an ultra relativistic outflow with initial Lorentz factor \\Gamma is given by (Sari and Piran, 1999; Molinari et al., 2007; Ghisellini et al., 2010; Ghirlanda et al., 2012; Nava et al., 2013; Nappo et al., 2014; Ghirlanda et al., 2018)
+
+t_{\\rm dec}=\\left\\{\\begin{array}{ll}6.4\\left(\\frac{1+z}{2}\\right)\\Gamma_{1} ^{-8/3}\\,E_{\\rm kin,53}^{1/3}\\,n_{-1}^{-1/3}\\;{\\rm days},&k=0,\\\\ 15.2\\left(\\frac{1+z}{2}\\right)\\Gamma_{1}^{-4}\\,E_{\\rm kin,53}\\,A_{*,-1}^{-1} \\;{\\rm days},&k=2,\\end{array}\\right.  with k=0 for a uniform density n environment, and k=2 and A_{*} representing a wind-like environment (e.g., Chevalier and Li, 2000). In Figure 8 we show the allowed parameter space in terms of Lorentz factor and kinetic energy for both an ISM and wind environment. The al lowed range of space, which depends also on density and (marginally) redshift, favors low Lorentz factor outflows with \\Gamma\\lesssim 10 for either environment when considering reasonable densities.
+
+If the jet is not ultra relativistic, instead the deceleration time (for a uniform density environment) can be estimated as (Nakar & Piran, 2011)
+
+t_{\\rm dec,s}\\approx 600\\,\\Big{(}\\frac{1+z}{2}\\Big{)}E_{\\rm kin,52}^{1/3}n^{-1 /3}\\beta^{-5/3}\\,\\,{\\rm days},  where c\\beta is the initial velocity of the outflow. For a reasonable range of energies and densities the deceleration in this regime can be significantly larger than 260 d, especially if \\beta \\ll 1 (see Figure 8). This is also the case for a wind environment. In either situation, the allowed range of \\beta is completely unconstrained below \\beta < 0.9 for kinetic energies as low as 10{}^{51} erg.
+
+Therefore, there are multiple plausible interpretations for the lack of radio detections in our VLA and ATCA observations. Thus, we predict that luminous radio emission may become detectable from EP240408a on the timescale of a few hundred days (e.g., AT2018hyz), similar to other TDEs. The detection of late-time radio emission would exclude a GRB interpretation. Further late-time radio observations can aid in determining the nature of EP240408a.
+
+### Interpretation of the Spectral Break
+
+Using the X-ray data obtained by _NICER_, we are able to model the time-resolved X-ray spectra (SS2.12.2) with an absorbed broken powerlaw and measure a time-varying spectral break between 3 - 6 keV (observer frame) as detailed in Figure 2. The exact time-evolution evolution of the spectral break is not well constrained due to declining data quality as the source fades, but it does not appear in the earliest _NICER_ data. As shown in Figure 2 (bottom panels), the first appearance of the spectral break is in the third epoch (E3) of _NICER_ data at \\sim 3.4 d (observer frame). The spectral break energy appears relatively fixed in energy within errors, and does not display drastic changes between epochs. The median value is around E_{\\rm break} \\approx 4.5 keV (observer frame).
+
+Spectral breaks are a common feature of synchrotron radiation (Granot & Sari, 2002) and can be due to the passage of a few characteristic frequencies through the observed band. These breaks are commonly observed in GRBs, and also in some relativistic jetted TDEs (e.g., AT2022cmc; Yao et al., 2024). Synchrotron radiation can arise from both internal and external processes to the jet. In an external shock origin, the characteristic synchrotron frequencies, such as the cooling frequency \\nu_{\\rm c} and the peak frequency \\nu_{\\rm m} have a well known temporal dependence (Granot & Sari, 2002) that has also been measured in GRB afterglows. The time dependence of the cooling frequency is modified depending on the external environment with \\nu_{\\rm c} \\propto t^{-1/2} for a uniform medium and \\nu_{\\rm c}\\!\\propto\\!t^{0.5} for a wind-like medium, neglecting inverse Compton corrections (Sari and Esin, 2001; Zou et al., 2009; Beniamini et al., 2015). Instead, the peak frequency \\nu_{\\rm m} does not depend on the surrounding environment \\nu_{\\rm m}\\!\\propto\\!t^{-3/2}. However, a declining spectral break is disfavored by our analysis, especially one with such a strong time evolution.
+
+While the exact evolution of the spectral break observed in EP240408a is uncertain, it tends to be roughly consistent with a t^{0.5} within errors (and we note the time dependence can be modified if the value of k deviates from k\\!=\\!2). This is mainly due to the fact that the break energy is most well constrained at \\sim\\!3.4 d, and seems to increase following this based on the agreement between the values measured in the latter epochs (E5 to E8; Figure 2). In this case, it may well be due to the increase of the cooling frequency in a wind-like environment. However, it must be noted that the observed change in spectral index of the broken power-law above and below the spectral break is on the order of 0.5-1.0, whereas the change in slope due to the passage of the cooling frequency should be 0.5. In addition, the lightcurve does not follow the expected temporal behavior of an external shock synchrotron afterglow, especially due to the very steep decay at later times.
+
+Instead, the observed X-ray emission may be due to non-thermal radiation from processes internal to the jet (such as internal shocks) at small radii (as required due to the extremely steep decay). If we assume the Lorentz factor of the emitting material is constant and adopt that the radius goes as R\\!\\sim\\!\\Gamma^{2}t we can estimate that \\nu_{\\rm c}\\!\\propto\\!R^{(3/2)k-2}\\!\\propto\\!t^{(3/2)k-2}, which decreases for a uniform medium and increases for a wind-like medium, as in the external shocks scenario but with a steeper time dependence in both cases (Granot and Sari, 2002). As k does not have to exactly satisfy either assumed density profile, the time evolution of \\nu_{\\rm c} can easily span a wide range and be consistent with our observations of the spectral break.
+
+We note that a spectral break between 10-15 keV was observed in the relativistic TDE AT2022cmc (Yao et al., 2024). The temporal dependence there was roughly consistent with \\nu_{\\rm c}\\!\\propto\\!t^{0.5} between 7.8 and 17.6 d (observer frame). This evolution could not be confirmed in the third epoch at 36.2 d, potentially due to the decreased data quality at this later time.
+
+While the spectral break is most easily explained in a synchrotron emission model, and in general we favor a relativistic jetted TDE explanation for EP240408a, it is also possible to explain in the models proposed for the X-ray plateau in a GRB interpretation. For example, in the dissipative photosphere model (SS3.5.4) a fixed spectral break easily matches the model prediction. As the geometric timescale (Equation 5) is significantly shorter than the observed decay timescale, any variability, even of the spectral break, is directly impacted by the central engine activity and is therefore hard to completely exclude due to the wide range of possibilities for the engine's behavior (even from observations of GRBs). In the dissipative photosphere model, a time varying spectral break E_{\\rm p}\\!\\propto\\!(1+\\sigma)^{1/2}\\varepsilon_{\\rm rad}^{1/2}\\Gamma^{2} could be potentially explained by a time evolution of the magnetization \\sigma, radiation efficiency \\varepsilon_{\\rm rad}, or outflow Lorentz factor \\Gamma. However, envisioning a time evolution of these parameters that leads to an increasing break energy E_{\\rm p} is less clear and may disfavor this interpretation for the plateau.
+
+### Comparison of Intrinsic Rates
+
+We compare the intrinsic rate of long GRBs and jetted TDEs. The inferred local rate of long GRBs is 79^{+57}_{-33} Gpc{}^{-3} yr{}^{-1}(Ghirlanda and Salvaterra, 2022) with a redshift evolution of (1+z)^{3.2} out to z\\!\\approx\\!3. Jetted TDE rates are more uncertain due to their smaller population and range between \\sim\\!0.3\\!-\\!20 Gpc{}^{-3} yr{}^{-1} for Sw J1644+57 and AT2018hyz, respectively (Piran and Beniamini, 2023). We adopt the intrinsic rate of the jetted TDE AT2018hyz at z\\!=\\!0.0457(Cendes et al., 2022; Piran and Beniamini, 2023; Sfaradi et al., 2024) which is the closest and therefore leads to a higher (beaming corrected) rate of \\sim\\!20 Gpc{}^{-3} yr{}^{-1}. This is consistent at the 2\\sigma level with the rate of long GRBs at a similar redshift (Ghirlanda and Salvaterra, 2022). The inferred rate of AT2018hyz would be significantly higher if interpreted as an on-axis jet (Cendes et al., 2022), not to mention the significant selection effects against detecting a similar event. This comparison implies that both jetted TDEs and long GRBs may occur at similar rates in the local Universe. However, EP240408a likely occurred at significantly higher redshifts z\\!\\approx\\!1\\!-\\!2 in which case the intrinsic long GRB rate is higher by a factor of \\sim\\!10\\!-\\!30 whereas the rate of TDEs likely decreases rapidly (Kochanek, 2016).
+
+## 4 Conclusions
+
+In this work we have presented the results of our extensive multi-wavelength (X-ray, ultraviolet, optical, near-infrared, and radio) follow-up campaign of the _Einstein Probe_ transient EP240408a. Our campaign, which includes deep Gemini observations, uncovered a possible host galaxy association. However, the faint nature of the host leaves the distance scale and luminosity of EP240408a unconstrained. Based on the host brightness, we favor higher redshifts (z\\!\\gtrsim\\!0.5) where the peak X-ray luminosity exceeds 10^{49} erg s{}^{-1}. We note, however, that the lack of subarcsecond localization precludesboth an accurate diagnostic of the host association or the possibility that the candidate uncovered by Gemini is potentially an unrelated foreground galaxy.
+
+The observed properties of EP240408a, such as the long-lived duration (\\sim 5 d), (likely) high X-ray luminosity, and lack of bright radio emission, do not directly align with any known transient class at any likely redshift. We have considered a variety of interpretations for the multi-wavelength dataset, and favor a peculiar GRB or jetted TDE at high-z (z\\gtrsim 1), though neither perfectly explains the observations. The distinguishing factor between these two scenarios will be the detection or non-detection of radio emission on the timescale of hundreds of days. In addition, measuring the distance scale (redshift) of the candidate host galaxy, which may require space-based observations (e.g., _Hubble Space Telescope_ or _James Webb Space Telescope_), is critical to the interpretation of EP240408a. Future follow-up of _Einstein Probe_ transients on rapid timescales may reveal more events falling into this rare, and potentially new, class of transient and aid in determining its true nature.
+
+## Acknowledgments
+
+The authors thank the EP team, in particular Nanda Rea, Weimin Yuan, Wenda Zhang, and Chichuan Jin, for useful discussions. The authors acknowledge Jimmy DeLaunay regarding _Swift_/BAT and _Fermi_/GBM, Gau-rav Waratkar regarding _AstroSat_/CZTI, and Dmitry Svinkin regarding _Konus-Wind_. B. O. acknowledges useful discussions with Phil Evans regarding the XRT data, Kathleen Labrie regarding the Gemini data, and Gourav Khullar and Anna O'Grady regarding the interpretation of the optical spectra. J. H. thanks George Younes for useful discussions on the nature of the source.
+
+B. O. is supported by the McWilliams Postdoctoral Fellowship at Carnegie Mellon University. J. H. acknowledges support from NASA under award number 80GSFC21M0002. P. B. is supported by a grant (no. 2020747) from the United States-Israel Binational Science Foundation (BSF), Jerusalem, Israel, by a grant (no. 1649/23) from the Israel Science Foundation and by a grant (no. 80NSSC 24K0770) from the NASA astrophysics theory program. M.N. is a Fonds de Recherche du Quebec - Nature et Technologies (FRQNT) postdoctoral fellow. S. S. is partially supported by LBNL Subcontract 7707915. G. B. acknowledges funding from the European Union's Horizon 2020 programme under the AHEAD2020 project (grant agreement no. 871158). Research at Perimeter Institute is supported in part by the Government of Canada through the Department of Innovation, Science and Economic Development and by the Province of Ontario through the Ministry of Colleges and Universities.
+
+The National Radio Astronomy Observatory is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc. Based on observations obtained at the international Gemini Observatory, a program of NSF's OIR Lab, which is managed by the Association of Universities for Research in Astronomy (AURA) under a cooperative agreement with the National Science Foundation on behalf of the Gemini Observatory partnership: the National Science Foundation (United States), National Research Council (Canada), Agencia Nacional de Investigacion y Desarrollo (Chile), Ministerio de Ciencia, Tecnologia e Innovacion (Argentina), Ministerio da Ciencia, Tecnologia, Inovacoes e Comunicacoes (Brazil), and Korea Astronomy and Space Science Institute (Republic of Korea). This work is based on observations obtained with the Southern African Large Telescope.
+
+This research has made use of the NuSTAR Data Analysis Software (NuSTARDAS) jointly developed by the ASI Space Science Data Center (SSDC, Italy) and the California Institute of Technology (Caltech, USA). This work made use of data supplied by the UK _Swift_ Science Data Centre at the University of Leicester. This research has made use of the XRT Data Analysis Software (XRTDAS) developed under the responsibility of the ASI Science Data Center (ASDC), Italy. This research has made use of data and/or software provided by the High Energy Astrophysics Science Archive Research Center (HEASARC), which is a service of the Astrophysics Science Division at NASA/GSFC. Some of the data presented herein were obtained at the W. M. Keck Observatory, which is operated as a scientific partnership among the California Institute of Technology, the University of California and the National Aeronautics and Space Administration.
+
+The Observatory was made possible by the generous financial support of the W. M. Keck Foundation. The authors wish to recognize and acknowledge the very significant cultural role and reverence that the summit of Maunakea has always had within the indigenous Hawaiian community. The Australia Telescope Compact Array is part of the Australia Telescope National Facility which is funded by the Australian Government for operation as a National Facility managed by CSIRO. We acknowledge the Gomeroi people as the Traditional Owners of the Observatory site.
+
+_Facilities:__NuSTAR_, _NICER_, _Swift_, Gemini, Keck, DECam, VLA, ATCAHEASoft, XRTDAS, NuSTARDAS, NICERDAS, XSPEC (Arnaud, 1996), Dragons (Labrie et al., 2019, 2023), SFFT (Hu et al., 2022), IRAF (Tody, 1986), CASA (McMullin et al., 2007), miriad (Sault et al., 1995), pysynphot (STScI Development Team, 2013), Astropy (Astropy Collaboration et al., 2018)
+
+* Beniamini & Nakar (2019) Beniamini, P., & Nakar, E. 2019, MNRAS, 482, 5430, doi: 10.1093/mnras/sty3110
+
+* Beniamini et al. (2015) Beniamini, P., Nava, L., Duran, R. B., & Piran, T. 2015, MNRAS, 454, 1073, doi: 10.1093/mnras/stv2033
+
+* Beniamini et al. (2023) Beniamini, P., Piran, T., & Matsumoto, T. 2023, MNRAS, 524, 1386, doi: 10.1093/mnras/stad1950
+
+* Beniamini & van der Horst (2017) Beniamini, P., & van der Horst, A. J. 2017, MNRAS, 472, 3161, doi: 10.1093/mnras/stx2203
+
+* Berger (2010a) Berger, E. 2010a, ApJ, 722, 1946, doi: 10.1088/0004-637X/722/2/1946
+
+* Berger (2010b) --. 2010b, ApJ, 722, 1946, doi: 10.1088/0004-637X/722/2/1946
+
+* Berger (2010) --. 2014, ARA&A, 52, 43, doi: 10.1146/annurev-astro-081913-035926
+
+* Bertin & Arnouts (1996) Bertin, E., & Arnouts, S. 1996, A&AS, 117, 393, doi: 10.1051/aas:1996164
+
+* Bhalerao et al. (2017) Bhalerao, V., Bhattacharya, D., Vibhute, A., et al. 2017, Journal of Astrophysics and Astronomy, 38, 31, doi: 10.1007/s12036-017-9447-8
+
+* Bloom et al. (2002) Bloom, J. S., Kulkarni, S. R., & Djorgovski, S. G. 2002, AJ, 123, 1111, doi: 10.1086/338893
+
+* Bloom et al. (2011) Bloom, J. S., Giannios, D., Metzger, B. D., et al. 2011, Science, 333, 203, doi: 10.1126/science.1207150
+
+* Bright et al. (2024) Bright, J. S., Carotenuto, F., Fender, R., et al. 2024, arXiv e-prints, arXiv:2409.19055, doi: 10.48550/arXiv.2409.19055
+
+* Brown et al. (2015) Brown, G. C., Levan, A. J., Stanway, E. R., et al. 2015, MNRAS, 452, 4297, doi: 10.1093/mnras/stv1520
+
+* Burrows et al. (2005) Burrows, D. N., Hill, J. E., Nousek, J. A., et al. 2005, Space Sci. Rev., 120, 165, doi: 10.1007/s11214-005-5097-2
+
+* Burrows et al. (2011) Burrows, D. N., Kennea, J. A., Ghisellini, G., et al. 2011, Nature, 476, 421, doi: 10.1038/nature10374
+
+* Cano et al. (2017) Cano, Z., Wang, S.-Q., Dai, Z.-G., & Wu, X.-F. 2017, Advances in Astronomy, 2017, 8929054, doi: 10.1155/2017/8929054
+
+* Cash (1979) Cash, W. 1979, ApJ, 228, 939, doi: 10.1086/156922
+
+* Cendes et al. (2022) Cendes, Y., Berger, E., Alexander, K. D., et al. 2022, ApJ, 938, 28, doi: 10.3847/1538-4357/ac88d0
+
+* Cenko et al. (2024) --. 2024, ApJ, 971, 185, doi: 10.3847/1538-4357/ad5541
+
+* Cenko et al. (2012) Cenko, S. B., Krimm, H. A., Horesh, A., et al. 2012, ApJ, 753, 77, doi: 10.1088/0004-637X/753/1/77
+
+* Chabrier (2003) Chabrier, G. 2003, PASP, 115, 763, doi: 10.1086/376392
+
+* Chandra (2024) Chandra, A. D. 2024, The Astronomer's Telegram, 16585, 1*  Chandra, P., & Frail, D. A. 2012, ApJ, 746, 156, doi: 10.1088/0004-637X/746/2/156
+
+*  Chen, W., Xie, W., Lei, W.-H., et al. 2017, ApJ, 849, 119, doi: 10.3847/1538-4357/aa8f4a
+
+*  Chevalier, R. A., & Li, Z.-Y. 2000, ApJ, 536, 195, doi: 10.1086/308914
+
+*  Coppejans, D. L., Margutti, R., Terreran, G., et al. 2020, ApJ, 895, L23, doi: 10.3847/2041-8213/ab8cc7
+
+*  Coti Zelati, F., Rea, N., Turolla, R., et al. 2017, MNRAS, 471, 1819, doi: 10.1093/mnras/stx1700
+
+*  Cucchiara, A., Veres, P., Corsi, A., et al. 2015, ApJ, 812, 122, doi: 10.1088/0004-637X/812/2/122
+
+*  Cummings, J. R., Barthelmy, S. D., Beardmore, A. P., et al. 2011, GRB Coordinates Network, 11823, 1
+
+*  Dainotti, M. G., De Simone, B., Malik, R. F. M., et al. 2024, MNRAS, doi: 10.1093/mnras/stae1484
+
+*  Dalal, N., Griest, K., & Pruet, J. 2002, ApJ, 564, 209, doi: 10.1086/324142
+
+*  DeLaunay, J., & Tohuvavohu, A. 2022, ApJ, 941, 169, doi: 10.3847/1538-4357/ac9d38
+
+*  Della Valle, M., Chincarini, G., Panagia, N., et al. 2006, Nature, 444, 1050, doi: 10.1038/nature05374
+
+*  Dereli-Begue, H., Pe'er, A., Ryde, F., et al. 2022, Nature Communications, 13, 5611, doi: 10.1038/s41467-022-32881-1
+
+*  Dichiara, S., Tsang, D., Troja, E., et al. 2023, ApJL, 954, L29, doi: 10.3847/2041-8213/acf21d
+
+*  Donnarumma, I., Vittorini, V., Vercellone, S., et al. 2009, ApJL, 691, L13, doi: 10.1088/0004-637X/691/1/L13
+
+*  Drout, M. R., Chornock, R., Soderberg, A. M., et al. 2014, ApJ, 794, 23, doi: 10.1088/0004-637X/794/1/23
+
+*  Duffell, P. C., & MacFadyen, A. I. 2015, ApJ, 806, 205, doi: 10.1088/0004-637X/806/2/205
+
+*  Duncan, R. A., van der Horst, A. J., & Beniamini, P. 2023, MNRAS, 518, 1522, doi: 10.1093/mnras/stac3172
+
+*  Duncan, R. C., & Thompson, C. 1992, ApJL, 392, L9, doi: 10.1086/186413
+
+*  Eappachen, D., Jonker, P. G., Levan, A. J., et al. 2023, ApJ, 948, 91, doi: 10.3847/1538-4357/acc184
+
+*  Eftekhari, T., Berger, E., Zauderer, B. A., Margutti, R., & Alexander, K. D. 2018, ApJ, 854, 86, doi: 10.3847/1538-4357/aaa8e0
+
+*  Eftekhari, T., Tchekhovskoy, A., Alexander, K. D., et al. 2024, arXiv e-prints, arXiv:2404.10036, doi: 10.48550/arXiv.2404.10036
+
+*  Evans, P. A., Page, K. L., Bearmore, A. P., et al. 2022, arXiv e-prints, arXiv:2208.14478. [https://arxiv.org/abs/2208.14478](https://arxiv.org/abs/2208.14478)
+
+*  Evans, P. A., Beardmore, A. P., Page, K. L., et al. 2009, MNRAS, 397, 1177, doi: 10.1111/j.1365-2966.2009.14913.x
+
+*  Falanga, M., Kuiper, L., Poutanen, J., et al. 2005, A&A, 444, 15, doi: 10.1051/0004-6361:20053472
+
+*  Fong, W., Berger, E., Chornock, R., et al. 2013, ApJ, 769, 56, doi: 10.1088/0004-637X/769/1/56
+
+*  Fong, W.-f., Nugent, A. E., Dong, Y., et al. 2022, ApJ, 940, 56, doi: 10.3847/1538-4357/ac91d0
+
+*  Frail, D. A., Kulkarni, S. R., Sari, R., et al. 2001, ApJL, 562, L55, doi: 10.1086/338119
+
+*  Gal-Yam, A., Fox, D. B., Price, P. A., et al. 2006, Nature, 444, 1053, doi: 10.1038/nature05373
+
+*  Galama, T. J., Vreeswijk, P. M., van Paradijs, J., et al. 1998, Nature, 395, 670, doi: 10.1038/27150
+
+*  Gao, H.-X., Geng, J.-J., Wu, X.-F., et al. 2024, arXiv e-prints, arXiv:2410.21687. [https://arxiv.org/abs/2410.21687](https://arxiv.org/abs/2410.21687)
+
+*  Gaudin, T. M., Coe, M. J., Kennea, J. A., et al. 2024, arXiv e-prints, arXiv:2408.01388, doi: 10.48550/arXiv.2408.01388
+
+*  Gehrels, N., Chincarini, G., Giommi, P., et al. 2004, ApJ, 611, 1005, doi: 10.1086/422091
+
+*  Gendreau, K. C., Arzoumanian, Z., Adkins, P. W., et al. 2016, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 9905, Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray, ed. J.-W. A. den Herder, T. Takahashi, & M. Bautz, 99051H, doi: 10.1117/12.2231304
+
+*  Ghirlanda, G., & Salvaterra, R. 2022, ApJ, 932, 10, doi: 10.3847/1538-4357/ac6e43
+
+*  Ghirlanda, G., Ghisellini, G., Nava, L., et al. 2012, MNRAS, 422, 2553, doi: 10.1111/j.1365-2966.2012.20815.x
+
+*  Ghirlanda, G., Nappo, F., Ghisellini, G., et al. 2018, A&A, 609, A112, doi: 10.1051/0004-6361/201731598
+
+*  Ghisellini, G., Ghirlanda, G., Nava, L., & Celotti, A. 2010, MNRAS, 403, 926, doi: 10.1111/j.1365-2966.2009.16171.x
+
+*  Giacomazzo, B., & Perna, R. 2013, ApJL, 771, L26, doi: 10.1088/2041-8205/771/2/L26
+
+*  Gilfanov, M., Revnivtsev, M., Sunyaev, R., & Churazov, E. 1998, A&A, 338, L83, doi: 10.48550/arXiv.astro-ph/9805152
+
+*  Gill, R., Granot, J., & Kumar, P. 2020, MNRAS, 491, 3343, doi: 10.1093/mnras/stz2976
+
+*  Gillanders, J. H., Troja, E., Fryer, C. L., et al. 2023, arXiv e-prints, arXiv:2308.00633, doi: 10.48550/arXiv.2308.00633
+
+*  Gillanders, J. H., Rhodes, L., Srivastav, S., et al. 2024, ApJL, 969, L14, doi: 10.3847/2041-8213/ad55cd* Glennie et al. (2015) Glennie, A., Jonker, P. G., Fender, R. P., Nagayama, T., & Pretorius, M. L. 2015, MNRAS, 450, 3765, doi: 10.1093/mnras/stv801
+
+* Goad et al. (2007) Goad, M. R., Tyler, L. G., Beardmore, A. P., et al. 2007, A&A, 476, 1401, doi: 10.1051/0004-6361:20078436
+
+* Goldstein et al. (2017) Goldstein, A., Veres, P., Burns, E., et al. 2017, ApJ, 848, L14, doi: 10.3847/2041-8213/aa8f41
+
+* Gompertz et al. (2014) Gompertz, B. P., O'Brien, P. T., & Wynn, G. A. 2014, MNRAS, 438, 240, doi: 10.1093/mnras/stt2165
+
+* Gompertz et al. (2023) Gompertz, B. P., Ravasio, M. E., Nicholl, M., et al. 2023, Nature Astronomy, 7, 67, doi: 10.1038/s41550-022-01819-4
+
+* Granot et al. (2015) Granot, J., Piran, T., Bromberg, O., Racusin, J. L., & Daigne, F. 2015, SSRv, 191, 471, doi: 10.1007/s11214-015-0191-6
+
+* Granot & Sari (2002) Granot, J., & Sari, R. 2002, ApJ, 568, 820, doi: 10.1086/338966
+
+* Guillochon & Ramirez-Ruiz (2013) Guillochon, J., & Ramirez-Ruiz, E. 2013, ApJ, 767, 25, doi: 10.1088/0004-637X/767/1/25
+
+* Guver & Ozel (2009) Guver, T., & Ozel, F. 2009, MNRAS, 400, 2050, doi: 10.1111/j.1365-2966.2009.15598.x
+
+* Hamil et al. (2015) Hamil, O., Stone, J. R., Urbanec, M., & Urbancova, G. 2015, PhRvD, 91, 063007, doi: 10.1103/PhysRevD.91.063007
+
+* Hammerstein et al. (2021) Hammerstein, E., Gezari, S., van Velzen, S., et al. 2021, ApJ, 908, L20, doi: 10.3847/2041-8213/abdcb4
+
+* Hjorth & Bloom (2012) Hjorth, J., & Bloom, J. S. 2012, in Chapter 9 in "Gamma-Ray Bursts, ed. C. Kouveliotou, R. A. M. J. Wijers, & S. Woosley, 169-190, doi: 10.48550/arXiv.1104.2274
+
+* Ho et al. (2019) Ho, A. Y. Q., Phinney, E. S., Ravi, V., et al. 2019, ApJ, 871, 73, doi: 10.3847/1538-4357/aaf473
+
+* Ho et al. (2020a) Ho, A. Y. Q., Perley, D. A., Kulkarni, S. R., et al. 2020a, ApJ, 895, 49, doi: 10.3847/1538-4357/ab8bcf
+
+* Ho et al. (2020b) Ho, A. Y. Q., Perley, D. A., Beniamini, P., et al. 2020b, ApJ, 905, 98, doi: 10.3847/1538-4357/abc34d
+
+* Ho et al. (2023) Ho, A. Y. Q., Perley, D. A., Chen, P., et al. 2023, Nature, 623, 927, doi: 10.1038/s41586-023-06673-6
+
+* Horesh et al. (2021a) Horesh, A., Cenko, S. B., & Arcavi, I. 2021a, Nature Astronomy, 5, 491, doi: 10.1038/s41550-021-01300-8
+
+* Horesh et al. (2021b) Horesh, A., Sfaradi, I., Fender, R., et al. 2021b, ApJ, 920, L5, doi: 10.3847/2041-8213/ac25fe
+
+* Hu et al. (2024a) Hu, J. W., Zhao, D. H., Liu, Y., et al. 2024a, GRB Coordinates Network, 36053, 1
+
+* Hu et al. (2024b) --. 2024b, GRB Coordinates Network, 36057, 1
+
+* Hu et al. (2022) Hu, L., Wang, L., Chen, X., & Yang, J. 2022, ApJ, 936, 157, doi: 10.3847/1538-4357/ac7394
+
+* Huang et al. (2002) Huang, Y. F., Dai, Z. G., & Lu, T. 2002, MNRAS, 332, 735, doi: 10.1046/j.1365-8711.2002.05334.x
+
+* Huppenkothen et al. (2019) Huppenkothen, D., Bachetti, M., Stevens, A. L., et al. 2019, apj, 881, 39, doi: 10.3847/1538-4357/ab258d
+
+* Huppenkothen et al. (2019) Huppenkothen, D., Bachetti, M., Stevens, A., et al. 2019, Journal of Open Source Software, 4, 1393, doi: 10.21105/joss.01393
+
+* Jonker et al. (2010) Jonker, P. G., Miller-Jones, J., Homan, J., et al. 2010, MNRAS, 401, 1255, doi: 10.1111/j.1365-2966.2009.15717.x
+
+* Jonker et al. (2013) Jonker, P. G., Glennie, A., Heida, M., et al. 2013, ApJ, 779, 14, doi: 10.1088/0004-637X/779/1/14
+
+* Keller et al. (2007) Keller, S. C., Schmidt, B. P., Bessell, M. S., et al. 2007, PASA, 24, 1, doi: 10.1071/AS07001
+
+* Kochanek (2016) Kochanek, C. S. 2016, MNRAS, 461, 371, doi: 10.1093/mnras/stw1290
+
+* Konig et al. (2022) Konig, O., Saxton, R. D., Kretschmar, P., et al. 2022, Astronomy and Computing, 38, 100529, doi: 10.1016/j.ascom.2021.100529
+
+* Kouveliotou et al. (1993) Kouveliotou, C., Meegan, C. A., Fishman, G. J., et al. 1993, ApJ, 413, L101, doi: 10.1086/186969
+
+* Kraft et al. (1991) Kraft, R. P., Burrows, D. N., & Nousek, J. A. 1991, ApJ, 374, 344, doi: 10.1086/170124
+
+* Krimm et al. (2013) Krimm, H. A., Holland, S. T., Corbet, R. H. D., et al. 2013, ApJS, 209, 14, doi: 10.1088/0067-0049/209/1/14
+
+* Kumar & Panaitescu (2000) Kumar, P., & Panaitescu, A. 200, ApJ, 541, L51, doi: 10.1086/312905
+
+* Kurucz (1993) Kurucz, R. L. 1993, VizieR Online Data Catalog, VI/39
+
+* Labrie et al. (2019) Labrie, K., Anderson, K., Cardenes, R., Simpson, C., & Turner, J. E. H. 2019, in Astronomical Society of the Pacific Conference Series, Vol. 523, Astronomical Data Analysis Software and Systems XXVII, ed. P. J. Teuben, M. W. Pound, B. A. Thomas, & E. M. Warner, 321
+
+* Labrie et al. (2023) Labrie, K., Simpson, C., Cardenes, R., et al. 2023, Research Notes of the American Astronomical Society, 7, 214, doi: 10.3847/2515-5172/ad0044
+
+* Laskar et al. (2022) Laskar, T., Escorial, A. R., Schroeder, G., et al. 2022, ApJ, 935, L1, doi: 10.3847/2041-8213/ac8421
+
+* Lattimer & Prakash (2004) Lattimer, J. M., & Prakash, M. 2004, Science, 304, 536, doi: 10.1126/science.1090720
+
+* Levan et al. (2023) Levan, A., Gompertz, B. P., Salafia, O. S., et al. 2023, arXiv e-prints, arXiv:2307.02098, doi: 10.48550/arXiv.2307.02098
+
+* Levan et al. (2011) Levan, A. J., Tanvir, N. R., Cenko, S. B., et al. 2011, Science, 333, 199, doi: 10.1126/science.1207143
+
+* Levan et al. (2014) Levan, A. J., Tanvir, N. R., Starling, R. L. C., et al. 2014, ApJ, 781, 13, doi: 10.1088/0004-637X/781/1/13
+
+* Levan et al. (2016) Levan, A. J., Tanvir, N. R., Brown, G. C., et al. 2016, ApJ, 819, 51, doi: 10.3847/0004-637X/819/1/51
+
+* Levan et al. (2024) Levan, A. J., Jonker, P. G., Saccardi, A., et al. 2024, arXiv e-prints, arXiv:2404.16350, doi: 10.48550/arXiv.2404.16350Li, C., Peng, W., Liu, Y., et al. 2023, Experimental Astronomy, 56, 49, doi: 10.1007/s10686-023-09892-x
+
+* Liang et al. (2006) Liang, E. W., Zhang, B., O'Brien, P. T., et al. 2006, ApJ, 646, 351, doi: 10.1086/504684
+
+* Lien et al. (2016) Lien, A., Sakamoto, T., Barthelmy, S. D., et al. 2016, ApJ, 829, 7, doi: 10.3847/0004-637X/829/1/7
+
+* Liu et al. (2024) Liu, Y., Sun, H., Xu, D., et al. 2024, arXiv e-prints, arXiv:2404.16425, doi: 10.48550/arXiv.2404.16425
+
+* Lu et al. (2015) Lu, H.-J., Zhang, B., Lei, W.-H., Li, Y., & Lasky, P. D. 2015, ApJ, 805, 89, doi: 10.1088/0004-637X/805/2/89
+
+* Lyons et al. (2010) Lyons, N., O'Brien, P. T., Zhang, B., et al. 2010, MNRAS, 402, 705, doi: 10.1111/j.1365-2966.2009.15538.x
+
+* MacFadyen & Woosley (1999) MacFadyen, A. I., & Woosley, S. E. 1999, ApJ, 524, 262, doi: 10.1086/307790
+
+* Mangano et al. (2016) Mangano, V., Burrows, D. N., Sbarufatti, B., & Cannizzo, J. K. 2016, ApJ, 817, 103, doi: 10.3847/0004-637X/817/2/103
+
+* Margutti et al. (2019) Margutti, R., Metzger, B. D., Chornock, R., et al. 2019, ApJ, 872, 18, doi: 10.3847/1538-4357/aafa01
+
+* Margutti et al. (2024) Margutti, R., J, N. A., Chornock, R., et al. 2024, Transient Name Server AstroNote, 214, 1
+
+* Markwardt et al. (2002) Markwardt, C. B., Swank, J. H., Strohmayer, T. E., in 't Zand, J. J. M., & Marshall, F. E. 2002, ApJ, 575, L21, doi: 10.1086/342612
+
+* Matsumoto et al. (2019) Matsumoto, T., Nakar, E., & Piran, T. 2019, MNRAS, 483, 1247, doi: 10.1093/mnras/sty3200
+
+* Matsumoto & Piran (2023) Matsumoto, T., & Piran, T. 2023, MNRAS, 522, 4565, doi: 10.1093/mnras/stad1269
+
+* McManus & Olsen (2021) McManus, S., & Olsen, K. 2021, The NOIRLab Mirror, 2, 33
+
+* McMullin et al. (2007) McMullin, J. P., Waters, B., Schiebel, D., Young, W., & Golap, K. 2007, in Astronomical Society of the Pacific Conference Series, Vol. 376, Astronomical Data Analysis Software and Systems XVI, ed. R. A. Shaw, F. Hill, & D. J. Bell, 127
+
+* Meegan et al. (2009) Meegan, C., Lichti, G., Bhat, P. N., et al. 2009, ApJ, 702, 791, doi: 10.1088/0004-637X/702/1/791
+
+* Meszaros & Rees (1997) Meszaros, P., & Rees, M. J. 1997, ApJ, 476, 232, doi: 10.1086/303625
+
+* Metzger et al. (2011) Metzger, B. D., Giannios, D., Thompson, T. A., Bucciantini, N., & Quataert, E. 2011, MNRAS, 413, 2031, doi: 10.1111/j.1365-2966.2011.18280.x
+
+* Molinari et al. (2007) Molinari, E., Vergani, S. D., Malesani, D., et al. 2007, A&A, 469, L13, doi: 10.1051/0004-6361:20077388
+
+* Nakar & Piran (2011) Nakar, E., & Piran, T. 2011, Nature, 478, 82, doi: 10.1038/nature10365
+
+* Nakar et al. (2002) Nakar, E., Piran, T., & Granot, J. 2002, ApJ, 579, 699, doi: 10.1086/342791
+
+* Nappo et al. (2014) Nappo, F., Ghisellini, G., Ghirlanda, G., et al. 2014, MNRAS, 445, 1625, doi: 10.1093/mnras/stu1832
+
+* Nauenberg (1972) Nauenberg, M. 1972, ApJ, 175, 417, doi: 10.1086/151568
+
+* Nava et al. (2013) Nava, L., Sironi, L., Ghisellini, G., Celotti, A., & Ghirlanda, G. 2013, MNRAS, 433, 2107, doi: 10.1093/mnras/stt872
+
+* Nicholl et al. (2017) Nicholl, M., Berger, E., Kasen, D., et al. 2017, ApJ, 848, L18, doi: 10.3847/2041-8213/aa9029
+
+* Nugent et al. (2022) Nugent, A. E., Fong, W.-F., Dong, Y., et al. 2022, ApJ, 940, 57, doi: 10.3847/1538-4357/ac91d1
+
+* Nysewander et al. (2009) Nysewander, M., Fruchter, A. S., & Pe'er, A. 2009, ApJ, 701, 824, doi: 10.1088/0004-637X/701/1/824
+
+* O'Connor et al. (2024) O'Connor, B., Beniamini, P., & Gill, R. 2024, MNRAS, doi: 10.1093/mnras/stae1941
+
+* O'Connor et al. (2020) O'Connor, B., Beniamini, P., & Kouveliotou, C. 2020, MNRAS, 495, 4782, doi: 10.1093/mnras/staa1433
+
+* O'Connor et al. (2022) O'Connor, B., Troja, E., Dichiara, S., et al. 2022, MNRAS, 515, 4890, doi: 10.1093/mnras/stac1982
+
+* O'Connor et al. (2023) O'Connor, B., Troja, E., Ryan, G., et al. 2023, Science Advances, 9, eadil405, doi: 10.1126/sciadv.adil405
+
+* Oganesyan et al. (2020) Oganesyan, G., Ascenzi, S., Branchesi, M., et al. 2020, ApJ, 893, 88, doi: 10.3847/1538-4357/ab8221
+
+* Palmerio et al. (2019) Palmerio, J. T., Vergani, S. D., Salvaterra, R., et al. 2019, A&A, 623, A26, doi: 10.1051/0004-6361/201834179
+
+* Panaitescu & Kumar (2003) Panaitescu, A., & Kumar, P. 2003, ApJ, 592, 390, doi: 10.1086/375563
+
+* Parsotan & Lazzati (2024) Parsotan, T., & Lazzati, D. 2024, ApJ, 974, 158, doi: 10.3847/1538-4357/ad6dd8
+
+* Pasham et al. (2015) Pasham, D. R., Cenko, S. B., Levan, A. J., et al. 2015, ApJ, 805, 68, doi: 10.1088/0004-637X/805/1/68
+
+* Pasham et al. (2023) Pasham, D. R., Lucchini, M., Laskar, T., et al. 2023, Nature Astronomy, 7, 88, doi: 10.1038/s41550-022-01820-x
+
+* Perley et al. (2009) Perley, D. A., Metzger, B. D., Granot, J., et al. 2009, ApJ, 696, 1871, doi: 10.1088/0004-637X/696/2/1871
+
+* Perley et al. (2019) Perley, D. A., Mazzali, P. A., Yan, L., et al. 2019, MNRAS, 484, 1031, doi: 10.1093/mnras/sty3420
+
+* Perley et al. (2021) Perley, D. A., Ho, A. Y. Q., Yao, Y., et al. 2021, MNRAS, 508, 5138, doi: 10.1093/mnras/stab2785
+
+* Perley et al. (2024) Perley, D. A., Ho, A. Y. Q., Fausnaugh, M., et al. 2024, arXiv e-prints, arXiv:2401.16470, doi: 10.48550/arXiv.2401.16470
+
+* Perlman et al. (2022) Perlman, E. S., Meyer, E. T., Wang, Q. D., et al. 2022, ApJ, 925, 143, doi: 10.3847/1538-4357/ac3bba
+
+* Pineau et al. (2011) Pineau, F. X., Motch, C., Carrera, F., et al. 2011, A&A, 527, A126, doi: 10.1051/0004-6361/201015141
+
+* Piran & Beniamini (2023) Piran, T., & Beniamini, P. 2023, JCAP, 2023, 049, doi: 10.1088/1475-7516/2023/11/049
+
+* Planck Collaboration et al. (2020) Planck Collaboration, Aghanim, N., Akrami, Y., et al. 2020, A&A, 641, A6, doi: 10.1051/0004-6361/201833910
+
+* Potter et al. (2024) Potter, S. B., Buckley, D. A. H., Scaringi, S., et al. 2024, MNRAS, 532, L21, doi: 10.1093/mnras/slae038
+
+* Prentice et al. (2018) Prentice, S. J., Maguire, K., Smartt, S. J., et al. 2018, ApJ, 865, L3, doi: 10.3847/2041-8213/aadd90* Prochaska et al. (2020) Prochaska, J., Hennawi, J., Westfall, K., et al. 2020, The Journal of Open Source Software, 5, 2308, doi: 10.21105/joss.02308
+
+* Pursiainen et al. (2018) Pursiainen, M., Childress, M., Smith, M., et al. 2018, MNRAS, 481, 894, doi: 10.1093/mnras/sty2309
+
+* Quiroda-Vasquez et al. (2022) Quiroda-Vasquez, J., Bauer, F. E., Jonker, P. G., et al. 2022, A&A, 663, A168, doi: 10.1051/0004-6361/202243047
+
+* Quiroda-Vasquez et al. (2023) --. 2023, A&A, 675, A44, doi: 10.1051/0004-6361/202345912
+
+* Quiroda-Vasquez et al. (2024) --. 2024a, A&A, 683, A243, doi: 10.1051/0004-6361/202347629
+
+* Quiroda-Vasquez et al. (2024) --. 2024b, arXiv e-prints, arXiv:2410.10015, doi: 10.48550/arXiv.2410.10015
+
+* Ransom (2011) Ransom, S. 2011, PRESTO: PulsaR Exploration and Search TOolkit, Astrophysics Source Code Library, record ascl:1107.017
+
+* Ransom et al. (2002) Ransom, S. M., Eikenberry, S. S., & Middleditch, J. 2002, AJ, 124, 1788, doi: 10.1086/342285
+
+* Rastinejad et al. (2022) Rastinejad, J. C., Gompertz, B. P., Levan, A. J., et al. 2022, Nature, 612, 223, doi: 10.1038/s41586-022-05390-w
+
+* Rau (2024) Rau, A. 2024, GRB Coordinates Network, 36059, 1
+
+* Rea et al. (2024a) Rea, N., Galbany, L., Coti Zelati, F., et al. 2024a, The Astronomer's Telegram, 16589, 1
+
+* Rea et al. (2024b) Rea, N., Coti Zelati, F., Marino, A., et al. 2024b, The Astronomer's Telegram, 16584, 1
+
+* Rhoads (1999) Rhoads, J. E. 1999, ApJ, 525, 737, doi: 10.1086/307907
+
+* Rhodes et al. (2023) Rhodes, L., Bright, J. S., Fender, R., et al. 2023, MNRAS, 521, 389, doi: 10.1093/mnras/stad344
+
+* Ricci et al. (2024) Ricci, R., Troja, E., Yang, Y., et al. 2024, arXiv e-prints, arXiv:2407.18311, doi: 10.48550/arXiv.2407.18311
+
+* Ridnaia et al. (2020) Ridnaia, A., Svinkin, D., & Frederiks, D. 2020, in Journal of Physics Conference Series, Vol. 1697, Journal of Physics Conference Series (IOP), 012030, doi: 10.1088/1742-6596/1697/1/012030
+
+* Roming et al. (2005) Roming, P. W. A., Kennedy, T. E., Mason, K. O., et al. 2005, SSRv, 120, 95, doi: 10.1007/s11214-005-5095-4
+
+* Rowlinson et al. (2013) Rowlinson, A., O'Brien, P. T., Metzger, B. D., Tanvir, N. R., & Levan, A. J. 2013, MNRAS, 430, 1061, doi: 10.1093/mnras/sts683
+
+* Rowlinson et al. (2010) Rowlinson, A., O'Brien, P. T., Tanvir, N. R., et al. 2010, MNRAS, 409, 531, doi: 10.1111/j.1365-2966.2010.17354.x
+
+* Ryan et al. (2015) Ryan, G., van Eerten, H., MacFadyen, A., & Zhang, B.-B. 2015, ApJ, 799, 3, doi: 10.1088/0004-637X/799/1/3
+
+* Sakamoto et al. (2011a) Sakamoto, T., Barthelmy, S. D., Baumgartner, W. H., et al. 2011a, ApJS, 195, 2, doi: 10.1088/0067-0049/195/1/2
+
+* Sakamoto et al. (2011b) --. 2011b, GRB Coordinates Network, 11842, 1
+
+* Sanna et al. (2018) Sanna, A., Pintore, F., Riggio, A., et al. 2018, MNRAS, 481, 1658, doi: 10.1093/mnras/sty2316
+
+* Santana et al. (2014) Santana, R., Barniol Duran, R., & Kumar, P. 2014, ApJ, 785, 29, doi: 10.1088/0004-637X/785/1/29
+
+* Sari & Esin (2001) Sari, R., & Esin, A. A. 2001, ApJ, 548, 787, doi: 10.1086/319003
+
+* Sari & Piran (1999) Sari, R., & Piran, T. 1999, ApJ, 520, 641, doi: 10.1086/307508
+
+* Sari et al. (1999) Sari, R., Piran, T., & Halpern, J. P. 1999, ApJ, 519, L17, doi: 10.1086/312109
+
+* Sari et al. (1998) Sari, R., Piran, T., & Narayan, R. 1998, ApJ, 497, L17, doi: 10.1086/311269
+
+* Sarin et al. (2021) Sarin, N., Ashton, G., Lasky, P. D., et al. 2021, arXiv e-prints, arXiv:2105.10108, doi: 10.48550/arXiv.2105.10108
+
+* Sault et al. (1995) Sault, R. J., Teuben, P. J., & Wright, M. C. H. 1995, in Astronomical Society of the Pacific Conference Series, Vol. 77, Astronomical Data Analysis Software and Systems IV, ed. R. A. Shaw, H. E. Payne, & J. J. E. Hayes, 433. [https://arxiv.org/abs/astro-ph/0612759](https://arxiv.org/abs/astro-ph/0612759)
+
+* Savchenko et al. (2017) Savchenko, V., Ferrigno, C., Kuulkers, E., et al. 2017, ApJ, 848, L15, doi: 10.3847/2041-8213/aa8f94
+
+* Saxton et al. (2008) Saxton, R. D., Read, A. M., Esquej, P., et al. 2008, A&A, 480, 611, doi: 10.1051/0004-6361:20079193
+
+* Saxton et al. (2022) Saxton, R. D., Konig, O., Descalzo, M., et al. 2022, Astronomy and Computing, 38, 100531, doi: 10.1016/j.ascom.2021.100531
+
+* Scargle et al. (2013) Scargle, J. D., Norris, J. P., Jackson, B., & Chiang, J. 2013, ApJ, 764, 167, doi: 10.1088/0004-637X/764/2/167
+
+* Schlafly & Finkbeiner (2011) Schlafly, E. F., & Finkbeiner, D. P. 2011, ApJ, 737, 103, doi: 10.1088/0004-637X/737/2/103
+
+* Schneider et al. (2022) Schneider, B., Le Floc'h, E., Arabsalmani, M., Vergani, S. D., & Palmerio, J. T. 2022, A&A, 666, A14, doi: 10.1051/0004-6361/202243367
+
+* Sfaradi et al. (2022) Sfaradi, I., Horesh, A., Fender, R., et al. 2022, ApJ, 933, 176, doi: 10.3847/1538-4357/ac74bc
+
+* Sfaradi et al. (2024) Sfaradi, I., Beniamini, P., Horesh, A., et al. 2024, MNRAS, 527, 7672, doi: 10.1093/mnras/stad3717
+
+* Shen & Matzner (2012) Shen, R., & Matzner, C. D. 2012, ApJ, 744, 36, doi: 10.1088/0004-637X/744/1/36
+
+* Skrutskie et al. (2006) Skrutskie, M. F., Cutri, R. M., Stiening, R., et al. 2006, AJ, 131, 1163, doi: 10.1086/498708
+
+* Soderberg et al. (2006) Soderberg, A. M., Kulkarni, S. R., Nakar, E., et al. 2006, Nature, 442, 1014, doi: 10.1038/nature05087
+
+* Speagle (2020) Speagle, J. S. 2020, MNRAS, 493, 3132, doi: 10.1093/mnras/staa278
+
+* Srinivasaragavan et al. (2023) Srinivasaragavan, G. P., O'Connor, B., Cenko, S. B., et al. 2023, ApJ, 949, L39, doi: 10.3847/2041-8213/accf97
+
+* Srinivasaragavan et al. (2024) Srinivasaragavan, G. P., Swain, V., O'Connor, B., et al. 2024, ApJ, 960, L18, doi: 10.3847/2041-8213/ad16e7
+
+* Srivastava et al. (2024) Srivastava, S., Chen, T. W., Gillanders, J. H., et al. 2024, arXiv e-prints, arXiv:2409.19070, doi: 10.48550/arXiv.2409.19070* Stone et al. (2013) Stone, N., Sari, R., & Loeb, A. 2013, MNRAS, 435, 1809, doi: 10.1093/mnras/stt1270
+
+* Stone & Metzger (2016) Stone, N. C., & Metzger, B. D. 2016, MNRAS, 455, 859, doi: 10.1093/mnras/stv2281
+
+* STScI Development Team (2013) STScI Development Team. 2013, pysynphot: Synthetic photometry software package, Astrophysics Source Code Library, record ascl:1303.023
+
+* Sun et al. (2024) Sun, H., Li, W. X., Liu, L. D., et al. 2024, arXiv e-prints, arXiv:2410.02315. [https://arxiv.org/abs/2410.02315](https://arxiv.org/abs/2410.02315)
+
+* Tang et al. (2019) Tang, C.-H., Huang, Y.-F., Geng, J.-J., & Zhang, Z.-B. 2019, ApJS, 245, 1, doi: 10.3847/1538-4365/ab4711
+
+* Taylor et al. (2020) Taylor, E. N., Cluver, M. E., Duffy, A., et al. 2020, MNRAS, 499, 2896, doi: 10.1093/mnras/staa2648
+
+* Teboul & Metzger (2023) Teboul, O., & Metzger, B. D. 2023, ApJ, 957, L9, doi: 10.3847/2041-8213/ad0037
+
+* Tody (1986) Tody, D. 1986, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 627, Instrumentation in astronomy VI, ed. D. L. Crawford, 733, doi: 10.1117/12.968154
+
+* Troja et al. (2007) Troja, E., Cusumano, G., O'Brien, P. T., et al. 2007, ApJ, 665, 599, doi: 10.1086/519450
+
+* Troja et al. (2022) Troja, E., Fryer, C. L., O'Connor, B., et al. 2022, Nature, 612, 228, doi: 10.1038/s41586-022-05327-3
+
+* Tubin-Arenas et al. (2024) Tubin-Arenas, D., Krumpe, M., Lamer, G., et al. 2024, A&A, 682, A35, doi: 10.1051/0004-6361/202346773
+
+* Ulmer (1999) Ulmer, A. 1999, ApJ, 514, 180, doi: 10.1086/306909
+
+* Usov (1992) Usov, V. V. 1992, Nature, 357, 472, doi: 10.1038/357472a0
+
+* Uttley et al. (1999) Uttley, P., McHardy, I. M., Papadakis, I. E., Guainazzi, M., & Fruscione, A. 1999, MNRAS, 307, L6, doi: 10.1046/j.1365-8711.1999.02801.x
+
+* Uttley et al. (2005) Uttley, P., McHardy, I. M., & Vaughan, S. 2005, MNRAS, 359, 345, doi: 10.1111/j.1365-2966.2005.08886.x
+
+* van Dalen et al. (2024) van Dalen, J. N. D., Levan, A. J., Jonker, P. G., et al. 2024, arXiv e-prints, arXiv:2409.19056, doi: 10.48550/arXiv.2409.19056
+
+* van Eerten et al. (2010) van Eerten, H., Zhang, W., & MacFadyen, A. 2010, ApJ, 722, 235, doi: 10.1088/0004-637X/722/1/235
+
+* van Velzen et al. (2016) van Velzen, S., Anderson, G. E., Stone, N. C., et al. 2016, Science, 351, 62, doi: 10.1126/science.aad1182
+
+* Vaughan et al. (1994) Vaughan, B. A., van der Klis, M., Wood, K. S., et al. 1994, ApJ, 435, 362, doi: 10.1086/174818
+
+* Wang et al. (2024) Wang, C.-W., Xiong, S.-L., Liu, J.-C., et al. 2024, GRB Coordinates Network, 36058, 1
+
+* Wichern et al. (2024) Wichern, H. C. I., Ravasio, M. E., Jonker, P. G., et al. 2024, arXiv e-prints, arXiv:2407.06371. [https://arxiv.org/abs/2407.06371](https://arxiv.org/abs/2407.06371)
+
+* Wijers & Galama (1999) Wijers, R. A. M. J., & Galama, T. J. 1999, ApJ, 523, 177, doi: 10.1086/307705
+
+* Wijnands (2004) Wijnands, R. 2004, in American Institute of Physics Conference Series, Vol. 714, X-ray Timing 2003: Rossi and Beyond, ed. P. Kaaret, F. K. Lamb, & J. H. Swank (AIP), 209-216, doi: 10.1063/1.1781029
+
+* Willingale et al. (2013) Willingale, R., Starling, R. L. C., Beardmore, A. P., Tanvir, N. R., & O'Brien, P. T. 2013, MNRAS, 431, 394, doi: 10.1093/mnras/stt175
+
+* Wilson et al. (2004) Wilson, J. C., Henderson, C. P., Herter, T. L., et al. 2004, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 5492, Ground-based Instrumentation for Astronomy, ed. A. F. M. Moorwood & M. Iye, 1295-1305, doi: 10.1117/12.550925
+
+* Wolf et al. (2018) Wolf, C., Onken, C. A., Luvault, L. C., et al. 2018, PASA, 35, e010, doi: 10.1017/pasa.2018.5
+
+* Woosley (1993) Woosley, S. E. 1993, ApJ, 405, 273, doi: 10.1086/172359
+
+* Xu et al. (2023) Xu, F., Huang, Y.-F., Geng, J.-J., et al. 2023, A&A, 673, A20, doi: 10.1051/0004-6361/202245414
+
+* Xu et al. (2021) Xu, F., Tang, C.-H., Geng, J.-J., et al. 2021, ApJ, 920, 135, doi: 10.3847/1538-4357/ac158a
+
+* Xue et al. (2019) Xue, Y. Q., Zheng, X. C., Li, Y., et al. 2019, Nature, 568, 198, doi: 10.1038/s41586-019-1079-5
+
+* Yang et al. (2015) Yang, B., Jin, Z.-P., Li, X., et al. 2015, Nature Communications, 6, 7323, doi: 10.1038/ncomms8323
+
+* Yang et al. (2022) Yang, J., Ai, S., Zhang, B.-B., et al. 2022, Nature, 612, 232, doi: 10.1038/s41586-022-05403-8
+
+* Yang et al. (2024) Yang, Y.-H., Troja, E., O'Connor, B., et al. 2024, Nature, 626, 742, doi: 10.1038/s41586-023-06979-5
+
+* Yao et al. (2024) Yao, Y., Lu, W., Harrison, F., et al. 2024, ApJ, 965, 39, doi: 10.3847/1538-4357/ad2b6b
+
+* Yao et al. (2022) Yao, Y., Ho, A. Y. Q., Medvedev, P., et al. 2022, ApJ, 934, 104, doi: 10.3847/1538-4357/ac7a41
+
+* Ye et al. (2023) Ye, C. S., Fragione, G., & Perna, R. 2023, ApJ, 953, 141, doi: 10.3847/1538-4357/ace1eb
+
+* Yi et al. (2014) Yi, S. X., Dai, Z. G., Wu, X. F., & Wang, F. Y. 2014, arXiv e-prints, arXiv:1401.1601, doi: 10.48550/arXiv.1401.1601
+
+* Yin et al. (2024) Yin, Y.-H. I., Zhang, B.-B., Yang, J., et al. 2024, arXiv e-prints, arXiv:2407.10156, doi: 10.48550/arXiv.2407.10156
+
+* Yuan et al. (2022) Yuan, W., Zhang, C., Chen, Y., & Ling, Z. 2022, in Handbook of X-ray and Gamma-ray Astrophysics, 86, doi: 10.1007/978-981-16-4544-0_151-1
+
+* Yuan et al. (2015) Yuan, W., Zhang, C., Feng, H., et al. 2015, arXiv e-prints, arXiv:1506.07735, doi: 10.48550/arXiv.1506.07735
+
+* Zauderer et al. (2013) Zauderer, B. A., Berger, E., Margutti, R., et al. 2013, ApJ, 767, 152, doi: 10.1088/0004-637X/767/2/152
+
+* Zauderer et al. (2011) Zauderer, B. A., Berger, E., Soderberg, A. M., et al. 2011, Nature, 476, 425, doi: 10.1038/nature10366
+
+* Zhang et al. (2006) Zhang, B., Fan, Y. Z., Dyks, J., et al. 2006, ApJ, 642, 354, doi: 10.1086/500723* (2001) Zhang, B., & Meszaros, P. 2001, ApJL, 552, L35, doi: 10.1086/320255
+
+* (2015) Zhang, B.-B., van Eerten, H., Burrows, D. N., et al. 2015, ApJ, 806, 15, doi: 10.1088/0004-637X/806/1/15
+
+* (2014) Zhang, C., Ling, Z. X., Liu, Y., et al. 2024, The Astronomer's Telegram, 16463, 1
+
+* (2009) Zou, Y.-C., Fan, Y.-Z., & Piran, T. 2009, MNRAS, 396, 1163, doi: 10.1111/j.1365-2966.2009.14779.x
+
+[MISSING_PAGE_EMPTY:9256]
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c c c c c} \\hline \\hline
+
+**Start Date (UT)** & \\delta T **(d)** & **Telescope** & **Instrument** & **Exposure** & **Filter** & **Transient** & **Candidate Host** & A_{\\lambda} \\\\
+
+**(UT)** & **(d)** & & & **(s)** & & **(mag)** & **(mag)** & **(mag)** \\\\ \\hline \\multicolumn{10}{c}{**Gemini**} \\\\ \\hline
+
+2024-04-25 03:34:24 & 16.40 & Gemini & GMOS-S & 720 & r & >25.1{}^{a} & – & 0.21 \\\\
+
+2024-04-25 03:57:56 & 16.42 & Gemini & GMOS-S & 720 & i & >25.0{}^{a} & – & 0.16 \\\\
+
+2024-04-25 04:31:40 & 16.44 & Gemini & F2 & 900 & J & >23.1{}^{a} & – & 0.07 \\\\
+
+2024-05-02 23:05:38 & 24.21 & Gemini & GMOS-S & 720 & r & >25.5{}^{a} & – & 0.21 \\\\
+
+2024-05-02 23:25:34 & 24.23 & Gemini & GMOS-S & 720 & i & >25.6{}^{a} & – & 0.16 \\\\
+
+2024-05-03 23:02:58 & 25.21 & Gemini & F2 & 900 & J & >23.2 & >23.2 & 0.07 \\\\
+
+2024-06-30 00:29:04 & 82.27 & Gemini & GMOS-S & 960 & r & >26.0{}^{b} & 24.2\\pm 0.1 & 0.21 \\\\
+
+2024-06-30 00:59:36 & 82.29 & Gemini & GMOS-S & 1000 & i & >26.1{}^{b} & 23.9\\pm 0.1 & 0.16 \\\\ \\hline \\multicolumn{10}{c}{**UVOT**} \\\\ \\hline
+
+2024-04-10 03:08:42 & 1.38 & _Swift_ & UVOT & 157 & v & >19.23 & >19.23 & 0.25 \\\\
+
+2024-04-10 03:01:52 & 1.38 & _Swift_ & UVOT & 157 & b & >20.16 & >20.16 & 0.32 \\\\
+
+2024-04-10 03:00:28 & 1.38 & _Swift_ & UVOT & 157 & u & > 20.96 & >20.96 & 0.40 \\\\
+
+2024-04-10 02:57:44 & 1.38 & _Swift_ & UVOT & 314 & _uww1_ & >20.99 & >20.99 & 0.56 \\\\
+
+2024-04-10 03:10:07 & 1.38 & _Swift_ & UVOT & 331 & _wvm2_ & >21.54 & >21.54 & 0.71 \\\\
+
+2024-04-10 03:03:18 & 1.38 & _Swift_ & UVOT & 629 & _uww2_ & >22.18 & >22.18 & 0.64 \\\\
+
+2024-04-20 03:26:05 & 11.4 & _Swift_ & UVOT & 108 & u & >20.73 & >20.73 & 0.40 \\\\
+
+2024-04-19 03:41:31 & 10.41 & _Swift_ & UVOT & 884 & _uwn1_ & >20.02 & >20.02 & 0.56 \\\\
+
+2024-04-21 03:00:57 & 12.38 & _Swift_ & UVOT & 2598 & _uvw2_ & >22.94 & >22.94 & 0.64 \\\\
+
+2024-04-24 03:50:57 & 15.41 & _Swift_ & UVOT & 994 & u & >22.11 & >22.11 & 0.40 \\\\
+
+2024-04-26 04:37:57 & 18.42 & _Swift_ & UVOT & 2181 & _uww1_ & >22.42 & >22.42 & 0.56 \\\\
+
+2024-04-27 04:08:18 & 18.42 & _Swift_ & UVOT & 228 & _wvm2_ & >21.23 & >21.23 & 0.71 \\\\ \\hline \\multicolumn{10}{c}{**Stacked UVOT**} \\\\ \\hline
+
+2024-04-10 02:54:18 & 1.4-12.4 & _Swift_ & UVOT & 3227 & _uvw2_ & >23.1 & >23.1 & 0.64 \\\\
+
+2024-04-10 02:54:18 & 1.4-18.4 & _Swift_ & UVOT & 559 & _wvm2_ & >21.9 & >21.9 & 0.71 \\\\
+
+2024-04-10 02:54:18 & 1.4-18.4 & _Swift_ & UVOT & 3379 & _uww1_ & >22.7 & >22.7 & 0.56 \\\\
+
+2024-04-10 02:54:18 & 1.4-15.4 & _Swift_ & UVOT & 1259 & u & >22.2 & >22.2 & 0.40 \\\\ \\hline \\hline \\end{tabular} Note. – {}^{a} Upper limits from SFFT image subtraction. {}^{b} Upper limits from a source free region within the XRT localization.
+
+\\end{table}
+
+Table 10: Log of radio observations used in this work. Upper limits are reported at the 3\\sigma level.
+
+## Appendix B Timing analysis/pulsations search on _Nicer_ data
+
+We conducted an X-ray pulsation search in the event that a neutron star is responsible for the transient event, such as a millisecond pulsar or a magnetar. In particular, we utilized the acceleration search, a Fourier domain technique that accounts for the "smearing" of a potential coherent signal due to the orbital Doppler modulation (Ransom et al., 2002). In Fourier space, the signal would be smeared across z\\!=\\!\\alpha hfT^{2}/c Fourier bins, where \\alpha is the pulsar acceleration, h is the harmonic number (h\\!=\\!1 is the fundamental), f is the potential pulse frequency, T is the length of the time segment being searched over, and c is the speed of light (Ransom et al., 2002). Acceleration searches are optimal when the pulsar acceleration is roughly constant within time segments such that T\\leq P_{\\rm orb}/10, where P_{\\rm orb}/10 is the orbital period of the binary system. We note that for isolated pulsars (e.g., a magnetar), z=0. We employed the accelsearch routine as implemented within version 4.0 of PREST013 for the acceleration search (Ransom et al., 2002; Ransom, 2011), searching over 0.5-1000 Hz and between 0.5-2.0 keV and 2.0-10.0 keV. We also searched up to a maximum of 100 bins in Fourier frequency space that the Doppler modulated signal would drift across. We did not find any significant periodicity candidates from the acceleration search.
+
+Footnote 13: [https://github.com/scottransom/presto](https://github.com/scottransom/presto)
+
+We also constructed an averaged power spectrum using the AveragedPowerspectrum class in Stingray (Huppenkothen et al., 2019; Huppenkothen et al., 2019; Bachetti et al., 2024), where we used 256 s bins and a bin size of \\Delta t=2^{-12} s. We did not find any significant coherent periodicity in the averaged spectrum, and we determined a 3\\sigma upper limit on the sinusoidal pulsation amplitude of 24.5-27.0% over 1-1000 Hz (Vaughan et al., 1994).
+
+## Appendix C Notes on candidate optical counterparts
+
+The bright source reported by Rau (2024) appears point-like in our images (Figure 1), indistinguishable from the numerous field stars in our deep Gemini images. While this source lies in the initial XRT position, it is no longer consistent with the updated enhanced position (Figure 1). In any case, the broad absorption features observed in our Gemini spectrum (Figure 1; left panel) between 6,000\\!-\\!7,000 A  are indicative of a stellar spectrum. Rea et al. (2024) carried out follow-up spectroscopy with SALT and reported a potential emission line from this source. However, a reanalysis of the spectrum shows that this is unrelated to this source.
+
+We compared the ultraviolet, optical, and near-infrared spectral energy distribution (SED) to stellar models (Kurucz, 1993) using pysynphot (STScI Development Team, 2013). We find an appropriate match to the SED for a late spectral type dwarf of type between M2V and M4V located at a distance of \\sim2 kpc. We consider an M dwarf with temperature 3500 K and metallicity \\log(Z/Z_{\\odot})\\!=\\!-2 (solid line), with temperature 3600 K with \\log(Z/Z_{\\odot})\\!=\\!-0.5 (dashed line), and with temperature 3800 K with \\log(Z/Z_{\\odot})\\!=\\!0.5 (dotted line). This SED comparison is shown in Figure 1 (right panel). This conclusively confirms the source is unrelated to EP240408a.
+
+Figure A1: **Left:** Gemini GMOS-S optical spectrum of the bright source (Rau, 2024) lying within the initial (standard) XRT localization. The error spectrum is also shown. The spectrum is smoothed with a Savitzky-Golay filter of 3 pixels for display purposes. Vertical gray shaded regions mark atmospheric telluric absorption regions. The sharp peaks in the observed spectrum above 8,600\\,\\mathrm{\\AA}  are due to sky emission lines and are not real features. **Right:** Spectral energy distribution of this source (Rau, 2024) compared to Kurucz stellar models (Kurucz, 1993). We find adequate matches to the observed photometry corresponding to late spectral type M dwarfs at \\sim 2 kpc. The models are extincted by E(B-V) = 0.076 mag (Schlafly and Finkbeiner, 2011).

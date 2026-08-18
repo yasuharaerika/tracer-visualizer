@@ -1,0 +1,89 @@
+###### Abstract
+
+Rotation-powered pulsars and magnetars are two different observational manifestations of neutron stars: rotation powered pulsars are rapidly spinning objects that are mostly observed as pulsating radio sources, while magnetars, neutron stars with the highest known magnetic fields, often emit short-duration X-ray bursts. Here we report simultaneous observations of the high-magnetic-field radio pulsar PSR J1119-6127 at X-ray, with _XMM-Newton_ & _NuSTAR_, and at radio energies with Parkes radio telescope, during a period of magnetar-like bursts. The rotationally powered radio emission shuts off coincident with the occurrence of multiple X-ray bursts, and recovers on a time scale of \\sim 70 seconds. These observations of related radio and X-ray phenomena further solidify the connection between radio pulsars and magnetars, and suggest that the pair plasma produced in bursts can disrupt the acceleration mechanism of radio emitting particles. pulsars:general; pulsars: individual: PSR J1119-6127; stars: magnetars 0000-0001-8276]R. F. Archibald
+
+0000-0002-8871-8677]R. F. Archibald
+
+## 1 Introduction
+
+PSR J1119-6127 is one of the youngest known pulsars (characteristic age of \\sim 1600 yr) and has a magnetic field of B = 4\\times 10{}^{13} G, one of the highest known among radio pulsars (Camilo et al., 2000), where B=3.2\\times 10^{19}\\sqrt{P\\dot{P}} G is the inferred equatorial dipolar field strength, given the pulsar's rotation period P=0.4 s and its spin-down rate \\dot{P}=4.0\\times 10^{-12}. While generally observed as a stable radio pulsar, in 2007 it exhibited an unusual spin-up glitch accompanied by a short-lived change in its radio pulse profile (Weltevrede et al., 2011). Prior to this event, only magnetars, and a lone rotation powered pulsar, had exhibited rotational glitches with any radiative signature (Dib et al., 2008; Gavriil et al., 2008).
+
+On 27 July 2016, PSR J1119-6127 exhibited a flux increase by a factor of >160 in the 0.5-10 keV band, emitted several short magnetar-like bursts, and had a rotational glitch (Archibald et al., 2016; Gogus et al., 2016). At this time PSR J1119-6127 also changed its radio emission characteristics, initially turning off as a radio pulsar, before returning and displaying a magnetar-like radio spectral flattening (Pearlman et al., 2016). As well, after the radio re-activation, the normal emission profile, well modeled as a single Gaussian peak (Camilo et al., 2000), changed to a two-peaked pulse profile (Majid et al., 2017), similar to that seen following the 2007 glitch, see Figure 1.
+
+Here, we present the results from simultaneous observations of magnetar-like bursts from PSR J1119-6127 with the Parkes 64-m radio telescope at an observing frequency of 1369 MHz, and in the X-ray band using _XMM-Newton_(Jansen et al., 2001), and _NuSTAR_(Harrison et al., 2013) taken on 30 August 2016 (MJD 57630), 33 days after the initial outburst activation.
+
+## 2 Observations & Analysis
+
+### Parkes Radio Telescope
+
+PSR J1119-6127 was observed on 2016 August 30 at the Parkes 64-m radio telescope, both as a part of the NAPA1 propopal P626 (P.I. Burgay) and as part of the regular timing program P574 (P.I. Kerr). The observations were carried out with the H-OH receiver over a bandwidth of 256 MHz centered at a frequency of 1369 MHz and split in 1024 frequency channels. Data were collected with the ATNF DFB4 digital backend in search mode, 4-bit-sampling the signal every 256 \\mus. Pulse phases were assigned to each data-sample using a local pulsar ephemeris.
+
+Footnote 1: Non-A-Priori-Assignable, see [http://www.atnf.csiro.au/observers/apply/too_apply.html#Non%20A-priori%Assignable](http://www.atnf.csiro.au/observers/apply/too_apply.html#Non%20A-priori%Assignable).
+
+The radio data reduction was performed with PRESTO2(Ransom et al., 2002). Data were first cleaned of the most prominent radio frequency interference using rfifind, corrected for the observed dispersion measure of 706.5(3) pc cm{}^{-3}, and corrected to the Solar System barycenter using prepdata.
+
+Footnote 2: [http://www.cv.nrao.edu/](http://www.cv.nrao.edu/)\\simsransom/presto/.
+
+The radio fluence, the integrated flux under the pulse profile, was measured by fitting the pulse profile as the sum of two Gaussian components using a least-squares minimization.
+
+### _XMM-Newton & NuSTAR_
+
+The _XMM-Newton_ observation analyzed here (ObsID 0741732801) was performed with both the EPIC/pn and EPIC/MOS cameras in Small Window mode. These modes provide 5.7-ms and 0.3-s time resolution, respectively. _XMM_ Science Analysis System (SAS) version 16.0 and HEASOFT v6.19 were used to reduce the data. The raw Observation Data Files (ODF) were first downloaded for each observation and were then pre-processed using the SAS tools emproc and epproc. The events were filtered so thatsingle-quadruple events with energies between 0.1-12 keV (pn) and 0.2-15 keV (MOS) were retained, and standard "FLAG" filtering was applied. The light curves were then inspected for soft proton flares, however, there were none detected in the overlapping time. In this work, since we were searching for X-ray bursts, we used only the high-time-resolution pn data. We extracted source events from an 18" radius region centered on PSR J1119-6127.
+
+The _NuSTAR_ observation (ObsID 80102048008) was reduced using the nupipeline scripts, using HEASOFT v6.20. Source events were extracted within a 30 pixel (72") radius around the centroid. Appropriate background regions were selected from the same detector as the source location. Spectra were extracted using the nuproducts script. Using grppha channels 0-35 (< 3 keV) and 1935-4095 (> 79 keV) were ignored, and all good channels were binned to have a minimum of one count per energy bin.
+
+All X-ray data were then corrected so that their arrival times were referenced to the Solar System barycenter using the _Chandra_ location of PSR J1119-6127 (Gonzalez & Safi-Harb, 2003).
+
+## 3 Magnetar-like X-ray bursts characteristics
+
+At the epoch of the X-ray observations reported here, the persistent 0.5-10 keV absorbed X-ray flux was 6.22(6)\\times 10^{-12} erg s{}^{-1} cm{}^{-2}, still a factor of \\sim 50 higher than its quiescent flux, but a factor of \\sim 6 lower than that measured at the outburst peak (Archibald et al., 2016). The X-ray flux was modulated at the spin-period with a root-mean-squared pulse fraction in this band of 52(2)%.
+
+During these observations, we detected three magnetar-like X-ray bursts in both the _XMM_ and _NuSTAR_ data, see Figure 2, panel a. Each burst has a total energies of \\sim 10^{37} erg in the 0.5-70 keV band and is well-modeled by a blackbody spectrum. In Table 1 we quantify the burst properties: the time of the burst peak, the spectral properties, and T_{90} using the method described in Gavriil et al. (2004).
+
+To fit the burst spectra, events occurring within the T_{90} of each burst were extracted. Using xspec v12.9.1, the spectra were fit to an absorbed blackbody using Cash statistics (Cash, 1979) for fitting and parameter estimation of the unbinned data. N_{H} was held fixed to 1.2\\times 10^{22} cm{}^{2}(Archibald et al., 2016) using wilm abundances and vern photoelectric cross-sections. The spectra of the three bursts, as well as the residuals to that fit are displayed in Figure 3.
+
+While these bursts would be unremarkable from a typical magnetar (Collazzi et al., 2015; An et al., 2015), interestingly in this case the bursts last longer than the rotation period of the pulsar.
+
+Coincident to within 5 pulse periods (\\sim 2 s) with the first of these bursts, the pulsed radio fluence at 1369 MHz dropped from a mean of 2.04(5) Jy ms to undetected, with a 99% confidence upper limit of 0.5 Jy ms for the interval between the first and second bursts (Figure 2). The pulsed radio fluence also drops to be consistent with zero at the times of the second and third burst. The disappearance of the radio emission coincident with the X-ray bursts is clear in the gray-scale (panel b). Although the radio pulse fluences vary significantly, we verified that the coincidence of the radio disappearance with the X-ray bursts is not due to chance as follows. We divided the radio fluence time series into 10-s intervals and compared the single-pulse fluence distribution in that 10-s interval to that of the remainder of the observation. This was done by means of a two-sample Kolmogorov-Smirnov (KS) test. For the times surrounding the bursts, the null hypothesis that the two samples were drawn from the same underlying distribution can be rejected with a probabilities ranging from P=10^{-4}-3\\times 10^{-7}compared to a minimum probability of P=1\\times 10^{-2} outside the burst region, see Figure 4. Thus we can say with high confidence that the radio fluences surrounding the X-ray bursts significantly drops at the time of the X-ray bursts.
+
+The second radio peak became undetectable for the 95(5) s following the first burst (Figure 2). The radio fluence of the first peak behaved more sporadically. It too became undetectable at the time of the first X-ray burst, but increased to become detectable between bursts two and three, reaching a a peak fluence of 0.8(3) Jy ms before again becoming undetectable at the onset of the third burst.
+
+Based on the apparently similar time scale of recovery after the second and third burst, we co-fit the radio recovery following each burst with a single time scale. The total radio fluence following each burst can be modeled as an exponential recovery, with a time scale of 70(10) s.
+
+Since the probability for chance coincidence of the radio shut-off with the X-ray bursts is negligibly small, we next consider possible physical mechanisms for this suppression that could arise in the magnetosphere of the neutron star.
+
+## 4 Discussion
+
+The structures of pulsar and magnetar magnetospheres are complicated. In radio pulsars the magnetosphere is separated into open and closed magnetic field zones, depending on whether a given field line returns to the star or extends to infinity. In standard pulsar models, the magnetosphere near the stellar surface is populated with plasma having the Goldreich-Julian density (Goldreich & Julian, 1969)
+
+\\rho_{GJ}=-\\frac{1}{2\\pi ce}\\mathbf{\\Omega}\\cdot\\mathbf{B}\\simeq 7\\times 10^{ 12}\\mathrm{pairs\\,per\\,cm^{3}}  where \\mathbf{\\Omega} is the angular velocity of the pulsar, c is the speed of light, e is the charge of the electron, and \\mathbf{B} is the surface magnetic field. In the special regions on the open field lines, called the "gaps", where the local density is below the Goldreich-Julian density, electric fields parallel to the magnetic field accelerate particles to ultra-relativistic energies that initiate an electron-positron pair cascade. The development of plasma instabilities is thought to lead to the production of coherent radio emission (Melrose, 1995). It is important that the gaps have relatively small plasma density - otherwise the accelerating electric field is suppressed by the charge separation.
+
+In the case of magnetars, the dissipation of magnetic energy in the magnetosphere creates a trapped pair-plasma fireball (Thompson & Duncan, 1995). For a distance of 8.4 kpc, a flux of \\sim 10^{-9} erg s{}^{-1} cm{}^{2} and the blackbody temperature of 2 keV, the effective radius of the trapped pair fireball is R_{fb}\\approx 1 km. Since the total radiated energy is E_{rad}\\sim 10^{37} erg, the
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline Burst time & T{}_{90}^{\\dagger} & kT & 0.5–70 keV & Total Energy in T{}_{90}^{*} & C-stat/dof{}^{\\ddagger} \\\\ MJD & ms & keV & 10^{36} erg & & \\\\
+
+57630.1914063 & 4100(300) & 2.5^{+0.6}_{-0.4} & 10.^{+3}_{-2} & 120.1/76 \\\\
+
+57630.1916137 & 1600(150) & 2.6^{+0.8}_{-0.6} & 7.^{+3}_{-2} & 66.2/51 \\\\
+
+57630.1919302 & 1900(300) & 3.0^{+0.7}_{-0.5} & 14.^{+4}_{-3} & 72.9/87 \\\\ \\hline \\hline \\end{tabular} {}^{\\dagger} The duration in which the burst emitted 90% of its fluence.
+
+{}^{*} Assuming isotropic emission at a distance of 8.4 kpc (Caswell et al., 2004).
+
+{}^{\\ddagger} Cash-statistic (Cash, 1979) compared to the number of degrees of freedom for the spectral fit.
+
+\\end{table}
+
+Table 1: X-ray Burst Properties.
+
+[MISSING_PAGE_EMPTY:6292] be trapped at radii somewhat larger than the stellar radius, \\leq 6R_{NS}.
+
+The core of a pair-plasma fireball has a typical temperature of k_{B}T\\sim m_{e}c^{2}, where m_{e} is the mass of an electron (Thompson & Duncan, 1995). If more energy is added to the pair fireball it is used mostly to create electron-positron pairs, not to increased thermal motion. Given the total radiated/dissipated energy E_{rad} and the estimates of the size of the fireball R_{fb}, the typical pair density is n_{\\pm}\\sim E_{rad}/(m_{e}c^{2})(4\\pi/3)R_{fb}^{3}=3\\times 10^{27} particles per cubic centimeter. This exceeds the Goldreich-Julian density by 15 orders of magnitude. Thus, if even a small fraction of the created pairs "leak" from the trapped fireball into the gap region of acceleration of radio-emitting particles, the acceleration will be suppressed and the radio emission switched off. We believe that the evaporation of this fireball sets the shut-off timescale for the radio emission. We note that this should also cause a temporary cessation of gamma-ray and magnetospheric X-ray pulsations. This, however, is not detectable with current telescopes as the X-ray emission in PSR J1119-6127 is mainly thermal, and a gamma-ray detection takes weeks of integration (Archibald et al., 2016).
+
+Alternative explanations for the observed anti-correlation between the magnetar-like bursts and radio emission could be related to the radical changes or even the total disappearance of radio emission routinely seen in mode-changing and nulling radio pulsars. Indeed, simultaneous X-ray state changes (Hermsen et al., 2013; Mereghetti et al., 2016) have been observed in some nullers. Nulling and mode-changes are likely to be non-linear magnetospheric phenomena whereby the overall structure switches between different states, with different global current structures and emis sion properties. These global changes can be driven either by variations in the position of the edge of the magnetosphere (Timokhin, 2010) or due to "twisting" of the NSs magnetic field lines by crustal motions (Parfrey et al., 2012; Huang et al., 2016). However, the time scale predicted for the changes in the twist is on the order of days - not the \\sim100 s we observe in PSR J1119-6127. In either case, a global change in the magnetosphere is expected to be accompanied by correlated changes in \\dot{P} and profile, as seen in some nullers and mode changing pulsars (Kramer et al., 2006; Lyne et al., 2010). We are insensitive to a change in the spin-down rate of PSR J1119-6127 over the short time span of the nulls.
+
+This simultaneous radio and X-ray observation of magnetar-like bursts may also have relevance to fast radio bursts (FRBs). FRBs are bright, few-ms duration radio bursts from a yet unknown extragalactic origin (Lorimer et al., 2007; Thornton et al., 2013). With the discovery of a repeating FRB (Spitler et al., 2016), and a confirmation of its extragalactic origin (Chatterjee et al., 2017; Tendulkar et al., 2017), a magnetar origin for FRBs has become a favored model (Lyutikov, 2017; Nicholl et al., 2017). The non-detection of a bright radio counterpart to the bursts observed from PSR J1119-6127, especially when taken with the radio non-detection of the SGR 1806-20 giant flare (Tendulkar et al., 2016), impose a constraint on a magnetar origin for FRBs. We do however caution, in the case of PSR J1119-6127, we observed a shut off of the rotationally powered radio emission, and radio emission from FRBs may be magnetically powered (Lyutikov, 2017).
+
+We thank an anonymous referee for a thorough reading which improved the quality of the manuscript. This work made use of data from the _NuSTAR_ mission, a project led by the California Institute of Technology, managed by the Jet Propulsion Laboratory, and funded by the National Aeronautics and Space Administration. This work made use of observations obtained with XMM-Newton, an ESA science mission with instruments and contributions directly funded by ESA Member States and NASA. Parkes radio telescope is part of the Australia Telescope National Facility which is funded by the Commonwealth of Australia for operation as a National Facility managed by CSIRO. R.F.A. acknowledges support from an NSERC Alexander Graham Bell Canada Graduate Scholarship. M.L. is supported by NSF grant AST-1306672 and DoE grant DE-SC0016369. V.M.K. receives support from an NSERC Discovery Grant and Accelerator Supplement, Centre de Recherche en Astrophysique du Quebec, an R. Howard Webster Foundation Fellowship from the Canadian Institute for Advanced Study, the Canada Research Chairs Program, and the Lorne Trottier Chair in Astrophysics and Cosmology. P.E. and N.R. acknowledge funding in the framework of the NWO Vidi award A.2320.0076. P.S. holds a Covington Fellowship at DRAO. Work at NRL is supported by NASA. _Facilities:NuSTAR,XMM-Newton_, Parkes Radio Telescope

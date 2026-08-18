@@ -1,0 +1,169 @@
+###### Abstract
+
+Some, if not all, binary neutron star (BNS) coalescences, and a fraction of neutron - star black hole (NSBH) mergers, are thought to produce sufficient mass-ejection to power Gamma-Ray Bursts (GRBs). However, this fraction, as well as the distribution of beaming angles of BNS-associated GRBs, are poorly constrained from observation. Recent work applied machine learning tools to analyze GRB light curves observed by _Fermi_/GBM and _Swift_/BAT. GRBs were segregated into multiple distinct clusters, with the tantalizing possibility that one of them (BNS cluster) could be associated with BNSs and another (NSBH cluster) with NSBHs. As a proof of principle, assuming that all GRBs detected by _Fermi_/GBM and _Swift_/BAT associated with BNSs (NSBHs) lie in the BNS (NSBH) cluster, we estimate their rates (Gpc{}^{-3}yr{}^{-1}). We compare these rates with corresponding BNS and NSBH rates estimated by the LIGO-Virgo-Kagra (LVK) collaboration from the first three observing runs (O1, O2, O3). We find that the BNS rates are consistent with LVK's rate estimates, assuming a uniform distribution of beaming fractions (f_{b}\\in[0.01,0.1]). Conversely, using the LVK's BNS rate estimates, assuming all BNS mergers produce GRBs, we are able to constrain the beaming angle distribution to \\theta_{j}\\in[0.8^{\\circ},33.5^{\\circ}] at 90% confidence. We similarly place limits on the fraction of GRB-Bright NSBHs as f_{B}\\in[1.3\\%,63\\%] (f_{B}\\in[0.4\\%,15\\%]) with _Fermi_/GBM (_Swift_/BAT) data.
+
+0000-0002-8828-7226]Shasvath J. Kapadia
+
+0000-0002-8828-7275]Dimple
+
+0000-0002-8862-8672]Dhruy Jain
+
+0000-0002-8862-8672]Kuntal Misra
+
+0000-0002-8862-8672]K. G. Arun
+
+## 1 Introduction
+
+The LIGO-Virgo-Kagra detector network (Aasi et al., 2015; Acernese et al., 2015; Akutsu et al., 2021) has observed \\sim 90 compact binary coalescences (CBCs) during its first three observing runs (O1, O2, O3) (Abbott et al., 2023a). Among these, only two were binary neutron star (BNS) mergers (Abbott et al., 2017, 2020), of which only one (GW170817) produced an observed kilonova and Gamma-Ray Burst (GRB) (Abbott et al., 2017). Two neutron star - black hole mergers (NSBHs) were also detected, but no corresponding EM counterparts were observed (Abbott et al., 2021).
+
+The prevalent expectation is that some, if not all, BNS mergers produce EM counterparts, including GRBs (Paczynski, 1986a; Narayan et al., 1991; Chatterjee et al., 2020). On the other hand, not all NSBH mergers are expected to produce such counterparts (see, e.g. Foucart, 2020, and references therein). A necessary (though not sufficient) condition for producing these counterparts is a non-zero remnant mass post-merger (Foucart, 2012). Intuitively, if the tidal forces on the NS from the BH are sufficiently large, then the NS can disrupt outside the innermost stable circular orbit (ISCO) of the BH, which in turn will leave a non-zero remnant mass.
+
+Such a requirement imposes a restriction on the mass-ratios q of the NSBH that could allow such an extra-ISCO NS disruption, although the exact q values ultimately depend on the equation of state of the NS, and the spin of the BH (Foucart et al., 2018). Nevertheless, lower mass ratios (with the mass ratio defined such that q\\in[1,\\infty)) are more likely to produce EM-counterparts (Foucart et al., 2013), including GRBs, though their occurrence is not guaranteed given the complexities associated with the physics of jet production (see, e.g. Salafia et al., 2020).
+
+Testing standard assumptions about GRB-Bright CBCs ideally requires multiple confident joint GW-GRB detections, of which there is a severe paucity (Abbott et al., 2022, 2021, 2019; Burns et al., 2019). However, a number of GRBs have been detected by the gamma-ray burst monitor (GBM) on board the _Fermi_ satellite, as well as the Burst Alert Telescope (BAT) of the _Swift_ satellite. GRBs are typically classified into long and short GRBs, based on the duration T_{90} for 90% of the energy in prompt emission to be released. The provenance of long GRBs (lGRBs, T_{90}>2s) has traditionally been attributed to collapsars (collapse of massive stars) (Woosley, 1993; Paczynski, 1998; Meszaros, 2006; Woosley & Bloom, 2006; Hjorth & Bloom, 2012), while short GRBs (sGRBs, T_{90}<2s) are thought to be produced by CBCs (Paczynski, 1986; Eichler et al., 1989; Meszaros & Rees, 1992). These assumptions have been supported by observations of broad-lined Type Ic supernovae (SNe) coincident with lGRBs (Galama et al., 1998; Kulkarni et al., 1998; Stanek et al., 2003; Cano et al., 2017), and r-process nucleosynthesis driven Kilonovae (KNe) associated with sGRBs (Berger et al., 2013; Tanvir et al., 2013; Kasliwal et al., 2017; Abbott et al., 2017; Valenti et al., 2017; Troja et al., 2019; Lamb et al., 2019).
+
+However, some GRB events were found to violate standard expectations. Examples include GRB 200826A, which was a sGRB with an SN counterpart (Ahumada et al., 2021; Zhang et al., 2021), GRBs 060614 and 060505 were lGRBs with no observed SNe associated with them 1(Fynbo et al., 2006), and GRBs 060614 (Yang et al., 2015) and 211227A (Lu et al., 2022) which were long but data suggested evidence of coincident KNe. Indeed, even data from the observations of high-redshift sGRBs suggest collapsars as potential progenitors of these events (Dimple et al., 2022).
+
+Footnote 1: The lack of SNe is not entirely unexpected for high-redshift GRBs.
+
+Recently, GRB 211211A had a prolonged burst phase with an associated KN (Rastinejad et al., 2022). Several models have been proposed to suggest its provenance, most of which point to a CBC-origin (Yang et al., 2022; Gompertz et al., 2023; Troja et al., 2022; Zhu et al., 2022; Zhong et al., 2023; Kunert et al., 2024). This conclusion is further corroborated by the host galaxy whose properties coincided with those pertaining to hosts of sGRBs (Troja et al., 2022; Yang et al., 2022). Moreover, the GRB's location with respect to the host's center seemed to suggest a lack of spatial coincidence with any star forming region, which again points to a CBC progenitor rather than a collapsar origin (Fruchter et al., 2006; Berger et al., 2013). More recently, JWST observations of the bright lGRB 230307a also indicated the presence of a potential KN (Sun et al., 2023; Levan et al., 2024).
+
+It is, therefore, amply evident that the standard picture of sGRB + KN + CBC and lGRB + SN + collapsar cannot be reconciled with data that increasingly suggests a more complex picture. A more sophisticated approach to segregating GRBs into groups and subgroups belonging to a collapsar origin or a CBC origin and to further split the CBC group into a BNS or NSBH cluster is to use machine learning (ML). Several works have attempted this, where light curves from the prompt emission phase of GRBs detected by one instrument are fed to an unsupervised ML algorithm that identifies global structures (Jespersen et al., 2020; Steinhardt et al., 2023; Luo et al., 2023; Garcia-Cifuentes et al., 2023). Recently, Dimple et al. (2023) identified five distinct clusters in the _Swift_/BAT GRB population, with KN-associated GRBs located in two separate clusters. This structure remains true for both the catalogs - _Swift_/BAT as well as for _Fermi_/GBM (Dimple et al., 2024). They suggested that these two distinct populations might be associated with BNS and/or NSBH mergers. One cluster with KN-associated GRBs having longer T_{90}'s might be associated with NSBH mergers (Zhu et al., 2022). On the other hand, the presence of GRB 170817A in the other cluster (Dimple et al., 2024) confirms that at least a fraction of GRBs in that cluster might be associated with BNS mergers.
+
+While there is some uncertainty on whether all GRBs that sit in either of these two clusters can be associated with a BNS or NSBH, it is still interesting to estimate the rate of BNS/NSBH- associated GRBs, assuming that such GRBs must lie in these two clusters. In this _Letter_, we evaluate these rates, and compare them to the BNS and NSBH rates reported by the LVK in its first three observing runs (O1, O2, O3) (Abbott et al., 2023). We find that the rate of BNS-associated GRBs are broadly consistent with the BNS-associated GW rate estimates. We additionally constrain the fraction of GRB-bright NSBHs, and, assuming that all BNSs produce GRBs, the beaming angle of BNS-associated GRBs.
+
+## 2 Method
+
+### Estimating the Rate of GRBs
+
+Most works that estimate the rate of GRBs assume a model for the redshift evolution, which is typically chosen to be the Madau-Dickinson ansatz (Madau & Dickinson, 2014; Madau & Fragos, 2017) pertaining to star formation rate. While this model may be sufficient for GRBs thought to originate from collapsars, a model for the rate of CBC-driven GRBs needs to additionally account for a delay time between the formation of the compact binary and its coalescence (Wanderman & Piran, 2015). This is usually achieved by adopting an additional ansatz on the distribution of delay times, although there are considerable uncertainties in the models of delay-time distributions.
+
+On the other hand, the rate of BNS and NSBH mergers estimated by the LVK (R_{\\rm GW}), given GW data (d_{\\rm GW}), is limited by the relative scarcity of BNS/NSBH-associated GW detections (Abbott et al., 2023). Moreover, the confirmed BNS/NSBH-associated GW detections are at relatively low redshifts, making it difficult to probe their redshift evolution2. We therefore similarly evaluate a rate of BNS/NSBH-associated GRBs (R_{\\rm GRB}) assuming that the sources are distributed uniformly in comoving volume, as done in Appendix C of Abbott et al. (2023b), Abbott et al. (2021a), and Kapadia et al. (2020). This will allow for a self-consistent evaluation of the fraction of GRB-Bright NSBHs, as well as the beaming angle of BNS-associated GRBs.
+
+Footnote 2: The GW rates also incorporate subthreshold BNS and NSBH events that might have arrived from larger distances, but their low signal-to-noise ratios make it difficult to constrain their luminosity distances, and therefore redshifts.
+
+Consider N_{\\rm GRB} GRB detections collected over an observation time T_{\\rm obs}. We make two assumptions. The first is that the GRB detections are independent and, therefore, follow a Poisson process. The second is that the intrinsic luminosity function of the GRBs, p_{L}(L), has no redshift dependence.
+
+The first assumption allows us to write down the Poisson likelihood as (we remove the GRB subscript to reduce notational burden):
+
+p(N|\\Lambda)=\\frac{1}{N!}\\Lambda^{N}\\exp(-\\Lambda). 
+
+The posterior on the Poisson mean is found using Bayes' rule: p(\\Lambda|N)\\propto p(\\Lambda)p(N|\\Lambda). The posterior on the rate of GRBs, R=\\frac{\\Lambda}{\\langle VT\\rangle}, is then:
+
+p(R|N)\\propto p(\\Lambda|N)=p(R\\cdot\\langle VT\\rangle|N) 
+
+The task now is to estimate the spacetime volume sensitivity, \\langle VT\\rangle of the GRB detector, averaged over the expected distribution of fluxes p_{F}(F) accessible to the detector. This sensitivity is given by:
+
+\\langle VT\\rangle=T_{\\rm obs}\\cdot\\int_{0}^{\\infty}\\frac{1}{1+z}\\frac{dV_{c}} {dz}f(z)dz  where \\frac{dV_{c}}{dz} is the differential comoving volume, \\frac{1}{1+z} accounts for cosmological time dilation, and f(z) is the fraction of spacetime volume accessible to the detector (with threshold flux F_{t}) given by:
+
+f(z)=\\int_{F_{t}}^{\\infty}p_{F}(F)dF 
+
+By definition, the flux F and the intrinsic luminosity L of the source are related by:
+
+F=\\frac{L}{4\\pi d_{L}^{2}}  where d_{L} is the luminosity distance. The flux function can then be written in terms of the intrinsic luminosity function (p_{L}(L)), and f(z) is evaluated as:
+
+f(z)=4\\pi d_{L}^{2}(z)\\int_{F_{t}}^{\\infty}p_{L}(4\\pi d_{L}^{2}(z)F)dF 
+
+Let f_{b} be the beaming fraction, f_{s} be the fraction of the sky viewed by the detector at any given time, and f_{k} the K-correction factor due to redshifting and finite bandwidth of the _Fermi_ detector. The spacetime volume sensitivity accessible to the instrument is then Eq. (3) multiplied by these fractions. Since the beaming fractions, especially for sGRBs, are poorly constrained from observation (Fong et al., 2015), we draw them from a broad, uninformative prior distribution.
+
+To estimate the beaming fraction of BNS-associated GRBs, we assume that _all_ BNS mergers produce GRBs. This may be justified by the high extent of tidal disruption possible in BNS mergers compared to, say, NSBH mergers. The disruption provides enough matter near the merger site to produce an accreting central engine that can power the jet.
+
+We then evaluate the ratio distribution p(\\langle f_{b}\\rangle\\equiv\\frac{R_{\\rm GRB}}{R_{\\rm GRB}}|N_{\\rm GRB},d_{ \\rm GW}), pertaining to BNSs. This distribution is constructed from the GRB (p(R_{\\rm GRB}|N_{\\rm GRB})) and GW (p(R_{\\rm GW}|d_{\\rm GW})) rate posteriors. We ensure that R_{\\rm GRB} is evaluated with \\langle VT\\rangle using Eq. (3), _without_ multiplying it by an assumed f_{b}. This ratio distribution constrains the average beaming fraction \\langle f_{b}\\rangle.
+
+From the ratio distribution, we evaluate constraints on the minimum (f_{b}^{\\rm min}) and maximum (f_{b}^{\\rm max}) beaming fractions, assuming a uniform distribution f_{b}\\in\\mathcal{U}(f_{b}^{\\rm min},f_{b}^{\\rm max}). We do so using Monte Carlo, and by exploiting the fact that \\langle f_{b}\\rangle=(f_{b}^{\\rm min}+f_{b}^{\\rm max})/2. We draw from p(\\langle f_{b}\\rangle|N_{\\rm GRB},d_{\\rm GW}). For each \\langle f_{b}\\rangle sample, we draw an f_{b}^{\\rm min} sample from a uniform distribution \\mathcal{U}(0,\\langle f_{b}\\rangle). We then acquire an f_{b}^{\\rm max} sample as f_{b}^{\\rm max}=2\\langle f_{b}\\rangle-f_{b}^{\\rm min}. Repeating this process iteratively, we construct distributions for f_{b}^{\\rm min} and f_{b}^{\\rm max}.
+
+The beaming angle (\\theta_{j}) is acquired from the beaming fraction via:
+
+f_{b}=1-\\cos(\\theta_{j}) 
+
+This equation assumes a simple homogeneous tophat jet structure 3 The constraint on the fraction of GRB-Bright NSBHs, f_{B} is similarly acquired from a ratio distribution pertaining to NSBHs, but now assuming a prior distribution on f_{b}.
+
+### Progenitor Identification with Machine Learning
+
+To estimate BNS/NSBH-associated GRB rates, it is crucial to first identify, from the set of GRBs detected by an instrument, those that can be associated with a BNS or an NSBH. Dimple et al. (2023) used machine learning algorithms, particularly uniform manifold approximation and projection (UMAP, McInnes et al., 2018), and t-distributed stochastic neighbor embedding (Maaten, 2008; Van Der Maaten, 2014), with a principle component analysis (PCA) initialization on GRB light curves in _Swift_/BAT, to achieve this. Although working on different principles, both algorithms separated the KN-associated GRBs into two distinct clusters. This suggested two distinct populations of KN-associated GRBs, one associated with sGRBs and the other with lGRBs. Further inspection suggested they might have different origins (see Figure 4 in Dimple et al., 2023).
+
+The association of clusters with a BNS or NSBH provenance becomes stronger with data from the _Fermi_/GBM catalog (Dimple et al., 2024). Figure 1 shows the 2-dimensional embeddings obtained using PCA-UMAP on _Swift_/BAT and _Fermi_/GBM light curves. The one KN-associated sGRB event, detected by _Fermi_, whose BNS provenance is beyond all "reasonable" doubt, GW170817's counterpart, GRB 170817A, lies within what we call the "BNS cluster" in the embedding. This implies that some fraction of GRBs in that cluster might originate from BNS mergers. For GRBs in the other "NSBH cluster", some have coincident KNe and evidence of fallback accretion. This suggests that NSBH mergers could be progenitors (Zhu et al., 2022) for at least a fraction of the GRBs in this cluster. However, only multimessenger observations of NSBH coalescences can confirm this prediction.
+
+While not confirmed, we nevertheless still work with the assumption that all BNS/NSBH- associated GRBs in the data set (from _Fermi_ or _Swift_) have been identified and placed in the BNS/NSBH clusters. However, not all events in these clusters have a BNS/NSBH provenance. Some known SNe also lie in these clusters. We account for this when estimating BNS/NSBH-associated GRB rates, as delineated in the following subsection.
+
+### Counting Error Estimation
+
+Let n be the total number of events in the BNS or NSBH cluster. Of these, let N_{\\rm KN} be the number of known KNe and let N_{\\rm SN} be the number of known SNe. We wish to evaluate the probability that there are N KNe in the cluster, given that N could lie anywhere between N_{\\rm KN}\\leq N\\leq n-N_{\\rm SN}:
+
+p(N|\\mathcal{N}),\\ \\ \\mathcal{N}\\equiv N_{\\rm KN}\\leq N\\leq n-N_{\\rm SN} 
+
+From Bayes' theorem:
+
+p(N|\\mathcal{N})=\\frac{p(\\mathcal{N}|N)p(N)}{p(\\mathcal{N})} 
+
+The prior p(N) is assumed to be uniform for N satisfying \\mathcal{N}, and zero otherwise. The likelihood can be written
+
+p(\\mathcal{N}|N)=\\int_{0}^{1}p(\\mathcal{N}|q)p(q|N)dq  where q is the probability that an individual event is a KN, which is unknown. From Bayes' theorem:
+
+p(q|N)\\propto p(N|q)p(q) 
+
+Assuming p(N|q) is Binomially distributed, and a uniform prior on q, we get, after normalisation:
+
+p(q|N)=\\frac{q^{N}(1-q)^{n-N}}{\\beta(N+1,n-N+1)}  where the function in the denominator is the Euler Beta function.
+
+On the other hand, it is straightforward to see that:
+
+p(\\mathcal{N}|q)=1-\\sum_{j=0}^{N_{\\text{KN}}-1}B(j;n,q)-\\sum_{j=0}^{N_{\\text{ SN}}-1}B(n-j;n,q)  where B(j;n,q) is the usual Binomial distribution with j successful trials. Thus, p(N|\\mathcal{N}) can be evaluated from Eqs. 9, 10, 12, and 13.
+
+The posterior on the Poisson mean is then convolved with p(N|\\mathcal{N}), thereby incorporating counting uncertainties:
+
+p(\\Lambda|\\mathcal{N})=\\sum_{N=0}^{n}p(\\Lambda|N)p(N|\\mathcal{N}) 
+
+## 3 Results and Discussion
+
+We present the results of our estimates of the rate of BNS/NSBH-associated GRBs. We use _Fermi_ data (Von Kienlin et al., 2020), with observing time T_{\\text{obs}}=15.22 yrs, and _Swift_ data (Lien et al., 2016) with observing time T_{\\text{obs}}=18.8 yrs. The ML classification scheme of Dimple et al. (2024) identifies sGRB and lGRB events in the BNS and NSBH clusters, which we tabulate in Table 1. We also point out the number of known KNe and SNe in those clusters, in Table 1., as "(no. known KNe/ no. known SNe)".
+
+We use these numbers to estimate the posterior on the Poisson mean \\Lambda, p(\\Lambda|\\mathcal{N}), as described in the previous section. We then convert this posterior to one on the rate by evaluating the spacetime volume sensitivity \\langle VT\\rangle. We use Eq. 3 to estimate \\langle VT\\rangle, assuming a flux threshold F_{t} of 2\\times 10^{-7}ergs/s/cm{}^{2} (5\\times 10^{-8}ergs/s/cm{}^{2}) for _Fermi_/GBM (_Swift_/BAT).
+
+\\begin{table}
+
+\\begin{tabular}{|c|c|c|c|c|} \\hline  & \\multicolumn{2}{c|}{_Fermi_} & \\multicolumn{2}{c|}{_Swift_} \\\\ \\hline  & BNS & NSBH & BNS & NSBH \\\\ \\hline
+
+**lGRB** & 141(0/1) & 707(2/7) & 20(0/0) & 115(1/4) \\\\ \\hline
+
+**sGRB** & 452(2/1) & 9(0/0) & 97(2/0) & 0(0/0) \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Number of sGRBs and lGRBs, in by _Fermi_ and _Swift_ data, identified by the ML classification scheme of Dimple et al. (2024) in the BNS and NSBH clusters. The (no. known KNe/ no. known SNe) in each of these clusters is also tabulated. sGRBs and lGRBs have different luminosity functions. We therefore calculate \\langle VT\\rangle, and the rate of BNS/NSBH associated sGRBs and lGRBs, separately, using their respective luminosity functions, and numbers in each of the clusters tabulated in Table 1. We then add the two rates to quote a total BNS/NSBH associated GRB rate. We assume a broken power-law profile for the luminosity function p_{L}(L), as done in Wanderman and Piran (2010, 2015):
+
+\\phi(L)=\\begin{cases}\\left(\\frac{L}{L_{b}}\\right)^{-a},&\\text{if }L\\leq L_{b}.\\\\ \\left(\\frac{L}{L_{b}}\\right)^{-b},&\\text{if }L>L_{b}.\\end{cases}  where \\phi(L) traditionally denotes the number of samples between \\log_{10}(L) and \\log_{10}(L)+d\\log_{10}(L)(Wanderman and Piran, 2010), and can be straightforwardly related to p_{L}(L). The shape parameters of the broken power-law function, for lGRBs (sGRBs), estimated by Wanderman and Piran (2010) (Wanderman and Piran (2015)) are a=0.95^{+0.12}_{-0.12} (0.2^{+0.2}_{-0.1}), b=2.0^{+1.0}_{-0.8} (1.4^{+0.3}_{-0.6}), and L_{b}=2.0^{+1.4}_{-0.4}\\times 10^{52} (10^{52.5\\pm 0.2}) ergs/s.
+
+We construct distributions on \\langle VT\\rangle by approximating the errors on the shape parameters as Gaussians, and drawing from these Gaussians assuming that the values provided pertain to medians and upper/lower limits at 1\\sigma confidence4. We also consider a uniform distribution of f_{b}\\in[0.01,0.10]. Moreover, we take the K-correction factor as f_{K}=1.13(Poolakkil et al., 2021) and sky fraction to be f_{s}=2/3 (f_{s}=1/6) for _Fermi_/GBM (_Swift_/BAT).
+
+Footnote 4: When the upper/lower limits are asymmetric, we take the larger of the two, in absolute value, as the standard deviation of the Gaussian.
+
+We draw 10^{4} samples from p(\\mathrm{A}|\\mathcal{N}) and the \\langle VT\\rangle distribution, and divide sample by sample to estimate the GRB rate posterior p(R_{\\mathrm{GRB}}|\\mathcal{N}). As mentioned earlier, we construct p(R_{\\mathrm{GRB}}|\\mathcal{N}) separately for sGRBs and lGRBs in each cluster, and add the rate posteriors sample by sample, to calculate the total rate for that (BNS or NSBH) cluster. We plot the BNS (NSBH) rate posterior in the left (right) panel of Figure 2. For comparison, we also plot the BNS (NSBH) GW rate posterior, p(R_{\\mathrm{GW}}|d_{\\mathrm{GW}}), as estimated in Appendix C of Abbott et al. (2023)5.
+
+Footnote 5: Note that Appendix C of Abbott et al. (2023) only provides the upper and lower limits on the GW rate posteriors, and not the full posteriors. We plot these for completeness and also evaluate the medians.
+
+We find that the posteriors on the rate of GRB-Bright BNSs (NSBHs), acquired from _Fermi_/GBM data, yield a median and 90% confidence interval of 50^{+1999}_{-44}\\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1} (5^{+18}_{-4}\\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1}). The corresponding _Swift_/BAT rate estimates are 13^{+45}_{-11}\\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1} (1^{+4}_{-1}\\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1}). The GRB-Bright BNS rate is consistent with the LVK's rate estimates given in Appendix C of Abbott et al. (2023): 163^{+300}_{-134}\\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1}. On the other hand, the GRB-Bright NSBH rate is consistent with the expectation that not all NSBHs produce EM counterparts, with the GW NSBH rate being estimated to be (68^{+120}_{-53}\\text{Gpc}^{-3}\\text{yr}^{-1}).
+
+Assuming all BNSs produce GRBs, we construct the distribution of beaming fractions (Figure 3, left panel) and angles (Figure 3, right panel), as described in the previous section. We constrain the beaming angle to \\theta_{j}\\in[\\theta_{j}^{\\min}=6.4^{+0.13^{+4}_{-5.0}},\\theta_{j}^{\\max}=12.2^ {+21.3}_{-8.2^{\\circ}}] (\\theta_{j}\\in[\\theta_{j}^{\\min}=3.3^{+9.64^{\\circ}_{-2.5}},\\theta_{j}^{\\max} =6.2^{+10.0}_{-4.0})], at 90% confidence, with _Fermi_/GBM (_Swift_/BAT) data. Across both data sets, the beaming angle is constrained to \\theta_{j}\\in[0.8^{\\circ},33.5^{\\circ}]. The tighter constraints on the GRB rate and beaming angle estimates from _Swift_, in comparison to _Fermi_, are a direct consequence of the larger uncertainty in the fraction of events in the BNS/NSBH cluster that can be confidently ascertained to have a BNS/NSBH provenance in _Fermi_ data.
+
+While the assumption that all BNS mergers produce GRBs has been assumed in the literature (see, e.g., Williams et al. (2018)), in reality, this will depend on whether the merger remnant is a _black hole_, _hypermassive neutron star_ which undergoes a delayed collapse to a black hole or a long-lasting _supramassive neutron star_. Recently, for instance, Bamber et al. (2024) argued from numerical simulations that a supramassive NS with an accretion disk may not necessarily produce a jetted emission unlike a BH or a hypermassive NS. This would indicate that the mass, spin and the equation of state of the binary constituents will decide the nature of the remnant and the emergence of a jet from it. Therefore an unknown fraction of binary neutron star mergers may not produce GRBs. If true, our constraints on the beaming fraction would be systematically underestimated 6
+
+Footnote 6: It is interesting to constrain the fraction of GRB-Bright BNSs, employing the same method used for estimating this fraction for NSBHs. Assuming, as before, the distribution of beaming fractions to be uniformly distributed in f_{b}\\in[0.01,0.10], we constrain the fraction of GRB-Bright BNSs from _Swift_ data to be f_{B}\\in[1\\%,75.6\\%]. This is consistent with (Salafia et al., 2022), that find the fraction to be \\gtrsim 1/5.
+
+We also construct the distribution on the fraction f_{B} of GRB-Bright NSBHs, and constrain it, at 90% confidence, to f_{B}\\in[1.3\\%,63\\%] (f_{B}\\in[0.4\\%,15\\%]), with _Fermi_ (_Swift_) data. These are consistent with other estimates of f_{B} in the literature, such as NSBH population driven constraints of (Biscoveanu et al., 2022), and population synthesis driven constraints of (Broekgaarden et al., 2021).
+
+Past works (Williams et al., 2018; Biscoveanu et al., 2020; Mogushi et al., 2019; Farah et al., 2020; Sarin et al., 2022; Hayes et al., 2023) that place constraints, including prospective ones with future observations, assume that all sGRBs are associated with CBCs containing at least one NS. On the other hand, our work provides a potentially powerful means to constrain the fraction of GRB-Bright NSBHs, and the beaming angle of BNS-associated GRBs, using results from the ML-based classification scheme of Dimple et al. (2023); Dimple et al. (2024). The main advantages of our method are that: 1) it does not require spatial and temporal coincidence of individual GW and GRB events, thus mitigating the lack of joint GW-GRB detections; 2) it does not assume that all sGRBs are associated with BNSs/NSBHs.
+
+Though modest, the constraints on the fraction of GRB-Bright NSBHs will improve with increased NSBH associated GW detections from the LVK, as well as GRBs whose KN/SN provenance is observed, to reduce the uncertainty in the labelling of the events in the NSBH cluster. Such constraints will have significant implications on our understanding of GRB production in NSBH systems, as well as more profound implications on NS EOS constraints.
+
+The constraints on the beaming angle \\theta_{j} are consistent with corresponding estimates reported in the literature. Observations suggest that sGRB beaming angles lie within \\theta_{j}\\in[1^{\\circ},30^{\\circ}](Soderberg et al., 2006; Burrows et al., 2006; Fong et al., 2012; Coward et al., 2012). This is largely corroborated by simulations (Rosswog and Ramirez-Ruiz, 2002; Janka et al., 2006; Rezzolla et al., 2011). As with the constraints on f_{B} we expect the constraints on \\theta_{j} to improve with additional detections of KNe/SNe associated with GRBs in the BNS cluster.
+
+There are two important caveats to our work. The first is the assumption that all BNS/NSBH-associated GRBs have been identified and placed in the appropriate clusters by the ML algorithm. This, however, has not been confirmed. Thus, while false-positives have been accounted for, false negatives7 have not. Moreover, recent numerical simulations (e.g. (Gottlieb et al., 2023)) suggest that distinguishing properties of GRB light curves are not necessarily driven by their progenitors, but certain intrinsic properties of the postmerger that could be produced by both BNSs and NSBHs. Consequently, the ML algorithm, which is currently not trained on these simulations, could be clustering the data in a manner that does not accurately segregate BNSs from NSBHs. These could potentially contribute to systematics in the BNS/NSBH-associated GRB rate estimation. We expect that more sophisticated ML methods employed to classify GRB light curves and ad ditional joint-detections of BNS/NSBH-associated GWs and GRBs will help mitigate said systematics.
+
+The second is that our analysis neglects the redshift evolution of the GRB rate. This was done to be consistent with the method used to estimate the GW merger rate for BNSs/NSBHs, although redshift-evolving GRB rate estimates also have significant uncertainties arising from a largely unconstrained delay-time distribution of CBCs. As mentioned earlier, currently, the BNS/NSBH sensitivity range of LVK detectors does not probe large enough redshifts to determine a corresponding redshift evolution. However, with improved sensitivity in future observing scenarios (e.g: XG detector network, Punturo et al., 2010; Reitze et al., 2019), we expect that our ML-based method to constrain the rate of BNS/NSBH-associated GRBs and correspondingly the beaming angle/GRB-bright fraction, updated to incorporate a redshift evolution, will have significant astrophysical implications.
+
+## Acknowledgements
+
+We thank Michael Coughlin for their feedback on the manuscript, and Anarya Ray for help with the GW rate posteriors. We thank the Indian Institute of Technology (IIT), Bombay, for organizing the "Transients 2024" workshop during which this project was initiated. SJK acknowledges support from the Science and Engineering Research Board (SERB) Grant SRG/2023/000419. D and KGA acknowledge support from the Department of Science and Technology (DST) and the SERB of India via the Swarnajayanti Fellowship Grant DST/SJF/PSA-01/2017-18. They also acknowledge support from a grant from the Infosys Foundation. RL, KM and KGA acknowledge the support from BRICS grant DST/ICD/BRICS/Call-5/CoNMuTraMO/2023 (G) funded by the DST, India.
+
+This research has made use of data or software obtained from the Gravitational Wave Open Science Center (gwosc.org), a service of the LIGO Scientific Collaboration, the Virgo Collaboration, and KAGRA. This material is based upon work supported by NSF's LIGO Laboratory, which is a major facility fully funded by the National Science Foundation, as well as the Science and Technology Facilities Council (STFC) of the United Kingdom, the Max-Planck-Society (MPS), and the State of Niedersachsen/Germany for support of the construction of Advanced LIGO and construction and operation of the GEO600 detector. Additional support for Advanced LIGO was provided by the Australian Research Council. Virgo is funded, through the European Gravitational Observatory (EGO), by the French Centre National de Recherche Scientifique (CNRS), the Italian Istituto Nazionale di Fisica Nucleare (INFN) and the Dutch Nikhef, with contributions by institutions from Belgium, Germany, Greece, Hungary, Ireland, Japan, Monaco, Poland, Portugal, Spain. KAGRA is supported by Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan Society for the Promotion of Science (JSPS) in Japan; National Research Foundation (NRF) and Ministry of Science and ICT (MSIT) in Korea; Academia Sinica (AS) and National Science and Technology Council (NSTC) in Taiwan. NumPy (van der Walt et al., 2011), SciPy(Virtanen et al., 2020), astropy (Astropy Collaboration et al., 2013, 2018), Matplotlib(Hunter, 2007), jupyter(Kluyver et al., 2016).

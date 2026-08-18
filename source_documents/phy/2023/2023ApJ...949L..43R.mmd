@@ -1,0 +1,159 @@
+###### Abstract
+
+We detect a high level of polarization in the X-ray emission of the black-hole binary 4U 1630-47 in an observation with the _Imaging X-ray Polarimetry Explorer_. The 2-8 keV polarization degree is 8 % at a position angle of 18^{\\circ}, with the polarization degree increasing significantly with energy, from \\sim 6 % at \\sim 2 keV to \\sim 11 % at \\sim 8 keV. The continuum emission in the spectrum of simultaneous observations with the _Neutron Star Interior Composition Explorer_, _NICER_, is well described with only a thermal disc spectrum, with stringent upper limits to any Comptonized emission from the corona. Together with the lack of significant variability in the Fourier power spectrum, this suggests that the source was in the high-soft state at the time of these observations. The _NICER_ spectrum reveals the presence of several absorption lines in the 6-9 keV band that we fit with two ionized absorbers, providing evidence of the presence of a strong disk wind, which supports the idea that the source was in the soft state. Previous measurements of X-ray polarization in other sources in harder states were associated with the corona or the jet in those systems. Given that the corona is significantly absent in this observation of 4U 1630-47, and that the jet in black-hole binaries is quenched in the high-soft state, we speculate that in this observation of 4U 1630-47, the polarization likely arises from the direct and reflected radiation of the accretion disk in this source.
+
+Spectropolarimetry (1973), X-ray astronomy (1810), High energy astrophysics (739), Accretion (14), Stellar accretion disks (1579) 0000-0002-2162-1846]Divya Rawat
+
+0000-0002-2182-0405]Akash Garg
+
+## 1 Introduction
+
+4U 1630-47 is a transient low-mass X-ray binary source discovered in the 1970s with _Uhuru_ and _Ariel V_(Jones et al., 1976), and _Vela 5B_ X-ray monitor (Priedhorsky, 1986), independently. King et al. (2014) and Liu et al. (2022) reported that the system harbours a highly spinning black hole located at a distance of \\sim 10 kpc (Seifina et al., 2014). From the presence of X-ray dips in the light curve (Kuulkers et al., 1998), and from fits to the X-ray spectra with a reflection component (Diaz Trigo et al., 2013) a high inclination angle of the system, i\\sim 60^{\\circ} is reported. X-ray spectral studies show that some of the outbursts are unusually soft for this source, with a lack of hard emission above 30 keV (Capitanio et al., 2015). Blue-shifted iron absorption lines in the 6-9 keV band have been reported from this source (Kubota et al., 2007; Rozanska et al., 2014; Miller et al., 2015). Using Chandra and Swift observation, Kalemci et al. (2018) observed that the source is behind a massive molecular cloud, MC -79.
+
+Over the last five decades, the spectral and timing capabilities of various X-ray observatories have been exploited to understand the accretion-flow geometry of 4U 1630-47. Still, a clear picture of the disk-corona system has not yet emerged. In this context, polarimetric studies can potentially constrain the geometry of the corona. Using radiative transfer simulations Poutanen et al. (2023) showed that for edge-on systems, the polarization degree (PD) could exceed 10 %. Furthermore, if the polarization is due to electron scattering in the accretion disk, the polarization angle would be aligned with the disk plane (Chandrasekhar & Breen, 1947; Chandrasekhar, 1960; Sobolev, 1963; Farinelli et al., 2023). The potentially high inclination angle of the binary system 4U 1630-47 (Kuulkers et al., 1998) makes it an excellent source to explore the properties of the disk and the corona using X-ray polarization measurements.
+
+In this Letter, we study simultaneous observations of 4U 1630-47 during its 2022 outburst with the _Imaging X-ray Polarimetry Explorer_, _IXPE_(Manfreda, 2020; Weisskopf et al., 2022), and the _Neutron Star Interior Composition Explorer_, _NICER_. We describe the observations and data analysis in Section 2, the polarimetric and spectro-polarimetric results in Section 3 and discuss our findings in Section 4.
+
+## 2 Observation and Data Analysis
+
+_IXPE_ is a small explorer mission launched by NASA in alliance with the Italian Space Agency (ASI) on 2021 December 9. It is the first-ever satellite that measures spatial, temporal, and energy-resolved polarimetric data in a soft X-ray band of 2-8 keV. The satellite consists of three telescopes, each composed of a focussing Mirror Module Assembly and a Gas Pixel Detector unit at the focus to image the short photoelectric tracks produced as a result of X-ray absorption (Manfreda, 2020; Baldini et al., 2021; Di Marco et al., 2022; Weisskopf et al., 2022). _IXPE_ observed the black-hole X-ray binary 4U 1630-47 from 2022-08-23 to 2022-09-02 for \\sim 460 ks. We analyzed the _IXPE_ data using the simulation and analysis framework kypeobssim 29.2.01(Baldini et al., 2022), designed to simulate observations and extract science products from the level2 event files.
+
+Footnote 1: [https://ixpeobssim.readthedocs.io/en/latest/overview.html](https://ixpeobssim.readthedocs.io/en/latest/overview.html)
+
+Using the xpselect tool within kypeobssim, we filtered the level2 event files to obtain cleaned event files for the source and the background separately. We used a circular source region of 60" and an annular background region of inner and outer radii of 180" and 240", respectively, for all three detector units (DU). Further, we applied different binning algorithms using the tool xpbin of kypeobssim to produce images and spectra. Specifically, we used the option pcube of the tool xpbin to compute a model-independent estimate of the polarization based on the detected photons, and to generate the count, I, and Stokes, Q and U, spectra for all three DUs. All the science products were produced following the unweighted method. We utilized the response matrices version v012 of kypeobssim in CALDB version 20170101_022.
+
+Footnote 2: [https://heasarc.gsfc.nasa.gov/docs/ixpe/caldb/](https://heasarc.gsfc.nasa.gov/docs/ixpe/caldb/)
+
+_NICER_ monitored 4U 1630-47 from 2022-08-22 to 2022-10-12. We have processed the _NICER_ level2 data applying the standard calibration and screening criteria using the nicerl23 task for each observation. We then merged the clean event files using the nimpumerge4 task. We show the 100-s binned _NICER_ light curve from 2022-08-22 to 2022-10-12 in the upper panel of Figure 1. The shaded area shows the times of the simultaneous _IXPE_ observation of the source. In the lower panel of Figure 1 we show the hardness-intensity diagram using these same data. In this diagram, the intensity is defined as the background-subtracted count rate in the 0.2-12.0 keV band, and the hardness is the ratio of the background-subtracted count rates in the 5-10 keV band to the 2-5 keV band. The color of the points represents the time in MJD units.
+
+For the _NICER_ observations listed in the Appendix Table 1, we extracted Power Density Spectra (PDS) using the General High-energy Aperiodic Timing Software (GHATS)5. For this, we segmented the 0.2-12.0 keV lightcurve into 1096 intervals of 20.48 s at a time resolution of 2.5\\times 10{}^{-3} s (Nyquist frequency=200 Hz). We averaged all the 1096 PDS to produce a single power spectrum for all observations combined that we rebinned logarithmically. We fitted this PDS with a model consisting of a constant representing the Poisson level and a Lorentzian function representing any noise component from the source (For details of the PDS extraction of NICER data please see the analysis section of Rawat et al., 2023). The PDS shows no significant variability, with a 95 % upper limit of 3.2 % for the rms amplitude in the 0.05-200 Hz frequency range.
+
+Footnote 5: [http://www.brera.inaf.it/utenti/belloni/GHATS_Package/Home.html](http://www.brera.inaf.it/utenti/belloni/GHATS_Package/Home.html)
+
+For the spectral analysis, we extracted data from the period in which the observations of the two satellites overlapped. The details of the observations we used, including ObsIDs, start and end times and exposure times, are given in Table 1. We then extracted the source and background spectra using the _NICER_ background estimator tool 3c50_r6v7 (Remillard et al., 2022).
+
+We used Heasoft version 6.31.16 and CALDB version 202210017 to create the response (rmf) and ancillary response (arf) files. We added systematic errors to the source spectrum to account for calibration uncertainties using the tool niphasyserr and rebinned the data to the optimal resolution using the tool ftgrouppha. To fit the spectra, we used the X-ray spectra fitting package xspec version 12.13.0 (Arnaud, 1996)
+
+Footnote 6: [https://heasarc.gsfc.nasa.gov/lheasoft/download.html](https://heasarc.gsfc.nasa.gov/lheasoft/download.html)
+
+Footnote 7: [https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/nicer/](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/nicer/)
+
+## 3 Results
+
+We employed two different methods to determine the X-ray polarization of 4U 1630-47: (i) the model-independent pcube method (Kislat et al., 2015), and (ii) the spectro-polarimetric modeling of the I, Q, and U spectra in xspec. We describe the results with these two methods in SS 3.1 and SS 3.2, respectively.
+
+### Polarization measurements with IXPE
+
+Using the pcube algorithm of ixpeobssim, we measured a significant polarization for 4U 1630-47. We found a polarization degree PD \\sim 8 % at a polarization angle PA \\sim 18^{\\circ} in the 2-8 keV band. In Figure 2 we show the 4D contour plots of the polarization degree and polarization angle and the stokes parameters, Q/I and U/I, in the 2-8 keV band. Here, the contours are drawn at 68.27, 95.45, and 99.73 percent confidence levels for both Stokes parameters.
+
+The values of all parameters for each detector unit are given in Table 1. Further, we extracted all parameters in four energy bands, 2.0-2.8 keV, 2.8-4.0 keV, 4.0-5.7 keV, and 5.7-8 keV and studied their variation with energy as shown in Figure 4. We observed that the PD increases by a factor \\sim 2 from 2.0-2.8 keV to 5.7-8 keV (upper right panel of Figure 4) while the PA is consistent with being constant at 18^{\\circ} as a function of energy (upper left panel). The uncertainties in the measurement of the polarization angle in the 2-3 keV band is attributed to the low modulation factor (\\sim 13%) of the three detector units (as shown in Table 4 and Figure 10 of Di Marco et al., 2022). A similar increase in the PD as a function of energy is reported by Krawczynski et al. (2022) for black hole binary source Cygnus X-1. As expected, the normalized stokes parameters, Q/I and U/I, show a similar trend as the polarization degree.
+
+### Spectro-polarimetric analysis with NICER and IXPE
+
+To obtain a first estimate of the spectral properties of the source, we initially fitted only the _NICER_ spectrum. Because the column density, N_{H}, towards the source is high (8-12\\sim 10^{22} cm{}^{-2}, Miller et al., 2015; Wang & Mendez, 2016; Gatuzz et al., 2019), any emission below \\sim 1-2 keV is likely due to calibration artefacts (C. Markwardt, _NICER_ calibration scientist, priv. comm.); therefore, we excluded the data below 2 keV, and fitted the _NICER_ spectrum in the 2-12 keV band. We fitted the spectrum with a single diskbb component (Mitsuda et al., 1984) affected by interstellar absorption, tbabs*diskbb in xspec. For the tbabs component we used the abundance tables of Wilms et al. (2000) and the cross-section tables of Verner et al. (1996). The fit gives \\chi^{2}=703.6 for 151 degrees of freedom (dof), and the unabsorbed 2-12 keV flux of the disk component is \\sim 1\\times 10^{-8} cm{}^{-2} s{}^{-1}. We added a power law to the model to account for the possible emission from the corona, but the fit does not improve and the power law is not significantly detected with a 95 % upper limit of the flux in the 2-12 keV band of 5.8\\times 10^{-11} erg cm{}^{-2} s{}^{-1} for an assumed power-law index \\Gamma=2.5. Together
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline  & DU1 & DU2 & DU3 & All DUs \\\\ \\hline PD (\\%) & 7.9\\pm 0.3 & 8.2\\pm 0.3 & 8.9\\pm 0.3 & 8.3\\pm 0.3 \\\\ PA ({}^{\\circ}) & 16.0\\pm 1.1 & 18.8\\pm 1.1 & 18.5\\pm 1.0 & 17.8\\pm 1.1 \\\\ Q/I (\\%) & 6.7\\pm 0.3 & 6.5\\pm 0.3 & 7.1\\pm 0.3 & 6.8\\pm 0.3 \\\\ U/I (\\%) & 4.2\\pm 0.3 & 5.0\\pm 0.3 & 5.4\\pm 0.3 & 4.9\\pm 0.3 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: The Polarization Degree (PD), polarization angle (PA) and normalized Stokes parameters of 4U 1630-47 extracted using the pcube algorithm for the individual detector units, DU1, DU2 and DU3, and all DU’s combined. with the absence of any significant variability in the PDS (see SS 2), this confirms that the source was in the high-soft state during these observations.
+
+The high \\chi^{2} for the fit with a simple diskbb model is due to the presence of multiple absorption lines in the 6-9 kev energy range, with the most prominent ones at \\sim 6.70 keV, 6.98 keV, 7.85 keV, 8.24 keV and 9.39 keV, possibly from iron and nickel, as reported previously by Kubota et al. (2007), Rozanska et al. (2014) and Miller et al. (2015). We also observed residuals at \\sim 2.4 keV that are likely instrumental from the gold M shell edges. We added the photo-ionized component zxipcf to the model to account for the multiple iron absorption lines. Fitting the data with the model TBabs*zxipcf*diskbb yields \\chi^{2}=237.6 for 147 dof, but residuals at 6.98 keV remain. We added a second zxipcf component to the model to account for this, possibly a blue-shifted iron line, and other residuals seen in the upper left panel of Figure 3. In the final fits we linked the ionization parameter and the column density of the two absorbers because, if we let them free, the two parameters are consistent with the respective parameters of the other ionized absorber within errors. The addition of this second zxipcf component improves the fit significantly, with \\chi^{2}=173.3 for 146 dof.
+
+Even after using this model, there are still residuals in the 6-9 keV energy range, as shown in the right panel of Figure 3. These residuals likely arise because the zxipcf model does not allow to fit for variable abundances of the ionized material and assumes that the ionising source is a power law with index 2 whereas, in this case, the ionising source is a diskbb. Since our purpose is to study the polarimetric properties of the source and not the physics of the wind, and because the reduced \\chi^{2} we obtain from the fit with this model is close to 1, we did not add other components to try and fit those residuals.
+
+Next, we carried out the spectro-polarimetric analysis fitting simultaneously the Q and U Stokes spectra of all detectors of _IXPE_ in the 2-8 keV energy band and the _NICER_ spectrum in the 2-12 keV band in xspec. We refrain from using the count spectrum (I) from _IXPE_ as the _NICER_ spectrum can constrain the spectral model parameters better than the _IXPE I_ spectrum, thereby achieving finer information about the polarization parameters from the Q and U spectra. We first considered the model combination-polconst*tbabs*zxipcf{}_{1}*zxipcf{}_{2}*diskbb where polconst is a multiplicative model that assumes that the polarization of the source is energy-independent; the model has two free parameters, A, the polarization fraction and \\psi, the polarization angle (in degrees). For a systematic error of 1.5 %, the spectral fitting gives \\chi^{2}=354.2 for 224 dof. All the parameters were kept free during the fitting, with the common parameters of the model linked for the Q and U spectra of _IXPE_ and the spectrum of _NICER_.
+
+Subsequently, we tried the polarization model polpow, which considers a power-law dependence with energy of the polarization fraction and polarization angle. The model gives \\mathrm{PD}(E)=A_{\\mathrm{norm}}\\times E^{-A_{\\mathrm{index}}} (in fractional units) and \\mathrm{PA}(E)=\\psi_{\\mathrm{norm}}\\times E_{\\mathrm{index}}^{-\\psi} (in degrees). In the fits, we fixed the \\psi_{\\mathrm{index}} to zero because, if we let that parameter free, the best-fitting value is 0.17\\pm0.11, which is consistent with zero within errors; on the other hand, letting this parameter free does not improve the fits significantly. The fit with this model yields a \\chi^{2}=269.1 for 223 degrees of freedom. This is a significantly better fit than the one with polconst with one less degree of freedom, with an F-test probability of \\sim 10^{-15}. Figure 3 shows the joint fits of the _NICER_ count spectrum (top left panel), _IXPE Q_ (middle left panel) and U spectra (bottom left panel) for all three detector units, along with their residuals in the corresponding right panels. Table 2 gives the best-fitting model parameters with 1\\sigma error bars. Integrating the model in the 2-8 keV energy range we find \\mathrm{PD}\\sim 7.3 % and \\mathrm{PA}\\sim 18^{\\circ}. These values agree with those we obtained using the pcube algorithm within error bars (see section 3.1), which confirms the accuracy of the polarization measurements. Although the _IXPE_ energy band and energy resolution are limited, it should be noted that, because we fitted simultaneously the _IXPE_ and _NICER_ data with common parameters linked in xspec, contrary to previous work we did not freeze any of the model parameters during the fits and could still accurately measure the polarization parameters from our fits.
+
+## 4 Discussion and Conclusions
+
+For the first time, we report a significant polarization degree of \\sim 8 % in the 2-8 keV band with a polarization angle of \\sim 18^{\\circ} for black hole binary source 4U 1630-47. The spectral study shows that the source is in the high soft state with negligible coronal emission, similar to what was observed in the 2006 and 2008 outburst of this source (Capitanio et al., 2015). The blue- and red-shifted absorption lines at \\sim 6.70 keV, 6.98 keV, 7.85 keV, 8.24 keV and 9.39 keV in the NICER spectra provide a clear signature of the presence of disk winds (Kubota et al., 2007; Rozanska et al., 2014; Miller et al., 2015) during these observations.
+
+On the basis of an outflowing corona model, Poutanen et al. (2023) predicted that the PD could drop from 10 % to 5 % for high inclination (i=60^{\\circ}) to low inclination (i=30^{\\circ}) systems. In the case of 4U 1630-47, however, the absence of any significant emission from a hard component (see SS3.2) excludes the possibility that the observed polarization is produced in an outflowing corona. We note also that there is no agreement about what the inclination angle of the source is. While Kuulkers et al. (1998), Diaz Trigo et al. (2013), King et al. (2014), and Seifina et al. (2014) reported that 4U 1630-47 is an edge-on source (i\\lessapprox 70^{\\circ}), Rozanska et al. (2014) proposed that it is a face-on system (i\\sim(11\\pm 5)^{\\circ}).
+
+Using _PoGO+_ observations, Chauvin et al. (2018) reported that the polarization angle in Cyg X-1 is aligned with the radio jet. Later, Krawczynski et al. (2022) reported similar results for Cyg X-1 using _IXPE_ observations. Similarly, using _IXPE_ data, Long et al. (2022) and Farinelli et al. (2023) found the same for the neutron-star binary systems Sco X-1 and Cyg X-2. Since there are no measurements of the position angle of the radio jet for this source, we cannot compare our results with those other ones. In the case of 4U 1630-47, however, it is very unlikely that the polarization is due to the corona (Long et al., 2022; Farinelli et al., 2023), given that the corona is significantly absent in our observations. On the other hand, since in black-hole binary systems in the HSS the jets are quenched (e.g., Fender et al., 1999), the jet cannot be the source of polarization either in this case.
+
+An interesting possibility is that the polarization in 4U 1630-47 is produced by the disk winds. We observed blue- (z=-0.006) and red-shifted (z=0.003) absorption lines in the _NICER_ spectrum, corresponding to winds with velocities of \\sim 950-1900 km s{}^{-1}. Using Monte Carlo ray-tracing techniques, Schnittman & Krolik (2009) showed that for black holes in the thermal-dominated state, if the polarization is a result of self-irradiation of the disk, the polarization angle should be perpendicular to the disk plane, so aligned with the jet axis (assuming that the jet is perpendicular to the disk plane). On the other hand, Beloborodov (1998) solved the radiative transfer equations for a plane-parallel slab and found that, near Compton equilibrium with the radiation field, the wind produces polarization parallel to the disk plane, so perpendicular to the jet. Since the position angle of the jet in 4U 1630-47 is not known, we cannot test the predictions of Schnittman & Krolik (2009) and Beloborodov (1998). Using optical polarimetry, Kosenkov et al. (2020) reported an increase in the PD with the appearance of winds in the black-hole binary MAXI J1820+070. Kosenkov et al. (2020) further reported that, in that case, the polarization angle coincides with the angle of the jet. Based on these results of the optical polarimetry for MAXI J1820+070 and the models of Schnittman & Krolik (2009) and Beloborodov (1998), we speculate that the position angle of the jet on the plane of the sky for 4U 1630-47 should be either 18^{\\circ} or 108^{\\circ}.
+
+As shown in Figure 4, the polarization fraction of 4U 1630-47 increases from \\sim 6% at 2 keV to \\sim 11% at 8 keV. Using numerical simulations and considering the direct and reflected emission component of the accretion disk, Krawczynski (2012) predicted a similar increase in the polarization fraction as a function of energy (in the 2-8 keV band) for a black hole with a spin parameter {}_{*}a\\geq 0.9 and an inclination angle to the line of sight of 75^{\\circ}. Later, considering the effect of absorption by the disk material, Taverna et al. (2020) found similar polarization spectra for the direct and reflected emission component for a highly spinning black hole (a=0.998) with an inclination angle of the disk with respect to the line of sight in the range of 45 {}^{\\circ}- 75 {}^{\\circ} (see Figure 12 of Taverna et al., 2020). Thus, assuming a highly spinning black hole in 4U 1630-47 (Seifina et al., 2014), and considering the disagreement of the inclination angle of the system (Kuulkers et al., 1998; Diaz Trigo et al., 2013; King et al., 2014; Seifina et al., 2014; Rozanska et al., 2014), the most plausible scenario is that the observed polarization fraction of \\sim 8% in the 2-8 keV band is due to the thermal and/or reflected components.
+
+\\begin{table}
+
+\\begin{tabular}{l l l} \\hline Component & Parameter & Value \\\\ \\hline polpow & A_{\\rm norm} (10^{-2}) & 2.5\\pm 0.3 \\\\ polpow & A_{\\rm index} & -0.66\\pm 0.07 \\\\ polpow & \\psi_{\\rm norm} (degree) & 17.9\\pm 0.5 \\\\ TBabs & N_{H} (10^{22} cm{}^{-2}) & 12.18\\pm 0.04 \\\\ xzipcf{}_{1} & N_{H} (10^{22} cm{}^{-2}) & 31^{+7}_{-4} \\\\ zxipcf{}_{1} & \\log\\xi & 4.73^{+0.05}_{-0.07} \\\\ xzipcf{}_{1} & Covering fraction & \\leq0.93 \\\\ xzipcf{}_{1} & Redshift (10^{-3}) & -6.3^{+0.8}_{-1.1} \\\\ zxipcf{}_{2} & Redshift (10^{-3}) & 3.2^{+1.2}_{-0.9} \\\\ diskbb & T_{in} (keV) & 1.472\\pm 0.003 \\\\ diskbb & norm & 166\\pm 2 \\\\ diskbb & Flux{}^{\\dagger} (10^{-8} erg cm{}^{-2} s{}^{-1}) & 1.043\\pm 0.003 \\\\ \\hline \\chi^{2}/dof & & 269.1 / 223 \\\\ \\hline \\end{tabular} {}^{\\dagger} Unabsorbed flux in the 2-12 keV range.
+
+\\end{table}
+
+Table 2: _NICER_’s and _IXPE_’s best-fitting spectral parameters for 4U 1630-47 with the model polpow*TBabs*zxipcf*zxipcf*diskbb.
+
+[MISSING_PAGE_FAIL:7]
+
+Chandrasekhar, S., & Breen, F. H. 1947, ApJ, 105, 435, doi: 10.1086/144918
+
+* Chauvin et al. (2018) Chauvin, M., Floren, H. G., Friis, M., et al. 2018, Nature Astronomy, 2, 652, doi: 10.1038/s41550-018-0489-x
+
+* Di Marco et al. (2022) Di Marco, A., Fabiani, S., La Monaca, F., et al. 2022, AJ, 164, 103, doi: 10.3847/1538-3881/ac7719
+
+* Diaz Trigo et al. (2013) Diaz Trigo, M., Miller-Jones, J. C. A., Migliari, S., Broderick, J. W., & Tzioumis, T. 2013, Nature, 504, 260, doi: 10.1038/nature12672
+
+* Farinelli et al. (2023) Farinelli, R., Fabiani, S., Poutanen, J., et al. 2023, MNRAS, 519, 3681, doi: 10.1093/mnras/stac3726
+
+* Fender et al. (1999) Fender, R., Corbel, S., Tzioumis, T., et al. 1999, ApJ, 519, L165, doi: 10.1086/312128
+
+* Gatuzz et al. (2019) Gatuzz, E., Diaz Trigo, M., Miller-Jones, J. C. A., & Migliari, S. 2019, MNRAS, 482, 2597, doi: 10.1093/mnras/sty2850
+
+* Jones et al. (1976) Jones, C., Forman, W., Tananbaum, H., & Turner, M. J. L. 1976, ApJ, 210, L9, doi: 10.1086/182291
+
+* Kalemci et al. (2018) Kalemci, E., Maccarone, T. J., & Tomsick, J. A. 2018, ApJ, 859, 88, doi: 10.3847/1538-4357/aabcd3
+
+* King et al. (2014) King, A. L., Walton, D. J., Miller, J. M., et al. 2014, ApJ, 784, L2, doi: 10.1088/2041-8205/784/1/L2
+
+* Kislat et al. (2015) Kislat, F., Clark, B., Beilicke, M., & Krawczynski, H. 2015, Astroparticle Physics, 68, 45, doi: 10.1016/j.astropartphys.2015.02.007
+
+* Kosenkov et al. (2020) Kosenkov, I. A., Veledina, A., Berdyugin, A. V., et al. 2020, MNRAS, 496, L96, doi: 10.1093/mnrasl/slaa096
+
+* Krawczynski (2012) Krawczynski, H. 2012, ApJ, 754, 133, doi: 10.1088/0004-637X/754/2/133
+
+* Krawczynski et al. (2022) Krawczynski, H., Muleri, F., Dovciak, M., et al. 2022, Science, 378, 650, doi: 10.1126/science.add5399
+
+* Kubota et al. (2007) Kubota, A., Dotani, T., Cottam, J., et al. 2007, PASJ, 59, 185, doi: 10.1093/pasj/59.sp1.S185
+
+* Kuulkers et al. (1998) Kuulkers, E., Wijnands, R., Belloni, T., et al. 1998, ApJ, 494, 753, doi: 10.1086/305248
+
+* Liu et al. (2022) Liu, Q., Liu, H., Bambi, C., & Ji, L. 2022, MNRAS, 512, 2082, doi: 10.1093/mnras/stac616
+
+* Long et al. (2022) Long, X., Feng, H., Li, H., et al. 2022, ApJL, 924, L13, doi: 10.3847/2041-8213/ac4673
+
+* Manfreda (2020) Manfreda, A. 2020, Journal of Instrumentation, 15, C04049, doi: 10.1088/1748-0221/15/04/C04049
+
+* Miller et al. (2015) Miller, J. M., Fabian, A. C., Kaastra, J., et al. 2015, ApJ, 814, 87, doi: 10.1088/0004-637X/814/2/87
+
+* Mitsuda et al. (1984) Mitsuda, K., Inoue, H., Koyama, K., et al. 1984, PASJ, 36, 741
+
+* Poutanen et al. (2023) Poutanen, J., Veledina, A., & Beloborodov, A. M. 2023, arXiv e-prints, arXiv:2302.11674, doi: 10.48550/arXiv.2302.11674
+
+* Priedhorsky (1986) Priedhorsky, W. 1986, Ap&SS, 126, 89, doi: 10.1007/BF00644177
+
+* Rawat et al. (2023) Rawat, D., Mendez, M., Garcia, F., et al. 2023, MNRAS, 520, 113, doi: 10.1093/mnras/stad126
+
+* Remillard et al. (2022) Remillard, R. A., Loewenstein, M., Steiner, J. F., et al. 2022, AJ, 163, 130, doi: 10.3847/1538-3881/ac4ae6
+
+* Rozanska et al. (2014) Rozanska, A., Madej, J., Baginska, P., Hryniewicz, K., & Handzlik, B. 2014, A&A, 562, A81, doi: 10.1051/0004-6361/201321567
+
+* Schnittman & Krolik (2009) Schnittman, J. D., & Krolik, J. H. 2009, ApJ, 701, 1175, doi: 10.1088/0004-637X/701/2/1175
+
+* Seifina et al. (2014) Seifina, E., Titarchuk, L., & Shaposhnikov, N. 2014, ApJ, 789, 57, doi: 10.1088/0004-637X/789/1/57
+
+* Sobolev (1963) Sobolev, V. V. 1963, A treatise on radiative transfer. (Van Nostrand)
+
+* Taverna et al. (2020) Taverna, R., Zhang, W., Dovciak, M., et al. 2020, MNRAS, 493, 4960, doi: 10.1093/mnras/staa598
+
+* Verner et al. (1996) Verner, D. A., Ferland, G. J., Korista, K. T., & Yakovlev, D. G. 1996, ApJ, 465, 487, doi: 10.1086/177435
+
+* Wang & Mendez (2016) Wang, Y., & Mendez, M. 2016, MNRAS, 456, 1579, doi: 10.1093/mnras/stv2814
+
+* Weisskopf et al. (2022) Weisskopf, M. C., Soffitta, P., Baldini, L., et al. 2022, Journal of Astronomical Telescopes, Instruments, and Systems, 8, 026002, doi: 10.1117/1.JATIS.8.2.026002
+
+* Wilms et al. (2000) Wilms, J., Allen, A., & McCray, R. 2000, ApJ, 542, 914, doi: 10.1086/317016

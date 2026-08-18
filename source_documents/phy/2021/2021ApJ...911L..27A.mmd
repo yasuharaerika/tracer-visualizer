@@ -1,0 +1,157 @@
+###### Abstract
+
+The highest-energy known gamma-ray sources are all located within 0.5 degrees of extremely powerful pulsars. This raises the question of whether ultra-high-energy (UHE; >56 TeV) gamma-ray emission is a universal feature expected near pulsars with a high spin-down power. Using four years of data from the High Altitude Water Cherenkov (HAWC) Gamma-Ray Observatory, we present a joint-likelihood analysis of ten extremely powerful pulsars to search for subthreshold UHE gamma-ray emission correlated with these locations. We report a significant detection (>3\\sigma), indicating that UHE gamma-ray emission is a generic feature of powerful pulsars. We discuss the emission mechanisms of the gamma rays and the implications of this result. The individual environment, such as the magnetic field and particle density in the surrounding area, appears to play a role in the amount of emission.
+
++
+
+Footnote †: slugcomment: Submitted to The Astrophysical Journal Letters
+
+## 1 Introduction
+
+Ultra-high-energy (UHE; >56 TeV) gamma-ray emission can be created via hadronic or leptonic processes. In the hadronic mechanism, a neutral pion decays into two gamma rays. In the leptonic mechanism, a lower-energy photon scatters off a relativistic electron via inverse Compton scattering. The electron transfers part of its energy to the gamma ray, resulting in a higher-energy photon.
+
+Traditionally, it was thought that UHE gamma-ray sources would be hadronic in nature, as leptonic emission is suppressed in this energy regime due to the Klein-Nishina (KN) effect. However, present-day gamma-ray observatories have the sensitivity required to detect leptonic sources above 56 TeV. See, for example, the detections of the Crab Nebula as well as several known pulsar wind nebulae (PWN) (Abeysekara et al., 2019; Amenomori et al., 2019; Abeysekara et al., 2020; Abdalla et al., 2019). The astrophysical spectrum of a leptonic source typically exhibits significant curvature due to the KN effect (Moderski et al., 2005). Conversely, hadronic sources follow the spectrum of their parent cosmic-ray population, which may or may not include a cutoff or curvature.
+
+The High Altitude Water Cherenkov (HAWC) Observatory is a gamma-ray observatory with an wide instantaneous field-of-view (\\sim2 steradians) and sensitivity to energies between a few hundred GeV and a few hundred TeV. It is sensitive to sources with declinations between -26 and +64 degrees (Smith, 2015; Abeysekara et al., 2017, 2019).
+
+The first HAWC catalog of UHE sources (Abeysekara et al. (2020); hereafter referred to as the "eHWC" catalog) contains nine sources emitting above 56 TeV, three of which continue above 100 TeV. The highest-energy sources all exhibit curvature in the spectrum. Additionally, all nine sources are located within 0.5 degrees of pulsars. For eight of the nine sources, the pulsar has an extremely high spin-down power (\\dot{E}>10^{36} erg/s). This is much higher than the number of high-\\dot{E} pulsars that would be expected to be found near UHE gamma-ray sources (Abeysekara et al., 2020). Emission near pulsars is expected to be powered by a PWN or TeV halo and is therefore dominantly leptonic, even at the high energies studied here (Breuhaus et al., 2020; Sudoh et al., 2021). While young pulsars are expected to have an associated supernova remnant (SNR) with accompanying hadronic emission, there has only been one detection of gamma-ray emission from an SNR to UHE, and leptonic emission from this source has not been conclusively ruled out (Albert et al., 2020). SNR theory starts to run into technical problems accelerating particles to these energies (Gabici, 2017). SNR acceleration to UHE energies may not be possible (Zeng et al., 2021).
+
+The proximity of these gamma-ray sources to the most powerful pulsars, along with the curvature in their spectra, invites the question of whether UHE gamma-ray emission is a generic feature expected near these sources. This is investigated in this paper through a joint-likelihood analysis of pulsars with \\dot{E}>10^{36} erg/s to search for subthreshold sources in the HAWC data. While each source is too weak to be individually detected in HAWC's standard catalog search, analyzing the regions jointly may lead to a general detection for this source class.
+
+The paper is organized as follows: Section 2 describes the details of the joint-likelihood method. Section 3 contains the results of the analysis. Section 4 discusses implications of the results.
+
+## 2 Analysis Method
+
+### Joint-Likelihood Method
+
+In this paper, we perform a joint analysis of several high-\\dot{E} pulsars. The analysis uses a binned maximumlikelihood method that searches for a gamma-ray excess above the background, using a simple model that describes the UHE emission from pulsars based on various observables such as the distance and pulsar age. This is performed using the HAWC Accelerated Likelihood (HAL)1 plugin to the Multi-Mission Maximum Likelihood Framework (3ML) (Vianello et al., 2015). We describe the background rejection and likelihood method in Abeysekara et al. (2019). HAWC's background comes from two main sources: the Galactic diffuse background stemming from unresolved gamma-ray sources, and cosmic rays that are detected by HAWC and survive gamma/hadron separation cuts. Note that neither background is very large above 56 TeV. The Galactic diffuse background is largely due to Inverse Compton scattering, which is not very prominent at these energies. The fraction of cosmic rays surviving gamma/hadron separation cuts is also very low: \\sim0.001 (Abeysekara et al., 2017).
+
+Footnote 1: [https://github.com/threeML/hawc_hal](https://github.com/threeML/hawc_hal)
+
+Data were collected over 1343 days between June 2015 and June 2019. The data are binned in quarter-decade bins of reconstructed gamma-ray energy using the "ground parameter" energy estimator, one of two energy estimators currently used by HAWC (Abeysekara et al., 2019).
+
+We use the last three quarter-decade energy bins from Abeysekara et al. (2019), restricting the analysis to reconstructed energies between 56 and 316 TeV. These are the highest energies probed by HAWC. At these energies, there is very little diffuse emission and less source confusion than at lower energies.
+
+The spectral model is a power law:
+
+\\frac{dN}{dE}=A_{i}K\\left(\\frac{E}{E_{0}}\\right)^{-\\alpha},  where A_{i} accounts for the model-dependent relative flux of each source (see Section 2.3), K is the normalization, and E_{0} is the pivot energy, which is fixed at the center of each energy bin. The three values used for E_{0} in this analysis are 74.99 TeV, 133.35 TeV, and 237.14 TeV. Setting the pivot energy at the center of each bin makes the analysis relatively insensitive to the choice of \\alpha, which is fixed at 2.5.
+
+We fit each source (see Table 1) individually in each energy bin, placing a step function at the boundaries of the bin to ensure that events that are mis-reconstructed in energy are excluded. We assume the sources are spatially extended with a Gaussian morphology. The width is fixed at \\sigma=0.34{}^{\\circ}. The values of \\alpha and \\sigma are approximately the average values for the highest-energy gamma-ray sources from the eHWC catalog (Abeysekara et al., 2020).
+
+To obtain a joint-likelihood result, the log-likelihood profiles for each individual source, in each energy bin, are added and the value of K (hereafter called \\hat{K}) that optimizes this log-likelihood profile is found. The total flux normalization, \\kappa, for the ten sources combined is then just:
+
+\\kappa=\\sum_{i=1}^{n_{sources}}\\hat{K}A_{i}. 
+
+Using this flux normalization, the total differential flux from all ten sources is:
+
+\\frac{dN}{dE}=\\kappa\\left(\\frac{E}{E_{0}}\\right)^{-\\alpha}. 
+
+We calculate a test statistic (TS) to show how significant the value of \\kappa is:
+
+\\text{TS}=2\\text{ln}\\frac{L_{S+B}(\\kappa)}{L_{B}},  where L_{S+B} is the maximum likelihood for the signal-plus-background hypothesis and L_{B} is the likelihood for the background-only hypothesis.
+
+After an overall best-fit value of \\kappa is determined, it is used as an input to a Markov chain Monte Carlo and a distribution of the value is determined. If the TS in a given energy bin is significant (TS > 4), a Bayesian credible interval (68% containment) is shown, obtained from the estimated distribution of the parameter \\kappa. The model only has one degree of freedom, so using Wilks Theorem (Wilks, 1938), a TS value of 4 corresponds to 2\\sigma. Otherwise, 95% credible interval quasi-differential upper limit is plotted. A uniform prior is used in the Bayesian analysis.
+
+In the bins where an upper limit is determined, the range of expected upper limits are obtained from simulations of Poisson-fluctuated background.
+
+### Source Selection and Dataset
+
+For this analysis, we define the source list by selecting all pulsars from the ATNF pulsar database, version 1.622(Manchester et al., 2005) in the inner Galactic plane that are within HAWC's field-of-view (|b|<1^{\\circ}, 5^{\\circ}<l<90^{\\circ}) and have \\dot{E}>10^{36} erg/s. There are 24 pulsars that meet this criteria (see Table 1). Pulsars with a high \\dot{E} are centered around the Galactic plane, so the choice to concentrate on |b|<1^{\\circ} only removes3 additional pulsars from the analysis. We use this list of 24 pulsars to determine which models of emission are reasonable (see Section 2.3).
+
+After making this determination, this list is then downselected to search for sub-threshold gamma-ray sources. First, we remove all pulsars that are located within a degree of sources from the eHWC catalog (Abeysekara et al., 2020). This removes pulsars that already have significant UHE emission detected in their vicinity. Since the gamma-ray emission is modeled as extended in nature, this also removes pulsars whose associated emission may overlap with those known sources, which would require more detailed modeling.
+
+We remove three additional pulsars from the source selection. PSR J1813-1749 is removed because HAWC has added more data since the publication of Abeysekara et al. (2020) and has detected a new UHE source (eHWC-J1813-176) \\sim0.2{}^{\\circ} away from the pulsar. PSR J1913+1011 and PSR J1930+1852 have been removed because the known TeV emission in those regions is likely from a SNR, not a PWN (Abdalla et al., 2018, 2018). Since the majority of the emission at these energies is expected to be from a PWN or TeV halo, this is done to prevent the introduction of a different, predominantly hadronic source class into the analysis.
+
+The final list is composed of ten pulsars that are candidates for sub-threshold gamma-ray emission. Figure 1 shows HAWC's > 56 TeV map with these sources labeled.
+
+### Models
+
+The parameter A_{i} in Equation 1 describes the relative contribution each pulsar receives in the analysis. This parameter can be used to test different models of gamma-ray emission near pulsars. For the models that rely on pulsar parameters, the relevant quantities are taken from the ATNF pulsar catalog, version 1.62 (Manchester et al., 2005). We consider a variety of different models. In all descriptions, "emission" refers solely to gamma-ray emission above 56 TeV.
+
+* **No model**: Here, A_{i} for all sources is set equal to 1. All sources are treated equally and the emission is expected to be uncorrelated with pulsar parameters such as distance.
+
+* \\textbf{1}/\\textbf{d}^{2}: In this model, A_{i} is set to 1/d^{2}, where d is the distance to the pulsar. This model assumes that closer sources will produce observable emission.
+
+* \\hat{\\textbf{E}}/\\textbf{d}^{2}: Here, the 1/d^{2} model discussed above is multiplied by the spin-down power of the pulsar. Therefore, closer, more-energetic pulsars have more gamma-ray emission.
+
+* **Inverse age**: In this model, A_{i} is the inverse of the spin-down age. This is defined as P/(2\\dot{P}), where P and \\dot{P} are the period and the time derivative of the period, respectively. In this model, younger sources are more likely to have detectable emission.
+
+* **Flux at 7 TeV**: Here, A_{i} is the HAWC flux at 7 TeV. This model assumes that sources that are bright at multi-TeV energies should also give off detectable emission above 56 TeV. The 0.5{}^{\\circ} extended source map from the third catalog of HAWC sources (3HWC) (Albert et al., 2020) is used to extract these values. A_{i} is computed by averaging the flux from all pixels within a 0.5 degree radius of the pulsar.
+
+## 3 Results
+
+We first run the joint-likelihood analysis (as described in Section 2) with the full list of 24 pulsars to determine which models of emission are reasonable. Table 2 gives the total TS for each scenario. For each model, we can also calculate the expected gamma-ray flux above 56 TeV from an arbitrary pulsar using Equation 1. The values of K, derived from Equation 2 are also given in Table 2. In all cases, the TS is much higher than 5\\sigma. Two scenarios, the flux at 7 TeV and 1/d^{2}, perform better than the "no model case". The model based on the inverse age of the pulsar performs significantly worse than the others, but the significance, \\sqrt{TS} is still well above the 5\\sigma level.
+
+\\begin{table}
+
+\\begin{tabular}{|c||c|c|c|c|c|c|c|c|} \\hline PSR name & RA ({}^{\\circ}) & Dec ({}^{\\circ}) & Age (\\frac{P}{\\sigma_{P}^{2}}) (kyr) & \\dot{E} (\\times 10^{36} erg/s) & Distance (kpc) & P (s) & \\dot{P} (ss{}^{-1}) & Subthreshold? \\\\ \\hline B1800-21 & 270.96 & -21.62 & 15.8 & 2.2 & 4.40 & 0.134 & 1.35 \\times 10^{-13} & ✓ \\\\ J1809-1917 & 272.43 & -19.29 & 51.3 & 1.8 & 3.27 & 0.083 & 2.55 \\times 10^{-14} & \\\\ J1811-1925 & 272.87 & -19.42 & 23.3 & 6.4 & 5.00 & 0.065 & 4.4 \\times 10^{-14} & \\\\ J1813-1749 & 273.40 & -17.83 & 5.6 & 56 & 4.70 & 0.045 & 1.27 \\times 10^{-13} & \\\\ J1826-1256 & 276.54 & -12.94 & 14.4 & 3.6 & 1.55 & 0.110 & 1.21 \\times 10^{-13} & \\\\ B1823-13 & 276.55 & -13.58 & 21.4 & 2.8 & 3.61 & 0.101 & 7.53 \\times 10^{-14} & \\\\ J1828-1101 & 277.08 & -11.03 & 77.1 & 1.6 & 4.77 & 0.072 & 1.48 \\times 10^{-14} & ✓ \\\\ J1831-0952 & 277.89 & -9.87 & 128 & 1.1 & 3.68 & 0.067 & 8.32 \\times 10^{-15} & ✓ \\\\ J1833-1034 & 278.39 & -10.57 & 4.85 & 34 & 4.10 & 0.062 & 2.02 \\times 10^{-13} & ✓ \\\\ J1837-0604 & 279.43 & -6.08 & 33.8 & 2.0 & 4.77 & 0.096 & 45.1 \\times 10^{-15} & \\\\ J1838-0537 & 279.73 & -5.62 & 4.89 & 6.0 & 2.01  & 0.146 & 4.72 \\times 10^{-13} & \\\\ J1838-0655 & 279.51 & -6.93 & 22.7 & 5.5 & 6.60 & 0.070 & 4.93 \\times 10^{-14} & ✓ \\\\ J1844-0346 & 281.14 & -3.78 & 11.6 & 4.2 & 2.40  & 0.113 & 1.55 \\times 10^{-13} & \\\\ J1846-0258 & 281.60 & -2.98 & 0.728 & 8.1 & 5.8 & 0.327 & 7.11 \\times 10^{-12} & \\\\ J1849-0001 & 282.23 & -0.02 & 42.9 & 9.8 & 7.0  & 0.039 & 1.42 \\times 10^{-14} & \\\\ J1856+0245 & 284.21 & 2.76 & 20.6 & 4.6 & 6.32 & 0.081 & 6.21 \\times 10^{-14} & ✓ \\\\ J1907+0602 & 286.98 & 6.04 & 19.5 & 2.8 & 2.37 & 0.107 & 8.68 \\times 10^{-14} & \\\\ J1913+1011 & 288.33 & 10.19 & 169 & 2.9 & 4.61 & 0.036 & 3.37 \\times 10^{-15} & \\\\ J1928+1746 & 292.18 & 17.77 & 82.6 & 1.6 & 4.34 & 0.069 & 1.32 \\times 10^{-14} & ✓ \\\\ J1930+1852 & 292.63 & 18.87 & 2.89 & 12 & 7.00 & 0.137 & 7.51 \\times 10^{-13} & \\\\ J1935+2025 & 293.92 & 20.43 & 20.9 & 4.7 & 4.60 & 0.080 & 6.08 \\times 10^{-14} & ✓ \\\\ B1937+21 & 294.91 & 21.58 & 2.35e5 & 1.1 & 3.50 & 0.002 & 1.05\\times 10^{-19} & ✓ \\\\ J2021+3651 & 305.27 & 36.85 & 17.2 & 3.4 & 1.8 & 0.104 & 9.57 \\times 10^{-14} & \\\\ J2022+3842 & 305.59 & 38.70 & 8.94 & 30 & 10.00 & 0.049 & 8.61 \\times 10^{-14} & ✓ \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Information on the pulsars. All information comes from the ATNF database, version 1.62 (Manchester et al., 2005) except for some distance estimates which are not included in the pulsar database (see footnotes). Here, \\dot{E} is the spin-down energy loss rate, P is the barycentric period, and \\dot{P} is the time derivative of the period. The checkmark in the last column denotes the ten pulsars included in the sub-threshold analysis.
+
+\\begin{table}
+
+\\begin{tabular}{|c||c|c|c|c|c|} \\hline Model & K (56 < E < 100 TeV) & K (100 < E < 177 TeV) & K (177 < E < 316 TeV) & Units for A_{i} & Total TS \\\\ \\hline No model & 2.55 \\times 10{}^{-16} & 4.65 \\times 10{}^{-17} & 9.46 \\times 10{}^{-18} & dimensionless & 633 \\\\ 1/d^{2} & 2.44 \\times 10{}^{-16} & 4.50 \\times 10{}^{-16} & 8.12 \\times 10{}^{-17} & kpc{}^{-2} & 734 \\\\ \\dot{E}/d^{2} & 4.06 \\times 10{}^{-13} & 6.88 \\times 10{}^{-14} & 1.04 \\times 10{}^{-14} & erg m{}^{-2} s{}^{-1} & 568 \\\\ Inverse age & 6.36 \\times 10{}^{-13} & 1.10 \\times 10{}^{-13} & 1.65 \\times 10{}^{-14} & yr{}^{-1} & 152 \\\\ Flux at 7 TeV & 5.42 \\times 10{}^{-3} & 9.11 \\times 10{}^{-4} & 1.90 \\times 10{}^{-4} & TeV{}^{-1} cm{}^{-2} s{}^{-1} & 886 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: The proportionality constants needed to calculate the expected gamma-ray flux near a given pulsar. The dimensions for A_{i}K are energy{}^{-1} distance{}^{-1} time{}^{-1}. With the value of K known and A_{i} in the units given by the last column, the expected gamma-ray flux can easily be calculated using Equation 1. K is reported at the pivot energy in each bin. Proportionality constants are desired from the full sample of 24 pulsars.
+
+Satisfied that the chosen models are adequate, we then run the joint-likelihood analysis using the downselected list of ten pulsars (as described in Section 2.2) to search for sub-threshold leptonic emission from pulsars. Results are given in Table 3. Each of the models give a total TS value above 9, corresponding to a detection of more than 3\\sigma. For some models, the TS is much higher. The 1/d^{2} model gives the highest TS: 41.3 (6.4\\sigma). The same two models as before, 1/d^{2} and the gamma-ray flux at 7 TeV, perform better than the "no model" case, but in this case 1/d^{2} performs the best, with a TS slightly higher than the "gamma-ray flux at 7 TeV" scenario.
+
+Figure 2 shows the total flux from all ten sub-threshold candidates for this best-case scenario. The figures for the other models can be seen in the Appendix. Table 4, also located in the Appendix, gives the total flux normalizations for each model.
+
+The Appendix also includes a discussion of how often TS this high would be expected from stacking random points on the sky.
+
+### Systematic Uncertainties
+
+Systematic uncertainties are broken down into two categories: detector systematics and modeling systematics. Detector systematics, described in Abeysekara et al. (2019), stem from mis-modeling of detector quantities such as the photomultiplier tube threshold and charge in simulated Monte Carlo events. Each systematic is treated independently; the results are added in quadrature to get a total uncertainty. This process is repeated in each energy bin. Depending on the energy bin and model assumed, the detector systematic ranges from 10% to 25%.
+
+Modeling systematic uncertainties investigate how the analysis would change if the emission near the sub-threshold pulsars is different from what is assumed in the main analysis. Several modeling systematics are considered:
+
+* Spectral indices in the power law (\\alpha in Equation 1) of 2.0 and 3.0
+
+* Replacing the power-law spectral model (Equation 1) with a power-law with an exponential cutoff: \\frac{dN}{dE}=A_{i}K\\left(\\frac{E}{E_{0}}\\right)^{-\\alpha}e^{-E/E_{cut}}. (5) Here, \\alpha is fixed at 2.5 and E_{cut} is fixed at 60 TeV, which are average values from Abeysekara et al. (2020)
+
+* Changing the Gaussian width to 0.23{}^{\\circ} and 0.45{}^{\\circ}. These are \\pm 1 standard deviation from the average extension of the sources from HAWC's eHWC catalog (Abeysekara et al., 2020).
+
+The modeling systematics are larger than the detector systematics, driven predominantly by the assumed source size. In the last energy bin, assuming a power law with an exponential cutoff instead of a power law is also a dominant effect.
+
+Depending on energy and model, the modeling systematic ranges from 13% to 34%. The sum of the detector and modeling systematics, added in quadrature, are denoted with a dotted black line in Figure 2 and in Figures 3 through 5 in the Appendix.
+
+As described in Albert et al. (2020), the absolute pointing uncertainty of HAWC is declination-dependent and may be larger than previously thought; perhaps as large as 0.3{}^{\\circ} at the edges of the field-of-view. This means that the TS values presented in this paper may be underestimated; the size of this effect is \\sim10%. The flux may also be underestimated. The flux underestimate is a function of energy and ranges from 9% in the 56-100 TeV bin, decreasing to a negligible amount (0.6%) in the 177-316 TeV bin.
+
+## 4 Discussion
+
+Regardless of which model is used, it is clear that the areas around high-\\dot{E} pulsars show hints of emitting at ultra-high energies (> 56 TeV). Interestingly, some models based on the pulsar parameters, such as \\dot{E} or inverse age, have much lower TS values than the "no model" case, implying that they do not describe the emission well. Two models that perform better than the "no model" case are the gamma-ray flux at 7 TeV and 1/d^{2}.
+
+It is unclear at this time why some pulsar parameters do not seem to be good predictors of emission. Some of these parameters have fairly large uncertainties, which could be a contributing factor. For example, the characteristic age of the pulsar can differ from the true age.
+
+However, the uncertainties on the pulsar distances are relatively small. For the ATNF pulsar database, 95% of pulsars will have a relative error of less than a factor of 0.9 in their distance estimate (10% uncertainty) (Yao et al., 2017).
+
+Alternatively, the individual environment that each pulsar is in could play a large factor in the amount of UHE emission. While the pulsar itself is the particle accelerator, diffusion of electrons and positrons away from the pulsar is strongly dependent on quantities such as the density and magnetic field of the environment. Note that this may be only true for the high-\\dot{E} pulsars studied here, which are relatively young; this means the magnetic fields are likely to be affected by the pulsar age and SNR interactions. For weaker, older pulsars, the magnetic field density and environment are instead likely dominated by the ISM.
+
+Also, the emission mechanisms are still uncertain. While it is commonly assumed that the bulk of emission from the vicinity of a pulsar is from a PWN and therefore predominantly leptonic, a hadronic contribution cannot be _a priori_ discarded. While emission from associated SNRs are unlikely, some have raised the possibility of more exotic hadronic emission mechanisms in or near PWN (Amato et al., 2003; Di Palma et al., 2017). Several of the HAWC sources known to emit above 56 TeV, most notably eHWC J1908+063 and eHWC J1825-134, have molecular clouds nearby (Duvidovich et al., 2020; Voisin et al., 2016). These molecular clouds may be serving as a target for a portion of the gamma-ray production.
+
+Multi-wavelength and multi-messenger campaigns can help disentangle emission mechanisms. A neutrino detection coincident with one of these pulsars would be a smoking gun for hadronic emission mechanisms in or near PWN. However, a recent stacked analysis looking for neutrino emission from PWN by IceCube did not yield a detection (Aartsen et al., 2020).
+
+Electromagnetic multi-wavelength studies could also be helpful. A leptonic source emitting above 56 TeV will have a different signature at lower energies than a hadronic one. For example, 100 TeV gamma rays imply a synchrotron peak in the keV regime, assuming a 3 \\muG field (Hinton and Hofmann, 2009), with the emission extending up to the MeV energy range. If the emission is instead predominantly hadronic, there will be no such peak at these energies. Proposed experiments such as AMEGO (McEnery et al., 2019) will be important in distinguishing emission mechanisms.
+
+## 5 Conclusions
+
+In this study, we have searched for UHE gamma-ray emission in the vicinity of pulsars with an \\dot{E}>10^{36} erg/s. We find, with high significance (>3\\sigma), that UHE gamma-ray emission is a generic feature in the vicinity of this class of pulsars. 1/d^{2} is the model that gives the highest TS; a source that is closer to us is more likely to have observed UHE emission. Other pulsar parameters do not seem to be good predictors of emission. This implies that the environments the pulsars are located in may play a role in the amount of emission.
+
+The TS values obtained are higher than would be expected from combining random points in the Galactic plane. There is the possibility that all known gamma-ray sources emit above this energy threshold, albeit at an extremely low flux.
+
+Multimessenger and multiwavelength studies are needed to disentagle the origin of the UHE emission from these pulsars.
+
+We acknowledge the support from: the US National Science Foundation (NSF); the US Department
+
+\\begin{table}
+
+\\begin{tabular}{|c||c|c|c|c|} \\hline Model & TS (56 < E < 100 TeV) & TS (100 < E < 177 TeV) & TS (177 < E < 316 TeV) & Total TS \\\\ \\hline No model & 27.9 & 8.33 & 1.59 & 37.9 \\\\ 1/d^{2} & 31.9 & 9.08 & 1.29 & 41.3 \\\\ \\dot{E}/d^{2} & 9.58 & 5.24 & 0.00 & 14.8 \\\\ Inverse age & 9.19 & 3.79 & 0.03 & 13.0 \\\\ Flux at 7 TeV & 26.3 & 9.61 & 3.62 & 39.6 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: The test statistic for the joint-likelihood analysis for each model, using the ten sub-threshold sources. Note that \\kappa is fit individually in each energy bin so the last column is not a joint TS. of Energy Office of High-Energy Physics; the Laboratory Directed Research and Development (LDRD) program of Los Alamos National Laboratory; Consejo Nacional de Ciencia y Tecnologia (CONACyT), Mexico, grants 271051, 232656, 260378, 179588, 254964, 258865, 243290, 132197, A1-S-46288, A1-S-22784, catedras 873, 1563, 341, 323, Red HAWC, Mexico; DGAPA-UNAM grants IG101320, IN111315, IN111716-3, IN111419, IA102019, IN110621; VIEP-BUAP; PIFI 2012, 2013, PROFOCIE 2014, 2015; the University of Wisconsin Alumni Research Foundation; the Institute of Geophysics, Planetary Physics, and Signatures at Los Alamos National Laboratory; Polish Science Centre grant, DEC-2017/27/B/ST9/02272; Coordinacion de la Investigacion Cientifica de la Universidad Michoacana; Royal Society - Newton Advanced Fellowship 180385; Generalitat Valenciana, grant CIDE-GENT/2018/034; Chulalongkorn University's CUniverse (CUAASC) grant. Thanks to Scott Delay, Luciano Diaz and Eduardo Murrieta for technical support.

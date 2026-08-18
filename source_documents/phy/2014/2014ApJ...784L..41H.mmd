@@ -1,0 +1,117 @@
+###### Abstract
+
+The sudden spin-down in the rotation of magnetar 1E 2259+586 observed by Archibald et al. (2013) was a rare event. However this particular event, referred to as an _anti-glitch_, was followed by another event which Archibald et al. (2013) suggested could either be a conventional glitch or another anti-glitch. Although there is no accompanied radiation activity or pulse profile change, there is decisive evidence for the existence of the second timing event, judging from the timing data. We apply Bayesian Model Selection to quantitatively determine which of these possibilities better explains the observed data. We show that the observed data strongly supports the presence of two successive anti-glitches with a Bayes Factor, often called the odds ratio, greater than 40. Furthermore, we show that the second anti-glitch has an associated frequency change \\Delta\\nu of -8.2\\times 10^{-8} Hz. We discuss the implications of these results for possible physical mechanisms behind this anti-glitch.
+
+Yi-Ming Hu: y.hu.1@research.gla.ac.uk
+
+## 1. Introduction
+
+Recently, Archibald et al. (2013) discovered an unexpected anti-glitch phenomenon in magnetar 1E 2259+586. Unlike a normal glitch, which undergoes a sudden spin up, this magnetar experienced a sudden spin-down. The mechanism which caused this phenomenon is still under discussion (e.g. Tong, 2013; Lyutikov, 2013; Katz, 2013; Huang & Geng, 2013; Ouyed et al., 2013), but to our knowledge no model explicitly predicted an anti-glitch prior to this discovery, although Thompson et al. (2000) predict a similar potential phenomenon in SGR 1900+14.
+
+The data analysis performed by Archibald et al. (2013) shows that during the observation, 1E 2259+586 undergoes two timing events separated by 50-90 days. The first event is a certain anti-glitch, while the nature of the second event is less certain. If it is also an anti-glitch this might require a qualitatively different physical model to explain its origin. Importantly, however, the analysis performed in Archibald et al. (2013) was unable to distinguish between these two types of glitch for the second event.
+
+Since we know very little about the mechanism behind such a rare phenomenon, any information about it could be helpful to understand its physical cause. In this paper we seek to use the data themselves, employing the methods of Bayesian model selection, to distinguish between two competing models, wherein the second event is a glitch, or anti-glitch, respectively. More specifically, we compute the ratio of the _evidence_ for each model (as defined in Section 3) and investigate whether this ratio favours one model over the other.
+
+The structure of this paper is as follows. In Section 2 we briefly review relevant details of the model for the time of arrival of pulses from the progenitor. Section 3 then describes our Bayesian inference method for carrying out model selection. Section 4 presents the results of our analysis, including a careful check on their robustness. Finally Section 5 summarises our conclusions.
+
+## 2. Timing model
+
+The magnetar 1E 2259+586 was routinely observed by the X-ray Telescope (XRT) onboard Swift every 2-3 weeks, with more frequent observations being made shortly after discovering the first anti-glitch event reported in Archibald et al. (2013). The observations give the time of arrival (TOA) of each X-ray pulse (which can be corrected to the solar system barycenter), which in turn gives the pulse phase of the magnetar. Together with each TOA, the X-ray flux is also recorded. An increase in the X-ray flux helps to pinpoint the epoch of the first glitch event, while for the second event, no obvious flux change was detected - thus contributing to the confusion about the second event's type.
+
+We model the magnetar's phase evolution, \\phi(t), with the standard Taylor expansion of frequency and frequency derivatives (e.g. Lorimer & Kramer, 2005) using terms up to second order. The effect of a (anti-)glitch on the phase timing model will be a sudden change in the frequency and frequency evolution after the event (e.g. equation 11 of Hobbs et al., 2006). Therefore the difference between the phase model with and without the (anti-)glitch (under the assumption that no decaying frequency increment is required due to none being fitted by Archibald et al., 2013) is
+
+\\Delta\\Phi_{g}(t)=\\Delta\\phi_{g}+\\Delta\\nu(t-T_{g})+\\frac{1}{2}\\Delta\\dot{\\nu} (t-T_{g})^{2},  where T_{g} is the time of the (anti-)glitch, \\Delta\\phi_{g} is an initial sudden phase change, and \\Delta\\nu and \\Delta\\dot{\\nu} are respectively the difference in frequency and its first derivative before and after the glitch.
+
+We further define
+
+R_{i}=\\frac{\\phi_{i}-N_{i}}{\\nu} as the time residual after subtracting the model predictions from the data. Here \\phi_{i} is the predicted pulse phase at the i^{th} observation time t_{i} (i.e. \\phi(t_{i})), N_{i} is the exact phase at the TOA, which by definition is an integer, and \\nu is the frequency according to the model. Together withthe observed timing uncertainty, \\sigma_{i}, we can form
+
+\\chi^{2}=\\sum_{i=1}^{N}\\left(\\frac{R_{i}}{\\sigma_{i}}\\right)^{2}. 
+
+In the next Section we will define the likelihood as proportional to \\exp(-\\chi^{2}/2), and use it to evaluate the evidence for each model.
+
+## 3. Bayesian Inference
+
+In Bayesian Inference, given prior background information \\mathcal{I} and observed data D, the posterior probability, p(\\theta|D,\\mathcal{M},\\mathcal{I}), for a certain theoretical parameter set \\theta describing a model \\mathcal{M}, follows from Bayes' theorem
+
+p(\\theta|D,\\mathcal{M},\\mathcal{I})=\\frac{p(D|\\theta,\\mathcal{M},\\mathcal{I})p (\\theta|\\mathcal{M},\\mathcal{I})}{p(D|\\mathcal{M},\\mathcal{I})}. 
+
+Here p(D|\\theta,\\mathcal{M},\\mathcal{I}) is the likelihood, i.e. the probability of obtaining the observed data D given a particular set of parameters \\theta for model \\mathcal{M} and prior information \\mathcal{I}. p(\\theta|\\mathcal{M},\\mathcal{I}) is the prior probability for the parameters \\theta of model \\mathcal{M} and p(D|\\mathcal{M},\\mathcal{I}) is the evidence, i.e. the probability of obtaining the observed data given that model \\mathcal{M} is true. The evidence is defined as
+
+p(D|\\mathcal{M},\\mathcal{I})=\\int_{\\mathbf{\\Theta}}p(\\theta|\\mathcal{M}, \\mathcal{I})p(D|\\mathcal{M},\\theta,\\mathcal{I})d\\theta. 
+
+In other words the evidence is calculated by marginalising the likelihood over the space of the model parameters. It is then obvious that the calculated evidence depends on the choice of prior range for the parameters \\theta.
+
+Suppose there are several competing models \\mathcal{M}_{i} that can explain the data. The probability for each model given the observed data D is p(\\mathcal{M}_{i}|D,\\mathcal{I}). Applying Bayes' theorem, we obtain
+
+p(\\mathcal{M}_{i}|D,\\mathcal{I})=\\frac{p(D|\\mathcal{M}_{i},\\mathcal{I})p( \\mathcal{M}_{i}|I)}{p(D|\\mathcal{I})}. 
+
+The _odds ratio_ for two different models \\mathcal{M}_{i} and \\mathcal{M}_{j} can then be constructed as
+
+O_{ij}=\\frac{p(\\mathcal{M}_{i}|D,\\mathcal{I})}{p(\\mathcal{M}_{j}|D,\\mathcal{I })}=\\frac{p(D|\\mathcal{M}_{i},\\mathcal{I})p(\\mathcal{M}_{i}|\\mathcal{I})}{p(D |\\mathcal{M}_{j},\\mathcal{I})p(\\mathcal{M}_{j}|\\mathcal{I})}. 
+
+Normally, in the absence of further information, the prior probabilities for the two models are taken to be equal. In this case the odds ratio reduces to the ratio of the marginalised likelihoods, or evidences, which is known as the _Bayes Factor_. Usually, a Bayes Factor of 10 is already strong enough to favour one model over the other, while a Bayes Factor of 100 will be regarded as decisive (Jeffreys, 1961).
+
+The calculation of the evidence can be a time-consuming process for moderate-to-large dimensional parameter spaces. However the method of nested sampling (Skilling, 2006) makes it practicable to calculate evidence efficiently. In this work, we follow closely the method proposed in Veitch & Vecchio (2010) to calculate the Bayes Factor using nested sampling.
+
+## 4. Results
+
+In our analysis, the two models under consideration only differ in the sign of the frequency change for the second event. In order to avoid undue influence of the prior range on the Bayes Factor, we assign identical prior ranges to all common parameters in both models.
+
+### Setting the Priors
+
+In table 1 of Archibald et al. (2013), the parameters are given to be \\nu_{0}=0.143285110\\pm(4\\times 10^{-9})Hz, \\hat{\\nu}=-9.80\\pm 0.09\\times 10^{-15}Hz s{}^{-1}. The Epoch (MJD) is the time t_{0} when \\nu(t_{0})=\\nu_{0}. Since the magnetar has been observed for a long time (e.g. Dib, 2009; Kaspi & Gavriil, 2003), and the spin before the anti-glitch is not of interest, we fix those parameters to be constants.
+
+In both models, there are two independent (anti-)glitch events and for each event there are 4 parameters required to describe it: its epoch t and the changes in the frequency \\Delta\\nu, its first derivative \\Delta\\dot{\\nu} and the phase \\Delta\\phi_{g} caused by the event. Thus, in total there are eight parameters for each model. In order that the two models should have a common parametrisation we suppose that in the second model, after the second event (which is a normal glitch in this model), the frequency becomes \\nu_{g}=\\nu-\\Delta\\nu while in the first model, after the second event (which is an anti-glitch) the frequency becomes \\nu_{g}=\\nu+\\Delta\\nu. In this way \\Delta\\nu is a positive parameter for the second event in both models. With this design, the two models can have exactly the same priors, thus minimising the influence of the choice of prior on the final value of the Bayes Factor.
+
+For the epoch of the first anti-glitch event there is an obvious change in flux between the 19th and 20th observation; hence we set the prior for the epoch to be flat between these two data points. For the priors on other parameters we make use of their estimated values \\theta, together with their uncertainties \\sigma_{\\theta}, as reported in Archibald et al. (2013). Specifically we adopt a conservative, uniform prior of width equal to 2n times the uncertainty for each parameter - where we will adopt different values of n in order to explore the robustness of our results to the choice of prior, i.e. to check that our prior boundaries contain the vast bulk of the likelihood.
+
+Thus for each parameter (and where M_{i} refers to model i) the lower boundary of the uniform prior is set to be \\min(\\theta_{M_{1}}-n\\sigma_{\\theta;M_{1}},\\theta_{M_{2}}-n\\sigma_{\\theta;M_{2}}), while the upper boundary is set to be \\max(\\theta_{M_{1}}+n\\sigma_{\\theta;M_{1}},\\theta_{M_{2}}+n\\sigma_{\\theta;M_{2}}). Note however, that since \\Delta\\nu for the second event is always positive, its lower limit is set to be \\min(0,\\Delta\\nu_{M_{1}}-n\\sigma_{\\Delta\\nu;M_{1}},\\Delta\\nu_{M_{2}}-n\\sigma_{ \\Delta\\nu;M_{2}}).
+
+### Comparing the Models
+
+To calculate the evidence, a nested sampling code was applied with a stopping criterion set to equal e^{-5} - i.e. when new live points made an additional contribution to the evidence that was smaller than a fraction e^{-5} of the total, the nested sampling code was stopped. The value of n used for setting our priors was initially taken to be 10 - i.e. far beyond the 5\\sigma region. The two models were found to have evidence values of \\sim e^{-33} and \\sim e^{-29} respectively, which yields a Bayes Factor of 42.5\\pm 3.4 in favour of the successive anti-glitch model over the anti/normal glitch pair model. According to the definition of Jeffreys (1961), a Bayes Factor larger than 40 is already very strong evidence in favour of the successive anti-glitch model.
+
+For each model the posterior distribution of the model parameters was resampled appropriately from our nested sampling results. In figure 1 we show posteriors for the parameters of the second event in the double anti-glitch model. The contour lines correspond to 68.3\\%,95.5\\%and 99.7% credible intervals. The maximum posterior corresponds to the following best-fitting parameter values: epoch = MJD 56088.4; \\Delta\\nu=-8.2\\times 10^{-8} Hz; \\Delta\\dot{\\nu}=5.2\\times 10^{-15} Hz/s; phase change = -0.012 cycles.
+
+### Robustness Check
+
+We tested the robustness of our results by changing the width of our uniform priors and re-running the nested sampling analysis. Table 1 shows the mean Bayes Factor obtained as n is changed from 10 to 5 to 3, given 10 independent nested sampling runs for each n. We see that the Bayes Factor fluctuates around a value of \\sim 45, but in all cases our conclusions are consistent.
+
+The timing residuals, after subtracting the best fitting double anti-glitch model, are shown in the upper panel of figure 2. This consistency confirms that two anti-glitch events can explain the observed data well.
+
+So far, there have been some physical models proposed in order to explain the putative anti-glitch event. Some authors (e.g. Tong, 2013; Lyutikov, 2013) have suggested that the second timing event is not consistent with these physical models, and moreover have questioned whether the observational evidence for the second event is strong enough in the first place. However, as shown in the lower panel of figure 2, if we consider only the first event the timing residual will quickly diverge away from zero thereafter, thus showing strong support for the existence of a second timing event. Note that the timing residuals for an anti/normal glitch pair model are also similar to the upper panel in figure 2, further supporting the case for a second timing event (but emphasising that to distinguish between an anti/normal glitch pair and an anti-glitch pair is less straightforward).
+
+We also applied model selection to the case of two timing events versus 1 anti-glitch, and the Bayes Factor was found to be e^{208} - i.e. overwhelmingly favouring the 2 events scenario. This result demonstrates how the Bayes Factor can favour a more complicated model, notwithstanding that it may require additional parameters, when the data are of sufficient quality and a simpler model cannot give a satisfactory fit.
+
+Finally a batch of simulated glitch-free residual data was also generated, with each point drawn from a Gaussian distribution using means and standard deviations from TEMPO2 fits and TOA errors. Nested sampling was applied to this simulated data, and the Bayes factor was computed for the comparison of a successive anti-glitch model and an anti/normal glitch pair model. We calculated 15 Bayes Factor ratios based on 15 realisations of fake anti/normal glitch-free data. We found that the Bayes Factors fluctuated around unity, i.e. \\exp(0.17\\pm 0.33), showing that intrinsic randomness in glitch-free data will not cause a preference of one model over the other.
+
+## 5. Discussion and Conclusions
+
+We have shown that a model with two successive anti-glitches better explains the observed pulsar data presented in Archibald et al. (2013) when compared with an anti/normal glitch pair model. Our analysis was robust against variations in the prior ranges, with a Bayes Factor consistently larger than 40 in favour of two anti-glitches. Meanwhile, the Bayes Factor between two events and one event is very large (e^{208}), showing conclusively that the two events scenario if favoured over one event.
+
+Prior to the discovery of an anti-glitch there were already several published papers presenting mechanisms that could cause enhanced spin-down, while after its discovery a number of further mechanisms have been proposed seeking to explain its physical origin. Roughly
+
+\\begin{table}
+
+\\begin{tabular}{c c c c} \\hline n value & 10 & 5 & 3 \\\\ \\hline Bayes Factor & 42.4\\pm 3.4 & 43.5\\pm 3.1 & 48.6\\pm 3.4 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1Estimated Bayes Factors with uncertainties, obtained from different prior ranges on the model parameters, represented by different n values (for the Definition of a see main text). A Bayes Factor of around 45 is obtained in each case, indicating consistently strong evidence favouring a successive anti-glitch scenario over an anti/normal glitch pair.
+
+Figure 1.— Parameter posterior contours for the second anti-glitch event, showing 68.3% (solid), 95.5% (dash-dotted) and 99.7% (dotted) credible intervals, based on \\sim 500 points resampled from the nested sampling samples.
+
+Figure 2.— Upper panel: Timing residuals of the observed data for two successive anti-glitch events, with best fit parameters as determined by our analysis. Lower panel: Timing residuals of the observed data for only one anti-glitch event. Clearly, two anti-glitch events better explain the data than having a single anti-glitch. speaking, we can divide the proposed mechanisms into three groups: _internal, accretion_ and _magnetoshyerical_.
+
+The internal mechanism is related to that causing glitches in normal pulsars, which can often be satisfactorily explained by the coupling of the crust with the inner faster-rotating superfluid (Link & Epstein, 1996), where for a normal pulsar the superfluid interior could not spin slower than the crust. However, as the observed object 1E 2259+586 is a magnetar, where the dominant source of free energy is magnetism instead of rotation, the spin evolution could be vastly different from that of normal pulsars. Thompson & Duncan (1995) suggested that a magnetar could drive differential rotation, which allows a lag in the rotation of the superfluid interior. A sudden rearrangement of the inner structure could induce the interior and crust to corotate again, which would be observed as a sudden spin-down, or anti-glitch (Archibald et al., 2013). Another possible explanation for the faster-rotating crust might be the twist of a crust patch. As the superfluid vortex is pinned to the crust, a plastic deformation for such a patch will lead to a slower rotating superfluid. A rapid twist would correspond to a conventional spin-up glitch, similar to a normal pulsar counter-part. However, while a gradual twist would have little effect on the secular spin evolution, a rapid unpinning of the associated vortices would give a sudden spin-down, or anti-glitch (Duncan, 2013; Thompson et al., 2000)
+
+Accretion mechanisms suggest that the anti-glitch is caused by the accretion of retrograde material from either a Keplerian ring (Ouyed et al., 2013) or from an asteroid (Huang & Geng, 2013). Besides retrograde accretion, Katz (2013) also proposes an enhanced propeller effect to explain the anti-glitch. Although most accretion models are able to explain both events during the observation, either with or without being accompanied by radiation, this mechanism does not fit the model of magnetars, which has already been supported by many observations. (e.g. Kaspi & Gavriil, 2003).
+
+Magnetospheric models (e.g. Tong, 2013; Lyutikov, 2013; Thompson et al., 2000) explain the observed anti-glitch with either an enhanced particle wind or a twisting of the magnetic field lines. Although these models fit the observational data for magnetars, most magnetospherical explanations are accompanied with strong radiation and/or a change in pulse profile - neither of which were observed during the second timing event for 1E 2259+586. The magnetospheric mechanism is not favoured since figure 2 shows that our analysis strongly favours the existence of the second event.
+
+Among these three mechanisms, our analysis shows that the internal mechanism is most favoured. We note that a satisfactory model should be able to explain the two successive anti-glitches that happened within a relatively short period. If the sudden unpinning of the quantum vortex due to the twist of crust patch is responsible for the anti-glitch, for example, then the gradual plastic deformation of the crust patch should be able to accumulate enough angular momentum within a timescale of several months. If the two anti-glitches are caused by the same mechanism, then the observations may put some constraints on that mechanism. Enhanced radiation, pulse profile changes and enhanced spin-down were observed for the first event while none of these phenomena was observed for the second. Future observations of similar phenomena with higher timing accuracy and sampling frequency will be helpful in order to more fully understand the mechanism responsible.
+
+## 6. Acknowledgments
+
+The authors would like to thank Robert Archibald, Victoria Kaspi and Neil Gehrels for helping with the data and discussions. We are also grateful for further useful discussions with Jonathan Katz, Yongfeng Huang and Hao Tong. Additionally, we give special thanks to Ian Jones for his very helpful feedback on our article. The authors would also like to thank the anonymous reviewers for constructive comments that helped in improving the quality of this manuscript. The authors gratefully acknowledge the support of the Science and Technology Facilities Council of the United Kingdom and the Scottish Universities Physics Alliance. Y.-M. Hu is supported by the China Scholarship Council.

@@ -1,0 +1,383 @@
+###### Abstract
+
+We consider propagation of polarization in the inner parts of pair-symmetric magnetar winds, close to the light cylinder. Pair plasmas in magnetic field is birefringent, a \\propto B^{2} effect. As a result, such plasmas work as phase retarders: Stokes parameters follow a circular trajectory on the Poincare sphere. In the highly magnetized regime, \\omega,\\,\\omega_{p}\\ll\\omega_{B}, the corresponding rotation rates are independent of the magnetic field. A plasma screen with dispersion measure DM \\sim 10^{-6} pc cm{}^{-3} can induce large polarization changes, including large effective Rotation Measure (RM). The frequency scaling of the (generalized) RM, \\propto\\lambda^{\\alpha}, mimics the conventional RM with \\alpha=2 for small phase shifts, but can be as small as \\alpha=1. In interpreting observations the frequency scaling of polarization parameters should be fitted independently. The model offers explanations for (i) large circular polarization component observed in FRBs, with right-left switching; (ii) large RM, with possible sign changes; (iii) time-depend variable polarization. Relatively dense and slow wind is needed - the corresponding effect in regular pulsars is small.
+
+## 1 Polarization of FRBs: the challenges
+
+Polarization properties of FRBs defy simple classification Caleb et al. (2019); Petroff et al. (2019), ("some FRBs appear to be completely unpolarized, some show only circular polarization, some show only linear polarization, and some show both," Petroff et al., 2019). Understanding polarization behavior is the key to understanding FRBs.
+
+Even in the sub-set of linearly polarized FRBs, there is no clear trend:
+
+* FRB 150807 (Ravi et al., 2016) was nearly 80% linearly polarized, but very smallRM=12 at DM=266 (in usual astronomical unites); the average inferred magnetic field <B>=5\\times 10^{-8} G.
+
+* FRB 110523 (Masui et al., 2015), RM=186, DM=623, <B>=5\\times 10^{-7} G
+
+* FRB180301 (Price et al., 2019), RM = 3\\times 10^{3}, DM=522, <B>=6\\times 10^{-6} G.
+
+* FRB121102 (Michilli et al., 2018) was 100% linearly polarized, (varying!) RM = 10^{5}, DM=559, <B>=2\\times 10^{-4} G. At the observed frequency of \\sim 4.5 GHz this corresponds to the PA rotation by 360 radians; this is a model-independent quantity to be explained (in a sense that a value of RM assumes a particular frequency scaling of the rotation of polarization).
+
+* The case of FRB20190520B (Dai et al., 2022) is particularly interesting: it shows large fluctuations of linear polarization (from \\sim 15\\% to \\sim 60\\%, large fluctuations of circular polarization with changing sign (\\sim\\pm 10\\%) and large fluctuations of RM, also with changing sign (\\pm 10^{4})
+
+* no correspondingly large changes of DM are seen.
+
+We make the following conclusion: polarization model should explain not the average properties, but the extremes of the behavior. Models should account for large variations in polarization properties, both between different sources, temporal variations in a given source, and unusual polarization behavior like in FRB180301 and FRB20190520B.
+
+Fast temporal variation of RM seen in FRB 121102 (Michilli et al., 2018) and FRB20190520B (Dai et al., 2022) are especially demanding, as this implies that the RM comes from a relatively compact region. This would normally require small and _extremely dense_ region, yet no DM variations are seen. (In our model the region is small, but not dense.)In this paper we consider polarization propagation effects in the near wind zone of the central magnetar, somewhat outside the light cylinder. We demonstrate that the model naturally explains a broad range of polarization behavior. Switching of the signs of circular polarization, and of the (generalized) Rotation measure are especially noteworthy. We also mention related papers by Vedantham & Ravi (2019) and Gruzinov & Levin (2019) (in passing we note a minor error: their parameters h and g should be interchanged).
+
+Previously a number of works considered PA rotation effect inside the pulsar magnetosphere Cheng & Ruderman (1979); Barnard (1986); Petrova & Lyubarskii (2000); Wang et al. (2010); Beskin & Philippov (2012). Inside the pulsar magnetosphere, the PA rotation and the generation of V component are suppressed by a combination of effects: (i) for parallel propagation in symmetric pair plasma the Faraday effect is absent; the contribution to the PA rotation comes either from a slight charge-disbalance, different Lorentz factors, or from oblique propagation (Kazbegi et al., 1991a; Lyutikov, 1999) - all these effects producing weak contribution (due to small "active" density and/or small angle of propagation). Relativistic motion of plasma also reduces the effective plasma frame density, and stretching of the corresponding time scale in the lab frame; this is effect is also important in the present model. In contrast to the magnetospheres, in the near wind zone it is the _total plasma density_ that contributes to the PA rotation, via the effects of birefringence.
+
+## 2 Polarization propagation in birefringent symmetric pair plasma
+
+### Faraday and Cotton-Mouton/Voigt effects
+
+Two somewhat different effects contribute to the changes of polarization as the light propagates in plasma: the Faraday effect and the Cotton-Mouton/Voigt effects (Landau &Lifshitz 1960). Qualitatively, the Faraday effect is that a linearly polarized wave propagating along the magnetic field can be decomposed into two circularly polarized waves. In the electron-ion plasma the two circularly polarized waves have different phase velocity - their final addition leads to the rotation of the position angle (PA). The rate of rotation of the polarization angle due to the Faraday effect is (Ginzburg & Syrovatskii 1965, Eq. (4.6)) is
+
+\\frac{d\\chi_{F}}{dl}=\\frac{1}{2}\\frac{\\omega}{c}(\\Delta n)_{c}  where (\\Delta n)_{c} is the difference in the refractive index of two circularly polarized normal modes. This effect is linear in magnetic field. It disappears in symmetric pair plasma.
+
+The Cotton-Mouton/Voigt effects appear because for oblique propagation (with respect to the magnetic field), the two plasma modes, usually called O (ordinary) and X (extraordinary), have different phase velocities. If the initial wave had contribution from both X and O modes, the final addition of the retarded waves leads to elliptical polarization, hence both to the rotation of the position angle of linearly polarized component, and to the appearance of circular polarization. This effect is quadratic in magnetic field- it appears both in symmetric and non-symmetric plasmas.
+
+Following the tradition we call polarization transformation as Faraday Conversion (FC), with a clear understanding of the different origin of the circular component, as discussed above.
+
+### Waves in symmetric pair plasma
+
+Waves in pair plasma has been considered in a number of publications (Arons & Barnard 1986; Kazbegi et al. 1991b; Lyutikov 1999) we follow Lyutikov (2007). Let us consider the simplest case of cold plasma, in plasma frame. For e^{\\pm} plasma in magnetic field the dispersion relation factorizes giving two modes: the X mode with the electric vector perpendicular to the **k-B** plane and two branches of the longitudinal-transverse mode, which we will call O and Alfven waves, with the electric vector in the **k-B** plane (Arons & Barnard 1986, see Fig. 1). X waves is a subluminal (for \\omega<\\omega_{B}) transverse electromagnetic wave with a dispersion relation
+
+n_{X}^{2}=1-\\frac{2\\omega_{p}^{2}}{\\omega^{2}-\\omega_{B}^{2}}  here n=kc/\\omega is refractive index, \\omega_{B}=eB/mc is cyclotron frequency, \\omega_{p}=\\sqrt{4\\pi n_{\\pm}e^{2}/m} is a plasma frequency of each species (so that for pair plasma the total plasma frequency is \\sqrt{2}\\omega_{p}). The Alfven-O mode satisfies the dispersion relation
+
+n_{A-O}^{2}=\\frac{(\\omega^{2}-2\\omega_{p}^{2})(\\omega^{2}-2\\omega_{p}^{2}- \\omega_{B}^{2})}{(\\omega^{2}-2\\omega_{p}^{2})(\\omega^{2}-\\omega_{B}^{2})-2 \\omega_{B}^{2}\\omega_{p}^{2}\\sin^{2}\\theta} 
+
+Alfven branch is always subluminal while O mode is _superluminal_ at small wave vectors and _subluminal_ at large wave vectors.
+
+In the limit \\omega_{p}\\ll\\omega we find
+
+(\\Delta n)=n_{X}-n_{A-O}=-\\frac{\\omega_{B}^{2}\\omega_{p}^{2}}{\\omega^{2}( \\omega^{2}-\\omega_{B}^{2})}\\sin^{2}\\theta=\\left\\{\\begin{array}{cc}-\\frac{ \\omega_{B}^{2}\\omega_{p}^{2}}{\\omega^{4}}\\sin^{2}\\theta,&\\omega_{B}\\ll\\omega \\\\ \\frac{\\omega_{p}^{2}}{\\omega^{2}}\\sin^{2}\\theta,&\\omega_{B}\\gg\\omega,\\end{array}\\right. 
+
+The \\omega_{B}\\ll\\omega has been discussed previously (Sazonov 1969; Melrose 1997; Kennett & Melrose 1998). The \\omega_{B}\\gg\\omega is the new regime of interest: in highly magnetized plasma the phase velocity difference is independent of the magnetic field (the X-mode is nearly luminal).
+
+### Faraday Conversion in magnetized pair plasma
+
+Consider propagation of electromagnetic radiation along z direction perpendicular to the magnetic field, which is in the y direction, Fig. 2
+
+The X-mode is then polarized along x and A-O-mode along y. Let at the point z=0Figure 1: Wave dispersions \\omega(k) in pair plasma in strong magnetic field, \\omega_{B}\\gg\\omega_{p}, for oblique propagation. At low frequencies \\omega\\ll\\omega_{B} there are three modes labeled X (polarized orthogonally to **k** -**B** plane), Alfven and O (both polarized in the **k** -**B** plane). The O mode has a resonance at \\sim\\omega_{B}+\\omega_{p}^{2}\\sin^{2}\\theta/\\omega_{B} and cut-off at \\sqrt{2}\\omega_{p}. The Alfvén mode has a resonance at \\sim\\sqrt{2}\\omega_{p}\\cos\\theta. The sign \\parallel indicates locations where corresponding waves are nearly longitudinally polarized. The two high frequency, \\omega>\\omega_{B}, waves with nearly identical dispersion have a cut-off at the upper hybrid frequency \\omega_{UH}=\\sqrt{\\omega_{B}^{2}+2\\omega_{p}^{2}}, (Lyutikov, 2007) the wave be linearly polarized with the unit Jones (Born & Wolf 1980) vector
+
+{\\bf E}_{0}=\\left(\\begin{array}{c}\\cos\\chi_{0}\\\\ \\sin\\chi_{0}\\end{array}\\right) 
+
+The medium works as a retarder. The key parameter is a phase lag (retardance) \\delta:
+
+\\frac{d\\delta}{dz}=\\frac{\\omega}{c}(\\Delta n) 
+
+In the limit \\omega_{B}\\gg\\omega_{p},\\omega,
+
+\\frac{d\\delta}{dz}=\\frac{\\omega_{p}^{2}}{\\omega c}=\\frac{2e^{2}n}{c ^{2}m_{e}}\\times\\lambda=\\delta_{0}\\times\\lambda \\delta_{0}=\\frac{2e^{2}n}{c^{2}m_{e}} \\delta=\\int\\frac{d\\delta}{dz}dz=k\\int(\\Delta n)dz=\\lambda\\frac{2e ^{2}}{m_{e}c^{2}}n\\Delta z=2r_{e}\\lambda(n\\Delta z)=1.7\\times 10^{6}\\lambda \\times{\\rm DM}  where (\\Delta n) is the difference of the refractive indices of the two linearly polarized modes, with \\theta=\\pi/2 assumed; the limit "\\rightarrow" here and below corresponds to the relevant case of \\omega_{B}\\gg\\omega; dimension of \\delta_{0} is cm{}^{-2}. In the last relation \\lambda is in centimeters and DM is the dispersion measure in pc cm{}^{-3}.
+
+It may be convenient to define the magnetic Conversion Measure (CM{}_{\\rm B}) as
+
+\\delta={\\rm CM_{B}}\\times\\lambda,\\,\\omega_{B}\\gg\\omega {\\rm CM_{B}}=\\frac{2e^{2}}{m_{e}c^{2}}n\\Delta z=1.7\\times 10^{6 }\\times{\\rm DM\\,cm^{-1}}=1.7\\times 10^{4}\\times{\\rm DM\\,m^{-1}} 
+
+It is different from the low magnetic field Conversion Measure (CM)
+
+\\delta={\\rm CM}\\times\\lambda^{3},\\,\\omega_{B}\\ll\\omega {\\rm CM}=\\frac{e^{4}}{2\\pi^{2}m_{e}^{3}c^{6}}n\\Delta zB^{2}=1.4 \\times 10^{-2}\\times{\\rm DM}\\times B^{2}\\,{\\rm cm^{-3}}=1.4\\times 10^{-8} \\times{\\rm DM}\\times B^{2}\\,{\\rm m^{-1}}  where magnetic field is in Gauss.
+
+Relations (7-8) demonstrates that in magnetically-dominated plasma a screen with DM \\sim 10^{-6} pc cm{}^{-3} can induce polarization changes (rotation of PA of linear component, as well as production of circular component) of the order of unity. This is one of the major points of the work.
+
+Using Jones' calculus, at any location the polarization can be characterized by a vector
+
+{\\bf E}=\\left(\\begin{array}{c}\\cos\\chi_{0}\\\\ e^{i\\delta}\\sin\\chi_{0}\\end{array}\\right)=\\hat{J}\\cdot{\\bf E}_{0}\\hat{J}=\\left(\\begin{array}{cc}1&0\\\\ 0&e^{i\\delta}\\end{array}\\right) 
+
+\\hat{J} is Jones' matrix.
+
+The corresponding Stokes parameters (normalized to unity; fully polarized wave is assumed) are
+
+\\hat{P}=\\left(\\begin{array}{c}Q\\\\ U\\\\ V\\end{array}\\right)=\\left(\\begin{array}{c}\\cos(2\\chi_{0})\\\\ \\cos\\delta\\sin(2\\chi_{0})\\\\ \\sin\\delta\\sin(2\\chi_{0})\\end{array}\\right)=\\left(\\begin{array}{c}Q_{0}\\\\ U_{0}\\cos\\delta\\\\ U_{0}\\sin\\delta\\end{array}\\right) 
+
+Polarization transfer equation can be written as
+
+\\partial_{z}\\hat{P}=\\mathbf{\\Omega}\\times\\hat{P} \\mathbf{\\Omega}=\\{\\partial_{z}\\delta,0,0\\}\\rightarrow\\{2 \\frac{\\omega_{p}^{2}}{\\omega c},0,0\\} 
+
+\\Omega is the angular frequency of the polarization rotation rate on the Poincare sphere.
+
+The corresponding Mueller matrix
+
+{\\bf M}=\\left(\\begin{array}{cccc}1&0&0&0\\\\ 0&1&0&0\\\\ 0&0&\\cos\\delta&-\\sin\\delta\\\\ 0&0&\\sin\\delta&\\cos\\delta\\end{array}\\right) 
+
+Thus, there are periodic U-V oscillations. (It can be called \\sim generalized Faraday conversion, but the proper Faraday effect - as opposed to Cotton-Mouton effect - is not involved in this case).
+
+The electric field traces an ellipse with ellipticity
+
+\\epsilon=\\frac{\\sqrt{\\sqrt{1+\\cos^{2}\\delta\\tan^{2}\\left(2\\chi_{0}\\right)}- \\cos^{2}\\delta\\sin\\left(2\\chi_{0}\\right)\\tan\\left(2\\chi_{0}\\right)+\\sin^{2} \\left(\\chi_{0}\\right)-\\cos^{2}\\left(\\chi_{0}\\right)}}{\\sqrt{\\sqrt{1+\\cos^{2} \\delta\\tan^{2}\\left(2\\chi_{0}\\right)}+\\cos^{2}\\delta\\sin\\left(2\\chi_{0}\\right) \\tan\\left(2\\chi_{0}\\right)-\\cos\\left(2\\chi_{0}\\right)}} Figure 3: Example of trajectory on the Poincare sphere for initial polarization in the \\chi_{0}=\\pi/8 state (Q=U=1/\\sqrt{2}). Parameter Q remains constant. and position angle
+
+\\tan(2\\chi)=\\cos\\delta\\tan(2\\chi_{0}),  see Fig. 4.
+
+Thus, in symmetric pair plasma there is efficient transformation of Stokes parameters U and V, in a way similar to the laboratory phase retarders. The key parameter for the rate is the retardance \\delta, Eq. (7). The rotation of polarization/production of the circular component in pair plasma disappears only for U=0 with 2\\chi_{0}=0, \\pi; this corresponds to either pure X mode (\\chi_{0}=0) or pure A-O mode (\\chi_{0}=\\pi/2).
+
+### Frequency scaling of Generalized Faraday Rotation
+
+In plasma the retardance (7) and the rotation angle (15) are wave length-dependent. The polarization angle scales as
+
+\\partial_{\\lambda}\\chi=\\frac{\\sin(\\delta)\\tan\\left(2\\chi_{0}\\right)}{2\\left(1+ \\cos^{2}(\\delta)\\tan^{2}\\left(2\\chi_{0}\\right)\\right)}\\partial_{\\lambda}\\delta 
+
+Relation (16) can be interpreted as a Generalized Faraday Rotation (GFR): frequency-dependent PA. Note that when the retardance crosses \\delta=\\pi the sign of \\partial_{\\lambda}\\chi, and the corresponding RM, changes (Dai et al., 2022)
+
+At small \\delta\\ll 1 the frequency dependent part of the PA scales as
+
+\\chi=\\frac{\\sin(4\\chi_{0})}{8}\\left(\\int\\delta_{0}dz\\right)^{2}\\times\\lambda^{2} 
+
+Thus, frequency scaling matches the Faraday effect. But the polarization rotation in this limit is _independent_ of the magnetic field (and hence cannot be used to estimate it). We can introduce effective RM, RM{}_{eff},
+
+\\chi=\\mathrm{RM}_{eff}\\times\\lambda^{2} \\mathrm{RM}_{eff}=10^{-4}\\times\\frac{\\sin(4\\chi_{0})}{8}\\left( \\int\\delta_{0}dz\\right)^{2}= 10^{-4}\\times\\sin(4\\chi_{0})\\frac{e^{4}}{2m_{e}^{2}c^{4}}n^{2}( \\Delta z)^{2}=3\\times 10^{11}\\times\\sin(4\\chi_{0})\\times\\mathrm{DM}^{2}\\,\\mathrm{ m}^{-2} 
+
+(factor of 10^{-4} converts from cgs unites to m{}^{-2}). Thus, to produce RM = 10^{5} in FRB121102 (Michilli et al., 2018) the required DM is only 5\\times 10^{-6}.
+
+At special moments when \\delta\\approx\\pi/2 we find from (15)
+
+\\Delta\\chi=\\tan 2\\chi_{0}\\Delta[\\delta]=\\frac{e^{2}nz\\tan\\left(2\\chi_{0}\\right)}{m _{e}c^{2}}\\times\\Delta[\\lambda]=8\\times 10^{5}\\tan(2\\chi_{0})\\mathrm{DM} \\times\\Delta[\\lambda] 
+
+At this point circular component is large. Note that in both cases \\delta\\ll 1 and \\delta\\sim\\pi/2 the rotation angle is _independent_ of the magnetic field.
+
+Generally we can write
+
+\\Delta\\chi\\propto\\Delta[\\lambda^{p}] 1<p<2 
+
+In astrophysical literature this is usually called Generalized Faraday Rotation.
+
+In conclusion, we arrived at two important results: (i) there is efficient production of circular component in symmetric pair plasma; (ii) the corresponding frequency scaling (in the \\delta\\ll 1 regime) matches the Faraday rotation. Thus, for the observed radio signal, if \\chi_{\\rm high}-\\chi_{\\rm low}, which is the rotation angle difference between the top and bottom frequency, is much smaller than 1 radian, the Generalized Faraday rotation may be confused with Faraday rotation and misinterpreted as large RM or sign change of RM (although in the case of FRB 20190520B, the observed change of PA against frequency is large enough to distinguish different effects.)
+
+In what follows we apply the general relations derived above to relativistically streaming plasma in the inner parts of the pulsar/magnetar winds.
+
+### Faraday Conversion in electron-ion plasma
+
+All the above relations, when expressed in terms of retardance \\delta, Eq. (6), are applicable to regular electrons-ion plasma for propagation orthogonally to the magnetic field, when the normal modes are linearly polarized. In particular, a term similar to the \\omega_{B}\\ll\\omega limit in (4) appears also in non-symmetric plasma. In that case for wave propagating orthogonal to the magnetic field,
+
+(\\Delta n)_{e-i}=-\\frac{\\omega_{B}^{2}\\omega_{p}^{2}}{2\\omega^{4}} 
+
+The principles of Faraday conversion remain the same: in a frame defined in Fig. 2, the Stokes Q remains constant while U and V experience oscillations. The rotation direction on the Poincare sphere \\Omega, Eq. (12), is still aligned with Q.
+
+In regular plasma at small \\omega_{B}, \\omega_{p}\\ll\\omega the retardance is, see Eqns. (21) and (6),
+
+\\frac{d\\delta_{e-i}}{dz}=-\\frac{\\omega_{B}^{2}\\omega_{p}^{2}}{2c\\omega^{3}} 
+
+It has different sign and different frequency scaling than the \\omega_{B}\\gg\\omega case. The motion on the Poincare sphere in this case proceeds in the opposite sense around Q axis (counter-clockwise instead of clockwise).
+
+The sense of rotation on the Poincare sphere cannot be used to distinguish the two cases observationally: the Q-U separation is observer-dependent (typically Q is chosen along the direction to the north). There is then a freedom in rotation on the Poincare sphere around V axis. Qualitatively: the difference between the phase speeds of the X-mode and the A-O-mode changes sign at the resonance, but observationally we do not know the direction of the magnetic field: hence cannot define which mode is which: a change of magnetic field direction by \\pi/2 "flips" the observational definition of the X and A-O-modes.
+
+In constant density/magnetic field the total retardance (22) evaluates to
+
+\\delta_{e-i}=\\frac{2\\pi e^{4}}{m_{e}^{3}c^{3}\\omega^{3}}\\times{\\rm DM}\\times B ^{2}=7\\times 10^{-3}\\lambda^{3}{\\rm DM}\\,B^{2}  where DM is the dispersion measure in pc cm{}^{-3}, \\lambda is in cm, and magnetic field is Gauss. The condition \\delta_{e-i}\\sim 1 is much more demanding than (7).
+
+## 3 Magnetar/pulsar winds
+
+### Particle dynamics in the inner wind, R_{LC}\\leq r\\leq r_{0}
+
+Let us consider motion of particles in the inner wind with Michel (1973b) magnetic field and assuming that particles moves exclusively along the field ("bead-on-wire"approximation"). This is best done using machinery of General Relativity (Landau & Lifshitz 1975).
+
+In spherical coordinates, changing to the rotating system of coordinates d\\phi\\to d\\phi^{\\prime}-\\Omega dt, and assuming that particles move along the Archimedean spiral with
+
+d\\phi^{\\prime}=-\\Omega dr  at fixed polar angle d\\theta_{p}=0, we find the metric tensor
+
+g_{00}=-(1-r^{2}\\sin^{2}\\theta_{p}\\Omega^{2})=-g^{rr} g_{rr}=(1+r^{2}\\sin^{2}\\theta_{p}\\Omega^{2})=-g^{00} g_{rt}=r^{2}\\sin^{2}\\theta_{p}\\Omega^{2}=g^{rt} 
+
+The Hamilton-Jacobi equation
+
+g^{\\alpha\\beta}\\partial_{\\alpha}S\\partial_{\\beta}S=1  for the action functional S, with separation S=-\\gamma_{0}t+S_{r}(r) becomes
+
+\\gamma_{0}^{2}\\left(r^{2}\\Omega^{2}\\sin^{2}\\theta_{p}+1\\right)-2\\gamma_{0}r^{ 2}\\Omega^{2}\\sin^{2}\\theta_{p}S_{r}^{\\prime}(r)-S_{r}^{\\prime}(r)^{2}\\left(1-r ^{2}\\Omega^{2}\\sin^{2}\\theta_{p}\\right)=1 
+
+The Lorentz factor \\gamma_{0} comes mostly from the motion of particles _along_ the magnetic field.
+
+This can be integrated to find S_{r}. Differentiating the result with respect to \\gamma_{0} we find
+
+t=r-\\frac{1}{\\sin\\theta_{p}\\Omega}+\\ln\\left(\\left(1-\\frac{1}{\\gamma_{0}^{2}} \\right)\\frac{(1-r\\Omega\\sin\\theta_{p})\\left(\\sqrt{\\gamma_{0}^{2}+r^{2}\\Omega^{2 }\\sin^{2}\\theta_{p}-1}+\\gamma_{0}r\\Omega\\sin\\theta_{p}\\right)}{(1+r\\Omega\\sin \\theta_{p})\\left(\\sqrt{\\gamma_{0}^{2}+r^{2}\\Omega^{2}\\sin^{2}\\theta_{p}-1}- \\gamma_{0}r\\Omega\\sin\\theta_{p}\\right)}\\right)\\frac{1}{2\\sin\\theta_{p}\\Omega} 
+
+Eq. (28) gives implicit solution for motion of a bead along the Michel-type magnetic field lines; time is chosen t=0 at the moment when the particle crosses the light cylinder, r=1/(\\sin\\theta_{p}\\Omega).
+
+By differentiating with respect to time we find coordinate velocity
+
+\\beta_{r}\\equiv\\partial_{t}r={\\varpi^{2}\\Omega^{2}\\over 1+\\varpi^{2} \\Omega^{2}}\\left(1-{1\\over\\gamma_{0}^{2}+\\gamma_{0}^{2}\\varpi^{2}\\Omega^{2}+ \\varpi^{4}\\Omega^{4}}\\right)+{\\gamma_{0}\\sqrt{\\gamma_{0}^{2}+\\varpi^{2}\\Omega^ {2}-1}\\over\\gamma_{0}^{2}+\\gamma_{0}^{2}\\varpi^{2}\\Omega^{2}+\\varpi^{4}\\Omega^{ 4}} \\approx\\left\\{\\begin{array}{rl}1-{1\\over\\gamma_{0}^{2}},&\\Omega \\varpi\\ll\\gamma_{0}\\\\ 1-{1\\over\\varpi^{2}\\Omega^{2}},&{\\rm for}\\,\\varpi\\to\\infty\\end{array}\\right. \\varpi=r\\sin\\theta_{p} 
+
+The toroidal component of the velocity
+
+v_{\\phi}=\\varpi(1-\\beta_{r})  remains small; it's maximal value is reached at \\approx 1.27\\gamma_{0}/\\Omega and equals v_{\\phi,max}\\approx 0.3/\\gamma_{0} (at \\theta_{p}=\\pi/2). Particles move nearly radially.
+
+Relation (29-30) requires some explanation. Motion of particles consists of (i) bulk E-cross-B drift and (ii) motion along the field. The bulk E-cross-B drift has two components: radial and toroidal (Michel 1973a)
+
+{\\bf v}=\\{{\\varpi^{2}\\over 1+\\varpi^{2}},0,{\\varpi\\over 1+\\varpi^{2}}\\} 
+
+In the inner part of the wind the unit magnetic field vector
+
+{\\bf e}_{B}=\\{{1\\over\\sqrt{1+\\varpi^{2}}},0,-{\\varpi\\over\\sqrt{1+\\varpi^{2}}}\\}  quickly becomes toroidal (the field lines intersect the light cylinder at 45^{\\circ}). As a result, near the light cylinder the large azimuthal drift velocity is mostly compensated by the azimuthal component of the parallel velocity, resulting in nearly radial motion with relativistic Lorentz factor \\gamma. Particles stream radially with Lorentz factor \\gamma_{0} (injection Lorentz factor). The EM waves propagate across magnetic field, \\theta=\\pi/2.
+
+In conclusion, in the inner part of the wind, somewhat outside the light cylinder particles move nearly radially with the Lorentz factor \\gamma_{0} determined by the acceleration processes _inside_ the magnetosphere.
+
+### Wind parameters
+
+Let us parametrize the properties of the wind by wind luminosity L_{w} and the ratio of Poynting to particle fluxes \\mu:
+
+\\mu=\\frac{L_{w}}{\\dot{N}m_{e}c^{2}}=\\frac{B_{LC}^{2}}{4\\pi n_{LC}m_ {e}c^{2}} B_{LC}=\\frac{\\sqrt{L_{w}}\\Omega}{c^{3/2}} n_{LC}=\\frac{L_{w}}{4\\pi\\mu m_{e}c^{3}R_{LC}^{2}} 
+
+Terminal Lorentz factor of the wind is \\Gamma_{w}; it is reached at r_{w},
+
+\\Gamma_{w}=\\mu^{1/3} r_{w}=\\mu^{1/3}R_{LC} 
+
+(Michel 1969; Goldreich & Julian 1970; Michel 1973b). Requirement of \\Gamma_{w}\\geq\\gamma_{0} then gives \\mu\\geq\\gamma_{0}^{3}. This is a requirement that the terminal Lorentz factor is determined by the wind acceleration, not by the injection.
+
+If density is scaled to Goldreich & Julian (1969) density n=\\kappa n_{GJ}, then
+
+\\kappa\\mu=\\frac{e\\sqrt{L_{w}}}{m_{e}c^{5/2}}=3\\times 10^{10}L_{w,38} 
+
+### Cyclotron resonance
+
+One of the key issues is the location the cyclotron resonance \\omega^{\\prime}\\sim\\omega^{\\prime}_{B}. For a given frequency \\omega (in the observer frame) the cyclotron resonance occurs at
+
+r_{B}=\\frac{e\\sqrt{L_{w}}}{c^{3/2}m_{e}\\omega} \\frac{r_{B}}{R_{LC}}=30L_{w,38}\\nu_{9}^{-1}P^{-1}  where period is in seconds. (Note that for Crab pulsar, P=0.033 seconds, the cyclotron resonance occurs at \\sim 10^{3}R_{LC}.) Relation (36) is independent of the Lorentz factor of the wind.
+
+### Limiting polarization radius
+
+Separation of modes into X and O branches may be violated if the rate of change of plasma parameters is sufficiently fast, so that the mode propagation becomes non-adiabatic (the effect of limiting polarization Budden 1952). This occurs when the wavelength of the beat between two modes becomes larger than the scale at which the properties of the modes change. In our case this condition becomes
+
+\\left(\\frac{\\omega}{\\Gamma c}\\right)\\left(\\frac{r}{\\Gamma}\\right)\\left(\\Delta n \\right)^{\\prime}\\geq 1  where \\Gamma is the Lorentz factor of the wind, which follows from (29). This is a condition that propagation is adiabatic.
+
+The condition for limiting polarization becomes
+
+R_{LP}=2\\frac{e^{2}}{m_{e}^{2}c^{4}}\\frac{L_{w}}{\\Gamma\\mu\\omega}=\\left\\{ \\begin{array}{rl}&2\\frac{e^{2}}{m_{e}^{2}c^{4}}\\frac{L_{w}}{\\gamma_{0}\\mu \\omega},\\quad R_{LP}\\leq r_{0}\\\\ &\\frac{\\sqrt{2}e\\sqrt{L_{w}}\\sqrt{R_{LC}}}{m_{e}c^{2}\\sqrt{\\mu}\\sqrt{\\omega}}, \\quad R_{LP}\\geq r_{0}\\end{array}\\right. 
+
+Location of the limiting polarization radius is thus highly dependent on the parameter \\gamma_{0}\\mu. For definiteness as assume R_{LP}\\geq r_{0}.
+
+## 4 Polarization transfer in magnetar winds
+
+### Retardance and Generalized Rotation Measure in the wind
+
+Let us assume the following scaling in magnetar winds: r_{LC}\\leq r_{0}\\leq R_{LP}, r_{w}, see Fig. 6, so that the cyclotron radius is outside the constant Lorentz factor region r_{0}. Let us consider polarization transformation in the regions r<r_{0}<r_{B}, where \\omega_{B}\\gg\\omega and the Lorentz factor is constant \\sim\\gamma_{0}.
+
+As we demonstrated in SS3.1 azimuthal motion of particles can be neglected. The wind can then be approximated as a sequences of toroidal magnetic loops moving away from the light cylinder. The EM waves propagate across magnetic field, \\theta=\\pi/2 through relativistically moving wind.
+
+In this regime the Lorentz factor of the particles is \\sim\\gamma_{0}, and \\omega\\leq\\omega_{B}. The rate of retardance in the wind frame
+
+\\left(\\frac{d\\delta}{dt^{\\prime}}\\right)^{\\prime}=\\frac{\\omega_{p}^{\\prime,2}}{ \\omega^{\\prime}} 
+
+Transformation to lab frame gives
+
+\\frac{d\\delta}{dt}=\\frac{\\omega_{p}^{2}}{\\gamma_{0}\\omega} 
+
+(values of \\omega_{p}^{2} and \\omega transform similarly, while the rate is smaller in the observer frame.)
+
+Estimating \\Delta z\\sim R_{LC}, density according to (33), we find
+
+\\delta\\sim\\frac{e^{2}}{2\\pi m_{e}^{2}c^{6}}\\frac{L_{w}\\Omega\\lambda}{\\mu\\gamma _{0}}=3.8\\times 10^{10}\\,\\frac{L_{sd,38}\\lambda}{P\\mu\\gamma_{0}} 
+
+The key dependence is on the combination of parameters (\\mu\\gamma_{0}). It is very large, a product of two large numbers. For example, for Crab pulsar with multiplicity \\kappa\\sim 10^{4}, this gives \\mu\\sim 4\\times 10^{6}; for typical \\gamma_{0}\\sim few \\times 10^{3}, we find \\mu\\gamma_{0}\\sim 10^{10}.
+
+To get large phase shift \\delta\\geq 1 requires
+
+\\mu\\gamma_{0}\\leq\\frac{e^{2}}{2\\pi m_{e}^{2}c^{6}}L_{w}\\Omega\\lambda=3.8\\times 1 0^{11}\\,L_{w,38}\\lambda P^{-1} 
+
+(period P in seconds).
+
+The effective RM (18) then becomes
+
+{\\rm RM}_{eff}=3\\times 10^{-7}\\frac{\\sin(4\\chi_{0})}{(\\mu\\gamma_{0})^{2}} \\frac{e^{4}}{m_{e}^{4}c^{12}}L_{w}^{2}\\Omega^{2} 
+
+(this assumes \\delta\\leq 1).
+
+To produce an observed RM of value RM_{ob}, the ratio of Poynting to particle fluxes and the streaming Lorentz factor should satisfy the condition
+
+\\mu\\gamma_{0}\\leq 1.4\\times 10^{8}\\times\\sqrt{\\sin(4\\chi_{0})}\\frac{L_{w,38}}{P \\,\\sqrt{{\\rm RM}_{\\rm ob}}} 
+
+(smaller \\mu implies larger observer frame density, smaller \\gamma_{0} implies less time dilation).
+
+In particular for RM_{ob}=10^{5} inferred by Michilli et al. (2018) it is required that
+
+\\mu\\gamma_{0}\\leq 5\\times 10^{5}\\times\\sqrt{\\sin(4\\chi_{0})}\\times\\frac{L_{w,38 }}{P} 
+
+Relations (41-43) are our main results. They provide estimates of the retardance and the Rotation Measure through the inner part of the wind (expression for the RM{}_{eff} assumes \\delta\\leq 1).
+
+Models of pair creation in the pulsar magnetospheres (Ruderman & Sutherland, 1975; Arons & Scharlemann, 1979; Timokhin, 2010) typically predict \\gamma_{0}\\sim 10^{3}-10^{5} and similarly for \\kappa\\sim 10^{3}-10^{5}. Thus, for Crab pulsar \\mu\\sim 10^{5}-10^{7} and \\mu\\gamma_{0}\\sim 10^{9}-10^{11}, Eq. (35)). Such plasmas are too rarefied and too fast to produce observable effect, Eq. (43).
+
+Magnetar plasmas are expected to be much denser and slower. First, the basic current density can be much higher than the Goldreich-Julian (Thompson et al., 2002). Second, the bulk Lorentz factor are expected to be smaller, \\gamma_{0}\\sim 10^{2}(Beloborodov, 2013). For this value of the Lorentz factor the Eq. (34) then implies that in order to satisfy (45) the wind must be heavy loaded with \\mu\\leq 10^{3}; thus \\mu\\leq\\gamma_{0}^{3} - so that the terminal Lorentz factor of the wind is determined by the injection Lorentz factor \\gamma_{0}, not acceleration of the wind.
+
+### Polarization evolution near the cyclotron resonance
+
+The region near the cyclotron resonance r_{B} presents a challenge, both in terms of the possibility of cyclotron absorption, large rates of PA rotation, and harder to quantify effects of the Lorentz factor spread. If cyclotron absorption is negligible, SS5, for mono-energetic beam, large rotation angle near the resonance will be mostly cancelled, since at two sides of the resonance the rotation direction is in the opposite sense. But a small mismatch between inner and outer parts may produce large net rotation near the resonance.
+
+Near the cyclotron resonance the evolution of the retardance rate d\\delta/dz becomes infinitely fast (for mono-energetic beam - to be smoothed out due to velocity spread). Most importantly, d\\delta/dz changes sign as the wave goes through the resonance. If the plasma density at both sides of the resonances were the same then (in the absence of absorption) the total PA rotation angle would be zero. In the expanding wind the plasma density"after" the resonance is smaller than "before. This creates finite PA rotation as the EM pulse propagates through the resonance.
+
+Integrating (7) with (4) we find for the resonant contribution
+
+\\left.\\delta\\right|_{\\rm res}\\approx\\frac{R_{LC}\\omega_{p,r_{B}}^{2}}{2c\\omega }\\ln\\left(\\frac{r_{B}}{R_{LC}}\\right)\\approx\\frac{R_{LC}\\omega}{4c\\mu}\\ln(r_{B }/R_{LC})\\approx 5\\times 10^{3}\\mu_{6}^{-1}P\\lambda^{-1}  where \\omega_{p,r_{B}} is the plasma frequency at the resonance. Qualitatively, retardance (46)resembles (7), with two modifications: (i) it's the density at the cyclotron resonance that appears in (46) (this reduces the rotation angle); (ii) the logarithm \\ln(r_{B}/R_{LC})\\sim 10 appears due to density disbalance at two sides of the resonance. Total PA rotation through resonance can be large.
+
+Notice that retardance through the resonance is _inversely_ proportional to wavelength: for longer waves the location of the cyclotron resonance is proportional to \\lambda, so that density at the resonance \\propto\\lambda^{-2}. This reduces the scaling \\delta\\propto\\lambda in constant density/magnetic field (7) to \\delta\\propto\\lambda^{-1} in decreasing density/magnetic field.
+
+## 5 Cyclotron absorption in the wind
+
+### General relations
+
+The resonant optical depth can be estimated as (Zheleznyakov, 1996; Thompson et al., 1994; Lyutikov & Gavriil, 2006)
+
+\\tau_{res}\\approx\\sigma_{res}n^{\\prime}\\frac{r}{\\Gamma} \\sigma_{res}=\\frac{\\pi^{2}e^{2}}{m_{e}c\\omega_{B}^{\\prime}} \\tau_{res}=\\frac{e\\sqrt{L_{w}}}{m_{e}c^{5/2}\\mu\\gamma_{0}}=2 \\times 10^{10}\\frac{L_{w,38}^{1/2}}{\\mu\\gamma_{0}} 
+
+Given the limit on the product (\\mu\\gamma_{0}) from above, Eq. (45), optical depth to cyclotron absorption is large.
+
+In strong magnetic field a particle quickly emits a cyclotron-absorbed photon: in this case the process is resonant scattering, not absorption. Cyclotron emission time in the frame of the wind is
+
+t_{c}^{\\prime}\\approx\\frac{m_{e}^{3}c^{5}}{B^{\\prime,2}e^{4}} Comparing with flight time in the rest frame (r/\\gamma_{0})/c
+
+\\frac{ct_{c}^{\\prime}}{r/\\Gamma}=\\frac{m_{e}^{2}c^{11/2}\\gamma_{0}^{3}}{e^{3} \\sqrt{L_{w}}\\omega}=5\\times 10^{2}\\,\\gamma_{0}^{3}L_{w,38}^{-1/2}\\gg 1 
+
+Thus, it is absorption, not scattering.
+
+Absorption will affect mostly the X-mode (for propagation perpendicular to the magnetic field the A-O mode is not affected). Fluctuations of wind density may still allow escape of the X-mode, and of the circularly polarized component.
+
+### Cyclotron absorption in Crab pulsar
+
+Crab pulsar presents an interesting case: using the fact that we do see emission from Crab we can constraint magnetospheric Lorentz factor \\gamma_{0}. Detection of Crab pulses at highest frequencies of \\sim 50 GHz imposes constraints on the properties of particles accelerating _in the magnetosphere_, and the wind properties.
+
+Observations of Crab Nebula require \\kappa\\geq 10^{5} for high energy emission (Kennel & Coroniti, 1984; Hibschman & Arons, 2001; Luo et al., 2020), and even more for radio (Shklovskii, 1977; Atoyan, 1999). Models of pulsar high energy emission arising due to Inverse Compton scattering (Lyutikov et al., 2012; Lyutikov, 2013) also require high multiplicities \\kappa\\geq 10^{6}, though in that case it's the local/instantaneous multiplicities, while the estimates for the Crab Nebula infer average multiplicity.
+
+Single pulses from Crab have been seen at \\sim 50 GHz (Hankins et al., 2016). Transparency at these frequencies impose the toughest constraints, as we discuss next.
+
+If expressed in terms of the surface fields and the spin (known for Crab) the cyclotron resonance occurs at
+
+\\frac{r_{res}}{R_{LC}}=2\\frac{B_{NS}R_{NS}^{3}\\Omega^{3}}{m_{e}c^{4}\\omega}=5 \\times 10^{3}\\nu_{9}^{-1} So, 100 MHz should be absorbed at 5\\times 10^{4} light cylinder radii, while 50GHz at \\sim 100. (Condition \\omega^{\\prime}\\leq\\omega^{\\prime}_{B} also implies that induced scattering in the wind Wilson & Rees 1978; Sincell & Krolik 1992, is suppressed at r\\leq r_{res})
+
+Using (35) and (47) the resonant optical depth is
+
+\\tau_{res}=\\frac{\\pi}{8}\\frac{\\kappa}{\\Gamma} \\Gamma=\\max[\\gamma_{0},r_{B}/R_{LC}] 
+
+Thus, to see pulses at 50 GHz, where \\gamma_{0} is likely \\geq r_{B}/R_{LC}\\sim 100, it is required that \\gamma_{0}\\geq\\kappa: parallel Lorentz factor within the magnetosphere should be larger than the multiplicity parameter of the Goldreich & Julian (1969) density. It's a hard one to satisfy - most likely non-stationarity of the flow plays a role.
+
+### Rotational phase evolution of Stokes parameters
+
+Above we assumes a given direction of linear polarization produced in the magnetosphere, and calculates evolution of the polarization vector on the Poincare sphere. The tracks on the Poincare sphere we compute are for a single given EM signal with given polarization, as function of the retardance - local plasma parameters times the propagation distance. The observed temporal evolution of the PA is then a convolution of a possibly phase-dependent emitted PA (_e.g._, given by the Rotating Vector Model), and the propagation effects.
+
+For example, using rotating vector model (RVM) (Radhakrishnan & Cooke 1969) to produce \\chi_{0} in Eq. (15),
+
+\\tan\\chi_{0}=\\frac{\\sin\\alpha\\sin\\phi}{\\sin\\alpha\\cos\\phi\\cos\\theta_{ob}-\\cos \\alpha\\sin\\theta_{ob}} 
+
+We can plot evolution of {Q,U,V} as functions of the retardance and rotational phase \\phiFig. 7-8. For fixed retardance (left panel in Fig. 8) tracks on the Poincare sphere may be used to determine absolute position of the projection of the axis of rotation on the plane of the sky - Q should remain fixed.
+
+We stress that RVM may not be applicable to magnetar/FRB radio emission (and to Crab pulsar). RVM assumes that global dipole structure of field lines determines local polarization properties of the emitted radiation. In magnetars and FRBs the structure is expected to be highly-non-dipolar, Solar-like (Lyutikov, 2002, 2015, 2021). Another complication may come from the fact that for oblique rotators the plasma density along the line of sight (and hence the retardance at each moment) may be phase-dependent.
+
+## 6 Discussion
+
+We discuss the properties of polarization transfer in the near wind regions of magnetars, presumed _loci_ of FRBs; magnetospheric model of radio emission from magnetars and FRBs (Lyutikov, 2002; Popov & Postnov, 2013; Lyutikov & Popov, 2020; Lyutikov, 2021) is assumed. We point out the importance of wave propagation in the inner parts of magnetar's winds. Qualitatively, a phase shift between the X and O components of the order of a wavelength, \\sim centimeters, leads to large changes of the polarization properties.
+
+The birefringent pair-symmetric plasma works a wave retarder, periodically converting Stokes U into Stokes V (in a properly defined frame, where one of the axis is aligned with magnetic field). Unlike the case of conventional Faraday conversion, here Q-U oscillate in phase (since the Q-U separation depends on the coordinate frame chosen).
+
+The model offers explanations for (i) large circular polarization component observed in FRBs, with right-left switching; (ii) large RM, with possible sign changes (if the observed PA change against frequency is less than 1 rad in the observed frequency range); (iii) time-depend variable polarization. Relatively dense and slow wind is needed - the corresponding effect in regular pulsars is small.
+
+The present model offers a way to produce large circular polarization and large RM, _both with changing sign_ in FRB 20190520B (Dai et al., 2022). Relatively dense plasma is required - in regular pulsars this effect is less important that in magnetars (which are expected to produce denser winds). Pulsars clearly do not show such wild polarization behavior. The rotating vector model (Radhakrishnan & Cooke, 1969), that neglects all the propagation effects, does account for many pulsar PA profiles (though there are many exceptions when it's not: e.g. in Crab). Relation (43) gives the simplest estimate of the PA effect in the wind. The propagation effects are not important in regular pulsars, with the low plasma density and high \\gamma_{0} (the Goldreich & Julian (1969) density is much smaller that what is expected in magnetars (Thompson et al., 2002; Beloborodov & Thompson, 2007)).
+
+The main prediction of the model is that scaling of the PA with frequency _may_ deviate from the conventional RM with \\chi\\propto\\lambda^{2}. The reverse is not true: the model _does_ allow for \\chi\\propto\\lambda^{2} scaling, especially at small retardance \\delta\\ll 1. There are observational hints, the most interesting analysis is by Price et al. (2019), their Fig. 8. They demonstrate that _linear_ relation \\chi\\propto\\lambda is consistent with data.
+
+Most observational works typically _assumes_ a regular RM scaling: in fact, the frequency behavior of polarized components must be fitted independently (_e.g._ Kumar et al., 2022).
+
+If the system of coordinates is aligned with the projection of the spin axis on the plane of the sky then during propagation through symmetric pair wind the Stokes Q remains constant while U and V experience periodic oscillations. The separation between Q and U depends on the chosen system of coordinates, \\times versus +. Since the expected track on the Poincare sphere involves only U-V oscillations, this could be used to determine (to 90^{\\circ} uncertainty) the projection of the pulsar/magnetar spin on the plane of the sky. For example, constant position on the Poincare sphere with V=0 may imply that this is a pure Stokes' Q (alternatively explanation would be that propagation effects are not important while the emitted PA is constant.)
+
+Finally, magnetars show variations of activity on time scales from days to months (Kaspi & Beloborodov, 2017). It is expected that winds are similarly variable. Variations of the density of the wind will lead to medium-to-long time scale variations of the polarization properties.
+
+## 7 Acknowledgements
+
+This work had been supported by NASA grants 80NSSC17K0757 and 80NSSC20K0910, NSF grants 1903332 and 1908590. I would like to thank Vasily Beskin, Andrei Gruzinov, Marcus Lower, Yuri Levin, Yuri Lyubarski, Kiyoshi Masui, Donald Melrose, Alexandre Philippov, Eric Poisson and Louise Willingale for discussions.
+
+## 8 Data Availability
+
+The data underlying this article will be shared on reasonable request to the corresponding author.

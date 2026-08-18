@@ -1,0 +1,147 @@
+###### Abstract
+
+We present data for LSQ14bdq, a hydrogen-poor super-luminous supernova (SLSN) discovered by the La Silla QUEST survey and classified by the Public ESO Spectroscopic Survey of Transient Objects. The spectrum and light curve are very similar to slow-declining SLSNe such as PTF12dam. However, detections within \\sim 1 day after explosion show a bright and relatively fast initial peak, lasting for \\sim 15 days, prior to the usual slow rise to maximum light. The broader, main peak can be fit with either central engine or circumstellar interaction models. We discuss the implications of the precursor peak in the context of these models. It is too bright and narrow to be explained as a normal {}^{56}Ni-powered SN, and we suggest that interaction models may struggle to fit the two peaks simultaneously. We propose that the initial peak may arise from the post-shock cooling of extended stellar material, and reheating by a central engine drives the second peak. In this picture, we show that an explosion energy of \\sim 2\\times 10^{52} erg and a progenitor radius of a few hundred solar radii would be required to power the early emission. The competing engine models involve rapidly spinning magnetars (neutron stars) or fall-back onto a central black hole. The prompt energy required may favour the black hole scenario. The bright initial peak may be difficult to reconcile with a compact Wolf-Rayet star as a progenitor, since the inferred energies and ejected masses become unphysical.
+
+Subject headings:supernovae: general, supernovae: individual (LSQ14bdq)
+
+## 1. Introduction
+
+Type Ic super-luminous supernovae (SLSNe) are hydrogen-poor explosions reaching absolute magnitudes M_{\\rm peak}<-21(Quimby et al., 2011; Gal-Yam, 2012; Inserra et al., 2013). They are intrinsically rare (less than \\sim0.01% of the core-collapse population; Quimby et al., 2013; McCrum et al., 2015), but their enormous electromagnetic output is observable at cosmological distances, and they show promise as standardisable candles (Inserra & Smartt, 2014). However, the power source remains elusive. Viable models must account for the luminosity, blue colours (Quimby et al., 2011), spectroscopic evolution to resemble supernovae (SNe) Ic (Pastorello et al., 2010), diverse light curves (Nicholl et al., 2015), and low-metallicity environments (Neill et al., 2010; Chen et al., 2013; Lunnan et al., 2014; Chen et al., 2014; Leloudas et al., 2015).
+
+The slowest events, such as SN 2007bi (Gal-Yam et al., 2009; Young et al., 2010) have been considered candidates for pair-instability supernovae (PISNe; e.g. Heger & Woosley, 2002): complete thermonuclear disruptions of stellar cores with M_{\\rm core}>65\\,{\\rm M}_{\\odot}. However, early observations of SLSNe apparently similar to SN 2007bi have shown rise-times and blue colours discrepant with numerical simulations (Kasen et al., 2011; Dessart et al., 2012; Nicholl et al., 2013; McCrum et al., 2014).
+
+Two further power sources have been proposed. One is a central engine, which could be the rotation of a millisecond pulsar with B\\sim 10^{14} G (Kasen & Bildsten, 2010; Woosley, 2010), or accretion by fallback if the SN forms a black hole (Dexter & Kasen, 2013). The other is reprocessing of kinetic energy as the ejecta expand into a massive, extended circumstellar medium (CSM) (Woosleyet al., 2007; Chevalier & Irwin, 2011; Ginzburg & Balberg, 2012). Both classes of models can fit SLSN light curves (Chatzopoulos et al., 2013; Nicholl et al., 2014), but the spectra of SLSNe Ic do not show clear signs of CSM.
+
+Here we present the discovery, light curve and analysis of the SLSN Ic, LSQ14bdq. Dense photometric sampling reveals an initial peak before the main light curve rise. We discuss physical interpretations of these data in the context of the competing models.
+
+## 2. Observations
+
+### Discovery and spectroscopic classification
+
+LSQ14bdq was discovered by La Silla QUEST (LSQ; Baltay et al., 2013), at coordinates \\alpha=10^{\\rm h}01^{\\rm m}41^{\\rm s}.60, \\delta=-12^{\\rm o}22^{\\prime}13^{\\prime\\prime}.4 (J2000.0), in images taken on April 5.1 UT (though earlier detections exist; Sect. 2.2). It was classified by Benitez et al. (2014), as part of the Public ESO Spectroscopic Survey of Transient Objects (PESSTO; Smartt et al., 2014), as a SLSN Ic. This spectrum (1500s) was taken on 2014 May 4.9 UT with the ESO 3.58m New Technology Telescope, using EFOSC2 and Grism#13, and was followed by a longer exposure (2\\times1800s) on the next night. A third spectrum was taken using Grism#11 (2400s), on 2014 May 7.0 UT. These were reduced using the PESSTO pipeline, applying bias-subtraction, flat-fielding, wavelength and flux calibration and telluric correction (Smartt et al., 2014). The absolute fluxes were matched to contemporaneous photometry. PESSTO data are available from the ESO archive1 or WISeREP2(Yaron and Gal-Yam, 2012).
+
+Footnote 1: see www.pessto.org
+
+Footnote 2: [http://www.weizmann.ac.il/astrophysics/wiserep/](http://www.weizmann.ac.il/astrophysics/wiserep/)
+
+Fig. 1 shows the spectrum summed over these three nights. The Grism#11 spectrum (resolution 13.8A) shows interstellar Mg II \\lambda\\lambda 2795.528, 2802.704 absorption, giving a redshift of z=0.345 from Gaussian fits. We estimate that the mean rest-frame phase of the combined spectrum is 19 d before maximum brightness (Sect. 2.2). Also shown are SLSNe Ic PTF12dam (Nicholl et al., 2013) and PTF09cnd (Quimby et al., 2011). The broad absorption features in LSQ14bdq are ubiquitous in such objects before maximum light. The O II lines are a defining feature of the class (Quimby et al., 2011) and the deep Mg II absorption matches that in PTF09cnd and other objects with near-ultraviolet spectroscopy (e.g. Chomiuk et al., 2011).
+
+### Photometry
+
+The observed light curve of LSQ14bdq is shown in Fig. 2. The rise from 2014 March 22.1 UT was measured with the automated LSQ pipeline (Baltay et al., 2013), employing point-spread function (PSF) fitting forced photometry, and are calibrated to SDSS r (AB system). Inspection of pre-discovery LSQ data showed clear variable flux at the SN position _before_ this first pipeline detection. Applying manual PSF photometry (using SNOoPY3) revealed that this was an early peak prior to the main rise. Non-detections (Table 1) suggest the explosion occurred on MJD =56721\\pm 1, assuming a smooth rise to the first peak. A stack of all LSQ images from 2012-2013 shows no host galaxy to a limiting magnitude of r=24.1, hence image subtraction is unimportant.
+
+Footnote 3: [http://sngroup.oapd.inaf.it/snoopy.html](http://sngroup.oapd.inaf.it/snoopy.html)
+
+We obtained multicolour imaging using EFOSC2, the 2.0-m Liverpool Telescope and Las Cumbres Observatory Global Telescope 1-m network. PSF magnitudes were calibrated using a sequence of local field stars, themselves calibrated against standard fields on photometric nights. LSQ14bdq set for the season just before reaching maximum brightness. Subsequent data are a combination of PESSTO, LSQ, Pan-STARRS1 (PS1; Magnier et al., 2013) and GROND (Greiner et al., 2008) images. The PS1 data were taken in the w_{\\rm P1}-band (effectively a gri composite; Tonry et al., 2012) from the Pan-STARRS NEO Science Consortium survey (Huber et al., 2015), and also calibrated to r.
+
+We converted observed r-band magnitudes to rest-frame g-band for comparison with other SLSNe (at this redshift, observed g,r,i,z are similar to rest-frame u,g,r,i). The K-correction before peak is calculated from synthetic photometry on the LSQ14bdq spectrum (K_{r\\to g}\\simeq-0.3). As we only have one spectrum, our post-peak data use a K-correction calculated in a similar manner, but from the spectrum of PTF12dam at +171 d (Nicholl et al., 2013). LSQ14bdq has a broad light curve like PTF12dam. A polynomial fit suggests M_{g}=-21.96 at maximum light. The initial peak (M_{g}=-20.01) is much faster, with a rise of 5 days and a total width of \\sim 15 days.
+
+Leloudas et al. (2012) presented pre-rise data for SN 2006oz with multi-colour detections. Fig. 3 shows that the two are qualitatively similar. The rise to peak is not as pronounced as for LSQ14bdq, although time-sampling was sparser. Leloudas et al. (2012) suggested a luminosity plateau powered by oxygen-recombination in extended CSM. Of the other SLSNe with strict explosion constraints, SN 2011ke (Inserra et al., 2013) shows a similar rise to SN 2006oz, but non-detections shortly before
+
+Figure 1.— The pre-maximum spectrum of LSQ14bdq (smoothed using 10-pixel moving average), compared to PTF12dam (Nicholl et al., 2013) and PTF09cnd (Quimby et al., 2011). The spectra are at similar phases from peak, and have been corrected for Galactic reddening (E(B-V)=0.056; Schlafly & Finkbeiner, 2011). The redshift is determined by fitting double-gaussian profiles (at instrumental resolution) to narrow Mg II absorption (inset, including PTF09cnd); the components are blended for the LSQ14bdq spectrum. Fluxes have been scaled to the same luminosity distance as LSQ14bdq, and offsets added for presentation. discovery limit any early peak to be fainter than those observed for LSQ14bdq and SN 2006oz.
+
+## 3. Analysis
+
+### Bolometric light curve and main peak
+
+We constructed the bolometric light curve of LSQ14bdq in two steps. First we integrated the flux in the rest-frame u- to i-bands, following the procedure described in Inserra et al. (2013). Before -20 d, we caution that points are derived using the earliest available colour information. To estimate the full bolometric light curve, we take the fractional flux outside of this range to be the same as for PTF12dam (Nicholl et al., 2013; Chen et al., 2014). This seems reasonable, at least in the late-time NIR, from the J-band detection at 192 days (Table 1). Both the observed _ugri_-pseudobolometric and the estimated full bolometric light curve are shown in Fig. 2.
+
+We can reproduce the main peak with models powered by a central engine (we take a magnetar as representative) or by ejecta-CSM interaction. For details of the models, see Inserra et al. (2013); Chatzopoulos et al. (2012); Nicholl et al. (2014). The magnetar fit has magnetic field B=0.6\\times 10^{14} G, spin period P=1.7 ms and diffusion time \\tau_{m}=90 d. We have fixed the time of explosion to coincide with the first detection, on the precursor peak. The CSM model has ejected mass M_{\\rm ej}=30.0 M{}_{\\odot}, CSM mass M_{\\rm CSM}=16.0 M{}_{\\odot} (assuming \\kappa=0.2 cm{}^{2} g{}^{-1}), density \\rho_{\\rm CSM}=3.0\\times 10^{-13} g cm{}^{-3} and explosion energy E_{\\rm k}=5.0\\times 10^{51} erg.
+
+We also compare to the brightest PISN model of Kasen et al. (2011) (a 130 M{}_{\\odot} bare helium core), which reproduces the peak luminosity. However, the rise-time is discrepant: the well-constrained main rise of LSQ14bdq lasts for 50 days, whereas the PISN model rises for over 100 days, and declines more slowly than LSQ14bdq. We therefore reach the same conclusion as Nicholl et al. (2013) and McCrum et al. (2014), who found that the rise-time ruled out PISN models for two slowly-declining SLSNe, PTF12dam and PS1-11ap.
+
+### A Nickel-powered precursor?
+
+The first scenario we investigate for the early peak is an initially normal SN, powered by the radioactive decay of {}^{56}Ni, before the mechanism powering the super-luminous second peak kicks in. We compare our early light curve to {}^{56}Ni-powered SNe (core-collapse and thermonuclear) in Fig. 3, choosing filters with similar effective wavelengths. As the late-time spectra of Type Ic SLSNe closely resemble SNe Ic, we first compare to SN 1994I, a well-observed object with a narrow light curve, suggesting M_{\\rm ej}\\lesssim 1 M{}_{\\odot}(Richmond et al., 1996). The width of the LSQ14bdq peak is slightly narrower, but comparable to SN 1994I. However, it is 2.3 magnitudes brighter. Using the Arnett (1982) model, as implemented by Inserra et al. (2013), we find that matching the photometry21 requires an almost pure {}^{56}Ni ejecta of \\simeq 1 M{}_{\\odot}, which is difficult to produce with core-collapse SNe. Type Ia SNe produce \\approx 0.5-1 M{}_{\\odot} of nickel, but comparing with SN 2005cf (Pastorello et al., 2007) shows that SNe Ia have light curves that are too broad. The fast rise of LSQ14bdq would necessitate a very large explosion energy, even for the lowest possible ejecta mass, M_{\\rm ej} = M_{\\rm Ni}. A fit shows that we require E_{\\rm k}=25 B, where 1 B (Bethe) = 10^{51} erg. Because complete burning of 1 M{}_{\\odot} of carbon/oxygen to nickel liberates only \\sim 1 B, an additional energy source is required. Thus, if the early peak is 'a supernova in itself', it cannot be a normal {}^{56}Ni-powered event.
+
+Footnote 21: Assuming a blackbody SED, we apply synthetic photometry to the model using Pysynphot ([http://stsdas.stsci.edu/pysynphot/](http://stsdas.stsci.edu/pysynphot/)).
+
+### Shock cooling with a central engine
+
+In Fig. 4, we show an alternative scenario, comparing the early emission from LSQ14bdq to other SNe with two observed peaks. The basic light curve morphology of SNe 1987A, 1993J and 2008D has been interpreted as an initial cooling phase, releasing heat deposited by the shock wave, before a second peak is driven by delayed heating from {}^{56}Ni (Shigeyama & Nomoto, 1990; Woosley et al., 1994; Modjaz et al., 2009). The light curve of LSQ14bdq is qualitatively similar to these objects, suggesting that
+
+Figure 2.— The light curve of LSQ14bdq. Top: Observed photometry in griz. Polynomial fitting suggests a peak on MJD = 56807, at r=19.15. Middle: Absolute light curve in rest-frame g-band, after K-correction and de-reddening, and resemblance to PTF12dam (Nicholl et al., 2013). SLSNe 2011ke (Inserra et al., 2013) and 2006oz (Léloudas et al., 2012) have good coverage during the rising phase. Bottom: The main peak of the bolometric light curve can be fit by magnetar and interaction models (see Sect. 3.1). The rise of the PISN model is too slow to match the observations. Empty circles indicate points that are estimated from single-filter photometry (see Sect. 3.1). the light curve could be explained by a shock cooling phase, followed by internal reheating. While bolometric luminosity in the cooling phase should decline monotonically, single-filter light curves show maxima as the peak of the SED moves into and out of the optical.
+
+We fit the early rise using analytic approximations from Rabinak & Waxman (2011), giving the parameters in Fig. 4. We use their blue supergiant (radiative envelope), red supergiant (convective envelope) and Wolf-Rayet models for SN 1987A, 1993J and 2008D, respectively. The progenitor radius, R_{\\star}, determines the slope and duration of the rise, while the luminosity scale is set by both R_{\\star} and by the explosion energy per unit mass, E_{\\rm k}/M_{\\rm ej}. The values of R_{\\star} and E_{\\rm k}/M_{\\rm ej} used to fit the literature objects are in line with previous estimates. As noted by Rabinak & Waxman (2011), the model assumptions begin to break down after a few days; we end the simulations at the cut-off time prescribed by their equation 17. The model for SN 1993J is still rising slowly as it goes through the peak. The discrepancy with observations may be due to the very simple density profile assumed in the model. Detailed models of SN 1993J have had \\lesssim 0.1{\\rm M}_{\\odot} in the extended envelope, with most of its mass in the core.
+
+To model LSQ14bdq, we set E_{\\rm k}/M_{\\rm ej}=C\\,{\\rm B}/{\\rm M}_{\\odot}, where C is arbitrary. To try to break the degeneracy between E_{\\rm k} and M_{\\rm ej}, we assume that the diffusion time during the early peak is the same as in our central-engine fit to the main peak. We neglect late-time kinetic energy input from the magnetar, \\approx 10^{51} erg for our model, because this is small compared to the initial energy found for the shock cooling, as will be seen below. We then have
+
+\\tau_{m}=\\frac{1.05}{\\left(13.7c\\right)^{1/2}}\\kappa^{1/2}\\left(\\frac{M_{\\rm ej }^{3}}{E_{\\rm k}}\\right)^{1/4}=90\\,{\\rm days}. 
+
+For \\kappa=0.2\\,{\\rm cm}^{2}\\,{\\rm g}^{-1}, this leads to:
+
+M_{\\rm ej}=40.1\\,C^{1/2}\\,{\\rm M}_{\\odot}; 
+
+E_{\\rm k}=40.1\\,C^{3/2}\\,{\\rm B}. 
+
+The uncertainty in \\tau_{m} (taking the range where \\chi^{2}<2\\chi^{2}_{\\rm min}) is \\sim 30\\%, meaning {\\rm M}_{\\odot} and E_{\\rm k} are constrained to within a factor of 2.
+
+Fig. 4 shows models for 3 progenitors: a Wolf-Rayet with R_{\\star}=10\\,{\\rm R}_{\\odot}, and extended stars with R_{\\star}=100,500\\,{\\rm R}_{\\odot} (extended models are insensitive to the choice of radiative/convective envelope). For the compact model, we derive M_{\\rm ej}\\approx 270\\,{\\rm M}_{\\odot}; depending on the precise mass, the implied progenitor should either explode as a PISN or collapse totally (hence invisibly) to a black hole (Heger & Woosley, 2002), neither being consistent with the light curve. The inferred energy, E_{\\rm k}>10^{54} erg, is also unrealistic.
+
+An extended envelope (or wind; Ofek et al., 2010) is therefore a requirement in this scenario. The 100\\,{\\rm R}_{\\odot} model requires M_{\\rm ej}\\approx 60\\,{\\rm M}_{\\odot} and E_{\\rm k}\\approx 150\\,{\\rm B}. This energy is greater than the canonical neutron star gravitational binding energy of 10^{53} erg (of which \\sim 1\\% is normally accessible to power the explosion). The energy released in black-hole-formation is higher than for neutron stars and could meet the requirement, if it could couple to the ejecta. A possible mechanism is an accretion disk, such as in the collapsar model (Woosley, 1993) of gamma-ray bursts (GRBs). In this case the engine would be black hole accretion (Dexter & Kasen, 2013) rather than a magnetar. This accretion engine has a characteristic power law, L\\propto t^{-n}, similar to the magnetar, with n_{\\rm mag}=2 and n_{\\rm acc}=5/3. Therefore we would expect a similar \\tau_{m}, and that equations 2 and 3 would still hold.
+
+The final model shown is for R_{\\star}=500\\,{\\rm R}_{\\odot}. The inferred mass is M_{\\rm ej}\\approx 30\\,{\\rm M}_{\\odot}, with E_{\\rm k}\\approx 20\\,{\\rm B}, which may also favour a black hole engine over a neutron star (it is similar to the kinetic energy in GRB-SNe), but not so definitively as in the more compact models. The radius is very large for a hydrogen-free star, but similar to SN 1993J, which had only a very diffuse hydrogen envelope, and by maximum light had evolved to resemble a SN Ib. For this model, the velocity, v\\sim\\sqrt{10E_{\\rm k}/(3M_{\\rm ej})}=10000\\,{\\rm km}\\,{\\rm s}^{-1}, is in good agreement with the observed spectrum.
+
+### CSM interaction
+
+An alternative scenario to consider is that the main peak arises from CSM interaction on scales of \\sim 10^{4}\\,{\\rm R}_{\\odot}, as has been suggested for other SLSNe (e.g. Chatzopoulos et al., 2013). CSM fits for the main peak (Fig. 2) require E_{\\rm k}/M_{\\rm ej}\\sim 0.2\\,{\\rm B}/{\\rm M}_{\\odot}, lower than any of the shock cooling models shown in Fig. 4. This is fairly inflexible for the CSM model, as E_{\\rm k} and M_{\\rm ej} are the two strongest drivers of the peak luminosity - e.g. models with E_{\\rm k}/M_{\\rm ej}\\sim 0.4\\,{\\rm B}/{\\rm M}_{\\odot} are too bright by about 0.5 dex (and rise too quickly). To reproduce the early emission with shock cooling and E_{\\rm k}/M_{\\rm ej}\\sim 0.2\\,{\\rm B}/{\\rm M}_{\\odot}, we would need initial radius R_{\\star}\\sim 2000\\,{\\rm R}_{\\odot}. This is uncomfortably large for any reasonable progenitor. However models have been proposed in which the cooling phase arises from shock breakout in an inner region of dense CSM
+
+Figure 3.— Nickel-powered model for the precursor peak. The early light curve of LSQ14bdq is similar to SN 1994I (Type Ic) but is much brighter, whereas it is much narrower than the Type Ia SN 2005cf. The combination of high luminosity and very short rise-time rules out a physically-plausible {}^{56}Ni-powered SN for this peak (see Sect. 3.2).
+
+[MISSING_PAGE_FAIL:5]
+
+[MISSING_PAGE_FAIL:6]
+
+* Lunnan et al. (2014) Lunnan, R., Chornock, R., Berger, E., et al. 2014, The Astrophysical Journal, 787, 138
+
+* Magnier et al. (2013) Magnier, E., Schlafly, E., Finkbeiner, D., et al. 2013, The Astrophysical Journal Supplement Series, 205, 20
+
+* McCrum et al. (2014) McCrum, M., Smartt, S., Kotak, R., et al. 2014, Monthly Notices of the Royal Astronomical Society, 437, 656
+
+* McCrum et al. (2015) McCrum, M., Smartt, S. J., Rest, A., et al. 2015, Monthly Notices of the Royal Astronomical Society, 448, 1206
+
+* Modjaz et al. (2009) Modjaz, M., Li, W., Butler, N., et al. 2009, The Astrophysical Journal, 702, 226
+
+* Moriya & Maeda (2012) Moriya, T. J., & Maeda, K. 2012, The Astrophysical Journal Letters, 756, L22
+
+* Neill et al. (2010) Neill, J. D., Sullivan, M., Gal-Yam, A., et al. 2010, ApJ, 727, 15
+
+* Nicholl et al. (2013) Nicholl, M., Smartt, S., Jerkstrand, A., et al. 2013, Nature, 502, 346
+
+* Nicholl et al. (2014) Nicholl, M., Smartt, S. J., Jerkstrand, A., et al. 2014, Monthly Notices of the Royal Astronomical Society, 444, 2096
+
+* Nicholl et al. (2015) Nicholl, M., Smartt, S. J., Jerkstrand, A., et al. 2015, ArXiv e-prints, arXiv:1503.03310
+
+* Ofek et al. (2010) Ofek, E. O., Rabinak, I., Neill, J. D., et al. 2010, The Astrophysical Journal, 724, 1396
+
+* Pastorello et al. (2007) Pastorello, A., Taubenberger, S., Elias-Rosa, N., et al. 2007, Monthly Notices of the Royal Astronomical Society, 376, 1301
+
+* Pastorello et al. (2010) Pastorello, A., Smartt, S., Botticella, M., et al. 2010, The Astrophysical Journal Letters, 724, L16
+
+* Quimby et al. (2013) Quimby, R. M., Yuan, F., Akerlof, C., & Wheeler, J. C. 2013, Monthly Notices of the Royal Astronomical Society, 431, 912
+
+* Quimby et al. (2011) Quimby, R. M., Kulkarni, S., Kasliwal, M. M., et al. 2011, Nature, 474, 487
+
+* Rabinak & Waxman (2011) Rabinak, I., & Waxman, E. 2011, The Astrophysical Journal, 728, 63
+
+* Richmond et al. (1996) Richmond, M. W., Van Dyk, S., Ho, W., et al. 1996, The Astronomical Journal, 111, 327
+
+* Schlafly & Finkbeiner (2011) Schlafly, E. F., & Finkbeiner, D. P. 2011, The Astrophysical Journal, 737, 103
+
+* Shigeyama & Nomoto (1990) Shigeyama, T., & Nomoto, K. 1990, The Astrophysical Journal, 360, 242
+
+* Smartt et al. (2014) Smartt, S. J., Valenti, S., Fraser, M., et al. 2014, ArXiv e-prints, arXiv:1411.0299
+
+* Tonry et al. (2012) Tonry, J., Stubbs, C., Lykke, K., et al. 2012, The Astrophysical Journal, 750, 99
+
+* Woosley (1993) Woosley, S. 1993, The Astrophysical Journal, 405, 273
+
+* Woosley & Blinnikov (2010) --. 2010, The Astrophysical Journal Letters, 719, L204
+
+* Woosley & Blinnikov (2007) Woosley, S., Blinnikov, S., & Heger, A. 2007, Nature, 450, 390
+
+* Woosley et al. (1994) Woosley, S., Eastman, R. G., Weaver, T. A., & Pinto, P. A. 1994, The Astrophysical Journal, 429, 300
+
+* Yaron & Gal-Yam (2012) Yaron, O. and Gal-Yam, A. 2012, Publications of the Astronomical Society of the Pacific, 124, 668
+
+* Young et al. (2010) Young, D., Smartt, S., Valenti, S., et al. 2010, Astronomy & Astrophysics, 512, A70

@@ -1,0 +1,137 @@
+###### Abstract
+
+We present the first fully relativistic calculations of the crustal strain induced in a neutron star by a binary companion at the late stages of inspiral, employing realistic equations of state for the fluid core and the solid crust. We show that while the deep crust is likely to fail only shortly before coalescence, there is a large variation in elastic strain, with the outermost layers failing relatively early on in the inspiral. We discuss the significance of the results for both electromagnetic and gravitational-wave astronomy.
+
+Subject headings:Stars: neutron -- Gravitational waves -- dense matter
+
+## 1. Introduction
+
+Finite size effects for neutron stars in coalescing binary systems are of great interest since the departure from point-mass dynamics may provide a unique insight into the high-density equation of state when such systems are detected by future gravitational-wave experiments (Flanagan & Hinderer, 2008). In this paper we advance our understanding of this problem by providing the first general relativistic calculations of the strain induced in the solid crust during binary inspiral, building upon our recent relativistic elastic perturbation scheme (Penner et al., 2011).
+
+The solid crust makes up a relatively small fraction of the star, and its shear modulus is small relative to the pressure. Nevertheless, there are several reasons why an accurate treatment of the crustal strain problem is of interest. Firstly, a sufficiently high signal-to-noise gravitational-wave observation may allow the effects of the solid phase to be identified. Secondly, large scale failures of the crust during the late stages of inspiral may have interesting effects, especially given the link between such mergers and short gamma-ray bursts. Thirdly, the techniques developed here will prove essential in tackling the related problem of calculating, in General Relativity, the maximum mass quadrupole a compact star can sustain, a problem of great interest for gravitational-wave searches (see e.g. Abbott et al. (2010)).
+
+Of particular interest is to know at what stage in the inspiral the crust fails. Early work by Kochanek (1992) indicated this occurs only shortly before merger. Recent estimates by Postnikov et al. (2010) and Troja et al. (2010) suggest failure at a much earlier stage. We resolve this discrepancy below. However, our modelling indicates very different levels of strain in different parts of the crust, suggesting a much richer failure sequence than simple considerations would have suggested. This is a subtlety that requires accurate calculations of the kind described here.
+
+## 2. Back-of-the-envelope Estimates
+
+Before discussing relativistic strained stars, we will make a few simple estimates using Newtonian theory. As well as providing useful insights, these estimates will enable us to normalise the relativistic calculations that follow.
+
+Consider a star of mass M, radius R, a distance D from a binary companion of mass M_{\\rm comp}. We focus on the situation where the star is axisymmetric, being deformed away from sphericity such that its quadrupole moment is changed by a fractional amount \\epsilon. This is non-zero by virtue of the tidal field of the companion, and also (we assume) by the solid phase having a zero-strain shape \\epsilon_{0}\\neq 0. This is obviously highly idealised, as in general the change in shape induced by the crustal strain will not coincide with the line joining the two stars. However, by considering this simple case we can make some useful estimates, and make contact with other results in the literature.
+
+The star's energy can be written (Jones, 2002)
+
+E(\\epsilon)=E_{0}+E_{\\rm self-gravity}+E_{\\rm tidal}+E_{\\rm elastic}  where E_{0} denotes the energy of the equivalent fluid star in the absence of a companion, E_{\\rm self-gravity} the perturbation in the star's self-gravity, E_{\\rm tidal} the energy perturbation due to the tidal interaction, and E_{\\rm elastic} is the elastic energy. Since the self-gravity is minimised for a spherical configuration, we have E_{\\rm self-gravity}\\sim Ac^{2}, where A\\sim GM^{2}/R. Assuming that the elastic energy is minimised when the star has a shape \\epsilon=\\epsilon_{0}, we have E_{\\rm elastic}\\sim B(\\epsilon-\\epsilon_{0})^{2}, where B is of order the Coulomb binding energy of the solid phase (B\\sim\\int\\dot{\\mu}\\,dV, where \\dot{\\mu} is the shear modulus). The gravitational field of the binary partner is, of course, -GM_{\\rm comp}/r_{\\rm comp}, where r_{\\rm comp}=0 is the centre of mass of the companion. Expanding this about the centre of mass of the star of mass M, defined by r=0, leads to the tidal field
+
+\\Phi_{\\rm tidal}(r)=\\frac{1}{2}r^{2}\\frac{GM_{\\rm comp}}{D^{3}}[\\delta_{ij}-3 n_{i}n_{j}]\\hat{r}_{i}\\hat{r}_{j}  where n_{i} is a unit vector along the line separating the two stars. The corresponding energy perturbation is
+
+E_{\\rm tidal}\\sim\\Phi_{\\rm tidal}(\\epsilon M)\\sim A\\frac{M_{\\rm comp}}{M} \\left(\\frac{R}{D}\\right)^{3}\\epsilon 
+
+Inserting these expressions into equation (1), minimising with respect to \\epsilon and making use of the expectationthat B\\ll A leads to
+
+\\epsilon=\\frac{B}{A}\\epsilon_{0}-\\frac{1}{2}\\frac{M_{\\rm comp}}{M}\\left(\\frac{R}{D }\\right)^{3} 
+
+The first term, proportional to \\epsilon_{0}, is what is normally termed the'mountain' (Abbott et al., 2010), and is sourced by the star's non-spherical reference shape, caused by whatever geological processes may have been acting on it. The second term, proportional to M_{\\rm comp}, is sourced by the tidal field created by the companion star. As expected in a perturbative treatment, these two contributions to the total shape \\epsilon have decoupled neatly; we will denote them \\epsilon_{\\rm mountain} and \\epsilon_{\\rm tidal}.
+
+The corresponding perturbations in the star's quadrupole moment are found by simply multiplying by the moment of inertia I. Separating the pieces we have:
+
+Q_{\\rm mountain} = \\frac{B}{A}\\epsilon_{0}I  Q_{\\rm tidal} = -\\frac{1}{2}\\frac{M_{\\rm comp}}{M}\\left(\\frac{R}{D}\\right)^{3}I 
+
+Given that it is meaningful to separate the shape changes/quadrupole moments, it must be possible to separate the strains induced in the solid phases. In the mountain case, the actual deformation away from sphericity, \\epsilon_{\\rm mountain}, is much less than the zero strain shape \\epsilon_{0}, by a factor B/A\\sim 10^{-5}, so the strain induced is;
+
+u_{\\rm mountain}\\sim\\epsilon_{0}-\\epsilon_{\\rm mountain}\\approx\\epsilon_{0} \\approx(A/B)\\epsilon_{\\rm mountain} 
+
+In contrast, for the tidal deformation, the only strains induced are by the shape change \\epsilon_{\\rm tidal} itself, so that;
+
+u_{\\rm tidal}\\sim\\epsilon_{\\rm tidal}\\sim Q_{\\rm tidal}/I 
+
+We see that, for a given perturbation in the quadrupole moment, a factor of A/B\\sim 10^{5} more strain is induced in the solid phases in the mountain case compared to the tidal deformation case. Physically, one way of understanding this is as follows. In the mountain case, the deformation is sourced by the strains themselves, and the weakness of electrostatic forces versus pressure means one needs a large strain (\\sim\\epsilon_{0}) to build a given mountain (\\sim\\epsilon_{\\rm mountain}). In the tidal case, the deformation is sourced by the tidal field, with the consequent shape change (\\sim\\epsilon_{\\rm tidal}) being the only source of strain; the solidity of the crust plays almost no role--the solid is deformed in much the same way as if it were fluid.
+
+It is now straightforward to estimate at what point during inspiral the crust fails. Combining (6) and (8) with Kepler's third law, i.e., \\Omega^{2}=GM_{\\rm total}/D^{3}, where \\Omega=2\\pi f_{\\rm orbit}=\\pi f_{\\rm GW}, we find that the crust fails (u_{\\rm tidal}=u_{\\rm break}) when
+
+f_{\\rm GW}^{\\rm break}\\approx 3\\,{\\rm kHz}\\,\\left(\\frac{M}{1.4M_{\\odot}} \\right)^{1/2}\\left(\\frac{10^{6}\\,{\\rm cm}}{R}\\right)^{3/2}\\left(\\frac{u_{\\rm break }}{0.1}\\right)^{1/2} 
+
+(we have set M_{\\rm comp}=M for simplicity). We have scaled the result, which should only be trusted up to factors of order unity, to the estimated breaking strain u_{\\rm break}\\approx 0.1 from recent molecular dynamics simulations (Horowitz & Kadau, 2009). Comparing with the estimated gravitational-wave frequency at the innermost stable orbit (Abadie et al., 2010);
+
+f_{\\rm GW}^{\\rm ISCO}\\approx\\frac{c^{3}}{\\pi 6^{3/2}GM_{\\rm total}}=1.6\\,{\\rm kHz }\\,\\left(\\frac{1.4M_{\\odot}}{M}\\right) 
+
+(again, for an equal-mass binary) we see that crust failure should _not_ be expected significantly before coalescence, in agreement with the results of Kochanek (1992).
+
+This contrasts with the estimates of Postnikov et al. (2010) and Troja et al. (2010) who found failure would occur much earlier in the inspiral. By using the mapping between quadrupole deformation and strain appropriate for mountains (effectively equation 7) rather than that for tidal deformations (as per equation 8), they overestimate the strain by a factor \\sim A/B, altering the gravitational-wave frequency at failure by a factor \\sim(A/B)^{1/2}\\sim 10^{2}.
+
+## 3. The Tidal Problem
+
+The above estimates provide a useful guide, but they do not allow us to answer important questions such as _where_ the crust first fails, and how large the strain _variations_ are within the crust. To address these questions, we have extended the formalism of Penner et al. (2011). As in that study, we take as our background model a spherical unstrained star (corresponding to \\epsilon_{0}=0 above) and subject it to a quadrupolar field, generated by a binary companion. However, in the present context we need to consider the normalisation of the perturbations. Specifically, we need the mapping between the amplitude of the perturbation and the separation, or orbital frequency, of the binary system. The Newtonian tidal potential derived earlier can be used to fix this, as follows.
+
+Penner et al. (2011) express the metric component g_{tt} in the form g_{tt}=-e^{\\nu}[1-H_{0}(r)Y_{lm}], with the function H_{0} outside the star taking the form
+
+H_{0}(r)=a_{P}P_{22}(r/M-1)+a_{Q}Q_{22}(r/M-1)  where r is the radial distance from the centre of the star, P_{22} and Q_{22} are the associated Legendre functions, and a_{P}, a_{Q} are constants. Far from the star the dominant term is
+
+H_{0}(r\\gg R)\\approx 3a_{P}\\left(\\frac{r}{M}\\right)^{2} 
+
+In this limit the metric can be related to the Newtonian potential according to
+
+\\Phi^{\\rm Newton}=-\\frac{g_{tt}+1}{2} 
+
+This allows us to relate the asymptotic form of H_{0} to the Newtonian tidal potential in equation (2), leading to
+
+a_{P}=\\frac{2}{3}\\sqrt{\\frac{4\\pi}{5}}\\frac{M_{\\rm comp}M^{2}}{D^{3}}. 
+
+The numerical calculation can then be normalised by considering the value of H_{0} at the stellar surface:
+
+H_{0}(R)=a_{P}[P_{22}(R/M-1)+a_{2}Q_{22}(R/M-1)]  where the ratio a_{2}=a_{Q}/a_{P} is related to the Love number k_{2}(Flanagan & Hinderer, 2008; Hinderer et al., 2010) by:
+
+a_{2}=\\frac{15}{4}\\left(\\frac{R}{M}\\right)^{5}k_{2} The Love number is calculated numerically as a property purely of the stellar model, and the amplitude of the associated perturbation is parameterised by a_{P}, either in terms of the binary separation, or the associated gravitational-wave frequency:
+
+a_{P}=6\\pi^{2}\\sqrt{\\frac{4\\pi}{5}}\\frac{G^{2}M^{2}M_{\\rm comp}}{c^{6}M_{\\rm total }}f_{\\rm GW}^{2} 
+
+Note that, for given stellar masses the tidal deformation scales as the square of the gravitational-wave frequency.
+
+## 4. Results
+
+We have generalised the numerical framework of Penner et al. (2011) to allow for realistic equations of state for both the crust and the star's core. We present results for stellar models that combine the Akmal et al. (1998) equation of state for the core fluid with the results of Douchin & Haensel (2001) in the crust. These models are state-of-the-art for this problem, but it should be noted that we have not accounted for the (likely) presence of nuclear pasta in the inner crust. A sizeable pasta region could have significant impact on the results, but we do not yet have a sufficiently detailed equation of state representing this possibility.
+
+The chosen core equation of state is sufficiently stiff to satisfy constraints from observations (cf., the left panel of Fig 1). It allows for neutron star masses at least as large as 2M_{\\odot}, in agreement with the observed 1.97M_{\\odot} mass of PSR J1614-2230 (Demorest et al., 2010). It also satisfies the radius constraint from X-ray burst sources, i.e., that a star with mass of 1.4M_{\\odot} should have a radius in the range 11-12 km (Steiner et al., 2010). The elastic properties of the crust do not affect the equilibrium configurations since we assume the star is relaxed at large binary separations.
+
+Given this equilibrium configuration, we have calculated both the Love number k_{2}, and the fractional difference \\Delta k_{2}/k_{2}^{\\rm fluid}=(k_{2}^{\\rm crust}-k_{2}^{\\rm fluid})/k_{2}^{ \\rm fluid} between the Love numbers for an elastic star and the equivalent purely fluid star (see Penner et al. (2011) for details). The results are shown in the right panel of Fig. 1. They can be compared to, first of all, the fluid star results of Hinderer et al. (2010) and secondly the results of Penner et al. (2011) for the magnitude of the crust effects. Based on these comparisons, the present results are not surprising.
+
+We have also evaluated the von Mises stress associated with the tidal perturbation. By comparing the result to the anticipated breaking strain u_{\\rm break}\\approx 0.1(Horowitz & Kadau, 2009), we can infer when different parts of the crust fail during binary inspiral. A typical result is shown in Fig. 2, providing the gravitational-wave frequency at failure throughout the crust for a 1.4M_{\\odot} star (in an equal-mass binary). The result is not trivial, owing to both the nonlinear combination of perturbed quantities that enter the von Mises stress and the associated angular functions.
+
+The large variation in the crustal strain implies that failure will occur at different stages during inspiral. From Fig. 2 we see that the outer crust (roughly up to neutron drip, corresponding to r\\approx 11.15 km in Fig. 2) fails fairly uniformly when f_{\\rm GW}\\approx 200 Hz. Meanwhile, failure of the bulk of the inner crust requires f_{\\rm GW}\\approx 600-800 Hz, a factor of two or so below the ISCO frequency (see equation (10)). However, there are also macroscopic regions in the inner crust that will not fail before merger. These results improve upon the estimates from section 2, showing the rich structure of the realistic calculation, with failure occurring at different stages at different depths.
+
+## 5. Implications
+
+What happens when the crust fails? Again, key insights are provided by the molecular dynamics simulations of Horowitz & Kadau (2009). The indications are that when the critical strain is reached, there is a catastrophic failure, with energy released throughout the strained volume, rather than the formation of a lower-dimensionality crack. What happens next is less clear. Two extreme scenarios can be envisaged: the relieved
+
+Figure 1.— Left panel: Mass-radius relation for our sequence of stellar models, demonstrating consistency with the observational constraints of Demorest et al. (2010) (upper dashed horizontal line) and Steiner et al. (2010) (grey region). Right panel: The Love number k_{2} (upper curve) as a function of the stellar compactness M/R; cf., the pure fluid results in Fig. 1 of Hinderer et al. (2010). We also show the relative influence of the crust on the tidal deformability, represented by \\Delta k_{2}/k_{2}^{\\rm fluid} (lower curve); this is similar to the results of Penner et al. (2011). The compactness of the 1.4M_{\\odot} model considered in Fig. 2 is indicated by a vertical dashed line.
+
+Figure 2.— The gravitational-wave frequency (in Hz) at failure for different locations in the crust of a 1.4M_{\\odot} neutron star. The result, which is obtained by comparing the von Mises strain to the breaking strain of Horowitz & Kadau (2009), corresponds to an equal-mass binary. The vertical line near 11.15 km indicates the location of neutron drip in the star. strain is dissipated locally as heat, or, the strain is converted into phonons/seismic waves and transported throughout the star prior to dissipation. An interesting question is whether or not the relieved strain is capable of melting the crust. From the estimates in Section 2 we see that the strain energy may be at the level of 10^{46} erg. However, it is easy argue that even the release of this level of energy will not have significant impact on the crust. To demonstrate this, let us assume that the first of the two extreme cases described above applies, with all strain energy being dissipated locally.
+
+Ignoring the temperature dependence of the shear modulus (which would be irrelevant for typical neutron star temperatures anyway), the crust melts when \\Gamma\\lesssim 173, where (Farouki & Hamaguchi, 1993)
+
+\\Gamma=\\frac{Z^{2}e^{2}}{a}\\frac{1}{k_{B}T} 
+
+Here, e is the electron charge, Z is the charge per ion and a=\\left(3/4\\pi n_{i}\\right)^{1/3}, with n_{i} the ion number density, is the average ion spacing. For a typical temperature of 10^{8} K, we have \\Gamma\\sim 10^{4} in the inner crust (where Z\\approx 50 and the number of nucleons per ion, A, is several hundred).
+
+We want to compare the melting temperature obtained from Eq. (18) to the temperature reached after releasing the tidal strain. For this we need the shear modulus, which is approximated by (Strohmayer et al., 1991)
+
+\\tilde{\\mu}\\approx 0.1n_{i}\\frac{Z^{2}e^{2}}{a} 
+
+The energy per unit volume corresponding to a strain u is then
+
+E_{\\rm strain}\\approx 10^{-2}\\tilde{\\mu}\\left(\\frac{u}{0.1}\\right)^{2} 
+
+We can turn this into a temperature via the heat capacity, T_{\\rm strain}\\approx E_{\\rm strain}/c_{v}, making use of the estimate of the heat capacity of ions from van Riper (1991); C_{v}=c_{v}/n_{i}=\\alpha k_{B} where \\alpha is of order unity (for 10^{8} K we have \\alpha\\approx 5). Thus, we see that the released heat will melt the crust if
+
+u\\gtrsim 0.5\\left(\\frac{\\alpha}{5}\\right)^{1/2} 
+
+This exceeds the breaking strain estimates of Horowitz & Kadau (2009), indicating that the released heat does _not_ melt the crust during binary inspiral, even when _all_ the strain energy goes into local heating.
+
+A more detailed calculation leads to the results in Figure 3, which compares the melting temperature to that reached after releasing the strain locally. We also compare to the critical temperature for (singlet) neutron superfluidity. The message from this comparison is clear; the heat that is released when the crust fails is not sufficient to break the superfluid pairing, either. This implies that a realistic numerical treatment of neutron star binary inspiral should allow for superfluidity and crust elasticity prior to coalescence.
+
+The crust may not melt, but we are still releasing a significant amount of energy when the crust fails. Could this have observable consequences? Given the anticipated importance of neutron star binary mergers for future gravitational-wave observations, and the likely association of such events with short gamma-ray bursts, a precursor signal would undoubtedly be interesting. Observational evidence for such precursors was recently discussed by Troja et al. (2010). However, the heating of the crust should be irrelevant in this respect. The results in Fig. 3 show that the outer crust does not heat significantly. The inner crust heats up, but the associated heat would not diffuse to the surface before the binary merges (see Blaes et al. (1989) for discussion). The possibility that the energy is released into seismic waves that generate Alfven waves in the magnetosphere, eventually leading to a gamma-ray signal, is more interesting (again, see Blaes et al. (1989)). In principle, such an event could be as energetic as the largest observed magnetar flare (the 27 December 2004 event in SGR 1806-20 (Palmer et al., 2005)), assuming that the entire strain energy is transferred to the magnetosphere. Such a signal could possibly be observable from a distance of 100 Mpc. The corresponding gravitational-wave signal would be comfortably detectable by the advanced LIGO/Virgo detector network. However, according to the rate estimates of Abadie et al. (2010) there is likely to be only of order one such event per year of observation. According to our numerical results, the most energetic failure event would precede the merger itself by a fraction of a second. Observations of such precursors would obviously be tremendously interesting, but it seems clear from our results that they would have to be associated with rather unique events.
+
+Finally, it remains to consider the impact on the gravitational-wave signal. The smallness of the effect of the elastic crust on the tidal distortion (right panel of Fig. 1), suggests it would require an unfeasibly high signal-to-noise observation for the crustal elasticity to be apparent, especially given that finite-size effects them
+
+Figure 3.— Various relevant temperatures as functions of baryon number density n_{b} throughout the crust. The upper curve is the crustal melting temperature, the lower curve the temperature to which the crust would be heated by local dissipation of strain energy into heat (cf., the discussion in the text), demonstrating that the crust does not melt during inspiral. We also show two models for the neutron (singlet) critical temperature (corresponding to models a (solid) and c (dashed) of Andersson et al. (2005)), showing that the local heating is insufficient to break superfluidity. The vertical line indicates the location of neutron drip. selves are likely to be only borderline detectable by the next generation interferometers (Hinderer et al. 2010). However, as we have shown, even at large separations, portions of the crust will fail, with the volume of crust pushed into failure steadily increasing as the inspiral proceeds. Kochanek (1992) suggested that this may lead to anomalous frictional damping, which may have a relevant secular affect on the phasing. A proper calculation of this would take the strain field presented here as its starting point, but would incorporate a more realistic treatment of crust failure, going beyond the simple breaking strain criterion to allow for a regime of plastic deformation and dissipation. An accurate study of this effect is clearly needed to assess its significance for gravitational-wave searches. This would be an important but non-trivial extension of the work presented here.
+
+AJP acknowledges support from a VESF fellowship. NA, IH and DIJ acknowledge support from STFC via grant no. PP/E001025/1. LS is supported by the European Research Council under contract no. 204059-QPQV, and the Swedish Research Council under contract no. 2007-4422. We acknowledge support from CompStar (an ESF Research Networking Programme).

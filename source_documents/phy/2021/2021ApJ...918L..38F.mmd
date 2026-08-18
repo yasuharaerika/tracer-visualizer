@@ -1,0 +1,161 @@
+###### Abstract
+
+The long wait for the detection of merging black hole - neutron star (BH-NS) binaries is finally over with the announcement by the LIGO/Virgo/Kagra collaboration of GW200105 and GW200115. Remarkably, the primary of GW200115 has a negative spin projection onto the orbital angular momentum, with about 90% probability. Merging BH-NS binaries are expected to form mainly through the evolution of massive binary stars in the field, since their dynamical formation in dense star clusters is strongly suppressed by mass segregation. In this paper, we carry out a systematic statistical study of the binary stars that evolve to form a BH-NS binary, considering different metallicities and taking into account the uncertainties on the natal kick distributions for BHs and NSs and on the common envelope phase of binary evolution. Under the assumption that the initial stellar spins are aligned with the binary angular momentum, we show that both large natal kicks for NSs (\\gtrsim 150\\,\\rm{km\\,s^{-1}}) and high efficiencies for common envelope ejection are required to simultaneously explain the inferred high merger rates and the large spin-orbit misalignment of GW200115.
+
+## 1. Introduction
+
+Gravitational wave (GW) detectors promise to observe hundreds of merging black holes (BHs) and (NSs) in the next few years. The second Gravitational Wave Transient Catalog (GWTC-2) by the LIGO/Virgo/Kagra (LVK) Collaboration, which includes events through the first half of the third observational run (Abbott et al., 2020), lists tens of BH-BH mergers and two NS-NS mergers (Abbott et al., 2017; Abbott et al., 2020). The first mergers of BH-NS binaries, GW200105 and GW20115, have only been confirmed recently (Abbott et al., 2021). The corresponding BH-NS merger rate density is 45^{+75}_{-33}\\,\\rm{Gpc^{-3}\\,yr^{-1}}, if GW200105 and GW200115 are representative of the entire BH-NS binary population, or 130^{+112}_{-69}\\,\\rm{Gpc^{-3}\\,yr^{-1}} under the assumption of a broader distribution of component masses.
+
+BH-NS mergers are particularly important because they can produce an electromagnetic (EM) counterpart. The evolution of merging BH-NS binaries spans three phases: the inspiral (\\gtrsim 10^{6}\\,\\rm{yr}) due to GW emission, the merger phase (\\sim 1\\,\\rm{ms}), which can result in either the tidal disruption of the NS or its plunge into the BH, and, for disrupting systems only, a post-merger phase (\\sim 1\\,\\rm{s}) where NS matter debris can be ejected or accreted onto the BH. Mergers that produce an EM counterpart can provide crucial constraints on the BH accretion process and unique information on the nuclear equation of state, NS crust physics, and NS magnetospheres (e.g., Pannarale et al., 2011; Foucart, 2012; Tsang et al., 2012; Foucart et al., 2018; Ascenzi et al., 2019; Hinderer et al., 2019; Coughlin et al., 2020; Fragione & Loeb, 2021). Moreover, BH-NS mergers have been invoked to explain the formation of r-process elements, to improve tests of fundamental physics, and to constrain models of ultra-relativistic jets (e.g., Kyutoku et al., 2014; Hotokezaka et al., 2018; Thrane et al., 2020; Silva et al., 2021).
+
+Despite these first detections, the origin of BH-NS mergers remains highly uncertain. BH-NS mergers can be produced as a result of the evolution of field binaries, with predicted merger rates consistent with the empirical LVK estimate within the large uncertainties of binary stellar evolution models (e.g., de Mink & Mandel, 2016; Giacobbo & Mapelli, 2018; Kruckow et al., 2018; Broekgaarden et al., 2021; Shao & Li, 2021). In dense star clusters, where stellar BHs dominate the cluster cores and prevent the mass segregation of NSs (Fragione et al., 2018; Ye et al., 2019; Kremer et al., 2020), the rates of dynamical interactions involving NSs are reduced and merging BH-NS cannot be efficiently formed. Only after most of the stellar BHs have been ejected from a cluster can the NSs then efficiently segregate into the innermost core and possibly form binaries that later merge. A number of papers have estimated the BH-NS merger rate from dense star clusters to be several orders of magnitude smaller than LVK estimated rates (Clausen et al., 2013; Bae et al., 2014; Belczynski et al., 2018; Fragione & Banerjee, 2020; Arca Sedda, 2020; Ye et al., 2020). Stellar dynamics can still play a role in shaping the progenitor massive binaries born in young star clusters, with corresponding merger rates matching the LVK rates, when favorable initial conditions are assumed and fractal initial configurations are taken into account (Rastello et al., 2020). Fragione & Loeb (2019, 2019) have proposed that BH-NS mergers can be a natural outcome of the evolution of triple star systems that undergo Lidov-Kozai cycles. However, merger rates consistent with the LVK results can only be achieved if very low natal kicks for BHs and NSs are assumed. Finally, dynamical assembly in AGN disks could also produce higher rates, even though there are still major uncertainties in the models (Yang et al., 2020; Tagawa et al., 2021). Clearly, the observed properties of BH-NS mergers provide critical information to help us determine which of these processes contributes the most to the formation and mergers of compact object binaries.
+
+One of the most interesting results from the first two BH-NS events concerns the orientation of their component spins (Abbott et al., 2021). While the orientation of the primary spin for GW200105 is unconstrained, the primary of GW200115 has a negative spin projection onto the orbital angular momentum at 88% probability, with the spin-orbit angle estimated to be 2.30^{+0.59}_{-1.18} rad (see Figure 1). If BH-NS mergers are produced from field binaries, it is well known that the natal kicks imparted to the BH and NS can significantly tilt the orbital and spin angular momenta (e.g., Kalogera, 2000). In this Letter, we study the role of the recoil kick magnitude in the formation of BH-NS binaries from field binaries. Under the assumption of aligned stellar spins and orbital angular momentum in the progenitor binaries, we show that only large natal kicks and high efficiencies for common envelope ejection can explain the observations.
+
+This Letter is organized as follows. In Section 2 we describe our models and assumptions. In Section 3 we discuss the expected distributions of delay times, merger rates, and misalignment angles for merging BH-NS binaries. Finally, in Section 4, we summarize our findings and draw our conclusions.
+
+## 2. Method
+
+In all our models, we sample the initial mass m_{1} of the primary from a Kroupa (2001) initial mass function,
+
+\\frac{\\mathrm{d}N}{\\mathrm{d}m}\\propto m^{-2.3},  in the mass range [20 M{}_{\\odot}-150 M{}_{\\odot}], appropriate for BH progenitors. We adopt a flat mass ratio distribution to determine the initial secondary mass (m_{2}), consistent with observations of massive binary stars (Sana et al., 2012; Duchene and Kraus, 2013; Sana, 2017). The distributions of the orbital periods (in days) are extracted from
+
+f(\\log_{10}P)\\propto(\\log_{10}P)^{-0.55}  in the range [0.15-5.5] (Sana et al., 2012), while we adopt a thermal distribution for the eccentricity.
+
+We then evolve the binaries using the stellar evolution code bse(Hurley et al., 2000, 2002). We use the latest version of bse from Banerjee et al. (2020), updated with the most up-to-date prescriptions for stellar winds and remnant formation. Importantly, the current version includes the most recent theoretical results on pulsational pair instabilities, which limit the maximum BH mass to about 50 M{}_{\\odot}(Belczynski et al., 2016), and produce remnant populations consistent with those from StarTrack(Belczynski et al., 2008).
+
+When stars evolve to form a compact object, they may receive a natal kick due to recoil from an asymmetric supernova (SN) explosion. We assume that the velocity kick magnitude obeys a Maxwellian distribution,
+
+p(v_{\\mathrm{kick}})\\propto v_{\\mathrm{kick}}^{2}\\exp\\left(-\\frac{v_{\\mathrm{ kick}}^{2}}{2\\sigma^{2}}\\right),  with velocity dispersion \\sigma. This quantity is highly uncertain. For example, \\sigma = 265 km s{}^{-1} was inferred from the proper motions of pulsars by Hobbs et al. (2005). However, Arzoumanian et al. (2002) found a bimodal distribution with characteristic velocities of 90 km s{}^{-1} and 500 km s{}^{-1} based on the velocities of isolated radio pulsars, while Beniamini and Piran (2016) found evidence for a low-kick population (\\lesssim 30 km s{}^{-1}) and a high-kick population (\\gtrsim 400 km s{}^{-1}) based on observed binary NSs. Finally, NSs born as a result of the electron-capture SN process could receive no kick at birth or only a very small one due to an asymmetry in neutrino emission (Podsiadlowski et al., 2004). For BHs, we adopt natal kicks from Eq. 3 as for NSs, but with \\sigma scaled down linearly with increasing mass fallback fraction (Repetto et al., 2012; Janka, 2013). For details see Banerjee et al. (2020).
+
+In order to compute the spin-orbit misalignment produced as a result of natal kicks, we extract them from bse and compute the tilt of the binary orbit (whenever the orbit remains bound). For example, let us assume that the SN event happens first in m_{1} in a binary of initial semi-major axis a and eccentricity e. Before the SN takes place, energy conservation implies
+
+|\\mathbf{v}|^{2}=\\mu\\left(\\frac{2}{r}-\\frac{1}{a}\\right)\\,,  where \\mathbf{v} is the binary relative velocity, \\mu=G(m_{1}+m_{2}), and \\mathbf{r} is the binary relative separation, while the angular momentum \\mathbf{h} is related to the orbital parameters by
+
+|\\mathbf{h}|^{2}=|\\mathbf{r}\\times\\mathbf{v}|^{2}=\\mu a(1-e)^{2}\\,. 
+
+After the SN event, the orbital semi-major axis and eccentricity change due to the mass loss \\Delta m in m_{1} and the natal kick \\mathbf{v_{k}} (assumed to be isotropic). The new total mass of the binary decreases to m_{\\mathrm{in,n}}=m_{1,n}+m_{2}, where m_{1,n}=m_{1}-\\Delta m, while the new relative velocity becomes \\mathbf{v_{n}}=\\mathbf{v}+\\mathbf{v_{k}}. Assuming that the SN takes place instantaneously, that is \\mathbf{r_{n}}=\\mathbf{r}, the misalignment between the post-SN and pre-SN orbit, \\Delta\\theta_{1}, can be obtained from
+
+\\Delta\\theta_{1}=\\arccos\\left(\\frac{\\mathbf{h}\\cdot\\mathbf{h_{n}}}{h\\,h_{ \\mathrm{n}}}\\right)\\,,  where \\mathbf{h_{n}}=\\mathbf{r}\\times\\mathbf{v_{n}} is the post-SN angular momentum. The misalignment produced as a result of the SN explosion of m_{2}, \\Delta\\theta_{2}, can be computed similarly. Under the assumption that the initial stellar spins are aligned with the binary angular momentum, \\Delta\\theta=\\Delta\\theta_{1}+\\Delta\\theta_{2} corresponds to the final tilt between the spins of the binary components and the binary angular momentum.
+
+We consider in total 4 values of \\sigma, namely 10 km s{}^{-1}, 40 km s{}^{-1}, 150 km s{}^{-1}, 260 km s{}^{-1}, and, for each value of \\sigma, stellar evolution with 6 different assumed metallicities, namely Z=0.0002, 0.001, 0.002, 0.005, 0.01, 0.02. We also consider three different values of the common-envelope energy efficiency parameter, \\alpha=1, 3, 5 (Hurley et al., 2002). For each combination, we compute 35,000 evolutions, for a total of about 2.5 million simulated binaries.
+
+Figure 1.: Probability distribution function (PDF) of the misalignment of the primary spin in GW200115 with respect to the orbital angular momentum.
+
+## 3. Results
+
+Figure 2 shows the distribution of tilt angles as a result of natal kicks for merging BH-NS binaries (all the systems with delay time less than 13.8 Gyr) as a function of \\sigma, for all metallicities and \\alpha=1. As expected, we find that larger natal kicks produce more mergers with large tilt angles. Moreover, there are no merging BH-NS systems with tilt angles >0.5 rad when \\sigma=10 km s{}^{-1}. For \\sigma=40 km s{}^{-1}, tilt angles can be as large as about 3 rad, but they are nearly 100 times less likely than small misalignment angles (\\lesssim 0.5 rad). For \\sigma=150 km s{}^{-1} and \\sigma=260 km s{}^{-1}, this probability becomes about one order of magnitude larger. When assuming \\alpha=3 and \\alpha=5, there are no significant differences. Therefore, a GW200115-like event (see Figure 1) is more likely to be produced with high natal kicks.
+
+To understand the distribution of tilt angles for a cosmologically-motivated population, we compute the differential merger rate of BH-NS binaries. We start with computing the merger rate as (see also Santoliquido et al., 2020)
+
+R(z) =f_{\\rm b}f_{\\rm IMF}\\frac{d}{dI_{\\rm Ib}(z)}\\int_{z}^{z_{\\rm max} }\\Psi(\\zeta)\\frac{dI_{\\rm Ib}(\\zeta)}{d\\zeta}d\\zeta \\times\\int_{Z_{\\rm min}(\\zeta)}^{Z_{\\rm max}(\\zeta)}\\Phi(z,Z)\\Pi( \\zeta,Z)dZ\\,,  where f_{\\rm b}=0.5 is the fraction of stars in binaries (e.g., Raghavan et al., 2010; Duchene and Kraus, 2013; Sana, 2017), f_{\\rm IMF}=0.115 is a correction factor that accounts for our truncation of the primary mass distribution \\geq 20 M{}_{\\odot} (assuming a Kroupa (2001) initial mass function), t_{\\rm Ib} is the look-back time at redshift z1. In Eq. 7, \\Psi is the cosmic star formation history (Madau and Dickinson, 2014)
+
+Footnote 1: For our calculations we assume the cosmological parameters from Planck 2015 (Planck Collaboration et al., 2016).
+
+\\Psi(z)=0.01\\frac{(1+z)^{2.6}}{1.0+[(1.0+z)/3.2]^{6.2}}\\,{\\rm M}_{\\odot}\\,{\\rm yr }^{-1}\\,{\\rm Mpc}^{-3}\\,, 
+
+\\Phi is the merger efficiency at a given metallicity
+
+\\Phi(z,Z)=\\frac{N_{\\rm merger}(z,Z)}{M_{\\rm tot}(Z)}\\,,  where M_{\\rm tot}(Z) is the total simulated mass at metallicity Z and N_{\\rm merger}(z,Z) the total number of BH-NS mergers at redshift z originating from progenitors at metallicity Z, and \\Pi is the metallicity distribution at a given redshift, which we assume is described by a log-normal distribution with mean given by (Madau and Fragos, 2017)
+
+\\log\\langle Z/{\\rm Z}_{\\odot}\\rangle=0.153-0.074z^{1.34}  and a standard deviation of 0.5 dex (Dvorkin et al., 2015).
+
+Figure 3 shows the local merger rate density of BH-NS systems as a function of \\sigma (see Eq. 3) and for different assumed values of \\alpha. We also show the BH-NS merger rate estimated empirically by LVK. We see that for \\sigma\\leq 150 km s{}^{-1}, BH-NS merger rates are about 50 Gpc{}^{-3} yr{}^{-1} and 150 Gpc{}^{-3} yr{}^{-1} for \\alpha=1 and \\alpha=3, respectively, about twice what we get for \\sigma=260 km s{}^{-1}. When \\alpha=5, we estimate that the merger rates are about 400 Gpc{}^{-3} yr{}^{-1}, 300 Gpc{}^{-3} yr{}^{-1}, 200 Gpc{}^{-3} yr{}^{-1}, 100 Gpc{}^{-3} yr{}^{-1} for \\sigma=10 km s{}^{-1}, \\sigma=40 km s{}^{-1}, \\sigma=150 km s{}^{-1}, \\sigma=260 km s{}^{-1}, respectively. While our inferred merger rates are in agreement with the LVK collaboration's lower estimate, they can account for their higher estimate only if \\alpha=3 or \\alpha=5, regardless of the assumed value for \\sigma. When assuming \\sigma\\leq 40 km s{}^{-1} and \\alpha=5, our predicted merger rates become too high.
+
+To understand how the merger rate varies with tilt angle, we compute the differential merger rate as a function of the tilt angle as (see also Banerjee, 2021, 2021)
+
+\\frac{dR(z,\\theta)}{d\\theta}=R(z)\\,\\Xi(\\theta)\\,,  where
+
+\\Xi(\\theta)=\\frac{1}{N_{\\rm tot}(z)}\\frac{\\partial N(z)}{\\partial\\theta}\\,,  defined such that \\int_{0}^{\\pi}\\Xi(\\theta)d\\theta=1. Figure 4 shows this rate density as a function of \\theta. For reference, we also show the two different LVK empirical merger rates, which we weigh at different tilt angles by using the distribution of spin-orbit misalignments inferred for GW200115 (see Figure 1). The cases with low assumed values of \\sigma (10 km s{}^{-1} and 40 km s{}^{-1}) pro
+
+Figure 3.— Local merger rate density of BH–NS systems from field binaries as a function of the natal-kick velocity dispersion \\sigma. Different colors represent different values of \\alpha, which quantifies the energy available to unbind the envelope during common-envelope phases of binary evolution. The shaded regions represent the BH–NS merger rate estimated by LVK when assuming that GW200105 and GW200115 are representative of the NS–BH population (cyan; LVK low) and under the assumption of a broader distribution of component masses (pink; LVK high).
+
+Figure 2.— Distribution of tilt angles resulting from natal kicks for merging BH–NS binaries, using all metallicities and \\alpha=1. Different colors represent different values of the natal-kick velocity dispersion \\sigma (see Eq. 3).
+
+[MISSING_PAGE_FAIL:4]
+
+Clausen, D., Sigurdsson, S., & Chernoff, D. F. 2013, MNRAS, 428, 3618
+
+* Coughlin et al. (2020) Coughlin, M. W., Dietrich, T., Antier, S., Bulla, M., & et al. 2020, MNRAS, 492, 863
+
+* de Mink & Mandel (2016) de Mink, S. E., & Mandel, I. 2016, MNRAS, 460, 3545
+
+* Duchene & Kraus (2013) Duchene, G., & Kraus, A. 2013, Annual Review of Astronomy and Astrophysics, 51, 269
+
+* Dvorkin et al. (2015) Dvorkin, I., Silk, J., Vangioni, E., Petitjean, P., & et al. 2015, MNRAS, 452, L36
+
+* Foucart (2012) Foucart, F. 2012, Phys. Rev. D, 86, 124007
+
+* Foucart et al. (2018) Foucart, F., Hinderer, T., & Nissasmek, S. 2018, Phys. Rev. D, 98, 081501
+
+* Fragione & Banerjee (2020) Fragione, G., & Banerjee, S. 2020, ApJ, 791, 011, L16
+
+* Fragione & Loeb (2019) Fragione, G., & Loeb, A. 2019a, MNRAS, 486, 4443
+
+* Fragione & Loeb (2019) --. 2019b, MNRAS, 490, 4991
+
+* Fragione et al. (2021) --. 2021, MNRAS, 503, 2861
+
+* Fragione et al. (2018) Fragione, G., Pavlik, V., & Banerjee, S. 2018, MNRAS, 480, 4955
+
+* Giacobbo & Mapelli (2018) Giacobbo, N., & Mapelli, M. 2018, MNRAS, 480, 2011
+
+* Hinderer et al. (2019) Hinderer, T., Nissasmek, S., Foucart, F., Hotokezaka, K., & et al. 2019, Phys. Rev. D, 100, 063021
+
+* Hobbs et al. (2005) Hobbs, G., Lorimer, D. R., Lyne, A. G., & Kramer, M. 2005, MNRAS, 360, 974
+
+* Hotokezaka et al. (2018) Hotokezaka, K., Beniamini, P., & Piran, T. 2018, International Journal of Modern Physics, 27, 1842005
+
+* Hurley et al. (2000) Hurley, J. R., Pols, O. R., & Tout, C. A. 2000, MNRAS, 315, 543
+
+* Hurley et al. (2002) Hurley, J. R., Tout, C. A., & Pols, O. R. 2002, MNRAS, 329, 897
+
+* Hanka (2013) Hanka, H. T. 2013, MNRAS, 434, 1355
+
+* Kalogera (2000) Kalogera, V. 2000, ApJ, 541, 319
+
+* Kremer et al. (2020) Kremer, K., Ye, C. S., Chatterjee, S., Rodriguez, C. L., & Rasio, F. A. 2020, ApJ, 531, 357
+
+* Kroupa (2001) Kroupa, P. 2001, MNRAS, 322, 231
+
+* Kruckow et al. (1908) Kruckow, M. U., Tauris, T. M., Langer, N., Kramer, M., & Izzard, R. G. 2018, MNRAS, 481, 1908
+
+* Kyutoku et al. (2014) Kyutoku, K., Ioka, K., & Shibata, M. 2014, MNRAS, 437, L6
+
+* Madau & Dickinson (2014) Madau, P., & Dickinson, M. 2014, ARA& A, 52, 415
+
+* Madau & Fragos (2017) Madau, P., & Fragos, T. 2017, ApJ, 840, 39
+
+* Pannarale et al. (2011) Pannarale, F., Tonita, A., & Rezionla, L. 2011, ApJ, 727, 95
+
+* Planck Collaboration et al. (2016) Planck Collaboration, Ade, P. A. R., Aghanim, N., Arnaud, M., & et al. 2016, A&A, 594, A13
+
+* Podsiadlowski et al. (2004) Podsiadlowski, P., Langer, N., Poelarends, A. J. T., et al. 2004, ApJ, 612, 1044
+
+* Raghavan et al. (2010) Raghavan, D., et al. 2010, ApJSuppl, 190, 1
+
+* Rastello et al. (2020) Rastello, S., Mapelli, M., Di Carlo, U. N., et al. 2020, arXiv e-prints, arXiv:2003.02277
+
+* Repetto et al. (2012) Repetto, S., Davies, M. B., & Sigurdsson, S. 2012, MNRAS, 425, 2799
+
+* Sana (2017) Sana, H. 2017, in The Lives and Death-Throes of Massive Stars, ed. J. J. E. Eldridge, J. C. Bray, A. L. S. McClelland, & L. Xiao, Vol. 329, 110
+
+* Sana et al. (2012) Sana, H., et al. 2012, Science, 337, 444
+
+* Santoliquido et al. (2020) Santoliquido, F., Mapelli, M., Bouffanais, Y., Giacobbo, N., & et al. 2020, ApJ, 898, 152
+
+* Shao & Li (2021) Shao, Y., & Li, X.-D. 2021, arXiv e-prints, arXiv:2107.03565
+
+* Silva et al. (2021) Silva, H. O., Holdga, A. M., Cardenas-Avendano, A., & Yunes, N. 2021, Phys. Rev. Lett., 126, 181101
+
+* Tagawa et al. (2021) Tagawa, H., Kocsis, B., Haiman, Z., Bartos, I., et al. 2021, ApJ, 908, 194
+
+* Thrane et al. (2020) Thrane, E., Oslowski, S., & Lasby, P. D. 2020, MNRAS, 493, 5408
+
+* Tsang et al. (2012) Tsang, D., Read, J. S., Hinderer, T., Piro, A. L., & Bondarescu, R. 2012, Phys Rev Lett, 108, 011102
+
+* Yang et al. (2020) Yang, Y., Gayathri, V., Bartos, I., Haiman, Z., & et al. 2020, ApJ, 901, L34
+
+* Ye et al. (2020) Ye, C. S., Fong, W.-f., Kremer, K., et al. 2020, ApJ, 888, L10
+
+* Ye et al. (2019) Ye, C. S., Kremer, K., Chatterjee, S., Rodriguez, C. L., & Rasio, F. A. 2019, ApJ, 877, 122

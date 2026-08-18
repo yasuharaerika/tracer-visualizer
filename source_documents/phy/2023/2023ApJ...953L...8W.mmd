@@ -1,0 +1,223 @@
+###### Abstract
+
+GRB 230307A is one of the brightest gamma-ray bursts detected so far. With the excellent observation of GRB 230307A by Fermi-GBM, we can reveal the details of prompt emission evolution. As found in high-time-resolution spectral analysis, the early low-energy spectral indices (\\alpha) of this burst exceed the limit of synchrotron radiation (\\alpha=-2/3), and gradually decreases with the energy flux (F). A tight E_{\\rm p}\\propto F^{0.54} correlation anyhow holds within the whole duration of the burst, where E_{\\rm p} is the spectral peak energy. Such evolution pattern of \\alpha and E_{\\rm p} with intensity is called "double tracking". For the \\alpha-F relation, we find a log Bayes factor \\sim 210 in favor of a smoothly broken power-law function over a linear function in log-linear space. We call this particular \\alpha-F relation as broken "\\alpha-intensity", and interpret it as the evolution of the ratio of thermal and non-thermal components, which is also the evolution of the photosphere. GRB 230307A with a duration of \\sim 35 s, if indeed at a redshift of z=0.065, is likely a neutron star merger event (i.e., it is intrinsically "short"). Intriguingly, different from GRB 060614 and GRB 211211A, this long event is not composed of a hard spike followed by a soft tail, suggesting that the properties of the prompt emission light curves are not a good tracer of the astrophysical origins of the bursts. The other possibility of z=3.87 would point toward very peculiar nature of both GRB 230307A and its late time thermal-like emission.
+
+Gamma-ray bursts (629) 0000-0002-8828-2307]Yun Wang
+
+0000-0002-8828-2307]Zi-Qing Xia
+
+0000-0002-0002-8871]Tian-Ci Zheng
+
+## 1 Introduction
+
+At the early time when gamma-ray burst (GRB) were recognized as the origin of cosmology, the prompt emission was predicted to be quasi-thermal (Paczynski, 1986; Goodman, 1986). This is due to the huge energy (\\gtrsim 10^{53} erg) released in a very small space (r\\sim 10^{7}-10^{8} cm), which is bound to produce a huge optical depth. However, in the BATSE era, most of the GRB spectra are non-thermal, which can be well fitted by the Band function (Band et al., 1993). The main theory is to explain the non-thermal component as synchrotron radiation and synchrotron self-Compton scattering from relativistic electrons (Tavani, 1996; Lloyd & Petrosian, 2000; Zhang & Meszaros, 2002; Daigne et al., 2011; Zhang & Yan, 2011; Uhm & Zhang, 2014). Although the synchrotron radiation model has been well developed in GRBs, there are still some problems. For example, the synchrotron radiation or synchrotron self-Compton scattering cannot explain the steep low-energy spectral index in some observations (Crider et al., 1997; Preece et al., 1998, 2002; Ghirlanda et al., 2003), and cannot explain the correlation between the peak energy and luminosity (E_{\\rm p} - L) without introducing additional assumptions (Golenetskii et al., 1983; Amati et al., 2002), and the efficiency of energy dissipation in the internal shock model (Mochkovitch et al., 1995; Kobayashi et al., 1997; Panaitescu et al., 1999; Lazzati et al., 1999; Kumar, 1999; Spada et al., 2000; Guetta et al., 2001; Maxham & Zhang, 2009). Hybrid models of thermal and non-thermal components can address these issues (Pe'er & Ryde, 2017).
+
+So far, the most direct evidence of photosphere emission is the observation of GRB 090902B by Fermi satellite (Abdo et al., 2009). Ryde et al. (2010) confirmed that the spectrum of GRB 090902B is a broadened Planck function superimposed with a power-law component extending to the high energy band, such geometric broadening (Pe'er, 2008; Lundman et al., 2013; Deng and Zhang, 2014) can be described as a multi-color blackbody model (Ryde et al., 2010; Hou et al., 2018). Events like GRB 090902 are very rare due to the identification of thermal components usually requires sufficient photon counts for time-resolved spectrum analysis. The currently detected GRB 230307A, which may be the second brightest GRB (Burns et al., 2023a), has a high-quality observation through the Fermi Gamma-ray Burst Monitor (GBM). It thus provides a valuable opportunity to study the time-resolved spectrum of GRB. It has been reported a Bad time interval of GBM (TTE: T_{0}+[3.00,\\ 7.00] s) due to the pulse pile-up (Dalessi and Fermi GBM Team, 2023). Following their recommendation, we only take into account the data in the time intervals of T_{0}+[-0.02,\\ 2.67] s and T_{0}+[7.22,80.14] s without packet losses.
+
+The paper is organized as follows: In Section 2, we present the data analysis of GRB 230307A by the self-developed HEtools package. In Section 3, we further characterize GRB 230307A based on the Bayesian inference results for time-resolved spectra. In Section 4, we discuss some of these results and compare this burst with some typical GRBs. The nature of GRB 230307A is also briefly examined. In Section 5, we summarize results of our analysis.
+
+## 2 Observation and Data Analysis
+
+Shortly after the last monster swept by, Fermi-GBM reported another bright GRB 230307A (trigger 699896651/230307656; Fermi GBM Team. 2023). From the current observations and some preliminary analysis (Xiong et al., 2023; Dalessi et al., 2023; Burns et al., 2023a; the GRBAlpha collaboration. 2023; Svinkin et al., 2023b), its energy flux is second only to GRB 221009A.
+
+We performed further analysis on the GBM data by using HEtools (see in APPENDIX A). Before this tool was named, we have already applied it in some GRB data analysis (e.g., Jin et al., 2023; Ren et al., 2022; Wang et al., 2022). The Fermi-GBM (Meegan et al., 2009) payload has two types of detectors, including the 12 sodium iodide (NaI) detectors and 2 bismuth germanate (BGO) detectors. The selection of detectors is usually based on the count rate and pointing direction, here we selected one NaI (na) detctor and one BGO (b1) detector for data analysis. It is worth noting that the Fermi-GBM team reported that the Bad time interval due to the pulse pile-up is T_{0}+[3.00,\\ 7.00] s (T_{0} is the GBM trigger time) for the TTE data (Dalessi and Fermi GBM Team, 2023), as marked in Figure 1. The default time bin of CSPEC data is 1.024 s, while the rebin TTE data can yield spectrum with higher time resolution. And the time interval of pile-up of TTE data is shorter than that of CSPEC data. Therefore, in this work we take the TTE data for analysis, and extract data via GBM Data Tools (Goldstein et al., 2021). The red solid line in the first panel is the time interval given by the Bayesian block technique (Scargle et al., 2013) that can be used as a reference for time-resolved spectral time intervals.
+
+### Spectral Analysis
+
+Due to the extremely abundant photon count of this burst, we can perform very high-time-resolution spectrum analysis. Excluding the Bad time interval, a total of 88 intervals were selected for time-resolved spectral analysis, and the specific time intervals are shown in Table 1.
+
+We used two type of photon spectrum model in our spectral inference, the first is a smoothly joined broken power-law function (the so-called "Band" function; Band et al., 1993). The Band function is written as
+
+N(E)=\\begin{cases}A\\big{(}\\frac{E}{100\\,\\mathrm{keV}}\\big{)}^{\\alpha}\\mathrm{ exp}\\big{(}-\\frac{E}{E_{0}}\\big{)},\\mathrm{if}\\ E<(\\alpha-\\beta)E_{0}\\\\ A\\big{[}\\frac{(\\alpha-\\beta)E_{0}}{100\\,\\mathrm{keV}}\\big{]}^{(\\alpha-\\beta)} \\mathrm{exp}\\big{(}\\beta-\\alpha\\big{)}\\big{(}\\frac{E}{100\\,\\mathrm{keV}} \\big{)}^{\\beta},\\mathrm{if}\\ E>(\\alpha-\\beta)E_{0}\\end{cases}  where A is the normalization constant, E is the energy in unit of keV, \\alpha is the low-energy spectral index, \\beta is the high-energy photon spectral index, and E_{0} is the break energy in the spectrum. The peak energy in the \\nu F_{\\nu} spectrum E_{\\mathrm{p}} is equal to E_{0}\\times(2+\\alpha). When the detection energy range is narrow or the high-energy photon count rate is low, the \\beta of the Band function is often not well constrained, so another model is a cutoff power-law function (CPL), written as
+
+N(E)=A(\\frac{E}{100\\,\\mathrm{keV}})^{\\alpha}\\mathrm{exp}(-\\frac{E}{E_{\\mathrm{c }}}),  where \\alpha is the power law photon spectral index, E_{\\mathrm{c}} is the break energy in the spectrum, and the peak energy E_{\\mathrm{p}} is equal to E_{\\mathrm{c}}\\times(2+\\alpha). For the possible components of the photosphere, we consider a multicolor blackbody (mBB)Figure 1: Observational data and parameter evolution of GRB 220307A. The first panel shows the light curve of GRB 060614, the well-known long-short burst (i.e., a long duration GRB from a compact object merger). The second panel shows the light curves of GRB 220307A and the Bayesian block in the black and red solid line, respectively. The next three panels are the evolution of \\alpha, E_{\\rm p}, and energy Flux (1 - 10,000 keV), where orange represents the Band model results, and blue represents the CPL model results. The slashed region in each panel indicates the time interval of TTE data losses. model (Ryde et al., 2010; Hou et al., 2018) to describe it, which is
+
+N(E)=\\frac{8.0525(m+1)K}{\\left[\\left(\\frac{T_{\\rm max}}{T_{\\rm min}}\\right)^{m+1 }-1\\right]}\\Big{(}\\frac{kT_{\\rm min}}{\\rm keV}\\Big{)}^{-2}I(E),  where
+
+I(E)=\\Big{(}\\frac{E}{kT_{\\rm min}}\\Big{)}^{m-1}\\int_{\\frac{E}{kT_{\\rm min}}}^{ \\frac{E}{kT_{\\rm min}}}\\frac{x^{2-m}}{e^{x}-1}dx,  where x=E/kT, the temperature range from kT_{\\rm min} to kT_{\\rm max}, and the index m of the temperature determines the shape of spectra. In addition, the thermal component is usually accompanied by a non-thermal component, which is a power-law (PL) model with \\gamma index, written as N(E)=A~{}E^{\\rm\\dagger}.
+
+Then we employ the Bayesian inference (Thrane and Talbot, 2019; van de Schoot et al., 2021) for parameter estimation and model comparison. We use Dynesty(Speagle, 2020; Skilling, 2006; Higson et al., 2019) from the Bilby(Ashton et al., 2019) package as the posterior parameter sampler. Usually for GBM data, the likelihood function used in Bayesian inference is pgstat1. When considering different hypotheses with the same prior volume, model selection can be done by comparing Bayes factors. The Bayes factor (BF) is the ratio of the Bayesian evidence (\\mathcal{Z}=\\int\\mathcal{L}(d|\\theta)\\pi(\\theta)d\\theta) for different models. The log of Bayes factor can be written as
+
+Footnote 1: [https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/XSappendixStatistics.html](https://heasarc.gsfc.nasa.gov/xanadu/xspec/manual/XSappendixStatistics.html)
+
+\\ln\\rm BF_{B}^{A}=\\ln(\\mathcal{Z}_{A})-\\ln(\\mathcal{Z}_{B}). 
+
+When \\ln\\rm BF>8, we can say that there is a "strong evidence" in favor of one hypothesis over the other (Thrane and Talbot, 2019).
+
+The posterior parameters and model selection of each model are shown in Table 1. As shown in Figure 1, the three panels at the bottom are the evolution of model parameters and energy flux (1-10,000 keV) over time, in which the blue points are the CPL model parameters, and the orange points are the Band model parameters. It is worth noting that in the early phase (before \\sim 3 s) of this burst, the low-energy spectral index obtained by both the Band model and the CPL model exceed the synchrotron limit, also known as the "Line of Death" (Preece et al., 1998, 2002). Beside, all high-energy photon spectral indexes also exceed typical values (\\beta\\sim-2) (Preece et al., 2000), which most likely corresponds to the exponential decay of the Planck function at the highest temperature or insufficient high-energy photon count rate.
+
+The evolution of E_{\\rm p} and \\alpha over the entire outburst simultaneously shows the pattern of intensity tracking (Lu et al., 2012; Ryde et al., 2019), also known as "Double-tracking" (Li et al., 2019). Even more peculiarly, we found a broken behavior in the \\alpha-F relation of GRB 230307A and called it broken "\\alpha-intensity". As shown in Figure 2, we performed additional spectral analyzes for the \\alpha-hardest interval (T_{0} + [1.84 - 1.97] s), the broken-\\alpha interval (T_{0} + [21.10 - 21.68] s), and a late interval (T_{0} + [79.47 - 84.14] s). These three time slices are outside the Bad time interval of the GBM TTE data. The E_{\\rm p} of the first time interval may come from the maximum temperature (kT_{\\rm max}\\sim 480 keV) of the mBB spectrum, and is accompanied by a non-thermal PL component (\\hat{\\gamma}\\sim-1.72). In the second time interval, the ratio of these two components (thermal vs. non-thermal) changed significantly compared to before. By the final time interval, the superposition of these two components has become indistinguishable, and the slope of the energy spectrum (\\alpha\\sim-1.59) is represented by the non-thermal emission.
+
+## 3 Characteristics
+
+### The \\alpha-F and F-E_{\\rm p} relations
+
+Based on results obtained in Section 2.1, we performed a statistical analysis on the two relations (i.e., \\alpha-F, F-E_{\\rm p}) of GRB 230307A for the CPL-model and Band-model samples (listed in the Table 1), respectively. In order to be conservative, we consider 20% uncertainty of the GBM effective area as the systematic error of energy flux F(Meegan et al., 2009). Since the GBM TTE data in the Bad time interval were excluded, we took the spectral properties of the peak emission measured by Konus-Wind, including the spectral index of -0.13^{+0.35}_{-0.31}, the flux of 6.66^{+0.46}_{-0.42}\\times 10^{-4} erg/cm{}^{2}/s, and the peak energy of 1321^{+60}_{-62} keV (Svinkin et al., 2023). All of these data points are presented in Figure 3.
+
+As for the \\alpha-F relation, Ryde et al. (2019) has analyzed the sample in Yu et al. (2019) and organized this relation as the log-linear (LL) function:
+
+F(\\alpha)=N~{}e^{k\\alpha},  where N is normalization factor, and they found the parameter k was about 3. Here we fit the log-linear relation function for the GRB 230307A and obtain the best-fit parameter k of 3.43/3.43 for the CPL/Band-model samples with the corresponding log of Bayesian evidence \\ln(\\mathcal{Z}) = -585.85/-594.52, respectively. However, the \\alpha-F samples of GRB 230307A exhibit an obvious broken behavior as shown in the left panel of the Figure 3. In our work, we take two other relation function to fit the \\alpha-F samples: One is the broken log-linear (BLL) function given as
+
+F(\\alpha)=\\begin{cases}N~{}\\mathrm{e}^{k_{1}\\alpha},&\\text{if }\\alpha~{}<~{} \\alpha_{b}\\\\ N^{\\prime}~{}\\mathrm{e}^{k_{2}\\alpha},&\\text{if }\\alpha~{}>~{}\\alpha_{b}\\end{cases}  where N^{\\prime}=N~{}\\mathrm{e}^{(k_{1}-k_{2})\\alpha_{b}}, and we get that the best-fit broken point \\alpha_{b} is -1.05/-1.03, the best-fit first index k_{1} is 5.53/5.51, and the best-fit second index k_{2} is 1.31/1.23, corresponding to \\ln(\\mathcal{Z})=-381.21/-383.62 for the CPL/Band-model samples, respectively. The other is the smoothly broken power-law (SBPL) function written as
+
+F(\\alpha)=N~{}\\bigg{[}\\bigg{(}\\frac{\\alpha}{\\alpha_{b}}\\bigg{)}^{\\gamma_{1}}+ \\bigg{(}\\frac{\\alpha}{\\alpha_{b}}\\bigg{)}^{\\gamma_{2}}\\bigg{]}^{-1}. 
+
+Based on the CPL/Band-model samples, the best-fit broken point \\alpha_{b} we obtained is -1.14/-1.14, the best-fit first index \\gamma_{1} is 9.52/9.60, and the best-fit second index \\gamma_{2} is 0.56/0.57, with the evidence of \\ln(\\mathcal{Z})=-374.59/-380.74. Compared with the previous log-linear relation function, the broken log-linear and smoothly broken power-law functions exhibit large Bayes factors with \\ln\\mathrm{BF}^{\\mathrm{BLL}}_{\\mathrm{LL}}=204.64 and \\ln\\mathrm{BF}^{\\mathrm{BPLD}}_{\\mathrm{LL}}=211.26 for the CPL-model samples (\\ln\\mathrm{BF}^{\\mathrm{BLL}}_{\\mathrm{LL}}=210.90 and \\ln\\mathrm{BF}^{\\mathrm{SBPLD}}_{\\mathrm{LL}}=213.78 for the Band-model samples), which indicates that there is a strong evidence of the broken
+
+"\\alpha-intensity" relation in GRB 230307A. The results of the \\alpha-F relation for the CPL-model sample are displayed in the left panel of the Figure 3.
+
+The F-E_{\\rm p} relation is found in a large fraction of GRBs and also in the time-resolved spectrum of single GRB (Wei & Gao, 2003; Yonetoku et al., 2004; Liang et al., 2004; Lu et al., 2012), which can be naturally explained by the photosphere model (Fan et al., 2012). As for GRB 230307A, the F-E_{\\rm p} relation exhibits a linear relation in logarithmic space, as shown in the right panel of Figure 3. This behavior coincides with the intensity trace in the third panel of Figure 1, which can be described as a single power-law function:
+
+E_{\\rm p}=N\\ F^{\\gamma}.  where N is the normalization factor and \\gamma is the flux index. The best-fit index for GRB 230307A is \\gamma=0.54/0.54 based on the CPL/Band-model samples, respectively. Our result on the F-E_{\\rm p} relation for the CPL-model samples is displayed in the right panel of the Figure 3.
+
+### Spectral lag
+
+Another important characteristic of GRBs is the spectral lag, in the energy range below 10 MeV, the high-energy photons arrive earlier than the low-energy photons (Norris et al., 2000; Norris, 2002; Norris et al., 2005). The delay of pulse peaks in different energy bands can be quantified using the cross-correlation function (CCF), which is widely used in the calculation of GRB spectral lag (Band, 1997; Ukwatta et al., 2010). We calculated the CCF of the GRB 230307A time series in the energy band (100 - 150 keV) and (200 - 250 keV) with three different time intervals, episode a (T_{0}+[0.2,\\ 0.4] s), episode b (T_{0}+[0.4,\\ 3.0] s), episode c (T_{0}+[7.0,\\ 40.0] s). None of these episodes were affected by the GBM instrument pile-up. And we estimated the uncertainty of the lag by Monte Carlo simulation (Ukwatta et al., 2010). The corresponding spectral lags are \\tau_{a}=3.30\\pm 3.44 ms, \\tau_{b}=4.44\\pm 3.38 ms, and \\tau_{c}=3.38\\pm 5.43 ms, as shown in Figure 4. All are consistent with being zero.
+
+### E_{\\rm p,z} - E_{\\gamma,iso} relation
+
+The relation of E_{\\rm p,z}-E_{\\gamma,iso}(Amati et al., 2002) is often used in the judgment of GRBs classification (e.g., Gehrels et al., 2006), where E_{\\rm p,z}=(1+z)E_{\\rm p} is the rest frame peak energy, E_{\\gamma,iso} is the isotropic bolometric emission energy, written as
+
+E_{\\gamma,\\rm iso}=\\frac{4\\pi d_{L}^{2}kS_{\\gamma}}{1+z},  where d_{L} is the luminosity distance, S_{\\gamma} is the energy fluence in the gamma-ray band, and k is the correction factor, which can correct the energy range of the observer frame to the energy range of 1 - 10,000 keV in the rest frame. The correction factor k(Bloom et al., 2001) writes as
+
+k=\\frac{\\int_{1/(1+z)}^{10^{4}/(1+z)}EN(E)\\mathrm{d}E}{\\int_{e_{1}}^{e_{2}}EN(E )\\mathrm{d}E},  where e_{1} and e_{2} correspond to the energy range of the detector. The redshift of GRB 230307A is assumed to be z\\sim 0.065(Gillanders et al., 2023), and the adopted cosmological parameters are H_{0}=69.6 kms{}^{-1} Mpc{}^{-1}, \\Omega_{\\mathrm{m}}=0.29, and \\Omega_{\\Lambda}=0.71. And the data of Type I and Type II GRBs with redshifts are adopted from Minaev and Pozanenko (2020a). Unlike GRB 060614 and GRB 211211A that well resemble the short GRBs (i.e., Type I), with the sole prompt emission properties, it is challenging to uniquely classify GRB 230307A (see Figure 5). In addition, we also consider the fluence and peak energy of the time-integrated spectrum reported by Konus-Wind (Svinkin et al., 2023; Svinkin et al., 2023c). If GRB 230307A had a redshift of 3.87, as speculated in Levan et al. (2023), it would be a Type II event (see the inverted triangle in Figure 5) with a huge E_{\\gamma,\\mathrm{iso}}\\sim 10^{56} erg.
+
+## 4 Discussion
+
+### The broken "\\alpha-intensity" relation
+
+For the GRB prompt emission, the low-energy spectral index manifested as intensity-tracking evolution pattern occur in a small number of samples. Ryde et al. (2019) has organized the \\alpha-F relation as the log-linear (F\\propto e^{k\\alpha}) function, which is believed to be a manifestation of subphotospheric heating in a flow with a varying entropy (Ryde et al., 2017, 2019). However, \\alpha-intensity was also expected to be picked from non-thermal, i.e., synchrotron radiation, dominated GRBs, such as GRB 131231A (Li et al., 2019) and GRB 211211A (Yang et al., 2022). The evolution of \\alpha in the synchrotron radiation scenario may originate from the change of the magnetic field at the emission region (e.g., Uhm and Zhang, 2014). There are no clear observations and studies pointing out the impact on the \\alpha-F relationship when the proportion of thermal and non-thermal components evolve.
+
+Thanks to the sufficient photon count GRB 230307A, we discovered an interesting phenomenon through the high-time-resolution spectrum analysis. In Figure 3, by counting the parameters of 106 time-resolved spectra, we found that there is an obvious broken behavior exhibited in the \\alpha-F relation. In the left panel of Figure 2, the energy spectrum of the \\alpha-hardest time interval can be fitted by the mBB+PL model, and there is a correlation between F-E_{\\mathrm{p}}. Although the synchrotron radiation model can predict the F-E_{\\mathrm{p}} relation, this relation is more natural in the photosphere model (Fan et al., 2012), and we consider that the thermal component is dominant in the early phase of GRB 230307A.
+
+When the proportion of thermal components gradually decreases (as shown in the middle panel in Figure 2), the \\alpha-F relation begins to show an broken behavior. The weaker emission and the broader spectrum may come from the entropy decreases the photosphere secedes from the saturation radius (Ryde et al., 2019). And the broken point \\alpha_{b}\\sim-1.14 is consistent with the typical low-energy spectral index of GRBs (\\alpha\\sim-1; Kaneko et al., 2006; Preece et al., 2000), which may arise from different physical situations (e.g., transfer simulations of magnetized jets with \\epsilon_{B}>10^{-3}; Vurm and Beloborodov, 2016), and can be summarized as unsaturated comptonization of low-energy photons. One of the time-resolved spectra of this phase is shown in the middle panel of Figure 2, which may explain the statistically significant hidden black body components found on the left side of the Band model energy peak in some previous studies (Guiriec et al., 2011; Axelsson et al., 2012; Guiriec et al., 2013).
+
+While at a later phase, the spectral index of the CPL model \\alpha\\sim-1.59, and the emission may be dominated by non-thermal components (shown in the right panel of Figure 2). Hence, GRB 230307A is a peculiar case which is recorded the detailed transition of the emission component from thermal to non-thermal, and characterizes a special broken "\\alpha-intensity" behavior.
+
+### Comparison with other GRBs
+
+First we compare GRB 230307A with some long-short (also known as "hybrid") bursts, i.e., the bursts with a duration much longer than 2 seconds but from the merger of the compact objects. Unlike GRB 060614, GRB 230307A can not be directly divided into two emission epochs (see Figure 1). In other words, it is not reasonable to attribute the long duration of GRB 230307A to a short hard spike followed by a soft long tail. Anyhow, for a redshift z=0.065, GRB 230307A is slightly closer to the region of Type I bursts than that of Type II in the E_{\\rm p,z} - E_{\\gamma,\\rm iso} plane (see Figure 5). This burst also has a \\sim 0 spectral lag in each episode, similar to GRB 060614, GRB 211211A and other type I GRBs. Beside, GRB 230307A is suggested to have a projected offset of \\sim40 kpc from the candidate host galaxy (Gillanders et al., 2023), which is in favor of the neutron star binary progenitor. If this event is indeed outside its host galaxy, it would be easier to detect the Li-Paczynski macronova (also known as the kilonova; Li and Paczynski 1998) signal, which would be a "smoking gun" signature for the compact-binary merger origin, as the case of GRB 070809 (Jin et al., 2020). Indeed, the kilonova signal likely has already been detected by the James Webb Space Telescope (JWST; Levan et al., 2023). The successful detection of such a signal in the first ever visit of JWST to the possible merger event is strongly in favor of the long-standing speculation that the kilonovae are ubiquitous (Jin et al., 2016). For the speculated z=3.87, GRB 230307A would be a long GRB (i.e., type II) with a huge E_{\\gamma,\\rm iso}\\sim 10^{56} erg (as indicated by the red inverted triangle in Figure 5), which would require a peculiar origin (Levan et al., 2023). Moreover, the JWST observations on 5 April 2023 would suggest a thermal-like component with a luminosity of L_{\\rm th}\\sim 7\\times 10^{43} erg s{}^{-1} and an intrinsic temperature (i.e., measured in the rest frame of the host galaxy) of T^{\\prime}\\sim 4000 K. _Similar optical outburst, characterized by a very high luminosity but a quite low temperature_ at t^{\\prime}=28.8 day/(1+z)\\approx 5.9 day after the burst, _has never been detected before_(Leloudas et al., 2016) and would require a large radiation radius of R_{\\rm e}\\sim 2\\times 10^{16} cm (L_{\\rm th}/7\\times 10^{43} erg s{}^{-1}){}^{1/2}(T^{\\prime}/4000 K){}^{-2}. If the large radius is due to the expansion of a supernova-like outflow (i.e., the progenitor was a massive star), its velocity would be in the order of c, the speed of the light. The required outflow mass as well as the corresponding kinetic energy are too large to be realistic. Given the above facts, we think the high redshift possibility is less likely.
+
+In the energy spectrum analysis, we found that there may be a photosphere emission component in the early phase of GRB 230307A, which is similar to that of the also very bright GRB 130427A (Preece et al., 2014). However, the Brightest Of All Time (the BOAT, GRB 221009A) is believed to be dominated by non-thermal synchrotron radiation throughout its duration (Yang et al., 2023). So these bright GRBs clearly have different emission components. A typical example of the evolution of emission components is GRB 160625B, which has three episodes dominated by different components (Zhang et al., 2018). Since GRB 230307A is bright enough, and the transition from thermal to non-thermal emission is clear in the time-resolved spectra.
+
+The brightest GRB 221009A has been reported to be a recurrence timescale about 10,000 years (Burns et al., 2023b). For a given GRB with observed fluence S, its annual rate can be estimated with R_{\\rm GRB}=1.037\\times 10^{-5}\\times S^{-3/2}, and the corresponding recurrence timescale \\tau(S)=R_{\\rm GRB}^{-1}(Burns et al., 2023b). GRB 20307A has a fluence of S\\sim 4.05\\times 10^{-3} erg cm{}^{-2}(Svinkin et al., 2023c), and the derived \\tau(S)\\sim 24.85 yrs. Although its event rate is much higher than GRB 221009A, as the possible second brightest GRB, it is also very rare in Fermi's entire orbital career.
+
+## 5 Summary
+
+In this work, we use HEuools to analyze the Fermi-GBM data of the possibly second brightest GRB 230307A, and its features can be summarized as follows:
+
+* GRB 230307A has a very high count rate and also a long duration for the high-time-resolution spectral analysis. Through the parameter statistics inferred from up to 88 resolved spectra, we found a clear broken behavior in the \\alpha-F relation with a corresponding highest log Bayes factor, which may be interpreted as the transition from thermal emission to non-thermal emission, and the significant evolution of photosphere throughout its duration.
+
+* E_{\\gamma,\\rm iso} plane (see Figure 5). Considering also the \\sim 40 kpc offset from the host galaxy as well as the kilonova signal detected by JWST, _it is reasonable to attribute GRB 230307A to a neutron star merger_. If instead the speculated z=3.87 holds, GRB 230307A would have E_{\\gamma,\\rm iso}\\sim 10^{56} erg. Moreover, there should present a new kind of optical outbursts characterized by a very high luminosity (\\sim 10^{44} erg s{}^{-1}) but rather low intrinsic temperature (T^{\\prime}\\sim 4000 K) at t^{\\prime}=t/(1+z)\\sim 6 day after the burst. This is because though some super-luminous supernovae and tidal disruption events can yield such energetic optical/ultraviolet emission, their temperatures are much higher and their declines are much shallower (Leloudas et al., 2016). We thus conclude that the high redshift possibility is unlikely.
+
+* Although recurrence timescale (\\tau(S)=24.85 yrs) of this tiny monster is lower than that of the BOAT GRB 221009A, it remains very rare throughout the Fermi's lifetime.
+
+## Acknowledgments
+
+We appreciate the anonymous referee for the helpful suggestions and acknowledge the use of the Fermi archive's public data. This work is supported by the Natural Science Foundation of China (NSFC) under grants of No. 11921003, No. 11933010 and No. 12003069.
+
+[MISSING_PAGE_EMPTY:16137]
+
+* () Maxham, A., & Zhang, B. 2009, The Astrophysical Journal, 707, 1623
+
+* () Meegan, C., Lichti, G., Bhat, P., et al. 2009, The Astrophysical Journal, 702, 791
+
+* () Meegan, C., Lichti, G., Bhat, P. N., et al. 2009, ApJ, 702, 791
+
+* () Minaev, P. Y., & Pozanenko, A. 2020a, Monthly Notices of the Royal Astronomical Society, 492, 1919
+
+* () --. 2020b, Astronomy Letters, 46, 573
+
+* () Mochkovitch, R., Maitia, V., & Marques, R. 1995, Astrophysics and Space Science, 231, 441
+
+* () Norris, J., Marani, G., & Bonnell, J. 2000, The Astrophysical Journal, 534, 248
+
+* () Norris, J. P. 2002, The Astrophysical Journal, 579, 386
+
+* () Norris, J. P., Bonnell, J. T., Kazanas, D., et al. 2005, The Astrophysical Journal, 627, 324
+
+* () Paczynski, B. 1986, The Astrophysical Journal, 308, L43
+
+* () Panaitescu, A., Spada, M., & Meszaros, P. 1999, The Astrophysical Journal, 522, L105
+
+* () Pe'er, A. 2008, The Astrophysical Journal, 682, 463
+
+* () Pe'er, A., & Ryde, F. 2017, International Journal of Modern Physics D, 26, 1730018
+
+* () Preece, R., Briggs, M., Giblin, T., et al. 2002, The Astrophysical Journal, 581, 1248
+
+* () Preece, R., Burgess, J. M., Von Kienlin, A., et al. 2014, Science, 343, 51
+
+* () Preece, R. D., Briggs, M. S., Mallozzi, R. S., et al. 2000, The Astrophysical Journal Supplement Series, 126, 19
+
+* () --. 1998, The Astrophysical Journal, 506, L23
+
+* () Ren, J., Wang, Y., & Zhang, L.-L. 2022, arXiv preprint arXiv:2210.10673
+
+* () Ryde, F., Lundman, C., & Acuner, Z. 2017, MNRAS, 472, 1897
+
+* () Ryde, F., Yu, H.-F., Dereli-Begue, H., et al. 2019, MNRAS, 484, 1912
+
+* () Ryde, F., Axelsson, M., Zhang, B., et al. 2010, The Astrophysical Journal Letters, 709, L172
+
+* () Scargle, J. D., Norris, J. P., Jackson, B., & Chiang, J. 2013, The Astrophysical Journal, 764, 167
+
+* () Skilling, J. 2006, Bayesian analysis, 1, 833
+
+* () Spada, M., Panaitescu, A., & Meszaros, P. 2000, The Astrophysical Journal, 537, 824
+
+* () Speagle, J. S. 2020, Monthly Notices of the Royal Astronomical Society, 493, 3132
+
+* () Svinkin, D., Frederiks, D., Ridnaia, A., et al. 2023c, GRB Coordinates Network, 33579, 1
+
+* () Svinkin, D., Frederiks, D., Ulanov, M., et al. 2023a, GRB Coordinates Network, 33427, 1
+
+* () --. 2023b, GRB Coordinates Network, 33414, 1
+
+* () Tavani, M. 1996, The Astrophysical Journal, 466, 768 the GRBAlpha collaboration. 2023, GRB Coordinates Network, 334148, 1
+
+* () Thrane, E., & Talbot, C. 2019, Publications of the Astronomical Society of Australia, 36
+
+* () Uhm, Z. L., & Zhang, B. 2014, Nature Physics, 10, 351
+
+* () Ukwatta, T., Stamatikos, M., Dhuga, K., et al. 2010, The Astrophysical Journal, 711, 1073
+
+* () van de Schoot, R., Depaoli, S., King, R., et al. 2021, Nature Reviews Methods Primers, 1, 1
+
+* () Vurm, I., & Beloborodov, A. M. 2016, ApJ, 831, 175
+
+* () Wang, Y., Zheng, T.-C., & Jin, Z.-P. 2022, The Astrophysical Journal, 940, 142
+
+* () Wei, D., & Gao, W. 2003, Monthly Notices of the Royal Astronomical Society, 345, 743
+
+* () Xia, Z.-Q., Wang, Y., Yuan, Q., & Fan, Y.-Z. 2022, arXiv e-prints, arXiv:2210.13052
+
+* () Xiong, S.-L., Wang, C.-W., Huang, Y., & team, G. 2023, GRB Coordinates Network, 33406, 1
+
+* () Yang, B., Jin, Z.-P., Li, X., et al. 2015, Nature Communications, 6, 7323
+
+* () Yang, J., Ai, S., Zhang, B.-B., et al. 2022, Nature, 612, 232
+
+* () Yang, J., Zhao, X.-H., Yan, Z., et al. 2023, arXiv preprint arXiv:2303.00898
+
+* () Yonetoku, D., Murakami, T., Nakamura, T., et al. 2004, The Astrophysical Journal, 609, 935
+
+* () Yu, H.-F., Dereli-Begue, H., & Ryde, F. 2019, ApJ, 886, 20
+
+* () Zhang, B., & Meszaros, P. 2002, The Astrophysical Journal, 581, 1236
+
+* () Zhang, B., & Yan, H. 2011, ApJ, 726, 90
+
+* () Zhang, B.-B., Zhang, B., Castro-Tirado, A. J., et al. 2018, Nature Astronomy, 2, 69
+
+## Appendix A Herools
+
+The development of high-energy detection data analysis tools (HEtools) is the preparation for the future Very Large Area gamma-ray Space Telescope (VLAST; Fan et al. 2022). Its original intention is to provide reasonable observational references in order to optimize and expand the scientific output of VLAST, e.g. to make reasonable observational arrangements for the cascading radiation of GRB veay high energy (VHE) photons under the influence of intergalactic magnetic field (Xia et al., 2022). In order to test the feasibility of this tool, we apply it to the study of GRB. As shown in Figure 6, HEtools has separate modules for data analysis of different instruments, currently including but not limited to Swift-BAT, Fermi-GBM/LAT. Python-based frameworks are very friendly to future instrument support, such as VLAST. The corresponding light curve and energy spectrum can be generated through online data retrieval, and the preset spectrum inference or time series analysis can be performed, and finally a briefing is generated and sent to the user's mailbox. Based on friendly expansion capabilities, by combining with A Standard Gamma-ray burst Afterglow Radiation Diagnoser (ASGARD; Ren et al. 2022), it is used to model afterglow light curve and spectrum by considering various situations, various environments, and various physical processes. It is possible to constrain the microscopic physical parameters of GRB by using a sampling method (e.g. MCMC, Nested, etc) for Bayesian inference. And more features are under continuous development.
+
+[MISSING_PAGE_EMPTY:16140]
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c c c c c} \\hline \\hline \\multicolumn{1}{c}{ Time Interval} & \\multicolumn{3}{c}{CPL Model} & \\multicolumn{3}{c}{Band Model} & \\multicolumn{3}{c}{Higher Evidence} \\\\ \\multicolumn{1}{c}{[s]} & \\alpha & E_{\\rm p} [keV] & \\ln{\\cal Z} & \\alpha & \\beta & E_{\\rm p} [keV] & \\ln{\\cal Z} & \\\\ \\hline
+
+[MISSING_PAGE_POST]

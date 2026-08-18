@@ -1,0 +1,125 @@
+###### Abstract
+
+On 2010 October 13, the X-ray astronomical satellite _Rossi_ XTE, during the observation of the newly discovered accretion powered X-ray pulsar IGR J17480-2446, detected a lunar occultation of the source. From knowledge of lunar topography and Earth, Moon, and spacecraft ephemeris at the epoch of the event, we determined the source position with an accuracy of 40 mas (1\\sigma c.l.), which is interesting, given the very poor imaging capabilities of _RXTE_ (\\sim 1^{\\circ}). For the first time, using a non-imaging X-ray observatory, the position of an X-ray source with a subarcsecond accuracy is derived, demonstrating the **neat** capabilities of a technique that can be fruitfully applied to current and future X-ray missions.
+
+Subject headings:Moon - pulsars: general - pulsars: individual (IGR J17480-2446) - stars: neutron - X-rays: binaries
+
+## 1. Introduction
+
+Since the dawn of the X-ray astronomy, the lunar occultation technique has been used to study the position and structure of X-ray sources (see, e.g., Born 1979, and references therein). An X-ray mission like the ESA mission EXOSAT (Taylor et al., 1981) was conceived to have, as part of the core program, the study of X-ray sources using lunar occultations (Born, 1979; Born & Debrunner, 1979). However, the development of X-ray mirrors with arcsecond resolution, rendered, de facto, ineffective such possibility. Indeed, the precision on the spacecraft ephemeris and the lunar surface topography at that time, gave an uncertainty greater than the imaging resolution of such optics. A decade passed before Mereghetti et al. (1990) proposed again this technique for missions like _XMM-Newton_, but there is no trace in the last 20 years of literature of such an application.
+
+IGR J17480-2446 was detected for the first time on 2010 October 10 by the IBIS-ISGRI instruments on board _INTEGRAL_(Bordas et al., 2010) in the globular cluster Terzan 5. While observed by the X-ray observatory _Rossi_ XTE (_RXTE_ hereafter), the source showed an eclipse, first attributed to the companion star (Strohmayer & Markwardt, 2010). A further investigation revealed that a very rare and serendipitous event happened: the source was eclipsed by the Moon while observed by _RXTE_(Strohmayer et al., 2010).
+
+Pooley et al. (2010), on the basis of a _Chandra_ observation of this outburst, gave the most accurate source position, identifying IGR J17480-2446 with a quiescent LMXB previously detected in a _Chandra_ observation of Terzan 5 (Heinke et al., 2006). Testa et al. (2011) report the identification of a possible near-IR counterpart through observations of the field with Adaptive Optics systems before and after the discovery of the source. A detailed discussion will be presented in a forthcoming paper (V. Testa et al. 2012, in preparation). Very recently, Patruno & Milone (2012) report the identification of the candidate counterpart of IGR J17480-2446 in the optical bands in _Hubble Space Telescope_ 2003 archival observations whose position is in agreement with the X-ray positions reported by Pooley et al. (2010) and this work.
+
+In the following we will show how, taking advantage from this fortunate event, it is possible to determine the position of IGR J17480-2446 with a subarcsecond precision. The discussion is divided in two parts, where we explain the occultation technique and provide a detailed analysis of the error budget, respectively.
+
+## 2. The Technique
+
+The precision of the lunar occultation technique depends on four factors: (1) the precision on the position of the Moon, (2) the precision on the spacecraft position, (3) the precision on ingress and egress epochs, (4) and the precision of the lunar surface topography.
+
+During the ingress and egress of a lunar eclipse, the occulted X-ray source lays on the projection of the lunar rim on the plane of sky as seen by the telescope (in this case _Rossi_ XTE). The source position in the plane of sky is then given by the intersection of these two profiles. In general, the possible intersections are two, one of which can be usually excluded, under some conditions, if a prior estimate of the source position is available.
+
+To reconstruct the profile of the lunar rim in the plane of sky, as seen from _RXTE_ at a given epoch, we first considered the position of the spacecraft and of the Moonhypercenter at a given epoch (in our case ingress or egress epochs). The space-time reference frame we adopted is a Cartesian coordinates in a geocentric international celestial reference frame (ICRF/J2000.0) for the position and terrestrial time (TT/TDT) for time.
+
+Moon position \\mathbf{r_{\\zeta}}\\left(t\\right) and spacecraft position \\mathbf{r_{XTE}}(t) are available as astrometric positions, i.e., as a function of time in a reference frame centered on the Earth barycenter. Since the Moon astrometric and apparent positions (as seen from _RXTE_) differ because of the travel time of X-ray photons to cover the Moon-_RXTE_ distance d, we must correct for this time, \\Delta t=d/c, where c is the speed of light. The expression to evaluate the vector distance \\mathbf{d} is reported below
+
+\\mathbf{d}=\\mathbf{r_{XTE}}(t)-\\left[\\mathbf{r_{\\zeta}}\\left(t-\\Delta t\\right) -\\left(\\mathbf{r_{\\oplus}}(t)-\\mathbf{r_{\\oplus}}(t-\\Delta t)\\right)\\right],  where \\mathbf{r_{\\oplus}}(t) is the Earth position with respect to the solar system barycenter. The expression between square bracket represents the Moon position at time t-\\Delta t in the reference frame at time t. Since \\Delta t is a function of d, Equation(1) has to be solved iteratively to find d. We used a fixed point method which converged to the required accuracy within few steps.
+
+Since all the available lunar surface topographic maps are expressed with respect to the selenographic reference frame, the next step was to place the selenographic coordinate system in ICRF/J2000.0 reference frame. We were then able to project the lunar surface topography as seen by _RXTE_ on the plane of sky at both eclipse ingress and egress epoch (see Figure 1). The coordinates of the intersection point (inset in Figure 1) are reported in Table 1.
+
+## 3. Observations and Data Analysis
+
+The source was discovered on 2010 October 10 (Bordas et al., 2010), and _RXTE_ started the observation of the source on October 13. The lunar eclipse is present in the first pointed observation of IGR J17480-2446 (ObsId 95437-01-01-00) performed by the Proportional Counter Array (PCA)/_RXTE_ instrument. The data are available in good-xenon packing mode, with maximum temporal (1\\mus) and energy resolution (256 channels). For the kind of analysis we performed, photon arrival times in data where not reported to the solar system barycenter, since we are interested in the instant at which photons reach the spacecraft. Fine clock corrections were not applied since they have negligible effect in the present analysis. Indeed, their magnitude (<60\\mus) is two orders of magnitude smaller than the uncertainties on ingress and egress epochs we obtained.
+
+In the following, a detailed discussion of all the uncertainties is given.
+
+### The Moon
+
+In the determination of the source position, the sources of error related to the Moon are two: the positional error of the Moon barycenter and the uncertainty on the knowledge of the Lunar topography.
+
+#### 3.1.1 Uncertainty on the Moon Position
+
+In our work, we adopted the Moon position with respect to the Earth as reported in DE421/LE421 ephemeris (Folkner et al., 2008; Williams et al., 2008).
+
+The uncertainty at 1\\sigma confidence level (hereafter c.l.) in the lunar orbit for DE421 (taking into account possible systematic errors, not just formal uncertainties from the least-squares fit) is about 5 m in right ascension, 2.4 m in declination, and 0.5 m in range (W. F. Folkner, 2012, private communication).
+
+The position of Earth and Moon barycenters, and the spatial orientation of their spin axis as a function of time was obtained using the JPL's NAIF SPICE Toolkit.8 We sampled these positions every 15 s.
+
+Footnote 8: Version N0064 [http://naif.jpl.nasa.gov/naif/toolkit.html](http://naif.jpl.nasa.gov/naif/toolkit.html).
+
+During the iterative process described in Section 2, we interpolated between these positions with a cubic spline.
+
+#### 3.1.2 Uncertainty on the Moon Topography
+
+The topography of the lunar surface was measured by Earth-observation and lunar missions. The most accurate topographic maps of the moon was obtained by laser ranging altimetry made by probes orbiting the Moon.
+
+The very first one of such a topographic lunar map was done by the NASA Clementine mission (Nozette et al., 1994), with a radial precision of \\sim 40 m. In this work, we analyzed the topographic data from the laser altimetry instrument LALT on board the Japanese lunar explorer Kaguya (SELENE) (Araki et al., 2009, 2010), in particular the global grid topographic data of the Moon (LALT_GGD_NUM, ver. 1, hereafter LALT data). The LALT data are referenced to the sphere of 1737.4 km radius based on the gravity center of the Mean Earth/Polar Axis body-fixed coordinates of the Moon.9 The LALT data grid resolution is 0.0625 (1/16) deg (Araki et al.
+
+Figure 1.— Moon topography projection on the plane of sky as seen by _Rossi_ XTE at eclipse ingress (red curves) and egress (green curves). Each curve is the projection on the plane of sky of a lunar profile at constant selenographic longitude. The envelope of these curves is the lunar rim as seen by _RXTE_. In the inset the detail of the intersection between the two profiles determining our best source position is reported. Circles identify the Heinke et al. (2006) _Chandra_ position and the position derived in this work (black 1\\sigma c.l., gray 2\\sigma c.l.), respectively.
+
+2009, 2010; Fok et al., 2011). The radial topographic error is 4.1 m (1\\sigma c.l., Araki et al., 2009).
+
+### Uncertainties on Ingress and Egress Epochs
+
+During the observation in which the lunar occultation occurred, the source flux was nearly constant with the exception of a type I burst (outside the time interval shown in Figure 2). Excluding the type-I burst, the average count rates outside and during the eclipse where 254.3(9) and 36.2(9) counts s{}^{-1}, respectively (number in parenthesis indicates 1\\sigma errors on the last digit). These values are obtained fitting the light curve (binned at 1 s) inside and outside the eclipse with a constant models.
+
+To obtain an accurate determination of the epoch of eclipse ingress and egress, we binned the light curve at 100\\mus (on such short time intervals no more than one event occurred in each bin, implying that the events can be considered unbinned, in practice) and fitted separately eclipse ingress and egress with step (Heaviside) functions.
+
+Due to the photon paucity, a least-square method was not suitable to fit the ingress and egress epochs (see insets in Figure 2). We therefore used an unbinned maximum likelihood method, which is more suitable in such cases (Bevington & Robinson, 2003). We have taken advantage from prior knowledge of the count rate inside and outside eclipse, so that the fit is mono-parametric with the only parameter the transition time. We fitted separately ingress and egress, considering for each fit the data in a 10 s time interval centered on ingress (or egress). To estimate the uncertainty to be associated to the method, we simulated 10,000 data set with the same characteristics of the original one, and studied the distribution of the best-fit values. The confidence interval obtained is asymmetric, reflecting the large difference between statistics inside and outside eclipse. The 1\\sigma uncertainty results to be 7 ms on the high count rate side, while is 9 ms on the low count rate side. The ingress and egress epochs and the associated 1\\sigma c.l. are reported in Table 1.
+
+### Uncertainties on Spacecraft Position
+
+A complex part of the analysis was the determination of the _Rossi_ XTE spacecraft positional errors. In the following, a brief description of how the spacecraft ephemeris are derived is given.
+
+The _Rossi_ XTE spacecraft positions (and velocities) are stored in the orbit files as Cartesian coordinates with a sampling rate of 60 s. As reported in Jahoda et al. (2006), the position is obtained from the spacecraft ephemeris, estimated by the Goddard Flight Dynamics Facility by fitting the spacecraft position on a 2/3 days basis. This procedures implies that orbit ephemeris of contiguous orbtifles are more or less correlated. In each orbit file, the spacecraft best-fit ephemeris is also extrapolated forward by 10 hr, overlapping with the next day solution. The overlap between two contiguous orbit files is not perfect, reflecting the orbit variations due to the solar radiation pressure, and the statistical uncertainties in the determination of the spacecraft ephemeris. To estimate the statistical uncertainty on the spacecraft position, following Jahoda et al. (2006), we analyzed the distribution of the distance between the spacecraft positions reported in the overlapping time intervals from the orbit number 5000 (54354 MJD) to orbit number 6203 (55556.0 MJD), covering a time span of 3.2 yr around the eclipse epoch. This distribution shows three peaks, centered on 0, \\simeq 0.01 m, and \\simeq 50 m, respectively, reflecting the aforementioned degree of correlation between contiguous orbit files.
+
+In line with what is discussed in Jahoda et al. (2006) and following a discussion with C. B. Markwardt (2012, private communication), as an upper limit on the uncertainty on the spacecraft position, we considered the statistical distribution of the \\simeq 50 m peak.
+
+From this distribution we derive the following confidence intervals for the _Rossi_ XTE position in the considered time interval: 48 m at 1\\sigma, 121 m at 2\\sigma, 311 m at 99%, and 970 m at 3\\sigma.
+
+## 4. Discussion and Conclusions
+
+As described in Section 2, we were able to determine the position of the source as intersection of the lunar rim as seen by _RXTE_ at eclipse ingress and egress (see Figure 1). In the following, to calculate the overall uncertainty of IGR J17480-2446 position, we consider all the source of error as independent. The sources of uncertainty can be subdivided in two kind: temporal (ingress and egress epoch, fine clock corrections) and spatial (spacecraft and lunar position, lunar topography).
+
+The position on the plane of sky of the source is given by the direction of the segment joining the spacecraft and the point on the lunar surface in which the eclipse ingress and egress of the X-ray source occurred. This im
+
+\\begin{table}
+
+\\begin{tabular}{l c} \\hline Parameter & Value \\\\ \\hline R.A. (ICRF/J2000.0) & 17{}^{\\rm h} 48{}^{\\rm m} 07\\fs8245(26) \\\\ Decl. (ICRF/J2000.0) & -24{}^{\\circ} 46{}^{\\prime} 48{}^{\\prime\\prime}88(4) \\\\ \\hline T_{\\rm in} (MJD TT) & 55482.03581125{}^{+10}_{-8} \\\\ T_{\\rm eg} (MJD TT) & 55482.04173510{}^{+8}_{-10} \\\\ \\hline \\end{tabular} Note. – Numbers in parenthesis are 1\\sigma c.l. errors on the last digit(s).
+
+\\end{table}
+
+Table 1Position of IGR J17480–2446 and Times of Eclipse Ingress/Egress.
+
+Figure 2.— Light curve of PCA data around the eclipse of IGR J17480–2446. The light curve is binned at 1 s. In the two insets the light curve of eclipse ingress (left) and egress (right) binned at 10 ms are reported. plies that the angular uncertainty on the direction of such a segment is obtained from the ratio of the overall positional uncertainty on a plane perpendicular to the source direction and the Moon-spacecraft distance. The overall uncertainty on the plane of sky is obtained by summing in quadrature all the spatial uncertainties involved.
+
+As reported in Section 3.1, the positional uncertainty on the position of the Moon barycenter are 5 m in R.A., and 2.4 m in decl. The corresponding angular uncertainty, calculated considering an average Moon-spacecraft distance of 3.844 \\times 10{}^{5} km,10 is of 2.7 milliarcseconds (hereafter mas) in R.A. and 1.3 mas in declination. The error associated to the lunar topography adopted is the radial uncertainty of 5 m. The angular uncertainty we obtain is 2.7 mas in both axes.
+
+Footnote 10: The Moon-spacecraft distance is 383418.495 km at ingress, and 385476.095 km at egress. In our calculations, we considered the average.
+
+Using a Monte Carlo technique, we estimated a confidence interval of {}^{+9}_{-7} ms and {}^{+7}_{-9} ms for ingress and egress, respectively. To convert these temporal uncertainties in spatial uncertainties on a plane perpendicular to the source direction, we multiply them by Moon-spacecraft relative speed projected on the plane of sky \\mathbf{v_{rel}}. The moduli of these velocity vectors are: v_{\\rm in}^{\\rm R.A.}=5.70\\,\\rm km\\,s^{-1}, v_{\\rm in}^{\\rm Decl.}=2.26 km s{}^{-1}, v_{\\rm eg}^{\\rm R.A.}=2.72 km s{}^{-1}, v_{\\rm eg}^{\\rm Decl.}=4.71 km s{}^{-1}, where the subscripts \\rm in and \\rm eg indicate ingress or egress epoch, respectively, while the superscripts RA and Dec indicate the corresponding axis in the plane of sky. Proceeding as described above, we obtain for R.A. and decl. the following 1\\sigma confidence intervals: \\Delta\\alpha_{\\rm in}={}^{+27}_{-21} mas, \\Delta\\alpha_{\\rm eg}={}^{+10}_{-13} mas, \\Delta\\beta_{\\rm in}={}^{+8}_{-11} mas, \\Delta\\beta_{\\rm eg}={}^{+23}_{-18} mas. The uncertainties in ingress and egress were summed in quadrature.
+
+Finally we considered the uncertainty in the spacecraft position, which is 48 m at 1\\sigma confidence level, corresponding to an uncertainty of 26 mas on both axes.11
+
+Footnote 11: We note that, formally, we should project the spacecraft position uncertainty on the plane of sky. Such a procedure implies that the uncertainty to be associated should be a \\sim\\sqrt{2} factor smaller. However, to be conservative, we prefer to use the original uncertainty.
+
+To summarize, we report in Table 2 all the uncertainties discussed above at 1\\sigma c.l. on R.A. and decl., together with the grand total, obtained summing them in quadrature.
+
+Our result confirms the association made by Pooley et al. (2010) of a quiescent X-ray source observed by Heinke et al. (2006) in the globular cluster Terzan 5. Indeed our position is 0\\aas@@fstack{\\prime\\prime}1 from the quiescent X-ray source detected by Heinke et al. (2006) in a 40 ks _Chandra_ X-ray observation of the globular cluster Terzan 5. Note that the accuracy on the source position reported by Heinke et al. (2006) is 0\\aas@@fstack{\\prime\\prime}06 (1\\sigma c.l.), slightly worse than the uncertainty derived form the Moon occultation (\\simeq 0\\aas@@fstack{\\prime\\prime}04). Moreover, V. Testa et al. (2012, in preparation) use the high precision on the X-ray source position obtained with Moon occultation to identify a possible near-IR counterpart even in a extreme crowded field of view as the center of a globular cluster.
+
+In the following we discuss the applicability of this method to present and future X-ray missions. In particular we briefly compare _RXTE_ with _Chandra_, _XMM-Newton_, NuSTAR, and LOFT discussing the positional accuracy obtainable with this technique. As discussed in Section 2, the accuracy on the source position depends on the accuracy in the ingress and egress epochs, which in turn depends on the source and background count rates through the following relation \\delta t\\simeq(1+R_{\\rm bkg}/R_{\\rm src})/R_{\\rm src} (at 1\\sigma confidence level), R_{\\rm src} and R_{\\rm bkg} are the count rate of the source and the background, respectively. Therefore the total uncertainty, at 1\\sigma level, in source position, \\sigma_{\\theta}, can be written as
+
+\\sigma_{\\theta}^{2}\\simeq\\frac{\\mathbf{v_{rel}^{2}}}{d^{2}}\\bigg{(}\\frac{1+R_ {\\rm bkg}/R_{\\rm src}}{R_{\\rm src}}\\bigg{)}^{2}+\\frac{\\sigma_{\\rm Q}^{2}\\,+ \\,\\sigma_{\\rm spc}^{2}}{d^{2}},  where \\sigma_{\\rm Q} and \\sigma_{\\rm spc} are the uncertainties in the Moon rim and spacecraft position, d is the Moon-spacecraft distance. Since solar system ephemeris, and in particular Lunar ephemeris, are already at an accuracy of 5 m, while present lunar mission LRO/LOLA (Smith et al. 2010) is mapping its surface with an overall accuracy \\lesssim 1 m, the precision is mainly limited by the uncertainties on spacecraft position and on the ingress and egress epochs. The first one can easily be improved in present and future spacecrafts equipped with GPS. This means that the leading term in the uncertainty \\sigma_{\\theta} is the uncertainty on the ingress and egress epochs. For source dominated targets (R_{\\rm bkg}/R_{\\rm src}<<1), the positional accuracy obtainable with this technique scales as the inverse of the source count rate, which. for a given spectral shape, depends on the effective area and energy band of the X-ray satellite. The effective area at 5 keV for present X-ray satellite are 1000 cm{}^{2} for each Proportional Counter Unit in _RXTE_ (Bradt et al. 1993), 800 cm{}^{2} for EPIC/pn in _XMM-Newton_ (Jansen et al. 2001), 300 cm{}^{2} for _Chandra_/EPIC (Weisskopf et al. 2002), while the effective are of NuSTAR will be 700 cm{}^{2} (Harrison et al. 2010) and of LOFT/LAD will be 110,000 cm{}^{2} (Feroci et al. 2011). Unfortunately, such a technique cannot be used with _XMM-Newton_, since it has a constraint on the angle between the pointing direction and the Moon (>22^{\\circ}), because of the limitations imposed by the Optical Monitor. For bright sources, continuous clocking mode must be used with _Chandra_, in order to avoid pile-up photon losses. A future X-ray mission with a \\sim10 m{}^{2} effective area such as LOFT (Feroci et al. 2011) will then permit to go at a level below 5 mas.
+
+_Note added in proof_ We have re-calculated the position of the 11-Hz pulsar IGR J17480-2446 in Terzan 5 using data from LRO/LOLA for the Lunar topography. These data have an intrinsic uncertainty of 1 m on the Lunar surface. In this case we find the following source position: 17^{\\rm h}\\,48^{\\rm m}\\,04\\aas@@fstack{s}8216(26),-24^{\\circ}\\,46^{\\prime}\\,48 \\aas@@fstack{\\prime\\prime}88(4). This position differs from the one obtained from Kaguya/LALT
+
+\\begin{table}
+
+\\begin{tabular}{l c c} \\hline Parameter & \\Delta R.A. (mas) & \\Delta Decl. (mas) \\\\ \\hline Moon ephemeris & \\pm 2.7 & \\pm 1.3 \\\\ _Rossi_ XTE ephemeris & \\pm 26 & \\pm 26 \\\\ Eclipse ingress and egress epochs & {}^{+29}_{-25} & {}^{+24}_{-21} \\\\ Moon topography radial precision & \\pm 2.7 & \\pm 2.7 \\\\ \\hline Grand total & {}^{+39}_{-36} & {}^{+35}_{-33} \\\\ \\hline \\end{tabular} Note. – Statistical errors are intended to be at 1\\sigma confidence level.
+
+\\end{table}
+
+Table 2Error Budgetby 43 mas, which is about 1 sigma the error box.
+
+This work is supported by the Italian Space Agency, ASI-INAF I/088/06/0 and I/009/10/0 contracts for High Energy Astrophysics. This research made use of the lunar orbiter SELENE (KAGUYA) data of JAXA/SELENE. We thank W. Folkner for having provided useful information on JPL solar system ephemeris, C. B. Markwardt for having provided useful information on _Rossi_ XTE orbit ephemeris, B. Saitta and A. De Falco for useful discussions on statistical methods. A. Papitto acknowledges the support by the grants AYA2009-07391 and SGR2009-811, as well as the Formosa program TW2010005 and iLINK program 2011-0303. E. Egron acknowledges the support of the Initial Training Network ITN 215212: Black Hole Universe funded by the European Community.

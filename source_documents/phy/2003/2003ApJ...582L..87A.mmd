@@ -1,0 +1,73 @@
+###### Abstract
+
+In this Letter we investigate uniformly rotating, homogeneous and axisymmetric relativistic fluid bodies with a toroidal shape. The corresponding field equations are solved by means of a multi-domain spectral method, which yields highly accurate numerical solutions. For a prescribed, sufficiently large ratio of inner to outer coordinate radius, the toroids exhibit a continuous transition to the extreme Kerr black hole. Otherwise, the most relativistic configuration rotates at the mass-shedding limit. For a given mass-density, there seems to be no bound to the gravitational mass as one approaches the black-hole limit and a radius ratio of unity. gravitation -- relativity -- stars: neutron -- stars: rotation -- black hole physics -- methods: numerical
+
+## 1 Introduction
+
+Self-gravitating toroidal fluid configurations (without a central body) in Newtonian Gravity were the subject of analytic investigations by Poincare (1885a,b,c); Dyson (1892, 1893); Kowalewsky (1895) and Lichtenstein (1933). In particular, Dyson was able to give a fourth order expansion of uniformly rotating, homogeneous and axisymmetric rings, which turned out to be an extremely good approximation for thin rings, see Ansorg et al. (2002b). Numerical evidence for the existence of these rings was given by Wong (1974) and later by Eriguchi & Sugimoto (1981), who, in addition, confirmed a conjecture by Bardeen (1971) stating that there is a continuous connection between the Maclaurin spheroids and the sequence of 'Dyson rings', see also Ansorg et al. (2002b).
+
+In this Letter we extend the above Dyson rings to Einsteinian Gravity. As one moves away from the Newtonian configurations, one observes typical relativistic effects such as the formation of ergo-regions. In particular, we found an interesting continuous transition to an extreme Kerr black hole. If a fixed ratio \\rho_{1}/\\rho_{2}>0.5613 of inner to outer coordinate radius is prescribed and one gradually increases the gravitational mass (for fixed mass-density), the configurations eventually form an extreme Kerr black hole, as described by Meinel (2002). If on the other hand \\rho_{1}/\\rho_{2}<0.5613 is fixed, the ultimate configuration, as one increases the gravitational mass, rotates at the mass-shedding limit. It is furthermore interesting to note that the maximum gravitational mass seems to become infinite as \\rho_{1}/\\rho_{2}\\to 1.
+
+For computing the'relativistic Dyson rings' we extended our multi-domain spectral method (Ansorg et al., 2002a) to toroidal topology. Again we obtain an accuracy of up to 12 digits for configurations sufficiently far away from limiting cases.
+
+Relativistic Dyson rings and their possible generalizations (rings with realistic equations of state, configurations with a central object) might be relevant in two different astrophysical situations: (i) they could form as a result of stellar core-collapse in the case of high angular momentum, cf. Thorne (1998); (ii) they could be present in central regions of galaxies. Of course, for a final evaluation of the astronomical relevance of relativistic toroids their stability must be analyzed. It is to be expected that they are stable with respect to axisymmetric perturbations, but they may be unstable to (non-axisymmetric) fragmentation. In this case, the toroids could nevertheless play an interesting role as intermediate configurations in various astrophysical collapse scenarios.
+
+In what follows, units are used in which the speed of light as well as Newton's constant of gravitation are equal to 1.
+
+## 2 Metric Tensor, Field Equations and Boundary Conditions
+
+For an axisymmetric and stationary space-time describing the gravitational field of a uniformly rotating perfect fluid body the line element can be cast into the following form4:
+
+Footnote 4: This form of the line element of an axisymmetric and stationary space-time also applies in more general situations, e.g. for differentially rotating perfect fluids or if the stress-energy tensor is that of a stationary, axisymmetric electromagnetic field (Carter, 1969).
+
+ds^{2}={\\rm e}^{2\\alpha}(d\\rho^{2}+d\\zeta^{2})+W^{2}{\\rm e}^{-2\\nu}(d\\varphi- \\omega\\,dt)^{2}-{\\rm e}^{2\\nu}dt^{2}\\,.
+
+We define the corresponding Lewis-Papapetrou coordinates (\\rho,\\zeta,\\varphi,t) uniquely by the requirement that the metric coefficients and their first derivatives be continuous at the surface of the body.
+
+A particular consequence of the interior field equations for a perfect fluid body revolving with the uniform angular velocity \\Omega is the boundary condition
+
+{\\rm e}^{2\\nu}-W^{2}(\\omega-\\Omega)^{2}{\\rm e}^{-2\\nu}={\\rm const.}=(1+Z_{0})^{- 2}\\,, which holds along the surface of the fluid. The constant is related as shown to the relative redshift Z_{0}, measured at infinity, of photons which are emitted from the body's surface and do not carry angular momentum.
+
+Interior and exterior field equations together with the above boundary and transition conditions at the body's surface, asymptotic behaviour at infinity and regularity conditions along the rotation axis (\\rho=0) form a complete set of equations to be solved, see for example Butterworth & Ipser (1976).
+
+As long as we do not consider the transition to the extreme Kerr black hole, the regularity condition at infinity is asymptotic flatness. If we however follow the 'physical route' to the extreme Kerr black hole studied by Meinel (2002), we learn that in this limiting process the fluid body shrinks until it coincides with the coordinate origin. The geometry of the exterior space-time assumes that of the extreme Kerr solution outside the horizon. On the other hand, a completely different space-time, which is not asymptotically flat, forms if we rescale the coordinates such that the fluid body retains its finite extension. The asymptotic behaviour of the corresponding gravitational potentials in this limit is given by the 'extreme Kerr throat geometry', see Bardeen & Horowitz (1999) and Meinel (2002). In order to determine the physical parameters of the rings in the black-hole limit precisely, it is necessary to calculate this inner solution with its non-flat asymptotic behaviour.
+
+## 3 The Multi-Domain Spectral Method
+
+In the case of spheroidal figures of equilibrium, a two-domain spectral method was used to yield highly accurate numerical solutions (Ansorg et al. 2002a). In this method we separately mapped the interior and exterior of the star onto a square. The field quantities as well as the unknown shape of the fluid body were written in terms of Chebyshev expansions, and the corresponding coefficients resulted from a high-dimensional nonlinear set of equations that incorporated both field equations and transition conditions. This system was solved by a Newton-Raphson method, and an initial guess for the solution was taken from the analytically known Newtonian Maclaurin spheroids.
+
+The idea of mapping several subregions separately onto squares can also be applied to the case of toroidal figures. In a first step we map the interior of the ring onto a square (0\\leq s\\leq 1,0\\leq t\\leq 1) by
+
+\\rho^{2} = \\rho_{1}^{2}+(\\rho_{2}^{2}-\\rho_{1}^{2})s \\zeta^{2} = (1-t)y_{\\rm B}(s) where \\rho_{1/2} stands for the inner and outer coordinate radius of the ring, respectively, and the non-negative function y_{\\rm B}, which describes the unknown shape of the ring's surface, satisfies
+
+y_{\\rm B}(0)=0\\,,\\quad y_{\\rm B}(1)=0.
+
+(We assume reflectional symmetry with respect to the plane \\zeta=0.) Next we introduce toroidal coordinates (\\tilde{\\rho},\\tilde{\\zeta}) in order to obtain a compact coordinate region for the entire space exterior to the ring:
+
+z={\\rm i}\\rho_{\\rm m}\\cot{[\\tilde{z}/2]} with
+
+z=\\rho+{\\rm i}\\zeta\\quad{\\rm and}\\quad\\tilde{z}=\\tilde{\\rho}+{\\rm i}\\tilde{ \\zeta}.
+
+The value \\rho_{\\rm m} must be chosen such that \\rho_{1}<\\rho_{\\rm m}<\\rho_{2}. Since in these coordinates the metric potentials are not analytic at \\tilde{z}=0, it is necessary to divide the corresponding compact coordinate region of values (\\tilde{\\rho},\\tilde{\\zeta}) into further subregions, each one of which is again to be mapped onto a square.
+
+The solution is represented and determined in a completely analogous manner as described above for the spheroidal bodies. Note that the initial guess for the Newton-Raphson method now comes from the numerically known Dyson rings in Newtonian Gravity.
+
+Again, we obtain very accurate solutions5 yielding up to 12 digits for configurations that are sufficiently far away from the mass-shedding limit and from the limits \\rho_{1}/\\rho_{2}\\to 0, \\rho_{1}/\\rho_{2}\\to 1.
+
+Footnote 5: The accuracy can be tested in several independent ways, see Ansorg et al. (2002a).
+
+## 4 Results
+
+For a particular (constant) energy density \\mu, the relativistic Dyson rings are characterized by two parameters, say the redshift Z_{0} and the radius ratio \\rho_{1}/\\rho_{2}. The region in which these parameters may vary is depicted in Fig. 1. Here, vanishing Z_{0} represents the Dyson rings in Newtonian Gravity. The fluid bodies with \\rho_{1}/\\rho_{2}=0 are transition configurations from toroidal to spheroidal topology. Starting from the Newtonian body, these configurations reach a mass-shedding limit at Z_{0}\\approx 0.26. If we now follow the mass-shedding curve, Z_{0} increases and reaches infinity at \\rho_{1}/\\rho_{2}=0.5613, which corresponds to a transition to the extreme Kerr black hole. For a rigidly rotating disk of dust, such a transition was conjectured by Bardeen & Wagoner (1969, 1971) and analytically proven by Neugebauer & Meinel (1993, 1995). Also for differentially rotating disks of dust a transition of this kind has been found (Ansorg & Meinel 2000; Ansorg 2001). In this limit the coordinate extension of the gravitational source (here the relativistic Dyson ring) shrinks until the object coincides with the coordinate origin. The metric tensor assumes the form of the extreme Kerr solution outside the horizon6 with W\\equiv\\rho, and the angular momentum J, the gravitational mass M and the angular velocity \\Omega approach the relation
+
+Footnote 6: In our coordinates, the horizon (and the ‘throat’ of the extreme Kerr metric) is given by \\rho=\\zeta=0, see Meinel (2002).
+
+J=M^{2}=(2\\Omega)^{-2}. 
+
+This extreme Kerr black-hole limit emerges for radius ratios \\rho_{1}/\\rho_{2}>0.5613. If we move from here along this boundary curve towards \\rho_{1}/\\rho_{2}=1, we note that the normalized gravitational mass \\bar{M}=M\\mu^{1/2}, the normalized rest mass7\\bar{M}_{0}=M_{0}\\mu^{1/2} and the relative binding energy (M_{0}-M)/M_{0} increase, see Fig. 2. In the Newtonian limit (Z_{0}\\to 0) the normalized angular velocity \\bar{\\Omega}=\\Omega/\\mu^{1/2} tends to zero as \\rho_{1}/\\rho_{2}\\to 1. Our numerical results support the plausible assumption that the same is valid for all values of Z_{0}. In the black-hole limit (Z_{0}\\to\\infty) this would imply \\bar{M}\\to\\infty as \\rho_{1}/\\rho_{2}\\to 1, see Eq. (1). Therefore we believe that there is no bound to the gravitational mass of relativistic Dyson rings of a given mass-density as one approaches the black-hole limit and a radius ratio of unity.
+
+Footnote 7: For the calculation of M_{0} we assume that the total energy density \\mu is equal to the rest-mass density, cf. Bardeen (1971).
+
+The evolution of a typical relativistic Dyson ring sequence with fixed radius ratio \\rho_{1}/\\rho_{2}=0.7 from the Newtonian to the black-hole limit can be seen in Figs 3 and 4. Corresponding values of various physical quantities are given in Table 1. Finally, in Fig. 5 we provide selected examples of configurations at the mass-shedding and the black-hole limit. More details of our methods and results including the discussion of realistic equations of state, configurations with a central object (black hole or neutron star), stability, and astrophysical relevance will be published elsewhere.
+
+This work was supported by the _Deutsche Forschungsgemeinschaft_ (DFG-project ME 1820/1-3).

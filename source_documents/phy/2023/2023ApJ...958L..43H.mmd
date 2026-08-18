@@ -1,0 +1,159 @@
+###### Abstract
+
+Pre-merger localization of binary neutron stars (BNSs) is one of the most important scientific goals for the third generation (3G) gravitational wave (GW) detectors. It will enable the electromagnetic observation of the whole process of BNS coalescence, especially for the pre-merger and merger phases which have not been observed yet, opening a window for deeper understandings of compact objects. To reach this goal, we describe a novel combination of multi-band matched filtering and semi-analytical localization algorithms to achieve early-warning localization of long BNS signals in 3G detectors. Using our method we are able to efficiently simulate one month of observations with a three-detector 3G network, and show that it is possible to provide accurate sky localizations more than 30 minutes before the merger. Our simulation shows that there could be \\sim 10 (\\sim 100) BNS events localized within 100 deg{}^{2}, 20 (6) minutes before merger, per month of observation.
+
+0000-0002-2207-1872]Qian Hu
+
+0000-0002-2820-2207]John Veitch
+
+## 1 Introduction
+
+Since the first direct gravitational wave (GW) detection of the coalescence of binary neutron star (BNS) GW170817 (Abbott and et al, 2017) and its electromagnetic (EM) counterparts (Abbott and et al, 2017), multi-messenger observation of coalescing compact binaries has become an important tool for astrophysics. Joint GW-EM observations can provide a comprehensive understanding of the formation and evolution of BNS, and shed lights on physics around compact objects (Abbott and et al, 2019; De et al., 2018; Mooley et al., 2018; Capano et al., 2020; Nicholl et al., 2017; Abbott et al., 2018; Annala et al., 2018; Kasen et al., 2017; Margalit and Metzger, 2017; Cowperthwaite et al., 2017; Soares-Santos et al., 2017).
+
+Rapid GW detection and accurate localization is key to joint GW-EM observations, as most EM facilities need the direction from the GW observation. In addition to capturing the afterglow of BNS coalescences, early EM observations could offer unique insights of phenomena in BNS that happen prior to or near the merger (e.g. tidal disruptions, magnetosphere interactions, r-process nucleosynthesis) and help build a picture of the entire evolution of kilonova in multiple frequency bands (Cooper et al., 2022; Most and Philippov, 2020; Nicholl et al., 2017; Metzger and Piro, 2014; Radice et al., 2018; Metzger, 2020). Early detection and localization of BNS are therefore of great importance in GW astronomy. It has previously been demonstrated that there is a non-zero probability of detecting and localizing pre-merger BNS events with current (Kovalam et al., 2022; Magee et al., 2021) and near-future (Sachdev et al., 2020; Nitz et al., 2020; Magee and Borhanian, 2022; Banerjee et al., 2022) GW observatories, typically within seconds to one minute before merger. Chaudhary et al. (2023) has recently investigated early warning for the fourth observing run of LIGO-Virgo-KAGRA collaboration, with multiple detection pipelines already equipped for early warning searches (Chu et al., 2022; Nitz et al., 2018; Messick et al., 2017; Aubin et al., 2021). Machinle learning based methods for early warning detection are also making rapid progresses (Baltus et al., 2021; Wei and Huerta, 2021; Yu et al., 2021; Baltus et al., 2021)
+
+Being limited by low sensitivities below 20 Hz, the BNS signal is only detectable for \\sim1 minute in current GW detectors. Given the communication time delay between multi-messenger community and the \\sim 10-100 seconds slew time of modern telescopes (Banerjee et al., 2022), it is basically impossible to capture pre-merger or near-merger transients from BNS coalescence without fore-warning. Several third-generation (3G) GW detectors have been proposed, including Einstein Telescope (ET) (Punturo et al., 2010) and Cosmic Explorer (CE) (Reitze and et al, 2019; Evans et al., 2023), with low frequency sensitivities significantly improved.
+
+These would allow us to detect BNS signals more than 30 minutes before the merger, rendering precise early warning localization possible (Nitz and Dal Canton, 2021; Branchesi et al., 2023; Borhanian and Sathyaprakash, 2022; Ronchini et al., 2022; Chan et al., 2018; Akcay, 2019).
+
+However, data analysis of BNS in 3G detectors can be challenging. The long signal makes matched filtering extremely expensive to perform, and it is modulated by changes of the antenna response functions due to the Earth's rotation. Neglecting the Earth's rotation should have little impact on detection, as signal-to-noise ratio (SNR) is mostly contributed by the last stages of the signal (see Fig. 1). However, ignoring it causes loss of information and could lead to biases in parameter estimation, especially for sky location parameters. In this work, we demonstrate that multi-band analysis (Aubin et al., 2021; Adams et al., 2016; Cannon et al., 2012) is an effective way of solving these issues, and fast localization algorithms can be built upon multi-band detection statistics.
+
+Multi-band analysis is based on the fact that orbital evolution of the quasi-circular BNS inspiral stage is well modeled. Observable BNSs are not likely to have large spins (Abbott et al., 2020; Abbott and et al, 2019, 2017) or precession, and the frequency evolves as
+
+f(\\tau)=134\\ \\mathrm{Hz}\\left(\\frac{1.21M_{\\odot}}{\\mathcal{M}_{c}}\\right)^{5/8 }\\left(\\frac{1\\ \\mathrm{s}}{\\tau}\\right)^{3/8}  to the Newtonian order (Maggiore, 2007), where f is GW frequency, \\tau is the time before merger, and \\mathcal{M}_{c} is the chirp mass of the binary. The monotonic evolution of GW frequency ensures a one-to-one correspondence between time segments and frequency bands, i.e., chopping the GW waveform into multiple time segments, [t_{n},t_{n-1}),[t_{n-1},t_{n-2}),\\ldots,[t_{1},t_{0}), results in a corresponding sequence of frequency bands [f_{n},f_{n-1}),[f_{n-1},f_{n-2}),\\ldots,[f_{1},f_{0}) defined via Eq. 1. One can choose the length of time intervals such that within each interval the Earth's rotation can be ignored, i.e. the detectors' antenna response functions can be assumed constant and current matched filtering techniques can be directly employed. One can also down-sample the data in each frequency band according to its highest frequency to reduce computational cost. Results from each time segment can be combined in succession as new data comes in.
+
+Fig. 1 shows the multi-band scheme in this work. We consider the negative latency up to 60\\,\\mathrm{min}, and choose 2\\,\\mathrm{min} segments and 256\\,\\mathrm{Hz} sampling frequency until the final two minutes. In the last two minutes the SNR grows rapidly, and the GW reaches high frequencies, therefore a finer time resolution is used to improve the detection and localization. In addition to the limit from Nyquist-Shannon sampling theorem, in practice we find that a sampling rate that is higher than Nyquist frequency could be helpful in localizing high SNR events. As a demonstration, we equally divide the last two minutes, and employ sampling frequencies of 1024\\,\\mathrm{Hz} and 4096\\,\\mathrm{Hz}, respectively. A more elaborate segmentation is also sensible e.g. (Morisaki, 2021), but we leave a comprehensive investigation of the multi-band scheme to future works.
+
+We will build a fast localization algorithm based on the above multi-banding scheme. Given the large number of BNS detections in the 3G detectors (typically \\sim 10^{5} per year (Branchesi et al., 2023; Borhanian and Sathyaprakash, 2022)), an efficient and light algorithm is necessary. While machine learning methods (Gabbard et al., 2022; Dax et al., 2021; Chatterjee and Wen, 2022; Chatterjee et al., 2022) are gradually making progresses, Baysetar(Singer and Price, 2016), which performs a five-fold numerical marginalization over nuisance extrinsic parameters, has been used as the standard low-latency localization approach throughout the observing runs of the current generation of GW detectors. It takes Baysetar\\sim 2\\,\\mathrm{s} to generate a skymap with 32 threads (Singer and Price, 2016), and lower latency can be achieved with more CPUs or narrower bandwidth. For instance, Magee et al. (2021) demonstrated \\sim 0.5\\,\\mathrm{s} of computation time of Baysetar with sufficient (>100) threads for early warning triggers, and \\sim 1.1\\,\\mathrm{s} for full bandwidth triggers. In this work, to reduce the computational cost of dealing with vast number of events, we will make use of a semi-analytical localization algorithm for GWs (SealGW) (Hu et al., 2021) that has recently been implemented in the SPIIR detection pipeline (Chu et al., 2022) and is publicly available1. SealGW performs a semi-analytical marginalization over nuisance parameters, achieves a faster performance than Bayestar and retains a reasonable accuracy. A more detailed description will be given in the following sections.
+
+Footnote 1: [https://git.ligo.org/spir-group/SealGW](https://git.ligo.org/spir-group/SealGW)
+
+## 2 Localization for Long Signals
+
+As intrinsic parameters of GWs are initially estimated by matched filtering searches and their errors are semi-independent with errors in sky localization (Singer and Price, 2016), they are treated as perfectly known in online fast localization. The Bayesian posterior probability distribution for extrinsic parameters can be written as
+
+p(\\boldsymbol{\\vartheta}_{\\mathbf{ex}}|d,\\boldsymbol{\\vartheta}_{\\mathbf{in}}) \\propto p(\\boldsymbol{\\vartheta}_{\\mathbf{ex}})p(d|\\boldsymbol{\\vartheta}_{ \\mathbf{ex}},\\boldsymbol{\\vartheta}_{\\mathbf{in}}),  where d is the data, p(\\boldsymbol{\\vartheta}_{\\mathbf{ex}}) is the prior distribution and p(d|\\boldsymbol{\\vartheta}_{\\mathbf{ex}},\\boldsymbol{\\vartheta}_{\\mathbf{in}}) is the likelihood. Among \\boldsymbol{\\vartheta}_{\\mathbf{ex}}=\\{\\alpha,\\delta,t_{c},\\psi,r,\\phi_{c},\\iota\\}, right ascension \\alpha and declination \\delta describes the source sky direction while the other nuisance parameters should be marginalized. Direct analytical marginalization is impossible, but after a parameter conversion
+
+\\boldsymbol{\\vartheta}_{\\mathbf{ex}}=\\{\\alpha,\\delta,t_{c},\\psi,r,\\phi_{c}, \\iota\\}\\rightarrow\\boldsymbol{\\vartheta}^{\\prime}_{\\mathbf{ex}}=\\{\\alpha, \\delta,t_{c},\\mathbf{A}\\},  where
+
+\\mathbf{A}=\\begin{pmatrix}\\cos 2\\psi&\\sin 2\\psi\\\\ -\\sin 2\\psi&\\cos 2\\psi\\end{pmatrix}\\begin{pmatrix}\\frac{1+\\cos^{2}\\iota}{2r}&\\\\ &\\frac{\\cos\\iota}{r}\\end{pmatrix}\\begin{pmatrix}\\cos\\phi_{c}&\\sin\\phi_{c}\\\\ -\\sin\\phi_{c}&\\cos\\phi_{c}\\end{pmatrix},  the likelihood function appears as a Gaussian in the matrix \\mathbf{A} and is therefore analytically tractable (Hu et al., 2021). The posterior of the source sky location takes the form
+
+p(\\alpha,\\delta|d,\\boldsymbol{\\vartheta}_{\\mathbf{in}})=\\int dt_{c}d^{4}\\mathbf{ A}p(\\boldsymbol{\\vartheta}^{\\prime}_{\\mathbf{ex}}|d,\\boldsymbol{\\vartheta}_{ \\mathbf{in}})=\\int dt_{c}I(\\rho(t_{c}),\\alpha,\\delta),  where \\rho(t_{c}) is the SNR timeseries. The analytical expression of I(\\rho(t_{c}),\\alpha,\\delta), including a comprehensive introduction and tests of SealGW, can be found in Hu et al. (2021).
+
+Filtering each timeseries in the multi-band scheme produces a separate complex SNR time-series that must be coherently combined to achieve a precise localization (Allen et al., 2012; Singer and Price, 2016). The gain in precision for long signals comes not only from the accumulation of absolute SNR, but also from phase drifts of the SNR timeseries due to the Earth's rotation because the rotation induces a longer equivalent network baseline (Wen and Chen, 2010; Zhao and Wen, 2018; Baral et al., 2023). A direct combination (linear addition) of multiple SNR timeseries is feasible for short signals, as it only requires a set of combination parameters to align the template bands in time and phase (Adams et al., 2016). However, for long signals, the direct combination scheme is no longer coherent because of the phase drifts due to the Earth's rotation. Including the phase drifts in combination parameters can lead to a coherent addition, but it loses information contained in the changing time delays between detectors which depends on the sky location. Therefore, instead of directly adding SNR, we multiply likelihoods from every band before marginalization over nuisance extrinsic parameters. Since there is little overlap between bands (contributed by noise correlation and template overlaps which are windowed out), they can be treated as independent measurements, as if there are different detectors at different frequency bands.
+
+## 3 Catalog Simulation
+
+To assess the performance of the above localization scheme, we simulate a mock BNS catalog, assuming a three-detector network with one triangle ET at Virgo site and two L-shaped CEs at LIGO Hanford and Livingston site, respectively. We use an analytical astrophysical population (Oguri, 2018)
+
+R_{\\mathrm{obs}}(z)=\\frac{a_{1}e^{a_{2}z}}{e^{a_{3}z}+a_{4}}\\frac{1}{1+z} \\frac{dV_{c}}{dz}\\mathrm{Gpc}^{-3}\\mathrm{yr}^{-1}, 
+
+Here V_{c} is the comoving volume and we employ Planck15 cosmology (Ade et al., 2016). a_{\\{2,3,4\\}} are set to be \\{1.6,2.1,30\\} to model a peak at z\\sim 2. a_{1} is scaled to match the local BNS merger rate given by Abbott et al. (2021) (\\mathcal{R}_{\\mathrm{obs}}(z=0)=320^{+490}_{-240}\\mathrm{Gpc}^{-3}\\mathrm{yr} ^{-1}). We use the estimated median value of the merger rate in this work. We simulate 68000 BNS sources within z=3, which corresponds to roughly one month of observations. We assume neutron star mass is uniformly distributed in [1.1M_{\\odot},2M_{\\odot}] in the source frame and isotropic sky distribution and inclination. Note that the location and configuration of detector networks are not settled yet and subject to change, and the BNS mass distribution and the current merger rate density estimate have large uncertainties due to the as yet small number of BNS detections.
+
+Signals are injected into Gaussian noise realizations and analyzed individually, i.e., we do not consider them to be overlapping with each other. Overlapping signals could cause dominant biases in parameter estimation, but mainly in the case when the merger times are very close (Himemoto et al., 2021; Pizzati et al., 2022; Relton and Raymond, 2021; Relton et al., 2022; Samajdar et al.,2021; Hu & Veitch 2023a). Among the 68000 BNS events evenly distributed in one month, roughly 1.3% of them have another event ending <0.5 s afterwards. Many of the signals are not actually detectable, further reducing the chance of significant bias. Even though the number of overlapping signals could be large given the large number of events expected to be detected with 3G detectors, our simulation will still apply to the vast majority of non-interfering signals.
+
+We use the waveform model TaylorF2(Blanchet et al., 1995; Poisson, 1998; Buonanno et al., 2009) to generate GW signals and map frequency to time before merger via the stationary phase approximation with Eq. 1. The 3.5 post-Newtonian waveform is a reasonable choice for analyzing quasi-circular inspiralling compact binaries (Faye et al., 2012). Several works suggest some non-quasi-circular binaries, like precessing and eccentric systems, or systems with strong higher order emission, can be better localized (McIsaac et al., 2023; Tsutsui et al., 2021; Ma et al., 2017; Kapadia et al., 2020; Singh et al., 2021). However, that would require novel search algorithms (e.g. Fairhurst et al. (2020)) upon which new fast localization methods would have to be built, because current localization methods, including Bayestar and SealGW, are based on aligned-spinning waveform templates in which plus and cross polarizations of GWs only have a phase difference.
+
+We perform matched filtering assuming a perfect knowledge of intrinsic parameters and set total SNR>12 as the detection criterion, where total SNR is converted from the multi-band matched filtering outputs by the analytical expression of SNR at Newtonian order (Cannon et al., 2012). Matched filtering with known injection parameters is the ideal case, while in a realistic scenario one should build a template bank that achieves a reasonable match (e.g. >97%) everywhere in the parameter space. The purpose of this work is to assess the performance of the multi-band localization scheme. We leave a dedicated long signal early warning pipeline and simulations with more realistic mock data to future work.
+
+## 4 Results
+
+For each simulation, we perform multi-band matched filtering from 60 minutes before merger with low frequency cutoff at 5 Hz. Fig. 2 shows the cumulative number of events for different negative latencies. \\sim 10 events can be localized within 100 deg{}^{2} 20 minutes before merger, and 6 minutes before merger the number of events increases to \\sim 100. Also, \\sim 1-10 events can be localized within 10 deg{}^{2} up to 6 minutes before merger.
+
+Extreme early warnings are possible. Several events in our simulation are detected and preliminarily localized 40-50 minutes before merger and this number could be underestimated since our analysis has hard cutoffs at 5 Hz and one-hour negative latency. ET would be able to collect sensible data down to \\sim 3 Hz and trigger even earlier detections (Branchesi et al., 2023; Borhanian & Sathyaprakash, 2022). However, BNS with high negative latencies are not likely to be well localized until more data comes in, bringing higher SNRs, wider frequency bands and a longer equivalent network baseline. Multi-band analysis helps update detection statistics and skymaps on-the-fly. Fig. 3 shows the evolution of skymaps and localization areas in our simulation. The example skymap is from a 1.4+1.4M_{\\odot} BNS at 1000 Mpc detected 30 minutes before merger. It presents nested contours with new bands combined in succession and is finally pinpointed within 0.2 deg{}^{2}, but is already well localized \\sim10 minutes before the merger. The localization area traces in the lower panel show the decreasing rate of localization areas: those localized within 100 deg{}^{2}\\sim 20 minutes before merger in Fig. 2 are generally detected 40-50 minutes before merger.
+
+Fig. 4 is the P-P plot of our localization simulation, showing x% confidence region (x-axis) is able to include y% of total events (y-axis, scaled). The diagonal shapes shows the multi-band localization scheme is reasonably self-consistent. The lines for 30+ minutes before merger have larger statistical fluctuations due to the insufficient number of samples.
+
+We tested the time cost of SealGW and Bayestar calculation with the same data (full-bandwidth ET+2CE network) and skymap resolution (n_{side}=2048, finest pixel = 0.0008 deg{}^{2}), as showed in Fig. 5. Tests are performed on a 2.44 GHz processor with OpenMP multithreading. Thanks to the semi-analytical property, SealGW can achieve \\sim 26 times faster speed than Bayestar with fewer threads, and the speed up factor goes down to \\sim 4 when more threads come in as the non-parallelizable calculation begins to dominate SealGW run time. It only takes SealGW \\sim 3s with 1 thread and \\sim 0.5s with 8 threads, which means SealGW is able to perform real-time localization with a low hardware requirement. Note that the time cost can be further reduced with narrower bandwidth or coarser skymap resolutions, e.g., time cost of SealGW can be halved when the finest resolution is 0.013deg{}^{2}. The efficiency and cheapness is suitable for the 3G detector scenario in which number of detection can be huge. Nevertheless, a thorough estimate of early warning latency would require a comprehensive design of detection pipeline structure, and there would be a wall time of \\sim 0.1s to read and preprocess the data from pipeline outputs.
+
+## 5 Conclusion and Discussion
+
+We provide an exploratory demonstration of early warning localization of long signals for 3G GW detector networks. We simulate a mock catalog for one month of observation with an ET+2CE network, and perform multi-band analysis with the fast localization algorithm
+
+SealGW. We show that this is a efficient scheme for pre-merger localization.
+
+Multi-band analysis allows us to detect BNS in an early stage and update the results regularly with incoming data. There are tens of BNS detected more than 30 minutes before merger in our simulation, and localized within 100 deg{}^{2} at \\sim 10 minutes before merger. 10 deg{}^{2} can be achieved \\sim 6 minutes before merger. Since wide-field optical transient facilities usually have field of view of 1-10 deg{}^{2} (see summaries in Sachdev et al. (2020); Ronchini et al. (2022)), the precise pre-merger localization of BNS would be extremely helpful to finding EM counterparts before the merger and observing the entire process of BNS coalescence.
+
+Our work here presents a solution for the crucial step of performing real-time localization in the context of online searches in 3G detectors, that effectively reduces the latency and computational burden arising from pre-merger localization. However there remains the larger issue of developing the surrounding infrastructure to search for pre-merger signals and disseminating sky-maps in low latency to observatories before detection. As an exploratory demonstration, we have made several simplifications to the problem, such as ignoring overlapping signals, assuming perfect matched filtering, and a relatively naive waveform segmentation. The merger rate estimation of BNS is also uncertain to date, therefore the absolute detection numbers should be interpreted as an order-of-magnitude estimation. We plan to explore the multi-band analysis on a real detection pipeline and use a more accurate astrophysical population (which should be available in years with new observations) in our future work.
+
+_Data availability_: The skymap fits files for 30, 20, 10, 6 and 1 minutes early warning and post-merger triggers are openly available in zenodo (Hu and Veitch, 2023). Further data and scripts for reproducibility are available upon reasonable request.
+
+We thank Linqing Wen, Daniel Tang and Chayan Chatterjee for helpful discussions. We are grateful for computational resources provided by Cardiff University, and funded by STFC grant ST/I006285/1. QH is supported by CSC. JV is supported by STFC grant ST/V005634/1.
+
+[MISSING_PAGE_FAIL:7]
+
+Kapadia, S. J., Singh, M. K., Shaikh, M. A., Chatterjee, D., & Ajith, P. 2020, Astrophys. J. Lett., 898, L39, doi: 10.3847/2041-8213/aba42d
+
+* Kasen et al. (2017) Kasen, D., Metzger, B., Barnes, J., Quataert, E., & Ramirez-Ruiz, E. 2017, Nature, 551, 80, doi: 10.1038/nature24453
+
+* Kovalam et al. (2022) Kovalam, M., Patwary, M. A. K., Sreekumar, A. K., et al. 2022, Astrophys. J. Lett., 927, L9, doi: 10.3847/2041-8213/ac5687
+
+* Ma et al. (2017) Ma, S., Cao, Z., Lin, C.-Y., Pan, H.-P., & Yo, H.-J. 2017, Physical Review D, 96, 084046, doi: 10.1103/PhysRevD.96.084046
+
+* Magee & Bornhanian (2022) Magee, R., & Bornhanian, S. 2022, Astrophys. J., 935, 139, doi: 10.3847/1538-4357/ac7f33
+
+* Magee et al. (2021) Magee, R., et al. 2021, Astrophys. J. Lett., 910, L21, doi: 10.3847/2041-8213/abed54
+
+* Maggiore (2007) Maggiore, M. 2007, Gravitational Waves Vol. 1 (Oxford University Press, Oxford, England)
+
+* Margalit & Metzger (2017) Margalit, B., & Metzger, B. D. 2017, Astrophys. J. Lett., 850, L19, doi: 10.3847/2041-8213/aa991c
+
+* McIsaac et al. (2023) McIsaac, C., Hoy, C., & Harry, I. 2023. [https://arxiv.org/abs/2303.17364](https://arxiv.org/abs/2303.17364)
+
+* Messick et al. (2017) Messick, C., et al. 2017, Phys. Rev. D, 95, 042001, doi: 10.1103/PhysRevD.95.042001
+
+* Metzger (2020) Metzger, B. D. 2020, Living Rev. Rel., 23, 1, doi: 10.1007/s41114-019-0024-0
+
+* Metzger & Piro (2014) Metzger, B. D., & Piro, A. L. 2014, Mon. Not. Roy. Astron. Soc., 439, 3916, doi: 10.1093/mnras/stu247
+
+* Mooley et al. (2018) Mooley, K. P., Deller, A. T., Gottlieb, O., et al. 2018, Nature, 561, 355, doi: 10.1038/s41586-018-0486-3
+
+* Morisaki (2021) Morisaki, S. 2021, Phys. Rev. D, 104, 044062, doi: 10.1103/PhysRevD.104.044062
+
+* Most & Philippov (2020) Most, E. R., & Philippov, A. A. 2020, Astrophys. J. Lett., 893, L6, doi: 10.3847/2041-8213/ab8196
+
+* Nicholl et al. (2017) Nicholl, M., et al. 2017, Astrophys. J. Lett., 848, L18, doi: 10.3847/2041-8213/aa9029
+
+* Nitz & Dal Canton (2021) Nitz, A. H., & Dal Canton, T. 2021, Astrophys. J. Lett., 917, L27, doi: 10.3847/2041-8213/ac1a75
+
+* Nitz et al. (2018) Nitz, A. H., Dal Canton, T., Davis, D., & Reyes, S. 2018, Phys. Rev. D, 98, 024050, doi: 10.1103/PhysRevD.98.024050
+
+* Nitz et al. (2020) Nitz, A. H., Schafer, M., & Dal Canton, T. 2020, Astrophys. J. Lett., 902, L29, doi: 10.3847/2041-8213/abbc10
+
+* Oguri (2018) Oguri, M. 2018, Monthly Notices of the Royal Astronomical Society, 480, 3842, doi: 10.1093/mnras/sty2145
+
+* Pizzati et al. (2022) Pizzati, E., Sachdev, S., Gupta, A., & Sathyaprakash, B. 2022, Physical Review D, 105, 104016, doi: 10.1103/PhysRevD.105.104016
+
+* Poisson (1998) Poisson, E. 1998, Phys. Rev. D, 57, 5287, doi: 10.1103/PhysRevD.57.5287
+
+* Punturo et al. (2010) Punturo, M., et al. 2010, Class. Quant. Grav., 27, 194002, doi: 10.1088/0264-9381/27/19/194002
+
+* Radice et al. (2018) Radice, D., Perego, A., Hotokezaka, K., et al. 2018, Astrophys. J., 869, 130, doi: 10.3847/1538-4357/aaf054
+
+* Reitze & et al. (2019) Reitze, D., & et al. 2019, Cosmic Explorer: The U.S. Contribution to Gravitational-Wave Astronomy beyond LIGO, arXiv. [https://arxiv.org/abs/1907.04833](https://arxiv.org/abs/1907.04833)
+
+* Relton & Raymond (2021) Relton, P., & Raymond, V. 2021, Physical Review D, 104, 084039, doi: 10.1103/PhysRevD.104.084039
+
+* Relton et al. (2022) Relton, P., Virtuoso, A., Bini, S., et al. 2022, Physical Review D, 106, 104045, doi: 10.1103/PhysRevD.106.104045
+
+* Ronchini et al. (2022) Ronchini, S., Branchesi, M., Oganesyan, G., et al. 2022, Astronomy & Astrophysics, 665, A97, doi: 10.1051/0004-6361/202243705
+
+* Sachdev et al. (2020) Sachdev, S., et al. 2020, Astrophys. J. Lett., 905, L25, doi: 10.3847/2041-8213/abc753
+
+* Samajdar et al. (2021) Samajdar, A., Janquart, J., Broeck, C. V. D., & Dietrich, T. 2021, Physical Review D, 104, 044003, doi: 10.1103/PhysRevD.104.044003
+
+* Singer & Price (2016) Singer, L. P., & Price, L. R. 2016, Phys. Rev. D, 93, 024013, doi: 10.1103/PhysRevD.93.024013
+
+* Singh et al. (2021) Singh, M. K., Kapadia, S. J., Shaikh, M. A., Chatterjee, D., & Ajith, P. 2021, Mon. Not. Roy. Astron. Soc., 502, 1612, doi: 10.1093/mnras/stab125
+
+* Soares-Santos et al. (2017) Soares-Santos, M., et al. 2017, Astrophys. J. Lett., 848, L16, doi: 10.3847/2041-8213/aa9059
+
+* Tsutsui et al. (2021) Tsutsui, T., Nishizawa, A., & Morisaki, S. 2021, Phys. Rev. D, 104, 064013, doi: 10.1103/PhysRevD.104.064013
+
+* Wei & Huerta (2021) Wei, W., & Huerta, E. A. 2021, Phys. Lett. B, 816, 136185, doi: 10.1016/j.physletb.2021.136185
+
+* Wen & Chen (2010) Wen, L., & Chen, Y. 2010, Phys. Rev. D, 81, 082001, doi: 10.1103/PhysRevD.81.082001
+
+* Yu et al. (2021) Yu, H., Adhikari, R. X., Magee, R., Sachdev, S., & Chen, Y. 2021, Phys. Rev. D, 104, 062004, doi: 10.1103/PhysRevD.104.062004
+
+* Zhao & Wen (2018) Zhao, W., & Wen, L. 2018, Phys. Rev. D, 97, 064031, doi: 10.1103/PhysRevD.97.064031

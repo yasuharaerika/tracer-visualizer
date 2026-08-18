@@ -1,0 +1,219 @@
+###### Abstract
+
+We report the detection of coherent pulsations from the ultraluminous X-ray source NGC 7793 P13. The \\approx0.42 s nearly sinusoidal pulsations were initially discovered in broadband X-ray observations using XMM-Newton and NuSTAR taken in 2016. We subsequently also found pulsations in archival XMM-Newton data taken in 2013 and 2014. The significant (\\gg 5\\sigma) detection of coherent pulsations demonstrates that the compact object in P13 is a neutron star, and given the observed peak luminosity of \\approx 10^{40} erg s{}^{-1} (assuming isotropy), it is well above the Eddington limit for a 1.4M{}_{\\odot} accretor. This makes P13 the second ultraluminous X-ray source known to be powered by an accreting neutron star. The pulse period varies between epochs, with a slow but persistent spin up over the 2013-2016 period. This spin-up indicates a magnetic field of B\\approx 1.5\\times 10^{12} G, typical of many Galactic accreting pulsars. The most likely explanation for the extreme luminosity is a high degree of beaming, however this is difficult to reconcile with the sinusoidal pulse profile.
+
+Subject headings:stars: neutron -- X-rays: binaries -- pulsars: individual (NGC 7793 P13) -- accretion, accretion disks
+
+## 1. Introduction
+
+Due to their high luminosities (L>10^{39} erg s{}^{-1}), most ultraluminous X-ray sources (ULXs) have been thought to harbor black holes (BHs) with masses ranging from M\\approx 10 M{}_{\\odot}, consistent with a stellar remnant accreting above the Eddington rate (e.g., Poutanen et al., 2007; Middleton et al., 2015), to intermediate mass BHs (M\\approx 10^{2-5} M{}_{\\odot}; e.g., Miller et al., 2004) in a sub-Eddington disk accretion regime. The discovery of coherent pulsations in the ULX M82 X-2 showed that the compact object in this system is a neutron star (Bachetti et al., 2014). M82 X-2 reaches X-ray luminosities of 2\\times 10^{40} erg s{}^{-1}, demonstrating that accreting neutron stars can reach luminosities more than 100 times Eddington (assuming M_{\\rm NS}\\approx 1.4 M{}_{\\odot}).
+
+Accreting magnetized neutron stars can reach these apparent super-Eddington luminosities through a number of mechanisms. High magnetic fields collimate the accretion flow, allowing material to accrete onto the polar regions while radiation escapes from the sides of the column (Basko & Sunyaev, 1976). In addition, large magnetic fields reduce the scattering cross section for electrons (Herold, 1979), reducing the radiation pressure and increasing the effective Eddington luminosity. The combination of these effects with the consequent geometric beaming have been used to explain known super-Eddington local sources such as SMC X-1 (e.g., Coe et al., 1981).
+
+A very highly magnetized (magnetar-like) neutron star has been invoked to explain the extreme luminosity of M82 X-2 (e.g., Eksi et al., 2015; Dall'Osso et al., 2015; Mushtukov et al., 2015). It is difficult, however, to explain the near-sinusoidal pulse profile in the context of a highly beamed system. In contrast, some theoretical work suggests the field in M82 X-2 may be relatively low (10^{9} G), based on the ratio of the spin-up rate to the luminosity, which is an order of magnitude lower than typical X-ray pulsars (Kluzniak & Lasota, 2015). These authors argue that a disk truncated at a large radius, as would occur for a high B-field system, would not provide the required lever arm to power the observed spin-up. The nature of ULX pulsars is very much in question, since no model can explain all the observed characteristics.
+
+The ULX NGC 7793 P13 (hereafter P13; Read & Pietsch, 1999) is one the few ULXs with a dynamical mass constraint of the compact object and a well classified optical companion (spectral type B9Ia, Motch et al., 2011). Optical monitoring revealed a \\approx64 d photometric period also seen in the radial velocity of the He II emission. Adopting this as the orbital period of the binary system, Motch et al. (2014) derive a dynamical mass estimate for the accretor of 3-15 M{}_{\\odot}, assuming a BH. This constraint, together with a peak luminosity of L_{\\rm X}>6\\times 10^{39} erg s{}^{-1}, makes P13 a prime example for a super-Eddington system.
+
+Here we report on new XMM-Newton (Jansen et al., 2001) and NuSTAR (Harrison et al., 2013) X-ray observations of P13 in which we detect coherent pulsations, requiring that P13 hosts a highly super-Eddington neutron star accretor. 1
+
+Footnote 1: During preparation of this manuscript, Israel et al. (2016, submitted) reported on an independent discovery of this period in archival XMM-Newton data. Our study includes newer XMM-Newton and NuSTAR data which extend the investigation to higher energies and cover a longer time range.
+
+## 2. Observations and Data Reduction
+
+Following the detection of a high flux with Swift (Gehrels et al., 2004), we triggered a coordinated observation with XMM-Newton and NuSTAR in May 2016 (total exposuresof \\approx50 and \\approx110 ks, respectively). In addition to these new observations, we also analyze three archival XMM-Newton observations. Details of these observations are given in Table 1, and we show them in the context of the long-term behavior of P13 in Figure 1.
+
+### NuSTAR
+
+The NuSTAR data were reduced using the standard pipeline, nupipeline, provided in the NuSTAR Data Analysis Software (v1.6.0), with standard filtering and NuSTAR CALDB v20160824. Source products were extracted from circular regions of radius 70'' for both focal plane modules (FPMA/B) using nuproducts, with background measured from large regions on the same detectors as P13. In addition to the standard'science' data, we maximize the signal-to-noise (S/N) by including the'spacecraft science' data following the procedure outlined in Walton et al. (2016). This increased the total good exposure time by \\approx10%. Lightcurves were extracted in the 3-78 keV energy band with a maximal resolution of 0.1 s.
+
+### XMM-Newton
+
+The XMM-Newton data were reduced with the XMM-Newton Science Analysis System (v15.0.0), following the standard prescription.10 Owing to its superior time resolution of 73.4 ms, in this work we only consider data from the EPIC-pn detector (Struder et al., 2001). The raw data files were cleaned using epchain. Source products were generally extracted from circular regions of radius \\approx40'' (the exception being OBSID 0693760101, during which the source was extremely faint and a radius of 20'' was used) and the background measured from larger, source-free areas on the same CCD. As recommended, we only use single-double patterned events.
+
+Footnote 10: [http://xmm.esac.esa.int/](http://xmm.esac.esa.int/)
+
+## 3. Analysis
+
+We calculate the power spectral density (PSD) for the 2016 XMM-Newton and NuSTAR lightcurves over a broad frequency range, starting at 1.24 (XMM-Newton) and 0.3 mHz (NuSTAR) up to their respective Nyquist frequencies (6.812 and 5 Hz, for XMM-Newton and NuSTAR). In both PSDs a strong periodic signal is evident around \\approx2.4 Hz, consistent between all instruments, at a significance \\gg 5\\,\\sigma assuming to white noise (Figure 2, _left_). The NuSTAR PSD is influenced by the variable dead time around 2.5 ms (Bachetti et al., 2015). However, the periodic signal is still significantly detected above this noise term.
+
+To improve the period determination and search for a possible change in period (\\dot{P}) we ran an accelerated epoch folding search (Leahy et al., 1983). We searched periods in a range of \\pm 20\\,\\mus around the respective peaks in the PSDs. We searched a range of \\pm 1.5\\times 10^{-10} s s{}^{-1} around 0 for \\dot{P} (Figure 2, _right_). We sampled P and \\dot{P} on a grid of 200 values each, and used 12 phase-bins for the pulse profiles.
+
+Due to their long duration (\\approx200 ks), the NuSTAR data provide the strongest constraint on the pulse period, and we find P=416.951\\pm 0.002 ms and \\dot{P}=(-0.2\\pm 1.6)\\times 10^{-11} s s{}^{-1}. The uncertainties are estimated from the full-width, half-maximum (FWHM) contours of the \\chi^{2} landscape (Figure 2, _right_; i.e., they account for the degeneracy between P and \\dot{P}). We confirmed the values of P and \\dot{P} through phase connection by separately folding the data of the first 50 ks and last 50 ks of the NuSTAR data and making sure no phase shift was evident.
+
+Following this detection, we also examined the three archival XMM-Newton observations available. Unfortunately the source was too faint during the 2012 observation to perform a meaningful pulse search. However, we find significant signals in the PSDs at \\approx2.4 Hz in the 2013 and 2014 data. This is the only signal that is significantly detected in all calculated PSDs.
+
+The measured values for P and \\dot{P} are given in Table 1 and the evolution in P as a function of time is shown in Figure 1. While the \\dot{P} measurements for the individual epochs are all consistent with zero, over the last three years an almost linear spin-up trend is visible, with \\dot{P}=(-3.486\\pm 0.003)\\times 10^{-11} s{}^{-1}.
+
+The 2016 data are the only available broad-band data for P13, and we use these data to calculate energy-resolved pulse profiles between 0.3-20 keV from the combined FPMA and FPMB events. These are shown for five energy bands in Figure 3, _left_. The pulse profile is remarkably stable and sinusoidal as a function of energy, and agrees well between the XMM-Newton and NuSTAR energy bands.
+
+The pulsed fraction, however, changes significantly as a function of energy (Figure 3, _right_). The pulsed fraction PF(E) is calculated as
+
+\\mathrm{PF}(E)=\\frac{\\mathrm{max}(p(E))-\\mathrm{min}(p(E))}{\\mathrm{max}(p(E) )+\\mathrm{min}(p(E))} where p(E) is the energy dependent pulse profile. The pulsed fraction increases from \\approx8% in the 0.3-0.8 keV band to \\approx30% in the 10-20 keV band, rising steeply before flattening out around 5 keV. A simple linear slope provides a statistically unacceptable description of the data; however, allowing for a break in slope around 4.5 keV describes the data very well (with an improvement in \\chi^{2}>10 for one additional free parameter). The data can be similarly well described by a power-law of the form E^{\\alpha} with an index of \\alpha\\approx 0.3.
+
+The strong energy dependence of the pulsed fraction leads to significant spectral changes over the pulse phase (Figure 3, _left_). Here the hardness ratio between the NuSTAR 8-20 keV and the XMM-Newton 0.3-1 keV band is shown. The spectrum is clearly softer during the low phase of the profile and hardens during the peak. A full spectral analysis of these data will be presented in a future work (Walton et al. _in preparation_).
+
+Standard ULX continuum models (e.g, Bachetti et al., 2013; Walton et al., 2015; Rana et al., 2015) describe the data well and give an average 0.3-30 keV flux (which dominates the bolometric emission) of (6.7\\pm 0.1)\\times 10^{-12} erg cm{}^{-2}s{}^{-1}. This corresponds to an apparent X-ray luminosity of \\approx10{}^{40} erg s{}^{-1} for the NGC 7793 distance of 3.6 Mpc (Tully et al., 2016). Scaling this to the average Swift/XRT count rate observed during 2013-2016 implies an average X-ray luminosity of \\approx 7\\times 10^{39} erg s{}^{-1} for this period. Note that we give the 0.3-10 keV flux in Table 1, for comparison with the XMM-Newton-only datasets.
+
+## 4. Discussion
+
+Our timing study of NGC 7793 P13 using XMM-Newton and NuSTAR revealed pulsations with a period of \\approx418 ms. This unambiguously identifies the compact object in the system as a neutron star. We find the pulse period in three separate epochs in 2013, 2014, and 2016. The source shows a sig nificant average spin-up of \\approx 3.5\\times 10^{-11} s s{}^{-1} over the course of the past three years (Figure 1).
+
+The remarkable discovery that M82 X-2, a ULX reaching apparent luminosities of L_{\\rm X}\\approx 2\\times 10^{40} erg s{}^{-1}, is powered by an accreting neutron star (Bachetti et al., 2014) naturally leads to the expectation of a larger population of ULX neutron stars (Shao & Li, 2015; Mushtukov et al., 2015). However, prior to this work (and the simultaneous discovery of Israel et al., 2016), no other examples of such systems have been confirmed (Doroshenko et al., 2015). The detection of X-ray pulsations from P13 implies that neutron star accretors could play a significant role in terms of ULX demographics.
+
+### The P13 binary system
+
+The identification of the compact object as a neutron star confirms the basic conclusion of Motch et al. (2014) that P13 hosts a normal stellar-remnant. The formal mass range for the accretor of 3-15 M{}_{\\odot} presented in that work explicitly assumes a BH accretor. If we allow also for a neutron star accretor, their constraint would presumably become an upper limit of <15 M{}_{\\odot}, consistent with the neutron star mass regime.
+
+Motch et al. (2014) interpret the 64 d optical period as the orbital period, and give best fit radial velocity amplitudes between K=120-290 km s{}^{-1} for the compact object. Even for a radial velocity as low as K=120 km s{}^{-1}, this could result in a \\dot{P} over the long NuSTAR observation as large as 2.5\\times 10^{-10} s s{}^{-1}, due to the Doppler effect of the orbital motion. We rule out a \\dot{P} of that magnitude from NuSTAR timing. However, the observable \\dot{P} vanishes close to superior and inferior conjunction. To reconcile the very small measured \\dot{P} with the orbital solution, our observation therefore has to have taken place close to one of the conjunctions. As we do not know the exact orbital phase of the observation, due to possible drifts with the potential \\approx7 yr super-orbital period (Motch et al., 2014), a more precise prediction of the expected \\dot{P} is currently not possible.
+
+It is still interesting to speculate whether the origin of the observed 64 d period could be super-orbital instead of orbital as this would naturally explain the lack of observed \\dot{P}. The period is similar to the \\approx62 d period seen from M82 X-1 or X-2 (Kaaret & Feng, 2007). It is most likely associated with X-2 (Qiu et al., 2015), and if so must be super-orbital. Motch et al. (2014) suggest that the period in P13 is orbital, as it is also seen in the radial velocity of He II. However, they note that the He II emission cannot arise in the stellar companion, as it
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c} \\hline \\hline Epoch & Mission(s) & OBSID(s) & Date & F_{0.3-10} & P & \\dot{P} \\\\  & & & & [10^{-14} erg cm{}^{-2}s{}^{-1}] & [ms] & [10^{-10} s s{}^{-1}] \\\\ \\hline \\hline X1 & XMM-Newton & 0693760101 & 2012-05-14 & 2.0^{+1.7}_{-0.9} & – & – \\\\ X2 & XMM-Newton & 0693760401 & 2013-11-25 & 114\\pm 3 & 419.712\\pm 0.008 & 0.2^{+3.4}_{-2.8} \\\\ X3 & XMM-Newton & 0748390901 & 2014-12-10 & 284\\pm 5 & 418.390\\pm 0.008 & -0.5^{+3.0}_{-2.5} \\\\ XN1 & XMM-Newton, NuSTAR & 0781800101, 80201010002 & 2016-05-20 & 519\\pm 7 & 416.9513\\pm 0.0017 & -0.02\\pm 0.16 \\\\ \\hline \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1Details of the X-ray observations or NGC 7793 P13 considered in this work
+
+Figure 1.— Top: long-term 0.3–10 keV Swift XRT lightcurve of P13 (1d bins), extracted with the standard Swift pipeline (Evans et al., 2009). The timing of the XMM-Newton only (X1–3) and XMM-Newton +NuSTAR (XN1) observations are indicated with the dashed magenta lines. While the source spends a lot of time in a bright state, during which it exhibits ULX luminosities (L\\sim 2\\times 10^{39} erg s{}^{-1}), during 2011 and 2012 it also exhibited an extended low flux period (L<10^{38} erg s{}^{-1}) indicated by the upper limits for individual observations spanning MJD \\approx 55800-56400 (see Motch et al., 2014). Stacking all the Swift observations during this period leads to a weak detection, shown in grey, >2 orders of magnitude fainter than the peak flux. Bottom: time evolution of the pulse period for the observations bright enough for pulsations to be detectable (X2, X3 and XN1). The dashed line shows a linear regression through these data. is shifted in phase compared to the photometric period. Instead, the variations in He II could be related to super-orbital precession of the outer disk. A super-orbital nature would also explain the drifts of the photometric maxima observed by Motch et al. (2014). In this case the orbital period would be much shorter, and the lack of \\dot{P} in any of the individual X-ray observations would imply that we view the source close to face-on.
+
+As stated by Motch et al. (2014), the high luminosity rules out a purely wind-fed system. To sustain its luminosity a mass accretion rate around 10^{-7} M{}_{\\odot} yr{}^{-1} is required, which is comparable to the 4\\pi mass-loss rates of B-stars (Vink et al., 2000). While wind clumping can locally increase the density and influence the estimated mass loss rate (see, e.g., Oskinova et al., 2006), wind-fed systems can only capture a small fraction of that mass, even when allowing for an accretion stream. It is therefore likely that the companion is filling its Roche lobe (radiative or atmospheric, Podsiadlowski et al., 2002; Fragos et al., 2015), which distinguishes P13 from otherwise similar Galactic systems like Vela X-1 (see Furst et al. 2010, and references therein).
+
+### Properties of the neutron star
+
+Figure 3.— _Left, top:_ Energy resolved pulse-profiles in the 0.3–1.0, 1–3, 3–5, and 5–8 keV bands of XMM-Newton and the 8–20 keV band of NuSTAR. The profiles are normalized by subtracting the average rate (r) and dividing by their respective standard deviations (\\sigma). _Bottom:_ Hardness ratio between the XMM-Newton 0.3–1 keV (S) and the NuSTAR 8–20 keV (H) band, defined as HR=(H-S)/(H+S). _Right:_ Pulsed fraction as a function of energy in XMM-Newton (red) and NuSTAR (blue) for a pulse profile with 10 phase bins. The gray dashed line gives the best-fit linear fit, while the dot-dashed black line allows for a break in slope around 4.5 keV.
+
+Figure 2.— _Left:_ PSD of the 2016 XMM-Newton EPIC-pn (0.3–10 keV, top) and NuSTAR FPMA (3–78 keV, bottom) data between 0.00124–6.812 Hz. The red-dashed line shows the 5\\sigma detection limit assuming white noise and accounting for the number of trials (8192 for XMM-Newton and 16384 for NuSTAR; van der Klis 1989). Each bin is averaged over 39 and 34 independent PSDs for XMM-Newton and NuSTAR, respectively. The gray dotted line marks 2.398 Hz, at which a significant peak is seen in both PSDs. _Right:_ result of the accelerated search of the NuSTAR data, showing the x^{2} values color-coded in the P-\\dot{P} plane. The green contour line shows the estimate uncertainty following the FWHM line. The top and right-hand panels are cuts along the respective axes through the best-fit values. The red dashed lines in these panels indicate the 10^{-5} false detection probability. The brown dotted-dashed lines shows the results for the 2016 XMM-Newton data.
+
+In the standard disk accretion scenario as described by Ghosh & Lamb (1979, see also Dall'Osso et al. 2015), we can estimate the magnetic field from the change in pulse period:
+
+-\\dot{P}=5.2\\times 10^{-10}{\\mu_{30}}^{2/7}n(\\omega_{s},\\mu_{30})\\left(PL_{37}^{3 /7}\\right)^{2}\\,{\\rm s\\,s^{-1}}  assuming a neutron star mass of 1.4 M{}_{\\odot} and a radius of 10 km. Here \\mu_{30} is the magnetic moment in units of 10^{30} G cm{}^{-3} and L_{37} is the luminosity in units of 10^{37} erg s{}^{-1}. The dimensionless accretion torque n(\\omega_{s},\\mu_{30}) depends only weakly on the magnetic field, and can be approximated analytically for small values of the fastness parameter \\omega_{s}(Ghosh & Lamb, 1979). For the relatively high spin of P13, this results in values of n(\\omega_{s},\\mu_{30})\\ll 1. From this equation we estimate the surface magnetic field strength of P13 to be B\\approx 1.5\\times 10^{12} G.
+
+A field of the order of 10^{12} G is in the same range as expected in Galactic neutron stars, for example as measured through cyclotron resonant scattering features (CRSFs; see, e.g., Caballero & Wilms 2012; Staubert et al. 2014; Furst et al. 2014, 2015). We note that the observed changes in P seen between the different epochs, cannot be explained by Doppler shifts due to the proposed 64 orbit, as this effect is orders of magnitude smaller than observed.
+
+From Eq. 1 we expect a faster spin-up at higher luminosities. There is weak evidence that the average flux has been increasing over the course of the last three years, so we would therefore expect a higher spin-up in the 2016 observation than in 2013. Within each observation, the 2013 and 2014 XMM-Newton data are not sensitive to these small values of \\dot{P}. The long-term \\dot{P}, however, is higher than the one measured in 2016, indicating P13 was either even brighter during the gaps in the XRT coverage, potentially reaching apparent luminosities similar to M82 X-2, or that there are additional effects that influence the accretion torque.
+
+#### 4.2.1 Propeller effect
+
+Direct accretion can only take place if the corotation radius, r_{\\rm co}, is outside the magnetospheric radius, r_{\\rm m}. The magnetospheric radius for spherical accretion can be calculated as (Cui 1997):
+
+r_{\\rm m}=2.7\\times 10^{8}L_{37}^{-2/7}B_{12}{}^{4/7}\\,{\\rm cm},  where B_{12} is the magnetic field in units of 10^{12} G. This is also a good approximation for the magnetospheric radius of an accretion disk if the magnetic field threads the disk completely (Wang, 1996). We find that the corotation radius is about a factor of 2 larger than r_{m} for B_{12}=1.5.
+
+This relatively small difference between the radii implies that a drop in luminosity of only a factor of \\approx10 (r_{m}\\propto L_{37}^{-2/7}), related to natural fluctuations in the accretion rate, would therefore push P13 into the propeller regime, where r_{\\rm m}>r_{\\rm co}. This would then truncate the disk at large radii, dramatically reducing the accretion rate even further and suppressing the X-ray flux (Cui, 1997; Tsygankov et al., 2016), potentially explaining the very low luminosities observed before 2013.
+
+The propeller effect has also been proposed by Dall'Osso et al. (2015) to explain the similarly large observed changes in luminosity and transitions between low and high states seen in M82 X-2 (Brightman et al., 2016). Such variability could therefore potentially be an indicator of a ULX pulsar and provide another avenue for identifying these systems.
+
+#### 4.2.2 Intrinsic luminosity
+
+Assuming isotropy, we measure a luminosity of L_{\\rm X}\\approx 10^{40} erg s{}^{-1}, which is a factor of \\approx50 above the spherical Eddington limit for a neutron star. One way in which the observed flux could be reconciled with the Eddington limit is if the emission is strongly beamed. However, this would obviously require an overall beaming factor of \\approx1/50. Such a tightly collimated beam should result in a narrow, strongly peaked pulse profile, which is clearly at odds with the smooth, sinusoidal pulse profile we observe. The pulse profiles of M82 X-2 and P13 are very similar in this respect.
+
+This leads to a major uncertainty in the degree to which collimation and beaming contribute to the observed fluxes of ULX pulsars and how the magnetic field is configured. For example for M82 X-2, different analyses provide strongly different estimates for the magnetic field strength, ranging over 10^{9}-10^{14} G (Mushtukov et al., 2015; Eksi et al., 2015; Dall'Osso et al., 2015; Kluzniak & Lasota, 2015; Tong, 2015; Dall'Osso et al., 2016; King & Lasota, 2016). So far, no model as been put forward that self-consistently reconciles the observed high luminosity, sinusoidal pulse profile, and high spin-up torque of the two known ULX pulsars.
+
+Mushtukov et al. (2015), for example, attempt to estimate the maximum luminosity from the accretion column as a function of B-field. For B_{12}=1.5, their calculations imply a maximum luminosity of \\approx 5\\times 10^{38} erg s{}^{-1}, which is still a factor of \\approx20 below our measurement. The required beaming in this mode would still likely be at odds with the observed pulse profile. A better understanding of collimation and beaming in super-Eddington neutron stars is clearly necessary to link intrinsic and observed, isotropic luminosities in these systems, and more robustly constrain their magnetic fields.
+
+## 5. Conclusions
+
+We detected coherent X-ray pulsations from the ULX NGC 7793 P13, making this only the second confirmed ULX pulsar after M82 X-2 (Bachetti et al., 2014). Its properties seem to be in line with a high luminosity extension of known Galactic neutron star binaries. Between observations in 2013 and 2016 we see a significant spin-up from which we estimate the magnetic field strength to be \\approx 1.5\\times 10^{12} G, typical of Galactic systems. Continued monitoring of the pulse period evolution of this remarkable source will be of particular value and help us understand if high variability is a tell-tale sign of super-Eddington neutron stars.
+
+## Acknowledgements
+
+We would like the thank the referee for the helpful comments. MJM acknowledges support from an STFC Ernest Rutherford fellowship, ACF acknowledges support from ERC Advanced Grant 340442, and DB acknowledges financial support from the French Space Agency (CNES). This research has made use of data obtained with _NuSTAR_, a project led by Caltech, funded by NASA and managed by NASA/JPL, and has utilized the nustartadas software package, jointly developed by the ASDC (Italy) and Caltech (USA). This research has also made use of data obtained with XMM-Newton, an ESA science mission with instruments and contributions directly funded by ESA Member States. This work made use of data supplied by the UK Swift Science Data Centre at the University of Leicester, and also made use of the XRT Data Analysis Software (XRTDAS) developed under the responsibility of the ASI Science Data Center (ASDC), Italy. This research has made use of a collection of ISIS functions (ISSFcripts) provided by ECAP/Remeis observatory and MIT ([http://www.sternwarte.uni-erlangen.de/isis/](http://www.sternwarte.uni-erlangen.de/isis/))
+
+* (2004) Michelti M., Harrison F.A., Cook R., et al., 2015, ApJ 800, 109
+
+* (2014) Bachetti M., Harrison F.A., Walton D.J., et al., 2014, Nat 514, 202
+
+* (2013) Bachetti M., Rana V., Walton D.J., et al., 2013, ApJ778, 163
+
+* (1976) Basko M.M., Sunyaev R.A., 1976, MNRAS 175, 395
+
+* (2016) Brightman M., Harrison F., Walton D.J., et al., 2016, ApJ 816, 60
+
+* (2012) Caballero I., Wilms J., 2012, Mem. Soc. Astro. Ital. 83, 230
+
+* (1981) CoMe J., Burnell S.J.B., Angel A.R., et al., 1981, MNRAS 197, 247
+
+* (1997) Cui W., 1997, ApJL 482, L163
+
+* (2016) Dall'Osso S., Perna R., Papitto A., et al., 2016, MNRAS 457, 3076
+
+* (2015) Dall'Osso S., Perna R., Stella L., 2015, MNRAS 449, 2144
+
+* (2015) Doroshchenko V., Santangelo A., Ducci L., 2015, A&AS579, A22
+
+* (2015) Eksi K.Y., Andac I.C., Cikintoglu S., et al., 2015, MNRAS 448, L40
+
+* (2009) Evans P.A., Beardmore A.P., Page K.L., et al., 2009, MNRAS3397, 1177
+
+* (2015) Fragos T., Linden T., Klaogera V., Sklias P., 2015, ApJL 802, L5
+
+* (2010) Furst F., Kreyskenbohm I., Pottschmidt K., et al., 2010, A&A 519, A37
+
+* (2015) Furst F., Pottschmidt K., Miyasaka H., et al., 2015, ApJL 806, L24
+
+* (2014) Furst F., Pottschmidt K., Wilms J., et al., 2014, ApJL 784, L40
+
+* (2004) Gehrels N., Chincarini G., Giommi P., et al., 2004, ApJ611, 1005
+
+* (1979) Ghosh P., Lamb F.K., 1979, ApJ 232, 259
+
+* (2013) Harrison F.A., Craig W., Christensen F., et al., 2013, ApJ 770, 103
+
+* (1979) Herold H., 1979, Phys. Rev. D, 29, 2688
+
+* (2016) Israel G.L., Papitto A., Esposito P., et al., 2016, MNRAS, submitted; arXiv:1609.06538
+
+* (2001) Jansen F., Lumb, D., Altieri B., et al., 2001, A&A 365, 6
+
+* (2007) Kaaret F., Feng H., 2007, ApJ 669, 106
+
+* (2016) King A., Lasota J.P., 2016, MNRAS 458, L10
+
+* (2015) Kluzniak W., Lasota J.P., 2015, MNRAS 448, L43
+
+* (1983) Leahy D.A., Elsner R.F., Weisskopf M.C., 1983, ApJ 272, 256
+
+* (2015) Middleton M.J., Heil L., Pintore F., et al., 2015, MNRAS447, 3243
+
+* (2004) Miller J.M., Raymond J., Fabian A.C., et al., 2004, ApJ601, 450
+
+* (2011) Motch C., Pakull M.W., Grise F., Soria R., 2011, Astronomische Nachrichten 332, 367
+
+* (2014) Motch C., Pakull M.W., Soria R., et al., 2014, Nat 514, 198
+
+* (2015) Mushtukov A.A., Suleimanov V.F., Tsygankov S.S., Poutanen J., 2015, MNRAS 454, 2539
+
+* (2006) Oskinova L.M., Feldmeier A., Hamann W.R., 2006, MNRAS 372, 313
+
+* (2002) Podsiadlowski P., Rappaport S., Pfahl E.D., 2002, ApJ 565, 1107
+
+* (2007) Poutanen J., Lipunova G., Fabrika S., et al., 2007, MNRAS377, 1187
+
+* (2015) Qiu Y., Liu, J. Guo J., Wang J., 2015, ApJ809, L28
+
+* (2015) Rana V., Harrison F.A., Bachetti M., et al., 2015, ApJ799, 121
+
+* (1999) Read A.M., Pietsch W., 1999, A&A341, 8
+
+* (2015) Shao Y., Li X.D., 2015, ApJ 802, 131
+
+* (2014) Staubert R., Klockho D., Wilms J., et al., 2014, A&A 572, A119
+
+* (2001) Struder L., Briel U., Dennert K., et al., 2001, A&A 365, L18
+
+* (2015) Tong H., 2015, Research in Astronomy and Astrophysics 15, 517
+
+* (2016) Tsygankov S.S., Mushtukov A.A., Suleimanov V.F., Poutanen J., 2016, MNRAS 457, 1101
+
+* (2016) Tully R.B., Courtois H.M., Sorce J.G., 2016, AJ 152, 50
+
+* (1989) van der Klis M., 1989, In: Ogelman H., van den Heuvel E.P.J. (eds.) NATO Advanced Science Institutes (ASI) Series C, Vol. 262. NATO Advanced Science Institutes (ASI) Series C, p. 27
+
+* (2000) Vink J.S., de Koter A., Lamers H.J.G.L.M., 2000, A&A 362, 295
+
+* (2015) Walton D.J., Harrison F.A., Bachetti M., et al., 2015, ApJ799, 122
+
+* (2016) Walton D.J., Tomsick J.A., Madsen K.K., et al., 2016, ApJ826, 87
+
+* (1996) Wang Y.M., 1996, ApJL 465, L111

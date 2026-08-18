@@ -1,0 +1,259 @@
+###### Abstract
+
+We investigate prolonged engine activities of short gamma-ray bursts (SGRBs), such as extended and/or plateau emissions, as high-energy gamma-ray counterparts to gravitational waves (GWs). Binary neutron-star mergers lead to relativistic jets and merger ejecta with r-process nucleosynthesis, which are observed as SGRBs and kilonovae/macronovae, respectively. Long-term relativistic jets may be launched by the merger remnant as hinted in X-ray light curves of some SGRBs. The prolonged jets may dissipate their kinetic energy within the radius of the cocoon formed by the jet-ejecta interaction. Then the cocoon supplies seed photons to non-thermal electrons accelerated at the dissipation region, causing high-energy gamma-ray production through the inverse Compton scattering process. We numerically calculate high-energy gamma-ray spectra in such a system using a one-zone and steady-state approximation, and show that GeV-TeV gamma-rays are produced with a duration of 10^{2}-10^{5} seconds. They can be detected by _Fermi_/LAT or CTA as gamma-ray counterparts to GWs. gamma-ray burst: general -- gravitational waves -- radiation mechanisms: non-thermal -- relativistic processes
+
+## 1 Introduction
+
+The first binary neutron star (BNS) merger event, GW170817, was initially detected by the gravitational waves (GWs) (Abbott et al., 2017, 2017). About two seconds later, _Fermi_/GBM and _INTEGRAL_/SPI-ACS detected the gamma-ray counterpart, which supports the BNS merger paradigm as the progenitor of short gamma-ray bursts (SGRBs) (Abbott et al., 2017). The time lag may imply that the jet launch is delayed for \\sim 1 sec (e.g., Gottlieb et al., 2018; Zhang, 2019), although other mechanisms can cause time delay (e.g., Shoemaker & Murase, 2018; Ioka & Nakamura, 2018). The broadband counterparts also confirmed the existence of a relativistic jet (e.g., Mooley et al., 2018, 2018; Troja et al., 2018; Ghirlanda et al., 2019; Lamb et al., 2019), which is consistent with an SGRB observed from an off-axis angle (e.g., Ioka & Nakamura, 2018; Troja et al., 2018; Ioka & Nakamura, 2019). The UV/optical/IR counterparts (Coulter et al., 2017; Lipunov et al., 2017; Soares-Santos et al., 2017; Valenti et al., 2017; Utsumi et al., 2017; Smartt et al., 2017; Evans et al., 2017; Pian et al., 2017; Tanvir et al., 2017) also verified that a BNS merger produces fast and massive ejecta consisting of r-process elements (e.g., Kasliwal et al., 2017; Kasen et al., 2017; Murguia-Berthier et al., 2017; Shibata et al., 2017; Tanaka et al., 2017). Gamma-rays above GeV energies and neutrinos are not detected from GW170817 (Ajello et al., 2018; Abdalla et al., 2017; Albert et al., 2017), although they are expected (e.g., Gao et al., 2013; Kimura et al., 2017; Fang & Metzger, 2017; Murase et al., 2018; Kimura et al., 2018).
+
+Light curves of X-ray observations of classical SGRBs have rapidly declining or variable components, such as extended or plateau emissions (Norris & Bonnell, 2006; Sakamoto et al., 2011; Kaneko et al., 2015; Kagawa et al., 2015, 2019), which are interpreted as prolonged activities of either a magnetar or a black hole (Ioka et al., 2005; Perna et al., 2006; Metzger et al., 2008; Rowlinson et al., 2013; Gompertz et al., 2014; Kisaka & Ioka, 2015; Kisaka et al., 2017). Since dution of the prolonged activities is about 10^{2}-10^{5} sec, it may be feasible to detect other counterparts of such prolonged emissions with current and near future facilities. However, characteristics of the prolonged jets have yet to be determined.
+
+In this Letter, we discuss the upscattered cocoon photons as GeV-TeV counterparts to GWs to probe the prolonged jets. Along this line, Murase et al. (2018); Veres & Meszaros (2014) proposed using GeV-TeV gamma-ray emissions to probe the prolonged dissipation in SGRB jets, in which interactions between prolonged X-rays and electrons accelerated at external shocks were considered. We here consider primary electron acceleration associated with the late dissipation itself (e.g., Ghisellini et al., 2007; Murase et al., 2011). If the ejecta is produced before the jet launch, the jet-ejecta interaction forms a cocoon surrounding the jet (e.g., Meszaros & Rees, 2001; Ramirez-Ruiz et al., 2002; Bromberg et al., 2011; Mizuta & Ioka, 2013; Nagakura et al., 2014; Lazzati et al., 2017; Gottlieb et al., 2018; Hamidani et al., 2019). Since the cocoon freely expands after it breaks out from the ejecta, the dissipation of the prolonged jets may occur inside the cocoon (Kisaka et al., 2015, 2017). The cocoon supplies a large amount of photons to the dissipation region, which are upscattered by non-thermal electrons accelerated there (see Figure 1). The upscattered photons interact with the cocoon photons before they escape from the system, which initiates electromagnetic cascades. We calculate the spectrum of GeV-TeV gamma-rays escaping from such a system, and discuss the prospects for future detection as gamma-ray counterparts to GWs. Such an external inverse Compton scattering (EIC) process using the cocoon photons is discussed by Toma et al. (2009). They considered the prompt jets with energy dissipation outside the cocoon radius, while we focus on the prolonged jets with energy dissipation inside the cocoon radius with a more realistic setup.
+
+We use the notation Q_{X}=Q/10^{X} in cgs unit unless otherwise noted and write Q^{\\prime} for the physical quantities in the comoving frame.
+
+## 2 The cocoon
+
+We estimate the physical quantities of the cocoon in the engine frame. Based on the hydrodynamic simulations of the jet propagation in the ejecta (Hamidani et al., 2019; Hamidani et al. in preparation), we set the cocoon mass and average velocity to M_{\\rm coc}\\sim 10^{-4} M{}_{\\odot} and \\beta_{\\rm coc}\\sim 0.32. These values are not so sensitive to the jet luminosity. The kinetic energy of the cocoon is estimated to be \\mathcal{E}_{k,\\rm coc}\\approx M_{\\rm coc}\\beta_{\\rm coc}^{2}c^{2}/2\\sim 8.9\\times 10^{48}M_{\\rm coc,-4}\\beta_{\\rm coc,-0.5}^{2} erg, where M_{\\rm coc,-4}=M_{\\rm coc}/(10^{-4} M{}_{\\odot}).
+
+The thermal energy of the cocoon is initially deposited by the jet-ejecta interaction. Following the simulations by Hamidani et al. (2019, in preparation), we set the initial thermal energy of the cocoon to be a fifth of its kinetic energy: \\mathcal{E}_{\\rm ini}\\approx\\mathcal{E}_{k,\\rm coc}/5\\approx 1.8\\times 10^{48} erg. For bright prompt jets of SGRBs, the velocity of the jet head is approximated to be \\beta_{h}\\sim 1. Then, the breakout time of the prompt jet is estimated to be t_{\\rm bo}\\approx\\beta_{\\rm ej}t_{\\rm lag}/(\\beta_{h}-\\beta_{\\rm ej})\\simeq 0.25 t_{\\rm lag,0}(Murguia-Berthier et al., 2014; Matsumoto & Kimura, 2018; Hamidani et al., 2019), where t_{\\rm lag}\\sim 1 s is the lag time between the merger and jet launch. After the breakout, the cocoon loses its internal energy by adiabatic expansion. We can obtain the internal energy as \\mathcal{E}_{\\rm ad}\\approx\\mathcal{E}_{\\rm ini}(R_{\\rm bo}/R_{\\rm coc})\\simeq 2.8\\times 10^{43}\\beta_{\\rm coc,-0.5}t_{\\rm dur,4}^{-1} erg, where R_{\\rm bo}\\approx t_{\\rm bo}\\beta_{\\rm ej}c\\sim 1.5\\times 10^{9} cm is the ejecta radius when the prompt jet breaks out (\\beta_{\\rm ej}\\approx 0.2 is the ejecta velocity), R_{\\rm coc}\\approx t_{\\rm dur}\\beta_{\\rm coc}c\\sim 9.5\\times 10^{13}t_{\\rm dur,4} \\beta_{\\rm coc,-0.5} cm is the cocoon radius (t_{\\rm dur} is the time after the merger). The radioactive decay of _r_-process elements also heats up the cocoon. The specific heating rate by the decay chain is expressed by a power-law function for t_{\\rm dur}>1 s; \\dot{\\varepsilon}_{\\rm ra}\\approx 1.6\\times 10^{11}t_{\\rm dur,4}^{-1.3} erg g{}^{-1} s{}^{-1}(Korobkin et al., 2012; Hotokezaka et al., 2016). The balance between the adiabatic cooling and radioactive heating provides the internal energy to be \\mathcal{E}_{\\rm ra}\\approx\\dot{\\varepsilon}_{\\rm ra}M_{\\rm coc}t_{\\rm dur} \\simeq 3.3\\times 10^{44}t_{\\rm dur,4}^{-0.3}M_{\\rm coc,-4} erg. We write down the cocoon internal energy as \\mathcal{E}_{\\rm coc}\\approx\\mathcal{E}_{\\rm ad}+\\mathcal{E}_{\\rm ra}. The radioactive heating is the dominant process for t_{\\rm dur}>300 s with our reference parameter set.
+
+The optical depth of the cocoon is estimated to be
+
+53\\kappa_{\\rm coc,1}M_{\\rm coc,-4}\\beta_{\\rm coc,-0.5}^{-2}t_{\\rm dur,4}^{-2}, where \\kappa_{\\rm coc}\\sim 10 cm{}^{2} g{}^{-1} is the opacity by r-process elements. Hence, the photons inside the cocoon should be thermalized. The temperature of the cocoon is written as a_{\\rm rad}T_{\\rm coc}^{4}\\approx 3\\xi_{\\rm coc}/(4\\pi R_{\\rm coc}^{3}), where a_{\\rm rad} is the radiation constant. Also, the high optical depth allows us to ignore the photon diffusion effect when estimating the internal energy of the cocoon. Note that the opacity and heating rate in the cocoon may be lower because the neutrino irradiation by the remnant neutron star reduces the amount of lanthanide elements (Fujibayashi et al., 2018; Metzger et al., 2018).
+
+## 3 Non-thermal electrons
+
+We consider a prolonged jet with Lorentz factor \\Gamma_{j}, isotropic-equivalent kinetic luminosity L_{k,\\rm iso}, and duration t_{\\rm dur}. The jet dissipates its kinetic energy at radius R_{\\rm dis} through some mechanisms, such as internal shocks (Rees & Meszaros, 1994) or magnetic reconnections (McKinney & Uzdensky, 2012). The electron luminosity is set to be L_{e,\\rm iso}=\\epsilon_{e}L_{k,\\rm iso}, leading to the comoving isotropic-equivalent electron luminosity of L^{\\prime}_{e,\\rm iso}\\approx L_{e,\\rm iso}/\\Gamma_{j}^{2}. The comoving magnetic field energy density is given as U^{\\prime}_{B}=\\epsilon_{B}L_{k,\\rm iso}/(4\\pi R_{\\rm dis}^{2}\\Gamma_{j}^{2}c), and the comoving magnetic field is B^{\\prime}=\\sqrt{8\\pi U^{\\prime}_{B}}. The electron acceleration via diffusive shock acceleration requires the shock upstream region to be optically thin (Murase & Ioka, 2013; Kimura et al., 2018). The optical depth is estimated to be \\tau_{j}\\approx n^{\\prime}_{j}\\sigma_{T}R_{\\rm dis}/\\Gamma_{j}\\simeq 3.7\\times 1 0^{-4}L_{k,\\rm iso,48.5}R_{\\rm dis,13}^{-1}\\Gamma_{j,2}^{-3}, where n^{\\prime}_{j}=L_{k,\\rm iso}/(4\\pi R_{\\rm dis}^{2}\\Gamma_{j}^{2}m_{p}c^{3}) is the comoving number density and \\sigma_{T} is the Thomson cross section. Hence, the electrons can be accelerated in a jet of L_{k,\\rm iso}\\lesssim 10^{51} erg s{}^{-1} and \\Gamma_{j}\\gtrsim 100. The lateral optical depth is estimated to be \\tau_{\\theta}\\approx\\tau_{j}\\theta_{j}\\Gamma_{j}\\simeq 3.7\\times 10^{-3}L_{k,\\rm iso,48.5}R_{\\rm dis,13}^{-1}\\Gamma_{j,2}^{-2}\\theta_{j,-1}, where \\theta_{j} is the jet opening angle. Thus, the cocoon photons can diffuse into the internal dissipation region as long as the opening angle is small enough.
+
+The electron distribution in the comoving frame is given by the transport equation that includes injection, cooling, and adiabatic loss terms. Assuming the steady state, the transport equation is written as
+
+\\frac{d}{d\\gamma^{\\prime}_{e}}\\left(-\\frac{\\gamma^{\\prime}_{e}}{t^{\\prime}_{ \\rm cool}}N_{\\gamma^{\\prime}_{e}}\\right)=\\dot{N}_{\\gamma^{\\prime}_{e},\\rm inj }-\\frac{N_{\\gamma^{\\prime}_{e}}}{t^{\\prime}_{\\rm dyn}},  where \\gamma^{\\prime}_{e} is the electron Lorentz factor, N_{\\gamma^{\\prime}_{e}}=dN/d\\gamma^{\\prime}_{e} is the number spectrum, t^{\\prime}_{\\rm cool} is the cooling time, \\dot{N}_{\\gamma^{\\prime}_{e},\\rm inj} is the injection term, and t^{\\prime}_{\\rm dyn}=R_{\\rm dis}/(\\Gamma_{j}c) is the dynamical time. A solution of this equation is given in Equation (C.11) of Dermer & Menon (2009), and we numerically integrate the solution. Note that the cooling timescale depends on the photon density that is affected by the electron distribution. We iteratively calculate the electron distribution until the solution converges (cf. Murase et al., 2011).
+
+We write the injection term as a power-law function with an exponential cutoff:
+
+\\dot{N}_{\\gamma^{\\prime}_{e},\\rm inj}=\\dot{N}_{\\rm nor}\\left(\\frac{\\gamma^{ \\prime}_{e}}{\\gamma^{\\prime}_{e,\\rm cut}}\\right)^{-p_{\\rm inj}}\\exp\\left(- \\frac{\\gamma^{\\prime}_{e}}{\\gamma^{\\prime}_{e,\\rm cut}}\\right),  where \\dot{N}_{\\rm nor} is the normalization factor and \\gamma^{\\prime}_{e,\\rm cut} is the cutoff energy. The normalization is determined so that \\int\\dot{N}_{\\gamma^{\\prime}_{e},\\rm inj}\\gamma^{\\prime}_{e}m_{e}c^{2}d\\gamma^ {\\prime}_{e}=L^{\\prime}_{e,\\rm iso} is satisfied. The cutoff energy is given by balance between the acceleration and cooling timescales. We estimate the acceleration time to be t^{\\prime}_{\\rm acc}\\approx\\gamma^{\\prime}_{e}m_{e}c/(eB^{\\prime}). As the cooling processes, we consider the synchrotron, synchrotron-self Compton (SSC), and EIC processes. The synchrotron cooling timescale is estimated to be t^{\\prime}_{\\rm syn}=6\\pi m_{e}c/(\\gamma^{\\prime}_{e}{\\sigma_{T}}{B^{\\prime}} ^{2}). The inverse Compton cooling rate is written in Equations (2.48) and (2.56) in Blumenthal & Gould (1970). We write the differential energy density of seed photons for SSC as
+
+U^{\\prime(\\rm ssc)}_{\\overline{\\varepsilon}^{\\prime}_{\\gamma}}=\\frac{L^{\\prime (\\rm syn)}_{\\overline{\\varepsilon}^{\\prime}_{\\gamma}}}{4\\pi R_{\\rm dis}^{2}c},  where \\overline{\\varepsilon}^{\\prime}_{\\gamma} is the seed photon energy and L^{\\prime(\\rm syn)}_{\\overline{\\varepsilon}^{\\prime}_{\\gamma}} is the synchrotron differential luminosity (see Section 4). The seed photons for EIC are the thermal photons in the cocoon boosted by the jet's relativistic motion:
+
+U^{\\prime(\\rm eic)}_{\\overline{\\varepsilon}^{\\prime}_{\\gamma}}=\\Gamma_{j}\\frac {8\\pi(\\overline{\\varepsilon}^{\\prime}_{\\gamma}/\\Gamma_{j})^{3}}{h^{3}c^{3}} \\frac{1}{\\exp\\left(\\frac{\\overline{\\varepsilon}_{i}/\\Gamma_{j}}{\\kappa_{B}T_{ \\rm esc}}\\right)-1}. 
+
+In reality, the photon density and photon temperature in the jet may be slightly lower than those in the cocoon, but we use the photon field in the cocoon for simplicity. This does not strongly affect our results as long as the jet is well collimated and filled with thermal photons.
+
+The left column of Figure 2 shows the cooling and acceleration timescales for models of a typical extended emission (EE) and plateau emission (PE), whose parameters and resulting quantities are tabulated in Tables 1 and 2. Note that we here assume a small R_{\\rm dis} compared to the previous works (e.g., Toma et al., 2009; Kimura et al., 2017) such that R_{\\rm dis}<R_{\\rm coc} is satisfied. For the EE model, the EIC dominates over the other loss processes for \\gamma^{\\prime}_{e}\\lesssim 3\\times 10^{3}, while the synchrotron is the most efficient above it due to strong Klein-Nishina (KN) suppression. For the PE model, the
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c c c} \\hline M_{\\rm coc} & \\beta_{\\rm coc} & R_{\\rm bo} & \\epsilon_{B} & \\epsilon_{e} & p_{\\rm inj} & \\gamma_{m} \\\\ [M{}_{\\odot}] & & [cm] & & & & \\\\ \\hline 10^{-4} & 0.32 & 1.5\\times 10^{9} & 0.01 & 0.1 & 2.2 & 100 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Values of the fixed parameters. adiabatic loss is dominant for \\gamma_{e}^{\\prime}\\mathrel{\\hbox to 0.0pt{\\lower 4.0pt\\hbox{ $\\sim$}}\\raise 1.0pt \\hbox{$<$}}10, EIC is efficient for 10<\\gamma_{e}^{\\prime}<6\\times 10^{3}, and synchrotron loss is relevant above it.
+
+The resulting electron spectra are shown in the middle column of Figure 2. For the EE model, the electron number spectrum, \\gamma_{e}^{\\prime}{}^{2}dN/d\\gamma_{e}^{\\prime}, shows a hardening for \\gamma_{e}^{\\prime}\\mathrel{\\hbox to 0.0pt{\\lower 4.0pt\\hbox{ $\\sim$}}\\raise 1.0pt \\hbox{$<$}}3\\times 10^{3} due to the KN effect. For the PE model, the electron spectrum is peaky because of the adiabatic loss below the injection Lorentz factor and the cooling break above it. The cutoff energies are \\gamma_{e,\\rm cut}^{\\prime}\\sim 4\\times 10^{5} and 3\\times 10^{6} for the EE and PE models, respectively. We also plot \\varepsilon_{e}^{\\prime}L_{\\dot{e}_{\\rm eff}^{\\prime}}^{\\rm(iso)}=\\gamma_{e}^{ \\prime}{}^{2}m_{e}c^{2}(dN/d\\gamma_{e}^{\\prime})t_{\\rm cool}^{\\prime} and \\dot{N}_{\\gamma_{e}^{\\prime},\\rm inj} in the figure. The two spectra are almost identical for \\gamma_{e}^{\\prime}>\\gamma_{m}^{\\prime}, which confirms the convergence of the numerical integration and iteration.
+
+## 4 Gamma-ray spectra
+
+We numerically calculate photon spectra emitted by the non-thermal electrons. For the synchrotron differential luminosity, we use the formula given by Equations (18), (19), and (20) in Finke et al. (2008). The spectrum by the inverse Compton scattering is written in Equations (2.48) and (2.61) in Blumenthal & Gould (1970), and the seed photon densities for SSC and EIC are given by Equations (3) and (4), respectively.
+
+Gamma-rays can be attenuated through \\gamma\\gamma annihilation inside the system. With our reference parameter sets, the attenuation at the dissipation region is negligible, while the attenuation within the cocoon radius is relevant. Using the quantities in the engine frame, the optical depth for \\gamma\\gamma interaction is represented by
+
+\\tau_{\\gamma\\gamma}(\\varepsilon_{\\gamma})\\approx(R_{\\rm coc}-R_{\\rm dis})\\int \\mathscr{R}(x)\\frac{U\\overline{\\varepsilon}_{\\gamma}}{\\overline{\\varepsilon}_ {\\gamma}}d\\overline{\\varepsilon}_{\\gamma},  where \\varepsilon_{\\gamma} is the gamma-ray energy, \\overline{\\varepsilon}_{\\gamma} is the soft photon
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c c c c c} \\hline model & \\Gamma_{j} & L_{k,\\rm iso} & R_{\\rm dis} & t_{\\rm dur} & \\tau_{\\rm coc} & \\tau_{j} & R_{\\rm coc} & k_{B}T_{\\rm coc} & B^{\\prime} & L_{\\rm XRT} \\\\  & & [erg s{}^{-1}] & [cm] & [s] & & & [cm] & [eV] & [G] & [erg s{}^{-1}] \\\\ \\hline Extended (EE) & 200 & 10^{50.5} & 10^{12} & 10^{2.5} & 5.3\\times 10^{4} & 4.6\\times 10^{-2} & 3.0\\times 10^{12} & 19 & 7.3\\times 10^{4} & 2.4\\times 10^{47} \\\\ Plateau (PE) & 100 & 10^{48.5} & 10^{13} & 10^{4} & 53 & 3.7\\times 10^{-4} & 9.5\\times 10^{13} & 0.92 & 1.5\\times 10^{3} & 1.7\\times 10^{46} \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Values of the model parameters and physical quantities. energy in the cocoon, x=\\varepsilon_{\\gamma}\\overline{\\varepsilon}_{\\gamma}/(m_{e}c^{2}), \\mathscr{R}(x) is given in Equation (4.7) in Coppi and Blandford (1990), and U_{\\overline{\\gamma}_{\\gamma}} is the thermal photon energy density in the cocoon. Note that we focus on the situation where R_{\\rm coc}>R_{\\rm dis} (see Figure 1). The optical depth above \\sim 1 GeV (100 GeV) for EE (PE) model is very high, so an electromagnetic cascade is initiated. We approximately calculate the cascade spectrum following Zdziarski (1988). The cascade spectrum is approximated to be
+
+\\varepsilon_{\\gamma}L_{\\varepsilon_{\\gamma}}^{(\\rm cas)}\\approx\\varepsilon_{ \\gamma}G(y) 
+
+G(y)=\\frac{L_{\\rm nor}}{\\varepsilon_{\\gamma,\\rm cut}}\\left(y^{3.2}+y^{2}\\right) ^{-1/4}\\exp(-\\tau_{\\gamma\\gamma}),  where L_{\\rm nor} is the normalization factor, \\varepsilon_{\\gamma,\\rm cut} is the cutoff energy above which \\tau_{\\gamma\\gamma}>1 is satisfied, and y=\\varepsilon_{\\gamma}/\\varepsilon_{\\gamma,\\rm cut} (see also Murase et al., 2012). G(y) is normalized so that the luminosity of the cascade emission is equal to the energy loss rate by the attenuation.
+
+The calculated photon spectra in the engine frame are shown in the right column of Figure 2. For the EE model, the injected electrons upscatter the seed photons in the KN regime, so that the EIC process produces high-energy gamma-rays of \\Gamma_{j}\\gamma_{m}^{\\prime}m_{e}c^{2}\\simeq 10 GeV. These gamma-rays are absorbed within the cocoon radius and reprocessed as the cascade emission, which is dominant for \\varepsilon_{\\gamma}\\gtrsim 1 MeV in the escaping photon spectrum. The synchrotron emission provides a dominant contribution below it with a hard spectrum. The peak of the synchrotron emission is around 10 MeV due to the strong magnetic field (see Table 2) and the hard electron distribution. From the observations, the mean value of the photon indices for EEs in the _Swift_/XRT band is 1.7 (Kagawa et al., 2019), which is close to our results of 1.5. For the PE model, the injection energy is in the Thomson regime, and the EIC process produces photons of \\varepsilon_{\\gamma}\\gtrsim 4\\Gamma_{j}^{2}\\gamma_{m}^{\\prime}\\,{}^{2}k_{B}T_{\\rm coc} \\sim 0.4 GeV. Above \\varepsilon_{\\gamma}\\gtrsim(m_{e}c^{2})^{2}/(3k_{B}T_{\\rm coc})\\sim 100 GeV, the KN suppression is effective. The synchrotron emission produces photons below 20 MeV with a spectral index close to 2, which is also consistent with the observed spectra (Kagawa et al., 2019). The cascade and SSC emissions are sub-dominant. Note that the cutoff energy of the escaping photon spectrum is independent of the Lorentz factor of the jets as long as the electromagnetic cascades in the dissipation region are negligible. Using the cocoon temperature, we have \\varepsilon_{\\gamma\\gamma,\\rm cut}\\approx(m_{e}c^{2})^{2}/(3k_{B}T_{\\rm coc}) \\simeq 4.6 GeV and 95 GeV for the EE and PE model, respectively. In our cases this overestimates the cutoff energy by a factor of 2-5 because \\tau_{\\gamma\\gamma}>1 is satisfied at the exponential tail of the cocoon photons.
+
+## 5 Detection Prospects
+
+We calculate GeV-TeV gamma-ray fluxes from the prolonged jets with various t_{\\rm dur} and discuss future detection prospects. The observed EEs and PEs indicate a rough correlation between X-ray luminosity and duration: L_{\\rm XRT}\\sim 10^{49}(t_{\\rm dur}/10^{2}~{}\\rm s)^{2.5} erg s{}^{-1} for the EE model and L_{\\rm XRT}\\sim 10^{46}(t_{\\rm dur}/10^{4}~{}\\rm s)^{2} erg s{}^{-1} for the PE model, where L_{\\rm XRT} is the photon luminosity in 0.3-10 keV in the observer frame (Kisaka et al., 2017). By adjusting the value of L_{k,\\rm iso}, we iteratively calculate the escaping photon spectra for various values of t_{\\rm dur} such that the resulting L_{\\rm XRT} satisfies the relation above. Here, the XRT band is converted to the engine frame using the mean redshift of the observed EEs, z=0.72(Kisaka et al., 2017). Our reference models are in rough agreement with the relation (see Table 2). We focus on 200~{}\\rm s<t_{\\rm dur}<4\\times 10^{4}~{}\\rm s because \\tau_{j}>0.3 and \\tau_{\\rm coc}<\\beta_{\\rm coc} are satisfied for t_{\\rm dur}<200~{}\\rm s and t_{\\rm dur}>4\\times 10^{4}~{}\\rm s, respectively, where our assumptions become inappropriate. Note that the relation between L_{\\rm XRT} and t_{\\rm dur} strongly depends on the sample and fitting formula (Dainotti et al., 2008, 2010; Kisaka et al., 2017; Kagawa et al., 2019).
+
+In Figure 3, we show the gamma-ray fluxes on Earth in the _Fermi_/LAT and CTA bands for d_{L}=0.3 Gpc (z=0.067; thick line) and d_{L}=4.4 Gpc (z=0.72; thin line), which correspond to the GW detection horizon for the advanced LIGO design sensitivity and the average distance to SGRBs with EEs (Kisaka et al., 2017). The results are depicted as a function of the observed duration, T_{\\rm dur}=(1+z)t_{\\rm dur}. We also plot the CTA sensitivity at 50 GeV (Cherenkov Telescope Array Consortium et al., 2019) and the upper limit for GW170817 by LAT (Ajello et al., 2018; Murase et al., 2018) that mimics the LAT sensitivity.
+
+GeV gamma-ray emission expected in the EE model is so bright that LAT can easily detect the signals even for d_{L}=4.4 Gpc. Indeed, LAT detected high-energy gamma-rays from two SGRBs, GRB 160702A and 170127C, about a thousand seconds after the trigger (Ajello et al., 2019), which could be explained by our model although detailed fits of individual bursts are beyond the scope of this paper. However, LAT has not detected any SGRBs with EEs in T_{\\rm dur}<10^{3} s (Ajello et al., 2019), which seems in tension with our model. The cocoon may have a faster and hotter component in its outer region, depending on the initial configuration (Kyutoku et al., 2014; Kasliwal et al., 2017). The hot component will attenuate the high-energy gamma-rays. Also, if the dissipation region is outside the cocoon radius, which is likely to occur at early times, the EIC flux is significantly reduced. These effects need to be considered to explain the non-detection by LAT, and a detailed study remains as a future work.
+
+In contrast, the PE model is too faint to be detectedby both CTA and LAT for d_{L}=4.4 Gpc except for T_{\\rm dur}\\lesssim 7\\times 10^{3} s by LAT. For d_{L}=0.3 Gpc, LAT can detect the PEs for the range of durations we investigate here. CTA can also detect the PEs of T_{\\rm dur}<6\\times 10^{3} s, although it cannot detect the PEs of shorter duration because of its high-energy threshold. Although we focus only on the case with \\tau_{\\rm coc}>\\beta_{\\rm coc}, the EIC emission may last longer, because the bulk of the merger ejecta (kilonova/macronova) continues to provide seed photons to the dissipation region.
+
+## 6 Summary & Discussion
+
+We have considered high-energy gamma-ray emission from prolonged engine activities in SGRBs. We assume that the prolonged jets dissipate their kinetic energy inside the cocoon radius, which provides non-thermal electrons in the dissipation region. The jet-ejecta interaction also produces copious thermal photons, leading to high-energy gamma-ray emission through the EIC process. The calculated photon spectrum is consistent with the X-ray observation, and LAT and CTA can detect gamma-ray counterparts to GWs for duration of 10^{2}-10^{5} s. Note that the counterparts by the prolonged engine activities may not be accompanied by the prompt gamma-rays as discussed in Xue et al. (2019); Matsumoto & Kimura (2018). Also, Fermi and/or CTA may be able to detect the up-scattered cocoon photons from the SGRBs that occur beyond the GW detection horizon. Hence, the follow-up observations should be performed for GWs without SGRBs and for SGRBs without GWs.
+
+The afterglow and prompt gamma-ray emissions of GW170817 suggest that the jet is structured in which a fast core is surrounded by a slower wing (e.g. Lazzati et al., 2018; Lyman et al., 2018; Margutti et al., 2018; Xie et al., 2018; Ioka & Nakamura, 2019). If the prolonged jet is structured, the kinetic luminosity at the edge needs to decrease faster than L_{k,\\rm iso}\\propto\\Gamma_{j}^{-2} in order to fill the jet core with the cocoon photons. The slower edge emits photons to a wider angle, which are reflected by the cocoon. Such photons will be detectable as a wide-angle counterpart to GWs (Kisaka et al., 2015, 2018). Note that the high-energy gamma-rays are not reflected but absorbed by the cocoon through the Bethe-Heitler pair-production process. Thus, LAT or Cherenkov Telescopes would have difficulty detecting the gamma-rays from off-axis events, including GW170817.
+
+The prolonged jets may have a lower Lorentz factor (Matsumoto et al. 2019, in preparation; Lamb et al. 2019a). For the EE model with \\Gamma_{j}\\lesssim 40, \\tau_{j}>1 is satisfied, so the non-thermal particle acceleration does not occur. This condition can be avoided in the jet edge where a kinetic luminosity can be lower, although the emission from the jet edge cannot achieve the observed X-ray luminosity for EEs. For the EE model with \\Gamma_{j}\\lesssim 100, the GeV gamma-rays are attenuated in the dissipation region due to a higher photon density. In this case, if protons are accelerated simultaneously, high-energy neutrinos can be efficiently produced owing to the high target photon density, as has been discussed for X-ray flares and EEs of SGRBs (e.g., Murase & Nagataki 2006; Kimura et al. 2017). Such neutrinos would be detectable in the planned next-generation neutrino detector, IceCube-Gen2 (Aartsen et al., 2014). The detection of either high-energy gamma-rays or neutrinos will unravel the Lorentz factor and jet composition, or the non-detection will enable us to place a useful constraint on the emission radius.
+
+We thank Hamid Hamidani for useful comments. This work is supported by JSPS Research Fellowship (S.S.K.), KAKENHI Nos. 18H01213, 18H01215, 17H06357, 17H06362, 17H06131 (K.I.), 18H01245, 18H01246, 19K14712 (S.K), Fermi GI program 111180 (K.M., S.S.K., and K.F.), NSF Grant No. PHY-1620777 and AST-1908689, and the Alfred P. Sloan Foundation (K.M.), and the Eberly Foundation (P.M.).
+
+Aartsen, M. G., et al. 2014, arXiv:1412.5106
+
+* Abbott et al. (2017a) Abbott, B. P., Abbott, R., Abbott, T. D., et al. 2017a, ApJ, 848, L13
+
+* Abbott et al. (2017b) --. 2017b, Physical Review Letters, 119, 161101
+
+* Abbott et al. (2017c) --. 2017c, ApJ, 848, L12
+
+* Abdalla et al. (2017) Abdalla, H., Abramowski, A., Aharonian, F., et al. 2017, ApJ, 850, L22
+
+* Ajello et al. (2018) Ajello, M., Allafort, A., Axelsson, M., et al. 2018, ApJ, 861, 85
+
+* Ajello et al. (2019) Ajello, M., Arimoto, M., Axelsson, M., et al. 2019, ApJ, 878, 52
+
+* Albert et al. (2017) Albert, A., Andre, M., Anghinolfi, M., et al. 2017, ApJ, 850, L35
+
+* Blumenthal & Gould (1970) Blumenthal, G. R., & Gould, R. J. 1970, Reviews of Modern Physics, 42, 237
+
+* Bromberg et al. (2011) Bromberg, O., Nakar, E., Piran, T., & Sari, R. 2011, ApJ, 740, 100
+
+* Cherenkov Telescope Array Consortium et al. (2019) Cherenkov Telescope Array Consortium, Acharya, B. S., Agudo, I., et al. 2019, Science with the Cherenkov Telescope Array, doi:10.1142/10986
+
+* Coppi & Blandford (1990) Coppi, P. S., & Blandford, R. D. 1990, MNRAS, 245, 453
+
+* Coulter et al. (2017) Coulter, D. A., Foley, R. J., Kilpatrick, C. D., et al. 2017, Science, 358, 1556
+
+* Dainotti et al. (2008) Dainotti, M. G., Cardone, V. F., & Capozziello, S. 2008, MNRAS, 391, L79
+
+* Dainotti et al. (2010) Dainotti, M. G., Willingale, R., Capozziello, S., Fabrizio Cardone, V., & Ostrowski, M. 2010, ApJ, 722, L215
+
+* Dermer & Menon (2009) Dermer, C. D., & Menon, G. 2009, High Energy Radiation from Black Holes: Gamma Rays, Cosmic Rays, and Neutrinos
+
+* Evans et al. (2017) Evans, P. A., Cenko, S. B., Kennea, J. A., Emery, S. W. K., & et al. 2017, Science, 358, 1565
+
+* Fang & Metzger (2017) Fang, K., & Metzger, B. D. 2017, ApJ, 849, 153
+
+* Finke et al. (2008) Finke, J. D., Dermer, C. D., & Bottcher, M. 2008, ApJ, 686, 181
+
+* Fujibayashi et al. (2018) Fujibayashi, S., Kiuchi, K., Nishimura, N., Sekiguchi, Y., & Shibata, M. 2018, ApJ, 860, 64
+
+* Gao et al. (2013) Gao, H., Zhang, B., Wu, X.-F., & Dai, Z.-G. 2013, Phys. Rev. D, 88, 043010
+
+* Ghirlanda et al. (2019) Ghirlanda, G., Salafia, O. S., Paragi, Z., et al. 2019, Science, 363, 968
+
+* Ghisellini et al. (2007) Ghisellini, G., Ghirlanda, G., Nava, L., & Firmani, C. 2007, ApJ, 658, L75
+
+* Gompertz et al. (2014) Gompertz, B. P., O'Brien, P. T., & Wynn, G. A. 2014, MNRAS, 438, 240
+
+* Gottlieb et al. (2018a) Gottlieb, O., Nakar, E., & Piran, T. 2018a, MNRAS, 473, 576
+
+* Gottlieb et al. (2018b) Gottlieb, O., Nakar, E., Piran, T., & Hotokezaka, K. 2018b, MNRAS, 479, 588
+
+* Hamidani et al. (2019) Hamidani, H., Kiuchi, K., & Ioka, K. 2019, arXiv e-prints, arXiv:1909.05867
+
+* Hotokezaka et al. (2016) Hotokezaka, K., Wanajo, S., Tanaka, M., et al. 2016, MNRAS, 459, 35
+
+* Ioka et al. (2005) Ioka, K., Kobayashi, S., & Zhang, B. 2005, ApJ, 631, 429
+
+* Ioka & Nakamura (2018) Ioka, K., & Nakamura, T. 2018, Progress of Theoretical and Experimental Physics, 2018, 043E02
+
+* Ioka et al. (2019) --. 2019, MNRAS, 487, 4884
+
+* Kagawa et al. (2019) Kagawa, Y., Yonetoku, D., Sawano, T., et al. 2019, ApJ, 877, 147
+
+* Kagawa et al. (2015) --. 2015, ApJ, 811, 4
+
+* Kaneko et al. (2015) Kaneko, Y., Bostanc, Z. F., Gogus, E., & Lin, L. 2015, MNRAS, 452, 824
+
+* Kasen et al. (2017) Kasen, D., Metzger, B., Barnes, J., Quataert, E., & Ramirez-Ruiz, E. 2017, Nature, 551, 80
+
+* Kasliwal et al. (2017) Kasliwal, M. M., Nakar, E., Singer, L. P., Kaplan, D. L., & et al. 2017, Science, 358, 1559
+
+* Kimura et al. (2018) Kimura, S. S., Murase, K., Bartos, I., et al. 2018, Phys. Rev. D, 98, 043020
+
+* Kimura et al. (2017) Kimura, S. S., Murase, K., Meszaros, P., & Kiuchi, K. 2017, ApJ, 848, L4
+
+* Kisaka & Ioka (2015) Kisaka, S., & Ioka, K. 2015, ApJ, 804, L16
+
+* Kisaka et al. (2018) Kisaka, S., Ioka, K., Kashiyama, K., & Nakamura, T. 2018, ApJ, 867, 39
+
+* Kisaka et al. (2015) Kisaka, S., Ioka, K., & Nakamura, T. 2015, ApJ, 809, L8
+
+* Kisaka et al. (2017) Kisaka, S., Ioka, K., & Sakamoto, T. 2017, ApJ, 846, 142
+
+* Korobkin et al. (2012) Korobkin, O., Rosswog, S., Arcones, A., & Winteler, C. 2012, MNRAS, 426, 1940
+
+* Kyutoku et al. (2014) Kyutoku, K., Ioka, K., & Shibata, M. 2014, MNRAS, 437, L6
+
+* Lamb et al. (2019a) Lamb, G. P., Tanvir, N. R., Levan, A. J., et al. 2019a, ApJ, 883, 48
+
+* Lamb et al. (2019b) Lamb, G. P., Lyman, J. D., Levan, A. J., et al. 2019b, ApJ, 870, L15
+
+* Lazzati et al. (2017) Lazzati, D., Lopez-Camara, D., Cantiello, M., et al. 2017, ApJ, 848, L6
+
+* Lazzati et al. (2018) Lazzati, D., Perna, R., Morsony, B. J., et al. 2018, Physical Review Letters, 120, 241103
+
+* Lipunov et al. (2017) Lipunov, V. M., Gorbovskoy, E., Kornilov, V. G., & et al. 2017, ApJ, 850, L1
+
+* Lyman et al. (2018) Lyman, J. D., Lamb, G. P., Levan, A. J., et al. 2018, Nature Astronomy, 2, 751
+
+* Margutti et al. (2018) Margutti, R., Alexander, K. D., Xie, X., et al. 2018, ApJ, 856, L18
+
+* Matsumoto & Kimura (2018) Matsumoto, T., & Kimura, S. S. 2018, ApJ, 866, L16
+
+* McKinney & Uzdensky (2012) McKinney, J. C., & Uzdensky, D. A. 2012, MNRAS, 419, 573
+
+* Meszaros & Rees (2001) Meszaros, P., & Rees, M. J. 2001, ApJ, 556, L37
+
+* Metzger et al. (2008) Metzger, B. D., Quataert, E., & Thompson, T. A. 2008, MNRAS, 385, 1455
+
+* Metzger et al. (2018) Metzger, B. D., Thompson, T. A., & Quataert, E. 2018, ApJ, 856, 101
+
+* Mizuta & Ioka (2013) Mizuta, A., & Ioka, K. 2013, ApJ, 777, 162
+
+* Mooley et al. (2018a) Mooley, K. P., Frail, D. A., Dobie, D., et al. 2018a, ApJ, 868, L11
+
+* Mooley et al. (2018b) Mooley, K. P., Deller, A. T., Gottlieb, O., et al. 2018b, Nature, 561, 355
+
+* Murase et al. (2012) Murase, K., Beacom, J. F., & Takami, H. 2012, Journal of Cosmology and Astro-Particle Physics, 2012, 030
+
+* Murase & Ioka (2013) Murase, K., & Ioka, K. 2013, Physical Review Letters, 111, 121102
+
+* Murase & Nagataki (2006) Murase, K., & Nagataki, S. 2006, Physical Review Letters, 97, 051101
+
+* Murase et al. (2011) Murase, K., Toma, K., Yamazaki, R., & Meszaros, P. 2011, ApJ, 732, 77
+
+* Murase et al. (2018) Murase, K., Toomey, M. W., Fang, K., et al. 2018, ApJ, 854, 60
+
+* Murguia-Berthier et al. (2014) Murguia-Berthier, A., Montes, G., Ramirez-Ruiz, E., De Colle, F., & Lee, W. H. 2014, ApJ, 788, L8
+
+* Murguia-Berthier et al. (2017) Murguia-Berthier, A., Ramirez-Ruiz, E., Kilpatrick, C. D., et al. 2017, ApJ, 848, L34
+
+* Nagakura et al. (2014) Nagakura, H., Hotokezaka, K., Sekiguchi, Y., Shibata, M., & Ioka, K. 2014, ApJ, 784, L28
+
+* Norris & Bonnell (2006) Norris, J. P., & Bonnell, J. T. 2006, ApJ, 643, 266
+
+* Perna et al. (2006) Perna, R., Armitage, P. J., & Zhang, B. 2006, ApJ, 636, L29
+
+* Pian et al. (2017) Pian, E., D'Avanzo, P., Benetti, S., Branchesi, M., & et al. 2017, Nature, 551, 67
+
+* Ramirez-Ruiz et al. (2002) Ramirez-Ruiz, E., Celotti, A., & Rees, M. J. 2002, MNRAS, 337, 1349
+
+* Rees & Meszaros (1994) Rees, M. J., & Meszaros, P. 1994, ApJ, 430, L93
+
+* Rowlinson et al. (2013) Rowlinson, A., O'Brien, P. T., Metzger, B. D., Tanvir, N. R., & Levan, A. J. 2013, MNRAS, 430, 1061
+
+* Sakamoto et al. (2011) Sakamoto, T., Barthelmy, S. D * Troja et al. (2018a) Troja, E., Ryan, G., Piro, L., et al. 2018a, Nature Communications, 9, 4089
+
+* Troja et al. (2018b) Troja, E., Piro, L., Ryan, G., et al. 2018b, MNRAS, 478, L18
+
+* Utsumi et al. (2017) Utsumi, Y., Tanaka, M., Tominaga, N., Yoshida, M., & et al. 2017, PASJ, 69, 101
+
+* Valenti et al. (2017) Valenti, S., David, Sand, J., et al. 2017, ApJ, 848, L24
+
+* Veres & Meszaros (2014) Veres, P., & Meszaros, P. 2014, ApJ, 787, 168
+
+* Xie et al. (2018) Xie, X., Zrake, J., & MacFadyen, A. 2018, ApJ, 863, 58
+
+* Xue et al. (2019) Xue, Y. Q., Zheng, X. C., Li, Y., et al. 2019, Nature, 568, 198
+
+* Zdziarski (1988) Zdziarski, A. A. 1988, ApJ, 335, 786
+
+* Zhang (2019) Zhang, B. 2019, Frontiers of Physics, 14, 64402

@@ -1,0 +1,195 @@
+###### Abstract
+
+The gravitational waves from the binary neutron star merger GW170817 were accompanied by a multi-wavelength electromagnetic counterpart, which confirms the association of the merger with a short gamma-ray burst (sGRB). The afterglow observations implied that the event was accompanied by a narrow, \\sim 5^{\\circ}, and powerful, \\sim 10^{50} erg, jet. We study the propagation of a Poynting flux-dominated jet within the merger ejecta (kinematic, neutrino-driven and MRI turbulence-driven) of a neutrino-radiation-GR-MHD simulation of two coalescing neutron stars. We find that the presence of a post-merger low-density/low-pressure polar cavity, that arose due to angular momentum conservation, is crucial to let the jet break out. At the same time the ejecta collimates the jet to a narrow opening angle. The collimated jet has a narrow opening angle of \\sim 4-7^{\\circ} and an energy of 10^{49}-10^{50} erg, in line with the observations of GW170817 and other sGRBs. stars: neutron -- stars: jets -- magnetic fields 0000-0002-3871-8677]Matteo Pais
+
+0000-0002-8282-7877]Tsui Piran
+
+0000-0002-8862-8677]Yuri Lyubarsky
+
+0000-0002-4882-7885]Kenta Kiuchi
+
+## 1 Introduction
+
+The predicted association of short gamma-ray bursts (sGRBs) with binary neutron star (BNS) mergers (Eichler et al., 1989) initially had just indirect evidence. The most remarkable of those was the tentative observations of a kilonova following the sGRB 130603B (Tanvir et al., 2013; Berger et al., 2013). Later on a few other similar marginal events were detected in other sGRBs (e.g., Yang et al., 2015; Jin et al., 2016, 2015; Gompertz et al., 2018; Ascenzi et al., 2019; Jin et al., 2020; Lamb et al., 2019; Rossi et al., 2020; Fong et al., 2021). In 2017, GW170817, the first detection of gravitational waves from a BNS merger (Abbott et al., 2017) was followed by a sGRB (e.g., Abbott et al., 2017; Goldstein et al., 2017; Savchenko et al., 2017). At first sight, it seemed that the long standing prediction has been confirmed.
+
+However, a closer examination of GRB 170817A revealed that it was not a regular sGRB. Its total isotropic equivalent energy (\\sim 10^{46}) is smaller by three orders of magnitude than the weakest sGRB measured so far (Gottlieb et al., 2018) and by four orders of magnitude than typical sGRBs (Nakar, 2007). Compactness arguments (Kasliwal et al., 2017; Matsumoto et al., 2019) revealed that the observed \\gamma-rays could not have emerged from a regular GRB viewed off axis (with the difference in luminosity and hardness arising from a different Lorentz boost). It also showed that the \\gamma-rays must have been produced in a mildly relativistic outflow with a Lorenz factor of \\Gamma\\sim 2-3 and conditions drastically different from those characteristic for regular GRBs.
+
+Furthermore, unlike other sGRBs, both the radio (Hallinan et al., 2017) and X-ray (Troja et al., 2017) afterglows were detected only several days after the prompt \\gamma-rays and they were initially much weaker than typical sGRB afterglow. Thus, based on the prompt \\gamma-rays and the early afterglow one could question whether GW170817 was accompanied by a regular sGRB.
+
+Late observations of the afterglow of GW170817 enabled us to answer this question. The multi-wavelength afterglow peaked around 175 days after the burst. The shape of the light curve around the peak flux, as well as the apparent superluminal motion detected in VLBI observations (Mooley et al., 2018, 2022; Ghirlanda et al., 2019), revealed that this late-time emission was dominated by a very energetic (\\sim 10^{49-50} erg), narrowly collimated (<5^{\\circ}) jet that was observed from a viewing angle of about 20^{\\circ}(Nakar, 2019). The jet emerged successfully from the ejecta surrounding the merger andmost likely it produced a regular sGRB pointing along its axis. This last point is not trivial as, even though the merger ejecta contains only a few percent of a solar mass, this may be sufficient to choke a powerful jet (see e.g. Bromberg et al. (2011) for jet propagation in a static matter and Hamidani et al. (2019) and Gottlieb and Nakar (2022) for jet propagation in an expanding surrounding matter, as is the case in a merger). A related question is, for a powerful jet that manages to escape, how is it collimated to such a narrow angle? Our goal here is to address these two questions.
+
+In this work we aim to determine the conditions that allow a jet to propagate in the post-BNS merger ejecta and successfully break out from it and, at the same time, how the ejecta affects the jet opening angle. To do so we analyze the results of a realistic general relativistic neutrino-radiation magneto-hydrodynamical (MHD) simulation of a one-second-long BNS merger presented in Kiuchi et al. (2022). The paper is structured as follows. We begin, in SS 2, with a brief description the setup of the neutrino-radiation-GRMHD simulation of a BNS merger referring the reader to Kiuchi et al. (2022) for details. We outline, in SS 3, the main theoretical estimates concerning the conditions required for a jet to escape from the ejecta and to be collimated by the external pressure. In SS 4 we scrutinize the results of the post-merger phase of the BNS simulation. Using 2D slices of the simulation box, we calculate the conditions for both the collimation and the escape of the jet over time. We discuss the implications of our findings for GW170817 and other sGRBs in SS 5 and summarize our results in SS 6.
+
+## 2 Simulation
+
+The simulation for BNS mergers is performed using a code described in Kiuchi et al. (2022), and the simulation result of a BNS merger here used is reported in Kiuchi et al. (2022) in detail. The neutron star is modeled with the SFHo equation of state (Steiner et al., 2013). The binary is composed of 1.2 M{}_{\\odot} and 1.5 M{}_{\\odot} neutron stars. The corresponding chirp mass is consistent with the one observed in GW 170817. The simulation domain is composed of 13 levels of the fixed mesh refinement (FMR). The finest FMR domain has the size of L\\in[-37.875,37.875] km with the grid spacing of \\Delta x=150 m, while the coarsest has a grid size of L\\in[-1.55136,1.55136]\\times 10^{5} km with a grid spacing of \\Delta x=614.4 km.
+
+The simulations that are general relativistic neutrino-radiation MHD last for one second following a BNS merger (Kiuchi et al., 2022). These are the longest simulations for BNS mergers carried out so far. The long time scale and the inclusion of neutrino and MHD physics make it possible to explore both the dynamical ejecta and the post-merger ejecta driven by the MHD power from the remnant disk as well as the density profile of the merger remnant around the black-hole spin axis. All these ingredients are critical for this work. The merger and the subsequent black hole formation take place at \\approx 0.015 s and \\approx 0.032 s, respectively.
+
+In Kiuchi et al. (2022), the strong Poynting flux which could induce a relativistic jet is not found until the termination of the simulation because of the limited grid resolution (which results in the spurious underestimation of the black hole spin and the Poynting flux generated by the Blandford-Znajek mechanism) and/or a short computational time following the merger remnant. However, along the spin axis of the black hole, a funnel region with a high magnetization, which could eventually generate a relativistic outflow in the presence of an intense Poynting flux, is formed in the late stage of the remnant with t\\gtrsim 1 s. In the following, we analyze the funnel region and explore the possibility of a jet formation in a hypothetical but plausible value of the Poynting flux.
+
+## 3 Theory
+
+As the jet propagates through the expanding ejecta it dissipates its energy in shocks that form at the jet head (e.g., Matzner, 2003; Lazzati and Begelman, 2005; Bromberg et al., 2011). If the jet is not powerful enough it may not break out from the ejecta (e.g., Bromberg et al., 2011; Gottlieb and Nakar, 2022). The shocked material forms a high-pressure bubble (the cocoon) that engulfs the jet and collimates it (e.g., Komissarov et al., 2009; Lyubarsky, 2009; Bromberg et al., 2011). In the following paragraphs we explore the conditions within the merger ejecta and compare with those needed for break-out and for collimation.
+
+### Escape
+
+To produce a GRB the jet must break out from the moving ejecta. Recently Gottlieb and Nakar (2022) worked out the criteria for a jet break-out in such a case (see their Table 1). This criteria that was obtained for a uniform outflow and a top hat jet is based on a comparison of the kinetic energy of the jet with the kinetic energy of the surrounding outflow:
+
+E_{\\rm j,iso,tot}>150\\left[\\left(\\frac{t_{\\rm d}}{t_{\\rm e}}\\right)^{2}+2 \\right]E_{\\rm ej,iso,tot}\\theta_{\\rm j}^{2}\\,  where E_{\\rm ej,iso,tot} is the ejecta isotropic equivalent total energy and E_{\\rm j,iso,tot} and \\theta_{\\rm j} are the jet isotropic equivalent energy and opening angle. t_{\\rm e} and t_{\\rm d} are the jet engine working time and the delay time between the BNS merger (the onset of the mass ejection) and the jet launch, respectively. The pre-factor 150 corresponds to baryonic jets while the factor 20 corresponds to magnetic-dominated jets.
+
+As the ejecta resulting from the merger is highly anisotropic we translate this condition to our configuration assuming that the strong density gradients (see Fig. 1) do not influence significantly the jet propagation. We do so by identifying the isotropic equivalent energy, E_{\\rm ej,tot}, at \\theta_{\\rm j} as E_{\\rm ej,iso,tot}(\\theta_{\\rm j})=4E_{\\rm ej}(<\\theta_{\\rm j})/\\theta_{\\rm j}^ {2}, where E_{\\rm ej}(<\\theta_{\\rm j}) is the integrated kinetic energy of the ejecta from the axis up to \\theta_{\\rm j}. For a double sided jet and assuming t_{\\rm e}>t_{\\rm d} from Eq. (1) we have:
+
+E_{\\rm j}>E_{\\rm j,esc}\\equiv 300E_{\\rm ej}(<\\theta_{\\rm j})\\times\\theta_{ \\rm j}^{2}\\,  where again the factor 300 corresponds to a hydrodynamic jet while the factor 40 to a magnetic one.
+
+### Collimation
+
+It is now generally accepted that highly relativistic outflows are launched hydromagnetically. It is assumed that the magnetic field is amplified in the accretion flow and the magnetic field lines tread the horizon of the rapidly rotating black hole. The rotation twists the magnetic field lines producing a Poynting dominated outflow. The magnetic field in Poynting dominated outflows is spiral: each turn of the central body adds to the flow one more magnetic loop. In an expanded flow, the conservation of the magnetic flux implies that the poloidal magnetic field decreases as
+
+B_{\\varrho}=B_{0}\\left(\\frac{R_{\\rm L}}{R}\\right)^{2},  where R is the cylindrical radius of the jet, R_{\\rm L} the light cylinder radius, B_{0} the magnetic field at the light cylinder. Then the azimuthal component of the magnetic field varies as
+
+B_{\\phi}=B_{0}\\frac{R_{\\rm L}}{R}. 
+
+The jet luminosity is estimated as
+
+L_{\\rm j}=\\frac{1}{4}R_{\\rm L}^{2}B_{0}^{2}c. 
+
+The outflow is collimated by the pressure of the confining medium. An important point is that when the jet escapes from the confining medium, it expands freely so that the collimation angle increases by \\sim\\gamma^{-1}, where \\gamma is the Lorentz factor of the flow at the escape point. This implies that the flow remains highly collimated only if it acquires a large enough Lorentz factor before it escapes. However, the flow is accelerated only when it laterally expands. Therefore the confining medium should be extended enough; then the jet could expand so that the opening angle remains small.
+
+Because there is a nearly empty funnel along the axis of the ejecta, the collimation mechanism of the jet differs from the sometimes considered collimation by the cocoon (Bromberg et al., 2011). The cocoon is formed when the jet pushes its way through the external medium so that the matter ahead of the jet passes the bow shock, and then flows aside forming a high-pressure cocoon. The efficiency of the process is described by the parameter
+
+\\tilde{L}=\\frac{L_{\\rm j}}{\\Sigma_{\\rm j}\\rho_{\\rm a}c^{3}}\\,  where \\Sigma_{\\rm j}=\\pi R^{2} is the cross section of the jet at a given radius, \\rho_{\\rm a}(R,z) the local ambient density, and L_{\\rm j} is the hypothetical jet luminosity. When \\tilde{L}\\ll 1, the head velocity is non-relativistic, and the jet is collimated by the cocoon pressure. Otherwise the head propagates freely with a relativistic velocity, and the cocoon is unable to collimate the jet. The right panel of Fig. 1 depicts \\tilde{L} for L_{\\rm j}=10^{50} erg/s. The white region represents the location of the transition from uncollimated to collimated regimes. The polar cavities (the red regions in the right panel of Fig. 1) define regions where the jet is free to propagate conically due to the low ambient density and pressure, whereas in blue regions, only a slowly expanding bow shock is possible. One can expect that, in this case, a small bubble inflates in the very vicinity of the central source, and because the expansion velocity is small in most directions due to a high ambient density, the flow within the bubble is redirected towards the axis where a free escape is possible. In such a way, a jet is formed along the axial funnel. The flow freely expands within the funnel until the pressure within the flow is balanced by the pressure of the ambient medium. The shape of the jet and the flow parameters are then found as follows.
+
+The parameters of the outflow are determined by the pressure of the confining medium, p_{\\rm ext}(R,z)(Komissarov et al., 2009; Lyubarsky, 2009). The boundary of the jet is determined by the pressure balance condition
+
+\\frac{B^{\\prime 2}}{8\\pi}=p_{\\rm ext}(R,z)\\,  where B^{\\prime} is the magnetic field in the comoving frame. Taking into account that B_{\\phi}/B_{\\varrho}=R/R_{\\rm L} and that B^{\\prime}_{\\varrho}=B_{\\varrho}, B^{\\prime}_{\\phi}=B_{\\phi}/\\gamma, this relation is reduced to
+
+\\left(\\frac{RB_{\\varrho}}{R_{\\rm L}\\gamma}\\right)^{2}=8\\pi p_{\\rm ext}(R,z). 
+
+Plugging Eqs. (3) and (5) into Eq. (8) we get the condition
+
+\\frac{L_{\\rm j}}{2\\pi cR^{2}\\gamma^{2}}=p_{\\rm ext}(R,z). 
+
+At the condition
+
+\\frac{R}{z}\\ll\\frac{1}{\\gamma}\\,  the magnetic structure locally relaxes to transverse equilibrium such that B^{\\prime}_{\\phi}\\sim B^{\\prime}_{\\varrho} at each distance from the origin. On account of Eqs. (3) and (4) this implies
+
+\\gamma=\\gamma_{1}\\equiv\\frac{R}{R_{\\rm L}}. 
+
+Then the boundary condition Eq. (9) is reduced to an equation for the shape of the jet:
+
+\\frac{L_{\\rm j}R_{\\rm L}^{2}}{2\\pi R^{4}c}=p_{\\rm ext}(R,z). 
+
+Plugging typical parameters for the jet and assuming a light cylinder radius of few Schwarzschild radii we find
+
+L_{51}R_{L,6}^{2}=1.6\\times 10^{31}R_{5}^{4}\\ p_{\\rm ext}(R,z)\\,  where L_{51}=10^{51} erg/s, R_{L,6}=10^{6} cm, and R_{5}=10^{5} cm.
+
+At the condition opposite to Eq. (10), the azimuthal magnetic field dominates even in the comoving frame, and the Lorentz factor of the flow is determined by the curvature of the magnetic surface:
+
+\\gamma=\\gamma_{2}\\equiv\\left(-\\frac{R}{3}\\frac{{\\rm d}^{2}R}{{\\rm d}z^{2}} \\right)^{-1/2}. 
+
+In this case the flow is accelerated slower than in the equilibrium case. Specifically, for a power law shape of the jet,
+
+\\frac{R}{R_{\\rm L}}=C\\left(\\frac{z}{R_{\\rm L}}\\right)^{k}\\,  one gets
+
+\\gamma_{2}=\\frac{\\sqrt{3}}{C\\sqrt{k(1-k)}}\\left(\\frac{z}{R_{\\rm L}}\\right)^{1- k}=\\frac{\\sqrt{3}}{\\sqrt{k(1-k)}}\\left(\\frac{z}{R}\\right). 
+
+Equations (11) and (16) describe two asymptotic limits. In the intermediate zone, one can just take a smaller value of \\gamma from those provided by these two formulas.
+
+## 4 Results
+
+Figure 1 shows a 2D slice of the original simulation data on the x-z plane at the time t=1 s. The left panel depicts the density structure of the central region superposed onto the velocity field lines which expand roughly outwards radially from the center. The density is maximal along the equator as a disk has formed and a strong wind emerges from it. At the same time due to the conservation of the angular momentum, the density drops dramatically in the polar regions creating two cavities where the z-component of the velocity field is inverted resulting in polar inflows. The polar inflows for this (t=1 s) snapshot terminates at roughly z\\simeq 5000 km, above which the velocity field is directed outward. The low ejecta density (and ejecta pressure) of the polar cavities suggests a favorable environment to harbor a conically shaped jet.
+
+We analyze the 2D (R,z) slices of the 3D simulation box, assuming for simplicity cylindrical symmetry. As the left panel of Fig. 1 illustrates, this assumption is reasonable. Within the 2D slices we merged the different resolution layers of the simulation into a single one to maintain as much details as possible at every scale. The z and x axes divide the 2D slice of the simulation in four quadrants. When we impose the axial-symmetry and equatorial symmetry of the system (the northern and southern hemispheres are qualitatively the same), in order to reduce the noise of the collimation contours, we perform a simple average our physical quantities among the four quadrants.
+
+The outer boundary of the jet is determined by the pressure balance Eq. (9). At the condition (10), the shape of the jet could be directly found from Eq. (13). The outflow is produced by the Blandford-Znajek mechanism (Blandford & Znajek, 1977), according to which the angular velocity of the magnetosphere, \\Omega, is one half of the angular velocity of the horizon,
+
+\\Omega_{\\rm H}=\\frac{c}{R_{\\rm S}}\\left(\\frac{a}{1+\\sqrt{1-a^{2}}}\\right)\\,  where R_{\\rm S} is the Schwarzschild radius of the black hole, and a is its rotational parameter. The corresponding light cylinder radius of the resulting 2.5 M{}_{\\odot} black hole with a\\approx 0.65 equals R_{\\rm L}=c/\\Omega=2c/\\Omega_{\\rm H}=40 km. With this R_{\\rm L} and the luminosity range that we consider \\gamma, determined by Eq. (11), is smaller than the value obtained by Eq. (16).
+
+We first estimate the collimation contour using Eq. (13), assuming \\gamma=\\gamma_{1} from Eq. (11). Then we calculate the fit for the contour assuming Eq. (15) as the shape of the jet. At this point we have both the pre-factor C and the slope k and we determine \\gamma=\\gamma_{2} from Eq. (16). Along this fit we calculate the radial position R_{\\rm crit} where \\gamma_{2}=\\gamma_{1} and we use the resulting \\gamma up to this radius. We extrapolate the results from R<R_{\\rm crit} to R>R_{\\rm crit} values, but this extrapolation should serve only as a rough indication to the real result in this regime. Figure 3 shows how the flow accelerates with height for different values of the luminosity.
+
+Figure 2 depicts the equilibrium shape of the jet for different values of the jet luminosity. Naturally, the jet opening region widens when the luminosity increases. Also shown in the background (left panel) the ambient pressure of the ejecta, which is maximal at the equator and minimal along the polar cavities. The corresponding fits to the collimation contours are shown on the right panel. For each fitting curve we measured the local slope and we calculate the corresponding angle of the tangent, which translates to the opening angle of the jet. The color scale of the fitting curves corresponds to the local value inferred for the opening angle.
+
+As the luminosity increases the opening angle corresponding to the collimation contour increases monotonically from 1.7^{\\circ} (for L_{\\rm j}\\simeq 10^{47} erg/s) up to 12^{\\circ} (for L_{\\rm j}\\simeq 10^{51} erg/s) at z_{\\rm s}=5000 km. These data are summarized in Table 1 where we report the luminosity, the corresponding opening angle and the Lorentz factor \\gamma_{\\rm s} at z_{\\rm s}=5000 km. We also provide the isotropic equivalent luminosity, L_{\\rm iso,j,s}, at this stage. It is important to note that \\gamma_{\\rm s} is not the final Lorentz factor as the outflow will accelerate and expand sideways later. The value of \\gamma_{\\rm s} also adds a correction factor of the order of \\theta_{\\gamma_{\\rm s}}\\sim 1/\\gamma_{\\rm s} to the final opening angle of the jet. Also shown is \\hat{L}_{\\rm iso,j}\\equiv 4L_{\\rm j}/(\\theta_{\\rm j}+\\theta_{\\gamma_{\\rm s}})^{2}, the effective isotropic equivalent luminosity corresponding to \\theta_{\\rm j}+1/\\gamma_{\\rm s}.
+
+Using the collimation contour and varying the luminosity of the jet L_{\\rm j}, we are able to determine the relation between the luminosity and a desired opening angle \\theta_{\\rm j} of the jet. The corresponding energy E_{\\rm j,coll} to the selected luminosity is simply obtained multiplying L_{\\rm j} by the jet engine working time t_{\\rm e} (which is of the order of seconds or less for sGRBs). This is also crucial to determine whether E_{\\rm j,coll} is bigger or smaller than the energy E_{\\rm j,esc} required by a jet to break out from the ejecta.
+
+Figure 4 describes E_{\\rm j,coll} and E_{\\rm j,esc} versus the azimuthal angle \\theta_{\\rm j} for different snapshot at: t=0.333 s, t=0.667 s and t=1 s. The last one corresponds to the snapshot used in the previous analysis. For the collimation energy we assumed two different values for the jet engine working time: t_{\\rm e}=1 s and t_{\\rm e}=0.1 s.
+
+The uncertainty in the collimation energy at a given angle is calculated varying the height from 3/4 to 5/4 of the chosen reference height at that given time. The required escape energy is calculated for hydrodynamic and magnetic jets.
+
+The plots have a simple interpretation: collimated jets that manage to break out from the ejecta have to be on the E_{\\rm j,coll} line and above E_{\\rm j,esc}. As the former is above the latter we expect that in the relevant energy range of 10^{47}-10^{50} erg jets will break out and will be collimated by the ejecta.
+
+The similarity between the three panels of Fig. 4, and in particular, between the two later snapshots suggests that further evolution of the ejecta would yield comparable results. This point is explored further in Fig. 5 where the collimation angles are shown over time and as a function of the collimation energy. We tracked the evolution from t=0.2 s to t=1.06 s, roughly 1 second after the merger. The early pre-merger and early post-coalescing phase are marked with a grey area, indicating that the calculation of the equilibrium contours in this
+
+\\begin{table}
+
+\\begin{tabular}{|c|c|c|c|c|c|} \\hline \\log(L_{\\rm j}) & \\theta_{\\rm j} & \\log(L_{\\rm iso,j,s}) & \\gamma_{\\rm s} & \\theta_{\\rm j}+\\theta_{\\gamma_{\\rm s}} & \\log(\\hat{L}_{\\rm iso,j}) \\\\ [erg/s] & [deg] & [erg/s] & & [deg] & [erg/s] \\\\ \\hline \\hline
+
+47.5 & 1.7 & 51.1 & 5 & 11.5 & 49.5 \\\\ \\hline
+
+48.0 & 2.4 & 51.4 & 7 & 9.9 & 50.1 \\\\ \\hline
+
+48.5 & 3.3 & 51.6 & 9 & 9.1 & 50.7 \\\\ \\hline
+
+49.0 & 4.4 & 51.8 & 12 & 9.0 & 51.2 \\\\ \\hline
+
+49.5 & 5.7 & 52.1 & 15 & 9.3 & 51.7 \\\\ \\hline
+
+50.0 & 7.3 & 52.4 & 19 & 10.2 & 52.1 \\\\ \\hline
+
+50.5 & 9.5 & 52.7 & 25 & 11.8 & 52.5 \\\\ \\hline
+
+51.0 & 12.6 & 52.9 & 32 & 14.3 & 52.8 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Summary of the parameters calculated for the collimation contours for different luminosities (Fig. 2). The angle \\theta_{\\rm j}, the corresponding isotropic equivalent luminosity L_{\\rm iso,j,s}=4L_{\\rm j}/(\\theta_{\\rm j}+\\theta_{\\gamma_{\\rm s}})^{2} and the Lorentz factor \\gamma_{\\rm s} are the parameters at the end of the calculations, that is at z_{\\rm s}=5000 km. The Lorentz factor continues to increase after the jet emerges from the ejecta and the thermal energy of the jet may cause it to expand as well. In the second-last column we added a correction factor for the expansion, \\theta_{\\gamma_{\\rm s}}\\sim 1/\\gamma_{\\rm s}, to the angle. In the last column we show the isotropic equivalent luminosity \\hat{L}_{\\rm iso,j}\\equiv 4L_{\\rm j}/(\\theta_{\\rm j}+\\theta_{\\gamma_{\\rm s}})^{2} which accounts for this corrected angle. phase is meaningless (pre-merging) or too noisy (early post-merger). The black curves in the plot represent the contour lines for fixed values of \\theta, from 1^{\\circ} to 12^{\\circ}. After an initial rise we see that around t\\simeq 0.6\\,s the curves begins to stabilize around constant values. Close to the end of the simulation an energy of E_{\\rm j,coll}\\sim 10^{49} erg roughly corresponds to a collimation angle of \\theta\\simeq 4.5^{\\circ}.
+
+In the presented calculation we considered a negligible delay between the merger and the jet launch (t_{\\rm d}=0). Table 2 summarizes how the factor [(t_{\\rm d}/t_{\\rm e})^{2}+2] varies as a function of the engine working time t_{\\rm e} and the delay time t_{\\rm d}. If t_{\\rm d}>t_{\\rm e}, for short engine working times t_{\\rm e}, the pre-factor may increase dramatically. This may result in a choked jet that is unable to break out from the expanding ejecta. This effect is negligible for t_{\\rm d}<t_{\\rm e}.
+
+## 5 Implications to GW170817 and other Sgrbs
+
+We begin by considering the implications of these results to the observations of GW170817 and its EM counterparts. As mentioned earlier the multi-messenger observations of GW170817 allowed to put constraints on the general properties of the jet harbored in this BNS merger. The afterglow light curve in combination with the superluminal motion of the jet core (e.g. Mooley et al., 2018) finds a powerful (E_{\\rm j}=10^{49-50} erg) narrow cone, (\\theta<5^{\\circ}) jet. This value is much higher than the required escape energy which is around \\sim 10^{47}-10^{48} ergs. With this energy the E_{\\rm j,coll} (see Fig. 4 and Table 1) corresponds to a collimation angle of \\simeq 4^{\\circ}-7^{\\circ} which is consistent with observations.
+
+The results are also encouraging considering other sGRBs whose E_{\\rm iso,j} is typically significantly weaker than the one implied for the jet in GW170817. For example, Guetta & Piran (2005) and (Wanderman & Piran
+
+\\begin{table}
+
+\\begin{tabular}{|c|c|c|c|c|} \\hline t_{\\rm d}t_{\\rm d} & 0.01 s & 0.1 s & 0.5 s & 1 s \\\\ \\hline
+
+0.1 s & \\sim 2 & 3 & 27 & 100 \\\\ \\hline
+
+0.5 s & \\sim 2 & \\sim 2 & 3 & 6 \\\\ \\hline
+
+1 s & \\sim 2 & \\sim 2 & 2.25 & 3 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Values of the pre-factor [(t_{\\rm d}/t_{\\rm e})^{2}+2] in Eq. (1) as a function of the delay time t_{\\rm d} between the merger time and the jet launch and the engine working time t_{\\rm e} of the launched jet.
+
+2015) find that typical isotropic equivalent luminosity 1 of sGRBs is around 10^{50} erg/s, almost two orders below those at the core of the jet in GW170817. Examination of Fig. 4 and Table 1 shows that even much weaker jets could escape and the overall estimated isotropic equivalent luminosity \\hat{L}_{\\rm iso,j} is within the range of observed values.
+
+Footnote 1: Guetta and Piran (2005) and (Wanderman and Piran, 2015) find that the break in the light curve from a shallow to a steep decline is at L_{*}\\sim 10^{52} erg/s. The average and median luminosities are approximately two orders of magnitude lower.
+
+## 6 Conclusions
+
+We analyzed the data for the merger remnant of a recent numerical general relativistic MHD simulation of a binary neutron star merger with masses of 1.2 M{}_{\\odot} and 1.5 M{}_{\\odot}(Kiuchi et al., 2022). Running up to 1 s after the merger this numerical simulation is the longest carried out so far and with a realistic equation of state, MHD, and neutrino physics it is able to yield a good estimate of the resulting mass ejection. In our analysis we ask the question which kind of jets can break out from the ejecta and be collimated to a narrow angle at the same time. Overall, our analysis suggests that the post-BNS merger ejecta anisotropic structure creates a favorable environment to successfully collimate jets in the energy range seen in sGRBs. This arises because of the almost empty cavity (see Fig. 1) that forms, due to the conservation of the angular momentum, around the rotation axis. It is important to note that the same jets cannot escape in any other direction within the ejecta. This fact emphasizes the importance of the high precision full numerical simulations. Jets that broke out through the cavity would have been choked if the surrounding ejecta had been approximated as spherically symmetric. Another important factor is that the engine operation time cannot be too short as compared to the time delay between the onset of the jet and the merger (see Table 2 and Gottlieb and Nakar (2022).
+
+Previous works showed that jets with a long engine time (t_{\\rm e}\\sim 1 s) and similar luminosities to this work (L_{\\rm j}\\sim 10^{50} erg/s) can pierce merger ejecta in both idealised (isotropically distributed) simulations (Lazzati et al., 2017) and more complex setups originated from GRMHD simulations (Lazzati et al., 2021; Pavan et al., 2021), both based on the setups of Ciolfi et al. (2019)). However, in those works the jet was injected at a few hundred km from the compact source (roughly at 1/3 of the ejecta maximum radius in their setup), which circumvents the problem to carve through the densest near-isotropic ejecta at the center and thus making a direct comparison with our prediction harder.
+
+Our estimates of the luminosity (or energy) of jets that can be both collimated and break out from the ejecta are compatible with observations of GW170817 and its EM counterparts. We find that a jet with energy of \\sim 10^{49-50} erg, will be collimated, by the outflow found in the numerical simulation to \\sim 4^{\\circ}-7^{\\circ} just like the observations suggest. We also find that the range of isotropic equivalent luminosities observed in sGRBs is compatible with the range that we find for jets that can be collimated and break out from the ejecta.
+
+## 7 Acknowledgements
+
+We thank our anonymous referee for a constructive and insightful report. This work was supported by the ERC grants TReX and Multijets (TP, YL and MP) and by Grant-in-Aid for Scientific Research (Grant No. JP20H00158) of Japanese MEXT/JSPS (KK and MS). This work used computational resources of the supercomputer Fugaku provided by RIKEN through the HPCI System Research Project (Project ID: hp220174). The simulation was also performed on Sakura, Cobra, and Raven clusters at the Max Planck Computing and
+
+[MISSING_PAGE_EMPTY:16922]
+
+* Tanvir et al. (2013) Tanvir, N. R., Levan, A. J., Fruchter, A. S., et al. 2013, Nature, 500, 547, doi: 10.1038/nature12505
+
+* Troja et al. (2017) Troja, E., Piro, L., van Eerten, H., et al. 2017, Nature, 551, 71, doi: 10.1038/nature24290
+
+* Wanderman & Piran (2015) Wanderman, D., & Piran, T. 2015, Monthly Notices of the Royal Astronomical Society, 448, 3026, doi: 10.1093/mnras/stv123
+
+* Yang et al. (2015) Yang, B., Jin, Z.-P., Li, X., et al. 2015, Nature Communications, 6, 7323, doi: 10.1038/ncomms8323

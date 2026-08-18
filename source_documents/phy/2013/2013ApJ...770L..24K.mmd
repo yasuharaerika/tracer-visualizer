@@ -1,0 +1,151 @@
+###### Abstract
+
+Starting in 2013 February, _Swift_ has been performing short daily monitoring observations of the G2 gas cloud near Sgr A* with the X-Ray Telescope to determine whether the cloud interaction leads to an increase in the flux from the Galactic center. On 2013 April 24 _Swift_ detected an order of magnitude rise in the X-ray flux from the region near Sgr A*. Initially thought to be a flare from Sgr A*, detection of a short hard X-ray burst from the same region by the Burst Alert Telescope suggested that the flare was from an unresolved new Soft Gamma Repeater, SGR J1745-29. Here we present the discovery of SGR J1745-29 by _Swift_, including analysis of data before, during, and after the burst. We find that the spectrum in the 0.3-10 keV range is well fit by an absorbed blackbody model with kT_{\\rm BB}\\simeq 1 keV and absorption consistent with previously measured values from the quiescent emission from Sgr A*, strongly suggesting that this source is at a similar distance. Only one SGR burst has been detected so far from the new source, and the persistent light curve shows little evidence of decay in approximately 2 weeks of monitoring after outburst. We discuss this light curve trend and compare it with those of other well covered SGR outbursts. We suggest that SGR J1745-29 belongs to an emerging subclass of magnetars characterized by low burst rates and prolonged steady X-ray emission 1-2 weeks after outburst onset.
+
+Subject headings:pulsars: general - pulsars: individual (SGR J1745-29) - stars: neutron - X-rays: bursts +
+
+Footnote †: slugcomment: To appear in ApJ Letters; Received 2013 May 8; accepted 2013 May 13.
+
+## 1. Introduction
+
+Gillessen et al. (2012) recently reported that a gas cloud referred to as "G2" is expected to pass within 3100 R_{G} of Sagittarius (Sgr) A* as early as mid-2013 (Gillessen et al., 2013). If G2 is indeed a gas cloud (however, see Phifer et al., 2013), its tidal disruption may result in accretion onto Sgr A*, which in turn could lead to Sgr A* entering an X-ray active state. The anticipation of this event has led to monitoring programs of Sgr A* over a broad range of wavelengths starting early 2013.
+
+NASA's _Swift_ satellite has a unique rapid slewing capability, which allows its moderate sensitivity X-Ray Telescope (XRT; Burrows et al., 2005a) to perform short (approximately 1 ks) daily monitoring of Sgr A*. Daily observations are being carried out between 2013 February 2 and 2013 November 2, except for a monthly 2-3 day drop out when Sgr A* is too close to the Moon. Using XRT data from an observation at 17:34 UT on 2013 April 24, Degenaar et al. (2013a) reported an increase in the X-ray flux from the vicinity of Sgr A* by an order of magnitude above its quiescent level. An XRT observation on the previous day did not show any evidence of enhanced emission from this region. A follow-up observation on 2013 April 25 at 15:58 UT (Reynolds et al., 2013) showed that the enhanced emission persisted much longer than typical Sgr A* flare events, which only last tens of minutes to hours (e.g., Baganoff et al., 2001; Nowak et al., 2012), making this an unusual flaring episode.
+
+At 19:15 UT on 2013 April 25, during a scheduled observation of Sgr A*, the _Swift_ Burst Alert Telescope (BAT; Barthelmy et al., 2005) triggered on a short (\\sim 30 ms), hard X-ray burst at a position consistent with Sgr A* (Barthelmy et al., 2013). Kennea et al. (2013) reported that the characteristics of this burst were consistent with Soft Gamma Repeater (SGR) bursts seen by BAT, and therefore suggested that both burst and enhanced emission were from a new SGR source too close to Sgr A* for the XRT (18{}^{\\prime\\prime} HPD, 7{}^{\\prime\\prime} FWHM) to resolve.
+
+SGRs are members of a very small group of sources (26 known to date1), which are suggested to be magnetars (slowly rotating neutron stars with extreme surface dipole magnetic fields of >10^{14} G); Duncan & Thompson (1992); Kouveliotou et al. (1998). Historically, SGRs have been discovered when they entered a burst active period emitting multiple hard X-ray/soft \\gamma-ray bursts at irregular intervals; the first such source was discovered in 1987 (for reviews on magnetars see Woods & Thompson, 2006; Mereghetti, 2008 and references therein). All but two magnetars lie on the Galactic plane with approximately half of their population concentrated between \\sim 7^{\\circ} and \\sim 30^{\\circ} from the Galactic center.
+
+Footnote 1: [http://www.physics.mcgill.ca/](http://www.physics.mcgill.ca/)\\simpulsar/magnetar/main.html
+
+A _NuSTAR_ follow-up observation on 2013 April 26 found a \\sim 3.76 s periodicity (Mori et al., 2013a), well within the range of magnetar periods (2-12 s; Woods & Thompson, 2006; Mereghetti, 2008), further confirming this source as a likely new SGR. A subsequent _Chandra_ observation on 2013April 29 found a new X-ray source \\sim 3\\arcsec away from Sgr A* (Rea et al., 2013) and confirmed the presence of the 3.76 s period. Later _Swift_ observations in Windowed Timing mode allowed a measurement of \\dot{P}=2.5\\pm 1.1\\times 10^{-11}, implying a dipole magnetic field of B=3\\times 10^{14} G, consistent with this source being a magnetar (Gotthelf et al., 2013). The source was designated SGR J1745-29 (Gehrels et al., 2013).
+
+SGR J1745-29 was observed with the Effelsberg, Green Bank, Parkes and Sardinia radio telescopes (Eatough et al., 2013; Burgay et al., 2013; Buttu et al., 2013), which also confirmed the 3.76s period, making SGR J1745-29 the fourth magnetar detected in radio wavelengths. Eatough et al. (2013) find a dispersion measure consistent with Sgr A*.
+
+In this letter we discuss the discovery of SGR J1745-29 by _Swift_, reporting on the pre- and post-burst X-ray emission from the source, including spectral and temporal analyses, and a detailed report on the BAT detection of the SGR burst. Finally we discuss similarities between SGR J1745-29 and the overall magnetar population, focusing on the bursting behavior and flux evolution, and the implications of finding an SGR at the center of our galaxy. This letter is a companion to Mori et al. (2013b), which describes pulsar timing and broad band spectral analysis of SGR J1745-29 utilizing primarily _NuSTAR_ data.
+
+## 2. Observations
+
+_Swift_ observed the region around Sgr A* on an approximately daily basis beginning 2013 February 03. The detection of increased emission from the region initiated additional observations through the _Swift_ Target of Opportunity program. As of 2013 May 5, a total of 70.6 ks of time has been devoted to observing the Sgr A* region with XRT. Further, the BAT trigger on the SGR J1745-29 burst, resulted in \\sim 20 ks of automated follow-up observations. Note that observations were not performed on 2013 April 28 to 2013 April 30 due to the field being too close to the Moon for _Swift_ to observe. A summary of the _Swift_ observations used in this letter is given in Table 1.
+
+## 3. Data Analysis
+
+We analyzed the _Swift_ data with the standard _Swift_ analysis tools version 4.0, part of HEAsoft 6.13. XRT spectral fitting was performed in XSPEC (Arnaud, 1996) with the v13 CALDB XRT Photon Counting (PC) mode RMFs and ARFs. The ARF files used time-dependent exposure maps to correct for the presence of hot columns and hot pixels on the total exposure. All errors are quoted at 90% confidence, and coordinates are given in the J2000 epoch.
+
+### Rise from Quiescence
+
+We extracted a light-curve of the region that includes SGR J1745-29 and Sgr A*, using an extraction region of radius 10'' centered on the position of Sgr A*. Compared to the previous quiescent count rates seen from this region1, the data taken between 2013 February 2 and 2013 April 23 show no evidence of enhanced emission, with an XRT count rate consistent with a non-background subtracted mean of 0.011 s{}^{-1}.
+
+Footnote 1: [http://www.swift-sgra.com](http://www.swift-sgra.com)
+
+Starting with the observation taken on 2013 April 24 at 17:32 UT, approximately 1.1 days before the BAT-detected burst, the XRT count rate from this region had risen to 0.11 \\pm 0.1 s{}^{-1}. The previous observation ending 2013 April 16:28 UT showed no evidence of enhanced emission, and, therefore, we conclude that SGR J1745-29 became active within a period of \\sim 25 hr.
+
+### Localization of SGR J1745-29
+
+The initial localizations of the XRT-detected point source reported by Barthelmy et al. (2013) and Kennea et al. (2013) were consistent with the position of both Sgr A* and the subsequent _Chandra_ localization of SGR J1745-29. Using field stars in the UV/Optical Telescope (Roming et al., 2005) field of view, we improved the astrometry of the XRT position, using the method of Goad et al. (2007) and Evans et al. (2009). We find a position of \\alpha=17^{\\rm h}45^{\\rm m}40^{\\rm s}21, \\delta=-29^{\\circ}00^{\\prime}29^{\\prime\\prime}2 with an uncertainty of 1''9 (radius, 90% confidence). This error circle rules out this emission coming from Sgr A*, which lies 2''5 away, at 98% confidence. The center of the _Chandra_ error circle (Rea et al., 2013) lies 1''2 from this position. The relative positions of the error circles are shown in Figure 1.
+
+### Detection of the SGR Burst
+
+The _Swift_ BAT triggered on 2013 April 25 at 19:15:25 UT on a short hard X-ray burst (Figure 2), detected at 10.4\\sigma significance, from \\alpha=17^{\\rm h}45^{\\rm m}33^{\\rm s}, \\delta=-28^{\\circ}58^{\\prime}55\\arcsec 2, with an uncertainty of 2\\farcs1 radius (90% confidence, including systematic and statistical errors). The XRT localization of SGR J1745-29 lies marginally (0\\arcmin.05) outside this error circle. The burst consists of a single peak with duration of T_{90}=0.028\\pm 0.009 s.
+
+The time-averaged spectrum of the burst is best fit by a single blackbody model, with kT_{\\rm BB}=9.2\\pm 0.8 keV (\\chi^{2}=60.1 for 59 degrees of freedom); this corresponds to a blackbody emission region of radius 1.5^{+0.4}_{-0.3} km assuming a distance of 8 kpc. The burst fluence in the BAT 15-150 keV band was 7.8\\pm 1.8\\times 10^{-9} erg cm{}^{-2}. A double-blackbody model, often favored for SGR bursts (e.g., Lin et al., 2012), was not required to fit the BAT spectrum.
+
+The characteristics of this burst are very similar to those of other SGR bursts seen by BAT, e.g., those
+
+\\begin{table}
+
+\\begin{tabular}{c c c c} \\hline \\hline ObsID & Start Time (UT) & End Time (UT) & Exp.(s) \\\\ \\hline
+
+00091736015a  & 2013 Apr 20 22:30:02 & 2013 Apr 20 22:48:59 & 965 \\\\
+
+00091736017a  & 2013 Apr 22 17:42:02 & 2013 Apr 22 18:01:59 & 1030 \\\\
+
+00091736018a  & 2013 Apr 23 14:45:02 & 2013 Apr 23 16:28:59 & 920 \\\\
+
+00091721004 & 2013 Apr 24 17:32:02 & 2013 Apr 24 17:151:58 & 1065 \\\\
+
+00035652039 & 2013 Apr 25 14:35:02 & 2013 Apr 25 16:07:57 & 995 \\\\
+
+00091736019 & 2013 Apr 25 19:11:02 & 2013 Apr 25 19:30:58 & 1010 \\\\
+
+000544901006  & 2013 Apr 25 19:31:02 & 2013 Apr 25 20:49:42 & 310 \\\\
+
+005544901001  & 2013 Apr 25 20:51:33 & 2013 Apr 26 14:55:54 & 19970 \\\\
+
+00091736020 & 2013 Apr 26 05:16:02 & 2013 Apr 26 06:52:52 & 1060 \\\\
+
+00035650242b  & 2013 Apr 26 16:03:02 & 2013 Apr 27 16:23:58 & 4715 \\\\
+
+00091736021 & 2013 May 27 14:28:42 & 2013 Apr 27 214:47:58 & 990 \\\\
+
+00091721005 & 2013 May 08 10:32:02 & 2013 May 08 08:31:58 & 945 \\\\
+
+00091736022 & 2013 May 02 22:52:02 & 2013 May 02 23:06:11 & 710 \\\\
+
+00091736024 & 2013 May 04 21:19:02 & 2013 May 04 21:37:59 & 970 \\\\
+
+00091736025 & 2013 May 05 23:05:02 & 2013 May 05 23:27:57 & 1250 \\\\
+
+00091736026 & 2013 May 06 21:26:02 & 2013 May 06 21:48:59 & 1185 \\\\
+
+00091736027 & 2013 May 07 16:41:02 & 2013 May 07 16:59:57 & 960 \\\\
+
+00091736028 & 2013 May 08 00:30:02 & 2013 May 08 00:49:01 & 955 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1Log of XRT PC Mode Observations Used in This Letter. seen from SGR J1833-0832 (Gogus et al., 2010) and Swift J1834.9-0846 (Kargaltsev et al., 2012). As there exists no known SGR within or near the BAT error circle, we conclude that this burst is from a previously undiscovered SGR in the Galactic Center.
+
+A scheduled observation of Sgr A* began at 19:14:10 UT, 75 s before the BAT trigger. A search of the XRT light-curve from this observation shows no evidence of an X-ray counterpart of the burst, with only a single count in the 2.507 s PC frame that covered the burst. To determine if the non-detection of the burst in XRT is consistent with the BAT detection, we calculated the predicted number of X-ray counts that would be seen in the 0.3-10 keV XRT passband. Using a model of an absorbed blackbody (TBabs*bbodyrad) with N_{\\rm H} set to the average value (see Section 3.4), and the BAT fluence and kT_{\\rm BB} values, we predicted <1 counts from the burst, consistent with its non-detection by XRT.
+
+At the time of writing only one burst from SGR J1745-29 has been seen by BAT. However, given that SGR J1745-29 turned on between 25 and 50 hr before this burst, it is possible that there were earlier bursts, not seen by BAT, which precipitated this turn-on. We examined the _Swift_ observing plan to determine the BAT temporal coverage between the XRT observations on April 23 and 24. During this time SGR J1745-29 was only inside the BAT >50% coded field of view \\sim 4% of the time, and therefore earlier bursts cannot be ruled out.
+
+We have also searched for untriggered events from SGR J1745-29 in the _Fermi_/Gamma Ray Burst Monitor (GBM; Meegan et al., 2009) Time-Tagged Event data with 16 ms time resolution. We did not find any burst in the data taken pre-outburst or post-outburst from the SGR J1745-29 direction. However, the search also did not reveal any detection at the time of the BAT burst, suggesting that GBM may be insensitive to such weak bursts.
+
+### Swift/XRT Spectral Analysis
+
+To characterize the XRT spectrum of SGR J1745-29 we extracted a region centered on the best fitted position in XRT detector coordinates of the transient, using a radius of 10{}^{\\prime\\prime}. This follows the method of Degenaar et al. (2013b), to maximize the signal from SGR J1745-29 and minimize the effect of the bright complex diffuse emission near Sgr A*. The background region was taken from an annulus with inner and outer radii of 20{}^{\\prime\\prime} and 60{}^{\\prime\\prime}, respectively. We fit absorption using the TBabs model with the abundances set to the those of Wilms et al. (2000) and the cross-sections set to the values of Verner et al. (1996).
+
+We fit the time-averaged spectrum for the longest single exposure taken post-burst (ObsID 00554491001, with an exposure time of 19564 s). The XRT spectrum is dominated by the effects of high absorption, with negligible X-ray emission below \\sim 2 keV. The spectrum is well fit with either an absorbed blackbody model or an absorbed power-law model. However, the best-fit photon index for the power-law model (\\Gamma=3.5\\pm 0.3) is very soft, suggesting that the spectrum is likely thermal in nature.
+
+The parameters of the absorbed blackbody model are N_{\\rm H}=13.7^{+1.3}_{-1.2}\\times 10^{22} cm{}^{-2} and kT_{\\rm BB}=1.06\\pm 0.06 keV (\\chi^{2}=136.42 for 136 dof). The observed absorption is consistent within errors with the quiescent spectrum of Sgr A* reported by Nowak et al. (2012). The addition of extra continuum components, e.g., the blackbody plus power-law model often used to parameterize the spectra of SGRs (Kaspi & Boydstun, 2010), did not statistically improve the fit. However, _NuSTAR_ results show that the spectrum above 10 keV does require a hard power-law component to fit the data (Mori et al., 2013b).
+
+The average observed flux in the 0.3-10 keV band is 2.15^{+0.09}_{-0.08}\\times 10^{-11} erg s{}^{-1} cm{}^{-1} (4.77^{+0.40}_{-0.34}\\times 10^{-11} erg s{}^{-1} cm{}^{-2}, corrected for absorption). Assuming a distance of 8 kpc, this gives a luminosity of 3.6\\pm 0.3\\times 10^{35} erg s{}^{-1} (0.3-10 keV). The corresponding blackbody emission radius is equal to 1.44^{+0.20}_{-0.16} km, with the caveat that unfitted hard continuum components may be contributing to the XRT flux. We note, however, that this radius is consistent within errors to the value derived from the BAT burst spectral fit.
+
+### Investigation of Spectral and Flux Evolution
+
+To determine if there is any spectral or flux evolution detectable in the _Swift_ observations, we performed time resolved
+
+Figure 1.— Localization error circles of SGR J1745-29. Shown here are the XRT PSF-fitted position (XRT PSF), the XRT position with astrometry correction (XRT end), the _Chandra_ position (Rea et al., 2013) and the radio position of Sgr A*. These error circles are over-plotted on a Chandra archival image of Sgr A*.
+
+Figure 2.— Light curve of the BAT detected burst from SGR J1745-29. spectroscopy of the XRT data in Table 1. To maximize sensitivity to any changes in the blackbody temperature and emission radius, we fixed the absorption to the value reported in Section 3.4 and utilized Cash statistics (Cash, 1979), which generally provide more accurate fit parameters for low counts spectra.
+
+Because _Swift_ is in a low Earth orbit, observations longer than \\sim 1.8 ks are broken into multiple "snapshots", with start times separated roughly by the _Swift_ orbital period (96 minutes). We extracted XRT spectra for all snapshots longer than 100s. To maximize the quality of the data, we grouped adjacent snapshots within a single observation to achieve a minimum exposure time of 2 ks whenever possible.
+
+We performed a similar analysis of the pre-burst data, with kT_{\\rm BB} fixed to the value given in Section 3.4, and calculated the 90% confidence upper limit on the flux.
+
+Absorption-corrected flux values (including upper limits) and kT_{\\rm BB} are plotted in Figure 3. We find that all spectral parameters are constant within errors, with no evidence of spectral evolution, and an average kT_{BB}=1.02\\pm 0.04 keV. For observations taken between 2013 April 25 and 2013 May 13 the flux is statistically consistent with being constant, averaging 4.9\\pm 0.2\\times 10^{-11} erg s{}^{-1} cm{}^{-2}. Long term monitoring will be necessary to constrain any decline in the source flux.
+
+## 4. Discussion
+
+_Swift_ has observed the sudden turn-on of a new transient source near Sgr A*. This, combined with the BAT detection of a short hard X-ray burst from a position consistent with the new transient, suggests this transient is a new SGR in the Galactic Center, SGR J1745-29.
+
+The soft X-ray spectrum of SGR J1745-29, although hotter than the typical magnetar kT_{\\rm BB}\\sim 0.5 keV value (Woods & Thompson, 2006), is consistent with the temperature seen in some SGRs, for example Swift J1834.9-0846 (Kargaltsev et al., 2012). Although we detect no evidence of fading, not all SGR light-curves show detectable fading within weeks after the initial outburst (e.g. SGR J1833-0832, Gogus et al., 2010; see Figure 4). Finally, _NuSTAR_, _Chandra_, _Swift_, and several radio telescopes have measured a pulsar period of \\sim 3.76 s, consistent with the range of periods seen from SGRs, and reported measurements of \\dot{P}(Gotthelf et al., 2013; Mori et al., 2013b) suggest a magnetic field of a few\\times 10^{14} G, in the expected range for magnetars (Woods & Thompson, 2006).
+
+The 3{}^{\\prime\\prime} separation puts SGR J1745-29 at a projected distance of \\sim 0.1 pc from Sgr A*. Given the apparently similar absorption column, we argue that SGR J1745-29 is likely located close to Sgr A*. At the projected distance, the effects of Sgr A* on SGR J1745-29 will be small: we estimate that the gravitational acceleration due to Sgr A* will contribute no more than \\pm 2\\times 10^{-13} to the apparent \\dot{P}, assuming nominal values of 4\\times 10^{6}M_{\\odot} and 8 kpc distance for the central black hole. We note that even with the constraints from the absorption column, the true distance of SGR J1745-29 from Sgr A* remains highly uncertain.
+
+As \\sim 50% of known magnetars lie within 30 deg of the Galactic Center, discovering a new SGR in this region area was not unexpected, but the close proximity of this source to Sgr A*, combined with the temporal coincidence with the anticipated encounter of G2 with Sgr A*, made this event intriguing. However, it seems unlikely that the turn-on of SGR J1745-29 is related to any interaction with G2, as G2 is currently within 1{}^{\\prime\\prime} of Sgr A* (Gillessen et al., 2013), whereas SGR J1745-29 is 3{}^{\\prime\\prime} away. We conclude that the onset of emission from SGR J1745-29 at this time is coincidental.
+
+The Galactic Center is very well studied in X-rays, allowing us to place limits on burst and soft X-ray outburst emission from SGR J1745-29 in the recent past. We estimate that _Swift_/BAT spends approximately 3.5 Ms year{}^{-1} covering the Sgr A* region, meaning that any repeated flaring activity in the past eight years would likely have been seen. _Swift_ monitoring observations of the Galactic Center region with XRT have been on-going since 2006 February 24, so we can rule out any similar outburst with high confidence for the past \\sim 7 yr.
+
+_Chandra_ has performed regular observations of this region starting 1999 September 21, and did not detect SGR J1745-29 previously (Muno et al., 2009).
+
+The excess diffuse emission, that is likely produced by col
+
+Figure 4.— Absorption-corrected blackbody model flux of SGR J1745-29 (stars) compared with other SGRs. Data are reproduced from Rea et al. (2009) and Gogus et al. (2010).
+
+Figure 3.— Upper panel: _Swift_/XRT flux evolution of SGR J1745-29, in the 0.3-10 keV band, based on a single blackbody model fit corrected for absorption; upper limits (shown by arrows) based on the average spectral parameters are calculated for times before the outburst began in XRT. Lower panel: temperature (kT) evolution of time resolved spectra of the _Swift_/XRT data for a single blackbody model. liding winds of IRS 16SW and other nearby windy stars, makes it hard to estimate an upper limit for the quiescent source state. However, Mori et al. (2013b) conservatively estimate \\sim 10^{32} erg s{}^{-1} (2-10 keV), based on the quiescent limit on CXOGC J174540.0-290031 from Muno et al. (2005). We note that SGR J1833-0832 was also observed pre-outburst by _Chandra_ and was not detected, with an upper limit of 3.4\\times 10^{-13} erg cm{}^{-2} s{}^{-1} (Gogus et al., 2010), which is equivalent to a luminosity of 4\\times 10^{32} erg s{}^{-1} for an assumed distance of 5.7 kpc, close to the _Chandra_ limit on SGR J1745-29.
+
+Since 2008 August, five new magnetar candidates have been discovered by _Swift_ and _Fermi_/GBM. Four of these have intriguing differences from the previous members of the magnetar family: they are all transient sources discovered by emitting typical magnetar short bursts, which became burst inactive after exhibiting one or two relatively dim events, and their persistent X-ray spectra are different than the rest of the magnetar sources; they are typically well described by a single blackbody function with a temperature around 1 keV (0.3-10 keV). SGR J1745-29 shares these common properties. In Figure 4 we present the unabsorbed flux trend of the persistent X-ray emission from SGR J1745-29 following the outburst onset, along with that of a set of transient and persistent magnetars. It is striking to note that the X-ray flux of both SGR J1745-29 and SGR J1833-0832 remained fairly constant in the first 10-20 days into the outburst, while that of other transient magnetars (such as, SGR J1627-41 or SGR J1550-5418) declined steadily following the outburst onset. We, therefore, suggest that SGRs with low bursting rates possess slightly different characteristics than the bulk of the population. We know from the spin and spin-down rates of these sources that their dipole (or more local multi-pole magnetic field) is in the magnetar regime. It is, however, possible that these sources cannot efficiently radiate away the energy released by events leading to bursts, therefore, cannot appear as prolific bursters. Instead, the energy released in a burst event could be trapped within the system, which could then result in crustal heating near the poles. It is, then plausible that further energy release from the neutron star, possibly as bursts, is continuously trapped, resulting in the constant persistent X-ray flux seen in SGR J1745-29 and other SGRs with apparent low bursting rates. In this scenario, we would expect the SGR J1745-29 flux to decline when the active episode ends, typically after 1-2 weeks.
+
+This work is supported by NASA grant NAS5-00135. This work made use of data supplied by the UK Swift Science Data Centre at the University of Leicester. We acknowledge the use of public data from the _Swift_ data archive. This research has made use of the XRT Data Analysis Software (XRTDAS) developed under the responsibility of the ASI Science Data Center (ASDC), Italy. _Facility:_ Swift

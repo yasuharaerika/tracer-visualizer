@@ -1,0 +1,179 @@
+###### Abstract
+
+Reconnection of alternating magnetic fields is an important energy transformation mechanism in Poynting dominated outflows. We show that the reconnection is facilitated by the Kruskal-Schwarzschild instability of current sheets separating the oppositely directed fields. This instability, which is a magnetic counterpart of the Rayleigh-Taylor instability, develops if the flow is accelerated. Then the plasma drips out of the current sheet providing conditions for rapid reconnection. Since the magnetic dissipation leads to the flow acceleration, the process is self-sustaining. In pulsar winds, this process could barely compete with the earlier proposed dissipation mechanisms. However, the novel mechanism turns out to be very efficient at AGN and GRB conditions. galaxies:jets - gamma-rays:bursts - MHD - relativity
+
+## 1 Introduction
+
+It is now widely agreed that relativistic outflows are launched hydromagnetically. The commonly invoked scenario is that a strong magnetic field in a rapidly rotating compact object serves to convert the rotational energy into the energy of the outflow (see, e.g., the review by Spruit (2010)). The main advantage of the magnetic launch mechanism is that the magnetic field lines, like driving belts, could transfer the rotational energy to a low density periphery of the central engine thus forming a baryon pure outflow with the energy per particle significantly exceeding the rest mass energy. Such outflows potentially capable of reaching relativistic velocities. Since the energy is transported, at least initially, in the form of the Poynting flux, the question arises of how and where the electromagnetic energy is eventually transformed to the plasma energy. An important point is that the flow could be considered as true matter dominated only when the electro-magnetic energy falls well below the equipartition level because only then the efficient shock dissipation becomes possible (Kennel & Coroniti, 1984).
+
+In the scope of ideal magnetohydrodynamics (MHD), the energy could in principle be transferred to the plasma via gradual acceleration by electromagnetic stresses. The problem is that in relativistic flows, the magnetic and electric forces nearly compensate each other so that the flow is nearly ballistic. It turns out that unconfined flows stops accelerating when still being highly Poynting dominated. A more efficient acceleration regime is achieved if the flow is collimated by an external medium. Such a configuration arises naturally in gamma-ray bursts (GRBs), where the relativistic jet from the collapsing stellar core pushes its way through the stellar envelope. In accreting systems, the outflow from the rotating black hole could be collimated by the pressure of a slow (and generally magnetized) wind from the outer parts of the accretion disc. However, a systematic study shows (Komissarov et al. 2007, 2009; Tchekhovskoy et al. 2008, 2010; Lyubarsky 2009) that even though externally confined flows could in principle be accelerated till the equipartition between the kinetic and magnetic energy, the conditions of that are rather restrictive. Moreover, the true matter dominated stage could in any case be achieved only at exponentially large distances (Lyubarsky 2010).
+
+An efficient conversion of the electro-magnetic into the plasma energy was claimed for impulsive flows (Granot et al. 2010,; Lyutikov 2010a,b). In a freely expanding shell, the magnetic energy is indeed eventually transformed into the kinetic energy. However, Levinson (2010) demonstrated that in the real world, it is difficult to provide conditions for the free expansion because even a tenuous ambient medium hampers the expansion. Intermittent ejection of small sub-shells could hardly help because the shells merge while still highly magnetized unless the distance between them is much larger than their width.
+
+The problem of the energy conversion could be resolved if one abandons the assumption of no dissipation. However, one has to find a reliable dissipation mechanism in highly conductive space plasma. One of the ideas is that some sort of MHD instability destroys the regular structure of the magnetic field thus triggering the anomalous dissipation. The kink instability is the best candidate (Begelman 1998; Giannios & Spruit 2006). However, any global MHD instability could develop only if the proper Alfven crossing time is less than the propagation time, which implies \\theta\\gamma<1, where \\gamma is the jet Lorentz factor, \\theta the opening angle. This condition is rather restrictive; for example it could hardly be fulfilled in GRBs (e.g. Tchekhovskoy et al. 2010). Even if the kink instability does develop, it is still not clear whether the flow is disrupted or just helically distorted. The impact of the instability on the jet structure could be studied only with three-dimensional numerical simulations. Till now only a few attempts was made, the results still being controversial (Moll & Spruit 2008; (McKinney & Blandford 2008).
+
+Magnetic dissipation could occur if a small-scale structure with oppositely directed fields preexisted in the flow. In pulsar winds, such a structure arises naturally because the magnetic field in the equatorial belt of the flow changes sign every half of period. It is the annihilation of the oppositely directed fields that provides the main energy conversion mechanisms in pulsar winds (Coroniti 1990; Lyubarsky & Kirk 2001; Kirk & Skjaeraasen 2003; Petri & Lyubarsky 2007; Zenitani & Hoshino 2007; see also the review by Kirk et al. (2009)). The outflow with alternating fields could in principle arise also in accreting systems if the magnetic field in the central engine changes sign. Then independently of the exact field configuration at the launch site, the flow expansion ensures that in the far zone, the overall magnetic structure is that of the "striped wind" with stripes of oppositely directed azimuthal fields separated by current sheets. The width of the stripes is small as compared with the scale of the flow therefore locally the structure of the flow is very simple: plane current sheets separate domains with oppositely directed magnetic fields. Within the current sheets, the magnetic field changes sign and the pressure balance is maintained by the thermal pressure of the plasma.
+
+Efficient annihilation of oppositely directed magnetic fields across the current sheet implies some sort of strong anomalous resistivity. The necessary condition is that the drift velocity of the current carriers becomes large enough, which is equivalent to the condition that the particle Larmor radius is not small as compared with the thickness of the sheet. Since the current in the sheets decays as r^{-1} whereas the plasma density drops down as r^{-2}, the anomalous dissipation due to the charge starvation should inevitably occur at a large enough distance from the source. In pulsar winds, the plasma density is extremely low so that the alternating fields do dissipate in the far zone of the wind or at the wind termination shock (Kirk & Skjaeraasen 2003; Petri & Lyubarsky 2007; Zenitani & Hoshino 2007). However in accreting systems, the outflow is expected to be heavily loaded by the plasma from the accretion disk (and in GRBs, also by the plasma from the progenitor star (Levinson & Eichler 2003)) therefore the charge starvation conditions are achieved only at unreasonably large distances.
+
+Spruit et al. (2001) postulated that in GRB outflows, the alternating fields annihilate with a rate \\sim 0.1 of the speed of light. The model based on this assumption is capable of explaining many essential features of GRBs (Drenkhahn 2002; Drenkhahn & Spruit 2002; Giannios 2006, 2008; Giannios & Spruit 2007). The problem is that the reconnection rate of the order of 10% from the Alfven velocity is the maximal possible reconnection rate, which is achieved only at special conditions (see review by Yamada et al. 2010). For example, there is practically no reconnection across the heliospheric current sheet, which is a prototype of large-scale current sheets in any astrophysical outflow.
+
+In this Letter, we propose a mechanism for fast reconnection of the alternating fields in Poynting dominated outflows. The basic idea is the following. If the flow is accelerated (or decelerated), an effective gravity force appears in the proper plasma frame so that the hot plasma within the current sheet is supported against the gravity force by the magnetic pressure. Such a configuration is known to be unstable with respect to the Kruskal-Schwarzschild instability, which is a magnetic counterpart of the Rayleigh-Taylor instability. Under the influence of the effective gravity force, the plasma could drip down between the magnetic field lines (e.g. Infeld (1989)) so that bridges between trickles thin out until the current sheet tears (Fig. 1). Thus the instability facilitates the reconnection. An important point is that the magnetic dissipation forces the flow to accelerate (Lyubarsky & Kirk, 2001; Drenkhahn, 2002; Drenkhahn & Spruit, 2002; Kirk & Skjaeraasen, 2003) therefore the process is self-sustaining: the acceleration is an aid to the reconnection whereas the reconnection promotes the acceleration. In this Letter, we show that the alternating fields could be completely dissipated by this mechanism and find the characteristic dissipation scale.
+
+## 2 Kruskal-Schwarzschild instability of the current sheet
+
+Let us consider a hot, nonmagnetized plasma slab, 0<z<\\Delta, separating domains with oppositely directed magnetic fields. Let the field be directed along the y axis. We assume that this structure is accelerated in z direction; then an effective downward gravity force arises in the proper frame of the flow. In the flow frame, the continuity and Euler equations for slow motions are written as
+
+\\frac{\\partial n}{\\partial t}+\\nabla\\cdot n{\\bf v}=0; 
+
+h\\frac{\\partial{\\bf v}}{\\partial t}=-c^{2}\\nabla p+h{\\bf g};  where g is an effective gravity,
+
+h=mnc^{2}+\\frac{\\Gamma}{\\Gamma-1}p  the specific enthalpy, \\Gamma the adiabatic index.
+
+In the strongly magnetized domain, the flux freezing condition ties the plasma and the magnetic field together. Therefore when considering flat motions perpendicular to the magnetic field (v_{y}=0), one can take B/n=\\it const. This implies the effective equation of state p=B^{2}/8\\pi\\propto n^{2}; h=B^{2}/4\\pi=2p so that one can describe the magnetized domain by Eqs. (1), (2) and (3) with m=0 and \\Gamma=2.
+
+We consider evolution of small perturbations, h=h_{0}+h_{1}, p=p_{0}+p_{1}, n=n_{0}+n_{1}where the unperturbed state satisfies the equilibrium equation
+
+c^{2}\\frac{dp_{0}}{dz}=-gh_{0}. 
+
+We assume that the initial state is nearly homogeneous, which implies
+
+gh_{0}\\Delta\\ll c^{2}p_{0}. 
+
+Both in the magnetized domain and in the relativistically hot slab, p\\sim h therefore this condition could be written as
+
+\\Delta\\ll c^{2}/g. 
+
+Stability analysis implies harmonic perturbations of the form \\exp(-i\\omega t+ikx). In this case, Eqs. (1) and (2) are reduced to
+
+-i\\omega n_{1}+n_{0}\\left(ikv_{x}+\\frac{dv_{z}}{dz}\\right)=0;  \\omega h_{0}v_{x}=kc^{2}p_{1}; (8) -i\\omega h_{0}v_{z}=-c^{2}\\frac{dp_{1}}{dz}-gh_{1}. 
+
+Eliminating velocities, one gets
+
+\\frac{d^{2}p_{1}}{dz^{2}}+\\frac{g}{c^{2}}\\frac{dh_{1}}{dz}-k^{2}p_{1}+\\frac{ \\omega^{2}h_{0}}{c^{2}n_{0}}n_{1}=0. 
+
+One can express p_{1} via n_{1} making use of Eq. (3) and the thermodynamic identity d(h/n)=dp/n; this yields
+
+p_{1}=(\\Gamma-1)\\left(\\frac{h_{0}}{n_{0}}-mc^{2}\\right)n_{1}. 
+
+Now one can write the closed equation for n_{1}:
+
+\\frac{\\Gamma p_{0}}{n_{0}}\\frac{d^{2}n_{1}}{dz^{2}}+g\\left(m+\\frac{\\Gamma^{2}} {\\Gamma-1}\\frac{p_{0}}{c^{2}n_{0}}\\right)\\frac{dn_{1}}{dz}+\\left(\\frac{\\omega^ {2}}{c^{2}}\\frac{h_{0}}{n_{0}}-k^{2}\\frac{\\Gamma p_{0}}{n_{0}}\\right)n_{1}=0. 
+
+Note that we implicitly used the condition (6) that the system is nearly homogeneous.
+
+Looking for the solution in the form n_{1}\\propto\\exp\\kappa z, one finds
+
+\\kappa=-\\frac{g}{2c^{2}}\\left(\\frac{\\Gamma}{\\Gamma-1}+\\frac{mn_{0}c^{2}}{ \\Gamma p_{0}}\\right)\\pm\\sqrt{\\frac{g^{2}}{4c^{4}}\\left(\\frac{\\Gamma}{\\Gamma-1} +\\frac{mn_{0}c^{2}}{\\Gamma p_{0}}\\right)^{2}+k^{2}-\\frac{h_{0}}{\\Gamma p_{0}} \\frac{\\omega^{2}}{c^{2}}}. 
+
+The condition (6) suggests that for k\\Delta\\gtrsim 1, one can neglect the terms with g as compared with those with k. Qualitative considerations, which will be justified by the exact solution,show that the growth rate is determined by the free-fall time-scale, \\omega\\sim\\sqrt{kg}\\ll k, therefore one can also neglect the term with \\omega. Then Eq. (13) is reduced simply to \\kappa=\\pm k.
+
+Taking into account that the perturbation should decay far enough from the slab, one can write
+
+p_{1}=C_{1}e^{kz}; z<0;  p_{1}=C_{2}e^{kz}+C_{3}e^{-kz}; 0<z<\\Delta; (15) p_{1}=C_{4}e^{-kz} z>\\Delta;  where the constants C could be found from the condition of continuity at the boundaries of the slab.
+
+Let us consider the boundary z=0. Defining the plasma shift, \\xi, as \\partial\\xi/\\partial t=v_{z}; i.e.
+
+\\xi=i\\frac{v_{z}}{\\omega};  one can write the continuity of the flow and of the pressure as
+
+v_{z}(0)=v_{z}^{\\prime}(0);  p_{0}(\\xi)+p_{1}(0)=p_{0}^{\\prime}(\\xi)+p_{1}^{\\prime}(0);  where the primed quantities are referred to the hot slab and the unprimed ones to the highly magnetized medium. For the wavelength k\\Delta\\gtrsim 1, Eq. (9) is reduced, with account of the condition (6), to
+
+v_{z}=-\\frac{1}{\\omega h_{0}}\\frac{dp_{1}}{dz}. 
+
+Making use of Eq. (14) for p_{1} and Eq. (15) for p_{1}^{\\prime}, one writes Eq. (18) as
+
+\\frac{1}{h_{0}}C_{1}+\\frac{1}{h_{0}^{\\prime}}(C_{2}-C_{3})=0. 
+
+The pressure continuity condition (19) is reduced to an equation for C_{1}, C_{2} and C_{3} if one takes into account that according to Eqs. (4), (17) and (20)
+
+p_{0}(\\xi)=p_{0}(0)+\\frac{dp_{0}}{dz}\\xi=p_{0}(0)-\\frac{g}{c^{2}\\omega^{2}} \\frac{dp_{1}}{dz}. 
+
+Then one gets
+
+\\left[1-\\frac{kg}{\\omega^{2}}\\left(1+\\frac{h_{0}^{\\prime}}{h_{0}}\\right)\\right] C_{1}-C_{2}-C_{3}=0. Applying the same considerations to the boundary z=\\Delta, one finds two more equations
+
+\\frac{1}{h_{0}^{\\prime}}\\left(C_{2}e^{k\\Delta}-C_{3}e^{-k\\Delta} \\right)+\\frac{1}{h_{0}}C_{4}=0;  C_{2}e^{k\\Delta}+C_{3}e^{-k\\Delta}-C_{4}\\left(1-\\frac{g(h_{0}^{ \\prime}-h_{0})k}{h_{0}\\omega^{2}}\\right)=0. 
+
+Now we have four linear homogeneous equations for the coefficients C. The solvability condition for this set of equations provides the dispersion equation. After simple algebra, one gets
+
+\\omega^{4}=k^{2}g^{2}\\frac{1-\\exp(-2k\\Delta)}{\\left(\\frac{h_{0}+h_{0}^{\\prime} }{h_{0}-h_{0}^{\\prime}}\\right)^{2}-\\exp(-2k\\Delta)}. 
+
+One sees that this equation always possesses an unstable root, \\mbox{Im}\\,\\omega<0. One can check that if the gravity force is directed downwards, g>0, the bottom boundary of the slab is unstable whereas g<0 implies instability of the upper boundary.
+
+In the strongly magnetized medium, h_{0}=2p_{0}. In the relativistically hot slab, one can write h_{0}^{\\prime}=4p_{0}^{\\prime}=4p_{0}. Then one gets
+
+\\frac{h_{0}+h_{0}^{\\prime}}{h_{0}-h_{0}^{\\prime}}=3. 
+
+In the small wavelength limit, k\\Delta\\gg 1, the growth rate could be found from equations (26) and (27) as
+
+\\eta\\equiv-\\mbox{Im}\\,\\omega=\\sqrt{\\frac{kg}{3}},  which coincides with the growth rate for the instability of the boundary between the two half-spaces, one filled with the plasma and another with the magnetic field. In the opposite limit, k\\Delta\\ll 1, one finds
+
+\\eta=\\left(\\frac{g}{2}\\right)^{1/2}\\Delta^{1/4}k^{3/4}. 
+
+In this regime, the plasma slab is bent as a whole.
+
+## 3 Interplay between magnetic dissipation and acceleration
+
+Now let as consider a highly relativistic outflow in which the magnetic field forms stripes of the opposite magnetic polarity containing cold plasma separated by currents sheets containing hot plasma. Let us denote the width of the stripe l. In pulsar winds, l is of the order of the light cylinder radius; specifically in the equatorial plane, l=\\pi r_{L}. In accreting systems, l could be as small as the gravitational radius, l\\sim r_{g}.
+
+When the flow accelerates, the effective gravity in the proper frame is
+
+g^{\\prime}=c^{2}\\frac{d\\gamma}{dr}. 
+
+In this section, all quantities measured in the proper plasma frame are marked by primes. As it was demonstrated in the previous section, the hot plasma drips out of the sheet in this case so that the slab eventually tears at some points (see Fig. 1) facilitating the magnetic reconnection. The most dangerous are perturbations with the wavelength comparable with the thickness of the slab. Small wavelength perturbations just produce ripples on the slab surface whereas long wavelength perturbations result only in bending of the slab. Therefore the characteristic reconnection time is determined by the instability growth rate for the wavelength of the order of the sheet width,
+
+\\tau^{\\prime}\\sim\\sqrt{\\Delta^{\\prime}/g^{\\prime}}. 
+
+As the field annihilates, the current sheet expands consuming the energy and the plasma from the magnetized domain. The rate of expansion could be written as
+
+\\frac{d\\Delta^{\\prime}}{dt^{\\prime}}=\\zeta\\frac{\\Delta^{\\prime}}{\\tau^{\\prime} }=\\zeta\\sqrt{g^{\\prime}\\Delta^{\\prime}},  where \\zeta is a numerical factor. Three-dimensional numerical simulations of the current sheet supported against the gravity force are necessary in order to confirm this scaling and to provide an estimate for \\zeta.
+
+Substituting equation (30) into equation (32) and transforming to the lab frame, r=ct^{\\prime}\\gamma, \\Delta=\\Delta^{\\prime}/\\gamma, one can write the rate of the sheet expansion as
+
+\\frac{d\\gamma\\Delta}{dr}=\\zeta\\sqrt{\\gamma\\Delta\\frac{d\\gamma}{dr}}. 
+
+An important point is that dissipation of the Poynting flux forces the flow to accelerate (Lyubarsky & Kirk, 2001; Drenkhahn, 2002; Drenkhahn & Spruit, 2002; Kirk & Skjaeraasen, 2003) therefore the process of dissipation due to the Kruskal-Schwarzschild instability is self-sustaining: the acceleration facilitates the dissipation whereas the dissipation leads to the acceleration. At the initial stage, Poynting dominated flows are accelerated even without dissipation therefore the process could be initialized naturally. Below we present the self-consistent description of the acceleration/dissipation process making use of the short-wavelength approximation, l\\ll r, developed by Lyubarsky & Kirk (2001).
+
+We consider the radial flow with a purely toroidal magnetic field. This approximation is valid far enough from the source where one can neglect the poloidal field in the proper frame of the flow,
+
+\\gamma\\gg B_{\\phi}/B_{p}=R/r_{L}. Here R is the cylindrical radius of the flow.
+
+The flow is steady on the average therefore the continuity and the energy conservation equations could be written as
+
+r^{2}\\langle nv\\rangle=\\textit{const};  r^{2}\\left\\langle h^{\\prime}\\gamma^{2}v+\\frac{B^{2}}{4\\pi}v \\right\\rangle=\\textit{const};  where angle brackets denote averaging over the striped structure. Adopting for simplicity the rectangular stripe shape such that within the current sheet, the magnetic field is zero and the plasma is relativistically hot with the pressure balancing the magnetic pressure of the cold, magnetized domain, h^{\\prime}=4p=B^{\\prime 2}/2\\pi, one writes the conservation equations as
+
+vr^{2}[n_{c}\\Delta+(l-\\Delta)n_{h}]=\\textit{const};  v\\gamma^{2}r^{2}\\left[\\frac{B^{\\prime 2}}{2\\pi}\\Delta+(l- \\Delta)\\left(mn^{\\prime}_{c}c^{2}+\\frac{B^{\\prime 2}}{4\\pi}\\right)\\right]= \\textit{const}. 
+
+Here n_{c} and n_{h} are the plasma density in the cold magnetic domain and in the hot current sheet, respectively. The constants are determined by the parameters at the inlet of the flow, r=r_{0}, which should be chosen far enough from the central source so that the condition (34) is already fulfilled.
+
+In the limit \\Delta\\ll l, \\gamma\\gg 1, these equations may be combined into the asymptotic relation (equation (29) in Lyubarsky & Kirk 2001; note the change in notations: Lyubarsky & Kirk used dimensionless \\Delta, which is equal to our \\Delta/l)
+
+\\sigma_{0}\\left[\\left(2\\frac{n_{h}}{n_{c}}-3\\right)\\frac{\\Delta}{l}+\\frac{1}{2 \\gamma_{0}}-\\frac{1}{2\\gamma^{2}}\\right]=\\frac{\\gamma}{\\gamma_{0}}-1;  where \\gamma_{0} is the Lorentz factor at the inlet of the flow,
+
+\\sigma_{0}=\\left(\\frac{B^{2}}{4\\pi mn_{c}\\gamma c^{2}}\\right)_{r=r_{0}}  the initial magnetization parameter. This equation should be complemented by the entropy equation and by the prescription for the reconnection rate. In our case, the last is given by equation (33). The entropy equation implies n_{h}=3n_{c} at large distances (Lyubarsky & Kirk 2001).
+
+When \\Delta/l\\gg 1/\\gamma_{0}^{2}, equation (39) is reduced to
+
+3\\sigma_{0}\\frac{\\Delta}{l}=\\frac{\\gamma}{\\gamma_{0}}. Substituting this relation into equation (33), one gets the equation for \\gamma
+
+\\gamma^{2}\\frac{d\\gamma}{dr}=\\frac{3\\zeta^{2}\\sigma_{0}\\gamma_{0}}{4l},  which is immediately solved to yield
+
+\\gamma=\\left(\\frac{9\\zeta^{2}\\gamma_{\\rm max}r}{4l}\\right)^{1/3};  where \\gamma_{\\rm max}=\\sigma_{0}\\gamma_{0} is the Lorentz factor achieved if the Poynting flux is completely transformed into the plasma kinetic energy. Combining this relation with equation (41) one sees that the Poynting flux is dissipated completely, \\Delta\\sim l, at the scale
+
+r_{\\rm diss}=12\\left(\\frac{\\gamma_{\\rm max}}{\\zeta}\\right)^{2}l. 
+
+At this scale, \\gamma approaches \\gamma_{\\rm max}.
+
+## 4 Discussion
+
+In this Letter, we proposed a novel mechanism for the energy release in Poynting dominated outflows. The mechanism operates if a significant fraction of the Poynting flux is transferred by alternating fields. Such a structure inevitably arises in the wind from obliquely rotating pulsars and magnetars. In accreting sources, one has to assume that the magnetic polarity changes sign near the black holes. Earlier only anomalous resistivity mechanisms for the field dissipation were considered; they are efficient only in the current starvation regime when the thickness of the current sheet is comparable with the Larmor radius of the particles (Coroniti 1990; Lyubarsky & Kirk 2001; Kirk & Skjaeraasen 2003; Zenitani & Hoshino 2007). We found a universal mechanism for dissipation of alternating fields, which works even if the conditions of ideal MHD are fulfilled and anomalous resistivity does not appear. Thus we justified the assumption of Spruit et al. (2001) that in Poynting dominated outflows, the annihilation rate of alternating fields comprises a good fraction of the speed of light.
+
+The mechanism is based on the MHD instability of the current sheet in the accelerating flow. Under the influence of the inertia force, the plasma drips out of the current sheet allowing the oppositely directed fields come together. The ensuing field annihilation leads to the flow acceleration so that the process is self-sustaining. Note that this instability is easily suppressed by magnetic shear therefore it is very important that in the far zone of the flow, the field becomes predominantly toroidal, i.e. practically shearless.
+
+We have shown that the complete dissipation occurs at the scale (44). In pulsar winds, \\gamma_{\\rm max}\\sim 10^{4}-10^{6} and l\\sim r_{L} so that with this mechanism, the alternating fields are dissipated at the distance \\sim 10^{9}-10^{13}r_{L}, which is comparable or even larger than the dissipation scale due to the current starvation mechanisms (Lyubarsky & Kirk 2001; Kirk & Skjaeraasen 2003; Zenitani & Hoshino 2007). However, this mechanism could efficiently work in GRBs and AGNs because \\gamma_{\\rm max} in these systems is not very large whereas the current starvation distance is huge.
+
+In AGNs, \\gamma_{\\rm max}\\sim 10 and l\\sim r_{g} therefore this mechanism provides the energy release at the scale of \\sim 1000r_{g}. This is compatible with observations because fitting of the blazar spectra implies that jets are already matter dominated at \\sim 1000r_{g} (Ghisellini et al. 2010). The proposed mechanism provides also a natural basis for the "jets-in-a-jet" model (Giannios et al. 2009, 2010) that accounts for the observed ultra-fast TeV variability of blazars.
+
+In GRBs, \\gamma_{\\rm max}\\sim 1000 so that the energy release occurs at the distance of the order of 10^{13} cm. The magnetic dissipation at this scale could reproduce the observed properties of the prompt GRB emission (Giannios & Spruit 2007; Giannios 2008). High efficiency of the conversion of the magnetic energy into the energy of radiating particles makes this model a viable alternative to the internal shock model.
+
+This work was supported by the US-Israeli Binational Science Foundation under grant number 2006170 and by the Israeli Science Foundation under grant number 737/07.

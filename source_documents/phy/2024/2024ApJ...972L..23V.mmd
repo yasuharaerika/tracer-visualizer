@@ -1,0 +1,529 @@
+###### Abstract
+
+The physical trigger powering supernovae following the core collapse of massive stars is believed to involve a neutron star (NS) or a black hole (BH), depending largely on progenitor mass. A potentially distinct signature is a long-duration gravitational wave (GW) burst from BH central engines by their ample energy reservoir E_{J} in angular momentum, far more so than an NS can provide. A natural catalyst for this radiation is surrounding high-density matter in the form of a non-axisymmetric disk or torus. Here, we derive a detailed outlook on LVK probes of core-collapse supernovae CC-SNe during the present observational run O4 based on their event rate, an association with normal long GRBs and mass-scaling of GW170817B/GRB170817A. For BH central engines of mass M, GW170817B predicts a descending GW-chirp of energy \\mathcal{E}_{GW}\\simeq 3.5\\%M_{\\odot}c^{2}\\left(M/M_{0}\\right) at frequency f_{GW}\\lesssim 700\\,\\mathrm{Hz}\\left(M_{0}/M\\right), where M_{0}\\simeq 2.8\\,M_{\\odot}. For a few tens of events per year well into the Local Universe within 50-100Mpc, probes at the detector-limited sensitivity are expected to break the degeneracy between their NS or BH central engines by GW calorimetry. core-collapse supernovae - neutron stars - black holes 0000-0002-3072-8672]Maurice H.P.M. van Putten
+
+0000-0002-8862-0728]Maryam Aghaei Aechouyeh
+
+0000-0002-1882-7275]Massimo Della Valle
+
+## 1 Introduction
+
+The operation of LIGO-Virgo-KAGRA (LVK) is presently in transition from detector to observatory, and it is opportune to develop new observational strategies to exploit this radically new window to broadband gravitational radiation fully. Of particular interest to gravitational wave (GW) observations are core-collapse supernovae (CC-SNe) signaling the endpoint of the evolution of massive stars at the tail of the Salpeter Initial Mass Function (Salpeter, 1955; Smartt, 2009; Park et al., 2022). While most CC-SNe are expected to produce an NS (e.g. Park et al., 2022), some must be producing stellar-mas BHs from the more massive progenitors. This introduces the astrophysical conundrum of "NS or BH" central engine for individual events, notably challenging to solve based on electromagnetic (EM) and neutrino (\\nu) observations alone. Generally, the angular momentum of these central engines determines the energy reservoir E_{J} in angular momentum powering the event (Bisnovatyi-Kogan, 1970, 1971). If accompanied with a GRB, exhausting E_{J} may be indirectly observable in the GRB light curve _on average_(van Putten, 2012). A hallmark signature would be a direct detection in a descending chirp in gravitational radiation. A signature of this kind is notably distinct from the ascending chirps produced in compact binary coalescence.
+
+The MeV-neutrino burst accompanying the iconic type II SN1987A with progenitor Sanduleak -69 202 (Gilmozzi et al., 1987; West et al., 1987) in the LMC at a distance of 50 kpc (Pietrzynski et al., 2019) revealed the formation of matter at supra-nuclear densities (Hirata et al., 1987; Arnett et al., 1989). However, its EM\\nu light curves have been found inadequate to rigorously identify the physical trigger of the explosion - a rotating NS or BH. For 37 years, this left the final remnant unknown (MacCray, 1996; Alp et al., 2018; Galeotti & Pizzella, 2018) until the recent JWST possible identification of a NS (Fransson et al., 2024). This outcome is consistent with the estimated mass of about 20\\,M_{\\odot} of the progenitor Sk -69 202 (Alp et al., 2018; Smartt, 2009; Hanuschik, 1991; Sukhbold et al., 2018).
+
+For the hundreds of CC-SNe in the Local Universe per year, there is a clear need for a different approach.
+
+To this end, we propose to identify the physical trigger of the aforementioned explosion mechanism by directed probes in gravitational radiation, expected to provide a tight constraint on the potential central engine, the remnant and, by implication, the mass of the progenitor.
+
+Among all CC-SNe, type Ib/c events are relatively more energetic than SNe of type II but less numerous with an event rate of about 100 per year within a distance of 100 Mpc (Fig. 1). They are believed to be produced by relatively more massive and envelope-stripped stars in the brightest regions of star-formation (Kelly et al., 2008; Raskin et al., 2008) and their progenitors are more likely massive stellar binaries rather than single stars (Woosley, 1993; Fryer et al., 2014; Rueda et al., 2021). As the parent population of normal long gamma-ray bursts (GRBs) and low-luminosity GRBs (LLGRB) (Galama et al., 1998), the central engines and remnants of these energetic events are possibly BHs rather than NSs. Accordingly, these events hold promise to be leading candidates for long-duration GW bursts.
+
+To date, SN Ic-BL are the only ones with normal LGRBs and LLGRBs (Corsi et al., 2016), though SNe Ib are not excluded as potential progenitors as well. The main difference between these two classes might be the low-mass envelope for the LLGRB associated events that prevent the jet from being ultra-relativistic, opposite to the case of LGRBs (Nakar, 2015), or the difference in their central engines (van Putten, 2004, 2012; Nakar and Sari, 2012; De Colle et al., 2022). LGRBs events have small true event rate of \\sim 1 per year in 100 Mpc (with an observed event rate \\sim 10^{-2} per year), while the event rate of their low-luminosity counterparts may be ten times higher (Fig. 1) (Frail et al., 2001; van Putten and Regimbau, 2003; Podsiadlowski et al., 2004; van Putten, 2004; Della Valle, 2006; Woosley and Bloom, 2006; Guetta and Della Valle, 2007; Hjorth and Bloom, 2012; van Putten et al., 2019; Levinson and Nakar, 2020; Corsi et al., 2023).
+
+SNe II are less energetic but relatively more numerous than SN Ib/c by a factor of a few (Cappellaro et al., 1999; Li et al., 2011; Cappellaro et al., 2015). Their progenitors are sufficiently massive to produce a NS or BH, largely depending on their mass (Salpeter, 1955; Park et al., 2022). In fact, they appear to have a bi-modal distribution in normal and broad-line (BL) events associated with non-relativistic ejecta and, respectively, the more energetic mildly-relativistic ejecta (Maurer et al., 2010; van Putten et al., 2011). It is not known how this relates to their central engines and remnants, if at all. With the envelope retained and the progenitor stellar radius about two orders of magnitude larger than SN Ib/c, conceivably no central engine has sufficient lifetime for a successful jet breakout of the progenitor stellar envelope. Though uncertain, SN II events producing BHs may hereby be loud in GWs despite not being associated with a GRB.
+
+Fig. 2 shows the kinematic properties of CC-SNe complementing Fig. 1, by kinetic energy and photospheric velocity (Lyman et al., 2016).
+
+In light of the above, and by the relatively large event rate of CC-SNe in the Local Universe, we here consider SN-triggered directed searches for their potential output in gravitational radiation. Our focus is on the tail of CC-SNe that are the most energetic. These are most likely powered by a rotating BH for their ample energy reservoir (see (8) in SS4.2 below)
+
+E_{J}\\lesssim 0.29Mc^{2}  in angular momentum, far beyond what an NS can provide with E_{J}^{NS}\\lesssim 0.03M_{\\odot}c^{2}. This can potentially drive an energetic multi-messenger disk emission sustained for the lifetime of rapid spin of the BH. Such will satisfy rigorous mass scaling based on the Kerr metric as an exact solution to the theory of general relativity.
+
+At low energy radiation, the power of BH central engines is evident in launching extragalactic radio jets, e.g., in M87 and AT2020ocn (Cui et al., 2023; Pasham et al., 2024). In the case of stellar mass rotating BHs surrounded by high-density matter in the form of a disk or torus, this can include gravitational radiation (van Putten, 2001). This is demonstrated for the first time by the descending GW signal GW170817B powered by a rapidly rotating BH of mass M\\simeq 2.8M_{\\odot}(van Putten et al., 2019).
+
+Crucially, by the universality of BHs (SS2), this may carry over to produce GW-SN from some of the energetic CC-SNe, prompting the present study. In SS3 the BH formation in transient events is discussed motivated by GW170817B/GRB170817A. We then revisit the physics of BH central engines with their potential radiation channels and the energy budget of each (SS4). Next, we estimate the LVK horizon distance for a GW-SN from the population of energetic CC-SNe powered by BH central engines by mass-scaling of GW170817B. This includes three gain factors originating from detector improvement in O4 over O2, the mass of the BH, and the observed frequency. SS6 discusses the technical limitations and observational opportunities for detecting such a signal, providing an estimate of the search window given the time of first observation of the CC-SNe. In SS7 we discuss three possible outcomes of LVK searches for GW-SNe.
+
+## 2 Universality of Black Holes
+
+According to the theory of general relativity, BHs are described by the three parameters of mass (M), angular momentum (J) and electric charge (Q) (Thorne et al., 1986). This is known as the no-hair theorem. For astrophysical BHs, it is well known that the gravitational contribution of Q can be safely neglected even when non-zero. As a result BHs have no memory of their formation history or progenitor except for M and J. This shows a high degree of universality for BH as central engines and the associated observational consequences arising from mergers involving an NS or core-collapse of massive stars (Fig. 3).
+
+Characteristic for rotating BHs is their ample energy reservoir in E_{J} (1). Releasing E_{J} to power energetic astrophysical processes requires a catalyst, without which the BH remains passive. The primary candidate for a catalyst considered in the present work is surrounding high-density matter in the form of a disk or torus, expected from catastrophic events shown in Fig. 3. As a result, such disk or torus will be the primary radiator across various emission channels.
+
+For the catalyst to operate, required is an interaction between the BH and the surrounding matter, the result of which will follow the first law of thermodynamics. In the original proposal for this catalyst in van Putten (1999), this interaction is mediated by the inner torus magnetosphere through exchange of Maxwell stresses between the BH and surrounding matter. The result is described by a dominant fraction of BH luminosity incident on the inner face of a surrounding torus and a subdominant emission in a baryon-poor jet. This is in contrast with a subsequent alternative idea of magnetically arrested disk (MAD) which appeals to magnetic pressure - the scalar part of the magnetic stress-energy tensor sans Maxwell stresses - leaving E_{J} untapped (Narayan et al., 2003).
+
+Given a high-angular momentum BH-torus system satisfying \\Omega_{H}>\\Omega_{T} (SS4.2 and Fig. 8 below), the BH will be losing angular momentum against the torus by exchange of Maxwell stresses with the torus in accord with the first law of thermodynamics (Appendix B). In this process, the lifetime of BH spin scales inversely with the strength of this interaction mediated by a torus magnetosphere. Detailed stability considerations show that this is bounded by about 10% of the torus kinetic energy e_{k}(van Putten, 1999; van Putten & Levinson, 2003). This bound puts a lower limit on the lifetime of spin of the BH. This is a _secular time scale_ extending over seconds to tens of seconds depending on the inverse of the mass ratio \\sigma of the torus to the BH (Appendix B).
+
+During this process one may expect prodigious emission in GWs from the surrounding matter, expected to comprise quasi-monochromatic radiation from the innermost regions where density and temperature are highest, and broadband emission from the extended accretion flow beyond, if present (van Putten, 2016; van Putten et al., 2019). The first is expected to be the dominant channel and mostly so in quadruple GW-emission, based on the anticipated power-law spectrum (van Putten, 2002; van Putten & Levinson, 2003; Bromberg et al., 2006). Some confirmations for this anticipation can be found in theoretical studies and numerical simulations (Kiuchi et al., 2011; Toscani et al., 2019, 2020; Wessel et al., 2021). These results are potentially of interest also to LISA probes of tidal disruption events around SMBHs (Amaro-Seoane et al., 2023).
+
+Furthermore, GW-emission from an inner disk or torus may develop side-bands by modulation due to Lense-Thirring precession (see SS4). These emissions may be accompanied by broadband emissions from the extended accretion flow. When sufficiently cold, emission may derive from clumpiness in the outer parts of accretion flows formed by gravitational instabilities (Piro & Pfahl, 2007), bar-mode instabilities (Kobayashi & Meszaros, 2003) and/or wave-structures in accretion flows (Levinson et al., 2015).
+
+The first (and so far only) direct observation of BH spin-down is GW170817B: a descending GW chirp lasting \\sim 3.7\\,s following the ascending merger chirp GW170817 (Fig. 3). An earlier indirect observation may be found in GRB060614 (Della Valle et al., 2006; Fynbo et al., 2006; Gal-Yam et al., 2006; Gehrels et al., 2006). With no supernova detected (Della Valle, 2006; Fynbo et al., 2006), the progenitor is possibly a merger. Its anomalously long duration of \\sim 102\\,s, therefore, represents a secular time-scale, orders of magnitude larger than any dynamical time-scale in such systems, that is naturally accounted for by the lifetime of rapid spin of a BH. If so, GRB060614 indirectly points to GW radiation of the same duration (van Putten, 2008) realized by aforementioned \\sigma considerably smaller than that of GW170817B.
+
+## 3 BH formation in energetic transients
+
+The normal long GRBs associated with SN Ib/c satisfy the Amati-relation (Amati et al., 2002; Amati, 2006; Amati et al., 2009). This includes the Extended Emission to short GRBs, pointing to a common central engine (van Putten et al., 2014). SN1998bw was the first detection of a CC-SNe associated with a GRB at a distance of about 40Mpc (z=0.0085\\pm 0.0002) (Galama et al., 1998; Foley et al., 2006; Tinney et al., 1998), though with no observational channel other than EM (Woosley et al., 1999). Short GRBs are believed to be produced by mergers of a NS with another NS (DNS) or stellar-mass BH (NSBH) (Eichler et al., 1989; van Putten et al., 2014; D'Avanzo, 2015; Ghirlanda et al., 2016; Frontera, 2019; Amati, 2021; Bianco et al., 2024). The DNS merger GW170817 detected by LIGO-Virgo during observational run O2 is the first such progenitor of GRB170817A, detected at a distance of 40 Mpc (Abbott et al., 2017).
+
+Interestingly, GRB170817A is accompanied by a coincident long-duration descending gravitational wave chirp GW170817B with energy output and frequency sweep
+
+\\mathcal{E}=(3.5\\pm 1)\\,\\%M_{\\odot}c^{2},\\ \\ \\ \\Delta F\\simeq(700-200)\\ \\rm Hz. 
+
+This detection (2) is at 5.5\\,\\sigma significance based on two statistically independent time-symmetric analyses following a unitary transformation of LIGO H1 and L1data (van Putten & Della Valle, 2023), where c denotes the velocity of light. With \\mathcal{E}\\simeq 3.5\\%M_{\\odot}c^{2} exceeding the rotational energy of a hypermassive neutron star (HMNS) by a factor of a few, this signature reveals the central engine of GRB170817A: a Kerr black hole of mass M_{0}\\simeq 2.8M_{\\odot} spinning down over \\sim 3.7\\,s consistent with T_{90}^{8-70\\rm keV}=(2.9\\pm 0.3)\\,s of GRB170817A (Pozanenko et al., 2018).
+
+The present estimate for M_{0} is an updated value based on the data in van Putten et al. (2019). Since this derives from GW170817B, independent from all else, it is remarkable for its one \\sigma consistency with the mass estimate 2.74^{+0.04}_{-0.01}M_{\\odot} from the merger GW170817 (Abbott et al., 2017). This consistency strengthens the association of GW170817 with GRB17081A, given the simultaneity of GW170817B and the latter.
+
+Given the merger time t_{m} of GW170817, the trigger time (0.92\\pm 0.08)\\,s of GW170817B reveals the _delayed gravitational collapse_(van Putten & Della Valle, 2023) of the initial HMNS to a Kerr BH. This outcome shows consistent GW-EM event timing, given the estimated lifetime (0.98\\pm 0.3)\\,s of the initial HMNS inferred from the kilonova AT2017gfo (Gill et al., 2019).
+
+Taking advantage of the universality of BHs, in the next section we discuss the physics of BH central engines for the above mentioned stellar mass BHs alongside super-massive BHs in active galactic nuclei (AGN).
+
+## 4 Physics of BH central engines
+
+Spinning BHs (Fig. 4) hold unique prospects for multi-messenger radiation for two reasons. First, the exact Kerr solution shows an energy reservoir in angular momentum that, per unit mass, can far exceed what is offered by baryonic objects i.e. neutron stars and white dwarfs. Secondly, rotating BHs readily spin faster than matter orbiting at the innermost stable circular orbit (ISCO), while the ISCO around rapidly spinning BHs shrinks down to the event horizon (Fig. 8). Rapidly spinning BHs therefore, can open an essentially direct interaction between the BH and disk, powering up the surrounding high density matter for a multi-messenger radiation output. This outlook is particularly attractive for the case of BHs surrounded by high density matter in CC-SNe events or BH-NS and DNS mergers. In this case the event is expected to be luminous in GWs from non-axisymmetric mass motions.
+
+A newly formed rapidly spinning BH during a core collapse is expected to be surrounded by high density matter in a torus (disk). This torus may develop a state of suspended accretion at the ISCO, schematically indicated in Fig. 4. This state is sustained by continuous input from the BH mediated by Alfven waves propagating over closed magnetic fields over the torus magnetosphere supported by the surrounding matter. The suspended accretion state around this BH appears across a forbidden region enclosed by closed magnetic field lines that collectively form a torus magnetosphere (Appendix B). This state lasts for the lifetime of rapid spin of the BH during which the torus receives an excess angular momentum from the BH (Fig. 8) available for heating of the surrounding high-density matter. This leads to the formation of multiple mass-moments with an inevitable cooling in gravitational radiation and associated MeV-neutrino emission (van Putten, 2002, 2012).
+
+### Multi-messenger energy budgets
+
+It has long since been proposed that CC-SNe are powered by a rapidly spinning central engine, harboring a compact object (Bisnovatyi-Kogan, 1970; van Putten, 1999, 2001; van Putten et al., 2011). A CC-SNe has various radiation channels including baryon poor and baryon rich jets (produced by magnetic winds), dissipation, gravitational radiation, and neutrinos, each of them carrying a different fraction of energy (van Putten & Levinson, 2003). A calorimetry on the energy radiated in each channel in an energetic CC-SNe powered by a BH, shows E_{\\mbox{\\tiny GW}}/E_{J}\\simeq 10\\% where E_{J}\\equiv E_{rot} and E_{\\mbox{\\tiny GW}} are the total spin energy of the BH, and respectively the GW energy. Therefore E_{\\mbox{\\tiny GW}}\\simeq 3\\times 10^{53}\\mbox{erg}\\simeq 0.1M_{\\odot}c^{2} for a BH of mass 5M_{\\odot}(van Putten & Levinson, 2003). The energy radiated in magnetic winds is an order of magnitude lower giving E_{\\mbox{\\tiny W}}\\simeq 3\\times 10^{52}\\mbox{erg}\\simeq 0.01M_{\\odot}c^{2}. E_{\\mbox{\\tiny W}} is to account for both E_{K} powering the SN explosion and internal photon radiation irradiating the remnant stellar envelope from within. The efficiency of a non-relativistic wind (\\beta_{\\mbox{\\tiny W}}<<1) in making a successful SN turns out to be higher than that of an ultra-relativistic wind (\\beta_{\\mbox{\\tiny W}}\\simeq 1) (van Putten et al., 2011). The dissipated energy in thermal or MeV-neutrino emissions is estimated to be in between the other two with E_{\\nu,th}\\simeq 5\\times 10^{52}\\mbox{erg}\\simeq 0.03M_{\\odot}c^{2}(van Putten & Levinson, 2003). Beside these channels, a successful GRB carries a small fraction of energy E_{j} in a baryon-poor jet, amenating from the BH over a moderate half-opening angle on its event horizon (see Fig. 4 and van Putten (2015)). Therefore, we expect the following ranking of energies
+
+E_{j}<E_{\\mbox{\\tiny W}}<E_{\\nu,th}<E_{\\mbox{\\tiny GW}}<E_{d},  where E_{d} is the energy dissipated unseen in the BH event horizon. Accordingly, the gravitational radiation E_{\\mbox{\\tiny GW}} is the most opportune observational channel if the event falls within the horizon distance of the GW observatories. In (3), E_{\\mbox{\\tiny GW}} being maximal formalizes our definition of being loud in SS1.
+
+### ISCO-normalized Lense-Thirring precession
+
+Notably, emissions from a BH-torus (disk) system may show effects of Lense-Thirring precession (Lense & Thirring, 1918) due to the misalignment between the disk and the equatorial plane of the rotating BH. For a BH with angular momentum J=aM, this precession has the angular velocity (Wilkins, 1972; Stella & Vietri, 1998)
+
+\\Omega_{{}_{\\it LT}}=\\frac{2J}{R^{3}}  at orbital radius R, where a is the specific angular momentum. Here, we use geometric units c=G=1, further in what follows unless otherwise stated.
+
+We introduce the ISCO-normalized radius R,
+
+K=\\frac{R}{R_{{}_{\\it ISCO}}},  where R_{{}_{\\it ISCO}}=zR_{g} is the radius of the ISCO in terms of gravitational radius R_{g}=GM/c^{2}. In applying (5) to multi-messenger emission, different radiation channels may originate from different values of K. For GWs and magnetic winds in particular, we denote these geometric radiation parameters by K_{{}_{\\it CW}} and K_{{}_{\\it W}}, respectively (Fig. 4), proposing them to be universal.
+
+Interestingly, the quadruple GW emission in BH spin-down is expected to be dominant over all other frequencies and radiation channels (3), essentially set by twice the Keplerian orbital frequency determined by the orbital radius K_{{}_{\\it CW}}>1 in (5). Accordingly, the forbidden region may well extend beyond the ISCO (Fig. 4).
+
+As mentioned above, GWs associated with energetic CC-SNe powered by rapidly spinning BHs are expected to be quadruple emissions at leading order (SS2). By Lense-Thirring precession (4) this will have accompanying side-bands at frequencies
+
+f_{{}_{\\it CW}}\\pm f_{{}_{\\it LT}},  above and below the central frequency f_{{}_{\\it CW}}(Armitage & Natarajan, 1999; van Putten et al., 2004, 2004, 2019). A detected GW from a BH central engine must therefore, include at least one of these three.
+
+The Lense-Thirring effect produces both GWs and magnetic wind/jet precessions with the latter at an effective radius larger than that of the former (Table 1 and Fig. 4)
+
+K_{{}_{\\it CW}}<K_{{}_{\\it W}},  because the open magnetic field lines are effectively at larger distances from the BH compared to multiple mass-moments, not being directly interacting with the BH (see Fig. 4).
+
+Lense-Thirring precession effect on GWs (i.e. (6)) is still to be reported but its effect on magnetic winds is reported recently in the precession of the jet of M87 (Cui et al., 2023), and AT2020ocn (Pasham et al., 2024):
+
+* The mass-normalized jet precession angular velocity of SMBH of M87 is M\\Omega_{ LT}\\simeq 0.505 (Fig. 5). The spin of this BH is uncertain (Reynolds, 2021). Numerical simulations speculate \\hat{a}=a/M\\simeq 0.9375(Cui et al., 2023). On the other hand, EM multi-wavelength observation are ambiguous, pointing to a central engine which is low-power by FR I morphology (in the radio), yet high-power by morphology in the optical (as if FR II) (Fanaroff and Riley, 1974; A., 1993; Biretta, 1996; Lucchini et al., 2019; Cui et al., 2023).
+
+* The SMBH of AT2020ocn has the mass-normalized angular velocity of M\\Omega_{ LT}\\simeq 0.057 (Fig. 5) with reported spin parameter to be 0.05<\\hat{a}<0.5. Accordingly the AT2020ocn BH is slowly rotating falling in to the left hand side of Fig. 8.
+
+The suspended accretion state requires the BH to be spinning more rapidly than the surrounding matter, \\Omega_{BH}>\\Omega_{T}, i.e. a minimum \\hat{a}>0.36 and more realistically \\hat{a}>0.44 (Figs. 8-8; van Putten (1999, 2012)). Putting \\hat{a}=sin\\lambda, the BH rotational energy satisfies E_{J}=2Mc^{2}\\sin^{2}(\\lambda/4), i.e.
+
+E_{J}=4\\times 10^{54}\\,\\sin^{2}(\\lambda/4)\\left(\\frac{M}{M_{\\odot}}\\right) \\mathrm{erg}\\lesssim 29\\%Mc^{2}. 
+
+E_{J} at \\hat{a}=0.36 is a mere 6% of the maximum rotational energy E_{J}^{max}=29\\%Mc^{2} (Fig. 8). Below this, \\hat{a}<0.36, accretion is inevitable. Prospects for observational consequences of (8) therefore, coincides with the conditions for the suspended accretion state. In DNS mergers, if the BH is formed shortly after the merger, the BH should be rapidly spinning satisfying \\hat{a}\\sim 0.8(Baiotti et al., 2008; Van Putten, 2013), making (8) accessible. In fact GW170817B/GRB170817A demonstrates just such case at 5.5\\sigma significance (van Putten and Della Valle, 2023). Accordingly, we proceed our discussion for BHs satisfying \\hat{a}>0.36.
+
+With the observational results on \\Omega_{ LT} for M87 and AT2020ocn, and considering the uncertainties in BH spin, we leave \\hat{a}=a/M to be a running parameter to get K_{w} by (4-5) as shown in Fig. 5. By the proposed universality of K_{\\rm w} (SS4.2) and the reported spin parameter range for AT2020ocn, we estimate M87 to harbor a rapidly rotating BH by 0.76<\\hat{a}<0.87 (Fig. 5). This is consistent with the FR II morphology in the optical.
+
+To be more specific, we infer 4.7\\lesssim K_{\\rm w}\\lesssim 6.15. This is remarkably consistent with the constraint (7), given K_{\\rm cw}\\simeq 3.2^{+0.8}_{-0.2} for GW170817B/GRB170818A. _This geometrical inequality provides observational support for the proposed universality of these radiation parameters K_{\\rm w} and K_{\\rm cw}_.
+
+Considering K_{\\rm cw}\\simeq 3.2^{+0.8}_{-0.2}, z\\simeq 2.9, \\hat{a}\\simeq 0.78^{+0.06}_{-0.02} and M=2.8M_{\\odot} for GW170817B (updated from van Putten et al. (2019)), the associated Lense-Thirring frequency inferred from (4) is estimated to be
+
+f_{\\it LT}\\simeq 27\\left(\\frac{2.8M_{\\odot}}{M}\\right)\\,{\\rm Hz}. 
+
+This makes the side-bands (6) to similar events, though challenging, technically observable by LVK.
+
+Table. 1 summarizes this section.
+
+## 5 Horizon distance by scaling GW170817B
+
+As mentioned in SS3, GW170817B shows the power of GW-observations to confirm its DNS progenitor _and_ the central engine of GRB170817A. In fact, this event dramatically demonstrates the GW-emission to be the _dominant_ channel in multi-messenger radiation, far exceeding what is observed in EM (van Putten & Levinson, 2003; Mooley et al., 2017, 2018; van Putten & Della Valle, 2023). This opens a new window to probing CC-SNe, the most energetic of which may be likewise dominant in GW-emission, powered by a BH.
+
+Notable recent CC-SNe are the type II SN2023ixf in M101 at 6.4 Mpc during an engineering run ER15 just prior to LVK O4, SN2024ggi in NGC3621 at about 7 Mpc and SN2018cow (AT2018cow), a _Fast Blue Optical Transient_ (FBOT) at 60 Mpc, more recently classified as SN Ic-BL (Ib) (Kilpatrick et al., 2023; Xiang et al., 2021; Gonzalez-Diaz et al., 2024; Srivastav et al., 2024). The estimated mass of the SN2018cow progenitor points to a BH remnant (Sun et al., 2022, 2023; Leung et al., 2020), distinct from SN1987A, though LVK was not in observing mode during this time. SN2023ixf and SN2024ggi are evidently of interest by their close proximity. SN2023ixf and SN2024ggi occurred during LVK observing time, though not in observing mode during the first. Regardless, these diverse CC-SNe events post-GW170817 are illustrative for ample new opportunities beyond mergers to advance above-mentioned transition from detector to observatory.
+
+To be specific, we will discuss the feasibility of the above in terms of the anticipated horizon distance in un-modeled GW-probes of the physical trigger powering CC-SNe when powered by BH.
+
+### LVK sensitivity improvement O2-O4
+
+Sensitivity of LVK O4 is improved by a factor k_{D}\\simeq 1.8 over O2 (LIGO Scientific collaboration, 2021; The LIGO Scientific Collaboration et al., 2024). For DNS mergers, the horizon distance hereby extends to \\simeq 160 (The LIGO Scientific Collaboration et al., 2024) over the LVK bandwidth of maximal sensitivity (Fig. 9)
+
+B\\simeq 100-250\\,{\\rm Hz}. 
+
+The LVK horizon distance to CC-SNe producing neutron stars is conventionally believed to be limited to galactic events (Srivastava et al., 2019; Vartanyan et al., 2023) with some potential to go beyond by emission from non-axisymmetric tori around (proto-)NS or BHs (Piro & Pfahl, 2007; Gossan et al., 2016). A different prospect holds for the above-mentioned energetic SN II and SN Ib/c, that may be powered by rapidly rotating BH as in GRB170817A (van Putten et al., 2019). Their horizon distance may then extend out to the Local Universe
+
+\\begin{table}
+
+\\begin{tabular}{|l|l|l|l|l|l|} \\hline Parameter & Definition & M87 & AT2020ocn & GW170817B & Comments \\\\ \\hline M [M_{\\odot}] & BH mass & 5.7\\times 10^{9} & 10^{6.4\\pm 0.6} & 2.8 & , ,  \\\\ \\hline \\hat{a} & Spin parameter a/M & 0.76-0.87 & 0.05-0.5 & 0.78^{+0.06}_{-0.02} & Eq. (4), Figs. 5-5,  \\\\  & & & 0.36-0.5 & & \\\\ \\hline \\hline E_{J}/E_{J}^{max}[\\%] & Percentage of rotational energy & 32-47 & 0.5-9 & 32-42 & Fig. 8 \\\\  & & & 6-9 & & \\\\ \\hline \\Omega_{LT} [rad/s] & Lense-Thirring angular velocity & 1.8\\times 10^{-8} & 4.57\\times 10^{-6} & 170 [27 Hz] & , , Eq. (4) \\\\ \\hline M\\Omega_{LT} & Mass-normalized angular velocity & 0.505 & 0.057 & 1.784 & Eq. (4), Fig. 5 \\\\ \\hline K & ISCO normalized radial distance & K_{\\rm w}=5.42\\pm 0.73 & K_{\\rm cw}=3.2^{+0.8}_{-0.2} & Fig. 5,  \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Some physical properties of rotating BHs in M87, AT2020ocn and their stellar-mass counterpart GW170817B/GRB170817A. Following normalization by mass M and ISCO radius R_{ISCO}=zR_{g} (Fig. 4), the dimensionless values shown highlight the universality of astrophysical BHs interacting with their surrounding disk or torus across the super-massive and stellar-mass spectrum of transient sources. In particular, the inequality K_{\\rm w}>K_{\\rm GW} (7) appears consistent. This table summarizes the output presented in §4 and observational results reported in Cui et al. (2023),Pasham et al. (2024) and updated from van Putten et al. (2019).
+
+(van Putten, 2001) by virtue of the ample energy reservoir in angular momentum according to the Kerr solution, that, in interaction with surrounding high-density matter, may power multi-messenger emission including GWs similar to (2) over the course of the lifetime of BH-spin.
+
+### Mass-scaling of GW170817B/GRB170817A
+
+Specific to BH central engines of CC-SNe, the output (2) generalizes by mass-scaling M/M_{0}, satisfying
+
+E \\simeq 3.5\\%\\left(\\frac{M}{M_{0}}\\right)M_{\\odot}c^{2}, \\Delta F \\simeq \\left(700-200\\right)\\left(\\frac{M_{0}}{M}\\right)\\mathrm{Hz}. 
+
+Here, we assume a dimensionless Kerr parameter \\hat{a}\\simeq 0.8 similar to that of GW170817B/GRB170817A (van Putten, 2015; van Putten & Della Valle, 2023).
+
+For instance, the distant DNS merger GW190425 (Abbott et al., 2020) during O3 points to a remnant of M=3.4\\,M_{\\odot}, suggesting considerable overlap with above-mentioned \\Delta F and B. On the other hand, the remnant of the candidate NS-BH merger GW190814 with M\\simeq 25.8M_{\\odot}(Abbott et al., 2020) suggests \\Delta F to fall below B, though still within the LVK bandwidth of sensitivity.
+
+Energetic CC-SNe are expected to produce BHs with masses broadly correlated to their pre-collapse He-core mass. Their envelope-stripped and rotating progenitors have a mass-estimate of M_{He}(Kochanek, 2014). Combined with an estimated mass-fraction thereof collapsing to a BH, this shows the formation of rapidly rotating BH with M\\gtrsim 5M_{\\odot}(van Putten (2004) and references therein). Scaling (11) hereby predicts
+
+E \\simeq 7\\%M_{\\odot}c^{2},\\ \\ \\ \\Delta F \\simeq \\left[100,380\\right]\\mathrm{Hz}. 
+
+Fortuitously, \\Delta F in (12) and B in (10) overlap while E is substantially larger than the canonical output 2.5\\%M_{\\odot}c^{2} of GW170817 (Abbott et al., 2017a) giving a second gain factor of k_{M}\\simeq 2. This can also be seen from scaling of h_{char} in E_{\\mathrm{GW}} of (2) according to (Flanagan & Hughes, 1998; van Putten, 2001; Cutler & Thorne, 2002)
+
+h_{char}=\\frac{\\sqrt{2}}{\\pi D}\\sqrt{\\frac{E}{|\\Delta F|}}\\sim\\frac{M}{D}\\sqrt{ \\frac{\\mathcal{E}_{GW}}{M}}\\propto\\frac{M}{M_{0}}  for a source at distance D, where proportionality follows from (11). This, along with aforementioned improvement in detector sensitivity k_{D} over O2 presents a compelling outlook to probing the central engines of energetic CC-SN in the Local Universe during O4.
+
+The horizon distance to (12) derives from a signal-to-noise ratio (SNR) in characteristic strain amplitude h_{char} of the source relative to the strain noise-amplitude of the detector. By numerical evaluation, Fig. 9 shows the gain in signal-to-noise by \\Delta F in (2) scaled by M/M_{0}. Energetic CC-SNe hereby receive a gain k_{n}\\gtrsim 1.27 in h_{char} for M\\gtrsim 5M_{\\odot}, shifting \\Delta F downwards to increasingly overlap with B in (10).
+
+Combining the above, a total gain in horizon distance to energetic CC-SNe during O4 satisfies
+
+k=k_{n}\\,k_{M}\\,k_{D}\\simeq 4.4. 
+
+Fig. 6 shows the estimated horizon distance for CC-SNe as a function of a generic BH mass-range 3M_{\\odot}<M<5M_{\\odot}(e.g. MacCray, 1996). Including the estimate M_{0}\\simeq 2.8M_{\\odot} of GW170817B/GRB170817A, this extends to 2.8M_{\\odot}\\lesssim M<5M_{\\odot} with horizon distances 70\\lesssim D/\\mathrm{Mpc}\\lesssim 160.
+
+## 6 Observational Outlook
+
+The probability of observing GW-transients depends critically on local cosmic volume, V, proportional to the cube of the horizon distance, the total duration T of an observational run, duty cycle of the gravitational-wave detectors adjusted for data-quality (below) and any trend in source event rate with redshift (Aghaei Abchouyeh et al., 2023). SNe are generally more frequent with redshift, raising to a maximum around the epoch of maximal cosmic star formation (Melinder et al., 2012; Madau & Dickinson, 2014; Strolger et al., 2015). The probability of a detection hereby scales with at least VT, normalized to the local event rate at redshift zero.
+
+Corrected for beaming (SS1), the true event rates of long and short GRBs are similar though not identical with different redshift distributions (van Putten et al., 2014). The former is indicative of the above-mentioned relatively small branching ratio (A1), leaving a true event rate of LGRBs of about 1\\,\\mathrm{yr}^{-1} within 100\\,\\mathrm{Mpc}.
+
+Observing one GW170817-GRB170817A event during O2 and none during O3 is statistically consistent considering the detectors duty cycle and yield factors (Aghaei Abchouyeh et al., 2023). By the above-mentioned similar event rates of normal long and short GRBs, it is likewise consistent to have no GW-detection of a SN Ib/c during the runs O2-3.
+
+The ground rule of a GW detection is a correlated response in two or more well-separated detectors. In more practical terms, we infer a GW detection by confirmation in at least two detectors operating at comparable performance. We quantify observational epochs accordingly by the _detector yield_y, the fraction of time when, for instance, both H1 and L1 are successfully operating simultaneously at nominal sensitivity (Aghaei Abchouyeh et al., 2023). The detector yield factor y for such joint operation varies with observational runs, reducing the effective observational time to Ty. A detailed study shows VTy for O2-3 to be comparable; the sensitivity of detectors in O3 improved over O2 but at the cost of a lower y for long-duration data segments lasting seconds (Aghaei Abchouyeh et al., 2023), relevant to our GW-signal of interest (2).
+
+The observational run O4, recently starting its second half O4b, promises to be different, provided that the sensitivity is higher than that of O3 and the detector yield factor y of O4 is at least on par with O2, when y was relatively high by consistent joint H1L1-operations over time.
+
+Probing CC-SNe for their central engines is to be carried out by un-modeled GW searches at _detector noise-limited sensitivity_ by time-symmetric search methods with equal sensitivity to ascending and descending GW-chirps (van Putten & Della Valle, 2023; Aghaei Abchouyeh et al., 2023). Ultra-long duration GW-emission may be produced by superluminous supernovae (van Putten & Della Valle, 2017).
+
+Probing CC-SNe for (11-12) may be pursued in blind all-sky searches or in directed searches to specific events (van Putten, 2016). Notably, TOOs are provided by modern automated surveys such as the _Zwicky Transient Facility_(Graham et al., 2019) and accompanying high-energy EM emission by existing and planned satellite missions such as THESEUS (Amati et al., 2018). For the latter, only a small fraction of events may be producing a detectable GW-emission. While (A5) may be larger than (A1), most SN Ib/c may be unsuccessful in producing jets and breakout producing a (L)LGRBs. Indeed, most may be producing NS rather than BH. Even when producing a BH, they might be slowly rotating with insufficient spin-energy to match (10-11), or central engines with insufficient lifetime to allow jet breakout and a successful GRB, yet making a GW signal at (A5). Taking into account finite detector yield factors y, an EM-survey of \\sim 10^{3} SN Ib/c is required for a few hundred SN Ib/c to be probed by LVK for their GW-emission similar to (2).
+
+### Gravitational wave search window
+
+GW-emission of a CC-SN happens during the active lifetime of its central engine about the explosion time (t_{0}). SNe are serendipitously discovered (t_{O}) through their light curves hours to weeks after the shock breakout (t_{b}). This introduces
+
+\\begin{split}\\Delta_{0}&=t_{b}-t_{0},\\\\ \\Delta_{1}&=t_{O}-t_{b},\\\\ \\Delta_{2}&=\\Delta_{0}+\\Delta_{1}=t_{O}-t_{0}.\\end{split} 
+
+\\Delta_{0} can be estimated for different type of CC-SNe based on the radius of the progenitor star and the expansion velocity giving (Maurer et al., 2009; van Putten et al., 2011; Lyman et al., 2016; Sahu et al., 2009; van Putten et al., 2011; Taddia et al., 2019; Hamann et al., 2006; Sander et al., 2019; Gutierrez et al., 2017)
+
+\\text{few hours}\\lesssim\\Delta_{0}\\lesssim\\text{several days}. 
+
+A more precise estimation of \\Delta_{0} can be done for individual events. \\Delta_{1} is particularly uncertain, as it inevitably derives from extrapolating the SN light curve. In practice
+
+\\Delta_{0}<<\\Delta_{1}. 
+
+If we are lucky to detect the SN early enough, \\Delta_{1}\\lesssim 1d.
+
+SN2011hd, a type IIb supernova in M51 (Arcavi et al., 2011), stands out as it was detected in X-rays. It signals a moment of discovery close to the shock breakout, whence \\Delta_{1}\\sim 12 hr (Fig. 5 of Soderberg et al. (2012)). If an event is observed well before the peak in the SN light curve and at high energy, \\Delta_{2} is estimated to be at least several hours, as the temperature of the shock front at t_{O} generally reduces after the peak. For instance, SN2023ixf and SN2024ggi light curves both point to similar \\Delta_{2}\\sim 1 d (Hosseinzadeh et al., 2023; Shrestha et al., 2024). Such timing reduces to (tens of) seconds only for directed searches to GRB-SNe, but these TOOs are exceptionally rare (SS1).
+
+## 7 Discussion and Conclusion
+
+CC-SNe are more promising sources for GW observation compared to DNS mergers because of their larger event rates SS1. Even core-collapse events that are not successful in GRB-emission, can potentially be loud in GW radiation (SS3). Accordingly, their event rate may well be a few times more numerous than that of DNS mergers. For BH central engines, calorimetry on the energy budget of different radiation channels shows that GW-emission may be dominant (3).
+
+The above appears opportune for rotating BHs when spinning faster than the surrounding matter (Fig. 8). It should be emphasized that the duration of the output radiation can be long as it is determined by the lifetime of BH spin. This timescale readily covers seconds to tens of seconds (van Putten, 1999; van Putten & Levinson, 2003).
+
+In surveying energetic CC-SNe in the Local Universe, some may reveal central engines of this kind. The recent observation of the wind precession of M87 and AT2020ocn lend credence to the exciting possibility of herein finding Lense-Thirring precession counterparts in gravitational radiation (SS4).
+
+### Horizon distance to GW from CC-SNe
+
+For the present LVK observational runs, we estimate a horizon distance of \\sim 160 Mpc to BH central engines of energetic CC-SNe (Fig. 6), based on the ample energy reservoir in angular momentum of rotating black holes of mass \\lesssim 5M_{\\odot}. For the observer, we introduce, an effective horizon distance corrected for the detector yield factor (Aghaei Abchouyeh et al., 2023) by
+
+D_{eff}=y^{\\frac{1}{3}}D\\simeq[45-100]\\,\\mathrm{Mpc},  where D=[70-160] Mpc shown in Fig. 6 (SS5) is the horizon distance. This is based on O4 detector sensitivity, and detector yield factor y\\simeq 0.28 for long duration burst searches (the case of W=8 s in Aghaei Abchouyeh et al. (2023)) if similar to that of O2 and O3. This outlook may be contrasted with the galactic horizon distance (<1 Mpc) in conventional LVK searches for long duration GW-bursts (Abbott et al., 2016, 2020; Szczepanczyk et al., 2021). It accounts for the undesired bias in detecting compact binary coalescence (CBC) (Abbott et al., 2023) rather than observing extreme transient events more generally. (18) removes this bias through the open window offered by the broadband sensitivity of the LVK observatories in searches at detector-limited sensitivity also for un-modeled signals.
+
+SNe Ibc and II event rates Cappellaro et al. (1999); Li et al. (2011); Cappellaro et al. (2015) show that there are about 100 and, respectively, \\gtrsim 200 events within 100 Mpc per year. Considering (A1)-(A2) and by (18), there are about 0.1-few LGRBs associated with these events (maybe unobserved due to beaming) within the horizon distance of D_{eff}. Including LLGRB-SNe in (A3), this fraction may increase by a factor of \\sim 10, increasing (L)LGRB events within D_{eff} that are potentially loud in GW. Accordingly by (A6) (which includes LGRBs, LLGRBs and failed GRBs), we expect >10 of SNe Ibc and II within the 100 Mpc per year to be targets of opportunity for aforementioned GW searches (GW-SN). These results are summarized in Table 2. The estimated rate of events interesting for gravitational radiation within the lower bound of 50 Mpc in (18) is therefore \\dot{N}_{\\rm GW-SN}\\times(50/100)^{(1/3)}\\gtrsim few per year.
+
+This outlook derives from (11) and (14), upon scaling of GW170817B (2) by application of time-symmetric searches for un-modeled GW-signals at detector-limited sensitivity on par with CBC (van Putten & Della Valle, 2023).
+
+Our estimated horizon distance is considerably beyond what may be expected in GW-emission in process of core-collapse, in the formation and evolution of rotating (proto-)NS (e.g. Lin et al., 2023). By their limited spin energy, the horizon distance to NS central engines is considerably smaller, especially at GW-frequencies about the LVK bandwidth of maximal sensitivity (10). Nevertheless, spin-down of proto-NS might be detectable at extra-galactic distances.
+
+### Possible long duration burst GW search results
+
+In light of the above, a probe of a directed search from a CC-SN within the 160Mpc, using a method with detector-noise limited sensitivity in the Local Universe may reveal the following for the central engine and remnant:
+
+\\begin{table}
+
+\\begin{tabular}{|c||c|c|c|c||c|} \\cline{2-6} \\multicolumn{1}{c|}{} & N (within 100 Mpc) & LGRB (true) & LLGRB (ture) & Failed GRB & GW-SN \\\\ \\hline SN Ibc & \\sim 100 & 1-3 & \\sim10 & few\\times LLGRB & few tens \\\\ \\hline SN II & \\gtrsim 200 & not observed & not observed & N/A & \\gtrsim 0 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Number of CC-SNe Ibc and II within 100Mpc per year and their associated (L)LGRBs versus expected number of events that are loud in gravitational radiation. Crucially, there is window for a substantial fraction of GW-SNe amongst the failed GRB-SNe.
+
+* **Case A.** No detection at low frequency (0-900Hz). Based on (11), this outcome rules out a BH central engine and points to an NS central engine, likely leaving an NS remnant and, accordingly, a progenitor mass below 20M_{\\odot}. Note that a BH remnant can not be ruled out in the exceptional case of a belated collapse to a BH. Regardless, a rapidly rotating NS central engine is expected to have its GW signature above 1kHz, well above the LVK bandwidth of maximal sensitivity (10).
+
+* **Case B.** The detection of a GW-signal below 1 kHz but energetically below what is expected from (11). This may, instead, point to the spin-down of a slowly rotating proto-NS, pointing to an NS remnant and a progenitor mass below 20\\,M_{\\odot}. Alternatively, the signal is produced from a distant BH central engine which is not associated with the CC-SN at hand.
+
+* **Case C.** The detection of a GW-signal below 1 kHz consistent with (11), evidencing a BH central engine, a BH remnant and hence a progenitor mass greater than 20M_{\\odot}. Possibly, this outcome would require corroborating evidence from the kinetic energy in supernova ejecta (Fig. 2) (van Putten et al., 2011). Notably, these signals may appear with characteristic side-bands (6) from disk precession (SS4).
+
+Subject to the availability of simultaneous H1L1-data at nominal sensitivity, Case A-C provide radically novel observational constraints on the physical nature of the central engine, remnant, and the mass of the progenitor, otherwise notoriously challenging to determine by EM\\nu-observations alone.
+
+Current targets of opportunities include SN II events SN2023ixf and SN2024ggi at \\sim 7Mpc, and the SN Ic events SN2018cow at 60 Mpc, SN2020bvc at 120 Mpc and SN2020oi at 23 Mpc (Kilpatrick et al., 2023; Xiang et al., 2021; Gonzalez-Diaz et al., 2024; Srivastav et al., 2024). These events can be probed at LVK detector-limited sensitivity for their un-modeled output in gravitational radiation by application of Butterfly Matched Filtering (van Putten & Della Valle, 2023). According to Case A-C, such is expected to conclusively break the degeneracy between an NS or BH central engine.
+
+The authors thank the anonymous reviewer for detailed reading and constructive comments. This research is supported, in part, by NRF RS-2024-00334550.
+
+## Appendix A Branching ratios of SN Ib/c
+
+By their association to LGRBs, SN Ic-BL stand out as candidates for GW-SNe. However, the observed branching ratio of SN Ib/c to LGRBs, is quite small. We have
+
+\\Gamma_{obs}=\\frac{N_{obs}^{\\prime}\\left[\\text{GRB-SN}\\right]}{N_{obs}\\left[ \\text{SNIb/c}\\right]}\\simeq 10^{-4} (A1)
+
+This notoriously small ratio is due to the beaming factor f_{b}^{-1}\\sim 100 in GRB-emission (Frail et al., 2001; van Putten & Regimbau, 2003; Podsiadlowski et al., 2004; van Putten, 2004; Della Valle, 2006; Guetta & Della Valle, 2007; van Putten et al., 2019; Levinson & Nakar, 2020). Therefore, we have a true-to-observed event rate of GRB-SNe, satisfying (Woosley & Bloom, 2006; Hjorth & Bloom, 2012; Corsi et al., 2016; Ho et al., 2020; Corsi et al., 2023)
+
+\\Gamma^{\\prime}=\\frac{\\dot{N}\\left[\\text{GRB-SN}\\right]}{\\dot{N}\\left[\\text{ SNIb/c}\\right]}\\simeq f_{b}^{-1}10^{-4}\\simeq 1\\%-3\\%. (A2)
+
+This outlook is relevant to directed searches of gravitational-wave emission from the parent population of energetic SNIb/c. Consistently observational results show that SN Ic-BL are about 5% of the total population of SN explosions. In comparison, a tiny fraction of about 1% of these SNe are associated with LGRBs, which is about an order of magnitude less than LLGRBs (Corsi et al., 2023), though because of uncertainties these fractions are not well constrained (Corsi et al., 2016, 2023). Still, it can introduce an additional branching ratio
+
+\\Gamma^{\\prime\\prime}=\\frac{\\dot{N}\\left[\\text{LLGRB-SN}\\right]}{\\dot{N} \\left[\\text{SNIb/c}\\right]}\\simeq f_{bL}^{-1}10^{-4}\\simeq 10\\%. (A3)SN1998bw/GRB980425 is the first observation of a GRB associated with an SN, followed by more observations afterward. Recent estimations for SN1998bw like SN predicts their population to be 19% of total SN Ic-BL (Corsi et al., 2016, 2023).
+
+Crucially, a successful GRB-SN requires the central engine to be long-lived for about ten seconds (van Putten, 2004, 2012; Nakar & Sari, 2012; De Colle et al., 2022). Shorter lifetimes are expected to produce LLGRBs or failed GRB-SNe with less-energetic jet or no jet breakout of the progenitor stellar envelope, the latter with unknown branching ratio
+
+\\Gamma^{\\prime\\prime\\prime}=\\frac{\\dot{N}\\left[\\text{failed GRB-SN}\\right]}{ \\dot{N}\\left[\\text{SNIb/c}\\right]}. (A4)
+
+In defining (A4), we consider the failed GRB-SN events to be the continuation of successful (LL)GRB-SN originating from the same type of central engine, whereby \\Gamma^{\\prime}+\\Gamma^{\\prime\\prime}+\\Gamma^{\\prime\\prime\\prime}\\leq 1.
+
+In the core collapse of massive stars, inevitably, the angular momentum of the central engine momentum will be broadly distributed with a positive correlation to lifetime and energetic output subject to efficiency. The more extreme cases of large angular momentum may support a successful GRB-SN, while less extreme may produce a SN sans GRB by insufficient lifetime for the above-mentioned successful jet breakout. Even such failed GRB-SNe still holds promise to be loud in GW-emission. Conceivably this extends to the case of negligible angular momentum failing to produce a central engine altogether, and hence no SN.
+
+Illustrative for successful central engines is the rapidly spinning BH powering GW170817B/GRB170817A for the duration of 3.7 s (<10 s) (van Putten et al., 2019; van Putten & Della Valle, 2023). While \\Gamma^{\\prime\\prime} is not well-constrained, conceivably
+
+\\frac{\\Gamma^{\\prime\\prime\\prime}}{\\Gamma^{\\prime}+\\Gamma^{\\prime\\prime}}= \\frac{\\dot{N}\\left[\\text{failed GRB-SN}\\right]}{\\dot{N}\\left[\\text{(L)LGRB- SN}\\right]}\\simeq\\text{few}. (A5)
+
+Considering the diversity in the central engine of SN Ib/c, the fraction of all SNe Ib/c that are loud in GWs (GW-SN) hereby satisfies
+
+\\Gamma_{GW}\\gtrsim\\Gamma^{\\prime}+\\Gamma^{\\prime\\prime}+\\Gamma^{\\prime\\prime \\prime}\\gg\\Gamma_{obs}. (A6)
+
+By the event rate of SN Ib/c in the Local Universe, (A6) points to an event rate of >10 GW-SN within 100\\,\\text{Mpc yr}^{-1}. In directed searches, SN Ib/c may hereby be significantly more attractive than (normal) long GRBs.
+
+## Appendix B Formation and Evolution of BH Central Engines in CC-SNe
+
+Following birth in core collapse of a massive star, a BH experiences three potential phases of evolution (Fig. 7; van Putten & Della Valle (2017)):
+
+* _Opening:_ Initial surge of BH mass by in-fall of low specific angular momentum from the inner regions of the progenitor stellar envelope. This direct in-fall creates a rapid increase in mass without dramatic change in \\hat{a}. This specific angular momentum gradually increases as accretion continues, derived from the outer layers of the remnant stellar envelope. This surge, hereby, ceases when the critical value of the specific angular momentum defined by the ISCO of the BH is reached.
+
+* _Middlegame:_ When a disk is formed, the BH may still continue to grow by Bardeen accretion of matter dripping across the ISCO on the viscous time scale of the newly formed accretion disk. This process may take the BH to a near-extremal state.
+
+* _Endgame:_ A rapidly spinning BH with \\Omega_{H}>\\Omega_{T} may produce a suspended accretion state by a transfer of energy and angular momentum to the accretion disk via inner torus magnetosphere. This heats up the torus giving rise to multiple mass moments, allowing for a balance by cooling through the accompanying prodigious output in gravitational radiation. This state lasts for the lifetime of rapid spin of the BH.
+
+The process of BH spin-down during the _Endgame_ is effectively described by (van Putten, 1999)
+
+\\dot{M}=-\\Omega_{T}\\dot{J},\\,\\dot{J}=-\\kappa e_{k}(\\Omega_{H}-\\Omega_{T}), (B7) where J is the BH angular momentum, \\kappa parametrizes the interaction strength between the BH and surrounding matter with specific kinetic energy e_{k}(van Putten & Levinson, 2003; van Putten, 2015, 2016; van Putten & Della Valle,2017). The associated BH luminosity transferred onto the surrounding high-density matter is available for catalytic conversion into various radiation channels, described by the equations of suspended accretion (van Putten, 2001).
+
+The BH luminosity is released predominantly in the form of gravitational radiation during the ensuing state of suspended accretion. This state lasts for the lifetime of BH spin, which scales inversely with e_{k} in (33). The output is accompanied by minor emissions in an ultra-relativistic baryon-poor jet emanating from the BH in its lowest energy state, and MeV-neutrinos and magnetic winds from the disk (3). GW luminosity of BH during the spin-down follows from the quadruple gravitational radiation formula (Peters and Mathews, 1963; van Putten and Sarkar, 2000; van Putten et al., 2019)
+
+L_{GW}=\\frac{32}{5}\\left(\\frac{\\delta m}{M}\\right)\\left(\\frac{1}{zK_{GW}} \\right)^{5}L_{0}=2\\times 10^{51}\\left(\\frac{\\xi}{0.1}\\right)^{2}\\left(\\frac{ \\sigma}{0.01}\\right)^{2}\\left(\\frac{4}{zK_{\\alpha w}}\\right)^{5}\\mathrm{erg\\; \\;s^{-1}},  where, L_{0}=c^{5}/G, \\xi=\\delta m/M_{T} and \\delta m is the mass inhomogeneity in the torus created due to the heating. (33) and (34) present a 2+2 parameter space for Kerr BH evolution and its GW output, respectively defined by (M,\\ \\hat{a}=a/M) and (\\sigma,\\xi).
+
+In this process, the spin of the BH decreases, the ISCO expands and, consequently, the radius of the torus increases (Fig. 8). The duration of this spin-down is determined by the lifetime of rapid spin of the BH (van Putten and Della Valle, 2017) that scales with the inverse mass-ratio of torus-to-BH, \\sigma=M_{T}/M,
+
+T_{s}\\simeq 15\\,s\\left(\\frac{0.01}{\\sigma}\\right)\\left(\\frac{M}{7M_{\\odot}} \\right). 
+
+Eventually, \\Omega_{H} reaches \\Omega_{T}, completing the _Endgame_ with a slowly rotating remnant (\\hat{a}\\simeq 0.36, Figs. 7-8).
+
+[MISSING_PAGE_EMPTY:7655]
+
+[MISSING_PAGE_FAIL:18]
+
+Flanagan, E. E., & Hughes, S. A. 1998, Physical Review D, 57, 4535, doi: 10.1103/physrevd.57.4535
+
+* Foley et al. (2006) Foley, S., Watson, D., Gorosabel, J., et al. 2006, A&A, 447, 891, doi: 10.1051/0004-6361:20054382
+
+* Frail et al. (2001) Frail, D. A., Kulkarni, S. R., Sari, R., et al. 2001, ApJ, 562, L55, doi: 10.1086/338119
+
+* Fransson et al. (2024) Fransson, C., Barlow, M. J., Kavanagh, P. J., et al. 2024, Science, 383, 898, doi: 10.1126/science.adj5796
+
+* Frontera (2019) Frontera, F. 2019, Rendiconti Lincei. Scienze Fisiche e Naturali, 30, 171, doi: 10.1007/s12210-019-00766-z
+
+* Fryer et al. (2014) Fryer, C. L., Rueda, J. A., & Ruffini, R. 2014, The Astrophysical Journal, 793, L36, doi: 10.1088/2041-8205/793/2/l36
+
+* Fynbo et al. (2006) Fynbo, J. P. U., Watson, D., Thone, C. C., et al. 2006, Nature, 444, 1047, doi: 10.1038/nature05375
+
+* Gal-Yam et al. (2006) Gal-Yam, A., Ofek, E. O., Poznanski, D., et al. 2006, ApJ, 639, 331, doi: 10.1086/499157
+
+* Galama et al. (1998) Galama, T. J., Vreeswijk, P. M., van Paradijs, J., et al. 1998, Nature, 395, 670, doi: 10.1038/27150
+
+* Galeotti & Pizzella (2018) Galeotti, P., & Pizzella, G. 2018, Physics of Atomic Nuclei, 81, 105, doi: 10.1134/s1063778818010106
+
+* Gehrels et al. (2006) Gehrels, N., Norris, J. P., Barthelmy, S. D., et al. 2006, Nature, 444, 1044, doi: 10.1038/nature05376
+
+* Ghirlanda et al. (2016) Ghirlanda, G., Salafia, O. S., Pescalli, A., et al. 2016, Astronomy & Astrophysics, 594, A84, doi: 10.1051/0004-6361/201628993
+
+* Gill et al. (2019) Gill, R., Nathanail, A., & Rezzolla, L. 2019, The Astrophysical Journal, 876, 139, doi: 10.3847/1538-4357/ab16da
+
+* Gilmozzi et al. (1987) Gilmozzi, R., Cassatella, A., Clavel, J., et al. 1987, Nature, 328, 318, doi: 10.1038/328318a0
+
+* Gonzalez-Diaz et al. (2024) Gonzalez-Diaz, R., Galbany, L., Kangas, T., et al. 2024, Astronomy & Astrophysics, 684, A104, doi: 10.1051/0004-6361/202349029
+
+* Gossan et al. (2016) Gossan, S., Sutton, P., Stuver, A., et al. 2016, Physical Review D, 93, 042002, doi: 10.1103/physrevd.93.042002
+
+* Graham et al. (2019) Graham, M. J., Kulkarni, S. R., Bellm, E. C., et al. 2019, Publications of the Astronomical Society of the Pacific, 131, 078001, doi: 10.1088/1538-3873/ab006c
+
+* Guetta & Della Valle (2007) Guetta, D., & Della Valle, M. 2007, The Astrophysical Journal, 657, L73, doi: 10.1086/511417
+
+* Gutierrez et al. (2017) Gutierrez, C. P., Anderson, J. P., Hamuy, M., et al. 2017, The Astrophysical Journal, 850, 89, doi: 10.3847/1538-4357/aa8f52
+
+* Hamann et al. (2006) Hamann, W.-R., Grafener, G., & Liermann, A. 2006, Astronomy & Astrophysics, 457, 1015, doi: 10.1051/0004-6361:20065052
+
+* Hanuschik (1991) Hanuschik, R. W. 1991, in Reviews in Modern Astronomy, ed. G. Klare (Berlin, Heidelberg: Springer Berlin Heidelberg), 233-259
+
+* Hirata et al. (1987) Hirata, K., Kajita, T., Koshiba, M., et al. 1987, Physical Review Letters, 58, 1490, doi: 10.1103/physrevlett.58.1490
+
+* Hjorth & Bloom (2012) Hjorth, J., & Bloom, J. S. 2012, in Chapter 9 in "Gamma-Ray Bursts, 169-190, doi: 10.48550/arXiv.1104.2274
+
+* Ho et al. (2020) Ho, A. Y. Q., Kulkarni, S. R., Perley, D. A., et al. 2020, ApJ, 902, 86, doi: 10.3847/1538-4357/aba630
+
+* Hosseinzadeh et al. (2023) Hosseinzadeh, G., Farah, J., Shrestha, M., et al. 2023, ApJ, 953, L16, doi: 10.3847/2041-8213/ace4c4
+
+* Kelly et al. (2008) Kelly, P. L., Kirshner, R. P., & Pahre, M. 2008, The Astrophysical Journal, 687, 1201, doi: 10.1086/591925
+
+* Kilpatrick et al. (2023) Kilpatrick, C. D., Foley, R. J., Jacobson-Galan, W. V., et al. 2023, The Astrophysical Journal Letters, 952, L23, doi: 10.3847/2041-8213/ace4ca
+
+* Kiuchi et al. (2011) Kiuchi, K., Shibata, M., Montero, P. J., & Font, J. A. 2011, PhRvL, 106, 251102, doi: 10.1103/PhysRevLett.106.251102
+
+* Kobayashi & Meszaros (2003) Kobayashi, S., & Meszaros, P. 2003, ApJ, 589, 861, doi: 10.1086/374733
+
+* Kochanek (2014) Kochanek, C. S. 2014, Monthly Notices of the Royal Astronomical Society, 446, 1213, doi: 10.1093/mnras/stu2056
+
+* Lense & Thirring (1918) Lense, J., & Thirring, H. 1918, Physikalische Zeitschrift, 19, 156
+
+* Leung et al. (2020) Leung, S.-C., Blinnikov, S., Nomoto, K., et al. 2020, The Astrophysical Journal, 903, 66, doi: 10.3847/1538-4357/abba33
+
+* Levinson & Nakar (2020) Levinson, A., & Nakar, E. 2020, PhR, 866, 1, doi: 10.1016/j.physrep.2020.04.003
+
+* Levinson et al. (2015) Levinson, A., van Putten, M. H. P. M., & Pick, G. 2015, ApJ, 812, 124, doi: 10.1088/0004-637X/812/2/124
+
+* Li et al. (2011) Li, W., Chornock, R., Leaman, J., et al. 2011, MNRAS, 412, 1473, doi: 10.1111/j.1365-2966.2011.18162.x
+
+* LIGO Scientific collaboration (2021) LIGO Scientific collaboration, Virgo collaboration, K. c. 2021, LIGO Document T2100289-v6
+
+* Lin et al. (2023) Lin, Z., Rijal, A., Lunardini, C., Morales, M. D., & Zanolin, M. 2023, Physical Review D, 107, 083017, doi: 10.1103/physrevd.107.083017
+
+* Lucchini et al. (2019) Lucchini, M., Krauss, F., & Markoff, S. 2019, Monthly Notices of the Royal Astronomical Society, doi: 10.1093/mnras/stz2125
+
+* Lyman et al. (2016) Lyman, J. D., Bersier, D., James, P. A., et al. 2016, Monthly Notices of the Royal Astronomical Society, 457, 328, doi: 10.1093/mnras/stv2983
+
+* MacCray (1996) MacCray, R., ed. 1996, Supernovae and supernova remnants, Proceedings of the... Colloquium of the International Astronomical Union No. 145 (Cambridge: Cambridge University Press)
+
+* MacCray et al. (2019)Madau, P., & Dickinson, M. 2014, Annual Review of Astronomy and Astrophysics, 52, 415, doi: 10.1146/annurev-astro-081811-125615
+
+* Maurer et al. (2009) Maurer, J. I., Mazzali, P. A., Deng, J., et al. 2009, Monthly Notices of the Royal Astronomical Society, 402, 161, doi: 10.1111/j.1365-2966.2009.15905.x
+
+* Maurer et al. (2010) Maurer, J. I., Mazzali, P. A., Deng, J., et al. 2010, MNRAS, 402, 161, doi: 10.1111/j.1365-2966.2009.15905.x
+
+* Melinder et al. (2012) Melinder, J., Dahlen, T., Mencia Trinchant, L., et al. 2012, Astronomy & Astrophysics, 545, A96, doi: 10.1051/0004-6361/201219364
+
+* Mooley et al. (2017) Mooley, K. P., Nakar, E., Hotokezaka, K., et al. 2017, Nature, 554, 207, doi: 10.1038/nature25452
+
+* Mooley et al. (2018) Mooley, K. P., Deller, A. T., Gottlieb, O., et al. 2018, Nature, 561, 355, doi: 10.1038/s41586-018-0486-3
+
+* Nakar (2015) Nakar, E. 2015, ApJ, 807, 172, doi: 10.1088/0004-637X/807/2/172
+
+* Nakar & Sari (2012) Nakar, E., & Sari, R. 2012, The Astrophysical Journal, 747, 88, doi: 10.1088/0004-637x/747/2/88
+
+* Narayan et al. (2003) Narayan, R., Igumenshchev, I. V., & Abramowicz, M. A. 2003, PASJ, 55, L69, doi: 10.1093/pasj/55.6.L69
+
+* Park et al. (2022) Park, H.-J., Kim, S.-J., Kim, S., & van Putten, M. H. P. M. 2022, The Astrophysical Journal, 938, 69, doi: 10.3847/1538-4357/ac9300
+
+* Pasham et al. (2024) Pasham, D. R., Zajacek, M., Nixon, C. J., et al. 2024, Nature, doi: 10.1038/s41586-024-07433-w
+
+* Pastorello et al. (2005) Pastorello, A., Baron, E., Branch, D., et al. 2005, Monthly Notices of the Royal Astronomical Society, 360, 950, doi: 10.1111/j.1365-2966.2005.09079.x
+
+* Peters & Mathews (1963) Peters, P. C., & Mathews, J. 1963, Physical Review, 131, 435, doi: 10.1103/PhysRev.131.435
+
+* Pietrzynski et al. (2019) Pietrzynski, G., Graczyk, D., Gallenne, A., et al. 2019, Nature, 567, 200, doi: 10.1038/s41586-019-0999-4
+
+* Piro & Pfahl (2007) Piro, A. L., & Pfahl, E. 2007, The Astrophysical Journal, 658, 1173, doi: 10.1086/511672
+
+* Podsiadlowski et al. (2004) Podsiadlowski, P., Mazzali, P. A., Nomoto, K., Lazzati, D., & Cappellaro, E. 2004, The Astrophysical Journal, 607, L17, doi: 10.1086/421347
+
+* Pozanenko et al. (2018) Pozanenko, A. S., Barkov, M. V., Minaev, P. Y., et al. 2018, The Astrophysical Journal Letters, 852, L30, doi: 10.3847/2041-8213/aaa2f6
+
+* Raskin et al. (2008) Raskin, C., Scannapieco, E., Rhoads, J., & Della Valle, M. 2008, The Astrophysical Journal, 689, 358, doi: 10.1086/592495
+
+* Reynolds (2021) Reynolds, C. S. 2021, ARA&A, 59, 117, doi: 10.1146/annurev-astro-112420-035022
+
+* Rueda et al. (2021) Rueda, J. A., Ruffini, R., Moradi, R., & Wang, Y. 2021, International Journal of Modern Physics D, 30, 2130007, doi: 10.1142/S021827182130007X
+
+* Sahu et al. (2009) Sahu, D. K., Tanaka, M., Anupama, G. C., Gurugubelli, U. K., & Nomoto, K. 2009, The Astrophysical Journal, 697, 676, doi: 10.1088/0004-637x/697/1/676
+
+* Salpeter (1955) Salpeter, E. E. 1955, The Astrophysical Journal, 121, 161, doi: 10.1086/145971
+
+* Sander et al. (2019) Sander, A. A. C., Hamann, W.-R., Todt, H., et al. 2019, Astronomy & Astrophysics, 621, A92, doi: 10.1051/0004-6361/201833712
+
+* Shrestha et al. (2024) Shrestha, M., Bostroem, K. A., Sand, D. J., et al. 2024, arXiv e-prints, arXiv:2405.18490, doi: 10.48550/arXiv.2405.18490
+
+* Smartt (2009) Smartt, S. J. 2009, Annual Review of Astronomy and Astrophysics, 47, 63, doi: 10.1146/annurev-astro-082708-101737
+
+* Soderberg et al. (2012) Soderberg, A. M., Margutti, R., Zauderer, B. A., et al. 2012, ApJ, 752, 78, doi: 10.1088/0004-637X/752/2/78
+
+* Srivastav et al. (2024) Srivastav, S., Chen, T. W., Smartt, S. J., et al. 2024, Transient Name Server AstroNote, 100, 1
+
+* Srivastava et al. (2019) Srivastava, V., Ballmer, S., Brown, D. A., et al. 2019, Physical Review D, 100, 043026, doi: 10.1103/physrevd.100.043026
+
+* Stella & Vietri (1998) Stella, L., & Vietri, M. 1998, The Astrophysical Journal, 492, L59, doi: 10.1086/311075
+
+* Strolger et al. (2015) Strolger, L.-G., Dahlen, T., Rodney, S. A., et al. 2015, The Astrophysical Journal, 813, 93, doi: 10.1088/0004-637x/813/2/93
+
+* Sukhbold et al. (2018) Sukhbold, T., Woosley, S. E., & Heger, A. 2018, The Astrophysical Journal, 860, 93, doi: 10.3847/1538-4357/aac2da
+
+* Sun et al. (2022) Sun, N.-C., Maund, J. R., Crowther, P. A., & Liu, L.-D. 2022, Monthly Notices of the Royal Astronomical Society: Letters, 512, L66, doi: 10.1093/mnrasl/slac023
+
+* Sun et al. (2023) Sun, N.-C., Maund, J. R., Shao, Y., & Janiak, I. A. 2023, Monthly Notices of the Royal Astronomical Society, 519, 3785, doi: 10.1093/mnras/stac3773
+
+* Szczepanczyk et al. (2021) Szczepanczyk, M. J., Antelis, J. M., Benjamin, M., et al. 2021, Phys. RevD, 104, 102002, doi: 10.1103/PhysRevD.104.102002
+
+* Taddia et al. (2019) Taddia, F., Sollerman, J., Fremling, C., et al. 2019, Astronomy & Astrophysics, 621, A71, doi: 10.1051/0004-6361/201834429
+
+* The LIGO Scientific Collaboration (2024) The LIGO Scientific Collaboration, The Virgo Collaboration, & The KAGRA Collaboration. 2024, Observation of Gravitational Waves from the Coalescence of a 2.5-4.5M_{\\odot} Compact Object and a Neutron Star, arXiv, doi: 10.48550/ARXIV.2404.04248
+
+* Thorne et al. (1986) Thorne, K. S., Price, R. H., & MacDonald, D. A. 1986, Black holes: The membrane paradigm
+
+* Tinney et al. (1998) Tinney, C., Stathakis, R., Cannon, R., et al. 1998, IAU Circ., 6896, 1* Toscani et al. (2019) Toscani, M., Lodato, G., & Nealon, R. 2019, MNRAS, 489, 699, doi: 10.1093/mnras/stz2201
+
+* Toscani et al. (2020) Toscani, M., Rossi, E. M., & Lodato, G. 2020, MNRAS, 498, 507, doi: 10.1093/mnras/staa2290
+
+* Utrobin & Chugai (2011) Utrobin, V. P., & Chugai, N. N. 2011, Astronomy & Astrophysics, 532, A100, doi: 10.1051/0004-6361/201117137
+
+* Van Putten (2013) Van Putten, M. H. 2013, Acta Polytechnica, 53, 736, doi: 10.14311/ap.2013.53.0736
+
+* van Putten (1999) van Putten, M. H. P. M. 1999, Science, 284, 115, doi: 10.1126/science.284.5411.115
+
+* van Putten (2001) van Putten, M. H. P. M. 2001, Physical Review Letters, 87, 091101, doi: 10.1103/physrevlett.87.091101
+
+* van Putten (2002) --. 2002, The Astrophysical Journal, 575, L71, doi: 10.1086/342781
+
+* van Putten (2004) --. 2004, The Astrophysical Journal, 611, L81, doi: 10.1086/423934
+
+* van Putten (2008) van Putten, M. H. P. M. 2008, ApJL, 684, L91, doi: 10.1086/592216
+
+* van Putten (2012) van Putten, M. H. P. M. 2012, Progress of Theoretical Physics, 127, 331, doi: 10.1143/PTP.127.331
+
+* van Putten (2015) van Putten, M. H. P. M. 2015, The Astrophysical Journal, 810, 7, doi: 10.1088/0004-637x/810/1/7
+
+* van Putten (2016) --. 2016, The Astrophysical Journal, 819, 169, doi: 10.3847/0004-637x/819/2/169
+
+* van Putten & Della Valle (2017) van Putten, M. H. P. M., & Della Valle, M. 2017, MNRAS, 464, 3219, doi: 10.1093/mnras/stw2496
+
+* van Putten (2019) --. 2019, MNRAS, 482, L46, doi: 10.1093/mnrasl/sly166
+
+* van Putten & Della Valle (2023) van Putten, M. H. P. M., & Della Valle, M. 2023, Astronomy & Astrophysics, 669, A36, doi: 10.1051/0004-6361/202142974
+
+* van Putten et al. (2011) van Putten, M. H. P. M., Della Valle, M., & Levinson, A. 2011, Astronomy & Astrophysics, 535, L6, doi: 10.1051/0004-6361/201118080
+
+* van Putten et al. (2019) van Putten, M. H. P. M., Della Valle, M., & Levinson, A. 2019, ApJL, 876, L2, doi: 10.3847/2041-8213/ab18a2
+
+* van Putten et al. (2014) van Putten, M. H. P. M., Lee, G. M., Della Valle, M., Amati, L., & Levinson, A. 2014, Monthly Notices of the Royal Astronomical Society: Letters, 444, L58, doi: 10.1093/mnrasl/slu113
+
+* van Putten et al. (2004a) van Putten, M. H. P. M., Lee, H. K., Lee, C. H., & Kim, H. 2004a, Physical Review D, 69, 104026, doi: 10.1103/physrevd.69.104026
+
+* van Putten & Levinson (2003) van Putten, M. H. P. M., & Levinson, A. 2003, ApJ, 584, 937, doi: 10.1086/345900
+
+* van Putten et al. (2019) van Putten, M. H. P. M., Levinson, A., Frontera, F., et al. 2019, The European Physical Journal Plus, 134, doi: 10.1140/epjp/i2019-12932-3
+
+* van Putten et al. (2004b) van Putten, M. H. P. M., Levinson, A., Lee, H. K., et al. 2004b, Physical Review D, 69, 044007, doi: 10.1103/physrevd.69.044007
+
+* van Putten & Regimbau (2003) van Putten, M. H. P. M., & Regimbau, T. 2003, ApJL, 593, L15, doi: 10.1086/378146
+
+* van Putten & Sarkar (2000) van Putten, M. H. P. M., & Sarkar, A. 2000, PhRvD, 62, 041502, doi: 10.1103/PhysRevD.62.041502
+
+* Vartanyan et al. (2023) Vartanyan, D., Burrows, A., Wang, T., Coleman, M. S. B., & White, C. J. 2023, The Gravitational-Wave Signature of Core-Collapse Supernovae, arXiv, doi: 10.48550/ARXIV.2302.07092
+
+* Wessel et al. (2021) Wessel, E., Paschalidis, V., Tsokaros, A., Ruiz, M., & Shapiro, S. L. 2021, PhRvD, 103, 043013, doi: 10.1103/PhysRevD.103.043013
+
+* West et al. (1987) West, R. M., Lauberts, A., Jorgensen, H. E., & Schuster, H. E. 1987, A&A, 177, L1
+
+* Wilkins (1972) Wilkins, D. C. 1972, Physical Review D, 5, 814, doi: 10.1103/physrevd.5.814
+
+* Woosley (1993) Woosley, S. E. 1993, The Astrophysical Journal, 405, 273, doi: 10.1086/172359
+
+* Woosley & Bloom (2006) Woosley, S. E., & Bloom, J. S. 2006, ARA&A, 44, 507, doi: 10.1146/annurev.astro.43.072103.150558
+
+* Woosley et al. (1999) Woosley, S. E., Eastman, R. G., & Schmidt, B. P. 1999, The Astrophysical Journal, 516, 788, doi: 10.1086/307131
+
+* Xiang et al. (2021) Xiang, D., Wang, X., Lin, W., et al. 2021, The Astrophysical Journal, 910, 42, doi: 10.3847/1538-4357/abdeba

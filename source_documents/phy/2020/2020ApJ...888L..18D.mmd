@@ -1,0 +1,159 @@
+###### Abstract
+
+The globular cluster Omega Centauri is the most massive and luminous cluster in the Galaxy. The \\gamma-ray source FL8Y J1326.7-4729 is coincident with the core of the cluster, leading to speculation that hitherto unknown radio pulsars or annihilating dark matter may be present in the cluster core. Here we report on the discovery of five millisecond pulsars in Omega Centauri following observations with the Parkes radio telescope. Four of these pulsars are isolated with spin periods of 4.1, 4.2, 4.6 and 6.8 ms. The fifth has a spin period of 4.8 ms and is in an eclipsing binary system with an orbital period of 2.1 hours. Deep radio continuum images of the cluster centre with the Australian Telescope Compact Array reveal a small population of compact radio sources making it likely that other pulsars await discovery. We consider it highly likely that the millisecond pulsars are the source of the \\gamma-ray emission. The long-term timing of these pulsars opens up opportunities to explore the dynamics and interstellar medium of the cluster. stars: neutron - globular clusters: individual (NGC 5139) - pulsars: general. 0000-0002-3876-2686]Shi Dai
+
+0000-0002-8282-8587]Simon Johnston
+
+0000-0002-8872-8584]Matthew Kerr
+
+0000-0002-4729-7374]Fernando Camilo
+
+0000-0002-8828-7275]Andrew Cameron
+
+0000-0002-4882-8584]Lawrence Toomey
+
+0000-0002-8872-8584]Hiroki Kumamoto
+
+## 1 Introduction
+
+Of the more than 200 globular clusters (GCs) known in the Milky Way, Omega Centauri (\\omega Cen or NGC 5139) stands out. It is not only the most massive and luminous GC in the Galaxy, but also shows characteristic features, such as its very broad metallicity distribution (e.g., Freeman & Rodgers, 1975; Magurno et al., 2019) and its incredible multiplicity in stellar populations (e.g., Pancino et al., 2000; Bellini et al., 2017). \\omega Cen has one of the largest cores with an angular radius of 155 arcsec (Harris, 2010), and a projected number density of \\sim 10^{6} stars in the central region with high velocity dispersion (Anderson & van der Marel, 2010). The properties of \\omega Cen have led to suggestions that it was once a dwarf galaxy captured by the Milky Way with its outer stellar envelope almost entirely removed by tidal stripping (e.g., Bekki & Freeman, 2003).
+
+The \\gamma-ray source FL8Y J1326.7-4729 (Abdo et al., 2010) is coincident with the core of \\omega Cen. Discovered shortly after the launch of the Fermi satellite, the hard spectrum and exponential cut-off are very typical of emission from millisecond pulsars (MSPs). In addition, Abdo et al. (2010) concluded that some 19\\pm 9 pulsars could reside in the cluster. More recent analysis of nine years of Fermi data predicted a similar number of MSPs in \\omega Cen (de Menezes et al., 2019). A large population of X-ray sources in the cluster core led Henleywillis et al. (2018) to conclude that MSPs were likely responsible for some of them.
+
+Two further questions, triggered by \\omega Cen's unique formation history and properties, have drawn much attention. First, are there any intermediate-mass black holes (IMBHs) in the centre of \\omega Cen (e.g., Noyola et al., 2008; Baumgardt, 2017)? Secondly, is there any evidence of dark matter annihilation (e.g., Brown et al., 2019; Kar et al., 2019)? Theoretical studies and simulations of the growth rate of stars via stellar collisions in dense star clusters predict that GCs could contain IMBHs (Portegies Zwart & McMillan, 2002). As the most massive GC with a large core, \\omega Cen is one of the main targets to search for candidate IMBHs. While recent dynamical and kinematical studies of the central few arcmin of \\omega Cen have ruled out the existence of massive IMHBs (Anderson & van der Marel,2010; van der Marel & Anderson 2010; Baumgardt et al. 2019), it is still uncertain if \\omega Cen hosts an IMBH with M_{\\rm BH}\\lesssim 1.2\\times 10^{4}\\,{\\rm M_{\\odot}}. Tighter constraints will be valuable for us to understand IMBH demographics in globular clusters and whether GCs have IMBHs that follow the same relationship as that established for supermassive black holes. On the other hand, if \\omega Cen were indeed a dwarf galaxy dominated by dark matter, then its relatively close distance to Earth (\\sim 5.2 kpc, Harris 2010) makes it an excellent candidate to search for evidence of dark matter annihilation (Reynoso-Cordova et al. 2019; Brown et al. 2019).
+
+The discovery of radio pulsars in the core of \\omega Cen could provide us with a powerful tool to solve these mysteries. As has been demonstrated for GCs 47Tuc (Freire et al. 2001a, 2017), Terzan 5 (Prager et al. 2017) and NGC 6624 (Perera et al. 2017), long-term timing of pulsars allows us to study the dynamics of the core and to probe any candidate IMBH and the interstellar medium. Polarisation observations of pulsars allow us to determine the rotation measure (RM), and then to estimate the strength of magnetic fields together with the pulsar dispersion measure (DM). This will be important to constrain particle dark matter annihilation models (Kar et al. 2019). Better understanding of the MSP population will also enable us to put strong constraints on \\gamma-rays from dark matter annihilation (Reynoso-Cordova et al. 2019) since MSPs are also strong \\gamma-ray sources.
+
+Extensive searches for radio pulsars in \\omega Cen have been carried out in the early 2000s (Edwards et al. 2001; Possenti et al. 2005) and more recently targeted at the Fermi Large Area Telescope (LAT) GeV source (Camilo et al. 2015), but no radio pulsars were found. Considering the size and mass of \\omega Cen and the richness of MSPs in other GCs, the absence of MSPs in the cluster centre of \\omega Cen was puzzling. Although this could be explained by the low rate of stellar interactions in the core of \\omega Cen, \\gamma-ray emission detected with Fermi-LAT suggested a small population of MSPs (Abdo et al. 2010).
+
+We have used the Ultra-wideband Low (UWL) receiver (Hobbs et al. 2019) on the Parkes radio telescope to search \\omega Cen and have discovered five MSPs and have further used the Australia Telescope Compact Array to make deep continuum images. In Section 2 we present the observations and results and discuss their implications in Section 3.
+
+## 2 Observations and Results
+
+### Australian Telescope Compact Array Observations
+
+We observed the core of \\omega Cen with the Australia Telescope Compact Array on 2019 July 10 and 2019 Sep 5 for 12 hours on each occasion at an observing frequency centred at 2.1 GHz, with a bandwidth of 2 GHz (CX439, PI: S. Dai). The 750C and the 6C configurations were used. The data were combined and reduced in standard fashion with the package miriad using the flux calibrator 1934-63 and the phase calibrator 1320-446. The resultant image has a root-mean-square noise of 10.5 \\muJy and a resolution of 7.0\\times 4.0 arcsec. In addition we obtained archival data of the cluster taken at 5.5 GHz with 2 GHz of bandwidth on 2010 Jan 22 and 23 in the 6A configuration. The image has an rms of 6.5\\,\\muJy and a resolution of 2.6\\times 1.6 arcsec.
+
+In Fig. 1, we show a 0.1\\times 0.1 square degree region centred on the core of \\omega Cen. We overlay unidentified X-ray sources (Henleywillis et al. 2018) and the unidentified Fermi source FL8Y J1326.7-4729. The core of \\omega Cen is shown as the yellow circle with a radius of 155 arcsec (Harris 2010). Within the core region we identified several faint continuum sources at 2.1 GHz above a threshold of 3.5\\sigma as listed in Table 1 and they are shown as purple circles in Fig. 1. The two brightest sources (Nos. 6 and 7) are clearly extended and associated with X-ray sources, and are likely radio galaxies. Of the remaining sources, only No. 13 is coincident with X-ray emission. In the 5.5 GHz image, only 5 sources are within the core region above a flux density limit of 30 \\muJy. Two are the bright extended sources discussed above, while one corresponds to source No. 2 at 2.1 GHz.
+
+### Parkes Observations and pulsar details
+
+\\begin{table}
+
+\\begin{tabular}{l c c c} \\hline \\hline No. & RA & Dec & S_{2.1} \\\\  & (J2000) & (J2000) & (\\muJy) \\\\ \\hline
+
+1 & 13:26:54.37 & -47:30:56.3 & 45 \\\\
+
+2 & 13:26:39.33 & -47:30:44.8 & 46 \\\\
+
+3 & 13:26:46.40 & -47:30:29.4 & 55 \\\\
+
+4 & 13:26:37.26 & -47:29:42.1 & 68 \\\\
+
+5 & 13:26:48.66 & -47:29:25.6 & 47 \\\\
+
+6 & 13:26:41.78 & -47:29:19.8 & 135 \\\\
+
+7 & 13:26:38.15 & -47:29:04.8 & 544 \\\\
+
+8 & 13:26:56.47 & -47:28:45.0 & 46 \\\\
+
+9 & 13:26:56.28 & -47:28:30.1 & 58 \\\\
+
+10 & 13:26:41.74 & -47:27:00.4 & 47 \\\\
+
+11 & 13:26:55.28 & -47:26:35.4 & 93 \\\\
+
+12 & 13:26:42.71 & -47:28:46.2 & 40 \\\\
+
+13 & 13:26:49.57 & -47:29:25.0 & 44 \\\\
+
+14 & 13:26:57.99 & -47:30:29.5 & 41 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: ATCA sources in the core region of \\omega Cen.
+
+The unidentified Fermi source, FL8Y J1326.7-4729, located in the core of \\omega Cen was observed on 2018 November 22 and 25 at Parkes using the UWL receiver as part of project P970 (PI: S. Dai). The observation on November 22 used the PDFB4 backend, and data were recorded with 2-bit sampling every 64 \\mus in each of the 0.5 MHz wide frequency channels (512 channels across the 256 MHz band centred at 1369 MHz). The November 25 observation used the Medusa backend, which in conjunction with the UWL, provides a radio frequency coverage from 704 MHz to 4032 MHz (for details see Hobbs et al., 2019). Data were recorded with 2-bit sampling every 64 \\mus in each of the 0.125 MHz wide frequency channels (26624 channels in total). The total integration time was 2700 and 3600 s, respectively.
+
+A periodicity search was carried out with the pulsar searching software package PRESTO (Ransom, 2001). The DM range that we searched was 0-500 pc cm{}^{-3}. In order to account for possible orbital modulation of pulsar periodic signals, we searched for signals drifting by as much as \\pm 200/n_{h} bins in the Fourier domain by setting zmax=200(Ransom et al., 2002), where n_{h} is the largest harmonic at which a signal is detected (up to 8 harmonics were summed). We identified two pulsars at the same dispersion measure \\mathrm{DM}=100.3 pc cm{}^{-3} with rotation periods of 4.10 ms and 4.79 ms, respectively.
+
+Follow-up observations under the auspices of project P1034 were performed using the coherently de-dispersed search mode where data are recorded with 2-bit sampling every 64 \\mus in each of the 1 MHz wide frequency channels (3328 channels across the whole band with Medusa). Data were coherently de-dispersed at a DM of 100.3 pc cm{}^{-3}. Table 2 lists the observations and integration times. A periodicity search as described above was carried out for each observation within a DM range of 90-110 pc cm{}^{-3}. On 2019 November 10, we observed \\omega Cen for \\sim 10 hr. Assuming a bandwidth of 1 GHz centred at 1.4 GHz, and with a system equivalent flux density of \\sim 36 Jy (Hobbs et al., 2019), the 10 hr integration gives us a nominal sensitivity of \\sim 20 \\muJy for 8\\sigma detection. We also split the long observation into one-hour blocks and carried out searches for binary systems up to zmax=200.
+
+With the apparent spin period of each pulsar determined at each observing epoch, data were folded using the DSPSR(van Straten and Bailes, 2011) software package with a sub-integration length of 30 seconds. We manually excised data affected by narrow-band and impulsive radio-frequency interference for each sub-integration. Each observation was averaged in time to create sub-integrations with a length of a few minutes and pulse time of arrivals (ToAs) were measured for each sub-integration using psrchive(Hotan et al., 2004). On 2019 October 14, full Stokes information was recorded and a pulsed noise signal injected into the signal path was observed before the observation. Polarisation and flux calibration were carried out for this observation following Dai et al. (2019).
+
+PSR J1326-4728A (4.1 ms, hereafter pulsar A) shows evidence of strong intensity variability likely caused by interstellar scintillation. The signal-to-noise ratio (S/N) of folded profiles, scaled to one hour integration, varies from 4 to 18. Its integrated profile, shown in Fig. 2, is narrow. The 4.8 ms pulsar (PSR J1326-4728B, hereafter pulsar B) is in a binary with an orbital period of 0.0896 days. Clear signs of eclipsing are observed. The pulsar is associated with an ATCA continuum sources (No. 13 in Table 1) and an unidentified X-ray source as shown in Fig. 1. During the follow-up campaign, we discovered a 6.8 ms pulsar (PSR J1326-4728C, hereafter pulsar C), a 4.6 ms pulsar (PSR J1326-4728D, hereafter pulsar D) and a 4.2 ms pulsar (PSR J1326-4728E, hereafter pulsar E). These three pulsars are all isolated and significantly fainter than the first two pulsars. They were not detectable in 2018 observations nor short observations in 2019.
+
+Coherent timing solutions for pulsars A and B were derived from the ToAs via tempo2(Hobbs et al., 2006) and are listed in Table 3. We note that the values of \\dot{\\nu} for these pulsars are likely to be contaminated by their acceleration in the gravitational potential of the globular cluster. This also affects the derived values of B and \\dot{E} in the table. We have not yet obtained phase-coherent solutions for pulsars C, D and E. DM of each pulsar was measured using sub-band ToAs from 704 to 2112 MHz of the 10 hr observation.
+
+Calibrated flux densities and spectral indices were measured with data taken on 2019 October 14 and are given in Table 3. The psrchive program psrflux was used to measure the flux density. Flux densities were measured from 704 to 2112 MHz. While pulsars A, C, D and E show steep spectra, the spectrum of pulsar B is flat and it can be detected up to 3 GHz. We note that spectral indices were measured using one observation, and can therefore be affected by the variability of these pulsars and RFI at low frequencies. The spectrum can also be steepened if the pulsar is offset from the pointing centre. For a pulsar with an intrinsic spectral index of -1.5 and offset from the pointing centre by 7{}^{\\prime}, the observed spectral index is \\sim-2.3 within the frequency range from 704 to 2112 MHz. No linear or circular polarization was detected for any of the pulsars with a limit of 50%.
+
+## 3 Discussion
+
+\\omega Cen has been a prime target for pulsar searching. Early searches with the Parkes Multi-beam receiver (Edwards et al., 2001; Possenti et al., 2005) were pointed at the optical centre of the cluster (Harris, 2010), which is only \\sim 1^{\\prime} away from our pointing. More recently, the unidentified Fermi source in \\omega Cen was observed by Camilo et al. (2015) based on the position in the second Fermi-LAT catalogue, offset from our pointing by \\sim 2^{\\prime}. Considering the half-power width of the telescope beam at 1.4 GHz of 14^{\\prime}, the pointing offset is not the main reason for previous non-detections. On the other hand, we measured the flux densities of these pulsars to be less than 100 \\muJy (Table 3). The nominal (8\\sigma) sensitivity of previous searches to a 4 ms pulsar with DM \\sim 100 pc cm{}^{-3} is 0.1 to 0.2 mJy, higher than the measured flux densities of the new pulsars. Therefore, previous non-detections can be understood by the lack of sensitivity, especially considering the variability of the pulsars and the orbital modulation of pulsar B. The frequency coverage of UWL, down to 700 MHz, also greatly improved our sensitivity to pulsars with steep spectra and/or large offsets from the pointing centre.
+
+\\begin{table}
+
+\\begin{tabular}{l c c} \\hline \\hline \\multicolumn{1}{c}{Start} & Epoch & Integration \\\\ (UTC) & (MJD) & (second) \\\\ \\hline
+
+2018 Nov. 22 & 5844.95 & 2691 \\\\
+
+2018 Nov. 25 & 58447.83 & 3600 \\\\
+
+2019 Jun. 9 & 58643.30 & 1800 \\\\
+
+2019 Jun. 22 & 58656.39 & 2960 \\\\
+
+2019 Jul. 7 & 58671.49 & 2454 \\\\
+
+2019 Aug. 5 & 58700.26 & 1768 \\\\
+
+2019 Sep. 11 & 58737.10 & 3616 \\\\
+
+2019 Oct. 9 & 58765.04 & 3185 \\\\
+
+2019 Oct. 10 & 58765.96 & 3405 \\\\
+
+2019 Oct. 11 & 58767.05 & 1335 \\\\
+
+2019 Oct. 12 & 58767.96 & 8453 \\\\
+
+2019 Oct. 13 & 58769.02 & 3592 \\\\
+
+2019 Oct. 14 & 58770.01 & 3555 \\\\
+
+2019 Oct. 15 & 58771.25 & 1703 \\\\
+
+2019 Oct. 29 & 58785.93 & 3295 \\\\
+
+2019 Nov. 10 & 58796.79 & 37980 \\\\
+
+2019 Nov. 11 & 58798.04 & 3593 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Observation summary.
+
+Pulsars A and B have similar DMs, but we observe significant differences in DM of 0.3, 3.8 and 5.9 pc cm{}^{-3} towards pulsars C, D and E, respectively. Such a DM spread roughly agrees with the linear correlation between DM and DM spreads shown in Freire et al. (2005). This indicates that the DM variation is dominated by small-scale irregularities in the Galactic electron column density. The distance to \\omega Cen has previously been determined to be \\sim 5.2 kpc through the photometry of RR Lyrae stars (Harris, 2010). For this distance, we expect a DM of \\sim 91 pc cm{}^{-3} based on the YMW16 electron-density model (Yao et al., 2017) or \\sim 126 pc cm{}^{-3} based on the NE2001 model (Cordes, & Lazio, 2002), which bracket our measurements of 94-101 pc cm{}^{-3}. The NE2001 model seriously overestimates the amount of scattering in this direction, with an expected scattering time of 8.5 ms at 1 GHz, whereas we see little evidence (<1 ms) of scattering even at 700 MHz. If we assume a diffractive scintillation bandwidth of \\sim1 MHz and a velocity of \\sim100 km s{}^{-1} for the MSPs in \\omega Cen this would imply a diffractive timescale of \\sim10 mins and a refractive timescale of several days. We therefore surmise that refractive scintillation is the main cause of the flux variability seen in the pulsars.
+
+The radio continuum image shows that there are 14 sources within the core of \\omega Cen, some fraction of which are likely to be background radio galaxies. The position of pulsar B coincides with a radio continuum source with a flux density of 44 \\muJy, in agreement with the Parkes value. No radio continuum source is detected at the timing position of pulsar A. The absence of this pulsar in ATCA images could be due to its strong variability and steep spectrum. The variability of the pulsars means that repeated, long observations of \\omega Cen may be required to detect further pulsars (c.f. the discoveries in 47 Tuc and Terzan 5, Pan et al., 2016; Cadelano et al., 2018).
+
+Using the orbital parameters determined for pulsar B we can constrain the mass of its binary companion. Assuming a pulsar mass of 1.4 M{}_{\\odot}, the companion mass is estimated to be 0.016 M{}_{\\odot} for an inclination angle of i=60^{\\circ} and the minimum mass is 0.0138 M{}_{\\odot}. This suggests that pulsar B is in a 'black widow' system similar to those discovered in other GCs (e.g., Roberts, 2013). While signs of eclipsing have been observed, eclipses seem to be irregular in duration. Similar eclipsing features have been observed in J0024-7204V (Camilo et al., 2000; Ridolfi et al., 2016), but in that system the companion is significantly more massive. The observed eclipses and the pulsar's association with an unidentified X-ray source suggest that the pulsar may also be a strong \\gamma-ray emitter, and considering its distance the X-rays are likely to be produced by intrabinary shocks (e.g., Gentile et al., 2014). Study of this binary system will be the subject of future work.
+
+Given the location of pulsar A and B, their minimum separation from the cluster centre must be 2.8 and 1.1 pc, respectively. Using a mass for the cluster of 2.8\\times 10^{6} M{}_{\\odot}(Anderson & van der Marel, 2010), we can compute the acceleration towards the cluster centre and hence the maximum acceleration in our line-of-sight. This converts to a maximum |\\dot{\\nu}| of 1.6\\times 10^{-14} and 8.8\\times 10^{-14} Hz/s for the two pulsars, considerably higher than the measured values. Therefore either the actual radial acceleration is small, or the pulsars are located on the far side of the cluster centre.
+
+The timing position of pulsars A and B locate them within the error box of the \\gamma-ray source FL8Y J1326.7-4729. As we only have 1 yr of timing data, this is not yet sufficient to detect pulsations from the \\gamma-ray photons over the 13 yr lifetime of the Fermi mission. However, the detection of five MSPs in \\omega Cen strongly suggests that FL8Y J1326.7-4729 arises from the \\gamma-ray emission of the MSPs rather than annihilating dark matter. The \\gamma-ray emission may be dominated by one pulsar as seen in NGC 6624 and M28 (Freire et al., 2011; Wu et al., 2013), and the detection of \\gamma-ray pulsations will then allow us to put more stringent constraints on dark matter parameters. The black-widow system would seem to be the most likely candidate, given that many of the discovered \\gamma-ray MSPs are eclipsing binary systems with X-ray emission (Gentile et al., 2014). Alternatively, the \\gamma-ray emission may be the summed emission of the en
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c c} \\hline \\hline  & J1326-4728A & J1326-4728B & J1326-4728C & J1326-4728D & J1326-4728E \\\\ \\hline RAJ (J2000) & 13:26:39.670(3) & 13:26:49.563(6) & 13:26:44{}^{\\rm a} & 13:26:44 & 13:26:44 \\\\ DECJ (J2000) & -47:30:11.64(1) & -47:29:24.62(2) & -47:29:40 & -47:29:40 & -47:29:40 \\\\ \\nu (Hz) & 243.380880198(3) & 208.686833122(5) & 145.6057622(2) & 218.39623734(7) & 237.658566471(2) \\\\ \\dot{\\nu} (Hz/s) & -1.6(2)\\times 10^{-15} & -1.2(4)\\times 10^{-15} & & & \\\\ PEPOCH & 58447.77 & 58768.0 & 58447.77 & 58797.01 & 58796.79 \\\\ Time span (MJD) & 58444.95-58798.08 & 58444.95-58798.08 & & & & \\\\ DM & 100.313(3) & 100.273(3) & 100.648(4) & 96.542(3) & 94.3841(9) \\\\ S_{1400} (\\muJy) & 68(7) & 55(5) & 30(4) & 27(5) & 19(3) \\\\ \\hline \\multicolumn{6}{c}{Binary parameters (ELL1 model, Hobbs et al., 2006)} \\\\ \\hline P_{\\rm b} (days) & & 0.08961121(1) & & & \\\\ \\chi (ls) & & 0.021455(7) & & & \\\\ T_{\\rm asc} (MJD) & & 58768.037243(4) & & & \\\\ \\eta (10^{-3}) & & 0.1(6) & & & \\\\ \\kappa (10^{-3}) & & -0.4(6) & & & \\\\ \\hline \\multicolumn{6}{c}{Derived parameters} \\\\ \\hline \\dot{E} (erg s{}^{-1}) & 1.5\\times 10^{34} & 1.0\\times 10^{34} & & & \\\\ B (G) & 3.4\\times 10^{8} & 3.7\\times 10^{8} & & & \\\\ Spectral index & -1.7(2) & -0.1(2) & -2.4(3) & -2.0(2) & -3.4(2) \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: Parameters of the five pulsars. semble of MSPs, as is the case for 47 Tuc (Abdo et al., 2009), and so deeper searches for yet more pulsars and measurements of the pulsars' intrinsic \\dot{E} will be useful.
+
+## 4 Summary
+
+We have discovered five MSPs in the direction of an unidentified \\gamma-ray source coincident with the core of the globular cluster \\omega Cen. All five pulsars have a DM near 100 cm{}^{-3} pc, making it almost certain that they reside in the cluster itself. Four of the pulsars are isolated MSPs while the fifth is in an eclipsing binary system, similar to many of the other \\gamma-ray MSPs. The deep continuum image reveals a small population of sources with flux densities of \\sim50 \\muJy at 2 GHz, some of which are coincident with X-ray emission. We surmise that further MSPs await discovery. Long term timing of the pulsars in this cluster will aid in our understanding of the Milky Way's most massive cluster and will likely result in the detection of \\gamma-ray pulsations.
+
+We thank J. Green and J. Stevens for scheduling Parkes and ATCA observations. We thank the referee, S. Ransom for improvements to the manuscript. The Australia Telescope Compact Array and the Parkes radio telescope are part of the Australia Telescope National Facility which is funded by the Commonwealth of Australia for operation as a National Facility managed by CSIRO. Work at NRL is supported by NASA.

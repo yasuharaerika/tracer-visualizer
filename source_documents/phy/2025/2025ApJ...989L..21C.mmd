@@ -1,0 +1,185 @@
+###### Abstract
+
+Detection of short gamma-ray bursts (SGRBs) is critically important for the research of compact object mergers and multi-messenger astrophysics, but a significant part of SGRBs fall below the trigger threshold of GRB detectors, and thus are often missed. Here we present a systematic search for and verification of missed SGRBs using Fermi/GBM subthreshold triggers, jointly analyzing data from GBM, GECAM-B, and GECAM-C. Among 466 Fermi/GBM sub-threshold events (with reliability \\geq5) from 2021 to 2024, 181 are within GECAM's field of view. We find that 49 out of 181 are confirmed astrophysical transients, and 41 can be classified as SGRBs. Thus, the SGRB detection rate of Fermi/GBM is increased to about 50 per year. Additionally, a complete multi-instrument monitoring and systematic verification of GBM sub-threshold events is expected to further increase the SGRB rate to about 80 per year, which is \\sim100% improvement relative to the GBM-triggered SGRBs. These results may have important implications on the local formation rate of SGRBs and the binary neutron star merger rate. We also searched for potential temporal coincidences between these SGRBs and gravitational waves from the LIGO-Virgo-KAGRA O4 run resulting in no detection.
+
+Gamma-ray transient sources (1853), Gamma-ray detectors (630), Astronomy data analysis (1858) 0000-0001-9002-2161]Caice@hebtu.edu.cn
+
+0000-0002-2161-0002]Caice@hebtu.edu.cn
+
+The joint detection of GW170817 and GRB 170817A (Abbott et al., 2017; Goldstein et al., 2017; Savchenko et al., 2017) provided the first direct evidence linking binary neutron star (BNS) mergers to short gamma-ray bursts (SGRBs), and heralded the era of multi-messenger gravitational-wave astronomy. Electromagnetic (EM) counterparts such as GRBs offer critical insights into the physical processes underlying compact object mergers (e.g., Abbott et al., 2017; Kasliwal et al., 2017; Mooley et al., 2018), highlighting the importance of gamma-ray observations in multi-messenger studies.
+
+Importantly, GRB 170817A is among the weakest short GRBs that GBM has triggered on in terms of its 64 ms peak flux and is 2 to 6 orders of magnitude less energetic than other bursts with measured redshifts (Abbott et al., 2017; Goldstein et al., 2017). It demonstrates the need for systematic searches to recover similar events at greater distances (Zhang et al., 2018).
+
+Among current wide-field gamma-ray instruments, the Fermi Gamma-ray Burst Monitor (GBM; Meegan et al., 2009) and the Gravitational Wave High-energy Electromagnetic Counterpart All-sky Monitor (GECAM; Li et al., 2022; Zhang et al., 2023; Feng et al., 2024) are among the most prolific all-sky monitors. Both of them have detected many SGRBs. For example, GBM triggers on approximately 40 SGRBs per year (Gruber et al., 2014; von Kienlin et al., 2014; Narayana Bhat et al., 2016; von Kienlin et al., 2020). However, many weak or unfavorably oriented events fall below on-board trigger thresholds (Zhao et al., 2021). To recover these sub-threshold signals, both missions have developed offline search pipelines that enhance sensitivity and enable deeper exploration of the transient gamma-ray sky (Blackburn et al., 2015; Kocevski et al., 2018; Cai et al., 2025).
+
+However, low-significance events such as a candidate counterpart to the first direct observation of a binary black hole coalescence event, GW150914 (Abbott et al., 2016; Connaughton et al., 2016), remain controversial in terms of its astrophysical origin (Savchenko et al., 2016; Greiner et al., 2016; Xiong, 2016), underscoring the importance of coordinated multi-instrument analyses to improve sensitivity and detection confidence for sub-threshold events.
+
+The Energetic Transients joint analysis system for Multi-INstrument (ETJASMIN) pipeline (Xiao et al., 2022; Cai et al., 2025) enables coherent, likelihood-based searches across gamma-ray observatories, including GECAM-B, GECAM-C, and Fermi/GBM. Building on prior GBM and GECAM methodologies (Blackburn et al., 2015; Cai et al., 2025), it evaluates spatial and spectral consistency across up to 49 detectors to improve sensitivity, reduce false positives, and recover weak signals (Cai et al., 2025). Simulations indicate enhanced detection significance and source amplitude estimation relative to single-instrument searches. Applied recently to 63 X-ray transients from EP/WXT, the ETJASMIN pipeline identified gamma-ray counterparts in 22% of X-ray transients and provided stringent upper limits for other X-ray transients, demonstrating its efficacy in characterizing the high energy emission property of soft X-ray transients (Zhang et al., 2025).
+
+While substantial progress has been made in the detection of sub-threshold GRBs, most studies have been restricted to single-instrument analyses, with limited cross-validation using independent observatories. The Fermi/GBM has published a catalog of sub-threshold triggers with uncertain astrophysical origin1. No systematic multi-instrument study has assessed how many of these candidates represent real astrophysical transients or even SGRB.
+
+Footnote 1: [https://gcn.gsfc.nasa.gov/gcn/fermi.gbm_subthresh_archive.html](https://gcn.gsfc.nasa.gov/gcn/fermi.gbm_subthresh_archive.html)
+
+Therefore, in this work we apply the ETJASMIN pipeline to analyze sub-threshold candidates from the GBM sub-threshold trigger catalog. We systematically examine whether weak transient signals in GBM data can be found and verified through temporal and spatial coincidence with GECAM observations.
+
+This paper is organized as follows. Section 2 provides an overview of the GBM and GECAM instruments. Section 3 describes the sample selection, and Section 4 details the data analysis methods. Section 5 presents the main results, followed by the discussion and conclusions in Section 6 and 7.
+
+## 2 Instruments
+
+### Fermi Gamma-ray Burst Monitor
+
+The Gamma-ray Burst Monitor (GBM) onboard the Fermi Gamma-ray Space Telescope is a dedicated instrument for monitoring the gamma-ray sky in the energy range of approximately 8 keV to 40 MeV (Meegan et al., 2009). It consists of 12 semidirectional sodium iodide (NaI) scintillation detectors, sensitive to photons between 8 and 1000 keV, and 2 bismuth germanate (BGO) detectors, covering a higher energy band from 200 keV to 40 MeV. The NaI detectors are oriented to view nearly the entire sky unocculted by Earth, while the BGO detectors are mounted on opposite sides of the spacecraft to ensure broad angular coverage.
+
+The Gravitational wave high-energy Electromagnetic Counterpart All-sky Monitor (GECAM) is a satellite constellation mission aimed at monitoring diverse types of high-energy transient events (e.g., Chen et al., 2022; An et al., 2023; Zhang et al., 2024; Zheng et al., 2024; Sun et al., 2023; Yi et al., 2023; Xiao et al., 2023; Zhao et al., 2023) across the sky in the energy range of \\sim 10 keV to 6 MeV.
+
+The GECAM constellation currently comprises four satellites. The first pair, GECAM-A and GECAM-B, were launched into low Earth orbit (LEO) on 2020 December 10 (Li et al., 2022). GECAM-C, also referred to as the High Energy Burst Researcher, was deployed on 2022 July 27 aboard the SATech-01 satellite (Zhang et al., 2023), and GECAM-D (also known as GTM) onboard the DRO-A satellite was launched into a distant retrograde orbit (DRO) on 2024 March 13 (Feng et al., 2024; Wang et al., 2024). Each satellite carries gamma-ray detectors (GRDs; An et al., 2022) for high-energy photon detection, and GECAM-A, -B, and -C are also equipped with charged particle detectors (CPDs; Xu et al., 2022), which aid in distinguishing between photon-driven bursts and charged particle events. Due to operational constraints, only GECAM-B and GECAM-C data are used for this study.
+
+## 3 Sample
+
+The Fermi/GBM sub-threshold trigger archive2 catalogs candidate transient events that failed to meet onboard trigger criteria but were subsequently identified through offline ground-based searches. Each entry provides the event time, sky localization, duration (i.e., the binning timescale that maximizes SNR), spectral hardness, and a reliability score (dubbed as REL) ranging from 1 to 10, indicating the likelihood of an astrophysical origin. At the time of analysis, the archive has accumulated 5614 events since its inception on 2017 April 16, including 3557 with REL = 2 (63.4%), 1348 with REL = 5 (24.0%), and 709 with REL = 8 (12.6%).
+
+Footnote 2: [https://gcn.gsfc.nasa.gov/fermi_gbm.subthresh_archive.html](https://gcn.gsfc.nasa.gov/fermi_gbm.subthresh_archive.html)
+
+Among events with REL = 5, 997 are classified as short bursts (duration \\leq 2 s), corresponding to an average of \\sim124 short sub-threshold candidates per year. For REL = 8, 529 short bursts are identified, yielding an average rate of \\sim66 per year over the same eight-year period.
+
+To identify potential joint detections with GECAM, we compiled a sample of GBM sub-threshold events reported between 2021 February 1 and 2024 December 31, corresponding to GECAM's operational period. We selected all events with REL \\geq 5, yielding 466 candidates, including 227 with REL = 8. We then applied visibility criteria: events were retained only if they occurred outside the South Atlantic Anomaly (SAA), during GECAM's active observation periods, and were not Earth-occulted (based on the GBM-reported central sky position). We note that this approximation neglects localization uncertainty, because the complication on the systematic error of GBM burst prevents us from an accurate treatment. This filtering resulted in a final sample of 181 events, including 102 with REL = 8. For each event, we extracted the trigger time, duration, sky location, and REL from the GBM archive for further analysis.
+
+## 4 Analysis
+
+### Burst Search
+
+To perform a targeted search for temporally coincident gamma-ray signals associated with GBM sub-threshold triggers, we employed the ETJASMIN targeted search pipeline (Cai et al., 2025). For each event in our sample, we analyzed a \\pm5 s time window centered on the GBM trigger time using Time-Tagged Event (TTE) data from GBM and Event-Level (EVT) data from GECAM-B and GECAM-C.
+
+The ETJASMIN framework integrates data from a total of 49 detectors, including 12 NaI detectors onboard GBM, 25 GRDs on GECAM-B, and 12 GRDs on GECAM-C. When available, data from all detectors are analyzed jointly to maximize sensitivity. This joint analysis is enabled by the similar detector responses among the NaI and GRD instruments, as demonstrated by in-flight cross-calibration between GECAM-B/C and Fermi/GBM (Zhang et al., 2023; Qiao et al., 2024). It is further informed by satellite orbit and attitude parameters, which determine the source direction relative to each detector, and by precomputed instrument response functions.
+
+The energy selection used in the analysis is tailored to each instrument. For GBM, we adopt the 8-1000 keV range. For GECAM-B and GECAM-C, the energy range is determined by the gain and bias voltage settings of each GRD (Zhang et al., 2022), and calibrated response (Zhang et al., 2023; Zhang et al., 2025) are used to select the optimal range separately for high-gain and low-gain modes.
+
+The joint analysis compares the observed count rates to expectations under two competing hypotheses: signal-plus-background versus background-only. Specifically, the probability for each detector k to measure the observed data under the signal-plus-background hypothesis (H{}_{1}) is given by:
+
+P_{k}(d_{k}|\\mathrm{H}_{1})=\\prod_{i}\\frac{1}{\\sqrt{2\\pi}\\sigma_{d_{i}}}exp(- \\frac{(\\widetilde{d}_{i}-r_{i}s)^{2}}{2\\sigma_{d_{i}}^{2}}),  where the product is carried out over each channel i, n_{i} represents the estimated background, \\widetilde{d}_{i}=d_{i}-\\langle n_{i}\\rangle is the background-subtracted counts, r_{i} represents the expected counts with a default amplitude of 1, obtained by multiplying the source models3 with the instrument response matrix. And s is the intrinsic amplitude of the source. Under the background-only hypothesis (H{}_{0}), the probability is:
+
+Footnote 3: The source models are Band functions (Band et al., 1993) with soft, normal, and hard parameter sets adopted from Connaughton et al. (2015), corresponding to the templates RspSoft, RspNorm, and RspHard listed in Table 1.
+
+P_{k}(d_{k}|H_{0})=\\prod_{i}\\frac{1}{\\sqrt{2\\pi}\\sigma_{n_{i}}}exp(-\\frac{ \\widetilde{d}_{i}^{2}}{2\\sigma_{n_{i}}^{2}}). 
+
+The log-likelihood ratio (LR) per detector is then computed as:
+
+\\mathcal{L}_{k}=\\ln\\frac{P_{k}(d_{k}|H_{1})}{P_{k}(d_{k}|H_{0})}=\\sum_{i=1}[\\ln \\frac{\\sigma_{n_{i}}}{\\sigma_{d_{i}}}+\\frac{\\widetilde{d}_{i}^{2}}{2\\sigma_{n _{i}}^{2}}-\\frac{(\\widetilde{d}_{i}-r_{i}s)^{2}}{2\\sigma_{d_{i}}^{2}}],  and the joint LR is:
+
+\\mathcal{L}=\\sum_{k=1}\\mathcal{L}_{k}. 
+
+The LR is computed for each detector and summed to obtain the joint LR, which serves as a test statistic quantifying the significance of the signal hypothesis. Given a known source location, the LR is evaluated for that specific direction. See also Cai et al. (2025) for the complete derivation and methodology.
+
+To identify significant candidates, we adopt a detection threshold on the joint LR, empirically determined through extensive background-only simulations. Specifically, we performed 10^{5} targeted searches using synthetic light curves containing only Poisson fluctuation. In each simulation, we applied the same search pipeline with known source directions and recorded the joint LR to construct the background distribution (Cai et al., 2025). This procedure also enables calculation of p-values for observed burst events, defined as the fraction of background simulations where the LR exceeds the observed value, providing a quantitative measure of the significance of the burst.
+
+In addition, according to Wilks's theorem, the LR statistic is expected to approximately follow a \\chi^{2} distribution under the null hypothesis (Kocevski et al., 2018). For a single degree of freedom, this provides an analytical estimate of the LR value corresponding to a given significance level. For example, a one-sided 3\\sigma rejection threshold corresponds to an LR of approximately 9, which serves as a useful reference for assessing detection significance. Our previous studies (Cai et al., 2023) have shown that LR values derived from background simulations are roughly consistent with those predicted by Wilks's theorem, particularly at high significance levels, supporting the robustness of this detection approach.
+
+Cai et al. (2025) showed that the background distributions from joint and individual instrument searches are statistically consistent, in agreement with theoretical expectations. Based on this, we ultimately adopt a relatively strict detection threshold based on empirical experience from the GECAM search pipeline, as reported in Table 1 of Cai et al. (2025).
+
+### Burst Identification
+
+Using the targeted search method described above, we identified a total of 116 candidate triggers potentially associated with GBM sub-threshold events. The distribution of the triggered joint LR values for these candidates is shown in Figure 1. To obtain a more stringent and reliable sample, we performed a refined analysis for each candidate.
+
+In the likelihood ratio framework, an unknown physical parameter, the source amplitude, is estimated by maximizing the likelihood function. For an event detected only by GBM, the amplitude optimized with GBM data alone (denoted as \\rm s_{1}) leads to a high LR value for GBM. If the same event is absent in GECAM, the amplitude estimated using GECAM data alone would be zero (\\rm s_{2}=0), resulting in an LR of zero for GECAM. When combining data from both instruments, the joint likelihood maximization balances the contributions from both detectors. In such cases, the amplitude derived from the joint analysis \\rm s_{3} becomes smaller than \\rm s_{1}, educing the joint LR relative to the GBM-only LR. This effect, shown in Section 2.4 of the ETJASMIN pipeline paper (Cai et al., 2025), is typical for local events, such as particle events or background fluctuations, that are detected only by a single instrument.
+
+To exclude such cases, we compared the GBM-only LR with the joint LR for each candidate. If the GBM LR exceeded the joint LR, the candidate was removed as a likely local or single-instrument event. For example, one event on 2024 December 9 at 05:35:44 UTC showed a high LR in GBM (\\sim75) but no signal in GECAM (\\sim0), resulting in a reduced joint LR of 37; such an event was excluded from our sample. Using this criterion, we removed 26 candidates.
+
+In addition to the joint LR suppression effect described above, other factors may also lead to such discrepancies. Large localization uncertainties in GBM may place the true source position outside the field of view of the other satellite, preventing a coincident detection. Differences in detector sensitivity and the incident angle of the source may also result in detection by only one instrument. Non-astrophysical events, such as charged particle events (CP), can also produce spurious signals in a single instrument. Given the different orbital configurations of the satellites, CP events are rarely observed simultaneously by multiple spacecrafts.
+
+To ensure the reliability of the remaining candidates, we manually examined cases where the GBM-only LR and the joint LR were close but potentially affected by noise or marginal signals. Certain cases with similar LR values may involve background fluctuations that cannot be fully distinguished by LR values alone. Therefore, we conducted a manual inspection guided by empirical judgment, using the light curves and sky maps to exclude false or ambiguous triggers. After this screening, we retained 49 events with coincident detections in more than one instrument for further analysis.
+
+## 5 Results
+
+As described above, we identified 49 burst candidates from the GBM sub-threshold trigger catalogue over a period of about four years. These events passed the joint likelihood ratio threshold and were confirmed through multi-instrument coincidence checks and manual inspections to ensure their reliability.
+
+Figure 2 shows the distribution of joint likelihood ratios (LRs) for the 49 bursts with confirmed multi-instrument detections, grouped by GBM reliability score. We find that events with higher reliability (REL=8) tend to have substantially larger LR values, with the majority exceeding 10^{2}. In contrast, lower-reliability events (REL=5) cluster at lower LR values, suggesting a positive correlation between the assigned reliability score and the multi-instrument detection significance.
+
+Figure 3 displays the light curves of a representative burst detected by all three instruments. A clear excess in count rate is observed near T_{0} across GBM, GECAM-B, and GECAM-C, indicating a temporally coincident signal. Figures 4 and 5 present additional examples of sub-threshold events with confirmed multi-instrument detections. In both cases, the bursts exhibit temporally coincident excesses in at least two instruments, despite their relatively low signal strengths.
+
+Figure 6 presents an example of a sub-threshold burst observed jointly by GBM, GECAM-B and GECAM-C on 2022 December 15. The left panels show the summed count rates across all detectors for each instrument, where no prominent excess is visible near T_{0}. In contrast, the right panels display light curves, constructed by summing counts from all detectors and energy channels with appropriate weight factors (the ratio of expected source counts to background variance for each channel and detector), following the method described in Section 2.1 of Connaughton et al. 2016 and Section 4.3 of Cai et al. 2021. A clear, temporally coincident excess emerges in the optimized light curves, with the shaded region indicating the time bin that yields the highest signal significance. The joint significance of the signal is calculated based on the optimized weighted light curves (Cai et al., 2021).
+
+Figure 7 shows the distribution of likelihood ratio as a function of time offset (\\Deltat) between the GBM trigger time and the center of the detection window with the highest LR. The sample includes both short-duration bursts (blue circles) and long-duration bursts (yellow triangles). Most events cluster near \\Delta t=0 s, as expected for signals temporally coincident with the GBM trigger.
+
+The results of the targeted search for all 49 bursts are summarized in Table 1. The table lists, for each event: the event ID, GBM trigger number, date and time, burst duration, reliability score, time offset (\\Delta t), search timescale, log-likelihood ratio (\\mathcal{L}), signal-to-noise ratio (SNR), best-fit spectral template, and detection status in GECAM-B and GECAM-C.
+
+## 6 Discussion
+
+### Short Sub-threshold GRB Detection Rate
+
+Among the 466 GBM sub-threshold events with REL \\geq 5, 181 were identified as within GECAM's field of view, corresponding to an overall visibility fraction of \\sim39%. This fraction varies by REL, with \\sim17% of REL = 5 and \\sim22% of REL = 8 events identified as visible. These estimates are based on the central localization positions reported by GBM and do not account for the statistical uncertainties of sub-threshold events. Accordingly, the true number of events within GECAM's sky coverage is likely underestimated, and the reported visibility fraction is an approximate lower bound.
+
+Joint likelihood analysis of these 181 events yielded 116 candidates with potential signals. However, manual inspection of light curves revealed several cases in which only one instrument detected a signal, leading to reduced joint detection significance. These cases may arise from the large localization uncertainties of GBM sub-threshold events, where the true source position lies outside GECAM's actual field of view despite the central localization being nominally visible. In other cases, the signal may have arrived at an unfavorable angle or with insufficient intensity for detection. Some events may also originate from non-astrophysical sources such as charged particle events, which are typically localized and not detected simultaneously by multiple satellites due to differences in orbital environment and shielding. After excluding such ambiguous cases, we identified 49 events as confirmed burst candidates, indicating that at least \\sim27% (49/181) of the visible GBM sub-threshold events are consistent with real astrophysical transients jointly observed by GECAM.
+
+As shown in Figure 2, 39 of these 49 confirmed burst candidates have REL = 8, corresponding to a confirmation rate of \\sim38% (39/102) among all REL = 8 events considered. This indicates that a substantial fraction of high-REL candidates are real astrophysical bursts. Among these, 36 are classified as short GRBs, yielding a short-burst fraction of \\sim35% (36/102). For REL = 5 events, 10 were identified in more than 1 instrument, implying a real astrophysical origin, corresponding to a confirmation rate of \\sim13% (10/79), with 5 classified as short GRBs (short-burst fraction \\sim6%). These results show that REL = 8 events represent the major contributor to the confirmed sample, reflecting their higher reliability and higher short-burst occurrence.
+
+We note that GBM triggers on \\sim240 GRBs annually, including \\sim40 short GRBs (von Kienlin et al., 2020). In our sample, we identified 41 short-duration GRBs among the confirmed joint detections (Figure 8), corresponding to an average of \\sim10 additional GECAM-confirmed short GRBs per year over the four-year span. Importantly, this estimate reflects only those events that are both visible to and detectable by GECAM. Given GECAM's limited sky coverage and detection sensitivity, a number of short GRBs within the sub-threshold population likely remain undetected.
+
+However, we could extrapolated the observed confirmation rates to the full catalog. During the 8 years of GBM subthreshold triggers, among the 709 REL = 8 events, we estimate \\sim248 short GRBs (709 \\times 0.35), and among the 1348 REL = 5 events, \\sim80 short GRBs (1348 \\times 0.06), yielding a total of \\sim41 short GRBs per year. This suggests that a future complete and systematic joint monitoring of GBM sub-threshold events can enhance the GBM annual detection rate of short GRBs by \\sim100% relative to the GBM-triggered sample. These results highlight the importance of systematic, multi-instrument searches in expanding the observable short GRB population and enhancing the completeness of current GRB catalogs. This is particularly relevant for short-duration bursts, which play an important role in studies of compact object mergers and multi-messenger astrophysics.
+
+### Properties of Confirmed Burst Candidates
+
+Representative light curves of selected events (Figures 3-6) demonstrate that a subset of sub-threshold events exhibit clear, temporally coincident excesses across multiple instruments, even in cases where the overall signal strength is low. While some bursts show visible excesses in summed detector counts (e.g., Figure 3), others reveal significant signals only after applying optimized weighting across all detectors (e.g., Figure 6)). These findings highlight the effectiveness of multi-detector analysis in recovering weak events that may not trigger onboard algorithms.
+
+The temporal distribution of detection windows (Figure 7) shows that most events are centered near the GBM trigger time, consistent with coincident burst signatures. Some events show time offsets from the GBM trigger, which may result from differences between multi-instruments in detection response.
+
+### Search for SGRB-GW Association
+
+Gravitational-wave detections have enabled multi-messenger studies, where identifying high-energy electromagnetic counterparts is essential for probing compact object mergers. In the first three observing runs (O1 to O3; Abbott et al., 2019, 2021; Abbott et al., 2023), only one such counterpart was confirmed: GW170817, a binary neutron star merger detected by gravitational-wave interferometers (e.g., LIGO LIGO Scientific Collaboration et al. (2015), Virgo Acernese et al. (2015) and KAGRA Akutsu et al. (2021)) and by gamma-ray instruments (Abbott et al., 2017; Goldstein et al., 2017; Savchenko et al., 2017). The fourth observing run (O4), which began in May 2023 and is expected to continue through November 20254, has so far produced approximately 200 candidate GW events as reported by the LIGO-Virgo-KAGRA collaboration 5.
+
+Footnote 4: [https://observing.docs.ligo.org/plan/index.html](https://observing.docs.ligo.org/plan/index.html)
+
+Footnote 5: [https://gracedb.ligo.org/superevents/public/O4/](https://gracedb.ligo.org/superevents/public/O4/)
+
+To explore potential associations between short gamma-ray bursts and gravitational-wave events, we examined temporal matches between 13 short-duration GRB candidates from our confirmed sample, identified since the start of O4, and publicly reported significant GW candidates6. No coincidences were found within standard time windows (-30 to +30 seconds relative to the GRB trigger time), as confirmed by similar searches (Hamburg et al., 2020; Fletcher et al., 2024). While no temporal matches were identified, the result highlights the importance of coordinated multi-messenger strategies in future observing runs. Improved pipelines, such as ETJASMIN, are expected to increase the likelihood of detecting faint or sub-threshold gamma-ray counterparts and thereby strengthen the prospects for joint detections.
+
+Footnote 6: [https://gracedb.ligo.org/superevents/public/O4/](https://gracedb.ligo.org/superevents/public/O4/)
+
+## 7 Summary
+
+In this work, we present a systematic search and verification of these SGRB candidates from the Fermi/GBM sub-threshold triggers by jointly analyzing data from GECAM-B and GECAM-C. Among 466 Fermi/GBM sub-threshold events (with reliability \\geq5) from 2021 to 2024, 181 are within GECAM's field of view. We find that 49 out of 181 are confirmed astrophysical transients. These events exhibit coherent excesses across multiple detectors and span a broad range of likelihood ratios. And 41 of 49 (\\sim84%) events can be classified as SGRBs.
+
+With these GECAM-recovered SGRB events, the SGRB detection rate of Fermi/GBM is increased from about 40 per year (only triggered events) to about 50 per year (GBM triggered and GECAM-recovered events from GBM sub-threshold triggers). These results suggest that a future multi-instrument complete monitoring and systematic verification of GBM sub-threshold triggers is expected to increase the detectable SGRB rate to about 80 per year, by \\sim100% improvement relative to GBM-triggered events. This will provide important improvement to the current SGRB catalogs and improving the completeness of the observed GRB population. Moreover, we note that this improved SGRB detection rate may have important implications on the estimation of the local formation rate of SGRB and the binary merger rate. However, in-depth studies are needed on these topics.
+
+Lastly, we also searched for the temporal coincidence between SGRBs and gravitational wave (GW) from the LIGO-Virgo-KAGRA O4 run. However, we did not find any coincident case, indicating the rarity of the multi-messenger event. These results highlight the necessity of coordinated observation and multi-instrument analysis pipelines, such as ETJASMIN, in improving the sensitivity to faint gamma-ray transients with the current instruments.
+
+[MISSING_PAGE_EMPTY:9467]
+
+[MISSING_PAGE_FAIL:12]
+
+* Sun et al. (2023) Sun, H., Wang, C. W., Yang, J., et al. 2023, arXiv e-prints, arXiv:2307.05689, doi: 10.48550/arXiv.2307.05689
+
+* von Kienlin et al. (2014) von Kienlin, A., Meegan, C. A., Paciesas, W. S., et al. 2014, ApJS, 211, 13, doi: 10.1088/0067-0049/211/13
+
+* von Kienlin et al. (2020) --. 2020, ApJ, 893, 46, doi: 10.3847/1538-4357/ab7a18
+
+* Wang et al. (2024) Wang, C., Zhang, J., Zheng, S., et al. 2024, Experimental Astronomy, 57, 26, doi: 10.1007/s10686-024-09946-8
+
+* Xiao et al. (2022) Xiao, S., Xiong, S.-L., Cai, C., et al. 2022, MNRAS, 514, 2397, doi: 10.1093/mnras/stac999
+
+* Xiao et al. (2023) Xiao, S., Yang, J.-J., Luo, X.-H., et al. 2023, _ApJS_, 268, 5, doi: 10.3847/1538-4365/ace77c
+
+* Xiong (2016) Xiong, S. 2016, arXiv e-prints, arXiv:1605.05447, doi: 10.48550/arXiv.1605.05447
+
+* Xu et al. (2022) Xu, Y.-B., Li, X.-Q., Sun, X.-L., et al. 2022, Radiation Detection Technology and Methods, 6, 53
+
+* Yi et al. (2023) Yi, S. X., Wang, C. W., & Zhang, B. 2023, arXiv e-prints, arXiv:2310.07205, doi: 10.48550/arXiv.2310.07205
+
+* Zhang et al. (2018) Zhang, B. B., Zhang, B., Sun, H., et al. 2018, Nature Communications, 9, 447, doi: 10.1038/s41467-018-02847-3
+
+* Zhang et al. (2022) Zhang, D., Li, X., Wen, X., et al. 2022, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 1027, 166222, doi: [https://doi.org/10.1016/j.nima.2021.166222](https://doi.org/10.1016/j.nima.2021.166222)
+
+* Zhang et al. (2023a) Zhang, D., Zheng, C., Liu, J., et al. 2023a, Nuclear Instruments and Methods in Physics Research A, 1056, 168586, doi: 10.1016/j.nima.2023.168586
+
+* Zhang et al. (2023b) Zhang, D.-L., Zheng, C., Liu, J.-C., et al. 2023b, Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment, 1056, 168586, doi: [https://doi.org/10.1016/j.nima.2023.168586](https://doi.org/10.1016/j.nima.2023.168586)
+
+* Zhang et al. (2023c) Zhang, Y.-Q., Xiong, S.-L., Qiao, R., et al. 2023c, arXiv e-prints, arXiv:2303.00698, doi: 10.48550/arXiv.2303.00698
+
+* Zhang et al. (2024) Zhang, Y.-Q., Xiong, S.-L., Mao, J.-R., et al. 2024, Science China Physics, Mechanics, and Astronomy, 67, 289511, doi: 10.1007/s11433-023-2381-0
+
+* Zhang et al. (2025) Zhang, Y.-Q., Xue, W.-C., Zhang, J.-P., et al. 2025, arXiv e-prints, arXiv:2506.05920, doi: 10.48550/arXiv.2506.05920
+
+* Zhang et al. (2025) Zhang, Y. Q., et al. 2025 Zhao, X.-Y., Xiong, S.-L., Wen, X.-Y., et al. 2021, arXiv e-prints, arXiv:2112.05101, doi: 10.48550/arXiv.2112.05101
+
+* Zhao et al. (2023) Zhao, Y., Liu, J. C., Xiong, S. L., et al. 2023, GRL, 50, e2022GL102325, doi: 10.1029/2022GL102325
+
+* Zheng et al. (2024) Zheng, C., Zhang, Y.-Q., Xiong, S.-L., et al. 2024, apjl, 962, L2, doi: 10.3847/2041-8213/ad2073

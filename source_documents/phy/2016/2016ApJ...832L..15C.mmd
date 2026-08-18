@@ -1,0 +1,147 @@
+###### Abstract
+
+We report the discovery and timing measurements of PSR J1208-6238, a young and highly magnetized gamma-ray pulsar, with a spin period of 440 ms. The pulsar was discovered in gamma-ray photon data from the _Fermi_ Large Area Telescope (LAT) during a blind-search survey of unidentified LAT sources, running on the distributed volunteer computing system _Einstein@Home_. No radio pulsations were detected in dedicated follow-up searches with the Parkes radio telescope, with a flux density upper limit at 1369 MHz of 30\\,\\muJy. By timing this pulsar's gamma-ray pulsations, we measure its braking index over five years of LAT observations to be n=2.598\\pm 0.001\\pm 0.1, where the first uncertainty is statistical and the second estimates the bias due to timing noise. Assuming its braking index has been similar since birth, the pulsar has an estimated age of around 2,700 yr, making it the youngest pulsar to be found in a blind search of gamma-ray data and the youngest known radio-quiet gamma-ray pulsar. Despite its young age the pulsar is not associated with any known supernova remnant or pulsar wind nebula. The pulsar's inferred dipolar surface magnetic field strength is 3.8\\times 10^{13} G, almost 90\\% of the quantum-critical level. We investigate some potential physical causes of the braking index deviating from the simple dipole model but find that LAT data covering a longer time interval will be necessary to distinguish between these. gamma rays: stars -- pulsars: individual (PSR J1208-6238)
+
+## 1 Introduction
+
+The physical mechanisms by which pulsars radiate rotational energy are as yet unclear. The dominant process can be inferred by measuring a pulsar's _braking index_, n, the index of a power law relating the pulsar's spin frequency, f, to its spin-down rate, \\dot{f}, via
+
+\\dot{f}\\propto-f^{n}\\,. 
+
+For example, the simple model of a pulsar as a spinning magnetic dipole predicts n=3(Ostriker & Gunn, 1969).
+
+A pulsar's braking index can be calculated from measurements of the first two time-derivatives of its spin frequency,
+
+n=\\frac{f\\ddot{f}}{\\dot{f}^{2}}\\,. 
+
+However, most young pulsars exhibit unpredictable fluctuations in their spin frequency on top of their long-term spin-down behavior (Hobbs et al., 2010) known as _timing noise_. Observations spanning long time intervals are required to discriminate the overall braking behavior in these fluctuations.
+
+Braking indices can therefore only be measured for the youngest or most highly magnetized pulsars, whose long-term braking is still large enough to dominate their spin-down variation. Reliable measurements of braking indices have been possible for just nine pulsars (Archibald et al., 2016; Marshall et al., 2016; Lyne et al., 2015, and references therein). All of these braking indices deviate significantly from n=3, with only PSR J1640-4631 having n>3(Archibald et al., 2016b).
+
+One pulsar with a measurable braking index, PSR J1119-6127 (Camilo et al., 2000), is particularly unusual. Its emission properties (e.g. radio pulsations, exponentially cutoff power-law gamma-ray spectrum) were, untilrecently, typical for a "normal" rotationally powered pulsar (Parent et al., 2011), despite its almost magnetar-level magnetic field (4.1\\times 10^{13} G). The recent magnetar-like outburst from PSR J1119-6127 (Archibald et al., 2016; Gogus et al., 2016), and similar events from PSR J1846-0258 (Gavriil et al., 2008), therefore offer insights into the connection between magnetars and rotationally-powered pulsars.
+
+The Large Area Telescope (LAT; Atwood et al., 2009) on board the _Fermi Gamma-ray Space Telescope_ has proven to be a valuable instrument for the study of young pulsars (Grenier & Harding, 2015). The LAT's 8 years of almost continuous coverage of the entire gamma-ray sky has led to the detection of over 200 gamma-ray pulsars1. This long observation span enables precise timing analyses of gamma-ray pulsars (e.g. Ray et al., 2011; Kerr et al., 2015; Pletsch & Clark, 2015) immediately after their detection.
+
+Footnote 1: [http://tinyurl.com/fermipulsars](http://tinyurl.com/fermipulsars)
+
+Blind searches in LAT data have led to the discovery of a sizeable population of young, radio-quiet gamma-ray pulsars (e.g. Abdo et al., 2009; Saz Parkinson et al., 2010; Pletsch et al., 2012). However, until now, none of these have had measurable braking indices.
+
+In this Letter, we report the discovery of PSR J1208-6238, a very young, highly magnetized gamma-ray pulsar with similar properties to those of PSR J1119-6127, including a measurable braking index. The discovery was made during a large-scale blind-search survey that ran on the distributed volunteer computing system, _Einstein@Home_(Clark et al., 2015, 2016, ApJ, accepted; Wu et al. 2016, in preparation).
+
+## 2 Observations
+
+### LAT Data
+
+In the _Einstein@Home_ survey, we searched for pulsations in gamma-ray photons from unidentified sources in the _Fermi_-LAT Third Source Catalog (3FGL; Acero et al., 2015). One such source was 3FGL J1208.4-6239.
+
+We used "Pass 8" (Atwood et al., 2012) LAT data consisting of the arrival times of SOURCE-class photons above 100 MeV, and weights, \\{w_{j}\\}, representing the probability of each photon having come from the target source (Kerr, 2011). The data in which the pulsar was discovered spanned 2008 August 4 to 2014 October 1 and were produced using internal preliminary versions of the Pass 8 instrument response functions (IRFs) and background models. We included photons from within an 8^{\\circ} region of interest (ROI) around the 3FGL position, with a maximum zenith angle of 100^{\\circ}, and a maximum cutoff on the LAT's rocking angle of 52^{\\circ}.
+
+After discovering the pulsar, we produced an extended dataset covering observations until 2016 February 16 for use in follow-up spectral (Section 2.3) and timing analyses (Section 3). The extended dataset was produced using the P8R2_SOURCE_V6 IRFs, a lower zenith angle cutoff of 90^{\\circ}, and a larger 15^{\\circ} ROI.
+
+We calculated probability weights for photons within 5^{\\circ} of the target source with gtsrcprob using the results of a binned likelihood spectral analysis performed with pointlike. Our source model included all 3FGL sources within a radius 5^{\\circ} larger than the ROI. The target source's spectrum was modeled with an exponentially cutoff power law. Its sky position and spectral parameters were free to vary, as were the spectra of 3FGL sources within 5^{\\circ}, and the normalizations of the background models.
+
+When producing the extended dataset, the spectral analysis was performed with gtlike, with the pulsar's position fixed at its preliminary timing position. The Galactic diffuse emission and isotropic diffuse background were modeled with the gl1_iem_v06.fits (Acero et al., 2016) and iso_P8R2_SOURCE_V6_v06.txt templates2 respectively.
+
+Footnote 2: [http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html](http://fermi.gsfc.nasa.gov/ssc/data/access/lat/BackgroundModels.html)
+
+For the blind search and subsequent timing analyses we performed minimum weight cutoffs to reduce the number of photons for computational speed. In the blind search, this cutoff was w_{\\rm min}=3.9\\%, leaving \\sum w_{j}=2762.7 "effective" photons. In the timing analysis, w_{\\rm min}=0.7\\% and \\sum w_{j}=5284.4.
+
+### Discovery in a Blind Search
+
+The first stage of the survey employed a "semicoherent" search, in which only photons arriving within 2^{21} s (\\approx 24 days) of one another were combined coherently (Pletsch & Clark, 2014). Candidates from this stage were then "followed up" in more sensitive (ultimately fully coherent) stages to increase their significance. While our search model assumed a constant spin-down rate, the semicoherent stage was sensitive to signals with varying spin-down, provided \\left|\\vec{f}\\right|\\lesssim 3\\times 10^{-22} Hz s{}^{-2}. However, pulsars with \\left|\\vec{f}\\right|\\gtrsim 5\\times 10^{-24} Hz s{}^{-2} would be missed by the coherent follow-up stage, and could only be detected if their signal was strong enough to be significant in the initial semicoherent stage.
+
+Visual inspection of a candidate signal from 3FGL J1208.4-6239 revealed clear pulsations, identifying this source as the pulsar now known as PSR J1208-6238. The initial signal showed large variations in the pulse phase. Including a second frequency derivative of 3.3\\times 10^{-22} Hz s{}^{-2} in the phase model removed the majority of these.
+
+### Off-pulse Analysis
+
+The integrated pulse profile from our initial timing solution showed significant emission above the background at all phases, indicative either of flux from the pulsar or from a nearby unmodeled source.
+
+To investigate this unpulsed flux, we assigned rotational phases to all photons using our initial timing solution, and performed a spectral analysis of the off-pulse emission (i.e. excluding photons with phases within the ranges shown in Figure 1). This revealed additional nearby gamma-raysources, the closest and most significant of which lies 20\\arcmin from the pulsar's timing position, with a spectral index of \\Gamma=2.56\\pm 0.09 and (40\\pm 13)\\% of the energy flux of PSR J1208-6238 above 100 MeV.
+
+The nature of these sources is unclear; without likely counterparts at other wavelengths it is difficult to tell whether these are point sources or residuals from the Galactic diffuse emission template. Their steep spectra are consistent with LAT-detected supernova remnants (SNRs; Acero et al., 2016b), but kick velocity requirements make an association with the pulsar unlikely (see Section 4).
+
+After including these additional sources in our model, re-fitting the ROI and re-calculating the photon weights for PSR J1208-6238, the pulsation significance increased. These weights were subsequently used in the timing analyses described in Section 3, resulting in the pulse profile shown in Figure 1, with a final H-test (de Jager et al., 1989) value 1454.2. The pulsar's spectral properties are given in Table 1.
+
+### Radio Observations
+
+On 2016 March 28, 2016 April 14 and 2016 June 18 we observed the pulsar timing position with the 64-m Parkes radio telescope for 2.5 hr, 4.3 hr and 1.5 hr respectively using the H-OH receiver at a center frequency of 1369 MHz. With PDFB4 were recorded 256 MHz of bandwidth filtered into 512-channel spectra with 256 \\mus sampling (80 \\mus for the third observation). The data were analyzed using standard pulsar search techniques implemented in PRESTO(Ransom, 2001). Folding the data with the gamma-ray ephemeris, we searched over dispersion measure (DM) from 0-2700 pc cm{}^{-3}. We found no plausible pulsar candidates.
+
+Recent flux-calibrated observations using the same configuration show a root-mean-square noise level of 130 \\muJy hr{}^{-1} for a 32-bin pulse profile. With a detection threshold of one or more phase bins with S/N >8, then optimally our longest observation would have detected a source with a mean flux density >17 \\muJy. Accounting for scalloping losses due to binning in time and DM, and for the unknown pulse duty cycle, we estimate an upper limit of 30 \\muJy, equal to the radio-quiet threshold defined by Abdo et al. (2013).
+
+## 3 Timing Analysis
+
+To investigate the braking properties of PSR J1208-6238, we performed a timing analysis, following the procedure de
+
+\\begin{table}
+
+\\begin{tabular}{l c} \\hline \\hline \\multicolumn{1}{c}{ Parameter} & Value \\\\ \\hline Range of photon data (MJD) & 54682–57434 \\\\ Reference epoch, t_{\\rm ref} (MJD) & 56040 \\\\ \\hline \\multicolumn{2}{c}{Timing parametersa  } \\\\ \\hline R.A. (J2000.0) & 12^{\\rm h} 08{}^{\\rm m} 13{}^{\\rm s}.96(6) \\\\ Decl. (J2000.0) & -62\\arcdeg38′ 02\\farcs3(4) \\\\ Spin frequency, f (Hz) & 2.26968010518(7) \\\\ Spin-down rate, f (10^{-12} Hz s{}^{-1}) & -16.842733(5) \\\\ Rraking index, n & 2.598(1) \\\\ f-increment epoch (MJD) & 55548(23) \\\\ f-increment, \\Delta f (10^{-15} Hz s{}^{-1}) & 0.59(9) \\\\ n-increment, \\Delta n & -0.10(2) \\\\ \\hline \\multicolumn{2}{c}{Derived propertiesb  } \\\\ \\hline Galactic longitude, l (c) & 297.99 \\\\ Galactic latitude, b (c) & -0.18 \\\\ Spin period, P (ms) & 440.59072365(1) \\\\ Period derivative, \\dot{P} (10^{-12} s s{}^{-1}) & 3.2695145(9) \\\\ Surface B-field strength, B_{\\rm S} (10^{12} G) & 38.4 \\\\ Estimated age{}^{\\rm c}, \\tau (yr) & 2672 \\\\ Spin-down power, \\dot{E} (10^{36} erg s{}^{-1}) & 1.5 \\\\ Maximum distance, d_{100\\%} (kpc) & 18.9 \\\\ Heuristic distance, d_{\\rm h} (kpc) & 3.0 \\\\ \\hline \\multicolumn{2}{c}{Spectral parameters above 100 MeVd  } \\\\ \\hline \\end{tabular} Note. – The reported values for f and \\dot{f} at the reference time include the effect of the earlier \\dot{f} increment.
+
+\\end{table}
+
+Table 1: Properties of PSR J1208-6238 scribed in Pletsch & Clark (2015) and Clark et al. (2015), a modification of the methods developed by Ray et al. (2011).
+
+Our phase model consisted of a Taylor series,
+
+\\Phi(t)=\\sum_{m=0}\\frac{f^{(m)}}{(m+1)!}(t-t_{\\rm ref})^{m+1}\\,,  where f^{(m)} denotes the m-th time-derivative of the pulsar's rotational frequency at the reference epoch, t_{\\rm ref}, and t is the (sky location-dependent) barycentric time.
+
+Starting with our initial solution, consisting of the pulsar's sky position, frequency and first two frequency derivatives (\\dot{f}\\equiv f^{(1)} and \\ddot{f}\\equiv f^{(2)}), we phase-folded the photon data and fit a template pulse profile (shown in Figure 1) by maximizing the likelihood. We used the Bayesian Information Criterion (BIC; Schwarz, 1978) to estimate the appropriate number of components to include in the template, finding that two wrapped Gaussian peaks were sufficient.
+
+We then sampled the pulsar's spin and positional parameters with an Affine Invariant Monte-Carlo algorithm (Goodman & Weare, 2010; Foreman-Mackey et al., 2013), using the template pulse profile to evaluate the likelihood at each point. The process continued iteratively; after each sampling stage the photons were re-folded with the most likely parameters and the template pulse profile was updated. Higher frequency derivatives were added to the phase model after each stage, again using the BIC to find the appropriate number of terms.
+
+The solution that optimized the BIC contained nine frequency derivatives. However, the resulting phase residuals contain some remaining "red" noise. We were unable to remove this effect by including higher frequency derivatives, up to the 12th derivative.
+
+We can calculate n with Equation (2) using the measured values of \\dot{f} and \\ddot{f}, finding n=2.578\\pm 0.007. However, as explained by Antonopoulou et al. (2015), truncating the Taylor series at the second derivative means that the measured value of n depends on the arbitrarily chosen reference epoch. Making the simple assumption of a constant braking index leads to a self-consistent, physically motivated phase model, which avoids this problem (Antonopoulou et al., 2015),
+
+\\Phi(t)=\\frac{f^{2}}{\\dot{f}(2-n)}\\left(\\left[1+\\frac{\\dot{f}}{\\dot{f}}(1-n)(t -t_{\\rm ref})\\right]^{\\frac{2}{2-n}}-1\\right)\\,. 
+
+In this model, one only fits for f, \\dot{f}, n and sky location. Faster timing noise variations on top of this long term spin-down are left unmodelled.
+
+Carrying out this fit for PSR J1208-6238, we find that a constant braking index fits well in the last five years of the data set, but cannot account for the pulsar's spin-down over the entire data set, as is clear from Figure 2. Instead, we find that increments in the pulsar's braking index and spin-down rate are required. The results of this fit, including these increments, are given in Table 1. We cannot tell whether these were sudden or gradual changes as it takes many months for an offset in either of these parameters to cause a detectable phase offset. We note that Archibald et al. (2015) required a similar change in \\dot{f} and n in their timing model for PSR J1846-0258. We find no evidence for changes in the pulsar's pulse profile or gamma-ray flux (like those of PSR J2021+4026, Allafort et al., 2013) associated with the \\dot{f} increment.
+
+## 4. Discussion
+
+PSR J1208-6238 is the first radio-quiet gamma-ray pulsar with a measured braking index, and only the tenth pulsar of any kind with such a measurement. Its estimated age, assuming its braking index has been constant since birth, is around 2,700 yr, making it the youngest known radio-quiet gamma-ray pulsar.
+
+PSR J1208-6238 shares many similarities (e.g. age, spin-down power) with PSR J1119-6127, an otherwise unique gamma-ray pulsar. They are both highly magnetized, with estimated dipolar surface magnetic field strengths (accurate to an order-of-magnitude), B_{\\rm S}\\sim 3.2\\times 10^{19}(-\\dot{f}f^{-3})^{1/2}, of 3.8\\times 10^{13} G (PSR J1208-6238) and 4.1\\times 10^{13} G (PSR J1119-6127), close to the quantum-critical limit B_{\\rm cr}=4.4\\times 10^{13} G (Baring & Harding, 1998). Such a high magnetic field could affect a pulsar's high-energy emission, however both pulsars have gamma-ray spectra that are typical of young pulsars (Abdo et al., 2013). Given their similar magnetic fields, one may expect PSR J1208-6238 to exhibit similar magnetar-like activity as was recently seen from PSR J1119-6127 (Archibald et al., 2016; Gogus et al.
+
+Figure 2.— Measured phase residuals from our timing models. The blue lines and gray shaded regions represent the best-fitting Taylor series phase model and 1\\sigma uncertainties. The “TOAs” shown here were not used to perform the fit, which was an entirely unbinned likelihood maximization, but are included here to illustrate the validity of the phase models. Upper panel: residuals between the Taylor series and a pure dipole-braking model with n=3. The decreasing cubic curve is characteristic of a over-estimated braking index. Middle panel: residuals between the Taylor series model and a best-fitting constant braking index model. A significant deviation is evident in the early mission. Lower panel: as above, but with increments in the braking index and spin-down rate occurring at the time marked by the dashed vertical line.
+
+2016). However, no X-ray emission has been detected from PSR J1208-6238 (Stroh & Falcone, 2013).
+
+While radio pulsations have been detected from transient magnetars in outburst states (e.g. Camilo et al., 2006), radio pulsations can be suppressed by strong magnetic fields (Baring & Harding, 1998; Camilo et al., 2000). However, perhaps a more likely explanation for this pulsar's radio-quietness is that its radio beam simply does not cross our line-of-sight.
+
+To investigate this possibility we modeled the gamma-ray emission geometry using the methods of Johnson et al. (2014), with outer gap (OG) and two-pole caustic (TPC) models described therein. Our simulations used3P=100 ms and \\dot{P}=10^{-15} s s{}^{-1}. We used steps in gap widths of 1% the polar cap opening angle. Model profiles were fit using weighted photon counts and the \\chi^{2} statistic, rather than the Poisson likelihood used in Johnson et al. (2014). The TPC model is slightly favored, although not significantly, with the angle between the line-of-sight and magnetic angle, \\beta=2^{+1}_{-1}\\,^{\\circ}, predicting visible radio pulsations. The OG fit gives \\beta=28^{+8}_{-6}\\,^{\\circ}, with no visible radio emission. We caution that performing these fits without constraints on the radio emission can lead to large systematic errors (Pierbattista et al., 2015), and note that neither model perfectly reproduces the observed peak separation.
+
+Footnote 3: While these values differ from those in Table 1 the gamma-ray profile dependence on these is weak at these values so our conclusions will not be affected.
+
+We also note that, due to its unknown distance, our flux density upper limit for PSR J1208-6238 does not strongly constrain its radio luminosity. Its radio pulsations could simply be too faint to be detected.
+
+Despite the pulsar's very young inferred age, no positionally-associated SNR or pulsar wind nebula has been detected by radio imaging (Murphy et al., 2007), X-ray observations (Stroh & Falcone, 2013; Hwang & Markert, 1994), or in TeV emission (Wakely & Horan, 2008). There is, however, a luminous H ii region (IRAS 12073-6233; Martin-Hernandez et al., 2003) less than 0.5^{\\circ} away from PSR J1208-6238, whose radio emission could mask a faint SNR near the pulsar. A dedicated search for an associated SNR may be required to clarify this. The two nearest known SNRs (G298.6-0.0 and G298.5-0.3) are more than half a degree away from the pulsar (Green, 2014). Due to the pulsar's young age, an association with either of these SNRs implies an unrealistically high kick velocity, approximately 3000\\,(d/1\\,{\\rm kpc}) km s{}^{-1} for pulsar distance 3\\,{\\rm kpc}\\lesssim d<19\\,{\\rm kpc} (see Table 1). A bias on the pulsar's timing position due to timing noise (Kerr et al., 2015) is insufficient to account for the positional offsets to the nearest SNRs.
+
+The braking index measurement is also sensitive to the pulsar's intrinsic timing noise. The uncertainty on n of \\pm 10^{-3} quoted in Table 1 is statistical only; timing noise will lead to an additional unknown bias. Assuming that the observed change in n around MJD 55600 was due to timing noise, we take this increment, \\Delta n=0.1, as an estimate of this systematic uncertainty.
+
+The larger braking index in the earlier data could alternatively be caused by the pulsar relaxing from a glitch occurring before the start of the _Fermi_ mission, of the kind observed from PSR J1119-6127 (e.g., Antonopoulou et al., 2015). However, a timing model featuring an exponentially decaying frequency term in the early mission is disfavored by the BIC.
+
+Nevertheless, our timing measurements constrain the braking index to be below the n=3 predicted by a dipole braking model, as evident from the large cubic residuals shown in Figure 2. A reduced braking index can be explained by the pulsar's physical properties varying over time. Differentiation of the dipole braking model (assuming constant moment of inertia) gives (Lyne et al., 2015),
+
+n=3+2\\frac{f}{f}\\left[\\frac{\\dot{\\mu}}{\\mu}+\\frac{\\dot{\\alpha}}{\\tan\\alpha} \\right]\\,,  where \\mu is the magnetic dipole moment, inclined at an angle \\alpha to the spin axis. The measured braking index can be explained by fractional changes in these parameters of \\sim 5\\times 10^{-5} yr{}^{-1}.
+
+A low braking index can be explained by a growing magnetic field (Blandford & Romani, 1988). This could be caused by the pulsar's initial magnetic field being "buried" by matter accretion shortly after birth, and gradually growing back to its original strength (Ho, 2015). This implies a braking index that evolves back to 3 over a timescale of \\sim 10^{5} yr. This evolution of n is undetectable with current observation lengths.
+
+A varying \\alpha leads to evolution of the observed pulse profile. This has been observed from the Crab pulsar, where a measured increase in the (angular) peak separation of \\approx 6\\times 10^{-3}{}^{\\circ} yr{}^{-1} implies a similar magnitude for \\dot{\\alpha}(Lyne et al., 2013). The observed \\dot{\\alpha}, which could under certain conditions be attributed to precession (Arzamassky et al., 2015), is sufficient to explain the Crab's low braking index.
+
+Fits to TPC and OG models described above estimate \\alpha=81^{+1}_{-1}\\,^{\\circ} and \\alpha=57^{+8}_{-5}\\,^{\\circ} respectively for PSR J1208-6238. The variation in \\alpha to account for the reduced braking index requires \\dot{\\alpha}\\approx 2\\times 10^{-2}{}^{\\circ} yr{}^{-1} (TPC) or \\dot{\\alpha}\\approx 4\\times 10^{-3}{}^{\\circ} yr{}^{-1} (OG). For either model, the expected evolution of the gamma-ray pulse profile caused by the required \\dot{\\alpha} is too small to be measured with the current data.
+
+Low braking indices can also be explained by a portion of the total spin-down torque being applied by a process with a different braking index, e.g. angular momentum being lost to an outflowing particle wind (n=1; Harding et al., 1999), or propeller torque from an in-falling disk (n=-1; Menou et al., 2001). The fraction, \\epsilon, of the total spin-down torque that a process with a braking index of n_{2} must account for to explain an observed index n is4
+
+Footnote 4: Lyne et al. (2015) define \\epsilon as the ratio of wind-induced torque to dipole-induced torque, rather than wind-induced torque to total spin-down torque. This definition may have been used in error by Archibald et al. (2015, 2016), although their conclusions are unchanged.
+
+\\epsilon\\approx\\frac{3-n}{3-n_{2}}\\,. 
+
+Under these models, as the pulsar spins down \\epsilon will increase (provided n_{2}<3), leading to a time-varying braking index, where
+
+\\dot{n}\\approx\\frac{\\dot{f}}{f}\\epsilon\\left(n_{2}-3\\right)\\left(n_{2}-n\\right)\\,. 
+
+For the above wind (disk) model, we find \\epsilon\\approx 20\\% (10\\%) and \\dot{n}\\approx-1.5\\times 10^{-4} yr{}^{-1} (-3.4\\times 10^{-4} yr{}^{-1}). The braking index variations are not currently measurable, but may become so with future LAT data.
+
+We gratefully acknowledge the support of all volunteers who have donated CPU cycles to _Einstein@Home_. We are especially grateful to James Drews of UW-Madison, WI, USA and University of Houston, IT High Performance Computing, TX, USA, whose computers discovered PSR J1208-6238.

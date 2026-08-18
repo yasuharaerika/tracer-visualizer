@@ -1,0 +1,231 @@
+###### Abstract
+
+Understanding how matter behaves at the highest densities and temperatures is a major open problem in both nuclear physics and relativistic astrophysics. Our understanding of such behavior is often encapsulated in the so-called high-temperature nuclear equation of state, which influences compact binary mergers, core-collapse supernovae, and other phenomena. Our focus is on the type (either black hole or neutron star) and mass of the remnant of the core collapse of a massive star. For each of six candidate equations of state, we use a very large suite of spherically symmetric supernova models to generate a sample of synthetic populations of such remnants. We then compare these synthetic populations to the observed remnant population. Our study provides a novel constraint on the high-temperature nuclear equation of state and describes which EOS candidates are more or less favored by an information-theoretic metric.
+
+0000-0002-8282-8072]Mikhail M. Meskhi
+
+0000-0002-8282-8072]Noah E. Wolfe
+
+0000-0002-8282-8072]Zhenyu Dai
+
+0000-0002-4719-7473]Carla Frohlich
+
+0000-0002-8282-8072]Jonah M. Miller
+
+0000-0002-8282-8072]Raymond K. W. Wong
+
+## 1 Introduction
+
+Neutron stars (NSs) are some of the densest observable objects in the Universe. They provide a laboratory to probe matter at the highest densities - a major open problem in astrophysics and nuclear physics. Understanding how matter behaves at extreme conditions, i.e. the high-temperature nuclear equation of state (EOS), is needed to predict and analyze the gravitational wave signals from NS mergers, the associated kilonova, pulsar properties, the outcome of core-collapse supernovae (CCSNe), and many more.
+
+Although the fundamental interactions are well-understood, the full many-body quantum-mechanics problem is currently intractable. Moreover, this state of matter is not directly accessible through terrestrial experiments (Lonardoni et al., 2020).
+
+The traditional way of constraining the EOS is to examine the relationship between the mass and radius of a NS, see Miller et al. (e.g., 2019). Recent observational advances have enabled many new studies. For example, the first detection of a binary neutron-star merger by LIGO/VIRGO (Abbott et al., 2017) combined with the associated short gamma-ray burst (sGRB), kilonova, and afterglow led to an inferred upper limit of the allowed NS mass, M_{\\rm max}, of 2.3 - 2.4 M_{\\odot}(Margalit & Metzger, 2017; Ruiz et al., 2018; Rezzolla et al., 2018; Shibata et al., 2019). Bayesian parameter estimation on the combined observations of GW170817, AT2017gfo, and GRB170817A provides a multi-messenger constraint on the tidal deformability, the total mass, and mass-radius pair for GW170817 (Coughlin et al., 2019). Light curve modeling of X-ray burst GS 1826-24 constrains the stiffness of the nuclear EOS through the monotonic relationship between the NS radius and the peak luminosity of the burst (Dohi et al., 2021).
+
+Although there are large uncertainties (Even et al., 2020; Korobkin et al., 2021; Zhu et al., 2021), modeling of the electromagnetic radiation of the sGRB and of the kilonova constitutes yet another complimentary constraint on the EOS (e.g. Nedora et al., 2021).
+
+The nuclear EOS is a crucial ingredient in numerical simulations of compact binary mergers and core-collapse supernovae. Since the precise physics is unknown, modelers parameterize over their ignorance and provide tabulated EOSs, which are used as an input parameter (Fiorella Burgio & Fantina, 2018).
+
+In this work, we focus on CCSNe, where the EOS can have a significant impact on both the dynamics and the outcome. When a massive star runs out of nuclear fuel, it collapses under its own weight. The inner part of the iron core of the star becomes ultra dense and neutron rich, forming a _proto-neutron star_ (PNS). In-falling material then bounces off of the PNS, forming an outward moving shock. If this shock is strong enough, it moves outward, driving an explosion. If the shock fails, the star collapses without an explosion. The core of the star eventually forms either a stable NS, supported by neutron degeneracy pressure and the strong nuclear force, or collapses to a black hole (BH) Shapiro and Teukolsky (2008).
+
+Solving the full CCSN problem remains a grand challenge in astrophysics, with many decades devoted to simulations at high resolution in 3D (Muller, 2020, e.g.). Several studies have been performed with a focus on the EOS dependence of the PNS contraction and explosion properties, Richers et al. (e.g., 2017); Yasin et al. (e.g., 2020); Schneider et al. (e.g., 2019). Many other studies performed simulations of 1-3 different progenitors with 1-3 different EOSs. See Nakazato et al. (2021); Ivanov and Fernandez (2021) for some recent examples. Similar small-scale sensitivity studies have also been attempted for binary merger simulations. However, the absence of a truly systematic approach makes it difficult to correlate the explosion properties with the underlying physics assumptions in the EOS.
+
+In this letter, we take an entirely new approach, facilitated by the availability of computationally relatively inexpensive and effective CCSN models. We combine the CCSN simulations with statistical techniques from data science and observational data of NS and BH remnant masses and use a data-driven framework to validate six nuclear EOS models.
+
+Unfortunately, with rare exceptions (Van Dyk, 2017), it is impossible to connect a supernova explosion to its progenitor star. Rather, what _is_ available is a set of observations of living stars (not yet collapsing), a separate set of observations of explosions, and another set of observations of post-explosion remnant objects (BHs or NSs). This enables us to estimate the _probability distributions_ of these populations, but without any means to draw a direct connection between a specific progenitor, a specific supernova, and a specific remnant.
+
+We sidestep this issue by comparing distributions directly. We use a suite of CCSN models to map a physically motivated statistical distribution of stellar progenitors into a synthetic distribution of remnants, which can then be compared to observed remnant distributions. We create _six_ synthetic distributions, one for each EOS, and use this comparison to validate the EOS models.
+
+## 2 Methodology and Input Physics
+
+An overview of our general methodology is shown in Figure 1. We begin with a set of model assumptions embedded in different EOSs that lead to different simulations of stellar collapse. These are used to generate a statistical distribution of post-collapse remnant objects. The simulated distribution is then compared to an observed distribution of remnants. A quantification of the distance between real and simulated distributions points to a favored model assumption.
+
+The distribution of stellar progenitors depends on the zero age main sequence mass M_{\\rm ZAMS} and metalicity z, which we combine into the single input variable x. Our simulations vary over x and EOS s. A given simulation predicts as output either a NS or BH of a given mass. We call this simulated mapping from x to a remnant mass \\eta(x;s), \\zeta(x) -which is assumed to mimic the true mapping found in Nature. The observed data is also subject to measurement error, e; this error emerges from limitations of the observed system or the observing instrument.
+
+### Distribution of Mass and Metallicity
+
+For pre-collapse stars, we use the initial mass function from Kroupa et al. (1993):
+
+\\xi(M_{\\rm ZAMS},z)=\\begin{cases}0.035M_{\\rm ZAMS}{}^{-1.3}&\\text{for }M_{\\rm ZAMS }<0.5\\\\ 0.019M_{\\rm ZAMS}{}^{-2.2}&\\text{for }0.5\\leq M_{\\rm ZAMS}<1.0\\\\ 0.019M_{\\rm ZAMS}{}^{-2.7}&\\text{for }M_{\\rm ZAMS}\\geq 1.0\\end{cases}  for a ZAMS mass M_{\\rm ZAMS} in solar masses (M_{\\odot}) and metallicity z in units of solar metallicity. Note that the distribution is uniform in metallicity and that it may need a global renormalization factor.
+
+### Simulations
+
+While computational power and model sophistication are rapidly improving, three-dimensional CCSN simulations are still heroic, computationally-expensive endeavors, making a large-scale parameter study intractable. Here, we make use of a more tractable setup, where the explosion is driven in spherical symmetry by a self-consistent parameterized treatment (Perego et al., 2015). Our framework ("PUSH") mimics the net enhanced energy deposition expected from multi-dimensional fluid motion in a spherically symmetric simulation.
+
+We have performed 681 simulations with initial masses of M_{\\rm ZAMS}=10.8 - 40 M_{\\odot}at three initial metallicities1 (z=0,10^{-4},1Z_{\\odot}) (??) and six different nuclear EOS models ('states'). The outcome ('output') is either a NS (in 508 cases) or a BH (in 173 cases). The sample size per EOS is \\sim 100 (\\sim 180 for DD2).
+
+Footnote 1: A larger initial mass range is desirable, but the relevant progenitor models are currently unavailable to us. As a consequence, we may miss some of the lowest mass neutron stars in our analysis.
+
+The EOS models are taken from Steiner et al. (2013) (SFHo, SFHx), from Hempel and Schaffner-Bielich (2010); Hempel et al. (2012) (HS(DD2), HS(TM1), HS(NL3)), and from Banik et al. (2014) (BHB\\lambda\\phi). All EOS models have M_{\\rm max}>2M_{\\odot} for a cold NS and are based on the relativistic mean field model with four different parametrizations (DD2, SFH, NL3, TM1). The BHB\\lambda\\phi EOS additionally includes hyperons at high densities, which softens the EOS.
+
+### Distributions of Observed Remnant Mass
+
+Distributions of the populations of isolated NSs, binary NS systems, and BHs are all available from observations. Since it is not currently possible to combine these into a joint distribution, we examine simulated BH and simulated NS populations separately, and compare them to observed populations on a population-by-population basis. Furthermore, we compare the simulated NS population to each observed NS population separately, since the simulator cannot distinguish between isolated and binary remnants.
+
+For the observed BH mass distribution, we use model C from Abbott et al. (2019), which was first proposed in Talbot and Thrane (2018). Model C predicts a smooth transition from no BHs below some mass M_{\\rm BH}{}^{-} to a truncated power law that vanishes at M_{\\rm BH}{}^{+}, and a Gaussian distribution of high-mass BHs formed from pair-instability supernovae. Since our models do not capture the pair instability, we drop the second Gaussian peak of the distribution, resulting in a smooth, truncated power law:
+
+p(M_{\\rm BH})=CM_{\\rm BH}\\text{${}^{-}$}\\alpha\\Theta(M_{\\rm BH}\\text{${}^{+}$}- M_{\\rm BH})S(M_{\\rm BH}\\text{${}^{-}$},\\delta_{m})  where the BH mass M_{\\rm BH} is in solar masses. Here C is a normalization constant, \\Theta is the Heaviside step function, and S is a smoothing function that goes from zero at M_{\\rm BH} to unity at M_{\\rm BH}+\\delta_{m}.2 We set the other parameters to those found in Abbott et al. (2019): \\alpha=7.1, M_{\\rm BH}\\text{${}^{-}$}=6.8, M_{\\rm BH}\\text{${}^{+}$}=75, \\delta_{m}=3.
+
+Footnote 2: The formal definition can be found in Talbot and Thrane (2018), but if smoothness is not important, a simple line with slope \\delta_{m} suffices.
+
+For the observed NS masses, we consider four observed populations of neutron stars: slow pulsars (NSS), recycled pulsars (NSR), double-degenerate neutron stars in circular orbits (NSC), and double-degenerate neutron stars in eccentric orbits (NSE). Here, single-degenerate refers to a NS in a binary with a non-degenerate companion, double-degenerate to a NS in a binary with another NS. All four are sampled from a Gaussian (Ozel
+
+& Freire, 2016)
+
+p(M_{\\rm NS})=\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}e^{-(M_{\\rm NS}-M_{0})^{2}/(2\\sigma^{ 2})},  for NS mass M_{\\rm NS}. The parameters are: M_{0}=1.49 and \\sigma=0.19 for NSS, M_{0}=1.54 and \\sigma=0.23 for NSR, M_{0}=1.33 and \\sigma=0.09 for NSC, and M_{0}=1.29 and \\sigma=0.24 for NSE. All units are in solar masses.
+
+### Distributions of Measurement Error
+
+The observed mass distributions are subject to observational error coming from, e.g., telescope properties and the difficulty of observing a given system. We convert an ensemble of measurements to a distribution by assuming, via the central limit theorem (Fischer, 2010), that in the ensemble, the error e can be drawn from a Gaussian distribution with mean zero and standard deviation \\sigma that depends on the population:
+
+p(e;\\sigma)=\\frac{1}{\\sqrt{2\\pi\\sigma^{2}}}e^{-e^{2}/2\\sigma^{2}}, 
+
+The BH measurement error comes primarily from the noise properties of gravitational wave detectors, which depends on the frequency of the gravitational wave, and thus the masses of the merging BHs (Buikema et al., 2020). Lower mass black holes produce higher-frequency gravitational waves, which spend a longer time in the LIGO band and thus the detector is able to build up a better signal-to-noise ratio, resulting in a lower error. From reported 90% confidence intervals (Abbott et al., 2019), we infer the standard deviation of the measurement error to be
+
+\\sigma_{\\rm BH}(M_{\\rm BH})=0.120213M_{\\rm BH}+0.355936 
+
+For NSs, observations vary significantly in their sensitivity depending on observing telescope and observed system. We therefore assume the standard deviation for the neutron star mass observational error (in solar masses) to be
+
+\\sigma_{\\rm NSS} = 0.12  \\sigma_{\\rm NSR} = 0.088 (7) \\sigma_{\\rm NSC} = 0.003 (8) \\sigma_{\\rm NSE} = 0.28 
+
+We arrive at this value by taking the average width of 90% confidence intervals of observations for the appropriate populations.
+
+## 3 Statistical Techniques
+
+Although our CCSN models contain many uncertainties, for the purposes of this study, we assume that our simulations would mimic physical reality closely if s is tuned to an unknown ideal EOS s_{0}:
+
+\\zeta(x)\\approx\\eta(x;s_{0}),\\quad\\forall x. 
+
+In other words, we assume that the discrepancy between the best tuned simulator \\eta(\\cdot;s_{0}) and the reality \\zeta(\\cdot) is negligible. The setup assuming discrepancy between \\eta(\\cdot;s_{0}) and \\zeta(\\cdot) suffers from an identifiability issue (e.g., Brynjarsdottir & O'Hagan, 2014; Wong et al., 2017), and may require additional information to find s_{0}. In the following, we discuss the predicted and observed remnant mass distributions for BHs, M_{\\rm BH} and (M_{\\rm BH})^{s} respectively. The same procedure also applies to NSs M_{\\rm NS} and (M_{\\rm NS})^{s}, respectively.
+
+Our overarching goal is to find the state s_{0}, which is only possible if we have observations from Nature. However, in practice, we can only observe a contaminated version \\tilde{M}_{\\rm BH} (or \\tilde{M}_{\\rm NS}) of M_{\\rm BH} (or M_{\\rm NS}). The relationship between \\tilde{M}_{\\rm BH} and M_{\\rm BH} is modeled by
+
+\\tilde{M}_{\\rm BH}=M_{\\rm BH}+e=\\zeta(x)+e,  where e is the measurement error satisfying \\mathrm{E}(e\\mid x)=0 and x encapsulates both M_{\\rm ZAMS} and z.
+
+In a typical setup of computer model calibration, one would collect data in terms of input-output pairs, i.e., \\{((x)_{i},(\\tilde{M}_{\\rm BH})_{i})\\}_{i=1}^{n} from Nature to calibrate the simulator, i.e., to estimate s_{0}, by
+
+\\operatorname*{arg\\,min}_{s}\\frac{1}{n}\\sum_{i=1}^{n}\\left\\{(\\tilde{M}_{\\rm BH })_{i}-\\eta((x)_{i};s)\\right\\}^{2},  assuming the simulator evaluations are affordable. However, here, we do not have the luxury to observe the input-output pair (x,\\tilde{M}_{\\rm BH}) from Nature. Instead, we are only able to obtain the marginal distribution p(x) of x (Section 2.1) and the marginal distribution p(\\tilde{M}_{\\rm BH}) of \\tilde{M}_{\\rm BH} (Section 2.3). Therefore, we have to build a calibration strategy that is intuitively based on p(\\tilde{M}_{\\rm BH}) and p(x), instead of the joint distribution p(x,\\tilde{M}_{\\rm BH}) or the conditional distribution p(\\tilde{M}_{\\rm BH}\\mid x).
+
+### Comparing the marginal distributions
+
+Aside from real star-collapse data, we are additionally provided with data sets \\{((x)_{i}^{s},(M_{\\rm BH})_{i}^{s})\\}_{i=1}^{n_{s}} from the simulator for every state s:
+
+(M_{\\rm BH})_{i}^{s}=\\eta((x)_{i}^{s};s),\\quad i=1,\\ldots,n_{s},  where the sampling designs \\{(x)_{i}^{s}\\} are generated independently according to the sampling density q_{s}(x).
+
+We use q_{s} to represent the densities related to data generated from the simulator at state s: e.g.,q_{s}(M_{\\rm BH},x), q_{s}(x) and q_{s}(M_{\\rm BH}\\mid x). Note that
+
+p(\\tilde{M}_{\\rm BH}) =\\int p(x,\\tilde{M}_{\\rm BH})\\mathrm{d}x  =\\int p(\\tilde{M}_{\\rm BH}\\mid x)p(x)\\mathrm{d}x (15) =\\int p(\\tilde{M}_{\\rm BH}\\mid x)w_{s}(x)q_{s}(x)\\mathrm{d}x,  where w_{s}(x):=p(x)/q_{s}(x) is assumed to be strictly positive and known.
+
+We define the contaminated version of (M_{\\rm BH})^{s} as (\\tilde{M}_{\\rm BH})^{s}:=(M_{\\rm BH})^{s}+(e)^{s} where (e)^{s}\\mid(x)^{s}\\sim p(e\\mid x). Again, we use q_{s} to represent related densities: e.g., q_{s}(\\tilde{M}_{\\rm BH},x) and q_{s}(\\tilde{M}_{\\rm BH}\\mid x). We have
+
+p_{s}(\\tilde{M}_{\\rm BH}):= \\int q_{s}(\\tilde{M}_{\\rm BH},x)w_{s}(x)\\mathrm{d}x  = \\int q_{s}(\\tilde{M}_{\\rm BH}\\mid x)q_{s}(x)w_{s}(x)\\mathrm{d}x 
+
+Since q_{s_{0}}(\\tilde{M}_{\\rm BH}\\mid x)=p(\\tilde{M}_{\\rm BH}\\mid x), p_{s_{0}}(\\tilde{M}_{\\rm BH})=p(\\tilde{M}_{\\rm BH}) by (16) and (18). We then estimate p(\\tilde{M}_{\\rm BH}) through a weighted kernel density estimation (KDE) of p_{s_{0}}(\\tilde{M}_{\\rm BH}). The weighted KDE is based on the Fast Fourier Transform algorithm implemented in KDEpy (Odland, 2018). The pseudo code of the estimation of p_{s} can be found in Appendix B.
+
+Assuming q_{s}\\neq q_{s_{0}} for any s\\neq s_{0}, we can compare p(\\tilde{M}_{\\rm BH}) with the weighed KDE at different s, and choose s_{0} as the "closest" one. We use the following two information-theoretic statistical distances to quantify the dissimilarity between p(\\cdot) and the estimated p_{s}(\\cdot). The first is the Kullback-Leibler divergence
+
+D_{\\rm KL}(p\\,||\\,p_{s})=\\int p(\\tilde{M}_{\\rm BH})\\log\\left(\\frac{p(\\tilde{M} _{\\rm BH})}{p_{s}(\\tilde{M}_{\\rm BH})}\\right)\\mathrm{d}\\tilde{M}_{\\rm BH},  that measures the relative entropy between p(\\tilde{M}_{\\rm BH}) and p_{s}(\\tilde{M}_{\\rm BH}). The second is the total variation distance D_{\\rm TV}
+
+D_{\\rm TV}(p,p_{s})=\\frac{1}{2}\\int|p(\\tilde{M}_{\\rm BH})-p_{s}(\\tilde{M}_{\\rm BH })|\\mathrm{d}\\tilde{M}_{\\rm BH},  that measures the maximum difference between the probabilities assigned to an event by two probability distributions.
+
+We also report on the corresponding 95% confidence intervals via bootstrap quantiles (Efron and Tibshirani, 1994). The pseudo code of the bootstrap procedure is given in Appendix C.
+
+## 4 Results
+
+The simulated and observed distributions of remnant masses (BHs and NSs separately) are shown in Figure 2. We find the simulated neutron star population best agrees with the observed NSS population. We believe this is reasonable for the following reasons: The PUSH models use isolated stars as initial conditions, and double-degenerate binaries likely deviate more from single-star evolution than do single-degenerate. Also, recycled pulsars have accreted enough mass and angular momentum to spin up, meaning their mass reflects more than supernova dynamics. We therefore do not compare distances for the NSR, NSC, or NSE populations.
+
+The distances from each simulated population to the observed one for each distance metric are summarized in Table 1. We note that for BHs, the D_{TV} distances are similar in magnitude to those for NSSs, whereas the D_{KL} distances for BHs are smaller than those for NSSs. Within each population, the D_{KL} and the D_{TV} give the same ranking, however the rankings are slightly different between NSs and BHs.
+
+To interpret the results further, we compute for each population, for each distance measure (D_{KL}, D_{TV}), and for each EOS, the difference from the average distance, \\DeltaKL and \\DeltaTV, as shown in Figure 3. The error bars represent 95% confidence intervals. Points below the dashed line are more favored than points above. The BHs and the NSs agree qualitatively except for DD2, which more favored by BHs and less favored by NSs. SHFo and SFHx are both mildly disfavored by all metrics, while BHB\\lambda\\phi, TM1, and NL3 appear to be mildly more favored.
+
+We remark that the KL divergence sometimes suffers from stability issues due to small density values, such as the tails of our distributions.
+
+## 5 Conclusions
+
+Future work will explore how machine learning can play the role of a simulator surrogate that provides additional data to improve our statistical confidence during the assessment of theoretical equations Kamdar et al. (2015); Behler (2016). The learning model can then be combined with active learning Settles (2012) to choose examples (feature vectors) in the input space that maximize model performance. The goal is to avoid the computational cost attached to many simulations. Additionally, physical constraints can be incorporated into the learning model to further narrow the parameter space.
+
+On the astrophysics side, our PUSH models assume stellar progenitors for isolated stars, when in fact most stars are born in binaries, and the observed BH and NS populations reflect this reality. A straightforward generalization would be to include progenitors from binaries--at least at the state of the art of stellar evolution (Menon and Heger, 2017). Indeed, the choice of weights for stellar progenitors is relatively simple. A more sophisticated approach uses binary population synthesis forward modeling Izzard and Halabi (2018) to predict the pdf for binary systems. Additionally, further work is required to understand the influence of the calibration procedure on our results. The PUSH method was calibrated using the DD2 EOS (Perego et al., 2015). However, as discussed in 2, the PUSH parameters are partially constrained by observations, independent of equation of state, giving some confidence that the EOS used for calibration is subdominant in the procedure. We remark that the NS masses obtained with PUSH are very similar to the NS masses obtained from 3D simulations in Burrows et al. (2020), giving confidence that the results of this work qualitatively extend to other supernova models. This work also used the observed distributions of remnant mass only; this neglects important information about the EOS from the NS radius. However, additional distributions, such as explosion energy and nickel mass, are available in both observations and simulations, providing an exciting direction of multivariate distributions with additional independent variables. Finally, a more sophisticated construction of the measured populations and associated measurement errors would be a natural extension of our work.
+
+We would like to thank Matthias Hempel for the EOS tables and for fruitful discussions. JMM would like to thank Chris Fryer, Josh Dolence, Ben Ryan, Greg Salvesen, Carl Fields, and Soumi De for useful feedback. We also express our gratitude to the anonymous referee for many constructive comments, improving the quality of the manuscript. The work at NC State was supported by United States Department of Energy (DOE), Office of Science, Office of Nuclear Physics under Award DE-FG02-02ER41216. Research presented in this work was supported by the Laboratory Directed Research and Development program of Los Alamos National Laboratory under project numbers 20190021DR and 20220087DR. Los Alamos National Laboratory is operated by Triad National Security, LLC, for the National Nuclear Security Administration of U.S. Department of Energy (Contract No. 89233218CNA000001). This work is approved for unlimited release, with number LA-UR-21-30803. The work at Texas A&M University was supported by the National Science Foundations (DMS-1711952 and CCF-1934904). We are grateful for the support of the Research Computing Data Core at the University of Houston for assistance with the calculations carried out in this work.
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c} \\hline \\hline EOS & \\multicolumn{3}{c}{BH} & \\multicolumn{2}{c}{NSS} \\\\  & D_{KL} & D_{TV} & D_{KL} & D_{TV} \\\\ \\hline DD2 & 0.528^{+0.101}_{-0.068} & 0.324^{+0.050}_{-0.036} & 0.066^{+0.058}_{-0.043} & 0.125^{+0.045}_{-0.052} \\\\ SFHo & 1.011^{+0.836}_{-0.270} & 0.523^{+0.155}_{-0.092} & 0.071^{+0.081}_{-0.054} & 0.133^{+0.060}_{-0.069} \\\\ SFHx & 0.999^{+1.510}_{-0.312} & 0.519^{+0.187}_{-0.109} & 0.082^{+0.058}_{-0.063} & 0.143^{+0.066}_{-0.075} \\\\ BHB\\lambda\\phi & 0.729^{+0.270}_{-0.135} & 0.427^{+0.089}_{-0.060} & 0.044^{+0.066}_{-0.033} & 0.105^{+0.061}_{-0.064} \\\\ TM1 & 0.752^{+0.295}_{-0.152} & 0.437^{+0.093}_{-0.065} & 0.018^{+0.056}_{-0.016} & 0.068^{+0.068}_{-0.050} \\\\ NL3 & 0.808^{+0.459}_{-0.178} & 0.457^{+0.121}_{-0.073} & 0.025^{+0.060}_{-0.023} & 0.080^{+0.066}_{-0.062} \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Summary of distances for all three populations and all six EOS models.
+
+* Agile (Liebendorfer et al., 2001) Agile (Liebendorfer et al., 2001), Python (Rossum, 1995), Pandas (pandas development team, 2020), NumPy, SciPy Matplotlib and KDEpy(Odland, 2018).
+
+* Izzard & Halabi (2018) Izzard, R. G., & Halabi, G. M. 2018, arXiv e-prints, arXiv:1808.06883. [https://arxiv.org/abs/1808.06883](https://arxiv.org/abs/1808.06883)
+
+* Kamdar et al. (2015) Kamdar, H. M., Turk, M. J., & Brunner, R. J. 2015, Monthly Notices of the Royal Astronomical Society, 455, 642-658
+
+* Korobkin et al. (2021) Korobkin, O., Wollaeger, R. T., Fryer, C. L., et al. 2021, ApJ, 910, 116, doi: 10.3847/1538-4357/abe1b5
+
+* Kroupa et al. (1993) Kroupa, P., Tout, C. A., & Gilmore, G. 1993, Monthly Notices of the Royal Astronomical Society, 262, 545
+
+* Liebendorfer et al. (2001) Liebendorfer, M., Mezzacappa, A., & Thielemann, F.-K. 2001, Phys. Rev. D, 63, 104003, doi: 10.1103/PhysRevD.63.104003
+
+* Lonardoni et al. (2020) Lonardoni, D., Tews, I., Gandolfi, S., & Carlson, J. 2020, Phys. Rev. Research, 2, 022033, doi: 10.1103/PhysRevResearch.2.022033
+
+* Margalit & Metzger (2017) Margalit, B., & Metzger, B. D. 2017, ApJ, 850, L19, doi: 10.3847/2041-8213/aa991c
+
+* Menon & Heger (2017) Menon, A., & Heger, A. 2017, MNRAS, 469, 4649. [https://arxiv.org/abs/1703.04918](https://arxiv.org/abs/1703.04918)
+
+* Miller et al. (2019) Miller, M. C., Lamb, F. K., Dittmann, A. J., et al. 2019, ApJ, 887, L24, doi: 10.3847/2041-8213/ab50c5
+
+* Muller (2020) Muller, B. 2020, Living Reviews in Computational Astrophysics, 6, 3. [https://arxiv.org/abs/2006.05083](https://arxiv.org/abs/2006.05083)
+
+* Nakazato et al. (2021) Nakazato, K., Sumiyoshi, K., & Togashi, H. 2021, PASJ, doi: 10.1093/pasj/psab026
+
+* Nedora et al. (2021) Nedora, V., Bernuzzi, S., Radice, D., et al. 2021, ApJ, 906, 98, doi: 10.3847/1538-4357/abc9be
+
+* Odland (2018) Odland, T. 2018, tommyod/KDEpy: Kernel Density Estimation in Python, v0.9.10, Zenodo, doi: 10.5281/zenodo.2392268
+
+* pandas development team (2020) pandas development team, T. 2020, pandas-dev/pandas: Pandas, latest, Zenodo, doi: 10.5281/zenodo.3509134
+
+* Perego et al. (2015) Perego, A., Hempel, M., Frohlich, C., et al. 2015, The Astrophysical Journal, 806, 275, doi: 10.1088/0004-637X/806/2/275
+
+* Rezzolla et al. (2018) Rezzolla, L., Most, E. R., & Weih, L. R. 2018, ApJ, 852, L25, doi: 10.3847/2041-8213/aaa401
+
+* Richers et al. (2017) Richers, S., Ott, C. D., Abdikamalov, E., O'Connor, E., & Sullivan, C. 2017, Phys. Rev. D, 95, 063019, doi: 10.1103/PhysRevD.95.063019
+
+* Rossum (1995) Rossum, G. 1995, Python Reference Manual, Tech. rep., Amsterdam, The Netherlands, The Netherlands
+
+* Ruiz et al. (2018) Ruiz, M., Shapiro, S. L., & Tsokaros, A. 2018, Phys. Rev. D, 97, 021501, doi: 10.1103/PhysRevD.97.021501Schneider, A. S., Roberts, L. F., Ott, C. D., & O'Connor, E. 2019, Phys. Rev. C, 100, 055802, doi: 10.1103/PhysRevC.100.055802
+
+* Settles (2012) Settles, B. 2012, Active Learning (Morgan & Claypool Publishers)
+
+* Shapiro & Teukolsky (2008) Shapiro, S., & Teukolsky, S. 2008, Black Holes, White Dwarfs, and Neutron Stars: The Physics of Compact Objects (Wiley)
+
+* Shibata et al. (2019) Shibata, M., Zhou, E., Kiuchi, K., & Fujibayashi, S. 2019, Phys. Rev. D, 100, 023015, doi: 10.1103/PhysRevD.100.023015
+
+* Steiner et al. (2013) Steiner, A. W., Hempel, M., & Fischer, T. 2013, ApJ, 774, 17, doi: 10.1088/0004-637X/774/1/17
+
+* Talbot & Thrane (2018) Talbot, C., & Thrane, E. 2018, ApJ, 856, 173, doi: 10.3847/1538-4357/aab34c
+
+* Van Dyk (2017) Van Dyk, S. D. 2017, Philosophical Transactions of the Royal Society of London Series A, 375, 20160277
+
+* Wong et al. (2017) Wong, R. K. W., Storlie, C. B., & Lee, T. C. M. 2017, Journal of the Royal Statistical Society: Series B, 79, 635
+
+* Yasin et al. (2020) Yasin, H., Schafer, S., Arcones, A., & Schwenk, A. 2020, Phys. Rev. Lett., 124, 092701, doi: 10.1103/PhysRevLett.124.092701
+
+* Zhu et al. (2021) Zhu, Y. L., Lund, K. A., Barnes, J., et al. 2021, ApJ, 906, 94, doi: 10.3847/1538-4357/abc69e
+
+* Ozel & Freire (2016) Ozel, F., & Freire, P. 2016, Annual Review of Astronomy and Astrophysics, 54, 401
+
+[MISSING_PAGE_EMPTY:15697]
+
+## Appendix C Bootstrap confidence interval
+
+In order to obtain the confidence intervals of our metrics, we resort to a bootstrap procedure with the number of bootstrap samples K=10,000. The corresponding details are given in the following pseudo code.
+
+```
+
+Input:s: equation of state; K: number of bootstrap samples; N_{e}: number of Monte Carlo samples; (1-\\alpha)100\\%: confidence level Output:(1-\\alpha)100\\% bootstrap confidence intervals of the estimated KL divergence and TV distance forj=1,\\ldots,Kdo  Generate a bootstrap data set by sampling n_{s} observations from \\{(x)_{i}^{s},(M_{\\text{BH}})_{i}^{s}\\}_{i=1}^{s} with replacement;  Apply Algorithm 1 with the bootstrap data set (instead of the original data set \\{(x)_{i}^{s},(M_{\\text{BH}})_{i}^{s}\\}_{i=1}^{s}) and compute the KL divergence and the total variation distance, denoted by (D_{KL})_{j}^{s} and (D_{TV})_{j}^{s} respectively;  end for  Compute the (\\alpha/2)-quantile and (1-\\alpha/2)-quantile of \\{(D_{KL})_{j}^{s}\\}_{j=1}^{K} to form a (1-\\alpha)100\\% confidence interval for the estimated KL divergence;  Compute the (\\alpha/2)-quantile and (1-\\alpha/2)-quantile of \\{(D_{TV})_{j}^{s}\\}_{j=1}^{K} to form a (1-\\alpha)100\\% confidence interval for the estimated TV distance;
+
+```
+
+**Algorithm 2**Bootstrap confidence interval

@@ -1,0 +1,237 @@
+###### Abstract
+
+Gamma-ray bursts (GRBs) are among the most energetic events in the universe, driven by relativistic jets launched from black holes (BHs) formed during the collapse of massive stars or after the merger of two neutron stars (NSs). The jet power depends on the BH spin and the magnetic flux accreted onto it. In the standard thin disk model, jet power is limited by insufficient magnetic flux, even when the spin approaches maximum possible value. In contrast, the magnetically arrested disk (MAD) state limits jet energy by extracting significant angular momentum, braking BH rotation. We propose a unified model incorporating both standard thin disk and MAD states, identifying a universal curve for jet power per accretion rate as a function of the magnetic flux ratio, \\Delta_{\\rm eq}=(\\Phi_{\\rm BH}/\\Phi_{\\rm MAD})_{\\rm eq}, at spin equilibrium. For long GRBs (lGRBs), the model predicts a maximum jet energy of \\sim1.5% of the accretion energy, occurring at \\Delta_{\\rm eq}\\sim 0.4 where the BH equilibrium spin is a\\sim 0.5. Both long and short GRBs are unlikely to be produced by a MAD: for short GRBs (sGRBs), this requires an accreted mass orders of magnitude smaller than that available, while for lGRBs, the narrow progenitor mass distribution challenges the ability to produce the observed broad distribution of jet energies. This framework provides a consistent explanation for both standard and luminous GRBs, emphasizing the critical role of magnetic flux. Both long and short GRBs require magnetic flux distributions that peak around 10^{27}\\,{\\rm G}\\,{\\rm cm}^{2}.
+
+Gamma-ray bursts (629); Astrophysical black holes (98); Relativistic jets (1390); Accretion (14) +
+
+Footnote †: journal: AASTeX631
+
+0000-0002-8282-8677]Zhao-Feng Wu
+
+0000-0002-8862-0708]Michail Damoulakis
+
+0000-0002-8862-8774]Paz Beniamini
+
+## 1 Introduction
+
+Gamma-ray bursts (GRBs) are among the most energetic events in the universe. Long duration GRBs (lGRBs) are connected to the core collapse of massive stars, as demonstrated by their association with supernovae (Stanek et al., 2003; Cano et al., 2017; Dainotti et al., 2022). These supernovae, typically Type Ic, indicate Wolf-Rayet (WR) stars of spectral type WO/C as progenitors (Woosley and Bloom, 2006). On the other hand, short duration GRBs (sGRBs) are linked to the mergers of neutron stars (NSs; Eichler et al., 1989), a connection confirmed by gravitational wave detections by LIGO (Abbott et al., 2017, 2017) and the subsequent kilonova (see, e.g., Cowperthwaite et al., 2017).
+
+Despite progress in understanding GRB progenitors, the nature of their central engine remains uncertain. GRBs may be powered by accretion onto a black hole (BH; Woosley, 1993; Lyutikov and Blandford, 2003; Liu et al., 2015) or by the rapid rotation of a magnetar (Usov, 1992; Metzger et al., 2011). Here, we focus on the Blandford-Znajek (BZ; Blandford and Znajek, 1977) process, in which the jet is launched by magnetic fields extracting the rotational energy of a BH. The jet power in the BZ mechanism scales with the square of the BH spin and the magnetic flux, which is sustained by strong accretion (see, e.g., Gottlieb et al., 2024). When the magnetic field is sufficiently strong, the system reaches the magnetically arrested disk (MAD) state, where the magnetic flux is regulated by the accretion rate (Tchekhovskoy et al., 2011). While many studies use MAD to model GRBs (Janiuk and James, 2022; James et al., 2022; Jacquemin-Ide et al., 2024), the jet efficiency becomes too high when the BH spin is not significantly low (Gottlieb et al., 2023; Jacquemin-Ide et al., 2024). Typical inferred jet energies for short and long GRBs require accreted masses of M_{\\rm acc}\\sim 10^{-4}M_{\\odot} and M_{\\rm acc}\\sim 10^{-2}M_{\\odot}, respectively, assuming a BH spin of a=0.5(Lowell et al., 2024). These accreted masses are extremely small compared to the mass available for accretion in sGRBs (\\sim 0.1M_{\\odot}) and lGRBs (\\sim 10M_{\\odot}).
+
+This tension of the energetics predicted by the MAD model and observations is mitigated when considering the evolution of BH spin during the GRB, determined by hydrodynamic torques from accreting matter and electromagnetic torques from the jet (Lowell et al., 2024). In long GRBs, sufficient accretion allows the BH to reach an equilibrium spin determined by the balance of these torques. Under MAD conditions, the jet efficiently removes angular momentum, reducing spin and limiting jet efficiency before the jet emerges from the stellar envelope (Jacquemin-Ide et al., 2024). This helps resolve the issue of excessive efficiency. For short GRBs, however, BHs formed from NS mergers have high initial spins (Bernuzzi et al., 2014, 2020), but the available accretion mass is too small to significantly reduce the spin, leading to overly efficient jets. This indicates the need for a more comprehensive model beyond MAD.
+
+Models involving magnetars and neutrino annihilation for powering a GRB have upper limits on the energy that can be produced (Mazzali et al., 2014; Leng and Giannios, 2014; Beniamini et al., 2017). For example, even accounting for the additional energy source provided by accretion, magnetar central engines correspond to a maximum GRB jet energy of \\lesssim 3\\times 10^{52}\\,\\rm erg(Metzger et al., 2018). The BZ mechanism, however, does not have a clear upper limit. In a weak magnetic field, the BH can spin up rapidly to near maximum, but jet power is constrained by insufficient magnetic flux (Tchekhovskoy and Giannios, 2015). In the MAD state, the system reaches maximal magnetic flux for a given accretion rate, but the jet significantly brakes the BH, reducing its spin to a_{\\rm eq}\\sim 0.06, which limits the jet power (Jacquemin-Ide et al., 2024). Although strong magnetic flux and high spin are both essential for producing powerful jets, they work against each other, preventing MAD from generating the most powerful jets at a given accretion rate. This interplay leads to a transition point where jet power is maximized at moderate levels of both spin and magnetic flux, marking the shift from a standard thin disk to the MAD state. Our goal is to model this transition, enabling predictions of maximum jet power (or energy) for a given accretion rate (or accretion mass).
+
+In this _Letter_, we outline jet power in Section 2 and present a model for BH spin and mass evolution in Section 3, offering a semi-analytical approach that transitions from the standard thin disk to MAD. In Section 4, we apply this model to lGRBs and compare results with observations, while Section 5 covers its application to sGRBs. Key assumptions and results are discussed in Section 6, and conclusions are summarized in Section 7. Gaussian-cgs units are used throughout.
+
+## 2 Jet Power
+
+In the BZ framework, GRB jets are driven by the extraction of rotational energy from a central BH, facilitated by large-scale magnetic flux threading the BH. This study focuses on determining the maximum jet power achievable during the collapse of massive stars via the BZ process:
+
+L_{\\rm BZ}\\approx\\frac{\\kappa f}{4\\pi c}\\Phi_{\\rm BH}^{2}\\Omega_{\\rm H}^{2},  where \\kappa\\approx 0.05 for a parabolic magnetic field geometry, a is the BH spin, \\Omega_{\\rm H}=ac/(2r_{\\rm H}) is the angular frequency of the BH horizon, and \\Phi_{\\rm BH} denotes the magnetic flux threading the BH. Here r_{\\rm H}=r_{\\rm g}\\left[1+\\left(1-a^{2}\\right)^{1/2}\\right] is the radius of BH horizon and r_{\\rm g} is the gravitational radius. We use the sixth-order expression 'BZ6' from Tchekhovskoy et al. (2010), which accurately models jet power across all spin values. The correction factor is given by f=1+0.35\\omega_{\\rm H}^{2}-0.58\\omega_{\\rm H}^{4}, where \\omega_{\\rm H}=a/\\left[1+\\left(1-a^{2}\\right)^{1/2}\\right] is the dimensionless rotational frequency of the BH event horizon.
+
+As the collapsing star's mass accretes onto the BH, the magnetic flux carried by the infalling matter also accumulates around the BH. This process leads to the formation of a MAD when the magnetic pressure becomes comparable to the gravitational pull of the accreting material. In the MAD regime, the jet power is no longer directly dependent on the magnetic flux, but is instead governed by the accretion rate:
+
+L_{\\rm MAD}=\\eta_{\\rm EM}(a)\\dot{m}c^{2},  where \\eta_{\\rm EM}(a) is the jet launching efficiency, derived from non-radiative 3D general relativistic magnetohydrodynamic (GRMHD) global simulations of MADs by Lowell et al. (2024). The jet efficiency \\eta_{\\rm EM} is expressed as:
+
+\\eta_{\\rm EM}\\times 100=\\begin{cases}-19.8a^{4}+48.9a^{2},\\,\\text{if}\\,\\,a\\leq 0, \\\\ 106.3a^{4}+39.5a^{2},\\,\\text{if}\\,\\,a\\geq 0.\\end{cases} 
+
+The transition to the MAD state occurs when the jet power approaches the MAD value for a given spin. Then the flux onto the BH becomes dynamically important and diffuses outwards. This is the maximally allowed flux maintained by a given mass accretion rate.
+
+## 3 Black Hole Evolution
+
+The evolution of the BH's spin is driven by the interplay of hydrodynamic torques from accreting matter and electromagnetic torques from the jet. The infalling material imparts angular momentum to the BH, spinning it up, while the jet extracts angular momentum, exerting a spin-down torque.
+
+### Standard Thin disk
+
+For a disk with weak large-scale magnetic flux, the dynamical effects of the magnetic field to the disk strucure become negligible, allowing the use of the standard, thin, radiatively efficient Novikov-Thorne (NT) disk model (Novikov and Thorne, 1973). In this model, gas follows quasi Keplerian orbits, slowly spiraling inward until it reaches the innermost stable circular orbit (ISCO) at radius R_{\\rm ms}, the gas plunges into the event horizon. Then the evolution of the BH's mass and spin follows the Bardeen theory (Bardeen, 1970), governed by the specific angular momentum and energy at ISCO
+
+\\frac{1}{\\dot{m}}\\frac{{\\rm d}a}{{\\rm d}t}=\\frac{s_{\\rm NT}(a)}{M},\\quad\\frac{ 1}{\\dot{m}}\\frac{{\\rm d}M}{{\\rm d}t}=e_{\\rm NT},  where the spin-up parameter s_{\\rm NT} is given by
+
+s_{\\rm NT}(a)=l_{\\rm in}\\;(a)-2ae_{\\rm in}\\;(a)  while e_{\\rm NT}=e_{\\rm in}, e_{\\rm in} and l_{\\rm in} are the specific energy and angular momentum at ISCO, respectively. The formula of e_{\\rm in} and l_{\\rm in} is given in Appendix A.
+
+In the standard thin disk, the angular momentum from matter infalling from the ISCO is always sufficient to spin up the BH, resulting in a positive s_{\\rm NT}(a) that decays to zero only at a=1, where the BH reaches its maximally allowed spin. Given that L_{\\rm BZ}\\propto\\Phi_{\\rm BH}^{2}\\Omega_{\\rm H}^{2} and \\Omega_{\\rm H} remains nearly constant once the spin is maximized during GRBs, the jet luminosity and energy are primarily constrained by the magnetic flux \\Phi_{\\rm BH}.
+
+### Magnetically Arrested disk
+
+In the MAD regime, the jet power and electromagnetic torque are coupled with the accretion power through the jet efficiency \\eta_{\\rm EM}(a), which depends on the BH spin (Lowell et al., 2024). The spin evolution is described by
+
+\\frac{1}{\\dot{m}}\\frac{{\\rm d}a}{{\\rm d}t}=\\frac{s_{\\rm MAD}(a)}{M},\\quad\\frac {1}{\\dot{m}}\\frac{{\\rm d}M}{{\\rm d}t}=e_{\\rm HD}-\\eta_{\\rm EM}(a),  where s_{\\rm MAD}(a) is the spin-up parameter in the MAD state
+
+s_{\\rm MAD}=(l_{\\rm HD}-2ae_{\\rm HD})-\\eta_{\\rm EM}(a)\\left(\\frac{c}{k(a) \\Omega_{\\rm H}r_{\\rm g}}-2a\\right). 
+
+Here, e_{\\rm HD} and l_{\\rm HD} represent the hydrodynamic energy and angular momentum fluxes onto the BH, respectively, with k(a)=\\Omega_{\\rm F}/\\Omega_{\\rm H} being the ratio of the magnetic field line's angular frequency to the BH's horizon angular frequency. The numerical values of e_{\\rm HD} and l_{\\rm HD} are approximated as constants by averaging, with l_{\\rm HD}=0.86 and e_{\\rm HD}=0.97, and \\eta_{\\rm EM}(a) is given by Equation 3. The function k(a) is given by (Lowell et al., 2024)
+
+k(a)=\\begin{cases}0.23,\\;{\\rm if}\\;a<0,\\\\ \\min(0.1+0.5a,0.35),\\;{\\rm if}\\;a\\geq 0.\\end{cases} 
+
+In contrast to the standard thin disk, where the BH always spins up over time, the BH can spin down rapidly in a MAD. The MAD supplies significantly less hydrodynamic specific angular momentum than the NT disk, which has a minimum value of l_{\\rm in}\\sim 1.15. This is likely due to strong magnetic fields both efficiently transporting angular momentum outward and causing the disk to become sub-Keplerian, thereby starving the BH of hydrodynamic angular momentum (Lowell et al., 2024).
+
+In addition to the magnetic fields extracting angular momentum from the BH gas supply, the magnetic fields threading the BH also extract the angular momentum from the BH and send it out to large distances in the form of jets. For a\\gtrsim 0.1, the jet torque dominates and brakes the BH efficiently. Both of these effects lead to a low equilibrium BH spin of a_{\\rm eq}\\approx 0.06.
+
+### A Unified Description of the disk
+
+As the magnetic flux threading the BH approaches the MAD limit, the large-scale magnetic field begins to influence disk dynamics, extracting significant energy and angular momentum from the BH. We introduce the transition function \\Delta, defined as the ratio of the BH magnetic flux to its MAD value
+
+\\Delta=\\frac{\\Phi_{\\rm BH}}{\\Phi_{\\rm MAD}},  where \\Phi_{\\rm MAD} represents the maximum flux retained by accretion
+
+\\Phi_{\\rm MAD}(a,\\dot{m},M_{\\rm BH})=\\sqrt{\\frac{16\\pi}{\\kappa fc}}\\frac{\\sqrt{ \\eta_{\\rm EM}(a)\\dot{m}c^{2}}}{\\omega_{\\rm H}(a)}r_{\\rm g}. 
+
+When \\Phi_{\\rm BH}>\\Phi_{\\rm MAD}, the magnetic field rapidly diffuses outward, restoring \\Phi_{\\rm BH} to \\Phi_{\\rm MAD}. Therefore, \\Delta ranges from 0 to 1, characterizing the disk's state relative to MAD.
+
+We propose the modified spin and mass evolution equations that account for transitions between the NT disk and MAD, guaranteed to be accurate in both asymptotic limits:
+
+\\frac{1}{\\dot{m}}\\frac{{\\rm d}a}{{\\rm d}t}=\\frac{\\Delta s_{\\rm MAD}(a)+s_{\\rm NT }(1-\\Delta)}{M}, \\frac{1}{\\dot{m}}\\frac{\\mathrm{d}M}{\\mathrm{d}t}=e_{\\mathrm{NT}}(1-\\Delta)+\\Delta \\left(e_{\\mathrm{HD}}-\\eta_{\\mathrm{EM}}(a)\\right). 
+
+These equations recover the standard NT disk behavior for \\Delta\\to 0 and the MAD limit for \\Delta=1. The remaining unknowns, \\dot{m} and \\Phi_{\\mathrm{BH}}, along with initial conditions for M_{\\mathrm{BH},0} and a_{0}, fully determine the evolution of the BH and its jet power, depending on the specific astrophysical model.
+
+Additionally, since L_{\\mathrm{jet}}\\propto\\Phi_{\\mathrm{BH}}^{2}, the jet power can be expressed as
+
+L_{\\mathrm{jet}}=\\Delta^{2}\\eta_{\\mathrm{EM}}(a)\\dot{m}c^{2}. 
+
+This expression illustrates the jet power's dependence on the MAD transition.
+
+Finally, the spin equilibrium timescale t_{\\mathrm{eq}} is given by
+
+\\begin{split} t_{\\mathrm{eq}}&\\equiv\\left|\\left(a_ {\\mathrm{eq}}-a_{0}\\right)/\\frac{da}{dt}\\right|_{a=a_{0}}\\right|\\\\ &\\sim\\left.\\frac{M_{0}}{\\dot{m}}\\left|\\frac{a_{\\mathrm{eq}}-a_{0} }{\\Delta_{0}\\,s_{\\mathrm{MAD}}(a_{0})+(1-\\Delta_{0})s_{\\mathrm{NT}}(a_{0})} \\right|,\\end{split}  where the factor \\left|\\frac{a_{\\mathrm{eq}}-a_{0}}{\\Delta_{0}\\,s_{\\mathrm{MAD}}(a_{0})+(1- \\Delta_{0})s_{\\mathrm{NT}}(a_{0})}\\right|<0.3 for all a_{0} and \\Delta_{0}. For typical GRBs, t_{\\mathrm{eq}}\\lesssim 10s, shorter than the duration of lGRBs but longer than sGRBs. Thus, the spin equilibrium state dominates the observable properties of lGRBs, while the initial spin governs those of sGRBs. We will apply this model to both types of GRBs in subsequent sections separately.
+
+## 4 Long Gamma-ray Bursts
+
+### Collapsar Model Setups
+
+We consider a GRB jet powered by accretion onto a BH following the core collapse of a WR star. The mass accretion rate depends on both the stellar structure and the interaction with relativistic jets. For simplicity, we assume a constant accretion rate throughout the burst, consistent with observations of approximately constant fluence across the sequence of pulses that make up the light curve of a lGRB (McBreen et al., 2002).
+
+Strong accretion retains large-scale vertical magnetic flux on the BH, crucial for the BZ mechanism to power relativistic jets. However, the origin of this magnetic flux remains poorly understood, with several models proposed (Tchekhovskoy and Giannios, 2015; Jacquemin-Ide et al., 2024; Gottlieb et al., 2024). Since the flux is expected to be transported and retained by accreted matter, it is reasonable to parametrize it in relation to the total accreted mass, approximated as M_{\\mathrm{BH}}:
+
+\\Phi_{\\mathrm{BH}}(t)=\\Phi_{\\mathrm{BH},0}\\left(\\frac{M_{\\mathrm{BH}}(t)}{M_{ \\mathrm{BH},0}}\\right),  where M_{\\mathrm{BH},0} is the initial BH mass, and \\Phi_{\\mathrm{BH},0} is the initial magnetic flux threading the BH. This parameterization assumes a constant magnetic flux per unit mass during the initial collapse and subsequent accretion, with a uniform magnetic field orientation across all accreted material. Consequently, the total magnetic flux threading the BH is the cumulative sum of the flux contributed by the accreted material and is therefore proportional to the mass of the BH. Further discussion on this assumption is provided in Section 6.
+
+In the collapsar model, the BH is initially buried within a dense stellar envelope. The jet requires several seconds to drill through the collapsing star, with the GRB triggered when the jet breaks out of the star. We adopt the following expression for the breakout time of a Poynting-flux dominated constant luminosity relativistic jet1(Bromberg et al., 2014, 2015),
+
+Footnote 1: Here we approximate the density profile of the stellar envelope to be \\rho\\propto r^{-\\alpha} with index \\alpha=2.5.
+
+\\begin{split}\\tau_{\\mathrm{breakout}}&\\simeq 7.4\\,\\left(\\frac{L_{\\mathrm{j}}}{10^{49}\\mathrm{ergs}^{-1}}\\right)^{-1/3}\\left( \\frac{M_{*}}{15\\mathrm{M}_{\\odot}}\\right)^{1/3}\\\\ &\\quad\\times\\left(\\frac{M_{\\mathrm{BH}}}{3\\mathrm{M}_{\\odot}} \\right)^{2/3}\\left(\\frac{0.05}{\\omega_{\\mathrm{H}}(a)}\\right)^{2/3}[\\mathrm{s}] \\end{split}  where \\tau_{\\mathrm{breakout}} is the time for the jet to traverse the star, minus the light travel time across it. The jet power and BH spin can evolve significantly within the first few seconds, affecting the breakout time. We thus approximate2 the breakout time t_{\\mathrm{b}} as the global minimum of the function \\tau_{\\mathrm{breakout}}(t)+t.
+
+Footnote 2: Equation 16 assumes constant jet luminosity, whereas our model considers time-dependent jet power. Consequently, \\tau_{\\mathrm{breakout}} depends on the time at which it is estimated, and the evolution time should also be included. Thus, we approximate the breakout time as the minimum of (\\tau_{\\mathrm{breakout}}+t) over the evolution. The stellar envelope is assumed to remain largely unchanged until the jet breaks through.
+
+Figure 1 shows the evolution of jet power and BH spin for initial magnetic fluxes \\Phi_{\\mathrm{BH},0}=10^{26.5-28.65}\\,\\mathrm{G\\,cm^{2}} with initial BH spin a_{0}=0.01 (top) and a_{0}=0.25 (bottom). For a typical WR star, M_{*}\\sim 15M_{\\odot} and R_{*}\\sim 0.5R_{\\odot}, leading to \\dot{m}\\sim 0.1M_{\\odot}\\mathrm{s}^{-1} via free-fall collapse. In both cases, jet power and spin approach equilibrium after t\\sim 10s. As the magnetic flux approaches the MAD limit, the equilibrium spin decreases, reaching a_{\\mathrm{eq}}\\approx 0.06 in the fully MAD state. The colored circles mark the jet breakout time t_{\\mathrm{b}}, after which the GRB prompt emission becomes observable, and the colored triangles mark the spin equilibrium timescale t_{\\mathrm{eq}} given in Equation 14.
+
+The collimation-corrected jet power for typical lGRBs is L_{\\mathrm{jet}}\\sim 10^{50}\\,\\mathrm{erg\\,s^{-1}}(Wanderman and Piran, 2010; Wang et al., 2018), corresponding to a breakout time of t_{\\mathrm{b}}\\sim 8\\,\\mathrm{s} for a_{0}=0.01 in Figure 1. This breakout time aligns with the observed plateau in the duration distribution (Bromberg et al., 2012), and the roughly constant jet power beyond t_{\\rm b} is consistent with typical lGRB observations (McBreen et al., 2002). Additionally, Equation 14 yields t_{\\rm eq}\\lesssim 9\\,s for M_{0}=3M_{\\odot}, \\dot{m}=0.1M_{\\odot}s^{-1} and a_{0}=0.01. Thus, the system typically approaches the spin equilibrium state soon after the jet emerges.
+
+In contrast, the bottom panel shows significantly shorter breakout times for a_{0}=0.25, as the higher initial spin and jet power allow faster penetration of the stellar envelope. However, this rapid breakout and subsequent power decay due to spin-down are inconsistent with observed lGRB behavior, suggesting that models assuming moderate or high initial BH spin with strong magnetic flux are less plausible for collapsars. Similar conclusions were drawn by Jacquemin-Ide et al. (2024) with different models for the jet breakout time. Interestingly, the harder spectra observed in the first 1-2 seconds of some long GRBs resemble those of short GRBs (Ghirlanda et al., 2009). This similarity could arise if the spin equilibrium time slightly exceeds the breakout time, allowing the BH spin to evolve during the initial emission phase, similar to an sGRB.
+
+### Spin Equilibrium and Jet Energetics
+
+Since we can only observe the GRB prompt emission after the jet emerges from the stellar envelope, and by that time the BH spin does not evolve substantially, then the spin equilibrium state plays a crucial role in determining lGRB observables. As implied in Figure 1, the equilibrium spin a_{\\rm eq} depends on the transition function at spin equilibrium, \\Delta_{\\rm eq}, and the dependence can be derived from Equation 11.
+
+The transition function \\Delta is the ratio between \\Phi_{\\rm BH}(M_{\\rm BH}) and \\Phi_{\\rm MAD}(a,\\dot{m},M_{\\rm BH}). With a constant mass accretion rate, \\Delta_{\\rm eq} is determined solely by the equilibrium spin a_{\\rm eq} as the mass is canceled out, leading to a direct one-to-one mapping between \\Delta_{\\rm eq} and a_{\\rm eq}. The spin equilibrium is achieved once the numerator on the right-hand side of Equation 11 vanishes. Then the jet power at spin equilibrium is given by L_{\\rm jet,eq}=\\Delta_{\\rm eq}^{2}\\eta_{\\rm EM}(\\Delta_{\\rm eq})\\dot{m}c^{2}. M_{\\rm BH,0} and \\dot{m} only determine how fast the equilibrium is reached.
+
+Figure 2 illustrates a_{\\rm eq} and the normalized jet power L_{\\rm jet,eq}/(\\dot{m}c^{2}) as functions of \\Delta_{\\rm eq}. When \\Delta_{\\rm eq}\\ll 1, the system approaches the standard thin disk limit with a_{\\rm eq}\\sim 1. In contrast, \\Delta_{\\rm eq}=1 corresponds to the MAD state, where a_{\\rm eq}\\sim 0.06. At the standard thin disk limit, L_{\\rm jet,eq}/(\\dot{m}c^{2})\\sim 1.46\\Delta_{\\rm eq}^{2}, which matches a power-law behavior of index 2. This motivates the following fitting form:
+
+\\frac{L_{\\rm jet,eq}}{\\dot{m}c^{2}}=1.458\\Delta_{\\rm eq}^{2+C_{0}\\Delta_{\\rm eq }}\\exp\\left(-\\left(\\frac{\\Delta_{\\rm eq}}{C_{1}}\\right)^{C_{2}}\\right),  with C_{0}=2.3, C_{1}=0.3, and C_{2}=1.6, shown as the red dash-dotted line in Figure 2.
+
+For a constant \\dot{m}, the maximum jet power at spin equilibrium is 2.2% of \\dot{m}c^{2}, occurring at \\Delta_{\\rm eq,max}=0.365 and a_{\\rm eq,max}=0.5. In contrast, at the MAD limit, jet power is only 0.16% of \\dot{m}c^{2}, approximately 14 times lower. This maximum power occurs midway between the standard thin disk and MAD states, where moderate spin and magnetic flux combine to produce the most powerful jets for a given accretion rate.
+
+The observed cumulative jet energy, E_{\\rm jet}, is another key parameter and is given by
+
+E_{\\rm jet}=\\int_{t_{\\rm b}}^{t_{\\rm e}}L_{\\rm jet}\\,dt\\approx L_{\\rm jet,eq} \\left(t_{\\rm e}-t_{\\rm b}\\right)\\approx L_{\\rm jet,eq}t_{\\rm e},  since t_{\\rm b} is small compared to the total engine activity time t_{\\rm e} in most lGRBs. Defining the total accreted mass as M_{\\rm acc}=\\dot{m}t_{\\rm e}, the normalized cumulative jet energy E_{\\rm jet}/(M_{\\rm acc}c^{2}) closely follows the normalized jet power L_{\\rm jet,eq}/(\\dot{m}c^{2}), as confirmed by Figure 3.3
+
+Footnote 3: Reducing the total engine activity time from t_{\\rm e}=40\\,{\\rm s} to lower values (e.g., t_{\\rm e}=20\\,{\\rm s}) results in only minor changes, with variations of the curve within a factor of two.
+
+Therefore, we propose a similar fitting form for the normalized cumulative jet energy:
+
+\\frac{E_{\\rm jet}}{M_{\\rm acc}c^{2}}=C\\Delta_{\\rm eq}^{(2+C_{0}\\Delta_{\\rm eq })}\\exp\\left(-\\left(\\frac{\\Delta_{\\rm eq}}{C_{1}}\\right)^{C_{2}}\\right),  with the fitting parameters C=0.62, C_{0}=1.47, C_{1}=0.31, and C_{2}=1.58. The primary changes are in the normalization and power-law index, due to the influence of the non-negligible jet breakout time, which increases significantly when the magnetic flux is small.
+
+The horizontal black dotted line in Figure 3 marks the maximum observed cumulative jet energy, E_{\\rm jet,max}, which is 1.44% of the accretion energy, 12 times greater than the 0.12% for the MAD state. The efficiency is lower than the one associated with the maximum jet power, as part of the energy is expended for the jet to break through the stellar envelope. The corresponding flux ratio at spin equilibrium is \\Delta_{\\rm eq,max}\\sim 0.36, shown by the vertical black dotted line. While some non-equilibrium jet power is included, the results remain largely insensitive to system parameters for initial spins a_{0}<0.1. For a_{0}\\gtrsim 0.25, deviations occur due to smaller t_{\\rm b}, particularly at high magnetic flux. As discussed earlier and supported by other studies (Fuller and Ma, 2019; Gottlieb et al., 2023), collapsar BHs are likely born with low spins, especially when the initial flux is high. Therefore, this curve of normalized jet energy applies universally across a broad range of lGRBs.
+
+### Comparison with Observations
+
+We focus on the collimation-corrected jet energy, E_{\\rm jet}, which is less affected by system fluctuations and observational uncertainties compared to jet power. Although M_{\\rm acc} is not directly observable, we can still compare E_{\\rm jet} with observations to reveal meaningful insights.
+
+#### 4.3.1 Standard lGRBs
+
+For lGRBs of typical energy, assuming they are produced by systems in the MAD limit leads to potential inconsistencies between the mass accretion predicted by the MAD model and that required by observations. Figure 4(a) shows the predicted distribution of M_{\\rm acc} if all lGRBs were produced by MAD systems, where the peak accreted mass would be around 10% of the progenitor mass. However, for subluminous lGRBs, M_{\\rm acc} would need to be as low as \\sim 0.1M_{\\odot}, which may be too small relative to the progenitor star's mass. Additionally, it is difficult to reconcile how a narrow distribution of Galactic WC and WO star masses (Sander et al., 2019) could produce a broad distribution of accreted masses without additional influencing factors.
+
+This discrepancy can be alleviated if subluminous lGRBs have \\Delta_{\\rm eq}\\ll 1, which would imply a larger M_{\\rm acc} for a given E_{\\rm jet}, as shown in Figure 5. For standard GRBs, if they are not produced by MAD, the available magnetic flux in the system provides an additional factor that may explain the observed diversity in GRB jet energies. Consequently, it is likely that most lGRBs are generated in systems far from MAD. In this scenario, with a_{\\rm eq}\\approx 1, the jet luminosity would primarily depend on the magnetic flux. With certain additional assumptions, the distributions of \\Delta_{\\rm eq} and \\Phi_{\\rm BH,eq} for a fixed M_{\\rm acc} are provided in Appendix B. The inferred magnetic flux distribution peaks at around \\sim 10^{27}\\:\\rm G\\:cm^{2} and remains largely unaffected by variations in the assumed M_{\\rm acc}.
+
+#### 4.3.2 The BOAT
+
+GRB 221009A, referred to as the Brightest Of All Time (BOAT; Burns et al., 2023), has an isotropic equivalent energy of E_{\\gamma,\\rm iso}=(1.01\\pm 0.007)\\times 10^{55}\\,\\rm erg(Lesage et al., 2023). While there is ongoing debate about the jet structure and opening angle, the collimation-corrected energy is estimated at E_{\\rm jet}\\sim 10^{53}\\,\\rm erg(Kann et al., 2023; O'Connor et al., 2023). For comparison, the distribution of \\log_{10}(E_{\\rm jet}) can be approximated as Gaussian with a mean of 51.33 and a standard deviation of 0.58 (Wang et al., 2018).
+
+Figure 5 shows the mean and standard deviations of E_{\\rm jet} in the M_{\\rm acc} and \\Delta_{\\rm eq} plane, with the BOAT energy also indicated. Each line corresponds to a fixed E_{\\rm jet} and is the reciprocal of the lines in Figure 3. In the case of the optimal flux ratio (\\Delta_{\\rm eq}=\\Delta_{\\rm eq,max}), the required M_{\\rm acc} for the BOAT is reduced to \\sim 4M_{\\odot}, whereas the MAD limit requires M_{\\rm acc}\\sim 50M_{\\odot}, which is inconsistent with WR star masses.
+
+## 5 Short Gamma-ray Bursts
+
+We consider a sGRB jet powered by the accretion of a remnant disk onto a newly formed BH after a NS-NS merger. The initial spin and mass of BHs in this model are relatively well-constrained, with a_{0}\\sim 0.7 and M_{\\rm BH,0}\\sim 2.5M_{\\odot}, based on theoretical expectations from NS mergers with M_{\\rm NS}\\sim 1.4M_{\\odot}(Kastaun et al., 2013; Bernuzzi et al., 2014, 2020). A remnant disk forms around the compact object with a typical mass of approximately 0.1M_{\\odot}(Bernuzzi et al., 2020). Given a typical duration of T_{90}\\sim 0.2\\,\\rm s for sGRBs (Zitouni et al., 2018)4, the mass accretion rate, assuming a constant \\dot{m}, is about 0.5M_{\\odot}s^{-1} if most of the disk is accreted during the burst.
+
+Since the accreted mass is much less than that of the BH, its spin remains nearly constant throughout the burst. While the magnetic flux available for jet launching in sGRBs is uncertain, it can be inferred from the observed jet luminosity or energy. Given the nearly constant jet luminosity, the jet energy can be estimated as E_{\\rm jet}=L_{\\rm jet}T_{\\rm 30}.
+
+Determining collimation-corrected jet energy for sGRBs is challenging due to their faint afterglows. We assume a Gaussian distribution for \\log_{10}(E_{\\rm jet}) with a mean of 50 and a standard deviation of 0.5. Figure 4(b) illustrates the predicted M_{\\rm acc} distribution if all sGRBs are produced in the MAD regime, indicating that the accreted mass is extremely small compared to the disk mass, with the M_{\\rm acc} distribution peaking around 0.1% of the disk mass. This is because the jet efficiency is too high in short GRBs, given the high initial spin, suggesting that they are more likely produced by systems outside the MAD regime. The conclusion holds across reasonable choices of \\log_{10}(E_{\\rm jet}) distributions, with further details on \\Phi_{\\rm BH} distributions for various assumed E_{\\rm jet} distributions provided in Appendix B. Similarly to those found for lGRBs, the magnetic flux distributions for sGRBs peak around \\sim 10^{27} G cm{}^{2} with weak dependence on the assumed E_{\\rm jet} distributions.
+
+## 6. Discussion
+
+Given the similar observed isotropic luminosities (Shahmoradi and Nemiroff, 2015) and high BH spin values in both long and short GRBs implied from our model, the distributions of magnetic flux threading the BHs are expected to be similar5. This suggests similar values and, possibly a common origin, for the magnetic flux that powers relativistic jets in all GRBs. Despite differences in progenitor systems and pre-burst dynamics, a short-lived, rapidly spinning, strongly magnetized proto-neutron star (PNS) may be the essential shared characteristic. Following the PNS collapse, the resulting BH inherits the magnetic field, with strong accretion anchoring this field to the BH (Gottlieb et al., 2024). Consequently, the BH forms with strong magnetic fields already threading through it, and the magnetic flux remains nearly constant held in place by the ram pressure of the surrounding disk6 throughout the burst.
+
+Footnote 5: Even though the slightly wider jet opening angles in sGRBs require somewhat smaller collimation correction in comparison to that of lGRBs. (Beniamini et al., 2019; Rouco Escorial et al., 2023).
+
+Footnote 6: In our model, \\Phi_{\\rm BH} also stays nearly constant, as M_{\\rm BH} does not change significantly during the burst.
+
+In lGRBs, the BH may acquire magnetic flux directly through accretion from the progenitor's envelope (Tchekhovskoy and Giannios, 2015). However, Gottlieb et al. (2024) argue that, even with a strong progenitor magnetic field, its predominantly toroidal, small-scale, and random nature--as predicted by the Tayler-Spruit dynamo (Spruit, 2002)--significantly limits its contribution to the net magnetic flux onto the BH after collapse. Similarly, in sGRBs, the remnant disk is expected to have a primarily toroidal field due to tidal disruption and flux freezing (Kiuchi et al., 2014). Although this toroidal field may initiate magnetorotational instability, producing weak poloidal fields, it generates jets potentially too weak to account for GRB luminosities (McKinney et al., 2012). Therefore, a short-lived, rapidly spinning PNS is likely to serve as the primary source of magnetic flux for both long and short GRBs.
+
+Our model predicts that the maximum observed jet energy is about 1.5% of the accretion energy, expressed as
+
+E_{\\rm jet,max}=1.3\\times 10^{53}\\left(\\frac{M_{\\rm acc}}{5M_{\\odot}}\\right)\\, \\rm erg. 
+
+For comparison, the maximum jet energy from magnetars, even with accretion-induced spin-up, is limited to 3\\times 10^{52}\\,\\rm erg(Mazzali et al., 2014). GRB jets can also be powered by neutrino annihilation, with the jet power7 given by (Zalamea and Beloborodov, 2011)
+
+Footnote 7: The expression assumes a=0.95 with \\dot{m}_{\\rm ign}<\\dot{m}<\\dot{m}_{\\rm trap}, which covers typical GRB accretion rates. However, L_{\\rm jet,\\nu\\rho}\\sim 0 once \\dot{m}<\\dot{m}_{\\rm ign}, with \\dot{m}_{\\rm ign}=0.021M_{\\odot}\\,\\rm s^{-1} for a=0.95 and \\alpha=0.1. See Equation 22 in Zalamea and Beloborodov (2011) for details.
+
+L_{\\rm jet,\\nu\\rho}\\sim 7.3\\times 10^{49}\\left(\\frac{M_{\\rm BH}}{3M_{\\odot}} \\right)^{-3/2}\\left(\\frac{\\dot{m}}{0.1M_{\\odot}/\\rm s}\\right)^{9/4}\\rm erg\\, s^{-1}. 
+
+The neutrino annihilation process can coexist with the BZ mechanism, jointly driving relativistic GRB jets. However, the jet power from neutrino annihilation decreases rapidly as the accretion rate drops. For long-duration GRBs, sustaining the high accretion rates required for neutrino annihilation becomes unfeasible, especially for the energetic ones. For models relying solely on neutrino annihilation, and assuming the final BH mass is twice its initial value, the maximum jet energy is E_{\\rm jet,max}\\sim 5\\times 10^{51}\\,\\rm erg for t_{\\rm e}\\sim 10\\,\\rm s, with the limit decreasing steeply for longer bursts (Leng and Giannios, 2014). With E_{\\rm jet}\\sim 10^{53}\\,\\rm erg and T_{90}\\sim 250\\,\\rm s, the BOAT exceeds the energy limits of magnetar8 and pure neutrino annihilation models but can be explained by the BZ mechanism, requiring a reasonable accreted mass of M_{\\rm acc}\\sim 4M_{\\odot} with optimal magnetic flux.
+
+Note that for BZ powered jets, as studied here, the maximum jet energy for a given accreted mass depends on the chosen transition function, which models the torques exerted on the BH at the transition from the thin disk to MAD. While the flux ratio between the physical and MAD magnetic flux is a natural choice as it approaches the correct limits, alternative options remain. Future 3D GRMHD simulations of sub-MAD state systems, together with calculations of the torque on the BH (Lowell et al., 2024), could help validate this choice.
+
+Another caveat of this work is the assumption of a constant mass accretion rate during the GRB prompt emission phase. Note that GRB prompt emission exhibits variability as pulses in the light curve on timescales of seconds to subseconds (Camisasca et al., 2023), possibly caused by jet energy dissipation processes (e.g., magnetic reconnection) or small-scale fluctuations in the accretion rate. Even in the latter case, we confirm that these fluctuations have a negligible impact on the spin and mass evolution. Significant deviations in jet luminosity due to varying accretion rates arise only when the system approaches the MAD state. Since our analysis focuses on jet energy, these small-scale luminosity variations effectively cancel out. Moreover, when the disk is far from the MAD state, as is likely for most GRBs, the observable jet luminosity9 becomes independent of the accretion rate. Therefore, as long as the accretion rate remains high enough to sustain the magnetic flux and allow equilibrium to be approximately achieved before jet breakout in IGRBs, this assumption does not affect our results.
+
+Footnote 9: For IGRBs, the equilibrium jet luminosity dominates the observable jet luminosity, while for sGRBs, the initial luminosity dominates. Both are independent of the accretion rate in this regime.
+
+Our work predicts jet energy, whereas observed GRB data typically provide isotropic equivalent energy. To compare with our predictions, collimation corrections are required, but these depend on the specific jet structure and identification or limits on the jet break time, which complicates direct energy estimates (O'Connor et al., 2023). A detailed and comprehensive analysis of observational data is necessary to accurately determine the jet energy distribution. Future telescopes like LSST (Ivezic et al., 2019) could improve this effort by detecting faint jet breaks with greater sensitivity.
+
+## 7 Conclusion
+
+In this _letter_, we present a semi-analytical model to explore the evolution of BH central engines and GRB jets over a wide range of magnetic fluxes, allowing transitions from standard thin disk to MAD. We identify a universal curve for normalized jet power L_{\\rm jet,eq}/(\\dot{m}c^{2}) as a function of the flux ratio at spin equilibrium, \\Delta_{\\rm eq}=(\\Phi_{\\rm BH}/\\Phi_{\\rm MAD})_{\\rm eq}. The maximum jet power reaches \\sim 2.2\\% of the accretion power \\dot{m}c^{2}, occurring at \\Delta_{\\rm eq,max}=0.365 with a_{\\rm eq,max}=0.5.
+
+For IGRBs, this curve suggests a maximum jet energy of around 1.5% of the accretion energy--about 12 times higher than that in the MAD state--reducing the required accreted mass for the BOAT from M_{\\rm acc}\\sim 50M_{\\odot} to M_{\\rm acc}\\sim 4M_{\\odot}. Additionally, the narrow mass distribution of Galactic WC and WO stars suggests that standard IGRBs are unlikely to be produced by the MAD state, given their wide jet energy distribution. Likewise, the energetics and extremely low accreted mass needed for sGRBs indicate they should be produced outside the MAD limit. The magnetic flux distributions for both long and short GRBs peak around 10^{27} G cm{}^{2}, suggesting a potentially shared origin of magnetic flux in the central engine in both types of bursts.
+
+## Acknowledgments
+
+This work was supported by the NSF AST-2308090 grants, a grant (no. 2020747) from the United States-Israel Binational Science Foundation (BSF), Jerusalem, Israel (PB) and by a grant (no. 1649/23) from the Israel Science Foundation (PB). This research has made use of NASA's Astrophysics Data System Bibliographic Services.
+
+## Appendix A The formulae for e_{\\rm in} and l_{\\rm in}
+
+The formula of specific energy e_{\\rm in} and angular momentum l_{\\rm in} at ISCO are given by (Bardeen, 1970; Moderski & Sikora, 1996)
+
+e_{\\rm in}=\\left(1-\\frac{2}{3R_{ms}}\\right)^{1/2},l_{\\rm in}\\;=\\frac{2}{3^{3/ 2}}\\left(1+2\\left(3R_{ms}-2\\right)^{1/2}\\right), (A1) while the ISCO radius R_{ms} can be calculated as
+
+R_{ms}=3+Z_{2}-\\left[\\left(3-Z_{1}\\right)\\left(3+Z_{1}+2Z_{2}\\right)\\right]^{ 1/2}, (A2)with Z_{1} and Z_{2} defined by
+
+\\begin{split}& Z_{1}=1+\\left(1-a^{2}\\right)^{1/3}\\left[(1+a)^{1/3}+(1 -a)^{1/3}\\right],\\\\ & Z_{2}=\\left(3a^{2}+Z_{1}^{2}\\right)^{1/2}.\\end{split} (A3)
+
+## Appendix B Magnetic Flux and Flux Ratio Distributions
+
+To determine the distribution of magnetic flux \\Phi_{\\rm BH,eq} and flux ratio \\Delta_{\\rm eq} at spin equilibrium for a given M_{\\rm acc}, we must assume a range for \\Delta_{\\rm eq}, as the curve in Figure 5 is not monotonic. For \\Delta_{\\rm eq}\\gtrsim 0.04, two values of \\Delta_{\\rm eq} correspond to the same normalized spin equilibrium jet power, complicating inversion. Assuming that all IGRBs originate from systems where \\Delta_{\\rm eq}<\\Delta_{\\rm eq,max} allows a one-to-one mapping between observed jet energy, E_{\\rm jet}, and flux ratio \\Delta_{\\rm eq}. Figure 6 (left) shows \\Delta_{\\rm eq} distributions for various M_{\\rm acc} values relative to the observed jet energy distribution. As M_{\\rm acc} increases, the system deviates from the MAD regime, but even for M_{\\rm acc}=0.2M_{\\odot}, the peak of \\Delta_{\\rm eq} remains below its maximum, aligning with our assumption that \\Delta_{\\rm eq}<\\Delta_{\\rm eq,max} across all systems.
+
+The MAD flux limit \\Phi_{\\rm MAD,eq}(a_{\\rm eq},\\dot{m},M_{\\rm BH}) is primarily influenced by the mass accretion rate at a given \\Delta_{\\rm eq}, as M_{\\rm BH} remains almost constant during the burst, and a_{\\rm eq} depends solely on \\Delta_{\\rm eq}. We approximate \\dot{m}\\approx M_{\\rm acc}/T_{90}, where T_{90} is distributed as \\log_{10}T_{90}\\sim\\mathcal{N}(0.94,0.464)(Zitouni et al., 2018), based on _Fermi_ GRBs. Assuming this distribution is independent of jet luminosity, we derive the distribution of \\Phi_{\\rm BH,eq}, shown in Figure 6 (right) shows the distributions of \\Phi_{\\rm BH,eq} for M_{\\rm acc}=0.2,1,5M_{\\odot}. While the \\Delta_{\\rm eq} distributions do not overlap, as \\dot{m} increases with M_{\\rm acc}, the \\Phi_{\\rm BH,eq} distributions overlap. This is because most systems are far from MAD, with a_{\\rm eq}\\sim 1, so the magnetic flux distributions closely follow the luminosity distribution. For M_{\\rm acc}=0.2M_{\\odot}, however, the high-flux tail should have a_{\\rm eq}<1 due to \\Delta_{\\rm eq}>0.1, leading to a divergence from the other distributions. Our results remain largely unaffected when using alternative T_{90} distributions, such as those derived from _Swift_.
+
+For sGRBs, assuming E_{\\rm jet}=L_{\\rm jet}T_{90}, we find from Equation 1 that
+
+E_{\\rm jet}=\\frac{\\kappa f}{4\\pi c}\\Phi_{\\rm BH}^{2}\\Omega_{\\rm H}^{2}(a=0.7, M_{\\rm BH,0})\\,T_{90} (B4)
+
+Solving for \\Phi_{\\rm BH} gives
+
+\\begin{split}\\Phi_{\\rm BH}&=2.77\\times 10^{27} \\left(\\frac{M_{\\rm BH,0}}{2.5M_{\\odot}}\\right)\\times\\\\ &\\qquad\\left(\\frac{E_{\\rm jet}}{10^{50}{\\rm erg}}\\right)^{1/2} \\left(\\frac{T_{90}}{0.2{\\rm s}}\\right)^{-1/2}[{\\rm Gauss\\ cm}^{2}].\\end{split} (B5)
+
+From Equation 10, the flux ratio \\Delta=\\Phi_{\\rm BH}/\\Phi_{\\rm MAD} becomes
+
+\\begin{split}\\Delta&=\\frac{\\Phi_{\\rm BH}}{\\Phi_{ \\rm MAD}}\\\\ &=0.028\\left(\\frac{E_{\\rm jet}}{10^{50}{\\rm erg}}\\right)^{1/2} \\left(\\frac{T_{90}}{0.2{\\rm s}}\\right)^{-1/2}\\left(\\frac{\\dot{m}}{0.5M_{\\odot }/{\\rm s}}\\right)^{-1/2}.\\end{split} (B6)
+
+For typical sGRB energies and durations, \\Phi_{\\rm BH} is far from the MAD limit. Figure 7 shows the distributions of \\Phi_{\\rm BH} for sGRBs, assuming \\log_{10}T_{90}\\sim\\mathcal{N}(-0.62,0.442)(Zitouni et al., 2018) and various distributions of \\log_{10}(E_{\\rm jet}). The \\Phi_{\\rm BH} distributions for sGRBs closely resemble those of IGRBs due to similar luminosity distributions and high BH spin values during the bursts, and this similarity is largely insensitive to the specific choice of E_{\\rm jet} distribution, as long as it is reasonable. Again, we use the _Fermi_ GRB distribution for \\log_{10}T_{90}, though the results are not sensitive to this specific choice. The magnetic flux distributions for both long and short GRBs peak around 10^{27} G cm{}^{2}, indicating a potential common origin of magnetic flux in both central engine systems.

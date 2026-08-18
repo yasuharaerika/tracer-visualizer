@@ -1,0 +1,143 @@
+###### Abstract
+
+Periodicities observed in two Fast Radio Burst (FRB) sources (16 days in FRB 180916.J0158+65 and 160 days in FRB 121102) are consistent with that of tight, stellar mass binary systems. In the case of FRB 180916.J0158+65 the primary is an early OB-type star with mass loss rate \\dot{M}\\sim 10^{-8}-10^{-7}M_{\\odot} yr{}^{-1}, and the secondary a neutron star. The observed periodicity is not intrinsic to the FRB's source, but is due to the orbital phase-dependent modulation of the absorption conditions in the massive star's wind. The observed relatively narrow FRB activity window implies that the primary's wind dynamically dominates that of the pulsar, \\eta=L_{sd}/(\\dot{M}v_{w}c)\\leq 1, where L_{sd} is pulsar spin-down, \\dot{M} is the primary's wind mass loss rate and v_{w} is its velocity. The condition \\eta\\leq 1 requires mildly powerful pulsar with L_{sd}\\lesssim 10^{37} erg s^{-1}. The observations are consistent with magnetically-powered radio emission originating in the magnetospheres of young, strongly magnetized neutron stars, the classical magnetars. stars: binaries: general - stars: magnetars -- stars: winds, outflows -- fast radio bursts
+
+## 1 FRB periodicity due to the orbital motion in O/B-NS binary
+
+### Observations and outline of the model
+
+The CHIME collaboration announced a P=16 day periodicity from FRB 180916.J0158+65 (The CHIME/FRB Collaboration et al., 2020). Analysis of date from 76-m Lovell telescope on the original repeater FRB 121102 also indicated periodicity of P\\sim 160 days (Rajwade et al., 2020). These are important observations which sheds light on the origin of FRBs, as we discuss in the present Letter. Below we concentrate on the case of FRB 180916.J0158+65.
+
+The observed periodicity is most likely due to the orbital motion of a binary system. (In Appendix A we discuss an unlikely periodicity due to geodetic precession in extremely tight binary. Free precession models were also proposed Levin et al. (2020); Zanazzi & Lai (2020)).
+
+The orbital semi-major axis for the case of FRB 180916.J0158+65 evaluates to
+
+P=2\\pi\\sqrt{\\frac{a^{3}}{GM_{\\odot}(m_{PSR}+m_{MS})}} a=4\\times 10^{12}m_{\\rm tot,1}^{1/3}P_{1.2}^{2/3}\\;\\rm cm,  where m_{PSR} is (the presumed) neutron star's mass and m_{MS} is the primary's mass in Solar masses and m_{\\rm tot}=(m_{PSR}+m_{MS}). (We refer to the the O/B star as "a primary", while to the neutron star as a "companion".) In this paper we use the notation A_{x}=A/10^{x} and m_{\\rm tot} is measured in Solar masses M_{\\odot}, P is in days.
+
+Both the pulsar, _loci_ of the FRB, and the primary produce winds: a relativistic wind by the pulsar and wind with velocity v_{w}\\sim few 10^{3} km s{}^{-1} by main-sequence star (Vink et al., 2001). We hypothesize that the observed periodicity is due to absorption of the FRB pulses in the primary's wind, see Fig. 1.
+
+The interacting pulsar's and the primary's winds create a conically shaped cavity around the less powerful source. The primary's winds can be highly optically thick at radio waves due to free-free absorption, while the relativistic pulsar wind is, basically, transparent to radio waves. A transparent cone-like zone is, therefore, created behind the pulsar, modified into spiral structure by the orbital motion.
+
+The radio waves propagating within this spiral structure do not experience free-free absorption. After they enter the primary's wind, at larger distance, the wind's density, and the corresponding absorption coefficient, are substantially reduced. Thus, the dynamics of interacting winds creates transparency windows when the observer sees the pulsar through the spiral structure (Bosch-Ramon & Barkov, 2011; Bosch-Ramon et al., 2012, 2015).
+
+Since the active window is observed to be less than 50% of the orbital period, _the primary' s wind should dominate over that of the pulsar_. This requires that the momentum parameter \\eta is less than unity,
+
+\\eta=\\frac{L_{sd}}{\\dot{M}v_{w}c}\\leq 1. 
+
+(This regime is opposite to the case of Black Widow-type pulsar binaries Fruchter et al., 1988).
+
+The typical opening of the transparency wedge behind a pulsar as seen in simulations of Bosch-Ramon et al. (2015) is \\sim 15-20^{\\circ}; this is weakly dependent on the momentum parameter as long as \\eta\\lesssim 0.3. This is consistent with the active phase observed in FRB 180916.J0158+65.
+
+Simulations of Bosch-Ramon et al. (2015), see also Fig. 1, demonstrate that the wind cavity can extend out to 10-30 times the binary separation radius. As a result, the cavity created by the pulsar's wind can reduce the absorption optical depth by a factor as large as 10^{3}: if at the location of the pulsar the primary's wind is still moderately, \\tau\\leq 10^{3}, optically thick to infinity, and the observer's line of sight lies close to the equatorial plane, within \\sim 15-20^{\\circ}, then the source turns transparent to radio emission for part of the orbit.
+
+### Free-free absorption in the primary's wind
+
+Below we make the numerical estimates of the proposed model. We parametrize the location of the "back wall" of the cavity as \\eta_{a}a (a is orbital separation), and normalize the numerical estimates to \\eta_{a}=10^{1.5}\\eta_{a,1.5}.
+
+The free-free optical depth form the location of the "back wall" of the cavity to infinity should be of the order of unity for radio waves to escape. Using the free-free-absorption coefficient \\kappa_{ff}(Lang, 1999), assuming temperature T=10^{4} K, and scaling the "back wall" radius with the orbital separation (1), we find
+
+\\kappa_{ff}=3.28\\times 10^{-7}T_{4}^{-1.35}\\nu_{1GHz}^{-2.1}\\frac{ EM}{pc} \\dot{M}=4\\pi nm_{p}(\\eta_{a}a)^{2}v_{w} \\tau_{ff}\\sim 5\\times 10^{-3}\\;\\eta_{a,1.5}^{-3}\\dot{M}_{-7.5}^{ 2}T_{4}^{-1.35}\\nu_{1GHz}^{-2.1}m_{\\rm tot,1}v_{w,8.5}^{-2},  here EM=\\int_{a}^{\\infty}n^{2}dr is emission measure. So, a mass loss rate of \\dot{M}\\sim 3\\times 10^{-8}M_{\\odot}/yr can give substantial optical depth to free-free absorption for a source at distance a but transparent conditions when the source is observed through the "back wall" of a cavity that extends to \\sim 30a.
+
+Using mass loss rate \\dot{M} from (3) and requiring the primary's momentum dominance in the wind-wind interaction, we estimate the pulsar spindown luminosity
+
+L_{sd}\\leq 5\\times 10^{36}\\eta_{-0.5}\\dot{M}_{-7.5}v_{w,8.5}\\ \\rm erg\\ s^{-1}. 
+
+Thus, the pulsar can produce mildly strong winds.
+
+The model limits the mass loss rate of the main sequence star both from below (the wind-wind interaction should be dominated by the Main Sequence star), and from above (too powerful winds are optically thick to free-free absorption out to very large distances). Early B-type stars, and late O-type stars fit the required mass loss range. Late B-type stars have insufficiently strong winds, while earlier O-type stars remain optically thick to large distances (Vink et al., 2001; Krtivcka, 2014).
+
+### Nonlinear propagation effects
+
+Strong radio waves can affect non-linearly the free-free absorption coefficient in the wind (Lu & Phinney, 2019). Qualitatively, strong electromagnetic wave in weakly magnetized plasma induces electron's oscillations with momentum
+
+p_{\\perp}\\sim a_{0}m_{e}c a_{0}=\\frac{eE}{m_{e}c\\omega},  where a_{0} is the laser intensity parameter, E is the electric field in the wave (Akhiezer et al., 1975). If the quiver energy \\sim a_{0}^{2}m_{e}c^{2} is larger than temperature, a_{0}\\geq\\sqrt{T/(m_{e}c^{2})}, then the motion of the electrons is determined by the wave itself, not the temperature.
+
+For typical parameters of FRB 180916.J0158+65 (The CHIME/FRB Collaboration et al., 2020) (total fluence \\mathcal{F}=10 Jy msec, duration \\tau=2 msec and distance d_{FRB}=150 Mpc) the luminosity and the total energy in a single burst evaluate to
+
+L_{FRB}=4\\pi\\frac{d_{FRB}^{2}\\mathcal{F}}{\\tau}=3\\times 10^{40}\\ \\rm erg \\,s^{-1}. E_{FRB}=4\\pi d_{FRB}^{2}\\mathcal{F}=6\\times 10^{37}\\ \\rm erg. 
+
+The nonlinearity parameter is then
+
+a_{0}=\\frac{e\\sqrt{\\mathcal{F}}}{am_{e}c^{3/2}\\sqrt{\\tau}\\omega}\\approx 1. 
+
+Thus, the FRB can heat the plasma to relativistic energies! As a result, a sufficiently strong pulse can propagate much further than expected from the linear theory, heating up the plasma and decreasing the absorption. But the radio pulse does not have enough energy to escape, as we discuss next.
+
+As the particles are heated by the wave, the plasma absorption coefficient \\kappa_{ff} decreases, allowing a wave to propagate further. The total amount of the material the FRB heats is
+
+M_{h}\\sim\\frac{m_{p}E_{FRB}}{a_{0}^{2}m_{e}c^{2}}=10^{20}\\;{\\rm g}. 
+
+This huge amount of material heated to relativistic electron temperatures is still much smaller than contained in the wind within the orbit
+
+M_{w}\\approx\\frac{a}{v_{w}}\\dot{M}=3\\times 10^{22}\\dot{M}_{-7.5}\\;{\\rm g}  or
+
+\\frac{M_{h}}{M_{w}}\\approx 3\\times 10^{-3}\\dot{M}_{-7.5}^{-1}. 
+
+Thus, a leading part of the FRB heats a part of the wind to relativistic energies, which makes it more transparent to the trailing part of the emission. But the FRB energetics is not sufficient to make the wind fully transparent, so the estimates in SS2.2 remain valid. Also, the momentum implanted by the FRB pulse, P_{FRB}\\sim E_{FRB}/c\\sim 2\\times 10^{27}\\;{\\rm g}\\;{\\rm cm}\\;{\\rm s}^{-1} is much smaller that the momentum of the wind within orbital radius, P_{w}\\approx a\\dot{M}=7\\times 10^{30}\\dot{M}_{-7.5}\\;{\\rm g}\\;{\\rm cm}\\;{\\rm s}^{-1}; the FRB pulse does not disturb the overall outflow. Moreover, the kinetic energy of the stellar wind E_{w,kin}=M_{w}v_{w}^{2}/2\\approx 10^{39}\\;{\\rm ergs} is much larger compared to the FRB energy: E_{FRB}/E_{w,kin}\\sim 1/20, so FRB impact on the flow dynamics can be neglected.
+
+Non-linear effects are strongly suppressed by the magnetic field (Lyutikov, 2019a, 2020). If the cyclotron frequency is larger than the wave frequency,
+
+\\omega_{B}\\geq\\omega\\to B\\geq 350\\nu_{9}\\;{\\rm G},  then instead of large amplitude oscillations with p_{\\perp} given by Eq. (5) a particles experiences E-cross-B drift. Magnetic fields of this order do occur in early type stars (_e.g._Petit et al., 2019).
+
+## 2 Predictions: mild DM variations and frequency-dependent activity window
+
+There is a number of predictions. As a simple educated guess, we predict variations of the dispersion measure within the observed window, and an increase of the activity window at higher frequencies. First we give simple order-of-magnitude estimates, and then demonstrate that the reality is likely to be more complicated. (RM and DM variations in wind of the binary pulsar PSR B1259 have been discussed by Kochanek, 1993; Johnston et al., 1994; Melatos et al., 1995).
+
+In a homogeneous wind a DM from a given point located distance a from the central star and propagating with angle \\phi with respect to the radial direction (\\phi is assumed to be fixed - we neglect possible plasma lensing effects), is
+
+DM(\\phi)=\\int_{a}^{\\infty}\\frac{n_{0}a^{2}}{x^{2}+(x-a)^{2}\\tan^{2}\\phi}\\frac{ dx}{\\cos\\phi}=\\frac{\\phi}{\\sin\\phi}DM_{0}, where
+
+DM_{0}\\approx 0.8\\;\\dot{M}_{-7.5}\\eta_{a,1.5}^{-1}m_{\\rm tot,1}^{-1/3}v_{w,8.5}^{-1}  is the dispersion measure for a radial ray. For larger \\phi the DM and the optical depth, see below, increase as the light ray passes longer distance at higher densities.
+
+The wind can also produce Rotation Measure (RM) for the FRB pulse. To estimate the RM contribution of the wind, we scale the Alfven velocity in the wind with the wind velocity, v_{A}=\\eta_{A}v_{w}, where \\eta_{A}\\sim 10^{-1}. We find
+
+{\\rm RM}=7\\times 10^{3}\\left(\\phi\\csc^{2}\\phi-\\cot\\phi\\right)\\,\\eta_{A,-1}\\eta_{ a,1.5}^{-2}\\;\\dot{M}_{-7.5}^{3/2}v_{w,8.5}^{-1/2} 
+
+Narrow transparency window, \\phi\\ll 1 will further reduce the RM as the radio signal propagates mostly orthogonally to the toroidal magnetic field in the wind (angular function in parenthesis \\propto\\phi/3 for \\phi\\to 0).
+
+Though RM estimate (14) is fairly high, it is a sensitive function of the assumed parameters: the uncertainties in the magnetic field of the Main Sequence star (Petit et al., 2019), wind dynamics (_e.g._ ratio of the wind's velocity to the Alfven velocity in the wind), and the geometry of the magnetic field in the wind. Observationally, large {\\rm RM}\\sim 10^{5}{\\rm rad\\,m^{-2}} was indeed observed in the case of FRB 121102 (Michilli et al., 2018), while FRB 180916.J0158+65 had small {\\rm RM}\\sim 144{\\rm rad\\,m^{-2}} that may be completely due to the Galactic foreground ISM (CHIME/FRB Collaboration et al., 2019). For the Sun the RM is \\sim 10(Sakurai & Spangler, 1994); we are not aware of RM measurements in the winds of massive stars.
+
+Similarly, in a homogeneous wind an optical depth to a given point (assuming isothermal wind) is
+
+\\tau(\\phi) \\propto\\int_{a}^{\\infty}\\left(\\frac{n_{0}a^{2}}{x^{2}+(x-a)^{2} \\tan^{2}\\phi}\\right)^{2}\\frac{dx}{\\cos\\phi} \\tau(\\phi) =\\frac{3}{2}\\left(\\phi\\csc^{3}(\\phi)-\\cot(\\phi)\\csc(\\phi)\\right) \\tau_{0}  where \\tau_{0}=\\tau(\\phi=0) The optical depth for radial propagation depends on frequency, Eq. 3
+
+\\tau_{0}\\propto\\nu^{-2.1} 
+
+Let \\nu_{0} be the frequency such that \\tau_{0}(\\nu_{0}=1). At higher frequencies optical depth of 1 is reached at angles pictured in Fig. 2.
+
+The above estimates assume idealized smooth wind. As numerical simulations demonstrate, Fig. 1, the plasma around the bow shock is highly inhomogeneous. The pulsar wind creates a tail cavity and an accumulation of dense material around the head. These plasma "wall" will have an especially large effect on the free-free absorption (see Fig.3), since it depends on density squared. A plasma wall can be opaque to a broad range of frequencies, erasing a simple correlation between the active window and the observing frequency.
+
+We also calculated dispersion measure and free-free absorption using the 3-dimensional relativistic hydrodynamical simulation by Bosch-Ramon et al. (2015) of the interaction of a massive stellar wind with the pulsar wind. In their setup, the pulsar is moving on elliptic orbit with eccentricity e=0.24 and orbital period 3.4 days. We reprocessed the data for the orbital period of 16 days. (Eccentricity for high mass binaries with compact object and orbital period about 15 days can vary from 0 till 0.85, Townsend et al., 2011; Tauris et al., 2017). In figure 4, we show the profiles of the integrated density, \\int n\\propto DM and integrated density squared, \\int n^{2}\\propto\\tau (the absorption optical depth) along different lines of sight. Fig. 4 demonstrates that at each moment there is a narrow transparency window with a duration from \\sim 0.1 (close to apastron) to \\sim 0.3 (close to periastron) orbital period. Note that a wide transparency window can be affected by the turbulent motion and can be chaotically transparent and opaque from orbit to orbit.
+
+Our analysis demonstrates that the DM and free-free absorption show high correlation. The transparent window corresponds to a minimum of DM: this can explain the small change of DM for repeating FRBs. On the other hand, the variations of the DM within the transparency window are smaller by a factor of few than the overall variations, Fig. 3 bottom panel.
+
+In addition, simulations show a sharp rise and decay in transparency near periastron phase, while in direction of apastron such variations are more gradual, Fig. 4 bottom panel. Thus we expect/predict orbital-dependent spectral evolution: burst near borders of transparency window could be bluer. Observational confirmation of such effect can be a smoking gun for our model.
+
+## 3 Discussion
+
+In this Letter we discuss a model for the periodicity observed in FRB 180916.J0158+65 by the CHIME telescope (The CHIME/FRB Collaboration et al., 2020). The working model is that the FRBs are produced by a neutron star that orbits an OB primary. The periodicity arises due to free-free absorption in the primary's (of the massive star's) wind. Thus, we argue that the observed periodicity is a property of a particular system and is likely not essential for the FRB production. On the other hand, the association of an FRB with a compact stellar binary further strengthens the magnetospheric _loci_ of FRBs, as argued by (Popov & Postnov, 2013; Lyutikov et al., 2016; Lyutikov, 2019a, b) also (see reviews by Cordes & Chatterjee, 2019; Petroff et al., 2019). Note that FRB 180916.J0158+65 also shows narrow emission bands drifting down in frequency - this is naturally interpreted as plasma laser operating in neutron star's magnetosphere and showing radius-to-frequency mapping (Lyutikov, 2019b).
+
+Observations of FRB 121102 by (Rajwade et al., 2020) indicated periodicity of P\\sim 160. We Identify this periodicity with the orbital motion. The present model is applicable to the case of FRB 121102 as well. Following equation (3) we can estimate the maximal orbital separation to absorb radio signal, 2\\times 10^{13} cm. This would corresponds to the orbital period \\sim 200 days.
+
+Most importantly, both FRB 180916.J0158+65 (The CHIME/FRB Collaboration et al., 2020)Figure 4: Profiles of the DM (dashed blue \\dot{M}_{w}=10^{-7}M_{\\odot}/yr and dot dashed magenta \\dot{M}_{w}=10^{-8}M_{\\odot}/yr) and absorption optical depth (solid red \\dot{M}_{w}=10^{-7}M_{\\odot}/yr and doted black \\dot{M}_{w}=10^{-8}M_{\\odot}/yr) depending on orbital phases calculated at three different line of sight in equatorial plane (close to apastron - top, intermediate phase - center and close to periastron - bottom). Here we use the same hydro dynamical model as on Fig. 3, the orbital eccentricity e=0.24. Large values of -\\log\\tau (red curves) correspond to transparency window. and FRB 121102 (Chatterjee et al., 2017; Tendulkar et al., 2017; Bassa et al., 2017) are observed in star-forming regions. This is consistent with the OB primary.
+
+The model has three clear predictions: (i) mild variations of DM, Eq. (13), should be observed in the activity window; (ii) activity window should be broader at higher frequencies, Fig. 2; (iii) large RM should be measured in FRB 180916.J0158+65 2. Importantly, in our model the binarity is not an intrinsic property of FRBs: FRB 121102 and FRB 180916.J0158+65 happen to be in binaries, other FRB sources can be isolated: in that case no large RMs are expected.
+
+Interestingly, a new, unusual radiative mechanism operates when an FRB pulse enters the primary's wind: heating of a narrow layer of plasma to relativistic energies by a radio beam. We are not aware of such processes in any other astrophysical system. Corresponding bursts of X-ray emission are likely to be too weak to be observable.
+
+We constrain the primary to be late O-type/early B-type star: earlier types have too powerful winds that remain heavily optically thick at the inferred orbital separation, while later types produce winds that are too weak - this runs contrary our interpretation of the small orbital activity window as a pointing to the momentum dominance of the primary's wind over the pulsar's. Since the primary's momentum loss should over-power the pulsar's wind - the pulsar can be only mildly strong, with a spin-down luminosity L_{sd}\\sim 10^{37} erg s{}^{-1}; this values is somewhat larger than the spin-down power of Galactic magnetars.
+
+Periodic transparency can also be achieved by having a highly eccentric orbit - then at an apastron the radio pulses would sample lower density plasma. We disfavor this scenario since it predicts a large active window (since the binary would spend more time at large separations).
+
+Sharp boundaries of the wind cavity can also lead to refractive effects. For isotropic FRBs, the reflection from the walls of the wind cavity will redistribute radio impulse in time so that its luminosity will by suppressed on factor 4\\pi T_{FRB}c/\\Omega_{cone}a\\eta\\sim 10^{-5}. This will make it difficult to detect the reflected signal. On the other hand, if FRBs have narrow cone structure, then we could possibly see several echos formed by turbulence on cavity walls.
+
+The present model has a number of similarities to binary systems containing pulsars. First, binary pulsars PSR 1957 + 20 and PSR 1744-24A shows periodic orbital-dependent eclipses (limited to \\sim 10\\% in phase in case of PSR 1957 + 20 and \\sim 50\\% in case of PSR 1744-24A Lyne et al. 1990; Rasio et al. 1989, 1991). These are low mass binary, ablated by the NS's wind (Phinney et al., 1988), so the wind-wind interaction is dominated by the pulsar's wind, \\eta\\geq 1. In that case a number of plasma effects, like variations of the DM and pulse delays, do show during the eclipse. Then, there is a number of \\gamma-ray binaries that contain (or thought to contain) neutron stars (Dubus, 2013; Barkov & Bosch-Ramon, 2016; Bosch-Ramon et al., 2017; Barkov & Bosch-Ramon, 2018; Abeysekara et al., 2018)
+
+In our view, the observed periodicity in FRB 180916.J0158+65 does fit with a general concept of neutron stars' magnetospheres being the _loci_ of FRBs. Identification of FBRs with neutron starsleaves two possibilities for the energy source: rotational (akin to Crab's giant pulses Popov et al. 2006; Lyutikov 2007; Mickaliger et al. 2012; Lyutikov et al. 2016), or magnetar-like magnetically powered emission (Lyutikov 2002; Eichler et al. 2002). The present model confirms that FRBs are not rotationally powered (since the present model requires that the pulsar wind should be mild/weak Lyutikov 2017). The magnetically powered model, radio emission generated in the magnetospheres of neutron stars remains the most probable, in our view.
+
+Finally, can the FRBs' radio emission be induced by the interactions of the companions? Clearly not. The orbital motionally-induced electric potential potential and luminosity for scaling (A1) estimate to
+
+\\Phi_{orb}=eBa\\beta_{orb}=2\\times 10^{13}\\,b_{q}\\,\\,\\,{\\rm eV} L_{orb}\\sim(\\Phi_{orb}/e)^{2}c=2\\times 10^{31}b_{q}^{2}\\,\\, {\\rm erg\\,s^{-1}},  where we scaled the surface magnetic field to quantum field, b_{q}=B_{NS}/B_{Q}, B_{Q}=m_{e}^{2}c^{3}/(e\\hbar). Estimates (17) give very weak power, even for quantum-strong magnetic fields, and small potential. We conclude that even in the tightest orbit case of geodetically induced precession, the powers expected due to the interaction of the binaries are very small. (Lyutikov 2004; Lyutikov & Thompson 2005; Lomiashvili & Lyutikov 2014, Note, that binary pulsar PSR0737B that shows strong magnetospheric interaction is/was an _exceptionally weak pulsar_ - it cannot not be used as an model for FRBs, the most powerful radio emitters.). _Hence we conclude that binarity is not a cause of FRB emission._
+
+## Acknowledgments
+
+ML would like to acknowledge support by NASA grant 80NSSC17K0757 and NSF grants 1903332 and 1908590. We would like to thank Jason Hessels, Victoria Kaspi, Jonathan Katz, Wenbin Lu and Elizaveta Ryspaeva for discussions and Yegor Lyutikov for help with the illustration.

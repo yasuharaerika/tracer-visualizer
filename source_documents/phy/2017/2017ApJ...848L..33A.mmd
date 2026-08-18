@@ -1,0 +1,145 @@
+###### Abstract
+
+We present an implementation of the Gehrels et al. (2016) galaxy-targeted strategy for gravitational-wave (GW) follow-up using the Las Cumbres Observatory global network of telescopes. We use the Galaxy List for the Advanced Detector Era (GLADE) galaxy catalog, which we show is complete (with respect to a Schechter function) out to \\sim 300\\,\\mathrm{Mpc} for galaxies brighter than the median Schechter function galaxy luminosity. We use a prioritization algorithm to select the galaxies with the highest chance of containing the counterpart given their luminosity, their position, and their distance relative to a GW localization, and in which we are most likely to detect a counterpart given its expected brightness compared to the limiting magnitude of our telescopes. This algorithm can be easily adapted to any expected transient parameters and telescopes. We implemented this strategy during the second Advanced Detector Observing Run (O2) and followed the black hole merger GW170814 and the neutron star merger GW170817. For the latter, we identified an optical kilonova/macronova counterpart thanks to our algorithm selecting the correct host galaxy fifth in its ranked list among 182 galaxies we identified in the Laser Interferometer Gravitational-wave Observatory LIGO-Virgo localization. This also allowed us to obtain some of the earliest observations of the first optical transient ever triggered by a GW detection (as presented in a companion paper). gravitational waves, methods: observational, galaxies: statistics
+
+## 1 Introduction
+
+With the Advanced Laser Interferometer Gravitational-wave Observatory (LIGO; LIGO Scientific Collaboration et al., 2015) providing detections of gravitational waves (GWs) since 2015 September (e.g. Abbott et al., 2016) and with Advanced Virgo (Acernese et al., 2015) online since 2017 August, it is now feasible to search for electromagnetic (EM) counterparts to GW signals. The main sources of GWs detectable by advanced LIGO/Virgo are mergers of neutron stars and black holes. Of those, neutron star - neutron star (NS-NS) and some neutron star - black hole (NS-BH) mergers are expected to produce electromagnetic signatures.
+
+In both cases, emission is expected mainly from the radioactive decay of heavy elements formed through the r-process in the merger, as a small amount (M\\sim 10^{-4}-10^{-2}\\mathrm{M}_{\\odot}) of neutron-rich material is released at high velocities (0.1-0.3c) during the final coalescence (e.g. Rosswog et al., 1999; Rosswog, 2005; Hotokezaka et al., 2013; Sekiguchi et al., 2016), and possibly also in outflows from an accretion disk (e.g. Metzger et al., 2008; Grossman et al., 2014; Kasen et al., 2015). Following the decompression of the ejecta from nuclear densities, rapid neutron capture (r-process) leads to the formation of heavy radioactive elements which then release energy as they decay, powering an electromagnetic light curve(e.g. Li & Paczynski, 1998; Rosswog, 2005; Metzger et al., 2010; Goriely et al., 2011; Roberts et al., 2011; Metzger & Berger, 2012; Rosswog et al., 2013). These events, which are predicted to be brighter than novae but fainter than supernovae, have been named "macronovae" (Kulkarni, 2005) or "kilonovae" (Metzger et al., 2010). Additional emission sources such as free neutron decay leading to prompt blue emission (Metzger et al., 2015) and magnetar spindown (Metzger & Piro, 2014) have also been suggested. For recent reviews on kilonovae see Tanaka (2016) and Metzger (2017).
+
+The emission properties of a kilonova depend strongly on the composition of the elements produced in the merger, which is a major source of uncertainty in the models. Heavier elements known as lanthanides can increase the ejecta opacity by several orders of magnitude (Kasen et al., 2013; Tanaka & Hotokezaka, 2013), making the light curve fainter, redder, and longer-lived (Barnes & Kasen, 2013; Grossman et al., 2014; Wollaeger et al., 2017).
+
+Neutron star mergers are the likely sources also of short gamma-ray bursts (GRBs Eichler et al., 1989; Narayan et al., 1992; Fong & Berger, 2013). Excess emission in the afterglows of some short GRBs has been claimed to be due to kilonovae (Perley et al., 2009; Berger et al., 2013; Tanvir et al., 2013; Yang et al., 2015; Jin et al., 2016).
+
+Here we present a search for electromagnetic counterparts to GW events from the second Advanced Detector Observing Run (O2) using the Las Cumbres Observatory global network of telescopes. We describe the observatory and its unique capabilities in SS2, our follow-up strategy in SS3 and its application to our follow-up of GW170814 (LIGO Scientific Collaboration & Virgo Collaboration, 2017) and GW170817 (LIGO Scientific Collaboration & Virgo Collaboration, 2017,c) in SS4. We summarize in SS5. Our followup observations of AT 2017gfo, the optical counterpart of GW170817, are described in companion papers (Arcavi et al., 2017; McCully et al., 2017).
+
+## 2 Las Cumbres Observatory
+
+Las Cumbres Observatory (LCO)1 consists of 20 optical telescopes (two 2-meter, nine 1-meter and nine 0.4-meter in diameter) at six sites around the world (Table 1), operated robotically using dynamical scheduling software. The observatory capabilities are described in detail in Brown et al. (2013). Here we summarize the most relevant information.
+
+Footnote 1: [http://lco.global/](http://lco.global/)
+
+Each telescope class uses a different type of imager with a different field of view (FOV) and pixel scale, as listed in Table 2. All imagers are equipped with standard Sloan Digital Sky Survey (SDSS) and Johnson filters, as well as a broad w filter covering the gri bands. The 2-meter telescopes are also equipped with low-resolution (R\\sim 400) Floyds spectrographs.
+
+The telescopes are fully robotic and are scheduled by custom software. Users of the observatory submit their requests (which include target information, time constraints, exposure times and the desired telescope class) via web or API2 interfaces. Within minutes, the LCO scheduler automatically assigns the requested observations to a telescope, taking into account the observability of the target, the availability of the different telescopes, and the weather conditions at each site. The schedule is re-evaluated approximately every 15 minutes as existing requests are
+
+\\begin{table}
+
+\\begin{tabular}{l l l l} \\hline \\hline \\multicolumn{1}{c}{ Observatory} & \\multicolumn{1}{c}{Location} & \\multicolumn{1}{c}{Code} & \\multicolumn{1}{c}{Telescopes} \\\\ \\hline McDonald & Texas, USA & ELP & 1-m (\\times 1) \\\\  & & & 0.4-m (\\times 1) \\\\ Haleakala & Hawaii, USA & OGG & 2-m (\\times 1) \\\\  & & & 0.4-m (\\times 2) \\\\ El Teide & Tenerife, Spain & TFN & 0.4-m (\\times 2) \\\\ CTIO & Chile & LSC & 1-m (\\times 3) \\\\  & & & 0.4-m (\\times 2) \\\\ Siding Spring & Australia & COJ & 2-m (\\times 1) \\\\  & & & 1-m (\\times 2) \\\\  & & & 0.4-m (\\times 2) \\\\ SAAO & South Africa & CPT & 1-m (\\times 3) \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: The Las Cumbres Observatory global network of robotic telescopes. Each site is identified by a three-letter airport code for brevity.
+
+\\begin{table}
+
+\\begin{tabular}{l l l l} \\hline \\hline \\multicolumn{1}{c}{ Class} & \\multicolumn{1}{c}{Imager} & \\multicolumn{1}{c}{FOV} & \\multicolumn{1}{c}{Pixel Scale (Binning)} \\\\ \\hline
+
+0.4-m & SBIG & 29^{\\prime}\\times 19^{\\prime} & 1.142^{\\prime\\prime}/px (2\\times 2) \\\\
+
+1-m & Sinistro & 26^{\\prime}\\times 26^{\\prime} & 0.389^{\\prime\\prime}/px (1\\times 1) \\\\
+
+2-m & Spectral & 10^{\\prime}\\times 10^{\\prime} & 0.3^{\\prime\\prime}/px (2\\times 2) \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Imager properties (including fields of view; FOV) for each class of telescope at LCO. are submitted, weather shifts, and telescope availability changes. A special "rapid response" mode, reserved for the most urgent targets, will stop an ongoing observation to observe a new target as soon as possible (shutter opening is typically within a few minutes from the request being submitted - visibility and weather permitting). The dynamic nature of LCO and its global distribution make it ideal for time-domain astronomy, specifically for quick-response observations of rapidly evolving transients.
+
+## 3 The follow-up strategy
+
+Given the field of view of the LCO imagers, it is not practical to tile an entire GW localization region, which typically ranges in size from tens to hundreds of square degrees (requiring hundreds to thousands of LCO telescope pointings). Instead, we follow the approach presented in Gehrels et al. (2016, hereafter G16), which involves targeting only certain galaxies within the GW localization region.
+
+G16 predicted that the number of galaxies containing 50% of the mass inside a typical O2 GW localization region would be 24\\pm6 (a much more manageable number of pointings compared to tiling the entire localization region). In addition, the Advanced LIGO/Virgo range for mergers involving neutron stars during O2 was \\sim 100 Mpc (Abbott et al., 2016). At that distance, the peak observed magnitude of the prompt blue emission from kilonova models is m_{g}\\sim 21(Metzger et al., 2015) and the peak of the longer optical/near-infrared (NIR) emission is m_{i}\\sim 19-22(Barnes and Kasen, 2013). At >20 Mpc, the smallest LCO field of view corresponds to >60 kpc thus encapsulating >90% of expected merger offsets from their hosts (Fong and Berger, 2013).
+
+These magnitudes, fields of view, and the relatively small number of pointings expected to cover 50% of the mass motivated us to carry out a GW-LCO follow-up program during LCO semesters 2016B and 2017AB, which overlapped with O2.
+
+### The Galaxy Catalog
+
+We use Version 1 of the Galaxy List for the Advanced Detector Era (GLADE; Fig. 1) catalog complied by Dalya et al. (2016)3. It contains 1,918,147 galaxies amassed from the Gravitational Wave Galaxy Catalog (GWGC White et al., 2011), the 2MASS XSC (Skrutskie et al., 2006), the 2MPZ (Bilicki et al., 2014), and the HyperLEDA (Makarov et al., 2014) catalogs (Fig. 1). An apparent B-band magnitude is associated with every galaxy from either direct measurement or by deduction from other available magnitudes. GLADE also contains distance information for each galaxy (compiled from various sources). Version 2 of the GLADE catalog, containing more than 3.6 million galaxies, was made available during O2. However, compared to Version 1, most of the added galaxies do not have distance or B-band magnitude estimates. We thus chose to continue using Version 1 for the entire O2 run, though we analyze the completeness of both versions below. GLADE is the largest census of the nearby Universe that was publicly available during O2.
+
+Following G16, we analyze the completeness of the GLADE catalog relative to the Schechter luminosity function (Schechter, 1976), which provides a form for the number density of galaxies \\rho_{\\rm gal}\\left(x\\right)dx=\\phi^{*}x^{\\alpha}e^{-x}dx, where x=L/L^{*} with L the luminosity of the galaxy and L^{*} a parameter of the function. Since the GLADE catalog contains B-band data, we use x=L_{B}/L_{B}^{*}. In order to compare the GLADE catalog with those presented in G16, we adopt the same parameters as they did, namely: \\phi^{*}=1.6\\times 10^{-2}h^{3}\\,{\\rm Mpc}^{-3} (with h=0.7), \\alpha=-1.07 and an L_{B}^{*} corresponding to M_{B}^{*}=-20.47. We reproduce Figure 2 from G16, for the GLADE catalog and the GWGC for comparison, in Fig. 2 here. This figure shows the relative number density of galaxies in GLADE vs. the Schechter function for various distance bins. We also adopt x_{1/2}=0.626 as the median of the luminosity function (i.e. half of the total luminosity is in galaxies above this value and half is in galaxies below it).
+
+While both GWGC and GLADE are missing low-luminosity galaxies at distances greater than \\sim 30\\,{\\rm Mpc}, both are complete relative to the Schechter function for galaxies more luminous than x_{1/2} (GWGC contains galaxies only out to 100\\,{\\rm Mpc}, while GLADE extends farther). This is the original motivation for focusing on the top 50% of the luminosity (or mass) distributions: galaxy catalogs are complete for galaxies brighter than x_{1/2} out to the relevant distances for GW NS-NS and NS-BH detections. In fact, we find that GLADE is complete out to \\sim 300\\,{\\rm Mpc} for such galaxies (Fig. 3). In addition, NS-NS mergers are expected in galaxies with a B-band luminosity of roughly L_{B}^{*}, since most short GRBs have been seen to occur in such galaxies (Berger, 2014).
+
+We find some peculiar overabundances of galaxies in both versions of the GLADE catalog for L_{B}/L_{B}^{*}\\approx 1 at 33-67 Mpc and in version 2 of the GLADE catalog near x_{1/2} at <17\\,{\\rm Mpc}. These overabundances lead to >100\\% completeness values compared to the Schechter function at those distances in Figure 3, and may be due to artifacts in the GLADE catalog.
+
+### Galaxy Prioritization
+
+For maximizing the efficiency of optical follow-up observations of GW triggers, we wish to prioritize galaxies that are in higher probability regions of the GW localization and which are more massive (assuming compact object mergers follow the mass distribution). Everything else being equal among those, we will prefer galaxies that are closer to us, in which a possible counterpart is more likely to be detected. This is a slightly different approach than the one outlined by Singer et al. (2016).
+
+We include only galaxies that are inside the 99% GW localization region and less than 3\\sigma away from the GW distance estimate (these criteria are relaxed to 99.995% and 5\\sigma if the original cut leaves no galaxies). Second, we remove galaxies that are fainter than x_{1/2} (or a lower threshold to make sure that at least 100 galaxies remain) based on a Schechter function with \\alpha=-1.07 and an L^{*} corresponding to M_{B}=-20.7 (this is similar but not identical to the magnitude of -20.47 used by G16).
+
+Of the galaxies that remain after the position, distance, and luminosity cuts, each is given three scores (which we detail below) based on
+
+1. its location in the GW localization region (including distance information), S_{\\rm loc},
+
+2. its absolute B-band luminosity (as an indicator of mass), S_{\\rm lum}, and
+
+3. the likelihood of detecting a counterpart at its distance, S_{\\rm det}.
+
+The localization information provided by the GW detectors includes a probability for each position of the sky, so that the probability of the true GW source to be at a certain R.A. and decl. is a given p_{\\rm pos}\\left({\\rm R.A.,decl.}\\right). The localization also includes a mean distance estimate \\mu_{\\rm dist}, standard deviation \\sigma_{\\rm dist}, and normalization N_{\\rm dist} per R.A. and decl. We assume that the distance estimate probability function is a Gaussian with the provided mean, standard deviation, and normalization, so that the probability of the source being at distance D for a certain R.A. and decl. is:
+
+p_{\\rm dist}\\left({\\rm R.A.,decl.,}D\\right)=N_{\\rm dist}\\left({\\rm R.A.,decl.} \\right)\\cdot e^{-\\frac{\\left[D-\\mu_{\\rm dist}\\left({\\rm R.A.,decl.}\\right) \\right]^{2}}{2\\sigma_{\\rm dist}^{2}\\left({\\rm R.A.,decl.}\\right)}}. 
+
+The location score of a galaxy at a certain RA, decl. and distance D is then
+
+S_{\\rm loc}=p_{\\rm pos}\\left({\\rm R.A.,decl.}\\right)\\times p_{\\rm dist}\\left( {\\rm R.A.,decl.,}D\\right). 
+
+We then calculate the B-band luminosity of the galaxy, L_{B} (based on the B-band magnitude and distance provided in the GLADE catalog), and assign it a score
+
+S_{\\rm lum}=\\frac{L_{B}}{\\sum L_{B}},  where the sum is over all of the galaxies being considered.
+
+Finally, we score each galaxy on the likelihood of detecting a counterpart there. We assume a limiting magnitude for our exposures, m_{\\rm lim}, and convert it to a limiting luminosity at the distance of each galaxy, L_{\\rm lim}. We also define the likely counterpart magnitude range, M_{\\rm KN,min}-M_{\\rm KN,max} and convert those magnitudes to luminosities. We then give each galaxy a detection likelihood score,
+
+S_{\\rm det}=\\frac{L_{\\rm KN,max}-L_{\\rm lim}}{L_{\\rm KN,max}-L_{\\rm KN,min}}  while limiting it to being between 0.01 and 1. So, for example, a galaxy for which our limiting luminosity is equal to or fainter than the minimum luminosity we expect from the counterpart (i.e. we are guaranteed to see it) receives a detectability score of 1, while a galaxy for which our limiting magnitude is equal to or brighter than the maximum luminosity we expect from the counterpart (i.e. we will not see it) receives a detectability score of 0.01 (we avoid giving it a score of 0 in order to not exclude distant galaxies completely). We use a conservative selection of parameters (m_{\\rm lim}=22, M_{\\rm KN,min}=-17 and M_{\\rm KN,max}=-12), making this score quite high for most galaxies in the NS-NS and NS-BH O2 detectability range of LIGO/Virgo. This criterion therefore has no effect on very close events, and will only slightly prefer closer galaxies in events around \\sim 100\\,Mpc.
+
+The product of these three scores is the final score assigned to each galaxy,
+
+S=S_{\\rm loc}\\times S_{\\rm lum}\\times S_{\\rm det}. 
+
+This score is then used to prioritize which galaxies to observe following a trigger. In Section 4.2 we show that this prioritization procedure ranked the correct host galaxy of a GW source as fifth out of the entire GLADE catalog.
+
+### The Triggering Process
+
+We employ a GCN listener, based on pygGN4, to receive LIGO/Virgo alerts via VOEvent (Seaman et al., 2011), ingest them to a database, download the Singer & Price (2016) HEALPIX localization map (which includes a distance constraint) attached to the alert, cross-check that localization with the GLADE galaxy catalog, and prioritize the galaxies to be observed according to the algorithm described above5. This process takes a few seconds, after which the top galaxies on the list can be sent to the LCO scheduler automatically. The observing requests use Intra-Proposal Priority (IPP) values pro portional to the priorities determined for the galaxies. IPP is used by the LCO scheduler to resolve scheduling conflicts if not all targets can be observed6.
+
+Footnote 6: [https://lco.global/files/User_Documentation/the_new_priority_factor.pdf](https://lco.global/files/User_Documentation/the_new_priority_factor.pdf)
+
+During O2 we take the precaution of having humans verify the candidate galaxies to be observed before the triggers are delivered to the LCO scheduler. This verification step is done through a webpage (Fig. 4) which displays the top 100 galaxies selected sorted by priority, with the first 30 galaxies automatically selected. For each galaxy we present an SDSS cutout image, if available, a Digital Sky Survey (DSS) image, and the observability of the galaxy from the various LCO sites. The user can change the selection of galaxies and compare the total estimated observing time needed for each selection to the available length of night time at two representative LCO sites (Australia and Hawaii). The default exposure sequence is 300 seconds in each of the g,r and i filters to be taken with the 2-meter telescopes. This exposure time was chosen in order to reach a signal to noise of 10 at the expected magnitudes listed above for the different emission mechanisms for a kilonova at 100 Mpc. The number of galaxies selected by default (30) is the typical number that could fit in a full observing night given these exposure times, and is also the amount predicted by G16 to contain roughly 50% of the mass in the localization region. However, the user can change the exposure times, numbers, filters, and telescope class based on the specific trigger parameters. The user can also select whether to submit the first epoch as a rapid response observation (which interrupts observations that were ongoing at the time of the trigger).
+
+Once the galaxies, exposure sequences, number of epochs, and telescope class are selected, the information is converted into observing sequences which are then submitted programmatically to the LCO scheduler using its API. After the images are taken, they are automatically ingested and processed by the LCOGTSNpipe pipeline (Valenti et al., 2016) and displayed on a webpage for manual scanning, next to SDSS (if available) and DSS images of the field for comparison. Image subtraction can then be performed in order to detect faint transients using SDSS templates when available or subtracting the different LCO epochs off of each other to search for changing sources, otherwise.
+
+## 4 Advanced LIGO/Virgo observing run 2
+
+O2 ran from 2016 November 30 to 2017 August 25, with Virgo joining the two LIGO detectors on 2017 August 01 (UT used throughout). Both LIGO detectors were taken offline on 2017 May 08 for commissioning activities, with the Livingston detector resuming opera
+
+[MISSING_PAGE_FAIL:8]
+
+[MISSING_PAGE_EMPTY:6997]
+
+### g298048 / GW170817
+
+This event (LIGO Scientific Collaboration & Virgo Collaboration 2017b,c) was detected as a weak \\gamma-ray transient, interpreted as a likely short GRB, by the Fermi Gamam-ray Burst Monitor (GBM) on 2017 August 17 12:41:06 (Connaughton et al., 2017) and then associated with a low false-alarm rate (\\sim 1 in 10,000 years), likely NS-NS merger GW event detected two seconds earlier in the LIGO Hanford detector (LIGO Scientific Collaboration & Virgo Collaboration, 2017f). The GBM localization was distributed at 13:47:37 via GCN Circular before a full LIGO/Virgo localization was available. The initial GW localization (solely from the Hanford detector, thus covering most of the sky, with a preliminary distance estimate) was distributed via VOEvent at 13:08:16. We triggered a first set of 11 galaxies selected from the GW localization, chosen to lie near the GBM localization center for LCO 1-m imaging starting at 16:34:34 (Fig. 6, left panel). We obtained a total of 30 images of eight galaxies (Table 5), which we immediately inspected for transients and found none.
+
+A LIGO/Virgo localization, consistent with the GBM region but offset from its center, was distributed by VOEvent at 17:51:48. A total of 182 galaxies were identified by our algorithm in the LIGO/Virgo localization region (adhering to the criteria detailed in Section 3.2). We triggered LCO 0.4-m and 1-m imaging of the top 60 galaxies in the prioritized galaxy list starting at 22:36:19 (Fig. 6, right panel), and stopped observations of the previous GBM-selected galaxies shortly thereafter. Given the limited observability of the updated GW localization region to the first 1.5-2 hours of the night, we decided to trigger single 300-second w-band exposures in order to be able to cover many galaxies in this short window. We obtained a total of 96 images of the triggered 60 galaxies (Table 6), which constitute 85% of the luminosity contained in the 182 identified galaxies (Fig. 7).
+
+The optical counterpart, AT 2017gfo, announced by Coulter et al. (2017) was in one of our observed galaxies, ranked fifth in priority. The transient is clearly present in our imaging of that galaxy, beginning with our first epoch (Arcavi et al., 2017b) taken approximately one hour before the Coulter et al. (2017) announcement. We continued to monitor other galaxies in case AT 2017gfo turned out to be an unrelated transient, but as it became clear that the color and luminosity of AT 2017gfo were evolving rapidly, we gradually shifted towards observing just that position with more bands and more telescopes. No obvious counterpart candidates were found in the other galaxies surveyed. The follow-up data obtained for AT 2017gfo is the topic of two companion papers (Arcavi et al., 2017a; McCully et al., 2017).
+
+## 5 Summary
+
+We have presented an implementation of the G16 galaxy-targeted GW follow-up strategy using the GLADE catalog and the LCO network of telescopes. We show that the GLADE catalog is complete for galaxies brighter than x_{1/2} (the median luminosity of galaxies according to a Schechter function) out to 300 Mpc. We detail our algorithm for selecting and prioritizingthese galaxies using a GW localization and distance constraint, and taking into account the observing capabilities of LCO and the expected luminosity range of optical counterparts to NS-NS and NS-BH mergers. We discuss the results of using this strategy following two different triggers. For the second trigger, our algorithm selected the correct host galaxy as fifth in priority from the list of 182 galaxies identified in the LIGO/Virgo localization region. This allowed us to obtain early data of the counterpart (Arcavi et al. 2017a).
+
+The galaxy prioritization algorithm presented here can be adapted to any telescope with very minor adjustments. Given the large distance to which the GLADE catalog is complete for galaxies brighter than the median galaxy luminosity, our follow-up strategy will remain relevant for following NS-NS and NS-BH GW triggers in O3.
+
+We thank J. Canizzo for information on the G16 completeness plots, V. Connaughton and A. Goldstein for providing us with the Fermi GBM HEALPIX map for GRB170817A, S. Guruswamy for mentorship during S. Vasylyev's summer internship at LCO, and the LVC-EM liaisons for their guidance and assistance. Support for I.A. and J.B. was provided by NASA through the Einstein Fellowship Program, grants PF6-170148 and
+
+Figure 6.— Localization region (contours) and the matched galaxies (circles) for G298048. The orthographic projection on the left shows the galaxies selected for observations (filled circles) following the initial LIGO localization (which covered most of the sky; not shown) and Fermi localization (dashed contours), while the one on the right is for the updated LIGO/Virgo localization (solid contours). The contours indicate 50%, 90%, and 99% confidence bounds. The colors of the circles denote the priority of the galaxies (low priority in yellow, high priority in blue). The position of the plane of the Milky Way is indicated in red lines, with a \\pm 10^{\\circ}-wide band. The position of the moon is indicated with the a crescent symbol, and that of the sun with a \\odot symbol. The inset shows a more detailed view of the LIGO/Virgo localization. The galaxy containing the optical counterpart is marked with an additional circle around it.
+
+Figure 7.— Cumulative luminosity observed as a fraction of the total luminosity contained in the 182 galaxies identified by our algorithm in the LIGO/Virgo localization region of GW170817. Due to the short visibility window of the localization region (only \\sim2 hours per night), it took approximately 30 hours to cover half of the luminosity. Given the importance of the trigger as the first NS-NS detection, we continued to observe additional galaxies until we reached 85% of the total galaxy luminosity.
+
+[MISSING_PAGE_FAIL:12]
+
+[MISSING_PAGE_EMPTY:7001]
+
+[MISSING_PAGE_EMPTY:7002]

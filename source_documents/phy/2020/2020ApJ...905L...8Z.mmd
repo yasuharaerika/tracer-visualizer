@@ -1,0 +1,159 @@
+###### Abstract
+
+We report the first wideband monitoring observations of PSR J1803-3002A, a relatively bright millisecond pulsar in the globular cluster NGC 6522 with a spin period of 7.1 ms and no known binary companion. These observations were performed using the Parkes 64-m radio telescope with the Ultra-Wideband Low (UWL) receiver system, which covers 704 to 4032 MHz. We confirm that PSR J1803-3002A is an isolated millisecond pulsar located near the cluster center and probe the emission properties of the pulsar over the wide observed band. The mean pulse profile consists of three components, with the outer components becoming more prominent at higher frequencies, and a mean spectral index for the pulsed emission of -1.66\\pm 0.07 over the observed band. The fractional linear and circular polarization increase with increasing frequency, which is unusual for pulsars. We determine a Faraday rotation measure of -107\\pm 6 rad m{}^{-2} for the pulsar. PSR J1803-3002A is a distant pulsar in the Galactic plane, but our observations show no evidence of pulse broadening due to interstellar scattering. These results demonstrate the power of ultra-wideband receivers and signal processing systems.
+
+Astronomy data analysis(1858); Globular star clusters (656); Pulsars (1306)
+
+## 1 Introduction
+
+Millisecond pulsars (MSPs) in globular clusters (GCs) are important diagnostic tools for a suite of astrophysical problems. GC MSPs can be used to study the evolution of binary systems (e.g., Ginzburg & Quataert, 2020), the gravitational potential of the GC (e.g., Freire et al., 2017), the dynamical interactions in the GC core (e.g., Ye et al., 2019), the interstellar medium (ISM) and its magnetization (e.g., Abbate et al., 2020), the intracluster medium, e.g., in 47 Tucanae, (Abbate et al., 2018) and more generally (Naiman et al., 2020), the equation of state of nuclear matter (Ozel & Freire, 2016) and neutron star retention in GCs (e.g., Pfahl et al., 2002).
+
+Radio searches for and/or studies of the pulsars in GCs can be challenging, because many of them are at large distances, which makes their flux density typically weak and signals strongly distorted by propagation through the ISM. Moreover, the pulsars in GCs are often members of tight binary systems, causing large changes in their observed spin period and sometimes periodic eclipsing of the radio signal.
+
+Baade's Window is an area of the sky close to the Galactic Center direction with relatively low amounts of interstellar dust and gas along the line of sight from the Earth. The globular cluster NGC 6522 lies near the center of Baade's Window and, with an estimated distance of 7.7 kpc (Harris, 2010)1, is relatively close to the Galactic Center. This GC is well studied and, with a stellar age of >12 Gyr, is possibly the oldest GC in our Galaxy (Barbuy et al., 2009). It is a core-collapsed cluster (Kerber et al., 2018) and searching for pulsars in such clusters has the potential to identify exotic systems. Although the majority of the pulsars are expected to be isolated because of the high interaction rate (e.g., Verbunt & Freire, 2014), eccentric MSP binaries with massive companions (neutron stars as well as white dwarfs) can be produced through exchange encounters, e.g. B2127+11C in M15, J1807-2500B in NGC 6544, and J1835-3259A in NGC 6652 (Prince et al., 1991; Lynch et al., 2012; DeCesar et al., 2015). Another such system, J0514-4002A, is found in NGC 1851, which possesses a massive and dense core (Ridolfi et al., 2019), although not a core-collapsed cluster. The ultimate reward of such searches would be a MSP - black-hole binary, which may result from similar conditions.
+
+Footnote 1: [http://physwww.mcmaster.ca/](http://physwww.mcmaster.ca/)\\simharris/Databases.html
+
+Three MSPs (PSRs J1803-3002A, J1803-3002B and J1803-3002C) have been found in the cluster by previous pulsar surveys. PSR J1803-3002A is relatively strongand was discovered in the Parkes Globular Cluster survey at 20 cm (Possenti et al., 2005). The other two pulsars were discovered using the Green Bank Telescope (Freire, 2008, private communication, P. C. C. Freire). To date, there have been no published long-term timing measurements, polarization observations or flux density measurements for the pulsars in NGC 6522. Their approximate positions, pulse periods, and dispersion measures (DMs) were obtained from pulsar-search data.
+
+We have carried out the first wide-bandwidth observations, timing and polarization analyses for pulsars in NGC 6522 using the Ultra-Wideband Low (UWL) receiver system installed on the Parkes 64m radio telescope (Hobbs et al., 2020). In Section 2, we describe the details of our observations and processing methods. We then present a wideband timing solution for PSR J1803-3002A in Section 3.1, pulse polarization profiles and rotation measure (RM) in Section 3.2, and flux densities and spectral properties in Section 3.3. In Section 3.4 we discuss our search results for other pulsars in the direction of NGC 6522. A summary is provided in Section 4.
+
+## 2. Observations and Processing
+
+We have carried out 17 observations of PSR J1802-3002A in NGC 6522 between 2019 August 4 (MJD 58669.28) and 2020 July 4 (MJD 59034.69) using the VUWL receiver system on the Parkes 64-m radio telescope. The telescope was pointed at the nominal cluster center: 18{}^{\\rm h} 03{}^{\\rm m} 34\\fs02, -30{}^{\\circ} 02\\arcmin 02\\farcs3 (Harris, 2010). Table 1 lists each observation, the start time of the observation in Coordinated Universal Time (UTC) and modified Julian date (MJD), the observation length, the observing mode (fold or search), and the project ID.
+
+For the search-mode observations, total intensity data were recorded with 2-bit sampling every 64 \\mu s in each of the 1 MHz-wide frequency channels (3328 channels across the whole band from 704 MHz to 4032 MHz). Within each 1 MHz channel, the data were coherently de-dispersed at a DM of 192.37 pc cm{}^{-3} (corresponding to the mean of the values of the known pulsars in the GC). We carried out a periodicity search for pulsars in the GC within a DM range of 182-202 pc cm{}^{-3} using a relatively wide band (970-3018 MHz) which was cleaned of radio frequency interference (RFI). We also carried out a periodicity search for pulsars in the GC direction with a DM range of 0-1000 pc cm{}^{-3} using a narrower RFI-clean band: 1216-1472 MHz. For the periodicity search, we split each search mode observation into 4400 s blocks and carried out searches for pulsar signals in the Fourier domain using the presto2 software suite (Ransom et al., 2002), with a Fourier drift-rate z range (see Andersen & Ransom, 2018, for the definition of z) of \\pm200 to give sensitivity to pulsars in short-period binary orbits (Ng et al., 2015). Pulsars with narrow pulse profiles have many significant harmonics of the spin frequency in the power spectrum and so we summed up to 16 harmonics to increase the significance of the final detection. We were only able to detect PSR J1803-3302A, which has a pulse period of \\sim7.1 ms, in any of our searches.
+
+Footnote 2: [http://www.cv.nrao.edu/sransom/presto/](http://www.cv.nrao.edu/sransom/presto/)
+
+We subsequently folded each search-mode observation with 60 s subintegrations and 256 phase bins using dspsr(van Straten & Bailes, 2011). We removed 5 MHz at each edge of each of the 26 sub-bands which comprise the full bandwidth of the UWL in order to avoid the effects of aliasing (see more details in Hobbs et al., 2020) and then manually removed data affected by RFI in frequency and time for each channel and sub-integration. The folded search-mode data were helpful in building a timing solution for PSR J1803-3302A.
+
+In order to obtain a phase-connected timing solution for PSR J1803-3002A and accurately calibrate both its flux density and polarization properties, we carried out additional follow-up fold-mode observations that cover the entire band of the UWL receiver. For these fold-mode observations, the data was coherently de-dispersed at a DM of 192.37 pc cm{}^{-3} with full Stokes information recorded, channelized with 1 MHz channels, reduced to 512 phase bins per period, and written to disk with 20 s subintegrations. We also recorded a short (1 minute) observation of a switched calibration noise source (see more details in Hobbs et al., 2020) before each observation in order to allow for polarisation calibration of each observation. To calibrate the polarization response of the UWL feed, we used multiple observations of the bright MSP PSR J0437-4715 that covered a wide range of parallactic angles (van Straten, 2004), taken during the commissioning of UWL in 2018 November.
+
+To get an initial timing solution of PSR J1803-3002A, we measured pulse times of arrival (ToAs) using programs from the psrchive package (Hotan et al., 2004) to sum each observation in both frequency and polarisation, before partially summing in time to form 20-min sub-integrations and cross-correlating each summed profile against a standard reference pulse profile. The tempo2 software package (Hobbs et al., 2006) was then used to derive an initial timing solution for the pulsar from the ToAs. We then re-fitted each observation by using this initial timing solution to generate more precise ToAs, which in turn enabled us to iteratively obtain more precise timing solutions. For a final solution, the data were again partially summed in time to form 20-min sub-integrations and in frequency to form 11 unequal sub-bands defined by three groups: five equal sub-bands from 704 to 1344 MHz (RF Band 1) four sub-bands from 1344 to 2368 MHz (RF Band 2), and two sub-bands from 2368 to 4032 MHz (RF Band 3). ToAs were then formed using different noise-free templates for the three RF bands obtained by fitting to mean pulse profiles for these bands using the program paas. The final phase-coherent timing solution was then obtained using tempo2 with jumps between the RF bands to allow for the different templates used.
+
+To probe the pulsed emission properties of PSR J1803-3002A, we again used programs from the psrchive package. We constructed average polarization profiles by summing the pulsar's calibrated observations in time using the timing solution of the pulsar to ensure phase alignment. To obtain a high signal-to-noise ratio (S/N) polarization profile for further analysis, we selected the average polarization profiles of the pulsar in the three RF bands for each observation for which the S/N was more than 10. They were then included in the summation using psrwt. Since the pulse profile has no measurable linear polarisation in RF Band 1 (see Section 3.2 below) the rotation measure (RM) was determined across the two higher-frequency bands using the rmfit program. The measured RM was then used to refer all measured position angles (PAs) to the overall band center, 2688 MHz, before summing in frequency to form the average polarization profiles. The pulse widths at 50% (W{}_{50}) and 10% (W{}_{10}) of the pulse peak were measured using the program pdv from noise-free profiles obtained using the program paas.
+
+Flux densities were also measured from the summed, calibrated observations using the program pdv, summing the data across phase bins as appropriate. The flux density scale was set using observations of the radio quasar 0407-658 assuming a flux density of 14.4 Jy at 1400 MHz with a power-law spectral index of -1.189. A separate flux density measurement was made for each of the 26 sub-bands comprising the whole bandwidth from (704 to 4032 MHz) of the UML receiver. These sub-band flux densities were then used to derive the spectral properties (see Section 3.3 below).
+
+Conditional on data embargoes1, the data from these observations are available from the CSIRO's data archive2 (Hobbs et al., 2011). We have also produced a publicly downloadable data collection containing our processed data files3 (Zhang et al., 2020). This data collection contains the integrated and RFI-removed file for each observation, and the adopted timing model for PSR J1803-3002A.
+
+Footnote 1: Typically 18 months following the observation.
+
+Footnote 2: [https://data.csiro.au/](https://data.csiro.au/)
+
+Footnote 3: [https://doi.org/10.25919/5f45d801827d6](https://doi.org/10.25919/5f45d801827d6)
+
+## 3. Results and Discussion
+
+### Timing Solution
+
+We used the tempo2 software package (Hobbs et al., 2006) with the DE436 solar system ephemeris and the TT(TAI) time standard to obtain a phase-connected timing solution extending over 335 days. The timing residuals for PSR J1803-3002A are shown in Figure 1. Residuals have an approximately Gaussian distribution about the zero line, with no trends in either time or frequency, indicating that there is neither detectable red timing noise nor non-dispersive frequency dependence in the ToAs. Although the data span is slightly less than one year, the pulsar position is well determined.
+
+The timing solution of the pulsar is presented in Table 2. As discussed in Section 2, since the pulse profile evolves significantly with frequency (see Section 3.2 below), we use different profile templates for the three RF bands and fit for jumps between the bands, with Band 2 as reference. Timing residuals are shown in Figure 1 with the different RF bands identified by color. We also present derived parameters in Table 2. According to our timing solution, the pulsar's position is offset from the nominal cluster centre by 14\\farcs5 which, for a cluster distance of 7.7 kpc, corresponds to a perpendicular offset of 0.54 pc.
+
+### Polarization profiles and RM
+
+In Figure 2, we present the average polarization profile for PSR J1803-3002A for the entire UML observation band centred at 2368 MHz in the top panel. We also show the average polarization profiles of the pulsar in the three RF bands, centered at 1024, 1856, and 3200 MHz, respectively. In all cases, the position angles are referred to the overall band center, 2688 MHz, using the derived RM (see below). The bottom panel of the figure shows the phase-resolved power-law spectral indices and their uncertainties.
+
+Since searches over a wide range of RM detected no measurable linear polarization in RF Band 1, we determine the RM using data from just RF Bands 2 and 3. The derived RM is -107\\pm 5 rad m{}^{-2}. We have not corrected this result for the ionospheric contribution, expected to be relatively small, between -0.2 and -2 rad m{}^{-2}, at the latitude of Parkes (Han et al., 2018). However, to allow for the additional uncertainty in the measured value, we increase quoted uncertainty to 6 rad m{}^{-2} as given in Table 2.
+
+With the wide-band and coherently de-dispersed observations, we are able to investigate changes of the observed pulse shape relating to intrinsic profile changes and propagation effects in the ISM over a wide frequency range. We measured the width of the profiles for PSR J1803-3002A at 50% and 10% of the peak flux density in the three RF bands and have listed these results in Table 2. We notice that there is a systematic increase in pulse width with increasing frequency. This is entirely due to the flatter spectrum of the outer components relative to the central component. Like many other wide-profile MSPs (e.g. PSRs J0437-4715 and J2124-3358, Dai et al., 2015), the pulse components in PSR J1803-3002A have a central pulse phase that is frequency-independent. In general, MSPs do not follow the radius-to-frequency mapping commonly inferred for normal pulsars (Cordes, 1978). For MSPs, the emission region may be close to the light cylinder and caustic effects are likely to be important in defining the observed pulse profile (Ravi et al., 2010).
+
+For PSR J1803-3002A, the observed pulse profiles indicate three components (labeled as C1, C2 and C3 in the top panel of Figure 2), with the leading and trailing components becoming relatively stronger compared to the central component as the observing frequency increases. As shown by Dai et al. (2015), many MSPs show variations in relative spectral index between differ
+
+\\begin{table}
+
+\\begin{tabular}{r r r r r} \\hline No. & Start & Date & Duration & Obs.mode & ID \\\\  & (UTC) & (MJD) & (second) & & \\\\ \\hline
+
+1 & 2019 Aug. 4 & 58699.28 & 33880 & search & P1006 \\\\
+
+2 & 2019 Nov. 22 & 58809.22 & 12980 & search & PX501 \\\\
+
+3 & 2019 Nov. 23 & 58810.05 & 26840 & search & PX501 \\\\
+
+4 & 2019 Nov. 24 & 58811.05 & 26840 & search & PX500 \\\\
+
+5 & 2019 Nov. 29 & 58816.30 & 4591 & fold & P456 \\\\
+
+6 & 2020 Jan. 27 & 58875.93 & 7216 & fold & PX500 \\\\
+
+7 & 2020 Feb. 12 & 58891.75 & 10511 & fold & P1006 \\\\
+
+8 & 2020 Feb. 15 & 58894.88 & 10816 & fold & P1006 \\\\
+
+9 & 2020 Feb. 25 & 58904.84 & 2185 & fold & P1006 \\\\
+
+10 & 202 Apr. 06 & 58945.88 & 2752 & fold & P1006 \\\\
+
+11 & 2020 Apr. 14 & 58953.83 & 6842 & fold & P1006 \\\\
+
+12 & 2020 Apr. 15 & 58954.85 & 9294 & fold & P1006 \\\\
+
+13 & 2020 May. 05 & 58974.74 & 3015 & fold & PX501 \\\\
+
+14 & 2020 May. 16 & 58985.79 & 4664 & fold & P1006 \\\\
+
+15 & 2020 May. 26 & 58995.71 & 4496 & fold & P1006 \\\\
+
+16 & 2020 Jun. 14 & 59014.78 & 2364 & fold & P1006 \\\\
+
+17 & 2020 Jul. 04 & 59034.69 & 4631 & fold & P1063 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1Observations of PSR J1803-3002Aent profile components.
+
+Linear polarization is commonly seen in MSPs (e.g., Dai et al., 2015) although the observed PA variations seldom follow a rotating-vector-model pattern (Radhakrishnan & Cooke, 1969). Compared to other MSPs, PSR J1803-3002A has a relatively small amount of linear polarization. Furthermore, it is unusual in that the fractional linear polarisation decreases with decreasing frequency (Figure 2).
+
+As mentioned above, no significant linear polarisation was observed for Band 1 data in a search over a wide range of RMs and variations in ionospheric RM are too small to depolarize the profile. Depolarisation can also arise in highly scattered pulsars due to propagation through turbulent plasma components that are irregularly magnetised. For example, PSRs B2111+46 (Noutsos et al., 2015) and J0742-2822 (Xue et al., 2019) show a rapid decrease in linear polarisation with decreasing frequency at frequencies <300 MHz where there is significant scattering by the ISM. However, we have not seen any evidence for interstellar scattering even in the low-frequency band (scattering timescale < 0.5 ms). Consequently, the observed low polarisation cannot be attributed to stochastic Faraday rotation across the scattering disk. We therefore conclude that the observed low degree of linear polarization for PSR J1803-3002A at low frequencies is intrinsic.
+
+### Flux densities and spectral properties
+
+We list the calibrated flux densities averaged over all observations for the 26 sub-bands (each with a 128 MHz bandwidth) across the UWL band in Table 2. Figure 3 shows the flux density values separately from observations taken from 2019 November to 2020 February (labeled "obs1"), and from 2020 April to May (labeled "obs2"), together with the average of all fold-mode observations (labeled "All"). We first fit a simple power law:
+
+\\mathrm{S}_{\\nu}=\\beta x^{\\alpha},  where x=\\nu/\\nu_{0}, \\alpha is the spectral index and \\beta is a scaling constant. The results of the power-law fit are given in Table 2 and shown in Figure 3. The fitted spectral index is -1.66\\pm0.07. Figure 3 suggests that there may be some curvature in the spectrum although it is of marginal significance. We have also fitted the measured flux densities with a log-parabolic spectrum (LPS):
+
+\\mathrm{log}_{10}\\mathrm{S}_{\\nu}=ay^{2}+by+c,  where y=\\mathrm{log}_{10}(\\nu/\\nu_{0}), a is the curvature parameter, b is an effective spectral index and c is a constant. The LPS fit result is presented in Table 2 and shown in Figure 3. Overall, we believe the simple power-law fit to be a more reliable representation of the spectral properties of PSR J1803-3002A.
+
+The ATNF Pulsar Catalogue1(Manchester et al., 2005) lists spectral indices for 55 MSPs and these lie in the range -1.1 to -3.8, with a mean value of -2.0. The measured spectral index for PSR J1802-3002A, -1.66, is well within this range, and somewhat flatter than the mean value.
+
+Footnote 1: [https://www.atnf.csiro.au/research/pulsar/psrcat/](https://www.atnf.csiro.au/research/pulsar/psrcat/)
+
+The bottom panel in Figure 2 shows the phase-resolved power-law spectral index across the PSR J1803-3002A profile, clearly showing variations related to the pulse components. We calculated the mean spectral indices for the central region of each component where the spectral index is relatively phase-independent to avoid the effects of overlap of the different components. The derived spectral indices are -0.79\\pm0.10, -2.20\\pm0.05 and -1.01\\pm0.13 for the leading (C1), central (C2) and trailing (C3) components, respectively. Steep-spectrum central or "core" components and flatter-spectrum outer or "conal" components are common in normal pulsars (Backer, 1976; Rankin, 1983; Lyne & Manchester, 1988) and are usually interpreted in the context of the magnetic-pole model. In general, MSP profiles are more complex and do not have "core-conal" structure, but such structures are seen in a few MSPs, e.g., PSR J1730-2304 (Dai et al., 2015). This pulsar is similar to PSR J1803-3002A in having a
+
+Figure 1.— Timing residuals for PSR J18003-3002A based on the Parkes UWL monitoring observations over the 704 to 4032 MHz UWL band. The dashed line marks the zero-line and corresponds to the arrival times predicted by the timing solution. The different colours for the residuals represent the three RF bands: Band 1 (704–1344 MHz; purple), Band 2 (1344–2368 MHz; green) and Band 3 (2368–4032 MHz; blue). central component with a steeper spectrum.
+
+### Search for pulsars
+
+Globular clusters have proved to be fruitful for pulsar searches with 157 radio pulsars in 30 GCs discovered to date (Manchester et al., 2005; Freire, 2008). Almost all of these pulsars are MSPs and 85 are known to be in binary systems. A Fourier-domain implementation of the acceleration search in PRESTO (Ransom et al., 2002) has been use to find the vast majority of the binary pulsars in GCs. Such searches are effective when T\\lesssim P_{b}/10, where T and P_{b} are the observation duration and the binary-system orbital period, respectively. On the other hand,
+
+\\begin{table}
+
+\\begin{tabular}{l l l} \\hline \\multicolumn{2}{c}{Timing parameters} \\\\ \\hline RA (J2000) & 18^{\\rm h} 03{}^{\\rm m} 35′1290(1) \\\\ Dec. (J2000) & -30^{\\circ} 02′ 00\\farcs05(2) \\\\ Spin frequency, \\nu (s{}^{-1}) & 140.8174521908(3) \\\\ Spin frequency derivative, \\dot{\\nu} (s{}^{-2}) & -7.93(19)\\times 10^{-16} \\\\ Dispersion measure, DM (cm{}^{-3} pc) & 192.6234(5) \\\\ Timing epoch (MJD) & 58700 \\\\ Date of first observation (MJD) & 58699.28 \\\\ Date of last observation (MJD) & 59035.76 \\\\ Total time span (days) & 335.48 \\\\ Time standard & TT(TAI) \\\\ Time units & TCB \\\\ Solar-system ephemeris & DE436 \\\\ Weighted RMS residual (\\mus) & 38.816 \\\\ Reduced \\chi^{2} & 1.16 \\\\ \\hline \\multicolumn{2}{c}{Derived parameters} \\\\ \\hline Galactic longitude ({}^{\\circ}) & 1.027 \\\\ Galactic latitude ({}^{\\circ}) & -3.929 \\\\ Spin period, P (s) & 0.00710139250812(1) \\\\ Spin period derivative, \\dot{\\rm P} & 4.0(1) \\times 10{}^{-20} \\\\ Characteristic age, \\tau_{\\rm c} (Myr) & 2814 \\\\ Surface magnetic field, B_{\\rm surf} (G) & 5.39 \\times 10{}^{8} \\\\ \\hline \\multicolumn{2}{c}{Profile and Polarization parameters} \\\\ \\hline Frequency & W{}_{50} ({}^{\\circ}) & W{}_{10} ({}^{\\circ}) \\\\ \\hline
+
+1024 MHz & 23.9 & 74.0 \\\\
+
+1856 MHz & 22.8 & 146 \\\\
+
+3200 MHz & 66.3 & 169 \\\\ \\hline \\multicolumn{2}{c}{Rotation measure (rad m{}^{-2})} \\\\ \\hline \\multicolumn{2}{c}{Flux densities (mJy)} \\\\ \\hline S{}_{768} & 1.89(30) & S{}_{2432} & 0.38(13) \\\\ S{}_{896} & 1.85(6) & S{}_{2560} & 0.28(4) \\\\ S{}_{1024} & 1.47(8) & S{}_{2688} & 0.22(13) \\\\ S{}_{1152} & 0.95(3) & S{}_{2816} & 0.26(7) \\\\ S{}_{1280} & 0.82(14) & S{}_{2944} & 0.21(3) \\\\ S{}_{1408} & 0.70(5) & S{}_{3072} & 0.31(12) \\\\ S{}_{1536} & 0.60(1) & S{}_{3200} & 0.20(1) \\\\ S{}_{1664} & 0.56(2) & S{}_{3238} & 0.23(5) \\\\ S{}_{1792} & 0.45(4) & S{}_{3456} & 0.22(2) \\\\ S{}_{1920} & 0.37(4) & S{}_{3584} & 0.23(2) \\\\ S{}_{2048} & 0.31(4) & S{}_{3712} & 0.18(3) \\\\ S{}_{2176} & 0.38(3) & S{}_{3840} & 0.25(13) \\\\ S{}_{2304} & 0.34(14) & S{}_{3968} & 0.20(11) \\\\ \\hline \\multicolumn{2}{c}{Spectral parameters} \\\\ \\hline Power-law & & Log-parabolic \\\\ \\hline \\alpha & -1.66(7) & a & 1.13(19) \\\\ \\beta & 1.28(5) & b & -2.17(9) \\\\  & & c & 0.15(1) \\\\ \\hline \\multicolumn{2}{c}{Reference frequency (\\nu_{0})} & 1000 MHz \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2Parameters for PSR J1803-3002A
+
+Figure 2.— Average polarization profiles for PSR J1803-3002A in the three RF bands between 704 and 4032 MHz and the sum over the whole band. The red line is the linear polarization profile, the blue line is the circular polarization profile and the black line is the mean flux density profile. Black dots in the upper panel give the linear position angle (PA) referred to the overall band center of the averaged profiles, 2688 MHz. The three main pulse components are labeled on the whole-band profile. The bottom panel shows phase-resolved spectral index with uncertainties (blue points with error bars) for the pulsar. The horizontal dashed line marks the fitted power-law spectral index for the whole profile (-1.66) and the gray area shows its uncertainty (\\pm 0.07). The horizontal bars in the top panel mark the region of each component used to calculate its spectral index. the sensitivity to fainter pulsars improves as \\sqrt{T}. As described in Section 2, we split long search-mode observations into 4400-second blocks as a compromise between sensitivity and computational feasibility giving sensitivity to binary systems with orbital period greater than about 0.5 d. The nominal (8\\sigma) sensitivity of our searches to a 4 ms pulsar with DM \\sim 192 pc cm{}^{-3} and spectral index about -2.0 is 0.03 to 0.04 mJy at 1400 MHz.
+
+Only PSR J1803-3002A was detected in our pulsar search. Specifically, we were not able to detect either of two previously reported pulsars in the cluster (PSRs J1803-3002B and J1803-3002C), nor any other pulsar lying within the telescope beam. Even folding our search data at the known period and DM of PSRs J1803-3002B and J1803-3002C (Freire, 2008) gave no significant detection of either pulsar. As mentioned in the Introduction, there are no published flux densities for any of the three known pulsars in NGC 6522.
+
+## 4. Summary
+
+In this work, we present the previously unpublished timing solution (Section 3.1) and emission properties (Sections 3.2 and 3.3) of PSR J1803-3002A in NGC 6522. A search for pulsars in the direction of NGC 6522 detected only PSR J1803-3002A, confirming that it is the strongest of the three known pulsars in the cluster (Section 3.4). The mean pulse profile of PSR J1803-3002A is rather weakly polarized and no linear polarization was detectable in the lowest RF band (704-1344 MHz) - the pulsar RM was measured using data from the two higher RF bands. The overall radio spectral index for PSR J1803-3002A, -1.66\\pm 0.07, is somewhat flatter than -2.0, the mean spectral index for MSPs. The three identifiable components of the pulse profile have significantly different spectral indices, with the central component having a steeper spectrum than the mean and the outer components having flatter spectra. We will continue to observe this pulsar with the UWL receiver to improve its timing parameters and to build up higher-S/N pulse polarization profiles.
+
+Searches for pulsars in Baade's Window with the UWL receiver are on-going and will help us to probe the poorly understood distribution of distant pulsars. The observations described here were in either search mode or fold mode. The facility for simultaneous pulsar search as well as fold-mode observations and HI spectroscopy (cf. Li et al., 2018) with the UWL system has been recently implemented. Furthermore, simultaneous folding at multiple pulsar periods is planned. These improvements will substantially enhance the observational efficiency for searches, confirmation, and timing.
+
+This work is supported by National Key R&D Program of China No. 2017YFA0402600, the National Natural Science Foundation of China (Grant No. 11988101, 11725313, 11690024, 11743002, 11873067), the Strategic Priority Research Program of the Chinese Academy of Sciences Grant No. XDB23000000 and the Foundation of Guizhou Provincial Education Department (No. KY(2020)003). QJZ is supported by the National Natural Science Foundation of China (U1731218) and the Science and Technology Fund of Guizhou Province ((2016)-4008, (2017)5726-37). JBW is supported by the Youth Innovation Promotion Association of Chinese Academy of Sciences.
+
+The Parkes radio telescope is part of the Australia Telescope National Facility which is funded by the Australian Government for operation as a National Facility managed by CSIRO. We thank the Parkes team for their great effort to install and commission the UWL receiver system. This paper includes archived data obtained through the CSIRO Data Access Portal1.
+
+Footnote 1: [http://www.naic.edu/](http://www.naic.edu/)\\simpfreire/GCpsr.html

@@ -1,0 +1,177 @@
+###### Abstract
+
+The recent discovery of a Mega-Jansky radio burst occurring simultaneously with short X-ray bursts from the Galactic magnetar (strongly magnetized neutron star (NS)) SGR 1935+2154 is a smoking gun for the hypothesis that some cosmological fast radio bursts (FRBs) arise from magnetar bursts. We argue that the X-ray bursts with high temperature T\\gtrsim 30 keV entail an electron-positron (e^{\\pm}) outflow from a trapped-expanding fireball, polluting the NS magnetosphere before the FRB emission. The e^{\\pm} outflow is opaque to FRB photons, and is strongly Compton-dragged by the X-ray bursts. Nevertheless, the FRB photons can break out of the e^{\\pm} outflow with radiation forces if the FRB emission radius is larger than a few tens of NS radii. A FRB is choked if the FRB is weaker or the X-ray bursts are stronger, possibly explaining why there are no FRBs with giant flares and no detectable X-ray bursts with weak FRBs. We also speculate that the e^{\\pm} outflow may be inevitable for FRBs, solving the problem of why the FRBs occur only with high-T X-ray bursts. The breakout physics is important for constraining the emission mechanism and electromagnetic counterparts to future FRBs. pulsars: general - radiation mechanisms: non-thermal - relativistic processes - radio continuum: general - stars: magnetars - X-rays: bursts +
+
+Footnote †: journal: ApJL
+
+0000-0002-3276-1738]Kunihito Ioka
+
+## 1 Introduction
+
+Fast radio bursts (FRBs) are enigmatic radio transients with extremely high brightness temperature T_{b}\\sim 10^{35} K (Lorimer et al., 2007; Thornton et al., 2013; Katz, 2018; Cordes & Chatterjee, 2019; Petroff et al., 2019). New clues are being found such as repeating FRBs (Spitler et al., 2016), periodic FRBs (The CHIME/FRB Collaboration et al., 2020; Rajwade et al., 2020; Ioka & Zhang, 2020) (see also Grossan, 2020), and so on. Regardless of their origin, they are also unique probes for cosmology (Ioka, 2003; Inoue, 2004), with actual observations being analyzed (Macquart et al., 2020).
+
+Recently, a smoking gun has been discovered with the detection of Mega-Jansky FRB 200428 (The CHIME/FRB Collaboration et al., 2020; Bochenek et al., 2020): two radio pulses temporally coincide with short X-ray bursts from the magnetar SGR 1935+2154 in our Galaxy (Li et al., 2020; Mereghetti et al., 2020; Ridnaia et al., 2020; Tavani et al., 2020). The energy is \\sim 40 times smaller than the faintest extragalactic FRBs, but three orders of magnitude larger than the brightest giant radio pulses from Galactic neutron stars (NSs). Therefore, it is fair to say that magnetar bursts can produce FRBs (as widely suspected; see, e.g., Popov & Postnov, 2010; Kulkarni et al., 2014; Lyubarsky, 2014; Pen & Connor, 2015; Cordes & Wasserman, 2016; Katz, 2016; Murase et al., 2016; Kashiyama & Murase, 2017; Beloborodov, 2017; Kumar et al., 2017; Metzger et al., 2017; Wadiasingh & Timokhin, 2019; Ioka & Zhang, 2020).
+
+At the same time, however, new puzzles also arise. No FRB is associated with other X-ray bursts down to eight orders of magnitude fainter than FRB 200428 (Lin et al., 2020). An apparent difference of FRB 200428 is the cutoff energy of the spectrum (T_{\\rm cut}\\sim 80 keV), which is higher than that of other X-ray bursts from SGR 1935+2154 (T_{\\rm cut}\\sim 10 keV; Li et al., 2020; Lin et al., 2020, 20; Ridnaia et al., 2020; Younes et al., 2020). Weaker radio bursts without X-ray bursts are also detected with 112\\pm 22 Jy ms and 24\\pm 5 Jy ms separated by 1.4 s (Kirsten et al., 2020), and with 60 mJy ms (Zhang et al., 2020) like previously known radio pulses from magnetars (Camilo et al., 2006; Levin et al., 2010; Shannon & Johnston, 2013; Eatough et al., 2013; Esposito et al., 2020). The emission region remains controversial (Lu et al., 2020; Lyutikov & Popov, 2020; Katz, 2020; Margalit et al., 2020; Yu et al., 2020; Yuanet al., 2020), whether it is in the magnetosphere of the NS (Kashiyama et al., 2013; Cordes & Wasserman, 2016; Lyutikov et al., 2016; Kumar et al., 2017; Zhang, 2017; Yang & Zhang, 2018; Lyubarsky, 2020; Kumar & Bosnjak, 2020; Ioka & Zhang, 2020) or far away at the circumstellar matter interacting with relativistic ejecta from the NS (Lyubarsky, 2014; Murase et al., 2016; Waxman, 2017; Beloborodov, 2017; Metzger et al., 2017) (see also Melrose et al., 2006; Lu & Kumar, 2018; Wadiasingh & Timokhin, 2019; Lyutikov, 2020).
+
+In this Letter, we suggest that the X-ray bursts with T_{\\rm cut}\\sim 80 keV entail electron-positron (e^{\\pm}) outflows, and FRB photons, if emitted in the magnetosphere, penetrate and break it out with radiation forces that can be observed as FRBs, as in Fig. 1. In Sec. 2, we examine a trapped fireball for the X-ray bursts and show that it is connected to an expanding fireball, leading to an e^{\\pm} outflow, because T_{\\rm cut}\\sim 80 keV is high enough to create abundant e^{\\pm} outside the trapped fireball. In Sec. 3, we discuss that the e^{\\pm} outflow is optically thick to induced Compton scatterings of FRB photons unless the photons are extremely beamed, and obtain the breakout condition, taking the Compton drag on the e^{\\pm} outflow by the X-ray bursts into account. This limits the emission radius larger than a few tens of NS radii. In Sec. 4, we discuss implications for the above puzzles. We use Q_{,x}\\equiv Q/10^{x} in cgs units with the Boltzmann constant k_{B}=1.
+
+## 2. Trapped-Expanding fireball
+
+The magnetar SGR 1935+2154 has a period P=3.24 s and a period derivative \\dot{P}=1.43\\times 10^{-11} s s{}^{-1}. We estimate the magnetic field at the pole
+
+B_{p}\\sim 2\\times 10^{14}\\,{\\rm G}\\,B_{p,14.3},  the light cylinder radius r_{L}=cP/2\\pi\\sim 2\\times 10^{10} cm, and the spin-down luminosity L_{\\rm sd}\\sim 2\\times 10^{34} erg s{}^{-1}, where R=10^{6} cm is the NS radius.
+
+We consider a sudden, localized energy release near the NS surface via crust cracking or magnetic reconnection (see Fig. 1). The energy dissipated in the closed field line forms a trapped fireball of e^{\\pm} and X-rays, powering the X-ray bursts. The energy also propagates along a large-scale field line as magnetohydrodynamic (MHD) waves and dissipates into coherent radio waves as FRBs far away from the NS surface (Lyubarsky, 2020; Kumar & Bosnjak, 2020). Note that the trapped fireball is the standard model for soft gamma repeater (SGR) bursts (Thompson & Duncan, 1995, 2001; Yang & Zhang, 2015), which naturally explains the longer timescale than the crossing time \\ell_{X}/c\\sim 3\\times 10^{-7} s, such as the delay time of the X-ray peak from the FRB pulse (\\sim 6.5\\pm 1.0 msec; Mereghetti et al., 2020) and the X-ray peak widths (\\sim 3 msec; Li et al., 2020, see Sec. 4). The observed unusual spectrum (Younes et al., 2020; Ridnaia et al., 2020; Li et al., 2020) may be explained by a different configuration of magnetic fields (see Sec. 2.1). A similar setup of an active region connected to high quasi-polar altitudes is also considered by Younes et al. (2020).
+
+The onset of the X-ray bursts starts \\sim 30 msec before the FRBs, and the hardness ratio also rises with the flux (Li et al., 2020; Mereghetti et al., 2020). This is followed by the temporally correlated FRBs and X-ray peaks, suggesting that the energy is generated at the same place.
+
+As shown below, an expanding fireball of e^{\\pm} and X-rays is also launched from the trapped fireball because of the high cutoff energy T_{\\rm cut}\\sim 80 keV. The high-energy tail of the X-rays exceeds the pair threshold and creates abundant e^{\\pm} pairs outside the trapped fireball, which are highly opaque. The X-rays should be carried with the e^{\\pm} along the large-scale field, and released at a large distance for the X-ray bursts. Because the X-ray onset begins before the FRBs, the precursory e^{\\pm} outflow is widely distributed along the magnetic field line, and the FRB emission is likely affected by the e^{\\pm} outflow (see Sec. 3).1
+
+Footnote 1: This is not the case if the energy is transferred through the NS crust and released far away from the trapped fireball (Lu et al., 2020). In this case, the more spread out, the less energy there is.
+
+In this section, we model the trapped-expanding fireball associated with the X-ray bursts. X-rays and e^{\\pm} are released after several steps. (i) X-rays are emitted from the trapped fireball. (ii) e^{\\pm} are created outside the trapped fireball and the
+
+Figure 1.— Schematic configuration. Energy is released near the NS surface, leading to a trapped fireball of e^{\\pm} and X-rays in the closed magnetic field line, and to magnetohydrodynamic (MHD) waves along the large-scale field line, which dissipate into FRB photons at a distance more than a few tens of NS radii. X-rays from the trapped fireball create an expanding fireball, which first propagates along the large-scale magnetic tube and then diffuses across the field line. Accordingly, the expanding fireball releases X-rays and e^{\\pm} outflow. The e^{\\pm} outflow is thick to induced Compton scatterings of FRB photons. The FRB photons break out of the precursory e^{\\pm} outflow with radiation forces. fireball flows along the large-scale magnetic field. (iii) X-rays diffuse out transversely from the e^{\\pm} and associated magnetic field line, creating e^{\\pm} in a wide range of the surrounding magnetic field lines. (iv) X-rays are released, and pair annihilation is frozen. We obtain the resulting density and Lorentz factor of the e^{\\pm} outflow, taking the Compton drag by X-rays into account.
+
+### Trapped Fireball
+
+The size of the trapped fireball is estimated from the X-ray luminosity L_{X}\\sim 10^{41} erg s{}^{-1}L_{X,41} and cutoff energy, which is identified2 with the effective temperature of the trapped fireball T=T_{\\rm cut}\\sim 80 keV T_{1.9}, as
+
+Footnote 2: Non-thermalization should happen later, at least softening the low-energy spectral index \\alpha as observed. The cutoff energy may be also shifted, by photon splitting, resonant scattering, and so on, but we do not discuss this here. Note that the spectral peak energy is about (\\alpha+2)T_{\\rm cut}\\sim 37 keV for \\alpha\\sim-1.5 (Lin et al., 2020; Younes et al., 2020).
+
+\\ell_{X}\\sim\\left(\\frac{L_{X}}{2\\pi caT^{4}}\\right)^{1/2}\\sim 1\\times 10^{4} \\,{\\rm cm}\\,L_{X,41}^{1/2}T_{1.9}^{-2},  where a is the radiation constant. This is much smaller than the NS radius, implying non-dipole magnetic structure. The magnetic energy in the trapped fireball is (2\\pi/3)\\ell_{X}^{3}\\,(B^{2}/8\\pi)\\sim 10^{40} erg B_{14.3}^{2}\\ell_{X,4}^{3}, which can confine the burst energy for the observed duration \\sim 0.1 s.3 There is a temperature gradient inside the trapped fireball that realizes the energy transfer consistent with the X-ray luminosity (Lyubarsky, 2002).
+
+Footnote 3: The energy injection into the trapped fireball may not be a one-shot, and/or several trapped fireballs may be created, as suggested by the multiple X-ray peaks. However, stationarity is not a bad approximation because the luminosity is constant within a factor of a few. Note that the NS rotates by \\sim 2\\pi/100 radian during \\sim 30 ms between the peaks, which is negligible for the nearly isotropic X-ray emission.
+
+In this event, the cutoff energy T_{\\rm cut} is much higher than typical (Li et al., 2020; Ridnaia et al., 2020; Younes et al., 2020). Even the outside of the trapped fireball is found to be optically thick (inside a photosphere). The equilibrium number density of e^{\\pm} produced by the high-energy tail of X-rays from the trapped fireball is
+
+n_{\\pm}=\\frac{eBm_{e}}{(2\\pi^{3})^{1/2}\\hbar^{2}}\\left(\\frac{T}{m_{e}c^{2}} \\right)^{1/2}\\exp\\left(-\\frac{m_{e}c^{2}}{T}\\right),  where the effective temperature T=T_{\\rm cut} is less than the excitation energy of the first Landau level for electrons h\\nu_{B}=(m_{e}^{2}c^{4}+2\\hbar ceB)^{1/2}-m_{e}c^{2}(Thompson and Duncan, 1995). The Rosseland mean optical depth of a photon with electric vector perpendicular to B (the extraordinary mode or E-mode) is estimated as (Meszaros, 1992; Thompson and Duncan, 1995; Lyubarsky, 2002)
+
+\\tau_{\\perp}=\\frac{4\\pi^{2}}{5}\\sigma_{T}\\left(\\frac{T}{m_{e}c^{2}}\\frac{B_{ Q}}{B}\\right)^{2}n_{\\pm}\\ell_{X},  where B_{Q}=m_{e}^{2}c^{3}/\\hbar e=4.4\\times 10^{13}\\,{\\rm G}. The orthogonal polarization state (the ordinary mode or O-mode) has a higher optical depth \\tau_{T}\\sim n_{\\pm}\\sigma_{T}\\ell_{X}. As shown in Fig. 2, the outside of the trapped fireball is opaque in this event with T\\sim 80 keV, while it is thin in typical bursts with T\\sim 10 keV. This is a critical difference from usual bursts.
+
+Then the trapped fireball should be located at the base of an open magnetic field. Otherwise, if the trapped fireball is surrounded by a closed field, the released X-rays just increase the size of the trapped fireball, leading to a lower temperature (like typical bursts) than that of the observation. Therefore, for the high T_{\\rm cut} to be observed, the e^{\\pm}\\gamma plasma should expand along the large-scale open field lines outside the trapped fireball,4 and finally become optically thin, keeping the observed T_{\\rm cut} like an expanding fireball for gamma-ray bursts (Goodman, 1986; Paczynski, 1986; Meszaros and Rees, 2000). In this picture, the spectral difference from typical bursts is attributed to the magnetic field configuration (open or closed) around the initial trapped fireball.
+
+Footnote 4: The large-scale field is not necessarily open to infinity.
+
+### Expanding Fireball along the Large-scale Magnetic Field
+
+The expanding fireball arising from the trapped fireball runs along the magnetic field because the magnetic field pressure is stronger than the fireball pressure and the e^{\\pm} are frozen in the field lines. Within a distance less than the NS radius r<R, the magnetic field lines do not spread that much. The fireball moves in a tube with a nearly constant cross section, thereby with a constant velocity (no acceleration), constant density, and constant temperature.
+
+At r>R, the magnetic field lines begin to open. For a dipolar field, a perpendicular width expands as
+
+\\ell_{\\perp}=\\ell_{X}(r/R)^{3/2}. 
+
+Accordingly, the Lorentz factor and comoving temperature of the expanding fireball evolve as (Meszaros and Rees, 2000; Thompson and Duncan, 2001)
+
+\\Gamma\\sim(r/R)^{3/2},\\quad T^{\\prime}\\sim T_{\\rm cut}(r/R)^{-3/2}. 
+
+### e^{\\pm}\\gamma Diffusion across the Large-scale Magnetic Field
+
+X-rays diffuse in the e^{\\pm} flow. E-mode photons scatter less than O-mode photons. X-rays first diffuse into the perpendicular direction to the outflow motion, i.e., across the magnetic field. As the temperature T^{\\prime} drops due to expansion in Eq. (6), the comoving e^{\\pm} density n^{\\prime}_{\\pm} decreases exponentially in Eq. (3), and eventually the diffusion time of the E-mode photons becomes less than the dynamical time
+
+t^{\\prime}_{\\rm diff}\\equiv\\frac{\\ell_{\\perp}}{c}\\tau_{\\perp}<\\frac{r}{c \\Gamma}\\equiv t^{\\prime}_{\\rm dyn},  at a radius and a Lorentz factor
+
+r=r_{d}\\sim 1.9R,\\quad\\Gamma=\\Gamma_{d}\\sim 2.6,  respectively. Here we assume a dipole B\\propto r^{-3}. Note that the magnetic field strength B and the perpendicular width \\ell_{\\perp} are frame-independent as the flow motion is parallel to B.
+
+The diffusing X-rays (more precisely the high-energy tail above the pair threshold) create e^{\\pm} pairs outside the initial magnetic field lines. Once the diffusion starts (i.e., \\ell_{\\perp} expands), the above condition in Eq. (7) is always satisfied because the isotropic luminosity L_{\\rm iso,X}\\sim(r_{d}/\\ell_{\\perp})^{2}L_{X} and the corresponding temperature T^{\\prime}\\sim(L_{\\rm iso,X}/2\\pi r_{\\perp}^{2}c\\kappa\\Gamma^{2})^{1/4} decreases. As the width expands to \\ell_{\\perp}(r_{d})\\sim 3.6\\times 10^{4}\\,cm (T^{\\prime}\\sim 26 keV) due to diffusion, the perpendicular direction becomes optically thin to E-mode photons \\tau_{\\perp}\\sim 1. As \\ell_{\\perp}(r_{d})\\sim 4.8\\times 10^{4} cm (T^{\\prime}\\sim 22 keV), it also becomes thin to O-mode photons \\tau_{T}=n^{\\prime}_{\\pm}\\sigma_{T}\\ell_{\\perp}\\sim 1. As \\ell_{\\perp}(r_{d})\\sim 6.0\\times 10^{4} cm (T^{\\prime}\\sim 20 keV), it also becomes thin to the radial direction \\tau_{T}=n^{\\prime}_{\\pm}\\sigma_{T}r_{d}/\\Gamma_{d}\\sim 1. Then the e^{\\pm} creation across the magnetic field becomes ineffective. The width of the e^{\\pm} outflow becomes roughly
+
+\\ell_{\\perp}(r)\\sim 2\\times 10^{4}\\,{\\rm cm}\\,r_{6}^{3/2},  which is wider than the initial size \\ell_{X} in Eq. (2), and it extends to \\ell_{\\perp}\\sim r at r\\sim 10^{9}\\,cm. The X-rays are released to an opening angle \\sim 1/\\Gamma_{d}\\sim 0.4 at this stage.5
+
+Footnote 5: Radiative transfer brings a factor of two anisotropy within the beaming cone (van Putten et al., 2016).
+
+### e^{\\pm} Outflow Compton-dragged by the X-Ray Bursts
+
+Once X-rays diffuse out to the perpendicular direction, the equilibrium e^{\\pm} density drops rapidly until the annihilation stops and their number freezes. The relic number density is determined by the condition that the annihilation time \\sim 1/n^{\\prime}_{\\pm}(r_{d})\\sigma(\\tilde{\\rho}^{\\prime}_{\\pm})c\\tilde{\\rho}^{ \\prime}_{\\pm} equals to the dynamical time \\sim r_{d}/c\\Gamma_{d} as
+
+n^{\\prime}_{\\pm}(r_{d})\\sim\\frac{\\Gamma_{d}}{\\sigma_{T}r_{d}}\\sim\\frac{\\Gamma_ {d}^{1/3}}{\\sigma_{T}R}\\sim 2\\times 10^{18}\\,{\\rm cm}^{-3}\\,\\Gamma_{d,0,4}^{1/3},  where we use Eq. (6) and the cross section for annihilation \\sigma(\\tilde{\\rho}^{\\prime}_{\\pm})\\sim\\sigma_{T}/\\tilde{\\rho}^{\\prime}_{\\pm} for a small thermal velocity \\tilde{\\rho}^{\\prime}_{\\pm}\\ll 1. Beyond the diffusion radius r_{d}, the number density evolves as
+
+n^{\\prime}_{\\pm}(r)\\sim\\frac{\\Gamma_{d}^{1/3}}{\\sigma_{T}R}\\frac{\\Gamma_{d}}{ \\Gamma_{\\pm}}\\left(\\frac{r}{r_{d}}\\right)^{-3}\\sim 3\\times 10^{16}\\,{\\rm cm}^{-3 }\\,\\Gamma_{d,0,4}^{10/3}\\Gamma_{\\pm}^{-1}r_{7}^{-1},  where \\Gamma_{\\pm} is the Lorentz factor of the e^{\\pm} outflow, because the number is conserved and the perpendicular width of the outflow follows Eq. (9). This is \\sim 10^{7} times larger than the Goldreich-Julian density.
+
+The released X-rays make cyclotron resonant scatterings (Canuto et al., 1971; Thompson et al., 2002) at a radius around
+
+r_{\\rm res}\\sim R\\left(\\frac{eB_{p}}{2\\pi m_{e}c\\nu}\\right)^{1/3}\\sim 10^{7}\\, {\\rm cm}\\,B_{p,14}^{1/3}v_{\\rm kW}^{-1/3},  although the Thomson optical depth is below unity
+
+\\tau_{T}\\sim n^{\\prime}_{\\pm}\\sigma_{T}r/\\Gamma_{\\pm}\\sim 0.2\\,\\Gamma_{d,0,4}^{10 /3}\\Gamma_{\\pm}^{-2}r_{7}^{-2}. 
+
+The X-ray field is basically isotropized within this radius. An X-ray pulse is also delayed and broaden by the crossing time \\sim 2r_{\\rm res}/c\\sim 1 ms. The observed delay (\\sim 6.5\\pm 1.0 ms; Mereghetti et al., 2020) and width (\\sim 3 ms; Li et al., 2020) of the X-ray bursts are larger than this timescale, implying the trapping to the fireball.
+
+The Lorentz factor \\Gamma_{\\pm} or velocity c\\beta_{\\pm} of the e^{\\pm} outflow is basically determined by the Compton drag due to X-rays. Given the X-ray energy density u^{\\prime}_{X}=L_{X}/4\\pi r^{2}c\\Gamma_{\\pm}^{2}, the Compton drag time t^{\\prime}_{\\rm dr}=m_{e}c^{2}/c\\sigma_{T}u^{\\prime}_{X} is less than the dynamical time t^{\\prime}_{\\rm dyn}=r/c\\Gamma_{\\pm} if
+
+\\Gamma_{\\pm}<\\left(\\frac{L_{X}\\sigma_{T}}{4\\pi m_{e}c^{3}r}\\right)^{1/3}\\sim 3 0\\,L_{X,41}^{1/3}r_{7}^{-1/3}. Thus, in the magnetosphere the Compton drag is basically very strong due to the strong X-ray emission (Yamasaki et al., 2020). The velocity of the e^{\\pm} outflow is forced to be
+
+\\beta_{\\pm}=\\cos\\theta_{kB},  when the photons stream at an angle \\theta_{kB} with respect to B(Thompson et al., 2002; Beloborodov, 2013; Yamasaki et al., 2020). Within r<r_{\\rm res}, the X-ray field is nearly isotropic and hence \\Gamma_{\\pm}\\sim 1. At r\\gg r_{\\rm res}, X-rays travel radially, and \\tan\\theta_{kB}=(1/2)\\tan\\theta because a dipole field line satisfies \\sin^{2}\\theta/r=\\mathrm{const.}, where \\theta is a polar angle. Therefore, the e^{\\pm} outflow is mildly relativistic except for the polar region. Note that \\Gamma_{\\pm}\\sim\\theta_{kB}^{-1}\\sim 2/\\theta for \\theta_{kB}\\ll 1. Note also that the above is the most simplistic argument and do not account for strong angle dependence of resonant scattering or its kinematics.
+
+In the polar region \\theta\\ll 1, the acceleration of the e^{\\pm} outflow is limited by \\Gamma=r/r_{\\rm res} like an expanding fireball because this is the frame in which the X-ray field is isotropic (e.g., Meszaros & Rees, 2000). Then the Compton drag is effective (t^{\\prime}_{\\rm dr}<t^{\\prime}_{\\rm dyn}) up to
+
+\\Gamma_{*}=\\left(\\frac{L_{X}\\sigma_{T}}{4\\pi m_{e}c^{3}r_{\\rm res }}\\right)^{1/4}\\sim 10\\,L_{X,41}^{1/4}r_{\\rm res,7}^{-1/4}. 
+
+Given the density in Eq. (11) and velocity in Eq. (15), the isotropic kinetic luminosity of the e^{\\pm} outflow is obtained as
+
+L_{\\pm} \\sim 4\\pi r^{2}n^{\\prime}_{\\pm}(r)m_{e}c^{3}\\beta_{\\pm}^{\\rm T}\\Gamma _{\\pm}^{2}\\sim\\frac{4\\pi Rm_{e}c^{3}}{\\sigma_{T}}\\beta_{\\pm}^{\\rm 3}\\Gamma_{\\pm} \\Gamma_{d}^{10/3}\\left(\\frac{r}{R}\\right)^{-1}  \\sim 1\\times 10^{36}\\,\\mathrm{erg}\\,\\,\\mathrm{s}^{-1}\\,\\beta_{\\pm} ^{\\rm A}\\Gamma_{d,0.4}^{10/3}r_{7}^{-1}, which is much weaker than the X-ray (\\sim 10^{41} erg s{}^{-1}) and FRB (\\sim 10^{38} erg s{}^{-1}). Along the open field line, the kinetic luminosity may be comparable to the spin-down luminosity at the light cylinder.
+
+## 3 Propagation and Breakout of FRB
+
+The e^{\\pm} outflow from the trapped-expanding fireball is an obstacle for FRB photons to propagate in the magnetosphere. In Sec. 3.1, we show that it is generally optically thick to induced Compton scatterings of FRB photons (Wilson & Rees, 1978; Thompson et al., 1994; Lyubarsky, 2008) because the brightness temperature of the FRB is extremely high (T_{b}\\sim 10^{33} K) and the scattering cross section is enhanced by the occupation number of photon quantum states T_{b}/h\\nu\\sim 10^{34}\\,T_{b,33}v_{9}^{-1}. Therefore, the FRB photons should break out of the e^{\\pm} outflow in order to be observed. In Sec. 3.2, we obtain the breakout condition, where the Compton drag on the e^{\\pm} outflow by the X-rays is essential. Radiation forces of FRB photons are also considered by Kumar & Lu (2020), particularly for restricting the far-away FRB models.
+
+In this Letter, we do not discuss the generation of coherent radio photons. We assume that the FRB photons are generated, and solely discuss whether the photons can propagate and break out of the e^{\\pm} outflow associated with the X-ray bursts (see Melrose et al., 2006, for other constraints). The physical condition of the FRB generation site is uncertain and probably different from that of the surrounding e^{\\pm} outflow because the MHD waves with larger energy would modify the e^{\\pm} outflow.
+
+### Induced Compton scatterings by the e^{\\pm} outflow
+
+In the e^{\\pm} outflow with the number density in Eq. (11), the optical depth to induced Compton scatterings is very large,
+
+\\tau_{C} \\sim \\frac{3\\sigma_{T}}{32\\pi^{2}}\\frac{n_{\\pm}(r)L_{\\rm FRB}\\varpropto \\Lambda_{\\rm FRB}}{r^{2}m_{e}v^{3}}  \\sim 6\\times 10^{21}\\,\\Gamma_{d,0.4}^{10/3}(L_{\\rm FRB}\\Delta_{\\rm FRB })_{35}v_{9}^{-3}r_{7}^{-5}, where L_{\\rm FRB}\\Delta_{\\rm FRB} is the isotropic FRB energy, and we assume that the outflow is non-relativistic due to the Compton drag by the X-ray bursts in Eq. (15).6 If the e^{\\pm} outflow is relativistic (e.g., in the polar region), we should make Lorentz transformations (see Ioka & Zhang, 2020). Note that even without the e^{\\pm} outflow, the system is optically thick due to the Goldreich-Julian density. Induced Raman scatterings may be also effective.
+
+Footnote 6: We also assume that the opening angle of the FRB photon beam satisfies \\theta_{b}>(2c\\Delta_{\\rm FRB}/r)^{1/2}(Lyubarsky, 2008). We also neglect the acceleration of the e^{\\pm} to a Lorentz factor comparable to the dimensionless wave strength,
+
+a=\\frac{eE_{\\rm FRB}}{m_{e}\\varpropto}=\\frac{e}{m_{e}\\varpropto }\\left(\\frac{2L_{\\rm FRB}}{cr^{2}}\\right)^{1/2}\\sim 4\\times 10^{4}\\,L_{\\rm FRB,36} ^{1/2}r_{9}^{-1}r_{7}^{-1}.
+
+The optical depth to the induced Compton scatterings is suppressed by a factor \\sim\\min\\left[\\theta_{E}^{-2},(v_{B}/v)^{2}\\right] if the magnetic field is strong with the cyclotron frequency that is larger than the photon frequency v_{B}\\gg\\nu and the wave electric vector is nearly perpendicular to the magnetic field with \\sin\\theta_{E}\\approx\\theta_{E}\\ll 1 (the inner product of unit vectors along the magnetic field and the wave electric field; Canuto et al., 1971; Kumar & Lu, 2020). The propagation of FRB photons could be possible if the FRB photons are generated with extreme beaming \\theta_{E}<\\tau_{C}^{-1/2}\\sim 10^{-11}r_{7}^{5/2}. We do not consider this case in this Letter.
+
+The plasma frequency v_{p}\\sim\\left(e^{2}n_{\\pm}/\\pi m_{e}\\right)^{1/2}\\sim 3\\times 10^{3}\\,\\mathrm{ GHz}\\,\\Gamma_{d,0.4}^{13/6}r_{7}^{-3/2} is also higher than the photon frequency (Yamasaki et al., 2019). The optical depth to free-free absorption may be also high. These constraints are also mitigated if particle motion is restricted by the strong magnetic field (Kumar et al., 2017). In any case, the system is optically thick for FRB photons.
+
+### Breakout of FRB Photons from the e^{\\pm} Outflow
+
+FRB photons from the magnetosphere are observable if they push aside and break out of the surrounding e^{\\pm} outflow via induced Compton scatterings. The FRB energy is wasted into pushing the e^{\\pm} outflow. In this Letter, we adopt a simple criteria for the breakout: the work done by the FRB photons on the e^{\\pm} is less than the FRB energy.
+
+The work done on the e^{\\pm} is estimated as follows. Let us consider the comoving frame of the e^{\\pm} outflow. The propagation speed of the head of the FRB photons should be close to light speed c in order for the breakout within the dynamical time. The pushed e^{\\pm} is heated up and the wasted energy per volume is at least \\sim n_{\\star}^{\\prime}m_{e}c^{2}. However, the actual wasted energy is much more because of the Compton drag (or cooling) by the X-ray bursts on the e^{\\pm}(see also Cordes & Wasserman, 2016; Katz, 2020). The Compton cooling carries away energy \\sim c\\sigma_{T}u_{X}^{\\prime}t_{dyn}^{\\prime} from a heated electron (or positron) as the e^{\\pm} heating generally continues for the dynamical time t_{dyn}^{\\prime}=r/c\\Gamma_{\\pm}.7 This is larger than the rest mass energy m_{e}c^{2} as shown in Eq. (14). Therefore the wasted energy per volume is \\sim n_{\\pm}^{\\prime}ct_{dyn}^{\\prime}\\sigma_{T}u_{X}^{\\prime}.
+
+Footnote 7: There is a configuration in which the heating time is much less than t_{dyn}^{\\prime}. However, this is not general because there is a relative velocity between the FRB emission region and the e^{\\pm} outflow.
+
+This wasted energy density should be less than the energy density of the FRB photons, u_{\\rm FRB}^{\\prime}=L_{\\rm FRB}/4\\pi r^{2}c\\Gamma_{\\pm}^{2}, as
+
+u_{\\rm FRB}^{\\prime}>n_{\\pm}^{\\prime}ct_{dyn}^{\\prime}\\sigma_{T}u_{X}^{\\prime }=\\tau_{T}u_{X}^{\\prime}  where \\tau_{T} is the Thomson optical depth in Eq. (13). This results in a simple breakout criteria with Eq. (11),
+
+1<\\frac{L_{\\rm FRB}}{\\tau_{T}L_{X}}=\\frac{L_{\\rm FRB}}{L_{X}} \\frac{\\Gamma_{\\pm}^{2}}{\\Gamma_{d}^{13/3}}\\left(\\frac{r}{R}\\right)^{2} \\sim 2\\times 10^{-2}\\,L_{\\rm FRB,38.6}L_{X,41}^{-1}\\Gamma_{d,0.4} ^{-10/3}\\Gamma_{\\pm}^{2}r_{7}^{2},  where L_{\\rm FRB}=4\\times 10^{38} erg s{}^{-1}L_{\\rm FRB,38.6} is the isotropic FRB luminosity (Bochenek et al., 2020; The CHIME/FRB Collaboration et al., 2020). Therefore, the breakout is possible if the emission radius r_{\\rm FRB} is larger than
+
+r_{\\rm FRB}>7\\times 10^{7}\\,{\\rm cm}\\,L_{\\rm FRB,38.6}^{-1/2}L_{X,41}^{1/2} \\Gamma_{d,0.4}^{5/3}\\Gamma_{\\pm}^{-1},  where the e^{\\pm} Lorentz factor \\Gamma_{\\pm} is determined by the Compton drag in Eqs. (15) or (16) and basically mildly relativistic. The upper limit on the emission radius is determined by the energetics u_{\\rm FRB}>B^{2}/8\\pi as
+
+r_{\\rm FRB}<1\\times 10^{9}\\,{\\rm cm}\\,B_{p,14.3}^{1/2}L_{\\rm FRB,38.6}^{-1/4}. 
+
+Note that the breakout condition L_{\\rm FRB}>\\tau_{T}L_{X} in Eq. (20) is applicable even if the pair density is determined by a different mechanism from Sec 2.
+
+Figure 3 extrapolates the breakout condition in Eq. (20) to the other FRB and X-ray burst luminosities in the cases of emission radii r_{\\rm FRB}=10^{8} cm and r_{\\rm FRB}=10^{9} cm with \\Gamma_{d}=2.6 and \\Gamma_{\\pm}=2. We can see that the breakout condition requires brighter FRBs for brighter X-ray bursts. Further implications will be discussed in Sec. 4.
+
+## 4 Summary and Discussions
+
+We show that the e^{\\pm} outflow is accompanied by the SGR X-ray bursts with high cutoff energy T_{\\rm cut}\\sim 80 keV by modeling the trapped-expanding fireball. The FRB photons can not propagate in the e^{\\pm} outflow due to induced Compton scatterings, but can break it out if the emission radius is larger than a few tens of NS radii in Eq. (21) and Fig. 3. The breakout condition also puts upper limits to X-ray counterparts of cosmological FRBs (see Scholz et al., 2017, 2020).
+
+The FRB pulse widths (\\sim 0.6 ms; Bochenek et al., 2020; The CHIME/FRB Collaboration et al., 2020) are shorter than the delay (\\sim 6.5\\pm 1.0 ms; Mereghetti et al., 2020) and width (\\sim 3 ms; Li et al., 2020) of the X-ray bursts. This suggests that the X-rays are trapped by the trapped fireball, yielding the comparable times for the delay and width,8 while the intrinsic timescale of the energy generation is shorter than the trapping time, and the energy generation radius is less than 0.6\\,\\mathrm{msec}\\times c\\sim 2\\times 10^{7} cm. This is below the FRB emission radius limited by the breakout condition in Eq. (21), requiring energy transfer, e.g., by MHD waves.
+
+Footnote 8: Note that this delay is about a single energy injection. There are likely multiple or extended energy injections, and the first one, which produces the onset of the X-ray bursts, is not associated with an FRB as observed.
+
+Other X-ray bursts are not associated with FRBs down to eight orders of magnitude fainter than FRB 200428 (Lin et al., 2020). One possibility is that the e^{\\pm} outflow from an expanding fireball could be essential for the coherent radio emission: in the other X-ray bursts with low T_{\\mathrm{cut}}, the surface of the trapped fireball is transparent in Fig. 2 and the expanding fireball is not launched. Although the e^{\\pm} outflow is less energetic than the FRB in Eq. (17), it could affect the coherent condition of the FRB emission.9 Another possibility is that an open field line could be necessary for transferring the MHD waves, or faint FRBs are choked by the e^{\\pm} outflow associated with the X-ray bursts in Fig. 3.
+
+Footnote 9: In the binary comb model (Ioka and Zhang, 2020), aurora particles could change the coherent condition (see also Dai, 2020, for another possible particle). There might be several channels to FRBs.
+
+No FRB was detected at the giant flare 2004 December 27 from SGR 1806-20 (Hurley et al., 2005; Terasawa et al., 2005) with a radio limit of 110 MJy ms at 1.4 GHz (Tendulkar et al., 2016). A FRB similar to FRB 200428, if any, is choked by the e^{\\pm} outflow as in Fig. 3, while a very bright FRB can break it out.
+
+Kirsten et al. (2020) detected two radio bursts with 112\\pm 22 Jy msec and 24\\pm 5 Jy ms, 4-5 orders of magnitude fainter than FRB 200428. Accompanying X-ray bursts are expected to be faint from the breakout condition in Eq. (20) and Fig. 3, consistent with the non-detection. Very recently CHIME/FRB detected three radio bursts with 900\\pm 160, 9.2\\pm 1.6, and 6.4\\pm 1.1 Jy ms (Good and CHIME/FRB Collaboration, 2020; Pleunis and CHIME/FRB Collaboration, 2020) without gamma-ray counterparts (Savchenko et al., 2020). This is also consistent with Eq. (20) and Fig. 3.
+
+Further studies are needed to better understand the entire breakout process, such as shock structure, motion of heated e^{\\pm} along magnetic fields, emission from the heated e^{\\pm}, and so on, as well as baryon loading to the fireball.
+
+If the energy release is caused by magnetic reconnection, similar energies are ejected in the opposite directions, so that the outflow is as energetic as the X-ray bursts (Yamasaki et al., 2020, 2019; Yuan et al., 2020). The energy is many orders of magnitude larger than that calculated in this Letter in Eq. (17). Hence, completely different afterglows or nebulae are expected. Note that for the radio afterglow of the giant flare on 2004 December 27 from SGR 1806-20, the minimum energy is smaller than the flare energy (Cameron et al., 2005; Gaensler et al., 2005; Nakar et al., 2005). In contrast, the ratio is unity for gamma-ray bursts. This implies that the outflow is less energetic than the flare or X-ray bursts, but the definite conclusion requires further studies.
+
+## Acknowledgments
+
+The author would like to thank the referee for valuable comments, and H. Hamidani, W. Ishizaki, K. Kashiyama, S. Kisaka, K. Murase, K. Takahashi, T. Wada, S. Yamasaki, and B. Zhang for useful discussions. This work is partly supported by JSPS KAKENHI Nos. 20H01901, 20H01904, 20H00158, 18H01213, 18H01215, 17H06357, 17H06362, and 17H06131. Discussions during the YITP workshop YITP-T-19-04 and YKIS2019 are also useful for completing this work.

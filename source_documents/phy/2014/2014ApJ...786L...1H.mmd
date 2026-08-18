@@ -1,0 +1,125 @@
+###### Abstract
+
+We test a model recently proposed for the persistent hard X-ray emission from magnetars. In the model, hard X-rays are produced by a decelerating electron-positron flow in the closed magnetosphere. The flow decelerates as it radiates its energy away via resonant scattering of soft X-rays, then it reaches the top of the magnetic loop and annihilates there. We test the model against observations of three magnetars: 4U 0142+61, 1RXS J1708-4009, and 1E 1841-045. We find that the model successfully fits the observed phase-resolved spectra. We derive constraints on the angle between the rotational and magnetic axes of the neutron star, the object inclination to the line of sight, and the size of the active twisted region filled with the plasma flow. Using the fit of the hard X-ray component of the magnetar spectrum, we revisit the remaining soft X-ray component. We find that it can be explained by a modified two-temperature blackbody model. The hotter blackbody is consistent with a hot spot covering 1-10% of the neutron star surface. Such a hot spot is expected at the base of the magnetospheric e^{\\pm} outflow, as some particles created in the e^{\\pm} discharge flow back and bombard the stellar surface. magnetars: individual (1E 1841-045, 1RXS J1708-4009, 4U 0142+61) - X-rays: stars - plasmas - stars: magnetic field - stars: neutron
+
+## 1 Introduction
+
+Magnetars are isolated neutron stars whose emission is thought to be powered by the decay of intense magnetic fields (Duncan & Thompson, 1992; Thompson & Duncan, 1996). Their persistent X-ray spectrum shows two peaks, near 1 keV and above 100 keV (e.g. Kuiper et al., 2006;Enoto et al. 2010). The soft X-ray component likely comes from the neutron star surface. Its spectrum is modified from a simple Planck shape by the radiative transfer in the atmosphere and magnetosphere of the star, and it has a soft tail extending to \\sim 10 keV where the hard component takes over. The hard X-rays must be produced in the magnetosphere of the neutron star.
+
+For a few magnetars, phase-resolved spectra were measured in the hard X-ray band (den Hartog et al. 2008a,b). They showed bizarre variations with rotational phase. Recently, Beloborodov (2013b) proposed a model of decelerating e^{\\pm} outflow that makes specific predictions for the hard X-ray spectrum and its variation with rotational phase. In the present paper, we test the model against observations of three magnetars, 1E 1841-045, 4U 0142+61 and 1RXS J1708-4009 (all discovered as anomalous X-ray pulsars). The model is briefly described in Section 2, and the results of data analysis are presented in Section 3. We find that the model successfully fits the data and discuss implications of our results in Section 4.
+
+## 2 Coronal outflow model
+
+In the model, the hard X-ray emission is powered by the e^{\\pm} discharge near the star. The discharge voltage exceeds 10^{9} V and the initial Lorentz factor of created e^{\\pm} exceeds 10^{3} (Beloborodov & Thompson 2007). As the e^{\\pm} pairs flow out along the magnetic field lines and fill the extended magnetic loop, they decelerate via resonant scattering of thermal X-rays. Beloborodov (2013b) showed that the outflow has two zones, adiabatic and radiative. The adiabatic zone is near the star where magnetic field B>10^{13} G; in this zone the resonantly scattered photons quickly convert to pairs, increasing the e^{\\pm} multiplicity of the flow to {\\cal M}\\sim 10^{2}. The radiative zone is at higher altitudes where B<10^{13} G; here the resonantly scattered photons escape and the outflow enters the radiative regime, losing its kinetic energy.
+
+The interaction of radiation and e^{\\pm} outflow was studied in detail in Beloborodov (2013a). It was shown that the outflow Lorentz factor \\gamma_{\\pm} decreases proportionally to the local magnetic field,
+
+\\gamma_{\\pm}\\approx 10^{2}\\frac{B}{B_{Q}}\\,. 
+
+The average energy of resonantly scattered photons is given by
+
+E_{\\rm sc}\\approx\\gamma_{\\pm}\\frac{B}{B_{Q}}m_{e}c^{2}\\approx 5\\,\\gamma_{\\pm}^ {2}\\ {\\rm keV}. 
+
+Equations (1) and (2) imply that the spectrum of escaping hard X-rays has an average photon index \\Gamma=1.5 and its luminosity peaks at the high-energy end (Beloborodov 2013b). The spectrum cuts off in the MeV band, because the multi-MeV photons are emitted in the adiabatic zone and cannot escape. The predicted spectral shape, however, strongly depends on the viewing angle, and may significantly differ from the average spectrum.
+
+For a given position of the observer and location of the active magnetic loop the model predicts a well-defined phase-dependent radiation spectrum that can be quantitatively compared with observations. The spectrum can be calculated using the Monte-Carlo technique as described in (Beloborodov, 2013b). We have developed a different, independent code that performs a similar calculation using direct integration of the angle-dependent emissivity over the j-bundle. This method does not include photon splitting, which is important at high energies. We have tested the code against the Monte-Carlo results presented in Beloborodov (2013b) and found excellent agreement at photon energies below 400 keV.
+
+In this paper, we assume that the magnetosphere is axisymmetric and close to the dipole configuration in the region of interest (where B<10^{13} G). The dipole moment of the neutron star \\mu_{\\rm m} is provided by measurements of its spindown rate; it is taken from Dib et al. (2007) for 4U 0142+61, and from Dib et al. (2008) for 1RXS J1708-4009 and 1E 1841-045. We also assume that the active, current-carrying region of the magnetosphere ("j-bundle"), which is filled with the e^{\\pm} flow, is axisymmetric. Then the model is completely defined by four remaining parameters:
+
+* \\theta_{j}, the half opening angle (from the magnetic axis) of the j-bundle footprint on the star.
+
+* L_{j}, the bolometric luminosity radiated by the j-bundle.
+
+* \\alpha_{\\rm mag}, the angle between the rotation axis and magnetic axis of the neutron star.
+
+* \\beta_{\\rm obs}, the angle between the rotation axis and the observer line of sight.
+
+In addition, the point of zero rotational phase must be kept as a free parameter to fit phase-resolved data. The parameter L_{j} is related to two theoretical quantities -- the discharge voltage \\Phi and the twist angle of the magnetic field lines \\psi(Beloborodov, 2009),
+
+L_{j}\\simeq 2\\times 10^{35}\\ \\psi\\left(\\frac{\\Phi}{10^{10}\\ {\\rm V}}\\right) \\left(\\frac{\\mu_{\\rm m}}{10^{32}\\ {\\rm G\\ cm}^{3}}\\right)\\left(\\frac{R}{10\\ {\\rm km }}\\right)\\left(\\frac{\\theta_{j}}{0.3}\\right)^{4}\\ {\\rm erg\\ s}^{-1}\\,,  where R is the radius of the neutron star, which we fix at 10 km. A twist angle \\psi\\sim 1 is expected for a strongly twisted magnetosphere; measured values of L_{j} and \\theta_{j} can provide an order-of-magnitude for the discharge voltage \\Phi.
+
+The j-bundle footprint can form a hot spot on the neutron star, as some of the relativistic particles created in the e^{\\pm} discharge flow back to the stellar surface and bombard it. This motivates us to consider a two-temperature model for the soft X-ray emission from the stellar surface, with the hotter blackbody associated with the j-bundle footprint. The expected area of the hot spot is related to \\theta_{j} by
+
+{\\cal A}_{\\rm h}\\sim\\frac{1}{4}\\theta_{j}^{2}{\\cal A}_{\\rm ns}\\approx 0.02 \\left(\\frac{\\theta_{j}}{0.3}\\right)^{2}{\\cal A}_{\\rm ns}\\,,  where {\\cal A}_{\\rm ns}=4\\pi R^{2} is the surface area of the neutron star. The model is illustrated in Figure 1.
+
+## 3 Spectral fits
+
+For 4U 0142+61 and 1RXS J1708-4009, we used the multi-year data collected by INTEGRAL-ISGRI (20-300 keV), INTEGRAL-SPI (10-1000 keV), XMM-Newton (0.55-11.5 keV), ASCA-GIS (0.7-12 keV, only for 4U 0142+61), RXTE-PCA (2-60 keV) and CGRO-Comptel (upper-limits in the range 0.75-30 MeV, see Kuiper et al. 2006, den Hartog et al. 2006). The data set for the two magnetars is the same as in den Hartog et al. (2008b,a); it is described in detail there. The data and fit by the outflow model for 1E 1841-045 are presented in An et al. (2013); below we show the results of An et al. (2013) for comparison with 4U 0142+61 and 1RXS J1708-4009.
+
+### Hard component
+
+We first focus on the data above 10 keV, where the relativistic outflow dominates the observed emission. In this energy range, we search for a combined fit of the phase-averaged spectrum of the total (pulsed + unpulsed) emission and three phase-resolved spectra of the pulsed emission. The three phase bins are the same as in den Hartog et al. (2008b,a).
+
+The entire parameter space of the model (Section 2) was discretized on a grid, and we calculated \\chi^{2} and the corresponding p-value for the model at each grid point. The obtained map of \\chi^{2} provided a reliable way to find the best fit, avoiding the risk of converging to a local minimum with an optimization algorithm. We found that \\chi^{2} is a rather complex function of the model parameters and standard optimization software such as XSPEC would fail to identify the best fit. Remarkably, we found that \\chi^{2} has a sharp minimum in a well localized region of the parameter space. The best fit parameters for each magnetar are summarized in Table 1.
+
+Figure 2 shows the p-value maps on the plane of \\alpha_{\\rm mag},\\beta_{\\rm obs} after maximizing the p-value (minimizing \\chi^{2}) over the parameters \\theta_{j} and L_{j} for each \\alpha_{\\rm mag},\\beta_{\\rm obs}. One can see that the model completely fails (p<0.001) almost everywhere; this reflects the fact the model is quite "rigid," lacking flexibility in adjusting \\chi^{2} to a desired value. Nevertheless, a good fit with p>0.05 is obtained in a small region of the parameter space. We conclude that the model (a) successfully fits the data and (b) the fit imposes strong constraints on the parameters.
+
+We note, however, that there is one significant source of degeneracy in the axisymmetric model. One can show that interchanging the values of \\alpha_{\\rm mag} and \\beta_{\\rm obs} does not change the predicted spectrum. Thus, Figure 2 must be complemented with a similar map obtained by mirror reflection about the line of \\beta_{\\rm obs}=\\alpha_{\\rm mag}. The fact that one of the two angles is found to be small for 4U 0142+61 and 1RXS J1708-4009 may help to break this degeneracy. Since the line of sight is random, there is no reason for \\beta_{\\rm obs} to be small. It is more likely that it is \\alpha_{\\rm mag} that is small, as this may be a result of the magnetic field evolution in the neutron star at its birth or later times.
+
+We also explored the model with unfrozen parameter \\mu_{\\rm m} and investigated if fitting by this more flexible model allows one to obtain constraints on \\mu_{\\rm m}, which would be independent from the spindown measurements. We found that such constraints are weak -- only a lower limit on the magnetic moment can be derived this way, which is about one order of magnitude below the value inferred from the spindown rate.
+
+### Soft component
+
+Once the hard X-ray component is fitted by the e^{\\pm} outflow model, we turn to the remaining soft component below 10 keV. Note that the outflow makes a non-negligible contribution below 10 keV (the two components overlap in this region). Thus, understanding the origin of the hard X-ray component and its low-energy extension is important for the correct interpretation of soft X-ray emission. Previous models for the 1-10 keV spectrum involved radiative transfer in the the neutron star atmosphere (e.g. Ho & Lai, 2001; Ozel, 2001) or resonant scattering by mildly relativistic electrons flowing in the magnetosphere (Thompson et al., 2002). Alternatively, the soft X-ray tail was proposed to be the signature of a hot spot on the star (e.g. Gotthelf & Halpern, 2007).
+
+Motivated by the j-bundle picture described in Section 2, we investigated models that include the possible presence of a hot spot. Two-temperature blackbody (2BB) is a simplest model of this type. The lower temperature is typically associated with a large area (comparable to the area of the neutron star surface) and the higher temperature is associated with the footprint of the j-bundle. This simple model was sufficient to provide a good fit for the spectrum of 1E 1841-045 (An et al., 2013). We found that the 2BB model is insufficient for the soft component of 4U 0142+61 and 1RXS J1708-4009. This may be expected, as the soft X-ray spectrum should be modified by resonant scattering in the magnetosphere (e.g. Thompson et al., 2002; Rea et al., 2008), although a consistent model for this effect is yet to be developed (see Beloborodov, 2013b for discussion). We chose a phenomenological modification of the 2BB model: we replaced the Wien tail of the hotter blackbody by a power law that is smoothly connected to the Planck spectrum at some energy E_{\\rm tail}. Smooth connection here means the continuity of the photon spectrum and its first derivative; then E_{\\rm tail} is the only required additional parameter. The temperatures T_{1} and T_{2} of the cold and hot blackbodies, their luminosities L_{1} and L_{2}, and E_{\\rm tail} uniquely define our modified 2BB model.
+
+\\begin{table}
+
+\\begin{tabular}{r c c c c c} \\hline \\hline  & \\alpha_{\\rm mag} & \\beta_{\\rm obs} & \\theta_{j} & L_{j}{}^{\\rm a}@D_{0}{}^{\\rm b} & \\mu_{\\rm m}{}^{\\rm c} & \\chi^{2}/dof \\\\  & (rad) & (rad) & (rad) & & (10^{32} G cm{}^{3}) & \\\\ \\hline
+
+4U 0142+61 & <0.15 & 0.5(3) & <0.23 & 3.9(24) @ 3.6 & 1.3 & 46/41 \\\\
+
+1RXS J1708–4009 & <0.15 & 0.4(2) & <0.15 & 3.5(18) @ 3.8 & 4.6 & 49/37 \\\\
+
+1E 1841–045 – sol. 1 & 0.3(2) & 0.9(2) & <0.4 & 48(16) @ 8.5 & 6.9 & 302/267 \\\\
+
+1E 1841–045 – sol. 2 & 0.7(2) & 1.4(1) & <0.4 & 48(16) @ 8.5 & 6.9 & 326/267 \\\\ \\hline \\end{tabular}
+
+**Note.** Uncertainties are given at the 3\\sigma level. There are two solutions within 3\\sigma for 1E 1841–045.
+
+{}^{\\rm a}In units of 10^{35}(D/D_{0})^{2} erg s{}^{-1}.
+
+{}^{\\rm b}Distance to the object (in kpc) estimated from reddening and X-ray extinction along the line of sight (for 4U 0142+61 and 1RXS J1708–4009, Durant & van Kerkwijk, 2006) or from the Galactic rotation of the associated supernova remnant (for 1E 1841–045, Tian & Leahy, 2008).
+
+{}^{\\rm c}Magnetic dipole moment of the neutron star inferred from its spindown rate (see Dib et al., 2007 for 4U 0142+61, Dib et al., 2008 for 1RXS J1708–4009 and 1E 1841–045).
+
+\\end{table}
+
+Table 1: Parameters of the best-fit model for the hard X-ray componentWe found that the spectra of 4U 0142+61 and 1RXS J1708-4009 are reasonably well fitted by the modified 2BB model; the results are summarized in Table 2. The formal \\chi^{2} is unsatisfying, because of the high spectral resolution of XMM and the inability of simple phenomenological models to describe spectral lines. However the continuum of observed spectra is well reproduced. The residuals are largest below 3 keV and suggest the presence of line-like features; this issue was already pointed by den Hartog et al. (2008a). The best fits of the soft and hard components are shown together in Figure 3.
+
+For comparison, we also tried to fit the soft component with the sum of one (modified) blackbody and a power law. This model provided acceptable fits for 1RXS J1708-4009 and 1E 1841-045, but not for 4U 0142+61 (\\chi^{2}/dof= 774/449). An additional, well known drawback of this model is the large contribution of the power-law below \\sim 1 keV, which results in an unrealistically large best-fit value of the hydrogen column density toward the object.
+
+## 4 Discussion
+
+Remarkably, the coronal outflow model fits the data in a small region of the parameter space, which allowed us to derive significant constraints on the active bundle of magnetic field lines (j-bundle). In particular, for 4U 0142+61 and 1RXS J1708-4009 the opening angle of the j-bundle \\theta_{j}\\sim 0.1-0.2, and its total luminosity (most of which is emitted in the MeV band, outside the observed spectral range) is \\sim 4\\times 10^{36}\\ {\\rm erg\\ s}^{-1}. Both parameters are in line with theoretical expectations (Beloborodov 2009). Using Equation (3) one can estimate the product of the twist angle \\psi and the discharge voltage \\Phi in the j-bundle. We found \\psi\\,\\Phi\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$>$}}{\\lower 2.1973pt \\hbox{$\\sim$}}}(2-3)\\times 10^{10} V, consistent with \\Phi\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$>$}}{\\lower 2.1973pt \\hbox{$\\sim$}}}10^{10} V.1 This voltage is higher (at least by a factor of a few) compared with theoretical estimates of Beloborodov & Thompson (2007) or the voltage inferred from the outburst decay in XTE J1810-197 (Beloborodov 2009).
+
+Footnote 1: The twist angle \\psi\\mathrel{\\hbox to 0.0pt{\\raise 2.1973pt\\hbox{$>$}}{\\lower 2.1973pt\\hbox{$ \\sim$}}}1 is expected for an active magnetar. The growth of \\psi beyond a critical value \\sim 3 is prohibited by a global instability — the over-twisted magnetopshere inflates, forms an unstable current sheet, and ejects magnetic plasmoids, reducing the twist energy (Parfrey et al. 2013).
+
+The j-bundle parameters obtained for 4U 0142+61 and 1RXS J1708-4009 are comparable,
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c} \\hline \\hline  & N_{\\rm H} & kT_{1} & kT_{2} & E_{\\rm tail} & L_{1}{}^{\\rm a} & L_{2}{}^{\\rm a} & \\chi^{2}/dof \\\\  & (10^{22}\\ {\\rm cm}^{-2}) & (keV) & (keV) & (keV) & & & \\\\ \\hline
+
+4U 0142+61 & 0.577(5) & 0.307(4) & 0.602(9) & 3.82(6) & 2.63(3) & 1.36(9) & 559/448 \\\\
+
+1RXS J1708–4009 & 0.99(1) & 0.39(1) & 0.87(5) & 4.0(2) & 0.69(3) & 0.56(12) & 297/228 \\\\
+
+1E 1841–045 & 2.03(4) & 0.45(1) & 0.90(4) & & 2.15(7) & 0.65(9) & 2298/2272 \\\\ \\end{tabular}
+
+**Note.** {}^{\\rm a} In units of 10^{35}(D/D_{0})^{2}\\ {\\rm erg\\ s}^{-1}. See Table 1 for the values of D_{0}.
+
+\\end{table}
+
+Table 2: Parameters of the best-fit model for the soft X-ray component which may be expected, as their spectra are similar. The spectrum of 1E 1841-045 is significantly different: the spectral index of its hard X-ray component is larger and the dip between the soft and hard components is smaller. We find that this difference is mainly explained by different angles \\alpha_{\\rm mag} and \\beta_{\\rm obs}; the parameters of the j-bundle itself (L_{j} and \\theta_{j}) are comparable for all three objects. The fact that two out of three magnetars appear to have a small angle between the magnetic and rotation axes \\alpha_{\\rm mag}\\sim 0.1 suggests that rotation plays a role in shaping the magnetic moment of the neutron star. Future measurements of phase-resolved spectra for other magnetars will allow one to better study the statistics of \\alpha_{\\rm mag}. Independent constraints on \\alpha_{\\rm mag} and \\beta_{\\rm obs} can be provided by measurements of X-ray polarization by future missions (such as Astro-H, Takahashi et al., 2012).
+
+The analysis of the hard X-ray component gives the magnetic flux in the j-bundle from which one can estimate its footprint area {\\cal A}_{j}. The exact area and location of the footprint depend on details of the magnetic field near the star; a rough estimate for {\\cal A}_{j} may be obtained assuming a dipole field. A hot spot with area \\sim{\\cal A}_{j} may be expected on the star. The obtained fits of the soft X-ray component are indeed consistent with the presence of a hot spot and give an independent estimate for its area {\\cal A}_{2}. In 1RXS J1708-4009 and 1E 1841-045, {\\cal A}_{2} is consistent with {\\cal A}_{j}, providing further support to our model. For 4U 0142+61 we found {\\cal A}_{2}\\approx 6{\\cal A}_{j}, suggesting a hot spot extending around the j-bundle footprint or indicating that the centered dipole configuration is a poor approximation to the magnetosphere near the star.
+
+Instead of studying the phase-resolved spectra in three phase bins, one could use coarse spectral binning and analyze more detailed pulse profiles. We did not attempt to fit the detailed pulse profiles, because they are significantly affected by moderate deviations from axisymmetry.2 Relaxing the axisymmetric assumption would make the model more flexible and difficult to describe using a small number of parameters. This would require a different, more complicated fitting procedure. Note also that the pulsed fractions of the three magnetars are moderate even at high energies, in the range of 30-40% at \\sim 100 keV (W. Hermsen, private communication). This is consistent with approximate axisymmetry of the j-bundle, explaining why our simple model gives reasonable fits to the phase-resolved spectra in wide phase bins.
+
+Footnote 2: The j-bundle emission is relativistically beamed along the magnetic field lines, especially in the hard X-ray band. Breaking the axial symmetry (concentration of electric currents in a range of magnetic longitude) affects the observed pulse profiles.
+
+The coronal outflow model predicts that most of the luminosity is emitted in the MeV band. Future detectors with sensitivity better than that of Comptel would help to better constrain the location of the j-bundle and the angle between the magnetic and rotation axes.
+
+This work was supported by NASA ATP grant NNX 13AI34G.

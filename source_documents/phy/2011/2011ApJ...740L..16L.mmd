@@ -1,0 +1,149 @@
+###### Abstract
+
+_Swift_/BAT detected the first burst from 1E 1841-045 in May 2010 with intermittent burst activity recorded through at least July 2011. Here we present _Swift_ and _Fermi_/GBM observations of this burst activity and search for correlated changes to the persistent X-ray emission of the source. The T_{90} durationsof the bursts range between 18-140 ms, comparable to other magnetar burst durations, while the energy released in each burst ranges between (0.8-25)\\times 10^{38} erg, which is in the low side of SGR bursts. We find that the bursting activity did not have a significant effect on the persistent flux level of the source. We argue that the mechanism leading to this sporadic burst activity in 1E 1841-045 might not involve large scale restructuring (either crustal or magnetospheric) as seen in other magnetar sources. pulsars: individual (1E 1841-045) - X-rays: bursts +
+
+Footnote †: slugcomment: Submitted to ApJ
+
+## 1 Introduction
+
+Anomalous X-ray Pulsars (AXPs) form a small subset of slowly rotating neutron stars identified as a separate class by Mereghetti & Stella (1995) based on their persistent X-ray emission similarities that set them apart for the bulk of X-ray pulsars. Their spin periods, P, and spin-down rates, \\dot{P}, fall within narrow ranges (2-12 s and 5\\times 10^{-13}-10^{-10} s/s, respectively). Their magnetic fields, estimated from P,\\dot{P} are in excess of 10^{14} G, placing these sources in the group of magnetar candidates (neutron stars with extreme magnetic fields). While AXPs were identified from the properties of their persistent X-ray emission, the other members of this group, Soft Gamma Repeaters (SGRs), were discovered when they entered burst active periods, emitting multiple short, soft bursts (see Woods & Thompson, 2006, for a review). The first burst emission from an AXP was discovered in 2002 (Gavriil et al., 2002). By now, bursts have been observed from almost all confirmed AXPs, convincingly linking these two types of neutron star (Mereghetti, 2008).
+
+Burst activity has been shown to affect the persistent emission and timing characteristics for almost all AXPs, while for SGRs such effects are consistently found only following energetic bursts (Woods et al., 2004; Gavriil et al., 2004, 2006; Woods et al., 2007; Israel et al., 2007; Zhu et al., 2008; Esposito et al., 2008; Gogus et al., 2010; Gonzalez et al., 2010; Gogus et al., 2011a). During the burst active period, the persistent X-ray emission of magnetars has been found to suddenly increase and then rapidly decrease according to an exponential decay that asymptotically approaches the pre-burst active level (Woods & Thompson, 2006; Rea & Esposito, 2011). The spectral and temporal properties of the emission also change during the outburst. For example, the X-ray flux of 1E 2259 + 586 increased by at least a factor \\sim 20 during the same time interval when more than 80 SGR-like bursts were emitted (Woods et al., 2004; Gavriil et al., 2004), and decayed steadily during the next three years to almost the preburst level (Zhu et al., 2008). We report here on the unusual behaviour of the persistent X-ray emission of 1E 1841-045, after its recent burst active period (Barthelmy et al., 2011).
+
+1E 1841-045 was discovered in 1985 as an unresolved _Einstein_ point source at the center of the Kes 73 Supernova Remnant (SNR; Kriss et al., 1985). Later observations with the _Advanced Satellite for Cosmology and Astrophysics_ (_ASCA_) revealed a period of \\sim 11.8 s (Vasisht & Gotthelf, 1997). This spin period was confirmed and a rapid secular spin-down rate of \\dot{P}=4.16\\times 10^{-11} s/s was derived with _Ginga_, _ASCA_, _Rossi X-Ray Timing Explorer_ (_RXTE_), and _BeppoSAX_ observations (Gotthelf et al., 1999, 2002), corresponding to a dipole surface magnetic field of \\sim 7.1\\times 10^{14} G. _Chandra_ observations provided a precise location at R.A.(J2000) = 18{}^{\\rm h}41{}^{\\rm m}19\\fs343, decl.(J2000) = -04\\arcdeg56\\arcmin11\\farcs16 with a 1\\sigma error of 0\\farcs3 (Wachter et al., 2004). The source is on the Galactic Plane at a distance of \\sim 8.5^{+1.3}_{-1.0} kpc (Tian & Leahy, 2008) and with a large interstellar absorption preventing identification of an optical or infrared counterpart (Mereghetti et al., 2001; Durant, 2005). Unlike other magnetar candidates, 1E 1841-045 has a persistent X-ray emission which has remained constant for several decades (Gotthelf et al., 1999; Zhu & Kaspi, 2010).
+
+Recently, Kumar & Safi-Harb (2010) reported the very first SGR-like burst from 1E 1841-045, which triggered the Burst Alert Telescope onboard the _Swift_ satellite (_Swift_/BAT) on 2010 May 6. They find that the burst was associated with a slight softening of the X-ray spectrum and a marginal (\\sim 2\\sigma) increase in the persistent X-ray flux of the source. On 2011 February 8, the _Swift_/BAT detected another burst from 1E 1841-045 (Barthelmy et al., 2011), but the _Swift_/X-ray Telescope (_Swift_/XRT) was unable to monitor the source as its direction was very close to the Sun (Barthelmy et al., 2011). About 10 hours after the BAT trigger, the Gamma-ray Burst Monitor (GBM) onboard the _Fermi Gamma-ray Space Telescope_ (_Fermi_) triggered on another short burst (van der Horst et al., 2011) from the source direction. On 2011 February 9, the _RXTE_ observed 1E 1841-045 for 3 ks during which no additional bursts were detected. Moreover, the pulsed flux level did not change and there were no significant changes in the timing properties (i.e., offsets relative to the long-term rotational ephemeris) of the persistent emission (Gavriil et al., 2011a). GBM detected two short and soft events with locations consistent with 1E 1841-045, on 2011 February 17 (Tierney et al., 2011) and 21. We triggered a \\sim 4 ks _Swift_/XRT Target of Opportunity (ToO) observation on 2011 February 24 to monitor the source persistent X-ray emission. Additionally, to compare the post burst spectral state of the source with its historical behavior, we investigated ten earlier _Swift_/XRT observations with 1E 1841-045 in the field of view since 2008. During 2011 June 16 - July 2 there were 4 more events from 1E 1841-045: two were detected with the _Swift_/BAT (Rowlinson et al., 2011; Melandri et al., 2011), and three with GBM. One event was detected with both instruments, namely the event on 2011 June 23.
+
+In this Letter, we present our study with _Swift_ and _Fermi_/GBM of the temporal and spectral properties of all nine bursts from 1E 1841-045, and the evolution of the persistent emission of the source with _Swift_/XRT. Section 2 describes the data reduction methods, and Section 3 presents our results. We find that the spectral parameters and the unabsorbed flux of the persistent emission did not change significantly since 2008, even during the burst active period, and discuss the significance of our results in Section 4.
+
+## 2 Data reduction
+
+### Swift Data
+
+We used the standard BAT software distributed within HEASoft v6.10 and the latest calibration files to process BAT data. First, we reran the BAT energy calibration task (_bateconvert_) to generate the detector quality map with bad and noisy detectors marked. We used the Bayesian blocks task _battblocks_ to calculate the BAT burst durations (total time, T_{90} and T_{50}1) with 2 ms time resolution in the 15-150 keV energy range. We extracted 2 ms binned, background subtracted, burst light curves in 15-150 keV with _batbinevt_. For the burst spectral analysis, we ran the mask weight task _batmaskwtevt_ with the location of 1E 1841-045. We extracted the standard 80 energy channel spectrum, integrated through the burst total durations, and updated the spectral keywords and the systematic errors. Finally, we generated the response matrix for the spectra with _batdrmgen_, and fit the time-integrated spectra with XSPEC v12.6.0.
+
+Footnote 1: T_{90} (T_{50}) are the times during which 90% (50%) of the burst counts are collected (Kouveliotou et al., 1993)
+
+There are 14 XRT observations of 1E 1841-045, including our ToO. Of these only ten were in Photon Counting (PC) mode, providing the required spatial resolution to reliably extract source counts from the center of Kes 73. For these observations, we extracted the spectra of 1E 1841-045 from the Level 2 event data with the standard grade selection of 0-12 in a circular region centered on the source location with a radius of 15''. We selected the background region carefully using the same radius of the source, within the Kes 73 area (of radius \\sim 2') avoiding X-ray bright areas in Kes 73. We built the exposure map for each observation with _xrtexpomap_. Then we generated the ancillary response files (ARFs) with _xrtmkarf_ for each spectrum with the point-spread function correction. Finally, we regrouped the 1E 1841-045 spectra with a minimum of 20 source counts per bin, and fit the resulting data in XSPEC v12.6.0 using the latest spectral redistribution matrix (RMF, _swxpc0to12s6_20070901v011.rmf_).
+
+### Fermi/GBM data
+
+The GBM locations of the 1E 1841-045 bursts have large statistical uncertainties, indicated by the 1\\sigma error circles in Figure 1. Unfortunately, there are no simultaneous observations with other satellites that could narrow down these error circles, thus we cannot exclude the possibility that these bursts came from other known magnetars in the vicinity or even from a new source. However, the four _Swift_/BAT bursts are well localized (\\sim 1^{\\prime}) at the 1E 1841-045 _Chandra_ position. Since it is rare (only twice before, Ibrahim et al., 2004; Esposito et al., 2011) to have two different nearby magnetar sources emit bursts in the same time period within two weeks from each other, we conclude that it is reasonable to assume that the six GBM bursts are indeed from 1E 1841-045.
+
+We selected the GBM NaI detectors (Meegan et al., 2009) with an angle to the source smaller than 50{}^{\\circ} and not blocked by other parts of the satellite for all six bursts. We only used Time Tagged Event (TTE) data for our analyses, because of their fine temporal and spectral resolution (Meegan et al., 2009). We also searched the entire February data and the interval between June 10 - July 6 for untriggered bursts from 1E 1841-045 using the same algorithm described in Kaneko et al. (2010), and found one additional short burst on 2011 February 17 at 06:13:14 (UT) from the same general direction as 1E 1841-045. Unfortunately, no TTE data were available for this untriggered burst, so it was not included in further analyses. We calculated the T_{90} (T_{50}) durations for each burst in both count and photon space in 8-100 keV and in 2 ms time bins (for a detailed description see Lin et al., 2011). We generated the response files for each detector with the GBM response generator _gbmrsp v1.9_ and analyzed the burst spectra (8-200 keV) with the GBM public software tool RMFIT v3.32 (for a description of this tool see Kaneko et al., 2006).
+
+Footnote 2: [http://fermi.gsfc.nasa.gov/ssc/data/analysis/user/](http://fermi.gsfc.nasa.gov/ssc/data/analysis/user/)
+
+## 3 Results
+
+### Burst Properties
+
+We analyzed here for consistency, in addition to the February and June-July bursts from 1E 1841-045, also the 2010 May 6 _Swift_/BAT trigger reported by Kumar & Safi-Harb (2010). Figure 2 (a-i) exhibits the time profiles of all bursts; these are single or multi-peaked similar to other magnetar candidate bursts. We did not detect any thermal tail emission after the very bright burst in Figure 2(e), as is often observed in bright AXP/SGR bursts (Lenters et al., 2003; Gogus et al., 2011b). The T_{90} durations of the bursts range between 18-140 ms, comparable to other magnetar burst durations (Gogus et al., 2001; Gavriil et al., 2004; Lin et al., 2011). Table 1 (columns 1-5) lists the trigger date, trigger time, the selected NaI detectors (for GBM bursts only), and the durations of all nine bursts.
+
+We fit several models to the burst spectra: a single power-law, Optically Thin Thermal Bremsstrahlung (OTTB), single Black Body (BB), a power law with an exponential cut-off (COMPT), and two BBs. We note that magnetar model motivations for multi-component BBs or Comptonization-type spectra mimicked by COMPT forms, are discussed in detail in Lin et al. (2011). Here we find that a COMPT model can fit all burst spectra except for the faintest one (Figure 2(a)), where the COMPT model parameters can not all be constrained. We fit that burst spectrum with a single BB model, which has one parameter less. This event was analyzed earlier by Kumar & Safi-Harb (2010), who fit the spectrum with three Gaussian functions. However, Kumar & Safi-Harb (2010) used the _Swift_/BAT location to create the response files for their spectral analysis, which placed the source roughly 1{}^{\\prime} away from the accurate _Chandra_ location used in the current analysis. Therefore, their background subtracted spectrum may have been contaminated by the contribution of the SNR Kes 73. This contribution cannot be removed with mask-weighting of the BAT events, and might have led to the appearance of unusual spectral lines in the spectrum.
+
+The brightest burst (Figure 2(e)) has enough statistics to also allow a fit using a two BB model; we used the Castor modified3 Cash-statistic (Cash, 1979) (C-stat) to determine the goodness of fit for each model. This is a modified maximum likelihood estimator which asymptotes to \\chi^{2}, used when there are small numbers of counts/bin (Poisson regime), which is the case for most of the SGR events (especially in the higher energy bins). The C-stat value for the two BB fit (293.8 for 298 dof) is similar to that of the COMPT model fit. The temperature of the hot and cool BB components are 13.1\\pm 1.2 keV and 5.6\\pm 1.1 keV, and the corresponding radii of the emitting areas are 2.1 and 7.9 km, respectively. We also performed a joined fit between BAT and GBM for the common event of 2011 June 23. The model parameters, statistics and burst energetics are listed in Table 1 (columns 6-10). The fluences and E_{\\rm peak} values of the eight bursts that could be fit with the COMPT model range between \\sim 4\\times 10^{-8}-2.9\\times 10^{-7} erg cm{}^{-2}, and \\sim 28-51 keV, respectively.
+
+Footnote 3: heasarc.gsfc.nasa.gov/docs/xanadu/xspec/wstat.ps
+
+### Persistent emission light-curve
+
+We fit the spectra of the persistent emission from 1E 1841-045 with a single power-law model modified by interstellar absorption. When the separation between two XRT observations was very short, we combined the data to improve the statistics (e.g., after the 2010 observations). We noticed that the N_{\\rm H} remained constant (within errors) in all fits. We then fit all XRT observations at the same time with linked N_{\\rm H}, obtaining a value for the latter of 2.40^{+0.12}_{-0.11}\\times 10^{22} cm{}^{-2}. Table 2 lists the observation ID, observation date, exposure time, count rate, power-law index, statistics and unabsorbed flux in 0.5-10 keV for the data sets in PC mode used here. Figure 3 presents the time history of the unabsorbed flux in 0.5-10 keV of all observations.
+
+The unabsorbed flux level was first calculated in 1997 using the _ASCA_ data by Vasisht & Gotthelf (1997), to be 6.3\\times 10^{-11} erg cm{}^{-2} s{}^{-1} (within the same energy range and with the same model). Later Morii et al. (2003) estimated a flux of 6.8\\times 10^{-11} erg cm{}^{-2} s{}^{-1} from the source in 2000, using _Chandra_ observations. Although the _Chandra_ and _XMM-Newton_ observations of 1E 1841-045 could be fit with two components (absorbed BB+PL; Morii et al., 2003; Kumar & Safi-Harb, 2010), the XRT data could not constrain the parameters of a two-component fit. Kumar & Safi-Harb (2010) have also reached the same conclusion.
+
+During the first 200 days of the 1E 1841-045 light curve shown in Figure 3, the XRT flux measurements are compatible (within 2.0\\sigma) with the _Chandra_ historical flux (Figure 3, dotted line) value reported by Morii et al. (2003). After day 800 three of the four XRT measurements deviate between 3.0-5.0\\sigma from this value, indicating a possible increase associated with the source burst activity. However, a power law fit of the entire XRT data set resulted in a positive slope of 0.11\\pm 0.07, indicating an almost constant flux level during the 1400 day interval. Earlier, Kumar & Safi-Harb (2010) reported a marginal persistent flux increase in 1E 1841-045 associated with the SGR-like burst in 2010. We conclude that the current data are insufficient to significantly determine the trend of the persistent source emission.
+
+Finally, we estimated the (weighted) average unabsorbed flux of 1E 1841-045 to be (10.9\\pm 0.6)\\times 10^{-11} erg cm{}^{-2} s{}^{-1} (Figure 3, dashed line); at the source distance of \\sim 8.5 kpc, the average isotropic persistent luminosity of the source is (9.5\\pm 0.5)\\times 10^{35} erg s{}^{-1}.
+
+## 4 Discussion
+
+We have analyzed here all nine bursts from 1E 1841-045 detected during 2010/2011 with _Swift_/BAT and _Fermi_/GBM. We found that their spectral and temporal properties are quite similar to those of typical SGR bursts. The energy released in these bursts ranges between (0.8-25)\\times 10^{38} erg, with a total of \\sim 8\\times 10^{39} erg released in the eight bursts of 2011. Note that these energies are on the low side of SGR bursts (Woods & Thompson, 2006). Moreover,
+
+1E 1841-045 is not an efficient burster: only four bursts were seen in its February 2011 active episode, and another four during 2011 June - July, while prolific SGRs (e.g., \\mathrm{SGR1900+14} or SGR 1806-20) can emit up to thousands of short bursts when active.
+
+One of our intriguing findings is that this low-level burst activity had very low impact on the source persistent emission level, in contrast to the changes associated with such activity observed in almost all AXPs in the past. We note here, however, that a prominent AXP, \\mathrm{4U0142+01}, emitted six X-ray bursts in 2006 and in early 2007, but also showed no remarkable change in its persistent X-ray flux (Gonzalez et al., 2010; Gavriil et al., 2011b). An SGR persistent emission would typically not have been affected by these burst intensity levels (see e.g., Woods et al., 2007). Future XRT observations, in the absence of renewed burst activity, will determine whether the source flux will return to its historic quiescent level.
+
+Large changes in the persistent emission after intense bursting activity have been observed in other magnetar candidates, and are expected on theoretical grounds. Bursting activity is thought to be associated with the release of magnetic stress, triggered either by crust rupturing (Thompson & Duncan, 1995) or magnetospheric instabilities (Lyutikov, 2003). The result should be reconfiguration of the field geometry and/or scattering properties of the magnetosphere (Thompson, Lyutikov & Kulkarni, 2002; Woods et al., 2001), both of which should affect the flux and pulse shape of the persistent emission. Surface heating and enhanced thermal emission are also expected to result from crustal shear or impact of particles due to magnetic reconnection.
+
+The lack of significant flux enhancement in conjunction with bursting in 1E 1841-045 may imply that the fracturing of the neutron star crust (or the magnetospheric instability) in 1E 1841-045 was not a large-scale one, and did not thus have any detectable impact on the longer lasting persistent source properties (including its spin characteristics, see Gavriil et al., 2011a). Another possibility is that the magnetospheric dissipation of the burst energy is largely directed away from the atmospheric zones that spawn the persistent emission.
+
+This publication is part of the GBM/Magnetar Key Project (NASA grant NNH07ZDA001-GLAST, PI: C. Kouveliotou). E.G. and Y.K. acknowledge the support from the Scientific and Technological Research Council of Turkey (TUBITAK) through grant 109T755. ALW acknowledges support from a Netherlands Organisation for Scientific Research (NWO) Vidi Grant. MGB acknowledges support from NASA through grant NNX10AC59A. RAMJW acknowledges support from the European Research Council via Advanced Investigator Grant no. 247295. A.v.K. was supported by the Bundesministeriums fur Wirtschaft und Technologie (BMWi) through DLR grant 50 OG 1101.
+
+[MISSING_PAGE_FAIL:11]
+
+Lenters G. T., et al., 2003, ApJ, 587, 761
+
+* () Lin L. et al., 2011, ApJ, in press, arXiv:1107.2121
+
+* () Lyutikov M. 2003, MNRAS, 346, 540
+
+* () Meegan C., et al., 2009, ApJ, 702, 791
+
+* () Melandri A., et al., 2011, GCN Circular 12103
+
+* () Mereghetti S. & Stella L., 1995, ApJ, 442, L17
+
+* () Mereghetti S. et al., 2001, MNRAS, 321, 143
+
+* () Mereghetti S., 2008, A&A Rev., 15, 225
+
+* () Morii M. et al., 2003, PASJ, 55, L45
+
+* () Gotthelf E. V., Vasisht G., & Dotani T., 1999, ApJ, 522, L52
+
+* () Gotthelf E. V. et al., 2002, ApJ, 564, L31
+
+* () Rea N., & Esposito P. 2011, High-Energy Emission from Pulsars and their Systems, Astrophysics and Space Science Proceedings, ISBN 978-3-642-17250-2. Springer-Verlag Berlin Heidelberg, 2011, p. 247, 247
+
+* () Rowlinson A., et al., GCN Circular 12079
+
+* () Thompson C. & Duncan R. C., 1995, MNRAS, 275, 255
+
+* () Thompson C., Lyutikov M. & Kulkarni S. R., 2002, ApJ, 574, 332
+
+* () Tian W. W. & Leahy D. A., ApJ, 677, 292
+
+* () Tierney D. et al., 2011, GCN Cir. 11747
+
+* () van der Horst A. J. et al., 2011, GCN Cir. 11684
+
+* () Vasisht G. & Gotthelf E. V., 1997, ApJ, 489, L129
+
+* () Wachter S. et al., 2004, ApJ, 615, 887
+
+* () Woods P. M., et al., 2001, ApJ, 552, 748
+
+* () Woods P. M., et al., 2004, ApJ, 605, 378
+
+* ()* () Woods P. M., Thompson C., 2006, in Compact Stellar X-ray Sources, eds. W.H.G. Lewin & M. van der Klis, Cambridge Astrophysics Series, 39, P.547
+
+* () Woods P. M., et al., 2007, ApJ, 654, 470
+
+* () Zhu W., et al., 2008, ApJ, 686, 520
+
+* () Zhu W. & Kaspi V. M., 2010, ApJ, 719, 351
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c c c c c c} \\hline \\hline \\multicolumn{1}{c}{ Date} & Trigger time & NaI & T_{90}a  & T_{50}a  & Spectralb  & E_{\\rm peak}b  & Stat/dof.b,c  & Fluenceb  & E_{\\rm iso}d  \\\\  & UT & Det. & (ms) & (ms) & Index & (keV) & & (10^{-8}erg cm{}^{-2}) & (10^{38}erg) \\\\ \\hline
+
+10/05/06 & 14:37:44.899 & - & 20\\pm 4 & 12\\pm 4 & - & 9.2^{+0.8}_{-0.9}e  & 53.01/56 & 0.88^{+0.04}_{-0.27} & 0.76 \\\\
+
+11/02/08 & 19:17:27.739 & - & 136\\pm 18 & 76\\pm 6 & 0.34^{+0.49}_{-0.44} & 40\\pm 2 & 44.44/55 & 7.5^{+0.2}_{-0.6} & 6.5 \\\\
+
+11/02/09 & 05:14:25.944 & 0, 1, 2 & 36^{+22}_{-28} & 10\\pm 2 & -0.19^{+0.45}_{-0.44} & 51^{+5}_{-4} & 201.06/201 & 5.1\\pm 0.4 & 4.4 \\\\
+
+11/02/17 & 07:55:55.295 & 0, 1, 6, 9 & 76^{+16}_{-18} & 42\\pm 4 & 0.44^{+0.49}_{-0.44} & 45^{+2}_{-2} & 305.07/270 & 8.4\\pm 0.5 & 7.3 \\\\
+
+11/02/21 & 00:41:16.252 & 0, 1, 2, 5 & 30^{+16}_{-8} & 14\\pm 4 & 0.11^{+0.29}_{-0.27} & 41\\pm 2 & 294.24/269 & 10\\pm 1 & 8.7 \\\\
+
+11/06/16 & 21:09:08.430 & 10, & 11 & 42\\pm 4 & 20\\pm 2 & -0.90^{+0.20}_{-0.20} & 28\\pm 2 & 158.09/130 & 29\\pm 1 & 25 \\\\
+
+11/06/23 & 14:41:42.764 & 8, 11 & 26^{+16}_{-4} & 12\\pm 4 & -0.11^{+0.27}_{-0.26} & 40\\pm 2 & 130.67/133 & 19\\pm 1 & 16 \\\\
+
+11/06/23{}^{d} & 14:41:42.674 & - & 20\\pm 4 & 10\\pm 2 & 0.40^{+0.83}_{-0.74} & 28^{+3}_{-4} & 44.55/55 & 12^{+1}_{-2} & 10 \\\\
+
+11/06/23{}^{g} & BAT-GBM & - & - & - & 0.14^{+0.38}_{-0.38} & 37\\pm 2 & 100.01/189 & 17\\pm 1 & 15 \\\\
+
+11/06/25 & 23:16:03.175 & 9, 11 & 18^{+10}_{-4} & 8\\pm 4 & -0.04^{+0.37}_{-0.35} & 37\\pm 2 & 107.67/132 & 11\\pm 1\\

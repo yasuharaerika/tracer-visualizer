@@ -1,0 +1,149 @@
+###### Abstract
+
+Modern inference schemes for the neutron star equation of state (EoS) require large numbers of stellar models constructed with different EoS, and these stellar models must capture all the behavior of stable stars. I introduce termination conditions for sequences of stellar models for cold, non-rotating neutron stars that can identify all stable stellar configurations up to arbitrarily large central pressures along with an efficient algorithm to build accurate interpolators for macroscopic properties. I explore the behavior of stars with both high- and low-central pressures. Interestingly, I find that EoS with monotonically increasing sound-speed can produce multiple stable branches (twin stars) and that large phase transitions at high densities can produce stable branches at nearly any mass scale, including sub-solar masses, while still supporting stars with M>2\\,M_{\\odot}. I conclude with some speculation about the astrophysical implications of this behavior.
+
++
+
+Footnote †: journal: E-phart-Escuela-NUTO-2020
+
+## 1 Introduction
+
+Neutron stars (NSs) are extremely dense stellar remnants typically observed with masses between 1-2 M_{\\odot} with radii \\sim 12 km (Legred et al., 2021). As such, NSs reach characteristic densities1\\langle\\rho\\rangle=3M/4\\pi R^{3}\\approx 5\\cdot 10^{14} g/cm{}^{3}, roughly twice the density of atomic nuclei (nuclear saturation density: n_{\\rm sat}\\approx 0.16 fm{}^{-3} or \\rho_{\\rm sat}=m_{n}n_{\\rm sat}\\approx 2.8\\times 10^{14} g/cm{}^{3} where m_{n} is the nucleon rest-mass). Therefore, many-body nuclear interactions play a key role in NS structure. At the same time, NSs can reach compactness C=M/R\\sim 1/4, which is close to the upper limit expected from a Schwarzschild Black Hole (BH): C_{\\rm Sch}=1/2. Additionally, the speed of sound (c_{s}) within the NS core almost certainly exceeds 1/\\sqrt{3}(Legred et al., 2021) and therefore reaches an appreciable fraction of the speed of light. Clearly, then, relativistic effects should also be significant.
+
+Footnote 1: I write expressions in units where G=c=1 but provide explicit units when relevant.
+
+The structure of cold, non-rotating NSs is governed by the Tolman-Oppenheimer-Volkoff (TOV) equations (Oppenheimer and Volkoff, 1939; Tolman, 1939)2
+
+Footnote 2: It is common practice to solve the TOV equations in a slightly different form, sometimes called the (log)enthalpy formulation (Lindblom, 2014). See also Kastaun and Ohme (2024) for a recent review of numerical techniques. I find that the enthalpy formulation provides a factor of \\sim 5-10 speedup compared to the “standard” formulation described above.
+
+\\frac{dm}{dr}=4\\pi r^{2}\\varepsilon  \\frac{dp}{dr}=-\\frac{m\\varepsilon}{r^{2}}\\left(1+\\frac{p}{ \\varepsilon}\\right)\\left(1+\\frac{4\\pi r^{3}p}{m}\\right)\\left(1-\\frac{2m}{r} \\right)^{-1}  where p is the pressure, \\varepsilon the energy density, r the radial coordinate, and m the enclosed gravitational mass (distinct from the enclosed rest-mass as it includes the gravitational binding energy). Because NSs are believed to be supported primarily by degeneracy pressure, these equations are closed with a barytropic equation of state (EoS) that specifies p as a function of \\varepsilon.3 Finally, the TOV equations are solved with boundary values in the center and at the surface of the star:
+
+Footnote 3: The EoS can also be specified in terms of other thermodynamic variables, like the number density (n), the chemical potential (\\mu=d\\varepsilon/dn=(\\varepsilon+p)/n), or the sound-speed (c_{s}^{2}=dp/d\\varepsilon).
+
+\\lim_{r\\to 0^{+}}\\frac{dp}{dr}=0\\quad\\text{(center)}  \\lim_{r\\to R^{-}}p=0\\quad\\text{(surface)} The only remaining free parameter is the central pressure (p_{c}), and one can construct relationships between, e.g., the radius (R) and gravitational mass (M=m(R)) by repeatedly solving for a sequence of p_{c}. One is often instructed to continue this process until a local maximum in M is observed, which corresponds to a loss of stability (Bardeen et al., 1966; Harrison et al., 1965; Sorkin, 1981, 1982). Because only stable stellar configurations can persist in nature, the sequence of stellar models is terminated at that point.
+
+The fact that cold, non-rotating NSs are bounded below a maximum mass (M_{\\rm TOV}) is often referred to as the TOV limit, and the stable stellar models that exist with dM/dp_{c}>0 and p_{c} less than the central pressure at the TOV limit (p_{\\rm TOV}) are called a _stable branch_ of the M-R curve.
+
+However, in general, the EoS can support multiple stable branches. Famously, EoS with strong phase transitions can yield stellar sequences which lose stability when p_{c} reaches the onset of the phase transition and regain stability when p_{c} is slightly above the end of the phase transition (Essick et al., 2023). This can lead to multiple stars with the same M but different R (_twin stars_). Fig. 1 shows a few examples. See, e.g., Essick et al. (2023); Alford et al. (2005, 2013) and Mroczek et al. (2023) for more discussion.
+
+Importantly, the naive termination condition for the TOV sequence fails to capture the physics of phase transitions (i.e., the presence of twin stars). It is clear, then, that one must continue to solve the TOV equations for p_{c} above the first point where dM/dp_{c}=0. This begs the question of when, if ever, one can be con fident that they have reached the end of the final stable branch. This letter provides such a termination condition based on the stability of high-density stars: i.e., NSs with p_{c} larger than the p_{c} at which the dM/dp_{c}=0 and dR/dp_{c}>0 (n=1 radial mode loses stability) are almost certainly unstable. This criterion automatically detects the end of all stable NS branches for EoS that support massive stars (M_{\\rm TOV}\\gtrsim 2\\,M_{\\odot}).4
+
+Footnote 4: See Appendix A for counter-examples with EoS that do not support massive stars.
+
+Additionally, I provide an efficient algorithm to construct stellar sequences. Modern inference schemes for the EoS can require 10^{4}-10^{6} EoS proposals. Even modest reductions in the number of stellar models required per EoS can result in significant overall savings, and my algorithm achieves an order of magnitude reduction in computational cost per EoS compared to other algorithms with, e.g., uniform grid placements in \\ln p_{c}. Accurate interpolators for macroscopic relations can be achieved in O(500) ms/EoS on a modern laptop, making it possible to analyze large EoS sets with minimal computational resources in only a few hours.
+
+## 2 TOV Termination Conditions
+
+As shown in Fig. 1, the high-density TOV sequence always approaches a fixed point
+
+M_{\\odot}\\equiv\\lim_{p_{c}\\to\\infty}M  through a counterclockwise spiral in the M-R plane.5 The location of the spiral depends on the EoS, but it always contains many local extrema in M. The relevant "static" stability criteria (Bardeen et al., 1966; Harrison et al., 1965; Sorkin, 1981, 1982) can be summarized as follows: a M-R curve that bends counterclockwise corresponds to a mode losing stability, while one that bends clockwise corresponds to a mode regaining stability. As discussed extensively in Harrison et al. (1965), the fact that dM/dp_{c}>0 for some parts of the spiral does not guarantee stability, and instead each subsequent extremum of M within the spiral corresponds to another stellar eigenmode becoming unstable in order of increasing number of radial nodes (n). Harrison et al. (1965) even derives analytic expressions for the M-p_{c} curve when c_{s}^{2} is a constant at large p: M is a damped-sinusoid in \\ln p_{c}, and there is an infinite sequence of branches where dM/dp_{c}>0 above p_{\\rm TOV}.
+
+Footnote 5: Similar behavior can also appear in Newtonian gravity (Bonnar, 1956; Ebert, 1955).
+
+Fig. 1 shows the behavior of M-R, M-\\Lambda (tidal deformability), and M-p_{c} for several EoS with different high-density behavior. Annotations label which modes change stability at each local extremum in M. I discuss some of the qualitative differences in these M-R curves and their relationship to the high-density EoS below.
+
+For EoS that support massive stars (M_{\\rm TOV}\\gtrsim 2\\,M_{\\odot}) and at very large p_{c}, I find that once the first harmonic (n = 1) becomes unstable, the star can never become completely stable again. The n = 1 mode may momentarily restabilize (in particular, this occurs if a high-p phase transition caused n = 1 to lose stability and c_{s}^{2}=1 above the transition; panel E of Fig. 1), but the fundamental mode (n = 0) will not restabilize even if the EoS is causal (c_{s}^{2}=1). Fig. 1 shows several such extensions. The red curve in the top row extends the orange curve with c_{s}^{2}=1 at pressures above the p_{c} at which n = 1 loses stability (p_{n=1}) in the orange curve. The light-blue curve in the bottom row modifies the orange curve from the top row by introducing a 1^{\\rm st}-order phase transition (which causes n = 1 to lose stability) and has c_{s}^{2}=1 at higher densities (which causes n = 1 to regain stability, but n = 0 remains unstable). Appendix A discusses this in more detail.
+
+In the presence of twin stars, one may see several extrema in M corresponding to n = 0 losing and regaining stability. Nevertheless, at p_{c} higher than the p_{c} where n = 0 becomes unstable "for good," the next mode to become unstable is n = 1. This corresponds to a local minimum in M with dR/dp_{c}>0. At this point, additional extrema never correspond to n = 0 regaining stability. Said another way, while n = 0 can regain stability at high p_{c} when n = 1 is still stable, it cannot once n = 1 is unstable for massive NSs. If one detects an unstable n = 1, then, this signals the final spiral towards M_{\\odot} and that all stars with larger p_{c} are unstable.
+
+This criterion is motivated by a survey of possible high-density extensions to reasonable EoS (Fig. 1). I do not know of a general proof, and counterexamples exist for low-C stars: e.g., white dwarfs (WD; Baym et al., 1971), strange dwarfs (Alford et al., 2017; Goncalves et al., 2023; Di Clemente et al., 2024), and EoS with M_{\\rm TOV}\\lesssim 1.0\\,M_{\\odot} (Appendix A). The criterion is physically reasonable, though, as restabilization at p_{c}\\geq p_{n=1} is only possible if c_{s}^{2} increases dramatically and is associated with an increase in C. EoS with large M_{\\rm TOV} already have large c_{s}^{2}, and they are nearly as compact as BHs. Therefore, restabilization at p_{c}\\geq p_{n=1} does not seem possible for EoSs with large M_{\\rm TOV} because both c_{s}^{2} and C are bounded from above by causality and BH spacetimes (formation of a trapped surface), respectively.
+
+At low p_{c}, one also expects a minimum NS mass associated with n = 0 regaining stability after the WDbranch loses stability (Harrison et al., 1965). This manifests as a local minimum in M with dR/dp_{c}<0. Typically, this minimum occurs at p_{c} low enough to be within the NS crust (i.e., the whole star is "crust"), where the physics is relatively well understood and one does not have to worry about exotic behavior.
+
+## 3 Adaptive TOV Sequences
+
+Given stopping criteria for the TOV sequence at both high and low p_{c}, one must determine how to efficiently construct an array of p_{c} that yields useful M-R and M-\\Lambda curves. The following adaptive algorithm accomplishes this by placing additional stellar models only where errors in the interpolated curves are large.
+
+The algorithm operates via recursive bisection. Given an initial min- and max-p_{c}, along with corresponding stellar models, it generates a new p_{c} (mid-p_{c}, the geometric mean of min- and max-p_{c}), solves for the associated stellar model, and checks the accuracy of a linear interpolator (based on the min- and max-p_{c}) at mid-p_{c}.6 If the interpolator passes a relative error tolerance, the algorithm terminates and returns the stellar models at min-, mid-, and max-p_{c}. Otherwise, it returns the union of recursive call on the two segments defined from min- to mid-p_{c} and from mid- to max-p_{c}. In this way, additional models are only generated where the corresponding interpolator has relatively poor performance. Compared to a grid with models placed uniformly in \\ln p_{c}, I see as much as a factor of \\sim 10 reduction in the number of models needed to achieve the same relative interpolator error at all points along M-R curves.
+
+Footnote 6: More complicated interpolators could be used, but the speed and simplicity of linear interpolation work well in practice.
+
+This algorithm converges best when the function is reasonably smooth between min- and max-p_{c}, although it reliably detects kinks and bends as well. As such, it can be seeded with an initial coarse grid in p_{c} and iteratively applied to each segment.7
+
+Footnote 7: The initial grid could contain only two points, though, in which case the adaptive grid would be constructed throughout the entire domain of stellar models.
+
+After the recursive routine terminates, the algorithm checks whether the termination conditions at high p_{c} (n = 1 mode loses stability) and low p_{c} (n = 0 mode regains stability) are observed within the existing set of stellar models.8 If not, it extends the range of p_{c} geometrically as needed and calls the recursive routine on the new segments. This is repeated until the termination conditions are observed (or the algorithm reaches values of p_{c} larger than any p recorded within the tabulated EoS).
+
+Footnote 8: Importantly, the algorithm is intended to work for NS branches and relies on the user to seed it with an appropriate initial grid of pressures.
+
+Importantly, when extending the set of stellar models to lower p_{c}, the algorithm only looks for the termination condition within the new set of low-p_{c} models. Otherwise, it may prematurely exit if there are multiple stable branches at higher p_{c}. Fig. 1 shows such a EoS with a phase transition at low densities (just above n_{\\rm sat}) that yields a short unstable branch at M\\sim 0.25\\,M_{\\odot}. Again, to reliably identify the presence of such features, one must instantiate the search for the end of low-p_{c} stable branches at n_{c}\\lesssim n_{\\rm sat}, often well within the crust.
+
+This issue does not arise when extending the sequence to higher p_{c} as long as one focuses on the range of p_{c} relevant for NSs (p_{c}\\gtrsim MeV/fm{}^{3}) and stays well above what is relevant for WDs (p_{c}\\sim 6\\times 10^{-7} MeV/fm{}^{3}).
+
+In principle, this algorithm could be instantiated with a single p_{c} and rely on the extension prescriptions to both higher and lower p_{c}. However, the geometric expansion _de facto_ results in less-well-optimized grid placement than allowing the adaptive algorithm to choose where to add more grid points throughout a wider initial range. I find that beginning with a reasonable initial guess for the min- and max-p_{c} requires O(10\\%) fewer stellar models compared to relying only on the geometric expansion.
+
+Altogether, my implementation (Essick, 2024) requires O(3) ms/model on a modern laptop (3 GHz 11th Gen Intel i7-1185G7). Reliable interpolators for M-R can be constructed with with \\sim100-150 models (interpolators for M-\\Lambda require more points; see discussion below), yielding an runtime of \\lesssim O(500) ms/EoS.9
+
+Footnote 9: It takes longer to read the EoS table from and write the TOV solutions to disk.
+
+However, a significant fraction of the stellar models produced have low p_{c} (large R and \\Lambda). If one is only interested in, e.g., stars with M\\gtrsim 0.5\\,M_{\\odot}, then many of the models at lower p_{c} can be skipped. The reduced range may need \\lesssim 50 models for accurate interpolation, but this requires user expertise to guarantee that min-p_{c} is chosen appropriately.
+
+Finally, solving for only (M, R) takes O(3) ms/model whereas solving for (M, R, \\Lambda) takes O(6) ms/model. Additionally, the adaptive grid often requires fewer p_{c} to converge for just M-R compared to M-\\Lambda. The difference can be as large as a factor of \\sim5, but more commonly is a factor of \\lesssim 2. As such, it is not uncommon to find a combined factor of several speedup when only solving for (M, R). One might achieve a net speedup by first solving for (M, R) with a coarse interpolator to identify the relevant range of p_{c} and then re-solving with a finer resolution for (M, R, \\Lambda) only within the relevant range. This may be particularly helpful if some EoS will be discarded based on information available from the M-R curve, like M_{\\rm TOV}. In this case, one would never have to solve for M-\\Lambda for some EoS. However, I leave a precise quantification of the potential speedup to future work.
+
+Equipped with this algorithm for rapid and reliable TOV sequences, I now explore exotic behavior at both low- and high-p_{c}.
+
+## 4 Exotic low-density behavior
+
+As briefly discussed before, the EoS can support multiple stable branches at low p_{c} while still matching _ab initio_ theory (Keller et al., 2023) at n\\lesssim n_{\\rm sat}, and similar behavior has been reported elsewhere (see, e.g., Category IV EoSs in Christian et al., 2018). In particular, there can be a phase transition just above n_{\\rm sat} that is consistent with astrophysical observations, which currently allow phase transitions (and multiple stable branches) at M\\lesssim M_{\\odot} and/or M\\gtrsim 2\\,M_{\\odot}(Legred et al., 2021; Essick et al., 2023). In fact, although far from being certain, if a large slope parameter at n_{\\rm sat} (L\\gtrsim 100\\,{\\rm MeV}) is observed experimentally, such a phase transition just above n_{\\rm sat} could actually be preferred by current observations (Essick et al., 2021, 2020).
+
+Fig. 1 shows an example of such an EoS. Often, small R(1.4\\,M_{\\odot}) are associated with this behavior; only the EoS with a low-p phase transition supports R(1.4\\,M_{\\odot})<10\\,{\\rm km} in this (admittedly small) sample.
+
+## 5 Exotic high-density behavior
+
+Fig. 1 also shows various high-density behavior, including stiff (c_{s}^{2}\\sim 1) and soft (c_{s}^{2}\\sim 1/3) EoS both with and without phase transitions. All stellar sequences eventually end in a counterclockwise spiral. However, the path by which the high-density models enter this spiral can vary. I focus on EoS that approximately satisfy current observations constraints (i.e., follow \\chiEFT at low densities and have R(1.4\\,M_{\\odot})\\sim 12.5\\,{\\rm km}, M_{\\rm TOV}\\gtrsim 2\\,M_{\\odot}). See Appendix A for discussion of more general behavior.
+
+The vanilla behavior for EoS with M_{\\rm TOV}\\gtrsim 2\\,M_{\\odot} is as follows: {\\rm n}=0 becomes unstable, then M decreases and enters a spiral. The spiral is always centered on M_{\\odot}<M_{\\rm TOV}, and the M-R curves never cross themselves (i.e., _identical_ twin stars are not physical). It is interesting that EoS with c_{s}^{2}\\sim 1 for p\\sim p_{\\rm TOV} can produce R_{\\rm TOV} comparable to (and smaller than!) their light-ring (R_{\\rm LR}=3M). This could create a (small) resonating cavity like those invoked to motivate searches for gravitational-wave echoes (Longo Micchi et al., 2021; Oshita and Afshordi, 2019).
+
+The presence of twin stars only moderately complicates this behavior: {\\rm n}=0 can regain stability, and the second stable branch can, but does not have to, reach higher M than the first stable branch. Again, later stable branches with c_{s}^{2}\\sim 1 can terminate near R_{\\rm LR}. See Alford et al. (2013) and Christian et al. (2018) for categorization schemes for twin-star branches.
+
+If a phase transition occurs at p>p_{\\rm TOV}, it can still cause a change in stability. However, {\\rm n}=1 loses and regains stability rather than {\\rm n}=0. In this case, the star as a whole remains unstable (panel E in Fig. 1).
+
+Counter to claims made in the literature, it is also possible to generate twin stars _without_ a discontinuity or decrease in c_{s}^{2} (Fig. 2). It is well-known that EoS with 1*-order phase transitions, either with mixed phases (Han et al., 2019; Glendenning and Kettner, 2000; Schertler et al., 2000; Alvarez-Castillo and Blaschke, 2015) or without (e.g., Alford et al., 2013), can support twin stars. However, all these EoS contain non-monotonic c_{s}^{2}, and c_{s}^{2} decreases (often sharply) at the onset of the phase transition. Instead, I find that even EoS with monotonically increasing c_{s}^{2} can produce twin stars.10 This phenomenology is difficult (but not impossible!) to achieve while satisfying current observational constraints (panel B in Fig. 1). Relaxing the requirement that M_{\\rm TOV}\\gtrsim 2\\,M_{\\odot} allows a much wider range of EoS with monotonic c_{s}^{2} to produce twin stars. In Fig. 2, all EoS have c_{s}^{2} that monotonically increase with \\varepsilon and correspondingly smooth p(\\varepsilon). Nevertheless, rapid increases in c_{s}^{2} at high densities can support twin stars even though c_{s}^{2} does not decrease at the end of the first stable branch.
+
+Footnote 10: For these Eqs, c_{s}^{2} behaves as one might expect for a 2{}^{\\rm nd}-order phase transition.
+
+Finally, phase transitions at high p with large latent energies can generate stable branches with M\\ll M_{\\rm TOV} and R\\ll R_{\\rm TOV} if c_{s}^{2}\\sim 1 beyond the transition (Figs. 1 and 3). These stars can have central pressures much higher than p_{\\rm TOV}, often \\gtrsim{\\rm GeV/fm^{3}}. I will refer to them as high-p_{c} objects, or HiPOs. Without sufficient exploration of high-p_{c} TOV solutions, these branches could have easily been missed (i.e., there is a long unstable branch before the sequence regains stability).
+
+HiPO branches appear to be common if c_{s}^{2}\\sim 1 is allowed at large p. In fact, it may be possible to extend most EoS that satisfy astrophysical constraints with this type of high-density behavior, and recent proposals for how to incorporate theoretical predictions from perturbative quantum chromodynamics (pQCD; Komoltsev and Kurkela, 2022; Komoltsev et al., 2023) invoke EoS like these. One can also tune the high-p EoS to place M_{\\odot} at nearly any value \\lesssim M_{\\rm TOV}. Reducing either the latent energy or density at which c_{s}^{2}\\to 1/3 tends to increase M_{\\odot} and decrease the extent of the stable branch. Fig. 3 shows the typical behavior.
+
+It has not been previously shown that such stars can reach sub-solar masses, although Christian et al. (2018) would classify HiPOs as Category II EoS, and Alford et al. (2013) would call them Type D ("disconnnected"). Furthermore, one may be concerned that such EoS require large enough latent energies that their pressures are incompatible with predictions from pQCD (p\\sim 4\\,{\\rm GeV/fm^{3}} at \\varepsilon\\sim 12.5\\,{\\rm GeV/fm^{3}}; Komoltsev et al. 2023). However, Fig. 3 and Sec. 6 show that such EoSs can be compatible with pQCD, although matching pQCD does limit the lowest HiPO masses to \\gtrsim 0.5\\,M_{\\odot}.
+
+## 6 Summary
+
+Based on the stability of dense stars, I introduce improved termination conditions for sequences of stellar models. Together with an efficient algorithm to construct reliable interpolators, I explored the types of behaviors observed at low- and high-p_{c}. Surprisingly, I find that
+
+* an EoS can support twin stars even though c_{s}^{2} always increases monotonically, and
+
+* large phase transitions at high p can produce stable (HiPO) branches at much smaller (M, R) than the TOV limit with p_{c} near what is directly accessible with pQCD.
+
+Both behaviors are possible while maintaining M_{\\rm TOV}\\gtrsim 2\\,M_{\\odot} and reasonable radii. Their existence shows that more care may be needed in the literature11 when making claims that, e.g., the presence of twin stars robustly implies the presence of a phase transition (which manifests as a non-monotonic c_{s}^{2}) or that the presence of a sub-solar mass object with small \\Lambda (observationally indistinguishable from a BH with \\Lambda_{\\rm BH}=0) is clear evidence for sub-solar mass BHs (Cresimbeni et al., 2024; Golomb et al., 2024). Instead, twin stars near M_{\\rm TOV} do not require c_{s}^{2} to decrease, and there can be stable NS branches with \\Lambda\\sim O(10) and M\\lesssim M_{\\odot}.12
+
+Footnote 12: As such, more care is also warranted with statements that p>p_{\\rm TOV} is both “unobserved and unobservable” (Essick et al., 2023), as the presence and/or absence of such branches directly constraints the high-p EoS.
+
+That being said, even if HiPO branches exist, the range of masses a single EoS can support is limited. While it may be possible to produce an EoS that matches the mass of any individual object with \\Lambda\\sim 0, it may be difficult to explain the observation of a population of compact objects over a range of M. Alternative explanations would not be ruled out, though, including complex dark sectors that support "mirror stars" (Hippert et al., 2022).
+
+Taking the HiPO branches at face value, let us consider how one might form such a star dynamically. The jump from the "normal" NS branch (p<p_{\\rm TOV}) to the HiPO branch is in many ways analogous to the jump from the WD branch to the NS branches. There is a reduction in the number of particles (N) within the star13
+
+Footnote 13: See the discussion of “pumping up the central density” in Harrison et al. (1965).
+
+N=\\int\\limits_{0}^{R}dr\\frac{4\\pi r^{2}n}{\\sqrt{1-2m/r}}  implying that a star collapsing from M_{\\rm TOV} to the HiPO branch would have to shed mass, as much as O(1)\\,M_{\\odot}. This could happen in a process analogous to a core-collapse supernova (CCSN),14 although it is unclear whether the HiPO branch could actually launch a shock in the same way that a proto-NS is thought to within CCSN. The infalling matter could overwhelm the HiPO branch and cause direct collapse to a BH. Also, Fig. 3 shows that some HiPO branches have R\\sim 2M_{\\rm TOV}, meaning that the star would have to shed a significant amount of energy within the dynamical timescale of the collapse to avoid forming a trapped surface. Detailed simulations will likely be needed to resolve these questions.
+
+Footnote 14: See also quark nova (Ouyed et al., 2002; Jaikumar et al., 2007), which similarly posit a transition from a NS to a more compact strange star (but at much lower densities), and discussion of “QCD-phase transitions” as an explosion mechanism for CCSN (Heinimann et al., 2016).
+
+Interestingly, if one assumes the rest-mass per particle is the same on both the normal and HiPO branches, essentially all of the HiPO branches are less bound per particle than the normal branch ((Nm_{n}-M)/N is smaller). However, if the particles produced in the phase transition instead have a rest-mass comparable to the chemical potential at the onset of the transition (\\mu_{\\rm onset}\\sim 1.3m_{n} in Fig. 3, not dissimilar to some excited baryonic states; Workman et al. 2022) and that most of the particles in HiPOs are of the exotic type, then the HiPO branch can be much more tightly bound per particle than any nor mal NS. This is, again, analogous to the way that WDs collapse to NSs: the electron is lighter than a nucleon, and NSs are more tightly bound than WDs.
+
+Additionally, while Fig. 3 shows that HiPOs with masses as low as 0.5\\,M_{\\odot} can be compatible with pQCD, the latent energy achievable may also be limited by the degeneracy pressure of the new particle. That is, high densities of degenerate particles still contribute some degeneracy pressure (a lower limit on the partial pressure), and this imposes an upper limit on the allowed latent energy before the total pressure beings to increase significantly. I leave a precise quantification to future work.
+
+Finally, taking the collapse scenario seriously, I estimate the total amount of energy that would be released as the difference between the initial and final states. Some (very) rough bounds can be set by assuming that the rest-mass from the difference in particle numbers between the TOV star and the HiPO branch is radiated as nucleons or that no rest-mass is radiated:
+
+M_{\\rm TOV}-(M+(N_{\\rm TOV}-N)m_{n})\\leq\\Delta E\\leq M_{\\rm TOV}-M 
+
+Depending on the high-p EoS, this yields \\Delta E\\sim 0.2-0.6\\,M_{\\odot}\\sim 10^{53}-10^{54}\\,\\rm ergs, which is larger than typical CCSN, but only by a few orders of magnitude.
+
+It may be plausible, then, that a subpopulation of electromagnetic transients could in fact be the collapse from normal NSs to HiPOs. The ejected mass would be considerably lower than for CCSN, though, as there is much less initial stellar material. However, it may have a very large kinetic energy. Additionally, the ejected mass would likely be very neutron rich, which may yield light-curves closer to a kilonova than a CCSN (faster decay rate, dimmer, and redder as radiation may be trapped by the high-opacity from r-process elements). The rate of such events could be quite low, though, as not all NSs are likely to undergo this process.
+
+I am deeply indebted to Chris Matzner, Bob Wald and Daniel Holz for discussions and suggested reading during the preparation of this manuscript. I also thank David Curtin and Janosz Dewberry for helpful discussions.
+
+R.E. is supported by the Natural Sciences & Engineering Research Council of Canada (NSERC) through a Discovery Grant (RGPIN-2023-03346).
+
+Implementations of these algorithms are available in universality(Essick, 2024). This study would not have been possible without the following software: numpy(Harris et al., 2020), scipy(Virtanen et al., 2020), and matplotlib(Hunter, 2007).

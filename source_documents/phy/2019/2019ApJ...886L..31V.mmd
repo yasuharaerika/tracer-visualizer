@@ -1,0 +1,145 @@
+###### Abstract
+
+The formation of low-mass X-ray binaries (LMXBs) is an ongoing challenge in stellar evolution. The important subset of LMXBs are the binary systems with a neutron star (NS) accretor. In NS LMXBs with non-degenerate donors, the mass transfer is mainly driven by magnetic braking. The discrepancies between the observed mass transfer (MT) rates and the theoretical models were known for a while. Theory predictions of the MT rates are too weak and differ by an order of magnitude or more. Recently, we showed that with the standard magnetic braking, it is not possible to find progenitor binary systems such that they could reproduce - at any time of their evolution - most of the observed persistent NS LMXBs. In this _Letter_ we present a modified magnetic braking prescription, CARB (Convection And Rotation Boosted). CARB magnetic braking combines two recent improvements in understanding stellar magnetic fields and magnetized winds - the dependence of the magnetic field strength on the outer convective zone and the dependence of the Alfven radius on the donor's rotation. Using this new magnetic braking prescription, we can reproduce the observed mass transfer rates at the detected mass ratio and orbital period for all well-observed to-the-date Galactic persistent NS LMXBs. For the systems where the effective temperature of the donor stars is known, theory agrees with observations as well. methods: numerical -- binaries: general -- stars: magnetic field -- stars: evolution -- X-rays: binaries +
+
+Footnote †: journal: ApJL
+
+0000-0002-8862-877X]Kenny X. Van
+
+0000-0002-3277-347X]Natalia Ivanova
+
+## 1 Introduction
+
+Understanding the evolution of stars in binary systems relies heavily on the adopted laws of angular momentum loss which affect the change in orbital separation. One of the ways to lose angular momentum in a binary system is through magnetic braking (MB) (Verbunt & Zwaan, 1981). In this concept, the donor loses its angular momentum through a magnetized wind, and then, through tidal friction, replenishes the donor's angular momentum using the orbital angular momentum. MB is the dominant angular momentum loss mechanism in binaries wider than a few hours in orbital period, whereas gravitational radiation dominates in close binaries (Rappaport et al., 1983). More recently, circumbinary disks have been shown to effectively remove angular momentum and reproduce ultra compact binaries (Ma & Li, 2009a). Unfortunately, circumbinary disks appear to be rare in LMXBs and there are significant uncertainties in the disk parameters (Ma & Li, 2009a). Additionally, our work includes systems with wider periods that UCXB., As such, we will be focusing only on MB.
+
+The choice of the adopted MB prescription has large overarching effects on the evolution of the binary - stronger MB will shrink a binary faster, resulting in a higher mass transfer (MT) rate. The most widely-used assumption in stellar simulations is the "Skumanich" MB (Skumanich, 1972); its application to binary systems is usually the form provided in Rappaport et al. (1983). The standard MB law, as well as some of its modifications, fails to reproduce the observed persistent NS LMXBs (Van et al., 2019). Examples of some modified MB schemes include those which focus on a subset of LMXBs such as Ap/Bp donors (Justham et al., 2006),or dampen the MB strength at high rotation rates (Sills et al., 2000; Ivanova & Taam, 2003).
+
+Some advances in understanding the characteristics of the magnetized wind from a star were made recently. First, Reville et al. (2015) has included the effect of stellar rotation on the Alfven radius. Secondly, the convective turnover time has been linked to the strength of the surface magnetic field (Parker, 1971; Noyes et al., 1984; Ivanova, 2006). In SS2, we derive the new CARB (Convection And Rotation Boosted) MB which takes into account both advances. In SS3, we use the new MB to evolve the grid of progenitor binaries, in a similar manner as done in Van et al. (2019). In SS4, we compare the results of the simulations with the observed persistent NS LMXBs. Finally, in SS5 we summarize our key results in this _letter_.
+
+## 2 Magnetic braking
+
+The loss of the angular momentum due to magnetic braking is derived following steps similar to those outlined in Van et al. (2019).
+
+First, we assume spherical symmetry, which results in the angular momentum lost being
+
+\\dot{J}_{\\rm MB}=-\\frac{2}{3}\\Omega\\dot{M}_{\\rm W}R_{\\rm A}^{2}. 
+
+\\dot{M}_{\\rm W} denotes the wind mass loss rate, \\Omega is the rotation rate, and R_{A} is the Alfven radius. Assuming a radial magnetic field,
+
+\\left(\\frac{R_{A}}{R}\\right)^{2}=\\frac{B_{s}^{2}R^{2}}{4\\pi R_{A}^{2}\\rho_{A} v_{A}^{2}}=\\frac{B_{s}^{2}R^{2}}{\\dot{M}_{\\rm W}v_{A}}. 
+
+Here R is the radius of the star, B_{s} is the surface magnetic field strength, v_{a} is Alfven velocity, and \\rho_{a} is the density of the wind at the Alfven radius. Total mass loss with the wind is \\dot{M}_{\\rm W}=4\\pi R_{A}^{2}\\rho_{A}v_{A}. The velocity of a normal stellar wind, when it reaches the Alfven radius, can be found from energy conservation, and expressed using the surface escape velocity v_{\\rm esc}:
+
+\\frac{v_{A}}{v_{\\rm esc}}=\\left(\\frac{R}{R_{A}}\\right)^{1/2}. 
+
+In the case when the star and its attached magnetic field rotate, the regular stellar wind can also be additionally accelerated by the time it reaches the Alfven radius. This acceleration was tested by Matt et al. (2012) and was shown to have a non-negligible effect. Reville et al. (2015) parametrized the additional acceleration by replacing the surface escape velocity with a modified velocity, which includes the effects of rotation. Using this variable instead in Equation 2 gives us
+
+\\left(\\frac{R_{A}}{R}\\right)^{3}=\\frac{B_{s}^{4}R^{4}}{\\dot{M}_{\\rm W}^{2}} \\times\\frac{1}{v_{\\rm esc}^{2}+2\\Omega^{2}R^{2}/K_{2}^{2}},  where K_{2}=0.07 in this equation is a constant obtained from a grid of simulations by Reville et al. (2015). K_{2} sets the limit where the rotation rate begins to play a significant role. In this approach, the Alfven radius shrinks as the rotation rate increases, weakening the angular momentum loss in fast rotating binaries. Plugging this form of the Alfven radius into the angular momentum equation gives a new prescription for angular momentum loss,
+
+\\dot{J}_{\\rm MB}=-\\frac{2}{3}\\Omega\\dot{M}_{\\rm W}^{-1/3}R^{14/3}B_{s}^{8/3} \\left(v_{\\rm esc}^{2}+2\\Omega^{2}R^{2}/K_{2}^{2}\\right)^{-2/3}. 
+
+Substituting a convective turnover scaling relation for the magnetic field strength of the star (see Van et al., 2019, for a discussion as to why this is justified), we get the modified magnetic braking prescription used in our simulations,
+
+\\begin{split}\\dot{J}_{\\rm MB}=&-\\frac{2}{3}\\dot{M }_{\\rm W}^{-1/3}R^{14/3}\\left(v_{\\rm esc}^{2}+2\\Omega^{2}R^{2}/K_{2}^{2}\\right) ^{-2/3}\\\\ &\\times\\Omega_{\\odot}\\ B_{\\odot}^{8/3}\\ \\left(\\frac{\\Omega}{ \\Omega_{\\odot}}\\right)^{11/3}\\left(\\frac{\\tau_{\\rm conv}}{\\tau_{\\odot,\\rm conv }}\\right)^{8/3}\\.\\end{split} 
+
+The magnetic field strength on the surface of the Sun is on average B_{s}=1 G with a rotation rate and convective turnover time of \\Omega_{\\odot}\\approx 3\\times 10^{-6} s{}^{-1} and \\tau_{\\odot,\\rm conv}=2.8\\times 10^{6} s, respectively. Both solar values used here were found using the same method from Van et al. (2019). The value used for \\tau_{\\odot,\\rm conv} is similar to those found by Ma & Li (2009) and Landin et al. (2010) of 28.4d and 38.2d respectively. While our value deviates slightly from those found in other works, what is important is that our calculations are self-similar between different stars: the method used to calculate the normalization factor and the turnover time of each of our simulated systems is the same.
+
+## 3 Evolution through the mass transfer
+
+We follow the method described in Van et al. (2019) and test the MB on progenitor binaries seeded on a grid of periods and donor masses. The initial periods range from -0.4\\leq\\log_{10}(P/{\\rm day})\\leq 4 in steps of \\Delta\\log_{10}(P)=0.05. The initial donor masses range from 1.0\\leq M_{d}/M_{\\odot}\\leq 7.0 with a variable step size. The donor mass has steps of \\Delta M_{d}=0.1\\ M_{\\odot} when M_{d}\\leq 2.4M_{\\odot}, \\Delta M_{d}=0.2M_{\\odot} for 2.4<M_{d}/M_{\\odot}\\leq 3, \\Delta M_{d}=0.5M_{\\odot}when 3<M_{d}/M_{\\odot}\\leq 5 and \\Delta M_{d}=1.0M_{\\odot} for any initial donor mass exceeding 5~{}M_{\\odot}. The stars have initial metallicity Z=0.02. All NSs start with a seed mass of M_{\\rm NS}=1.4M_{\\odot}. The chosen grid encompasses all binaries that could start the mass transfer at some point of their evolution.
+
+To evolve the initial binaries, we use the stellar code MESA1 (Modules for Experiments in Stellar Astrophysics) revision 11701 (Paxton et al., 2011, 2013, 2015, 2018, 2019) and May 2019 release of MESASDR23.
+
+Footnote 1: [http://mesa.sourceforge.net](http://mesa.sourceforge.net)
+
+Footnote 2: [http://www.astro.wisc.edu/~townsend/static.php?ref=messask](http://www.astro.wisc.edu/~townsend/static.php?ref=messask)
+
+Footnote 3: The modifications to MESA to include modified MB will be available on the MESA marketplace.
+
+Here, we refine the method described in Van et al. (2019) by taking into account the efficiency of the mass transfer. The rate of the mass gain of the NS \\dot{M}_{\\rm NS} is proportional to the rate of the mass accretion \\dot{M}_{\\rm acc}, but is less than that due to conversion of some accreted mass into gravitational binding energy:
+
+\\dot{M}_{\\rm NS}=\\dot{M}_{\\rm acc}f_{\\rm BE}~{}. 
+
+Here f_{\\rm BE} is the so-called binding energy factor. Depending on the equation of the state of the NS, f_{\\rm BE}\\approx 0.85-0.90(Lattimer & Prakash, 2007). Some fraction of the material accreted onto the NS will be converted to gravitational binding energy and is controlled by f_{\\rm BE}.
+
+In addition, not all mass transferred through L_{1} has to be accreted by the NS - it may be reduced by a number of effects, for example, the propeller effect is a mechanism where the magnetic field deflects away accreting material (Romanova et al., 2018). Indirect evidence for the accretion inefficiency comes from observations of millisecond pulsars. If the accretion rate was the same as the mass transfer rate \\dot{M}_{\\rm tr}, many of these binaries are expected to contain high mass neutron stars. However, the observations do not support this (Antoniadis et al., 2012, 2016). An analytic description of the efficiency of mass transfer is not currently known. Antoniadis et al. (2012) calculated that accretion onto the pulsar PSR J1738+0333 had an efficiency \\epsilon\\sim 0.1-0.3, while a more recent statistical study looking at a number of pulsars estimated that their accretion efficiency was between \\epsilon\\sim 0.05-0.2(Antoniadis et al., 2016). We will combine the efficiency and the binding energy factor into one value \\eta. The material accreted by the NS is less than that transferred,
+
+\\dot{M}_{\\rm acc}=\\eta\\dot{M}_{\\rm tr}~{}. 
+
+In Figure 1 we demonstrate how the choice of \\eta affects the mass of the final NSs. With \\eta=1, NSs in most systems become more massive than 2M_{\\odot}, once M_{\\rm d}<0.4M_{\\odot}. While M_{\\rm NS} is predicted to extend up to \\approx 2.1-2.2M_{\\odot} no NSs have accurately and reliably measured masses exceeding 2.0M_{\\odot}(Antoniadis et al., 2013;
+
+Cromartie et al., 2019; Rezzolla et al., 2018). The rarity of high mass NSs appears to contradict our results when assuming high efficiency. With \\eta=0.2, the maximum mass of the NS is of order M_{\\rm NS}\\sim 1.8M_{\\odot}. This value is within the range of 1.1\\lesssim M_{\\rm NS}/M_{\\odot}\\lesssim 2 for observed NSs (Ozel and Freire, 2016). For our study in this _Letter_, we therefore adopt \\eta=0.2.
+
+The efficiency factor will have a variety of effects on the binary system. The increased mass ejected from the system will increase the amount of angular momentum lost and limit how quickly M_{\\rm NS} grows. The efficiency controls how much material is accreted onto the compact object, which sets the luminosity of the system. The mass transfer efficiency is not constant throughout the entire evolution, and as a rough approximation we will estimate that the luminosity of our system can be approximated by L=0.6G\\dot{M}_{\\rm tr}M_{\\rm NS}/R_{\\rm NS}. We increase the size of our MT bins used in the analysis to compensate for the uncertainty in MT efficiency. If the \\eta parameter used here were applied to the results from Van et al. (2019), the overall ability of a system to reproduce an observed LMXB would remain unchanged or decrease as the MT rate required to explain the observed X-ray luminosity may be increased.
+
+## 4 Comparison with the observed population of LMXBs
+
+It has been shown that the results of the MT simulations can be misleading in determining the legitimacy of adopted MB prescriptions if only two parameters are compared between simulated and observed systems (Pavlovskii and Ivanova, 2016). At least three parameters - for example, the period, the MT rate and the mass ratio - are necessary for determining if a given MB prescription is effective. The effective temperature of the donor could also play a significant role in discriminating the adopted MB laws (Justham et al., 2006).
+
+It is hard to visualize the compatibility of three or more parameters in the same figure. In Figure 2, we show the maximum relative probability for any of the simulated MT systems to have a specific MT rate and orbital period, as well as the MT rates and orbital periods of observed persistent NS LMXBs (data is taken from Van et al., 2019). This relative probability, or frequency, is calculated using the following steps:
+
+1. \\tau_{\\rm tot}^{mn} is the total evolutionary time of a binary system for an initial mass m and initial period n.
+
+2. \\tau_{ij}^{mn} is the amount of time the initial m,n binary spends in an observed i,j period and MT bin.
+
+3. f_{ij}^{mn}=\\tau_{ij}^{mn}/\\tau_{\\rm tot}^{mn} is the frequency with which a given combination of mass and period appears in an observed bin of interest.
+
+4. f_{ij}= max (f_{ij}^{mn}) is the maximum frequency from all the simulated binaries, and is plotted in Figure 2.
+
+Within this period-MT parameter space, all of the observed persistent NS LMXBs appear to be reproducible by the simulated MT systems. This apparent match does not guarantee that the simulated systems will reproduce the observed systems when additional parameters are included.
+
+Let us briefly describe the methodology for the comparison in 3-parameter space (for details, see Van et al., 2019). Each observed system is assigned a 3-dimensional cuboid, where the cuboid is roughly centred in the observed properties. The size of of the cuboid in period is \\delta\\log_{10}P=0.05 and the size of the cuboid in mass ratio and MT rate depend on the uncertainty with which the observed value was determined, see Table 1.
+
+We can find the maximum time that an individual simulation spends in a bin of interest, \\tau_{\\rm max}, and what fraction of their MT evolution they spend in the given bin,
+
+f_{\\rm LMXB}. We also can find the fractional area of the initial parameter space that reproduces the binary A_{\\rm sys}/A_{\\rm tot}. These three numbers can indicate how plausible it is to produce the observed NS LMXBs. The value of \\tau_{\\rm max} indicates how long a system can remain in this state, and thus how likely it is to be detected. A_{\\rm sys}/A_{\\rm tot} shows how stringent the initial parameter space is for reproducing a given LMXB. A larger A_{\\rm sys}/A_{\\rm tot} implies that many systems can reproduce an observed system. A_{\\rm tot} spans our entire parameter space of seed masses and periods. In our case A_{\\rm tot}=29.1475. For example, we find that Cyg X-2 only has 2 progenitor systems, these two progenitor systems span a total area of A_{\\rm sys}=0.05 which results in A_{\\rm sys}/A_{\\rm tot}=1.72\\times 10^{-3}.
+
+As has been shown by Van et al. (2019), once the constraint on the mass ratio is added, none of the previously used MB prescriptions can produce all of the observed persistent NS LMXBs, despite considering all possible initial binaries. For the non-reproducible systems, A_{\\rm sys}/A_{\\rm tot}=0. In Table 1 we present the results for the CARB MB prescription. It is fascinating that with the modified MB prescription, all persistent LMXBs can be reproduced.
+
+We can further constrain the progenitors by looking at the effective temperature of the donor star. Determining the temperature of the companion is difficult, and this value is not known for most observed LMXBs. The systems where the donor's spectral type have been measured tend to be the widest LMXBs; Sco X-1, GX 349+2 and Cyg X-2. This additional fourth observed parameter will provide additional constraints to the progenitor mass and period combinations that result in binaries that can match all observed properties.
+
+Sco X-1 was found to have a donor star that was later than K4 (Mata Sanchez et al., 2015). This gives an approximate upper limit to the donor temperature to be \\lesssim 4800 K. By matching our three previous properties of interest - period, mass ratio and MT - while constraining the donor temperature, we can further limit systems that reproduce Sco X-1. An example progenitor of Sco X-1 has a 1.1 M_{\\odot} donor with an initial period of 2.82 days. This system simultaneously matches the period, mass ratio, MT and effective temperature of Sco X-1. When this progenitor evolves to the observed mass ratio and period, the MT rate and effective temperature of the binary are 2.3\\times 10^{8}M_{\\odot} yr{}^{-1} and 4685 K respectively.
+
+Cyg X-2 was found by Cowley et al. (1979) to have an A5-F2 donor star. A5-F2 spectral type stars have an approximate temperature range of 7000 - 8500 K. When comparing this to our MT systems, we find that the only progenitors that reproduce Cyg X-2 are binaries with an initial period between P\\approx 2.24-2.51 days and an initial donor mass of M=3.5M_{\\odot}. The mass transfer rates and effective temperatures of the 2.24 day progenitor are 2.9\\times 10^{-8}M_{\\odot} yr{}^{-1} and 7265 K.
+
+GX 349+2 is a system where the spectral class of the donor is given, but the literature related to this property is not in agreement. Penninx & Augusteijn (1991) found the donor of GX 349+2 to be a G5-M2 giant whereas Wachter & Margon (1996) finds the donor could be a B2 main sequence donor. Our simulated results have a
+
+\\begin{table}
+
+\\begin{tabular}{l|l l|l l l} System Name & \\log_{10}(P/\\rm hr) & q & \\log_{10}(\\dot{M}_{a}) & \\tau_{\\rm max} (years) & A_{\\rm sys}/A_{\\rm tot} & f_{\\rm LMXB} \\\\ \\hline
+
+4U 0513-40 & [-0.57, -0.52] & [0.01, 0.06] & [-9.0, -8.4] & 5.87\\times 10^{6} & 1.72\\times 10^{-3} & 4.38\\times 10^{-2} \\\\
+
+2S 0918-549 & [-0.56, -0.51] & [0.01, 0.06] & [-9.6, -8.4] & 5.63\\times 10^{6} & 1.72\\times 10^{-3} & 4.38\\times 10^{-2} \\\\
+
+4U 1543-624 & [-0.54, -0.49] & [0.01, 0.06] & [-8.9, -8.4] & 5.85\\times 10^{6} & 1.54\\times 10^{-3} & 4.38\\times 10^{-2} \\\\
+
+4U 1850-087 & [-0.48, -0.43] & [0.01, 0.06] & [-9.8, -8.2] & 1.58\\times 10^{7} & 2.92\\times 10^{-3} & 8.82\\times 10^{-2} \\\\ M15 X-2 & [-0.44, -0.39] & [0.01, 0.06] & [-9.5, -8.9] & 2.43\\times 10^{7} & 2.92\\times 10^{-3} & 5.37\\times 10^{-2} \\\\
+
+4U 1626-67 & [-0.17, -0.12] & [0.01, 0.06] & [-9.5, -8.4] & 7.39\\times 10^{7} & 2.92\\times 10^{-3} & 1.05\\times 10^{-1} \\\\
+
+4U 1916-053 & [-0.10, -0.05] & [0.03, 0.08] & [-9.4, -8.7] & 6.14\\times 10^{7} & 1.03\\times 10^{-3} & 8.86\\times 10^{-2} \\\\
+
+4U 1636-536 & [0.56, 0.61] & [0.15, 0.40] & [-8.9, -8.4] & 2.32\\times 10^{7} & 5.49\\times 10^{-3} & 5.85\\times 10^{-2} \\\\ GX 9+9 & [0.60, 0.65] & [0.20, 0.33] & [-8.5, -8.0] & 1.39\\times 10^{7} & 4.46\\times 10^{-3} & 9.11\\times 10^{-2} \\\\
+
+4U 1735-444 & [0.65, 0.70] & [0.29, 0.48] & [-8.2, -7.7] & 1.11\\times 10^{7} & 4.97\\times 10^{-3} & 1.44\\times 10^{-2} \\\\
+
+2A 1822-371 & [0.73, 0.78] & [0.26, 0.36] & [-7.6, -7.1] & 5.95\\times 10^{6} & 6.69\\times 10^{-3} & 7.06\\times 10^{-2} \\\\ Sco X-1 & [1.26, 1.31] & [0.15, 0.58] & [-7.8, -7.1] & 5.42\\times 10^{6} & 1.20\\times 10^{-3} & 4.32\\times 10^{-3} \\\\ GX 349+2 & [1.33, 1.38] & [0.39, 0.65] & [-7.8, -7.1] & 1.21\\times 10^{7} & 4.46\\times 10^{-3} & 4.25\\times 10^{-3} \\\\ Cyg X-2 & [2.35, 2.40] & [0.25, 0.53] & [-7.5, -7.0] & 7.99\\times 10^{4} & 1.72\\times 10^{-3} & 6.65\\times 10^{-4} \\\\ \\hline \\end{tabular} 3
+
+\\end{table}
+
+Table 1: Binned Properties of LMXBstemperature ranging from \\approx 4800-5500 K which correspond to a K3-G5 donor star. An example progenitor of GX 349+2 is a binary with an initial donor mass of M=1.1~{}M_{\\odot} and a seed period of 3.98 days. This progenitor has a MT rate of 8.2\\times 10^{-8}~{}M_{\\odot} yr{}^{-1} and an effective temperature of 4845 K.
+
+## 5 Conclusions
+
+We revised the MB prescription to include the effect of the donor's rotation on the wind's velocity, following Matt et al. (2012) and Reville et al. (2015), as well as the effects of the donor's convective eddy turnover timescale and the donor's rotation on the generation of the surface magnetic field, following Parker (1971); Noyes et al. (1984); Ivanova (2006); Van et al. (2019).
+
+The new CARB MB prescription was applied to test the evolution of all binaries with a NS and non-degenerate donors that could experience the mass transfer at some point in their evolution. The modelled MT systems were compared to the observed persistent NS LMXBs. Our simulations were required to match with observations in three parameters - the MT rate, the orbital period and the mass ratio, with the effective temperature being used as a fourth parameter in select binaries. Previously, it has been shown that the most commonly used MB prescription, also known as Skumanich MB (Rappaport et al., 1983), is not capable of reproducing most of the persistent NS LMXBs with orbital periods larger than about an hour. With our modified MB, we can reproduce all observed persistent NS LMXBs.
+
+We note that the "Intermediate" prescription considered in Van et al. (2019) reproduced all of the LMXBs of interest as well, although that description was not explicitly derived - it was created by adding ad-hoc wind boosting and ad-hoc convection boosting. Both of these factors are taken into account in a more physical way in the modified MB prescription presented here. Additionally, once the effective temperature is accounted for with the "intermediate" prescription, Sco X-1 could no longer be reproduced. The number of possible progenitors of Cyg X-2 also significantly drops, to only one system.
+
+Our simulations do not include additional effects such as irradiation, or atypically strong magnetic fields similar to those found in Ap stars. While these effects might be invoked to explain a specific individual system, they could not be used to explain the evolution of the entire population of MT binaries. The inclusion of rotational effects on the Alfven radius, and magnetic field dependence on convective turnover time, resulted in CARB MB being able to reproduce all of the observed persistent NS LMXBs. We unequivocally recommend the use of the CARB MB prescription instead of the Skumanich MB, to model both Galactic and extragalactic NS LMXBs.
+
+Once the governing angular momentum loss law is constrained, our next step will be to recover and constrain the properties of the plausible progenitor systems, and the required formation rates of these progenitors to produce the observed numbers of LMXBs. We also intend to expand our sample size to include BHs and any additional well constrained NSs available. This will be a topic of our future research.
+
+We would like the thank the referee for helpful comments. N.I. acknowledges that a part of this work was performed at the KITP, which is supported in part by the National Science Foundation under Grant No. NSF PHY-1748958. N.I. acknowledges support from CRC program and funding from NSERC Discovery under Grant No. NSERC RGPIN-2019-04277. K.V. acknowledges the helpful comments from Craig Heinke. ComputeCanada.

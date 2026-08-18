@@ -1,0 +1,161 @@
+###### Abstract
+
+We performed a search for eclipsing and dipping sources in the archive of the EXTraS project - a systematic characterization of the temporal behaviour of _XMM-Newton_ point sources. We discovered dips in the X-ray light curve of 3XMM J004232.1+411314, which has been recently associated with the hard X-ray source dominating the emission of M31. A systematic analysis of _XMM-Newton_ observations revealed 13 dips in 40 observations (total exposure time \\sim0.8 Ms). Among them, four observations show two dips, separated by \\sim4.01 hr. Dip depths and durations are variable. The dips occur only during low-luminosity states (L{}_{0.2-12}<1\\times 10^{38} erg s{}^{-1}), while the source reaches L{}_{0.2-12}\\sim 2.8\\times 10^{38} erg s{}^{-1}. We propose this system to be a new dipping Low-Mass X-ray Binary in M31 seen at high inclination (60{}^{\\circ}-80{}^{\\circ}), the observed dipping periodicity is the orbital period of the system. A blue HST source within the _Chandra_ error circle is the most likely optical counterpart of the accretion disk. The high luminosity of the system makes it the most luminous dipper known to date. stars: neutron -- pulsars: general -- galaxies: individual (M31) -- galaxies: bulges -- X-rays: binaries
+
+## 1 Introduction
+
+The EXTraS project (Exploring the X-ray Transient and variable Sky, De Luca et al. (2016)) developed new techniques and tools to extract and describe the timing behavior of X-ray sources. The entire public _XMM-Newton_ archive (3XMM catalog, data release 41) was analyzed, obtaining hundreds of parameters to describe the periodic and aperiodic variability of more than 500,000 serendipitous sources, on different time scales (from seconds to years). The results are publicly available, together with a detailed documentation2. Taking advantage from this improved _XMM-Newton_ timing analysis, we performed a systematic search for eclipsing and dipping objects, finding significant dips in the light curves of some observations of 3XMM J004232.1+411314 (XMM0042 hereafter).
+
+Footnote 1: [http://xmmnssc-www.star.le.ac.uk/Catalogue/3XMM-DR4](http://xmmnssc-www.star.le.ac.uk/Catalogue/3XMM-DR4)
+
+Footnote 2: [http://www.extras-fp7.eu](http://www.extras-fp7.eu)
+
+XMM0042 is a moderately bright (\\sim0.2 counts s{}^{-1}) source observed multiple times by _XMM-Newton_ due to its proximity to the M31 bulge. Based on flux and spectral variability studies in the 0.5-10 keV energy band, the source has been classified as an X-ray binary candidate in various _Chandra_ and _XMM-Newton_ studies (see e.g. Kong et al., 2002; Stiele et al., 2011). Based on _NuSTAR_ data, it has been recently associated with the most prominent source of hard X-rays from M31 (Yukita et al., 2017). The simultaneous _Swift/XRT_ and _NuSTAR_ spectrum is well fitted assuming an accretion disk model with a temperature of \\sim0.2 keV and a broken power law, with a photon index of \\sim1 and an energy cutoff at \\sim18 keV. If XMM0042 is in M31 (784\\pm13 kpc, Stanek & Garnavich, 1998), its 0.5-50 keV luminosity is L_{0.5-50keV}\\sim 4\\times 10^{38} erg s{}^{-1}. The most precise X-ray position of XMM0042 comes from _Chandra_, at R.A. (J2000) 00{}^{h}42{}^{m}32{}^{s}.072, Dec (J2000) +41{}^{\\circ}3{}^{\\prime}14{}^{\\prime\\prime}.33 (0.4{}^{\\prime\\prime}, 3\\sigma error) (Barnard et al., 2014). _HST_ observations revealed 17 possible optical/UV counterparts (Yukita et al., 2017), none of which is compatible with a high-mass donor (>3M_{\\odot}).
+
+We collected all the EXTraS results of XMM0042 and applied the same analysis to extract the same products from the most recent observations within the 3XMM catalog, data release 73. Section 2 describes the spectral study we performed, as well as the investigation of the source light curve. The interpretation and discussion of our most relevant results are reported in Section 3, together with a discussion of the nature of the source in the light of these new results.
+
+Footnote 3: [http://xmmnssc.irap.omp.eu/Catalogue/3XMM-DR7/3XMM_DR7.html](http://xmmnssc.irap.omp.eu/Catalogue/3XMM-DR7/3XMM_DR7.html)
+
+## 2 Data Analysis
+
+We searched for all the _XMM-Newton_ observations of XMM0042 in the 3XMM catalog DR7. EXTraS data make use of the same filters as the 3XMM catalogs - energy band (0.2-12 keV), pattern and flags. We selected exposures with the most stable attitude, also excluding the ones with the source partially outside the field of view or on CCD gaps. The observations we analyzed are listed in Appendix (Table 4).
+
+We made use of SAS v.15 to perform a standard analysis from ODF files. For the spectral analysis only, we excluded very-high-background periods (>40 counts/s from the PN camera and >15 from MOS1/2 from the entire field of view, in the 0.2-12 keV energy range). Following Yukita et al. (2017) we adopted an absorbed (abundances from Wilms et al., 2000) accretion disk model plus power-law (the cutoff energy is \\sim17 keV, above our energy range). As in Yukita et al. (2017), the column density was fixed to the Galactic value of 7\\times10{}^{20} cm{}^{-2}. Adding together the spectra of all the observations (and correcting for response matrices and effective areas), we obtain a poor fit, with a null hypothesis probability nhp=1.5\\times10{}^{-10}, 2312 degrees of freedom (dof). The residuals are structured, with a clear shortage around 0.6 keV and an excess at around 1 keV. The spectrum is well fitted either by adding a broad Gaussian emission line at \\sim0.95 keV (nhp=9.5\\times10{}^{-3}, dof=2310) or a broad Gaussian absorption line at \\sim0.6 keV (nhp=4.0\\times10{}^{-2}, dof=2310). The best fitting parameters are reported in Table 1. A contemporaneous fit of all spectra is in agreement with the single-spectra result.
+
+We adopted the total absorbed double-component plus emission line model and parameters in Table 1 to derive the X-ray luminosity for each instrument and observation and exploit the simultaneous observations of PN, MOS1 and MOS2. This was used to obtain hardness ratios in different energy bands for each observation. Figure 1 shows the hardness ratio between 0.2-0.8 keV and 0.8-2 keV bands. The variation with time is apparent (nhp=1.6\\times10{}^{-11}, dof=39). Higher-energy band hardness ratio analysis revealed no significant change with time. This suggests some type of variation with time in the thermal component (or in the lines, if present).
+
+EXTraS light curves from different instruments and exposures are binned using the same time bins (a grid of 500-s-time-bins beginning with the zero _XMM-Newton_ reference time), therefore we calculated the weighted mean, bin by bin, of the luminosity curves from PN and MOS1/2 to obtain the total light curve of each observation. Then, we fittedeach observation light curve using a constant model. If the fit was not statistically acceptable (3\\sigma), we used a more complex model. We tried with a linear model and constant-plus-dips model. The last one has four parameters: T_{min} is the time of minimum luminosity, \\Delta T is the duration of the dip, L_{min} is the minimum luminosity and L_{out} is the luminosity outside the dip. An f-test (Bevington, 1969) was used to confirm the statistical improvement by using the more complex models.
+
+According to our investigation, 29 curves with exposures varying from \\sim11 ks to \\sim33 ks are constant, five curves reveal a single dip and four have two dips, for a total of 13 significant dips. The longest observation (obs.id 0112570101), with a \\sim64 ks exposure, is the only one that reveals a linear decrease in luminosity. Only one curve, (obs.id 0674210501), is variable at >4\\sigma but does not fit with our classification due to the presence of a more complex variability.
+
+Within double-dipping observations, time interval between dips minima is consistent with being constant (1\\sigma confidence) revealing a periodicity of (14.47\\pm0.12) ks, as apparent in Figure 2 (the minima separation in obs.id 0551690201 should be considered as a lower limit, because we observe only part of the second dip). Considering a 14.47 ks period, all single-dip observations are characterized by exposures that do not allow for the detection of the previous and following dips. On the other hand, almost all the observations well fitted by a constant model cover more than one period.
+
+Searches for a periodicity using multiple data sets e.g. with the Lomb-Scargle algorithm (Zechmeister & Kurster, 2009) is hampered by the time separation between double-dipping observations.
+
+We also divided the observations with dips in order to isolate the dipping periods from the rest of the observation. We do not detect any significant spectral variation during the dips: a simultaneous fit of spectra of the two data sets, with all the variables chained but a multiplicative factor, results in an acceptable fit (nhp=3.0\\times 10^{-2}, dof=1124). We note that due to the low statistics we would not detect (3\\sigma confidence) variations in the disk temperature and in the photon index smaller than 25% and 10%, respectively.
+
+The dip duration is variable from \\sim2.2 ks to \\sim5.0 ks; the minimum luminosity varies from \\sim10% to \\sim70% of the persistent luminosity. We note that the low statistics prevents us to detect dips (3\\sigma significance) with a minimum luminosity >75% of the constant luminosity. Dipping observations occur only during low-luminosity states (L{}_{0.2-12}<1\\times 10^{38} erg s{}^{-1}) while observations where we found no dips occur at all possible luminosities (0.9\\times 10^{38}<L{}_{0.2-12}<1.7\\times 10^{38} erg s{}^{-1}) before 2012. Starting from 2012, the source persistent luminosity increases by a factor \\sim2, with luminosities 1.4\\times 10^{38}<L{}_{0.2-12}<2.8\\times 10^{38} erg s{}^{-1}. Dipping observations still occur only during low-luminosity states (see Figure 1).
+
+The better spatial resolution of _Chandra_ allows to detect two different sources, about 8{}^{\\prime\\prime} apart, that contribute to the emission of the _XMM-Newton_ XMM0042 source. Hofmann et al. (2013) present an accurate study of the variability of these sources. Source 75 (R.A. (J2000) 00^{h}42^{m}32^{s}.07, Dec (J2000) +41^{\\circ}13^{\\prime}14^{\\prime\\prime}.6) is the brightest one and varies by a factor \\sim5 during the 14 years of observation (from 1998 to 2012), showing a general increase of the flux with time on years-timescale. Source 78 (R.A. (J2000) 00^{h}42^{m}32^{s}.74, Dec (J2000) +41^{\\circ}13^{\\prime}11^{\\prime\\prime}.1) is almost constant, a factor 10 less luminous than source 75. Hence, we conclude that the flux of XMM0042 and its variability can be ascribed to source 75, with a negligible contribution from source 78.
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c c} \\hline \\hline  Spectral model & nhp & T{}_{in} & R{}_{in} & \\Gamma & N{}_{pow} & Line{}_{E} & Line{}_{\\sigma} & Line{}_{norm} \\\\  & & (keV) & (km) & & 10^{-5} & (keV) & (keV) & 10^{-5} \\\\ \\hline tbabs(diskbb+pow) & 1.50\\times 10^{-10} & 0.188\\pm0.003 & 26.5\\pm1.0 & 0.98\\pm0.01 & 6.0\\pm0.1 & - & - & - \\\\ tbabs(gau+diskbb+pow) & 4.11\\times 10^{-2} & 0.198\\pm0.003 & 25.5{}^{+1.3}_{-1.2} & 0.91\\pm0.01 & 5.5\\pm0.1 & 0.62{}^{+0.02}_{-0.03} & 0.15{}^{+0.02}_{-0.01} & -3.6{}^{+0.6}_{-0.9} \\\\ tbabs(gau+diskbb+pow) & 9.49\\times 10^{-3} & 0.128\\pm0.005 & 10.5{}^{+1.0}_{-1.1} & 0.98\\pm0.01 & 6.0\\pm0.1 & 0.94{}^{+0.02}_{-0.03} & 0.20\\pm0.02 & 1.8{}^{+0.4}_{-0.3} \\\\ \\hline \\end{tabular} Note. – We report the parameters of best fits obtained using the total PN, MOS1, MOS2 spectra, as discussed in Section 2. Inner radius has been calculated using a distance of 784 kpc and an inclination i of 70{}^{\\circ}, where R_{in}=D_{[10kpc]}/\\sqrt{N_{diskbb}*sin(i)}
+
+\\end{table}
+
+Table 1: Best-fit parameters of the total PN, MOS1 and MOS2 spectra of XMM0042
+
+## 3 Discussion
+
+We have discovered a diplike modulation in the light curve of XMM0042. These dips occur with a period of 4.01 h. If the 4.01 h modulation represents the binary period of XMM0042, the binary separation is a\\sim 10^{11}M_{X}^{1/3}(1+q)^{1/3} cm, where M_{X} is the mass of the compact object (in solar masses) and q is the mass ratio of the companion star and the compact object. This short orbital separation rules out a High-Mass X-ray Binary system with a blue supergiant (or a Be main sequence) companion. This agrees with _HST_ observations (Yukita et al., 2017) that exclude high-mass (>3M_{\\odot}) donors at the location of this source. We note that this period does not exclude an XRB with a Wolf-Rayet donor (Cyg X-3 in our Galaxy has a similar orbital period). However, the light curve of Cyg X-3 is very different from the one of XMM0042 (very stable and quasi-sinusoidal), so we can safely consider it is more likely a dipping Low-Mass X-ray Binary (LMXB), given the similarities of their orbital light curves.
+
+LMXB systems are known to show dips if the system is viewed relatively close to edge-on, i.e. at a high inclination angle of 60-80{}^{\\circ}(Frank et al., 1987): the duration and variability of XMM0042 dips is similar to those seen in some well-known Galactic LMXB, such as XB 1254-690 and XB 1916-053 (Diaz Trigo et al., 2006). For these Galactic sources the dips have different shapes and are not detected in all the orbital cycles, as we observe for XMM0042. Dips are thought to be due to absorption from the matter in the external region of the accretion disk (White & Swank, 1987). The spectral evolution during dips depends on the ionization state of the absorbing material (Diaz Trigo & Boirin, 2016). In the case of XMM0042, we do not detect any significant spectral variation possibly due to the low statistics.
+
+Van Paradijs & McClintock (1994) study the optical emission from LMXB disks; if X-rays from the central source are reprocessed by the accretion disk, this implies that the optical luminosity in the V-band M_{V} scales with the X-ray luminosity and size of the accretion disk. We considered the relation from Van Paradijs & McClintock (1994) between L_{X}, the orbital period and M_{V}, taking into account L_{Edd}=2.5\\times 10^{38} erg s{}^{-1}(following Van Paradijs & McClintock, 1994), our orbital period of 4.01 hr and our mean luminosity L_{X}=2\\times 10^{38} erg s{}^{-1}:
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c c} \\hline \\hline  Obs.Num. & OBSID & N{}_{dips} & nhp & L{}_{out} & T{}_{min} & \\DeltaT & L{}_{min} \\\\  & & & & 10{}^{38}erg s{}^{-1} & MJD & ks & 10{}^{38}erg s{}^{-1} \\\\ \\hline
+
+9 & 0405320701 & 1 & 6.47\\times 10^{-2} & 0.85\\pm0.03 & 54100.737\\pm0.001 & 2.87\\pm0.47 & 0.17\\pm0.09 \\\\
+
+11 & 0405320901 & 1 & 3.20\\times 10^{-1} & 0.93\\pm0.03 & 54136.287\\pm0.001 & 3.84\\pm0.48 & 0.26\\pm0.06 \\\\
+
+12 & 0505720201 & 2 & 8.56\\times 10^{-1} & 0.82\\pm0.02 & 54463.683\\pm0.001 & 3.04\\pm0.33 & 0.08\\pm0.06 \\\\ - & - & 2 & - & - & 54463.850\\pm0.002 & 3.36\\pm0.55 & 0.41\\pm0.06 \\\\
+
+18 & 0551690201 & 2 & 4.52\\times 10^{-3} & 0.86\\pm0.03 & 54830.223\\pm0.002 & 4.75\\pm0.64 & 0.16\\pm0.07 \\\\ - & - & 2 & - & - & 54830.379\\pm0.004 & 2.80\\pm1.76 & 0.22\\pm0.18 \\\\
+
+22 & 0551690601 & 2 & 8.80\\times 10^{-3} & 0.82\\pm0.03 & 54866.623\\pm0.002 & 2.19\\pm0.55 & 0.08\\pm0.02 \\\\ - & - & 2 & - & - & 54866.791\\pm0.002 & 2.50\\pm0.82 & 0.38\\pm0.11 \\\\
+
+27 & 0600660601 & 1 & 3.14\\times 10^{-1} & 0.97\\pm0.03 & 55229.226\\pm0.002 & 2.23\\pm0.47 & 0.49\\pm0.10 \\\\
+
+30 & 0650560401 & 2 & 1.51\\times 10^{-2} & 0.92\\pm0.03 & 55576.019\\pm0.002 & 3.36\\pm0.55 & 0.21\\pm0.09 \\\\ - & - & 2 & - & - & 55576.186\\pm0.001 & 5.00\\pm0.56 & 0.10\\pm0.06 \\\\
+
+33 & 0674210201 & 1 & 9.60\\times 10^{-2} & 1.38\\pm0.03 & 55923.159\\pm0.004 & 5.00\\pm1.54 & 0.99\\pm0.11 \\\\
+
+35 & 0674210401 & 1 & 3.61\\times 10^{-1} & 1.36\\pm0.03 & 55941.708\\pm0.001 & 2.83\\pm0.52 & 0.66\\pm0.12 \\\\ \\hline \\end{tabular} Note. – We report the parameters of the best-fit constant+dips model of dipping _XMM-Newton_ light curves of XMM0042 we analyzed. We show the observation number, number of dips, null hypothesis probability and the parameters as described in Section 2. More detailed information can be found in Appendix (Table 5).
+
+\\end{table}
+
+Table 2: Dipping light curve parametersM_{V}=1.57(\\pm 0.24)-2.27(\\pm 0.32)log((P/1hr)^{2/3}(L_{X}/L_{edd})^{1/2}) obtaining M_{V}=0.8\\pm 0.3 (1\\sigma error) for the optical counterpart. Among the 17 positionally-consistent HST candidate optical/UV counterparts reported in Yukita et al. (2017), all but one are very similar to the surrounding stellar populations. The remaining source shows an excess in the blue band, making it an interesting potential counterpart of the accretion disk of a LMXB. From the blue apparent magnitude of the counterpart m_{B}=24.78, standard extinction towards M31 and equation 4 from Barnard et al. (2012), we obtain an absolute visual magnitude M_{V}\\simeq 0.3. This is consistent (within 2\\sigma) with the one derived from the X-ray luminosity and period of XMM0042, thus making it the likely optical counterpart.
+
+The X-ray spectrum of XMM0042 (as seen by Yukita et al. 2017, and in this work) is quite hard, with \\Gamma\\sim1 and E_{cutoff}\\sim18 keV. This is consistent with what seen in dipping LMXBs in our Galaxy, where a wide range of spectral properties is diplayed, with photon indexes varying from 0.4 to 2 and cutoff energies from 3.5 to 80 keV (Diaz Trigo et al., 2006). The most luminous Galactic dipper, X 1624-490, has an X-ray luminosity in the 1-30 keV energy band of \\sim 7.3\\times 10^{37} erg s{}^{-1} (in the 0.5-50 keV energy range - Galactic dippers reach persistent luminosities only \\sim 3 times lower than XMM0042, Balucinska-Church et al. 2000; Iaria et al. 2007) and a much softer spectrum.
+
+The period, optical counterpart and the spectrum of XMM0042 are reminiscent of a dipping LMXB system. The mean luminosity we found through our _XMM-Newton_ analysis, ranging from 0.8 to 2.8\\times 10^{38} erg s{}^{-1}, makes XMM0042 the most luminous dipper to date. Trudolyubov et al. (2002) found the first dipping source of M31, located in Bo 158. The period of the dipping behavior was 2.78 hr with a flux modulation of \\sim83%. A study of the other _XMM-Newton_, _Chandra_ and _ROSAT_ observations (Trudolyubov & Priedhorsky, 2004) revealed the amplitude of the dips to be anti-correlated with the source luminosity (0.5 to 2\\times 10^{38} erg s{}^{-1}), disappearing at high luminosities. The source also showed hour-timescale and months-timescale luminosity variations. This source has a rather hard spectrum but it never been observed by _NuSTAR_, so that we have no information about the cutoff energy or its luminosity in the hard X-ray band. Another possibly dipping source in M31 was identified by Mangano et al. (2004), with a period of \\sim1.8 hr and a 0.3-10 keV luminosity of \\sim 10^{37} erg s{}^{-1}. In this case, however, a foreground X-ray source cannot be ruled out. We argue that we are observing the most luminous dippers in M31, the bright tail of their population in M31.
+
+This research has made use of data produced by the EXTraS project, funded by the European Union's Seventh Framework Programme under grant agreement no 607452. The EXTraS project acknowledges the usage of computing facilities at INAFs Astronomical Observatory of Catania. The EXTraS project acknowledges the CINECA award under the ISCRA initiative, for the availability of high performance computing resources and support.
+
+_Facilities:_XMMFigure 1: _Upper panel:_ Persistent X-ray luminosities during the analyzed _XMM-Newton_ observations, as reported in Table 2. Different colours mark observations with light curve best fitted by a different model: red for constant, green for linear, magenta for variable, blue for single dip, black for double dips.
+
+_Central panel:_ We show the same luminosity as in Upper Panel. The observation number in the X-axis allows to easily associate the observation with the results reported in Appendix (Table 5). Different colours mark observations with light curve best fitted by a different model, as above.
+
+_Lower panel:_ Hardness ratio of XMM0042 comparing 0.2-0.8 keV and 0.8-2 keV energy ranges. The hardness ratio is defined as (L_{08-2}-L_{02-08})/(L_{08-2}+L_{02-08}) (see Section 2). Different colours mark observations with light curve best fitted by a different model, as above.
+
+[MISSING_PAGE_EMPTY:6482]
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline Obs.Num. & OBSID & Obs.date & Livetime \\\\  & & & & ks \\\\ \\hline
+
+33 & 0674210201 & 2011-12-28T00:45:21 & 20.3 \\\\
+
+34 & 0674210301 & 2012-01-07T02:24:46 & 16.8 \\\\
+
+35 & 0674210401 & 2012-01-15T14:37:17 & 19.4 \\\\
+
+36 & 0674210501 & 2012-01-21T11:58:42 & 16.8 \\\\
+
+37 & 0674210601 & 2012-01-31T01:56:08 & 20.9 \\\\
+
+38 & 0700380501 & 2012-07-28T14:53:08 & 11.5 \\\\
+
+39 & 0700380601 & 2012-08-08T22:44:48 & 23.4 \\\\
+
+40 & 0727960401 & 2013-07-06T07:43:22 & 10.5 \\\\ \\hline \\end{tabular} Note. – We show the observation number and characteristics of each _XMM-Newton_ observation we analyzed.
+
+\\end{table}
+
+Table 5: Light curves Parameters for all the analyzed observations
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c c} \\hline \\hline Obs.Num. & Best fit & DoF & nhp & L{}_{out} & lin & T{}_{min} & \\DeltaT & L{}_{min} \\\\  & & & & 10{}^{38}erg s{}^{-1} & & MJD & ks & 10{}^{38}erg s{}^{-1} \\\\ \\hline
+
+1 & constant & 70 & 8.26\\times 10^{-2} & 1.13\\pm0.02 & - & - & - & - \\\\
+
+2 & constant & 110 & 2.15\\times 10^{-1} & 1.16\\pm0.01 & - & - & - & - \\\\
+
+3 & linear & 126 & 1.42\\times 10^{-1} & 1.04\\pm0.03 & (-5.1\\pm0.7)\\times 10^{-6} & - & - & - \\\\
+
+4 & constant & 40 & 1.78\\times 10^{-1} & 1.38\\pm0.03 & - & - & - & - \\\\
+
+5 & constant & 38 & 5.98\\times 10^{-1} & 1.09\\pm0.02 & - & - & - & - \\\\
+
+6 & constant & 53 & 6.14\\times 10^{-1} & 0.93\\pm0.02 & - & - & - & - \\\\
+
+7 & constant & 43 & 7.86\\times 10^{-2} & 1.68\\pm0.03 & - & - & - & - \\\\
+
+8 & constant & 43 & 9.96\\times 10^{-1} & 1.21\\pm0.02 & - & - & - & - \\\\
+
+9 & con+ldip & 28 & 6.47\\times 10^{-2} & 0.85\\pm0.03 & - & 54100.737\\pm0.001 & 2.87\\pm0.47 & 0.17\\pm0.09 \\\\
+
+10 & constant & 28 & 7.30\\times 10^{-1} & 1.56\\pm0.03 & - & - & - & - \\\\
+
+11 & con+ldip & 30 & 3.20\\times 10^{-1} & 0.93\\pm0.03 & - & 54136.287\\pm0.001 & 3.84\\pm0.48 & 0.26\\pm0.06 \\\\
+
+12 & con+2dip & 48 & 8.56\\times 10^{-1} & 0.82\\pm0.02 & - & 54463.683\\pm0.001 & 3.04\\pm0.33 & 0.08\\pm0.06 \\\\ - & con+2dip & - & - & - & - & 54463.850\\pm0.002 & 3.36\\pm0.55 & 0.41\\pm0.06 \\\\
+
+13 & constant & 54 & 3.63\\times 10^{-2} & 1.66\\pm0.03 & - & - & - & - \\\\
+
+14 & constant & 45 & 4.03\\times 10^{-2} & 1.49\\pm0.03 & - & - & - & - \\\\
+
+15 & constant & 43 & 3.61\\times 10^{-1} & 1.15\\pm0.02 & - & - & - & - \\\\
+
+16 & constant & 44 & 3.53\\times 10^{-1} & 1.61\\pm0.02 & - & - & - & - \\\\
+
+17 & constant & 44 & 2.83\\times 10^{-1} & 1.45\\pm0.04 & - & - & - & - \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 4: _(continued)_

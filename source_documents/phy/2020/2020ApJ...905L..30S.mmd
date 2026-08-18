@@ -1,0 +1,95 @@
+###### Abstract
+
+We explore the millisecond magnetar progenitor scenario in the context of fast radio burst (FRB) host galaxies demographics and offset distributions. Magnetars are neutron stars with strong magnetic fields on the order of 10^{15} G with a short decay lifetime of less than 10^{4} years. Due to their extremely short lifetimes, magnetars should follow the demographics of galaxies according to their current star-formation rate (SFR). Moreover, we hypothesize that magnetars should follow the SFR profile within galaxies, which we assume to follow an exponential profile. We construct a simple model for the host galaxies of magnetars assuming these events track SFR in all galaxies and compare it to observed properties from a sample of 10 secure FRB hosts. We find the distribution of observed SFRs is inconsistent with the model at >95\\% c.l. The offset distribution is consistent with this scenario; however, this could be due to the limited sample size and the seeing limited estimates for the effective radii of the FRB host galaxies. Despite the recent association of an FRB with a magnetar in the Milky Way, magnetars may not be the only source of FRBs in the universe, yet any other successful model must account for the demographics of the FRB host in SFR and their observed galactocentric offsets.
+
+## 1. Introduction
+
+Fast radio bursts (FRBs) are brilliant (10^{37}~{}K) GHz milliseconds duration pulses (see Petroff et al., 2019; Cordes & Chatterjee, 2019, for recent reviews). To explain these enigmatic millisecond-duration radio flares, a whole suite of theories have been proposed ranging from the collision of asteroids with neutron stars to magnetars (see Platts et al., 2019, for a compilation of the current theories).
+
+The recent association of FRB 200428 with a magnetar SGR 1935+2154 in the Milky Way (The CHIME/FRB Collaboration et al., 2020; Bochenek et al., 2020), suggests a correlation between magnetars and FRBs. Although FRB 200428 is two orders of magnitude fainter than the weakest extragalactic FRBs, it is still possible that this magnetar produced a burst that constitutes the faint end of the extragalactic FRB sources. Such weak FRBs would reach the detection limit of current facilities if they originated at redshifts z>0.1, and are therefore difficult to detect at cosmological distances. On the other hand, we could imagine two separate classes of magnetars that could be associated with FRBs. One that comes from millisecond magnetars, and one from ordinary magnetars.
+
+If the previous history with other transient classes holds (e.g. Fong & Berger, 2013; Lunnan et al., 2014; Schulze et al., 2020; Blanchard et al., 2016), studying the host galaxy properties and the physical offsets may be critical to constraining the likely progenitor channels of FRBs. For example, if FRBs originate from millisecond magnetars, we expect the host galaxies of such FRBs to trace the demographics of galaxies in star formation rate.
+
+While more than \\sim 100 FRBs have now been detected (Petroff et al., 2016)1, only a dozen have been accurately localized and associated with a host galaxy (Bhandari et al., 2020; Heintz et al., 2020)2. The first host galaxy detection of an extragalactic FRB, FRB 121102 in a starburst galaxy at z=0.1927(Chatterjee et al., 2017; Tendulkar et al., 2017), showed remarkable similarities with galaxies hosting long-duration gamma-ray bursts (LGRBs) and superluminous supernovae (SLSNe), motivating a scenario where FRBs are produced by young, millisecond magnetars (Metzger et al., 2017). However, later studies revealed that the host galaxy of FRB 121102 is anomalous compared to most other FRB hosts, which are typically massive galaxies with modest star-formation rates (Bhandari et al., 2020). These global properties are more consistent with the hosts of shortduration GRBs (SGRBs) and core-collapse or Type Ia SNe (Li and Zhang, 2020). The observed large physical offsets of FRBs relative to their host galaxy centers also support the latter scenario, with most bursts appearing to occur in the lower surface brightness regions of their hosts (Heintz et al., 2020). These results demonstrate that FRBs are produced in a variety of host galaxy environments. If they all originate from magnetars, this also suggests that they may be produced through a range of progenitor channels, as various channels have different expectations for host galaxy demographics (Nicholl et al., 2017; Margalit et al., 2019), or via a single progenitor, which can accommodate a diverse range of host properties (e.g., delay time distributions) and galactocentric offsets.
+
+The typical large offsets observed in the case of SGRBs, however, is attributed to binary neutron stars that are born with significant velocities up to hundreds of \\rm{km\\,s^{-1}} traveling for tens of Myr to several Gyr to reach such far distances from their host galaxies (Fong and Berger, 2013; Zevin et al., 2019). The same logic cannot be applied to FRBs assuming that they originate from millisecond magnetars, since their large magnetic field strengths (B\\gtrsim 10^{14} G; Kouveliotou et al., 1998) should decay on the decay-lifetime of no more than \\tau\\sim 10^{4} years (Colpi et al., 2000; Dall'Osso et al., 2012; Vigano et al., 2013; Beniamini et al., 2019). This short active lifetime limits the millisecond magnetars' location to their birthplace. In the context of the millisecond magnetar scenario, the observed large physical offset distribution of FRBs can, therefore, only be accounted for if there is a non-negligible probability for the millisecond magnetar to be born at their observed location.
+
+In this _Letter_ we test the hypothesis that FRBs are associated with millisecond magnetars with a simple model for the host galaxy population of such magnetars. While other works have tried to constrain this via direct comparisons to other astronomical transient sample (e.g. Bhandari et al., 2020; Li and Zhang, 2020; Heintz et al., 2020; Bochenek et al., 2020), we here provide an independent test based on theoretical expectations. In SS 2 we describe our method to estimate the probability of accounting for the observed offset of FRBs given their short lifetime, and in SS 3 we present our results. In SS 4 we discuss the role of natal kicks and show its irrelevance in the context of millisecond magnetar engine interpretation of FRBs, unlike that of SGRBs. Finally, in SS 5 we discuss the implications of the offset data for the progenitors of the FRBs and conclude on our work.
+
+## 2 Data and Methods
+
+In this work, we adopt the FRB host galaxy stellar population properties derived by Heintz et al. (2020). For our analysis, we only include the 10 most secure host galaxies in their Sample A, excluding FRBs 181112, 190614D, and 190523, which have less robust host associations. The basic properties of these hosts, such as the redshift, stellar mass M_{\\star}, star-formation rate (SFR), and the effective radius R_{e} are summarized in Table 1. We note that approximately half of the hosts exhibit LINER-like line-emission that may imply an over-estimate of the true SFR, which were primarily derived from H\\alpha fluxes (Heintz et al., 2020). We further note that the R_{e} values were derived primarily from seeing-limited observations, and the true measures may be systematically smaller.
+
+Here, we also include the measured projected physical offsets of the FRBs relative to their host galaxy centers.
+
+We then compare the observed distribution of the FRB host galaxies, in terms of their stellar mass, SFR, and their offset distribution, with theoretical expectations based on the millisecond magnetar progenitor model. To do so, we take the following steps:
+
+1. At a given redshift, we sample the distribution from the halo mass function (Tinker et al., 2008). We limit our sample to halos with dark matter halo mass M_{h}>10^{10}M_{\\odot}.3 Footnote 3: We use the HMF Python package to perform sampling from their halo mass function. [https://ascl.net/1412.006](https://ascl.net/1412.006)
+
+2. We assign to each halo a stellar-mass following the stellar-mass to halo-mass relation derived in halo-abundance matching techniques (e.g., Behroozi et al., 2013).
+
+3. To each galaxy we assign a star formation rate (SFR) based on the SFR-M_{\\star} relation of main-sequence star-forming galaxies from Whitaker et al. (2012).
+
+4. We apply the model assumption that the FRB host galaxies are selected according to their SFR. This is based on the assumption that since magnetars originate from massive stars, they will occur in galaxies with active star formation. Therefore, for each host, we assign a weight (w_{i}) to each galaxy (i) proportional to its SFR.
+
+5. We probabilistically consider a fraction of galaxies to be quenched based on their stellar mass following fits to the results presented in Behroozi et al. (2019). The quenched galaxies are then removed from the sample.
+
+6. We subsequently construct the cumulative distribution function (CDF) of the stellar mass distribution of all the galaxies at a given redshift.
+
+7. We compare this global CDF to the corresponding CDF of the FRB hosts through a two sample KS statistics and report the associated p-values.
+
+## 3 Results
+
+A comparison of the inferred stellar mass and SFR distributions of the FRB hosts with the theoretical expectation of the global population of the galaxies in different redshift bins is shown in Figure 1. The uncertainty regions shown on the CDFs take into account both the uncertainty on each measurement and from the sample size (following Heintz et al., 2020, see also Palmerio et al., 2019). The models assume that FRB hosts track the SFR-weighted M_{\\star} and SFR distribution of field galaxies. We report the p-values from a two-sample KS test between the observed FRB sample in SFR and stellar mass, and their expected theoretical distribution based on the scaling relations. The overall distribution of M_{\\star} in FRB hosts are roughly consistent with the global CDF of the underlying galaxy population, here considered at z\\sim 0.1, 0.25, and 0.4 (which represents the mean and 1-\\sigma c.l. of the FRB redshift distribution). The distribution of SFRs in FRB hosts are, however, inconsistent with the magnetar model at >95\\% c.l. at all redshifts. A millisecond magnetar origin for most FRBs is thus difficult to reconcile with the current data.
+
+Next, we analyze the offset distribution of the FRBs with the local distribution of SFR within galaxies. For this analysis, we further assume that the SFR in these galaxies follows an exponential profile. The probability of a magnetar to be born at a projected distance \\gtrsim r from the host galaxy's center is computed as:
+
+p=\\frac{\\int_{r}^{\\infty}re^{-r/R_{e}}dr}{\\int_{0}^{\\infty}re^{-r/R_{e}}dr}. 
+
+We construct a CDF for r/R_{e} and compare this to the observed distribution of the host-normalized offsets r/R_{e} of the FRBs in Figure 2. The red line shows the expected theoretical CDF for r/R_{e} of magnetars in this model. The solid black line shows the distribution of the 10 FRBs, where we arrive at a p-value of 0.71 when compared to the model. This indicates that with the current data, the offset distribution is consistent with being drawn from the exponential profile.
+
+Therefore, while the host galaxy model that we have constructed here shows tension in terms of the global population, the data are consistent with the simple expectation for the local distribution. We caution, however, that the R_{e} values adopted for this analysis may be systematically too large as they were derived almost entirely from ground-based imaging.
+
+## 4 Discussion
+
+While there is a clear inconsistency in the expected global host demographics in SFR and the observed FRB host galaxies, we find that the projected offsets are _not_ inconsistent with the predicted locations of magnetar birth sites. This tension may be resolved with a larger sample of well-localized FRBs, i.e. the consistency may primarily reflect the limited sample size. Sampling from the current distribution of the offset distribution and increasing the sample size to more than 50 would point to an inconsistent distribution of the FRB hosts and the assumed exponential profile. In this case, at least some FRBs may instead be produced through a "delayed channel", in which the delay times involved are significant compared to millisecond magnetar or massive star progenitor channels (up to several Gyr; Nicholl et al., 2017). Such is the case for short GRBs; indeed, their locations are not consistent with exponential disk profiles, nor the distribution of stellar mass or star formation within their hosts (Fong and Berger, 2013). This has been interpreted as the result of a combination of natal kicks to their neutron star progenitors, and the range of expected merger timescales (Paterson et al., 2020). If FRB locations and hosts exhibit similar properties, this would indicate that some FRBs could still originate from magnetars, but via a "delayed" channel (Margalit et al., 2019; Zhong and Dai, 2020). However, the inferred rates of FRBs in comparison to existing delayed channel transients would also require a large fraction of FRBs to repeat (Ravi et al., 2019; Wang et al., 2020). In future work, we will examine the required delay times for such a scenario to make the magnetar interpretation still be viable.
+
+Our current model could be further improved from different aspects: 1) allowing for separation of the repeaters
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c c} \\hline \\hline \\multicolumn{1}{c}{ FRB host} & z_{\\rm FRB} & M_{\\star} & SFR & Offset & R_{\\rm eff} \\\\  & & (10^{9}\\,M_{\\odot}) & (M_{\\odot}\\,{\\rm yr}^{-1}) & (kpc) & (kpc) \\\\ \\hline
+
+121102 & 0.1927 & 0.14\\pm 0.07 & 0.15\\pm 0.04 & 0.6\\pm 0.3 & 0.7\\pm 0.1 \\\\
+
+180916 & 0.0337 & 2.15\\pm 0.33 & 0.06\\pm 0.02 & 5.5\\pm 0.1 & 3.6\\pm 0.4 \\\\
+
+180924 & 0.3212 & 13.2\\pm 5.1 & 0.88\\pm 0.26 & 3.4\\pm 0.6 & 2.7\\pm 0.1 \\\\
+
+190102 & 0.2912 & 3.39\\pm 1.02 & 0.86\\pm 0.26 & 2.0\\pm 2.0 & 4.4\\pm 0.5 \\\\
+
+190608 & 0.1178 & 11.6\\pm 2.8 & 0.69\\pm 0.21 & 6.6\\pm 0.6 & 2.8\\pm 0.2 \\\\
+
+190611 & 0.3778 & \\sim 0.8 & 0.27\\pm 0.08 & 11\\pm 4 & 2.1\\pm 0.1 \\\\
+
+190711 & 0.5220 & 0.81\\pm 0.29 & 0.42\\pm 0.12 & 3.2\\pm 2.8 & 2.9\\pm 0.2 \\\\
+
+190714 & 0.2365 & 14.9\\pm 7.1 & 0.65\\pm 0.20 & 1.9\\pm 0.6 & 3.9\\pm 0.1 \\\\
+
+191001 & 0.2340 & 46.4\\pm 18.8 & 8.06\\pm 2.42 & 11\\pm 1 & 5.5\\pm 0.1 \\\\
+
+200430 & 0.1600 & 1.30\\pm 0.60 & \\sim 0.2 & 3.0\\pm 1.6 & 1.6\\pm 0.5 \\\\ \\hline \\end{tabular} Note. – The stellar masses M_{\\star} reported here are computed from SED modeling of the photometry for each host galaxy. The SFRs are derived based on the integrated H\\alpha line flux (except for the host of FRB 200430 for which we adopt the SFR from the best-fit SED model). The offsets represent the host-burst separation and the effective radii are derived from Galfit analyses. For more detail, see Heintz et al. (2020) from which all measurements are adopted.
+
+\\end{table}
+
+Table 1: FRB host galaxy properties. and non-repeaters, which we have avoided in this work due to the limited sample size; 2) assuming other internal galaxy properties (e.g., metallicity) influence the progenitor model; 3) comparing to the observed SFR distribution in FRB hosts instead of adopting a simple exponential profile; 3) investigating the uncertainties and systematics related to the SFR estimates, especially between those adopted for the FRB host galaxies (derived primarily from slit spectroscopy of H\\alpha; Heintz et al. 2020) and those from the literature; and 4) examination of other observed galaxy properties that may be expected to trace millisecond magnetars (e.g., age). These will be the focus of future works, especially as the FRB host galaxy sample will inevitably increase with the onset of new or upgraded discovery experiments.
+
+## 5 Conclusions and Outlook
+
+Here, we have examined the demographics and galactocentric offsets of FRBs based on the global properties of their hosts to test the assumption that the majority of these bursts are produced by millisecond magnetars.
+
+Based on the M_{\\star} and SFR distribution of the most recent sample of 10 securely identified FRB host galaxies, we here showed that there is an apparent tension between the observed distributions and theoretical expectations of galaxies hosting active magnetars. Due to their short decay-lifetimes, active magnetars would be expected to follow star formation, which is inconsistent at >95\\% c.l. with the observed distributions of FRB hosts. Alternatively, we found that the host-normalized offset distribution of the current sample of FRB hosts cannot rule out the scenario where FRBs originate from magnetars. This consistency could be due to limited sample size at hand. While the current cadence is still relatively low, of the order \\sim 5 arcsecond-localized FRBs per year (required to robustly identify their associated hosts), this detection rate is expected to accelerate within the next few fears. Once a sample size of \\sim 100 FRB hosts have been reached, this will be sufficient to test more sophisticated models for the galaxy populations of assumed progenitor models.
+
+## Acknowledgements
+
+We would like to thank Jesse Palmerio for sharing his code used to produce the CDFs and related uncertainties shown in the paper. We thank Nicolas Tejos Salgado for comments on the earlier version of this work. The Fast and Fortunate for FRB Follow-up team, acknowledge support from NSF grants AST-1911140 and AST-1910471. K.E.H. acknowledges support by a Project Grant (162948-051) from The Icelandic Research Fund. W.F. acknowledges support by the National Science Foundation under grant No. AST-1814782.

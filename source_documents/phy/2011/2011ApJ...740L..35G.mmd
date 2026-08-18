@@ -1,0 +1,157 @@
+###### Abstract
+
+We consider the pinning of superfluid (neutron) vortices to magnetic fluxtubes associated with a type II (proton) superconductor in neutron star cores. We demonstrate that core pinning affects the spin-down of the system significantly, and discuss implications for regular radio pulsars and magnetars. We find that magnetars are likely to be in the pinning regime, while most radio pulsars are not. This suggests that the currently inferred magnetic field for magnetars may be overestimated. We also obtain a new timescale for the magnetic field evolution which could be associated with the observed activity in magnetars, provided that the field has a strong toroidal component.
+
+## 1. Introduction
+
+The outer core of a mature neutron star is expected to contain a neutron superfluid coupled to a type II proton superconductor (Baym et al., 1969). The dynamics of this system is complicated; the neutrons rotate by forming a dense array of vortices while the magnetic field is carried by quantized proton fluxtubes. The interaction between the vortices and the fluxtubes is expected to have significant impact on the dynamics of these systems. In fact, the vortices may "pin" to the fluxtubes (in the sense that the energy cost of cutting through is too high) as the star spins down, affecting the evolution of the star's rotation and magnetic field. An example of this was provided by Link (2003), who argued that the free precession interpretation of the long-term variability in PSR B1828-11 would not be compatible with core vortex pinning. Vortex-fluxtube pinning may also couple the magnetic field evolution to the rotation, as in the model of Ruderman et al. (1998).
+
+Connections between the magnetic field and the spin evolution are crucial if we want to understand the different observational manifestations of neutron stars, like radio pulsars and magnetars, and establish an evolutionary link between them. We also need to keep in mind that the spin and its rate of change are the primary observables. The magnetic field tends to be inferred from the assumption of pure dipole breaking.
+
+The aim of this Letter is to demonstrate how the standard logic linking the spin evolution and the inferred magnetic field breaks down if there is significant vortex-fluxtube pinning, and how the same mechanism could drive the magnetic field evolution.
+
+## 2. A vortex dynamics model
+
+We consider the motion of individual neutron vortices and proton fluxtubes in a neutron star core, composed of neutrons, protons and electrons. The local vortex/fluxtube velocity is u^{i}_{\\rm x} where the index {\\rm x}=\\{{\\rm n},{\\rm p}\\} distinguishes between the two types. For simplicity, the hydrodynamical fluid velocities are assumed to represent rigid-body rotation, i.e. v^{i}_{\\rm x}=\\epsilon^{ijk}\\Omega^{\\rm s}_{j}x_{k}, where the spin frequencies \\Omega^{i}_{\\rm x} are aligned (defining the z-axis) but may differ in magnitude. A direct consequence of uniform rotation is that the neutron vortices are straight, which may be a serious oversimplification. The proton fluxtubes are not constrained in this way.
+
+In order to make progress, we make a number of simplifications. The most basic is the assumption of axisymmetry. We ignore the entrainment between the superfluids on the hydrodynamic scale [although the effect is included implicitly, in the magnetization of neutron vortices (Alpar et al., 1984)]. Given these assumptions one can use Ampere's law, as modified in a type II superconductor, to show that the electron and proton fluids are "locked" together, moving with a common velocity v^{i}_{\\rm p}(Glampedakis et al., 2011). Finally, we identify \\Omega_{\\rm p} with the motion of the "crust" and the observed spin frequency \\Omega.
+
+The motion of an individual vortex/fluxtube is governed by a force balance equation. Ignoring the inertia of the filaments (as usual) we have
+
+f^{i}_{\\rm Mn}+f^{i}_{\\rm Dn}+f^{i}_{\\rm pn}=0  f^{i}_{\\rm Mp}+f^{i}_{\\rm Dp}+f^{i}_{\\rm Pp}+f^{i}_{\\rm T}=0 
+
+Each vortex/fluxtube experiences (i) a Magnus force f^{i}_{\\rm Mx}=\\rho_{\\rm x}\\epsilon^{ijk}\\kappa^{j}_{\\rm x}(u^{k}_{\\rm x}-v^{ k}_{\\rm x}) due to the interaction between the macroscopic fluid flows and the mesoscopic, quantized, neutron/proton circulations (\\rho_{\\rm x} is the fluid density while \\kappa^{i}_{\\rm x} has magnitude \\kappa=h/2m and points along the local vortex/fluxtube direction), (ii) a drag force f^{i}_{\\rm Dx}=\\rho_{\\rm x}\\kappa{\\cal R}_{\\rm x}(v^{i}_{\\rm p}-u^{i}_{\\rm x}), typically attributed to the scattering of electrons by the intrinsic vortex/fluxtube magnetic field, with a dimensionless coefficient {\\cal R}_{\\rm x}\\ll 1(Alpar et al., 1984; Ruderman et al., 1998) and (iii) a "pinning" force f^{i}_{\\rm Px} due to local interaction between a vortex and a fluxtube. Finally, a bent fluxtube will experience a (self-induced) tension f^{i}_{\\rm T} [since we are considering straight vortices there is no similar force in (1)]. All forces are per unit length.
+
+The direct interaction is primarily due to the short range magnetic fields associated with each vortex/flustrube, and could lead to pinning (Sauls, 1989). This interaction must obey Newton's third law, i.e.
+
+f^{i}_{\\rm PP}=-\\alpha f^{i}_{\\rm Pn} 
+
+In fact, this relation is the operational definition of f^{i}_{\\rm PP}. In a typical fluid element the number density (per unit area) \\mathcal{N}_{\\rm p} of fluxtubes greatly exceeds the vortex density \\mathcal{N}_{\\rm n}, resulting in only a tiny fraction of fluxtubes interacting with vortices at any given instant. At the same time neighbouring fluxtubes can push each other, "distributing" the action of the vortex back-reaction force -f^{i}_{\\rm PP} to the entire fluid element. On average, this effect can be quantified by the small parameter \\alpha\\sim\\mathcal{N}_{\\rm n}/\\mathcal{N}_{\\rm p}(Ruderman et al., 1998; Jahan-Miri, 2000).
+
+Eqn. (1) provides an exact form for the pinning force,
+
+f^{i}_{\\rm Pn}=-\\rho_{\\rm n}\\kappa\\mathcal{R}_{\\rm n}(v^{i}_{\\rm p}-u^{i}_{\\rm n })+\\rho_{\\rm n}\\kappa\\epsilon^{ijk}\\hat{z}_{j}(v^{\\rm n}_{k}-u^{\\rm n}_{k})  where we have set \\kappa^{i}_{\\rm n}=\\kappa\\hat{z}^{i}. This can be used in (2) to eliminate f^{i}_{\\rm PP} [with the help of eqn. (3)]. Thus we obtain
+
+\\tilde{\\mathcal{R}}(v^{i}_{\\rm p}-u^{i}_{\\rm n})+\\epsilon^{ijk}\\hat{z}_{j} \\left(u^{\\rm n}_{k}-V_{k}\\right)+\\mathcal{F}^{i}=0  where we have defined
+
+\\tilde{\\mathcal{R}}\\approx\\frac{\\mathcal{R}_{\\rm p}}{\\mathcal{K}},\\qquad V^{i}=\\frac{1}{\\mathcal{K}}\\left(\\kappa_{\\parallel}v^{i}_{\\rm p}+\\frac{ \\alpha}{x_{\\rm p}}v^{i}_{\\rm n}\\right)  \\mathcal{F}^{i}=\\frac{1}{\\mathcal{K}}\\left(\\frac{1}{\\rho_{\\rm p} \\kappa}f^{i}_{\\rm T}+\\mathcal{R}_{\\rm p}u^{i}_{\\rm rel}-\\kappa_{\\parallel} \\epsilon^{ijk}\\hat{z}_{j}u^{\\rm rel}_{k}\\right)  with \\mathcal{K}=\\kappa_{\\parallel}+\\alpha/x_{\\rm p}. We have introduced the relative vortex-fluxtube velocity u^{i}_{\\rm rel}=u^{i}_{\\rm n}-u^{i}_{\\rm p}, the ratio x_{\\rm p}=\\rho_{\\rm p}/\\rho_{\\rm n} (essentially the proton fraction) and the (dimensionless) projections \\kappa_{\\parallel} and \\kappa_{\\perp} such that
+
+\\hat{\\kappa}^{i}_{\\rm p}=\\kappa_{\\parallel}\\hat{z}^{i}+\\kappa^{i}_{\\perp}, \\qquad\\kappa^{2}_{\\parallel}+\\kappa^{2}_{\\perp}=1 
+
+Given that the macroscopic magnetic field B^{i} is locally directed along \\hat{\\kappa}^{i}_{\\rm p}, the decomposition (8) makes contact with a general "twisted-torus" magnetic field configuration which has a mixed toroidal (B_{\\rm T}) and poloidal (B_{\\rm P}) character representative of hydromagnetic equilibrium (Braithwaite, 2009). Then \\kappa_{\\parallel}\\sim B_{\\rm P}/B_{\\rm T} and for a typical twisted-torus configuration \\kappa_{\\parallel}\\sim\\kappa_{\\perp}\\sim 1. A predominantly toroidal field has \\kappa_{\\parallel}\\ll 1 and \\kappa^{i}_{\\perp}\\approx\\hat{\\varphi}^{i}. Excluding the special case \\kappa_{\\parallel}\\lesssim\\alpha/x_{\\rm p} of a (essentially) purely toroidal field, we assume \\mathcal{K}\\approx\\kappa_{\\parallel} hereafter.
+
+As a final step, we can invert (5) and obtain the vortex velocity
+
+u^{i}_{\\rm n}=v^{i}_{\\rm p}+\\frac{1}{1+\\tilde{\\mathcal{R}}^{2}} \\Bigg{[}\\tilde{\\mathcal{R}}\\epsilon^{ijk}\\hat{z}_{j}(v^{\\rm p}_{k}-V_{k}) +\\epsilon^{ijk}\\epsilon_{klm}\\hat{z}_{j}\\hat{z}^{l}(v^{m}_{\\rm p}- V^{m})+\\tilde{\\mathcal{R}}\\mathcal{F}^{i}+\\epsilon^{ijk}\\hat{z}_{j}\\mathcal{F}_{k} \\Bigg{]} 
+
+## 3 The pinning regime
+
+Strong interaction between a vortex and a fluxtube segment (via the forces f^{i}_{\\rm p,x}) may result in more or less perfect pinning. Given the present understanding of neutron star matter, this is likely to happen (Sauls, 1989). Assuming vortex pinning, in the remainder of this Letter we explore some very interesting consequences. If (for whatever reason) pinning is inefficient, in the sense of a significant vortex-fluxtube relative motion, then our model does not apply.
+
+When pinned, the two segments would move together,
+
+u^{i}_{\\rm n}=u^{i}_{\\rm p}\\equiv u^{i} 
+
+This velocity can be immediately obtained from (9) after setting u^{i}_{\\rm rel}=0. Using cylindrical coordinates \\{\\varpi,\\varphi,z\\} with respect to the rotation/symmetry axis, we find
+
+u^{i}\\approx\\varpi\\Omega\\hat{\\varphi}^{i}+\\frac{1}{\\kappa_{\\parallel}}\\Bigg{[} \\varpi\\frac{\\alpha\\Omega_{\\rm np}}{x_{\\rm p}}+\\frac{f^{\\rm T}_{\\rm T}}{\\rho_{ \\rm p}\\kappa}\\Bigg{]}\\left(\\frac{\\mathcal{R}_{\\rm p}}{\\kappa_{\\parallel}} \\hat{\\varpi}^{i}+\\hat{\\varphi}^{i}\\right)  where we have defined the rotational lag \\Omega_{\\rm np}=\\Omega_{\\rm n}-\\Omega. We see that, to leading order, the velocity of pinned vortex/fluxtube segments is nearly azimuthal and in corotation with the charged component. Superimposed on this there is a small relative motion \\Delta u^{i}\\equiv u^{i}-v^{i}_{\\rm p} between the vortex/fluxtube array and the proton velocity with both radial and azimuthal components:
+
+\\Delta u^{\\varpi}=u^{\\varpi}\\approx\\frac{\\mathcal{R}_{\\rm p}}{ \\kappa^{2}_{\\parallel}}\\left(\\varpi\\frac{\\alpha\\Omega_{\\rm np}}{x_{\\rm p}}+ \\frac{f^{\\rm T}_{\\rm T}}{\\rho_{\\rm p}\\kappa}\\right)  \\Delta u^{\\varphi}\\approx\\frac{\\kappa_{\\parallel}}{\\mathcal{R}_{ \\rm p}}u^{\\varpi} 
+
+The dependence of \\Delta u^{i} on \\kappa_{\\parallel} encodes the action of the (radial) Magnus force on a fluxtube. We note that \\Delta u^{i} is nearly azimuthal unless the magnetic field is dominated by the toroidal component to the degree that \\kappa_{\\parallel}\\lesssim\\mathcal{R}_{\\rm p}\\approx 10^{-3}. The true magnitude of \\mathcal{R}_{\\rm p} is uncertain. We use a value inferred from electron scattering by a single fluxtube (Alpar et al., 1984). However, we note that Jones (2006) has argued that the high fluxtube density suppresses the magnetic scattering leading to a much smaller \\mathcal{R}_{\\rm p}. Nevertheless, as no actual alternative value for \\mathcal{R}_{\\rm p} has been provided in the literature, we base our discussion on the standard "single fluxtube" result.
+
+A vortex cannot move arbitrarily fast and remain pinned. Above some relative vortex-fluid velocity threshold the forces entering the balance (4) will exceed the maximum pinning force, f_{\\rm pin}, and the vortex unpins. The maximum pinning force has been estimated to be [e.g. Link, (2003)],
+
+f_{\\rm pin}\\approx 3\\times 10^{15}\\,B_{12}^{1/2}\\ \\mathrm{dyn/cm}  where B_{12}=B/10^{12}\\,\\mathrm{G} is the normalized _interior_ magnetic field. At maximum pinning, the vortex force balance is well approximated by after setting u^{i}_{\\rm n}\\approx u^{i}_{\\rm p}\\approx v^{i}_{\\rm p} and omitting the drag term in (4))
+
+f^{i}_{\\rm Pn}\\approx\\rho_{\\rm n}\\kappa\\epsilon^{ijk}\\hat{z}_{j}(v^{\\rm n}_{k}-v ^{\\rm p}_{\\rm p})  and we can extract the maximum allowed spin lag (above which pinning can no longer be sustained);
+
+\\Omega^{\\rm max}_{\\rm np}=\\frac{f_{\\rm pin}}{\\rho_{\\rm n}\\kappa\\varpi} \\approx 7.6\\times 10^{-3}\\,\\frac{B_{12}^{1/2}}{\\varpi_{6}}\\ \\mathrm{s}^{-1}  where \\varpi_{6}=\\varpi/10^{6}\\,\\mathrm{cm}. This result can be used in (12) and (13) to provide the maximum relative vortex/fluctube velocity with respect to the protons;
+
+\\Delta u_{\\rm max}^{\\varphi}=\\frac{\\kappa_{\\parallel}}{{\\cal R}_{\\rm p}}\\Delta u_{ \\rm max}^{\\varpi}=\\frac{1}{\\rho_{\\rm p}\\kappa\\kappa_{\\parallel}}\\left(\\alpha f_{ \\rm pin}+f_{\\rm T}^{\\varpi}\\right) 
+
+Let us provide numerical estimates of the forces in (17). The tension can be approximated by f_{\\rm T}={\\cal E}_{\\phi}/R_{c} where {\\cal E}_{\\phi} is the fluxtube energy per unit length and R_{c} is the local radius of curvature. Estimates for {\\cal E}_{\\phi} can be found in Mendell (1991) while a typical value for the curvature radius would be R_{c}\\sim R. The pinning force can be estimated using (14) together with \\alpha={\\cal N}_{\\rm n}/{\\cal N}_{\\rm p},{\\cal N}_{\\rm n}=2\\Omega_{\\rm n}/\\kappa and {\\cal N}_{\\rm p}=B/\\phi_{0} (\\phi_{0}=hc/2e is the flux quantum). This way we obtain
+
+\\frac{f_{\\rm T}}{\\rho_{\\rm p}\\kappa}\\approx 10^{-9}\\;\\;{\\rm cm/s},\\quad\\frac{ \\alpha f_{\\rm pin}}{\\rho_{\\rm p}\\kappa}\\approx\\frac{10^{-10}}{PB_{12}^{1/2}} \\frac{\\Omega_{\\rm n}}{\\Omega}\\;\\;{\\rm cm/s}  with the stellar spin period, P, measured in seconds.
+
+## 4. Spin evolution
+
+Vortex pinning has direct impact on the neutron star spin evolution. This is not surprising, given the close link between the spindown of the neutron superfluid and the radial vortex motion,
+
+u_{\\rm n}^{\\varpi}=-\\varpi\\dot{\\Omega}_{\\rm n}/2\\Omega_{\\rm n} 
+
+If the neutron superfluid is able to track the electromagnetically-driven spindown of the charged component (i.e. when \\Omega_{\\rm n}=\\Omega and \\dot{\\Omega}_{\\rm n}=\\dot{\\Omega}), we have
+
+u_{\\rm n}^{\\varpi}\\approx 8\\times 10^{-7}\\varpi_{6}\\left(10^{4}\\,{\\rm yr}/ \\tau_{\\rm sd}\\right)\\,{\\rm cm/s}  where \\tau_{\\rm sd}=P/2|\\dot{P}| is the observed "spin-down age". This vastly exceeds the maximum radial vortex velocity (17) in the pinning regime. Thus, we should expect the neutrons to spin down at a rate |\\dot{\\Omega}_{\\rm n}|\\ll|\\dot{\\Omega}| in the pinning regime. This would lead to a monotonically increasing spin lag \\Omega_{\\rm np}, to the point where \\Omega_{\\rm np}^{\\rm max} is reached and vortex pinning can no longer be sustained. The development of this lag is similar in most models of large pulsar glitches.
+
+Let us focus on the timescale associated with the pinning phase. In order to estimate this, we need to model the spin evolution of a multi-fluid star. This can be done by considering the volume-integrated Euler equations for the fluids [cf. Sidery et al. (2010)]. The resulting equations take the form,
+
+I_{\\rm n}\\dot{\\Omega}_{\\rm n}=N_{\\rm mf},\\qquad I_{\\rm p}\\dot{\\Omega}=-N_{\\rm mf }+N_{\\rm em}  where I_{\\rm x}=\\int\\rho_{\\rm x}\\varpi^{2}dV is the moment of inertia for each fluid. These equations feature torques due to (i) the exterior magnetic field (N_{\\rm em}^{i}) and (ii) the "mutual friction" (N_{\\rm mf}^{i}) which represents the vortex/fluxtube-mediated coupling. The latter torque is given by
+
+N_{\\rm mf}^{i}=\\int\\epsilon^{ijk}x_{j}F_{k}^{\\rm mf}dV  where the mutual friction force is
+
+F_{\\rm mf}^{i}={\\cal N}_{\\rm n}\\left(f_{\\rm Dn}^{i}+f_{\\rm Pn}^{i}\\right)=2 \\Omega_{\\rm n}\\rho_{\\rm n}\\epsilon^{ijk}\\hat{z}_{j}(v_{k}^{\\rm n}-u_{k}) 
+
+Using our result (11) for the common vortex/fluxtube velocity in the pinning regime we have
+
+N_{\\rm mf}^{i}\\approx-2\\Omega_{\\rm n}\\hat{z}^{i}\\int\\varpi^{2}\\frac{\\rho_{\\rm n }{\\cal R}_{\\rm p}}{\\kappa_{\\parallel}^{2}}\\left(\\frac{\\alpha\\Omega_{\\rm np}}{ x_{\\rm p}}+\\frac{f_{\\rm T}^{\\varpi}}{\\varpi\\rho_{\\rm p}\\kappa}\\right)dV 
+
+We also need to consider the magnetic torque N_{\\rm em}^{i}. Following the analysis of Spitkovsky (2006), which accounts for a wind contribution, we have
+
+N_{\\rm em}^{i}=\\left(\\frac{B_{d}^{2}R^{6}}{4c^{3}}\\right)\\Omega^{3}\\hat{z}^{i} \\equiv A\\Omega^{3}\\hat{z}^{i}  where B_{d} is the _exterior dipole_ field at the magnetic pole.
+
+Returning to the spin evolution equations (21) with (24) and (25), we observe that the timescale \\tau_{\\rm mf}\\sim I_{\\rm n}\\Omega/N_{\\rm mf} associated with the pinning and tension forces is much longer than the electromagnetic spindown timescale. For typical neutron star parameters we find \\tau_{\\rm mf}\\sim 10^{10}\\,\\kappa_{\\parallel}^{2}\\,{\\rm yr}. Hence, the spin evolution in the perfect pinning regime is well approximated by
+
+\\dot{\\Omega}_{\\rm n}\\approx 0,\\qquad\\dot{\\Omega}\\approx-A\\Omega^{3}/I_{\\rm p}  in accordance with the intuitive notion of a limited radial vortex motion enforced by pinning, and of the magnetic braking affecting only the charged component. Solving (26) with initial data \\Omega_{\\rm x}(0) is straightforward, and we have
+
+\\Omega(t)=\\Omega(0)\\Bigg{(}1+\\frac{I_{0}}{I_{\\rm p}}\\frac{t}{\\tau_{0}}\\Bigg{)} ^{-1/2},\\qquad\\Omega_{\\rm n}=\\Omega_{\\rm n}(0)  where I_{0}=I_{\\rm n}+I_{\\rm p} is the total moment of inertia and \\tau_{0}=I_{0}/(2A\\Omega^{2}). In a single-component star, \\tau_{0} would correspond to the spin-down timescale and would be identified with the observed spin-down age \\tau_{\\rm sd}. However, in the superfluid pinning model the appropriate identification, based on the spindown law (26), is \\tau_{\\rm sd}=(I_{\\rm p}/I_{0})\\tau_{0}\\approx x_{\\rm p}\\tau_{0}. Equivalently, we can relate the _true_ field B_{d} with the field B_{d}^{\\rm inf}_inferred_ from spin-down,
+
+B_{d}=\\left(\\frac{I_{\\rm p}}{I_{0}}\\right)^{1/2}\\left(\\frac{c^{3}I_{0}}{\\pi^{ 2}R^{6}}|\\dot{P}|P\\right)^{1/2}\\approx x_{\\rm p}^{1/2}B_{d}^{\\rm inf} 
+
+The spin evolution (27) naturally leads to a monotonically increasing spin-lag. Considering, for instance, the early regime t\\ll(I_{\\rm p}/I_{0})\\tau_{0}, we can easily obtain the time t_{\\rm max} at which the system reaches the maximum lag (16), where vortices first unpin [assuming \\Omega_{\\rm np}(0)=0]
+
+\\frac{t_{\\rm max}}{\\tau_{\\rm sd}}\\approx\\frac{2\\Omega_{\\rm np}^{\\rm max}}{ \\Omega}\\approx 2.4\\times 10^{-3}\\,\\frac{PB_{12}^{1/2}}{\\varpi_{6}}  which features the interior B field. When applied to a typical radio pulsar (P=0.1\\,{\\rm s}, B=10^{12}\\,{\\rm G}) the result (29) leads to t_{\\rm max}\\ll\\tau_{\\rm sd}. Thus, core vortex pinning in a typical pulsar is an ephemeral phenomenon, plausibly associated with large glitches (Glampedakis & Andersson, 2009).
+
+The situation may be very different for magnetars. For a strongly magnetized and slowly spinning object the timescale t_{\\rm max} can be comparable to, or even exceed, \\tau_{\\rm sd}. In this case we need to resort to the full
+
+[MISSING_PAGE_FAIL:4]
+
+* () Alpar, M.A., Langer, S.A., & Sauls, J.A. 1984, ApJ, 516, 533
+
+* () Arras, P., Cumming, A., & Thompson C. 2004, ApJ, 608, L49
+
+* () Baym, G., Pethick, C., & Pines D. 1969, Nature, 224, 673
+
+* () Braithwaite, J. 2009, MNRAS, 397, 763
+
+* () Dall'Osso, S., Shore, S.N., & Stella, L., 2009, MNRAS, 398, 1869
+
+* () Glampedakis, K., Andersson, N., & Samuelsson, L. 2011, MNRAS, 410, 805
+
+* () Glampedakis, K., Andersson, N. 2009, Phys. Rev. Lett., 102, 141101
+
+* () Glampedakis, K., Jones, D.I., & Samuelsson, L. 2011, MNRAS, 413, 3021
+
+* () Jahan-Mir, M. 2000, ApJ, 532, 514
+
+* () Jones, P.B., 2006, MNRAS, 365, 339
+
+* () Kaminker, A.D., Yakovlev, D.G., Potekhin, A.Y., Shibazaki, N., Shternin, P.S. & Gnedin, O.Y. 2006, MNRAS, 371, 477
+
+* () Link, B. 2003, Phys. Rev. Lett., 91, 101101
+
+* () Mendell, G. 1991, ApJ, 380, 515
+
+* () Page, D., Prakash, M., Lattimer, J.M., & Steiner, A.W. 2011, Phys. Rev. Lett., 106, 081101
+
+* () Ruderman, M., Zhu, T., & Chen, K. 1998, ApJ, 492 267
+
+* () Sauls, J.A., 1989, in _Timing Neutron stars_, ed. Ogelman H. and van de Heuvel E.P.J. (Kluwer Academic Publishers)
+
+* () Shternin, P.S., Yakovlev, D.G., Heinke, C.O., Ho, W.C.G., & Patnaude, D.J. 2011, MNRAS, 412, L108
+
+* () Sidery, T., Passamonti, A., & Andersson, N, 2010, MNRAS, 405, 1061
+
+* () Spitkovsky, A. 2006, ApJ, 649, L51
+
+* () Thompson, C., Lyutikov, M., & Kulkarni, S.R. 2002, ApJ, 574, 332

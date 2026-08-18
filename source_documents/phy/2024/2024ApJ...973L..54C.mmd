@@ -1,0 +1,197 @@
+###### Abstract
+
+Fast radio bursts (FRBs) are millisecond-duration flashes with unknown origins. Its formation rate is crucial for unveiling physical origins. However, the luminosity and formation rate are degenerated when directly fitting the redshift distribution of FRBs. In contrast to previous forward-fitting methods, we use the Lynden-Bell's c^{-} method to derive luminosity function and formation rate of FRBs without any assumptions. Using the non-repeating FRBs from the first CHIME/FRB catalog, we find a relatively strong luminosity evolution, and luminosity function can be fitted by a broken power-law model with a break at 1.33\\times 10^{41} erg s{}^{-1}. The formation rate declines rapidly as (1+z)^{-4.9\\pm 0.3} with a local rate 1.13\\times 10^{4} Gpc{}^{-3} yr{}^{-1}. This monotonic decrease is similar to the rate of short gamma-ray bursts. After comparing it with star formation rate and stellar mass density, we conclude that the old populations including neutron stars and black holes, are closely related to the origins of FRBs. Monte Carlo simulations are used to test our results. The distributions of mock sample are consistent with the observational data. fast radio burst: general - stars: formation 0000-0002-3218-8072]J. H. Chen
+
+0000-0002-8282-8585]X. D. Jia
+
+## 1 Introduction
+
+Fast radio bursts (FRBs) are a type of transient radio pulses that last milliseconds in the universe flashing randomly. They were first discovered in 2007 (Lorimer et al., 2007). Later, several other similar radio pulses were discovered (Thornton et al., 2013), which made FRBs attract great attention in the field of astronomy. At present, more than 700 FRBs have been detected between 110 MHz and 8 GHz, which can be divided into repeaters and non-repeaters in general, and a lot of models for FRBs have been proposed (Xiao et al., 2021; Zhang, 2023). However, the physical origin of them is unclear.
+
+The discovery of the Galactic FRB 20200428 from SGR 1935+2154 suggests that at least some FRBs are produced by magnetars from deaths of massive stars (Bochenek et al., 2020; CHIME/FRB Collaboration et al., 2020). Therefore, the viewpoint that FRBs follow the history of cosmic star formation has been widely adopted. However, a repeating source FRB 20200120E was discovered in an M81 globular cluster (Bhardwaj et al., 2021; Kirsten et al., 2022; Nimmo et al., 2022), which indicates that some of FRBs are related to ancient star populations and not directly associated with young populations. The rapid growth of detected FRB events enables us to utilize the statistical characteristics to study the physical origins of them.
+
+The relation between the formation rate of FRBs and star formation rate (SFR) will shed light on their progenitors. Zhang & Wang (2019) studied the energy function and formation rate of FRBs by including the metallicity effect for Parkes sample and Australian Square Kilometer Array Pathfinder (ASKAP) sample. They got a moderate time delay (about 3-5 Gyr) relative to cosmic SFR. Wang & van Leeuwen (2024) also found that FRB rate evolves with SFR with a short delay time. The number density of FRB sources can be compared with the density of possible ancestors to constrain FRB sources (Cao et al., 2018; Ravi, 2019; Hashimoto et al., 2020; Luo et al., 2020). In addition, the redshift evolution of the luminosity or energy function of FRBs is also one of the useful tools for constraining the progenitors of FRBs (Hashimoto et al., 2020; Arcus et al., 2021; James et al., 2022; Hashimoto et al., 2022). Using thefirst CHIME/FRB catalog (CHIME/FRB Collaboration et al., 2021), Zhang & Zhang (2022) excluded the hypothesis that all FRBs track the SFR. Hashimoto et al. (2022) found that the event rate of non-repeating FRBs is likely controlled by the old populations, such as neutron stars and black holes. However, all above works use the forward-fitting method, in which the observed data, such as the fluence, and redshift distributions, are fit to predictions of models with assumptions for luminosity functions and rate of FRBs. Here, we will determine luminosity function and rate of FRBs from the data directly using the Lynden-Bell's c^{-} method.
+
+Lynden-Bell's c^{-} method is a non-parametric data processing approach without any assumptions (Lynden-Bell, 1971). It can deal with the flux-limit sample, which has been widely applied in quasars (Lynden-Bell, 1971; Efron & Petrosian, 1992), long gamma-ray bursts (GRBs) (Lloyd-Ronning et al., 2002; Wu et al., 2012; Petrosian et al., 2015; Yu et al., 2015; Pescalli et al., 2016; Lloyd-Ronning et al., 2019; Dong et al., 2022), short GRBs (Yonetoku et al., 2014; Zhang & Wang, 2018) and galaxies (Kirshner et al., 1978; Peterson et al., 1986). Deng et al. (2019) has used this method to derive energy function and formation rate of FRBs observed by Parkes and ASKAP. But the sample is relatively small.
+
+In this paper, we derive the luminosity function and rate of FRBs using Lynden-Bell's c^{-} method with the CHIME/FRB catalog. This paper is organized as follows. In Section 2, we describe the FRB sample. In Section 3, Lynden-Bell's c^{-} method is introduced. The luminosity function and formation rate are derived in Section 4. Monte Carlo simulation is presented in Section 5. Conclusions and discussion are shown in Section 6. Here, we adopt the flat \\LambdaCDM model with \\Omega_{\\rm m}=0.315 and H_{0}=67.4 km s{}^{-1}Mpc{}^{-1}.
+
+## 2 FRB sample
+
+The Canadian Hydrogen Intensity Mapping Experiment (CHIME) can detect FRBs in the 400-800 MHz frequency band (CHIME/FRB Collaboration et al., 2018). CHIME/FRB collaboration released a catalog of 536 FRBs between 400 and 800 MHz from July 25, 2018 to July 1, 2019, referred to as "Catalog 1" (CHIME/FRB Collaboration et al., 2021). With Catalog 1, we now have the ability to conduct statistical research with uniform selection effects.
+
+In order to accurately reflect the intrinsic population of FRBs, we select apparently non-repeating FRBs. Considering that currently non-repeating sources and repeating ones may have different origins, we choose 474 non-repeating FRBs. Some FRBs with small extra-galactic dispersion measures (DM) are discarded. Because their redshifts are hard to determined from DM-z relation. Finally there are totally 439 FRBs in our sample. Tang et al. (2023) derived the pseudo redshifts for FRBs in Catalog 1 using the probability distributions of dispersion measures from cosmological simulations (Zhang et al., 2020, 2021). Their results are used.
+
+The luminosity can be calculated from
+
+L=4\\pi d_{L}^{2}(z)F\\Delta\\nu,  where
+
+d_{L}(z)=\\frac{c(1+z)}{H_{0}}\\int_{0}^{z}\\frac{dz}{\\sqrt{1-\\Omega_{\\rm m}+ \\Omega_{\\rm m}(1+z)^{3}}}  is the luminosity distance at redshift z. In this equation, F represents the peak flux observed between a certain frequency range and \\Delta\\nu=400 MHz is the bandwidth of CHIME. We adopt the flux limit as 0.2 Jy (CHIME/FRB Collaboration et al., 2018; Zhang & Zhang, 2022). The luminosity distribution of FRBs is shown in Figure 1.
+
+## 3 Lynden-Bell's c^{-} method
+
+Lynden-Bell's c^{-} method is an effective method for determining the luminosity and redshift distribution of astronomical objects using truncated data samples. This method can break the degeneracy between the luminosity function and formation rate. If the luminosity and redshift of FRBs are independent, then we can rewrite \\Psi(L,z) as \\Psi(L,z)=\\psi(L)\\phi(z), where \\psi(L) represents the cumulative luminosity function and \\phi(z) is the cumulative redshift distribution of FRBs. However, the luminosity and redshift of FRBs are not independent. We should remove the effect of the luminosity evolution g(z)=(1+z)^{k} and the transformed luminosity L_{0}=L/g(z) is independent with redshift. As a result, we can obtain \\Psi(L,z)=\\psi_{z}(L)\\phi(z)=\\psi(L_{0})\\phi(z). The luminosity function of a FRB at redshift z is \\psi_{z}(L)=\\psi(L/g(z)).
+
+The first step is to obtain the form of the evolution function g(z). In order to calculate the value of k, we introduce a "non parametric" test method (Efron & Petrosian, 1992), which has been widely used in previous works (Lloyd-Ronning et al., 2002; Yu et al., 2015). For each point (L_{i},z_{i}) in the statistic, we can define the associated set J_{i} as (Efron & Petrosian, 1992)
+
+J_{i}=\\left\\{j\\mid L_{j}\\geqslant L_{i},z_{j}\\leqslant z_{i}^{\\rm max}\\right\\}, where L_{i} is the ith FRB luminosity and z_{i}^{\\rm max} is the maximum redshift where the FRB with luminosity L_{i} can be detected. We plot this region in Figure 1 as a black rectangle. We define the number of FRBs contained in this region as n_{i}. Moreover, N_{i}=n_{i}-1 means taking the ith FRB out. This is why c^{-} is in Lynden-Bell (1971).
+
+Similarly, we can define J_{i}^{\\prime} as
+
+J_{i}^{\\prime}=\\left\\{j\\mid L_{j}\\geqslant L_{i}^{\\rm lim},\\,z_{j}<z_{i}\\right\\}. 
+
+In this equation, z_{i} means the redshift of ith FRB and L_{i}^{\\rm lim} is the minimum observable luminosity at this redshift. This region is displayed as the red rectangle in Figure 1. Also we define the number of events included in this region as M_{i}.
+
+We consider the n_{i} FRBs contained in the black rectangle in Figure 1 and define the number of events with redshifts equal to or less than z_{i} as R_{i}. In addtion, we introduce the expected mean and the variance of R_{i} as E_{i}=\\frac{n_{i}+1}{2} and V_{i}=\\frac{n_{i}^{2}-1}{12} respectively. If the luminosity and the redshift are independent, the R_{i} should be uniformly distributed between 1 and n_{i}. The test statistic \\tau is (Efron & Petrosian, 1992)
+
+\\tau=\\sum_{i}\\frac{(R_{i}-E_{i})}{\\sqrt{V_{i}}}. 
+
+When the test statistic \\tau is zero, the luminosity and the redshift are independent. So we change the value of k until \\tau is zero and get the form of g(z). Figure 3 shows the test statistic \\tau as a function of k and we find the best fit is k=6.66^{+0.13}_{-0.21} within l\\sigma confidence level.
+
+After removing the evolution's effect through L_{0}=L/(1+z)^{6.66}, the cumulative luminosity function \\psi(L_{0}) can be derived from the following equation with a non-parametric method (Lynden-Bell, 1971; Efron & Petrosian, 1992):
+
+\\psi(L_{0i})=\\prod_{j<i}(1+\\frac{1}{N_{j}}). 
+
+In this equation, j<i means the luminosity of jth FRB is larger than the ith FRB's. Similarly, we can obtain the cumulative redshift distribution \\phi(z) from
+
+\\phi(z_{i})=\\prod_{j<i}(1+\\frac{1}{M_{j}}). 
+
+In this equation, j<i means the redshift of jth FRB is smaller than the ith FRB's.
+
+## 4 Luminosity Function and Formation Rate
+
+In this section, we will show results about the luminosity function and formation rate of FRBs with Lynden-Bell's c^{-} method.
+
+### Luminosity function
+
+As discussed in Section 3, we have already obtained the luminosity evolution g(z)=(1+z)^{6.66}. We get L_{0} with L_{0}=L/g(z) for Catalog 1, which is shown in Figure 2. After having this new data set, the local luminosity function \\psi(L_{0}) can be obtained with Lynden Bell's c^{-} method, which is displayed in Figure 4. The luminosity function \\psi(L_{0}) can be fitted with a broken power law model. The best fit for dim and bright bursts is given by
+
+\\psi(L_{0})\\propto\\begin{cases}L_{0}^{-0.17\\pm 0.01}&L_{0}<L_{0}^{b}\\\\ L_{0}^{-1.33\\pm 0.01}&L_{0}>L_{0}^{b}\\end{cases},  where L_{0}^{b}=1.33\\times 10^{41} erg s{}^{-1} is the break luminosity point. It is necessary to be noted that this is the luminosity function at z=0, because the luminosity evolution is removed. The luminosity function \\psi_{z}(L) at redshift z should be \\psi_{z}(L)=\\psi(L_{0})(1+z)^{6.66}. Similarly, the corresponding broken luminosity at z is L_{z}^{b}=L_{0}^{b}(1+z)^{6.66}.
+
+### Formation rate of FRBs
+
+Figure 5 shows the cumulative redshift distribution \\phi(z) of FRBs. Compared with GRBs, the formation rate of FRBs can be derived from
+
+\\rho(z)=\\frac{d\\phi(z)}{dz}(1+z)\\Bigg{(}\\frac{dV(z)}{dz}\\Bigg{)}^{-1}. 
+
+In this equation, the factor (1+z) results from the cosmological time dilation and the differential comoving volume dV(z)/dz can be expressed as
+
+\\begin{split}\\frac{dV(z)}{dz}&=4\\pi\\Bigg{(}\\frac{c}{H _{0}}\\Bigg{)}^{3}\\Bigg{(}\\int_{0}^{z}\\frac{dz}{\\sqrt{1-\\Omega_{\\rm m}+\\Omega_{ \\rm m}(1+z)^{3}}}\\Bigg{)}^{2}\\\\ &\\times\\frac{1}{\\sqrt{1-\\Omega_{\\rm m}+\\Omega_{\\rm m}(1+z)^{3}}}. \\end{split} 
+
+After calculating the cumulative redshift distribution with the above formulae, we get the formation rate of FRBs shown in Figure 6. The best fitting power-law model for \\rho(z) is
+
+\\rho(z)\\propto(1+z)^{-4.9\\pm 0.3},  with 1\\sigma confidence level. From this equation, we can derive the formation rate of FRBs in the local universe \\rho(0) is 1.13\\times 10^{4} Gpc{}^{-3} yr{}^{-1}. The formation rate \\rho(z) decreases monotonically with redshift. Instead, Deng et al. (2019) found that FRB rate is consistent with SFR. The possible reason is that the small sample is used in their work (17 and 21 FRBs), which can not give a reliable statistical result.
+
+The relation between the rate of FRBs and the SFR is attractive. If their origins are related to the deaths of massive stars, the FRB rate should track the SFR. So, we compare our result with the observed SFR (Hopkins and Beacom, 2006) in Figure 7. It is obvious that the FRB rate deviates from SFR. We also compare our result with long GRBs (Yu et al., 2015) and short GRBs (Zhang and Wang, 2018). The redshift-dependence of FRB rate is similar as short GRBs. But their local formation rates are significantly different, which indicates compact binary mergers may only occupy a portion in the origin of FRBs.
+
+In Figure 8, we compare the formation rate of FRBs and the stellar mass density (SMD) (Madau and Dickinson, 2014). The formation rate of FRBs decreases more quickly with redshift than SMD. But they show similar decreasing trend at z>1.0. Our comparison suggests that non-repeating FRBs may be mainly related to old populations rather than young populations which can be tracked by the SFR. This indicates old neutron stars or black holes are more likely to be progenitors.
+
+## 5 Testing with Monte Carlo Simulation
+
+In this part, we will test our results with Monte Carlo simulation. First, we generate a set of FRB data with luminosity and redshift (L_{0},z) by Monte Carlo method, whose two parts satisfy the distribution described by equations (8) and
+
+(11). As we mentioned above, the luminosity function of equation (8) is at z=0. So, we should transfer L_{0} to L=L_{0}(1+z)^{k}, where we choose k=6.66 obtained before. Then, we can get a set of pseudo points (L,z), which is similar to the observed data shown in Figure 9. In the simulation, we generate 100 pseudo samples totally. Each sample contains 439 FRBs, which is same as the selected CHIME/FRB sample. Then we perform the same analysis with Lynden-Bell's c^{-} method to process these simulated samples to obtain the luminosity function and formation rate of FRBs. In the end, we compare the simulated data with the observed data using the Kolmogorov-Smirnov test.
+
+In Figure 9, we display the results of Monte Carlo simulation. In the panel (a), we randomly choose one sample of FRBs from 100 samples to compare with selected CHIME/FRB data and show the comparing result of the luminosity-redshift distribution. The red points and blue points represent the observed data and simulated data, respectively. The blue solid line is the flux limit of 0.2 Jy. They have the same distribution and the distribution of the simulated data is located in the area of the observed data. In panels (b) and (c), the blue solid lines are simulated results of the cumulative luminosity function and the cumulative redshift distribution respectively. Kolmogorov-Smirnov test results are 0.64 and 0.85, between the mean distribution of simulated data (the green line) and the distribution of observed data (the red line). So, the derived cumulative luminosity function and formation rate are reliable.
+
+## 6 Conclusions and Discussion
+
+In this paper, we use Lynden-Bell's c^{-} method to study the luminosity function and formation rate of the sample without any assumptions. The luminosity function of FRBs can be well fitted with a broken power-law model, \\psi(L_{0})\\propto L_{0}^{-0.17\\pm 0.01} for dim FRBs and \\psi(L_{0})\\propto L_{0}^{-1.33\\pm 0.01} for bright FRBs, where the break point is 1.33\\times 10^{41} erg s{}^{-1}. The formation rate decreases monotonically as \\rho(z)\\propto(1+z)^{-4.9\\pm 0.3} with the local formation rate 1.13\\times 10^{4} Gpc{}^{-3}yr{}^{-1}.
+
+FRB redshift evolution can provide us with some evidence to constrain its progenitors statistically. If young stellar populations involve FRB events, the FRB rate should follow star formation history increasing towards higher redshifts. If old populations such as old neutron stars and black holes dominate the generation of FRBs, FRB rate is expected to decrease towards higher redshifts. In this work, Lynden-Bell's c^{-} method can break the degeneracy between the luminosity function and formation rate, and the first CHIME/FRB catalogue provide us with a larger and homogeneous FRB sample. After comparing the FRB rate with the SFR, the rate of long GRBs and short GRBs, and SMD, we find that the old populations including neutron stars and black holes, are closely related to the origins of FRBs. Our conclusion is basically consistent with previous research on Catalog 1 (Hashimoto et al., 2022; Zhang and Zhang, 2022), namely that FRBs do not track star formation of the universe and can be better described by delayed models.
+
+There are some models dealing with how to make FRBs with old populations. The first possibility is that FRBs are generated by reactivation of old neutron stars (Beniamini et al., 2020; Wadiasingh et al., 2020; Lan et al., 2023) or binary neutron star (white dwarf) mergers (Margalit et al., 2019; Wang et al., 2020; Lu et al., 2022; Kremer et al., 2023). However, the fractional contribution to the total FRB rate by compact binary mergers is a few percent (Zhang et al., 2020; Lu et al., 2022). The second possibility is that FRBs are produced by black holes (Katz, 2020; Sridhar et al., 2021). Third, FRBs are powered by old neutron stars interacting with other objects (Dai et al., 2016; Zhang, 2017; Wang et al., 2022). Further study on these models may be required.
+
+[MISSING_PAGE_FAIL:8]
+
+Dai, Z. G., Wang, J. S., Wu, X. F., & Huang, Y. F. 2016, ApJ, 829, 27, doi: 10.3847/0004-637X/829/1/27
+
+* Deng et al. (2019) Deng, C.-M., Wei, J.-J., & Wu, X.-F. 2019, Journal of High Energy Astrophysics, 23, 1, doi: 10.1016/j.jheap.2019.05.001
+
+* Dong et al. (2022) Dong, X. F., Li, X. J., Zhang, Z. B., & Zhang, X. L. 2022, MNRAS, 513, 1078, doi: 10.1093/mnras/stac949
+
+* Efron & Petrosian (1992) Efron, B., & Petrosian, V. 1992, ApJ, 399, 345, doi: 10.1086/171931
+
+* Hashimoto et al. (2020a) Hashimoto, T., Goto, T., Wang, T.-W., et al. 2020a, MNRAS, 494, 2886, doi: 10.1093/mnras/staa895
+
+* Hashimoto et al. (2020b) Hashimoto, T., Goto, T., On, A. Y. L., et al. 2020b, MNRAS, 498, 3927, doi: 10.1093/mnras/staa2490
+
+* Hashimoto et al. (2022) Hashimoto, T., Goto, T., Chen, B. H., et al. 2022, MNRAS, 511, 1961, doi: 10.1093/mnras/stac065
+
+* Hopkins & Beacom (2006) Hopkins, A. M., & Beacom, J. F. 2006, ApJ, 651, 142, doi: 10.1086/506610
+
+* James et al. (2022) James, C. W., Prochaska, J. X., Macquart, J. P., et al. 2022, MNRAS, 510, L18, doi: 10.1093/mnrasl/slab117
+
+* Katz (2020) Katz, J. I. 2020, MNRAS, 494, L64, doi: 10.1093/mnrasl/slaa038
+
+* Kirshner et al. (1978) Kirshner, R. P., Oemler, A., J., & Schechter, P. L. 1978, AJ, 83, 1549, doi: 10.1086/112363
+
+* Kirsten et al. (2022) Kirsten, F., Marcote, B., Nimmo, K., et al. 2022, Nature, 602, 585, doi: 10.1038/s41586-021-04354-w
+
+* Kremer et al. (2023) Kremer, K., Li, D., Lu, W., Piro, A. L., & Zhang, B. 2023, ApJ, 944, 6, doi: 10.3847/1538-4357/acabbf
+
+* Lan et al. (2023) Lan, H.-T., Zhao, Z.-Y., Wei, Y.-J., & Wang, F. Y. 2023, arXiv e-prints, arXiv:2310.16307, doi: 10.48550/arXiv.2310.16307
+
+* Lloyd-Ronning et al. (2019) Lloyd-Ronning, N. M., Aykutalp, A., & Johnson, J. L. 2019, MNRAS, 488, 5823, doi: 10.1093/mnras/stz2155
+
+* Lloyd-Ronning et al. (2002) Lloyd-Ronning, N. M., Fryer, C. L., & Ramirez-Ruiz, E. 2002, ApJ, 574, 554, doi: 10.1086/341059
+
+* Lloyd-Ronning et al. (2002) Lloyd-Ronning, N. M., Fryer, C. L., & Ramirez-Ruiz, E. 2002, The Astrophysical Journal, 574, 554, doi: 10.1086/341059
+
+* Lorimer et al. (2007) Lorimer, D. R., Bailes, M., McLaughlin, M. A., Narkevic, D. J., & Crawford, F. 2007, Science, 318, 777, doi: 10.1126/science.1147532
+
+* Lu et al. (2022) Lu, W., Beniamini, P., & Kumar, P. 2022, MNRAS, 510, 1867, doi: 10.1093/mnras/stab3500
+
+* Luo et al. (2020) Luo, R., Men, Y., Lee, K., et al. 2020, MNRAS, 494, 665, doi: 10.1093/mnras/staa704
+
+* Lynden-Bell (1971) Lynden-Bell, D. 1971, MNRAS, 155, 95, doi: 10.1093/mnras/155.1.95
+
+* Madau & Dickinson (2014) Madau, P., & Dickinson, M. 2014, ARA&A, 52, 415, doi: 10.1146/annurev-astro-081811-125615
+
+* Margalit et al. (2019) Margalit, B., Berger, E., & Metzger, B. D. 2019, ApJ, 886, 110, doi: 10.3847/1538-4357/ab4c31
+
+* Nimmo et al. (2022) Nimmo, K., Hessels, J. W. T., Kirsten, F., et al. 2022, Nature Astronomy, 6, 393, doi: 10.1038/s41550-021-01569-9
+
+* Pescalli et al. (2016) Pescalli, A., Ghirlanda, G., Salvaterra, R., et al. 2016, A&A, 587, A40, doi: 10.1051/0004-6361/201526760
+
+* Peterson et al. (1986) Peterson, B. A., Ellis, R. S., Efstathiou, G., et al. 1986, MNRAS, 221, 233, doi: 10.1093/mnras/221.2.233
+
+* Petrosian et al. (2015) Petrosian, V., Kitanidis, E., & Kocevski, D. 2015, ApJ, 806, 44, doi: 10.1088/0004-637X/806/1/44
+
+* Ravi (2019) Ravi, V. 2019, Nature Astronomy, 3, 928, doi: 10.1038/s41550-019-0831-y
+
+* Sridhar et al. (2021) Sridhar, N., Metzger, B. D., Beniamini, P., et al. 2021, ApJ, 917, 13, doi: 10.3847/1538-4357/ac0140
+
+* Tang et al. (2023) Tang, L., Lin, H.-N., & Li, X. 2023, Chinese Physics C, 47, 085105, doi: 10.1088/1674-1137/acdalc
+
+* Thornton et al. (2013) Thornton, D., Stappers, B., Bailes, M., et al. 2013, Science, 341, 53, doi: 10.1126/science.1236789
+
+* Wadiasingh et al. (2020) Wadiasingh, Z., Beniamini, P., Timokhin, A., et al. 2020, ApJ, 891, 82, doi: 10.3847/1538-4357/ab6d69
+
+* Wang et al. (2020) Wang, F. Y., Wang, Y. Y., Yang, Y.-P., et al. 2020, ApJ, 891, 72, doi: 10.3847/1538-4357/ab74d0
+
+* Wang et al. (2022) Wang, F. Y., Zhang, G. Q., Dai, Z. G., & Cheng, K. S. 2022, Nature Communications, 13, 4382, doi: 10.1038/s41467-022-31923-y
+
+* Wang & van Leeuwen (2024) Wang, Y., & van Leeuwen, J. 2024, arXiv e-prints, arXiv:2405.06281, doi: 10.48550/arXiv.2405.06281
+
+* Wu et al. (2012) Wu, S.-W., Xu, D., Zhang, F.-W., & Wei, D.-M. 2012, MNRAS, 423, 2627, doi: 10.1111/j.1365-2966.2012.21068.x
+
+* Xiao et al. (2021) Xiao, D., Wang, F., & Dai, Z. 2021, Science China Physics, Mechanics, and Astronomy, 64, 249501, doi: 10.1007/s11433-020-1661-7
+
+* Yonetoku et al. (2014) Yonetoku, D., Nakamura, T., Sawano, T., Takahashi, K., & Toyanago, A. 2014, ApJ, 789, 65, doi: 10.1088/0004-637X/789/1/65
+
+* Yu et al. (2015) Yu, H., Wang, F. Y., Dai, Z. G., & Cheng, K. S. 2015, ApJS, 218, 13, doi: 10.1088/0067-0049/218/1/13
+
+* Zhang (2017) Zhang, B. 2017, ApJL, 836, L32, doi: 10.3847/2041-8213/aa5ded
+
+* Zhang (2023) --. 2023, Reviews of Modern Physics, 95, 035005, doi: 10.1103/RevModPhys.95.035005
+
+* Zhang & Wang (2018) Zhang, G. Q., & Wang, F. Y. 2018, ApJ, 852, 1, doi: 10.3847/1538-4357/aa9ce5
+
+* Zhang (2019) --. 2019, MNRAS, 487, 3672, doi: 10.1093/mnras/stz156
+
+* Zhang et al. (2020a) Zhang, G. Q., Yi, S. X., & Wang, F. Y. 2020a, ApJ, 893, 44, doi: 10.3847/1538-4357/ab7c5c
+
+* Zhang et al. (2020b) Zhang, G. Q., Yu, H., He, J. H., & Wang, F. Y. 2020b, ApJ, 900, 170, doi: 10.3847/1538-4357/abaa4a
+
+* Zhang & Zhang (2022) Zhang, R. C., & Zhang, B. 2022, ApJL, 924, L14, doi: 10.3847/2041-8213/ac46adZhang, Z. J., Yan, K., Li, C. M., Zhang, G. Q., & Wang, F. Y. 2021, ApJ, 906, 49, doi: 10.3847/1538-4357/abceb9

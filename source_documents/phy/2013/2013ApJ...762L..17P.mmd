@@ -1,0 +1,119 @@
+###### Abstract
+
+It has long been expected that in some scenarios when a white dwarf (WD) grows to the Chandrasekhar limit, it can undergo an accretion induced collapse (AIC) to form a rapidly rotating neutron star. Nevertheless, the detection of such events has so far evaded discovery, likely because the optical, supernova-like emission is expected to be dim and short-lived. Here we propose a novel signature of AIC: a transient radio source lasting for a few months. Rapid rotation along with flux freezing and dynamo action can grow the WD's magnetic field to magnetar strengths during collapse. The spindown of this newly born magnetar generates a pulsar wind nebula (PWN) within the \\sim 10^{-3}-10^{-1}M_{\\odot} of ejecta surrounding it. Our calculations show that synchrotron emission from the PWN may be detectable in the radio, even if the magnetar has a rather modest magnetic field of \\sim 2\\times 10^{14}\\,G and an initial spin period of \\sim 10\\,ms. An all-sky survey with a detection limit of 1 mJy at 1.4 GHz would see \\sim 4(f/10^{-2}) above threshold at any given time, where f is the ratio of the AIC rate to Type Ia supernova rate. A similar scenario may result from binary neutron stars if some mergers produce massive neutron stars rather than black holes. We conclude with a discussion of the detectability of these types of radio sources in an era of facilities with high mapping speeds.
+
+Subject headings:stars: magnetic fields -- stars: neutron -- stars: winds, outflows -- white dwarfs +
+
+Footnote †: slugcomment: Submitted for publication in The Astrophysical Journal Letters
+
+## 1. Introduction
+
+As an accreting white dwarf (WD) grows toward the Chandrasekhar limit, a well-known potential outcome is ignition of its nuclear fuel, leading to a Type Ia supernova (SN Ia, Hillebrandt & Niemeyer 2000). However in some cases (e.g. mass transfer onto O/Ne/Mg WDs and C/O WD mergers; Canal & Schatzman 1976; Nomoto & Kondo 1991) electron capture can rob the core of its degeneracy pressure support leading to formation of a neutron star (NS). This "Accretion Induced Collapse" (AIC) has been invoked to explain millisecond pulsars (e.g. Bhattacharya & van den Heuvel 1991), subsets of gamma-ray bursts (e.g. Dar et al. 1992; Metzger et al. 2008b), magnetars (e.g. Usov 1992), and may be a source of r-process nucleosynthesis (Hartmann et al. 1985; Fryer et al. 1999).
+
+Despite its potential importance, there has been no reported detection of an AIC event. To start with, the expected AIC rate is no more than \\approx 1\\% of that of SNe Ia (Yungelson & Livio 1998). Next, relative to Type I and Type II SNe, the ejecta mass is expected to be small (\\lesssim 10^{-1}M_{\\odot}), produce little {}^{56}Ni (\\lesssim 10^{-2}M_{\\odot}), and move at high velocity (\\approx 0.1c). The resulting optical transient is thus considerably fainter than a typical SN (5 magnitudes or more) and lasts \\sim 1\\,day (Metzger et al. 2009b; Darbha et al. 2010).
+
+Rapid rotation should accompany AIC due to the accretion of mass and angular momentum. Furthermore, a strong magnetic field may be amplified through flux freezing during collapse and via dynamo action (Duncan & Thompson 1992). Therefore a plausible outcome of AIC is creation of a quickly spinning magnetar (Usov 1992; King et al. 2001; Levan et al. 2006). The WD collapse unbinds material (Dessart et al. 2006), and the remnant disk loses mass via outflows driven by neutrino heating, turbulent viscosity, and recombination of free nuclei into helium (Lee & Ramirez-Ruiz 2007; Metzger et al. 2008a, 2009a; Lee et al. 2009). This leads to M_{\\rm ej}\\approx 10^{-3}-10^{-1}M_{\\odot} of ejecta with velocity v_{\\rm ej}\\approx 0.1c. Such a configuration will also follow a double NS merger if the total binary mass is below the maximum NS mass.
+
+Here we investigate the detectability of the pulsar wind nebula (PWN) powered by a newly formed magnetar following AIC. In SS2 we describe a model for how the PWN expands into the surrounding ejecta. In SS3 we estimate the radio spectrum and lightcurve, showing that the PWN is a transient radio source for a few months. We estimate the detection rate in SS4 and discuss the detectability of such events with soon-to-be-commissioned high speed radio mapping machines in SS5.
+
+## 2. Dynamics of the pulsar wind nebula
+
+Following the implosion of the WD and subsequent disk outflows, the ejecta expands with velocity v_{\\rm ej}\\approx 0.1c and kinetic energy E_{\\rm ej}\\approx M_{\\rm ej}v_{\\rm ej}^{2}/2\\approx 10^{50}\\,erg. This plows into the ISM with particle density n_{0}, which can vary greatly from \\sim 10^{-6}\\,cm{}^{-3} for events outside of their host galaxy to \\sim 1\\,cm{}^{-3} in denser environments. Once the ejecta has swept up a mass comparable to its own, it decelerate as it enters the Sedov-Taylor phase on a timescale (McKee & Truelove 1995)
+
+\\tau_{\\rm ST}=0.5E_{\\rm ej}^{-1/2}M_{\\rm ej}^{5/6}(m_{p}n_{0})^{-1/3}\\approx 16E _{\\rm ej}^{-1/2}M_{-2}^{5/6}n_{0}^{-1/2}{\\rm yr},  where E_{\\rm 50}=E_{\\rm ej}/10^{50}\\,erg and M_{-2}=M_{\\rm ej}/10^{-2}M_{\\odot}. Since \\tau_{\\rm ST} is much longer than the times of interest (especially when n_{0} is small), the ejecta is always in an ejecta-dominated (or free-expansion) phase. In this case the ejecta maintains constant velocity with radius R_{\\rm ej}\\approx v_{\\rm ej}t. The forward shock is merely a distance \\approx(4/3)^{1/3}R_{\\rm ej} ahead of R_{\\rm ej}, and the reverse shock has barely developed behind it. The pressure behind the forward shock and down to the reverse shock is roughly constant and given by the strong shock limit \\approx(4/3)m_{p}n_{0}v_{\\rm ej}^{2}.
+
+The magnetar injects energy in the form of magnetic fields and relativistic particles at a rate
+
+L(t)=L_{0}/(1+t/\\tau)^{p}. Here we assume dipole spindown1 and thus p=2. For a magnetic moment \\mu, initial spin frequency \\Omega_{0}=2\\pi/P_{0}, and moment of inertia I=0.35M_{*}R_{*}^{2} (Lattimer & Prakash 2001),
+
+Footnote 1: When the magnetar is spinning P_{0}\\lesssim 3\\,ms and readily radiating neutrinos, this can give rise to a neutrino-driven, magneto-centrifugal wind (Thompson et al. 2004) which could greatly enhance the spindown.
+
+L_{0}=\\mu^{2}\\Omega_{0}^{4}/6c^{3}=1.2\\times 10^{47}\\mu_{33}^{2}P_{3}^{-4}\\,{\\rm erg \\ s}^{-1},  and
+
+\\tau=6Ic^{3}/\\mu^{2}\\Omega_{0}^{2}=4.8\\times 10^{4}\\mu_{33}^{-2}P_{3}^{2}\\,{\\rm s},  where \\mu_{33}=\\mu/10^{33}\\,G cm{}^{3}, P_{3}=P_{0}/3\\,ms, and we use M_{*}=1.4\\,M_{\\odot} and R_{*}=12\\,km.
+
+The energy input from the magnetar powers a PWN with radius R_{p}. Deeper inside, a wind termination shock forms at radius R_{t}, where the ram pressure of the pulsar wind equals the PWN pressure P (Gaensler & Slane 2006),
+
+R_{t}\\approx(L/4\\pi cP)^{1/2},  where R_{t}\\ll R_{p}. The general picture developed from galactic PWNe is that particles are accelerated at or near R_{t}. This seeds the PWN with relativistic electrons out to R_{p}.
+
+A central issue is the content of the PWN. As a pulsar wind flows from the light cylinder, it is inferred to have a large magnetization (\\sigma\\sim 10^{4}, where \\sigma is the ratio of Poynting flux to particle energy flux; Arons 2002). However multiple lines of evidence, including the expansion velocities and high-energy modeling of PWNe, require that the magnetization decreases significantly (\\sigma\\ll 1) by the time the wind reaches R_{t}. In the region where the radiation arises, R_{t}<r<R_{p}, we define \\eta_{\\rm\\epsilon} and \\eta_{\\rm\\epsilon} as the fraction of the magnetar luminosity that goes into electrons and magnetic fields, respectively, with typical values of \\eta_{\\rm\\epsilon}\\approx 0.999 and \\eta_{\\rm\\epsilon}\\approx 10^{-3}.
+
+Following Reynolds & Chevalier (1984) we assume the energy density of electrons and magnetic fields evolve independently and obey a relativistic equation of state. Thus
+
+\\frac{d}{dt}(4\\pi P_{e}R_{p}^{4})=(\\eta_{\\rm\\epsilon}L-\\Lambda)R_{p},  where \\Lambda is the radiative loss rate, and
+
+\\frac{d}{dt}(4\\pi P_{B}R_{p}^{4})=\\eta_{B}LR_{p},  where P_{B}=B^{2}/8\\pi. Note that in the adiabatic limit \\eta_{B}L\\approx 0, this predicts P_{B}\\propto R_{p}^{-4} and B\\propto R_{p}^{-2}, as expected from flux freezing. Momentum conservation is given by
+
+M_{s}\\frac{d^{2}R_{p}}{dt^{2}}=4\\pi R_{p}^{2}\\left[P-\\rho_{\\rm qj}\\left(v_{p}- \\frac{R_{p}}{t}\\right)^{2}\\right],  where v_{p}=dR_{p}/dt and P=P_{e}+P_{B} is the total pressure.
+
+The PWN sweeps up ejecta and creates a shell with mass
+
+M_{s}=\\left\\{\\begin{array}{ll}M_{\\rm qj}(R_{p}/v_{\\rm qf})^{3},&R_{p}<v_{ \\rm qf}\\\\ M_{\\rm qj},&R_{p}\\geq v_{\\rm qf}.\\end{array}\\right. 
+
+Once R_{p}\\approx v_{\\rm qf}, the PWN reaches material that has been shock-heated by its interaction with the ISM. Since we generally find P\\gg(4/3)m_{p}n_{0}v_{\\rm qj}^{2}, we do not expect the shock-heated pressure to have a large dynamical effect on the PWN. This is in contrast to PWNe growing within a SN remnant, where the large pressure behind the reverse shock (on a timescale t\\gg\\tau_{\\rm ST}) can cause significant compression and magnetic field amplification (Reynolds & Chevalier 1984).
+
+Equations (6), (7), and (8) with dR_{p}/dt=v_{p} provide four first-order differential equations for the four dependent variables P_{e}, P_{B}, R_{p}, and v_{p}, respectively. For simplicity, we calculate the PWN evolution using \\Lambda\\approx 0, so that equations (6) and (7) are combined using P=P_{e}+P_{B} and \\eta_{\\rm\\epsilon}+\\eta_{B}=1. When L is constant, the analytic result is (Chevalier 1977)
+
+R_{p}\\approx 1.3\\times 10^{16}L_{47}^{1/5}S_{50}^{2/10}M_{-2}^{-1/2}t_{6}^{6/5 }\\,{\\rm cm},  and
+
+B\\approx 6\\eta_{B,-3}^{1/5}L_{47}^{1/5}E_{50}^{-2/90}M_{-2}^{3/4}t_{6}^{-13/10}\\, {\\rm G},  where L_{47}=L/10^{47}\\,erg s{}^{-1}, t_{6}=t/10^{6}\\,s, and \\eta_{B,-3}=\\eta_{B}/10^{-3}. This gives some idea of the rough values expected, although for our detailed calculations, R_{p} and B deviate slightly from these scalings when t\\gtrsim\\tau.
+
+Rayleigh-Taylor instabilities can act at R_{p} due to the low density PWN pushing up against high density ejecta. The growth time for a large density contrast is \\tau_{\\rm RF}\\approx(g_{\\rm eff}k)^{-1/2}, where g_{\\rm eff} is the effective gravitational acceleration at the boundary and k the wavenumber. For R_{p} given by equation (10), g_{\\rm eff}\\approx d^{2}R_{p}/dt^{2}\\approx(6/25)R_{p}/t^{2} and the growth rate for k\\approx n/R_{p} is \\tau_{\\rm RF}\\approx(25/6n)^{1/2}t. For sufficiently small wavelengths (large n), \\tau_{\\rm RF}\\lesssim t and instability results. This is not surprising since similar systems, like the Crab Nebula, have morphologies strongly impacted by instabilities. But for the current analysis we do not include this complication.
+
+## 3. Synchrotron Radio Emission
+
+A power-law spectrum of relativistic electrons n(E)=KE^{-\\tau} accelerated near the termination shock at R_{t} and fill the PWN out to R_{p}, where n(E) is in units of electrons erg{}^{-1} cm{}^{-3}. The power-law parameters within the PWN can change via cooling and injection of new electrons (e.g. Gelfand et al. 2009; Bucciantini et al. 2011). For the present work we estimate the synchrotron spectrum at any time by fixing P_{e} and P_{B} from our dynamical calculations.
+
+Our discussion of synchrotron emission largely follows the work of Pacholczyk (1970). Synchrotron emission is self absorbed below a frequency
+
+\\nu_{\\rm SA}=2c_{1}(R_{p}c_{6})^{2/(s+4)}K^{2/(s+4)}(B\\sin\\theta)^{(s+2)/(s+4)},  where c_{1}=6.27\\times 10^{18} in cgs units, c_{6} depends on s and can be found in Appendix 2 of Pacholczyk (1970), and \\theta is the pitch angle. Throughout we assume an average of \\sin\\theta=(2/3)^{1/2}. In the optically thick limit the flux is
+
+F_{\\nu}=\\frac{\\pi R_{p}^{2}}{D^{2}}\\frac{c_{5}}{c_{6}}(B\\sin\\theta)^{-1/2} \\left(\\frac{\\nu}{2c_{1}}\\right)^{5/2},  where D is the distance and c_{5} is another constant. In the optically thin limit,
+
+F_{\\nu}=\\frac{4\\pi R_{p}^{3}}{3D^{2}}c_{5}K(B\\sin\\theta)^{(s+1)/2}\\left(\\frac{ \\nu}{2c_{1}}\\right)^{-(s-1)/2},  which assumes an emission filling factor of order unity. We use a simple interpolation between these two limits for the total emission spectrum F_{\\nu}. The location of the spectrum's peak at \\nu_{\\rm SA}\\propto B^{(s+2)/(s+4)} shifts to lower frequencies as B decreases during expansion (eq. ). The peak flux scales \\propto B^{(2s+3)/(s+4)}, and thus also decreases with time.
+
+The synchrotron cooling time scales as E/|\\dot{E}|\\propto\\nu^{-1/2}. Therefore there is a \\nu_{c} above which synchrotron cooling beats adiabatic expansion (Reynolds & Chevalier, 1984)
+
+\\nu_{c}=\\frac{c_{1}}{c_{2}^{2}B^{3}\\sin^{3}\\theta}\\left(\\frac{v_{p}}{R_{p}} \\right)^{2},  where c_{2}=2.37\\times 10^{-3} in cgs units. Electrons that evolve adiabatically maintain their spectrum, while electrons that cool from synchrotron emission steepen, therefore
+
+n(E)=\\cases{KE^{-s},&$E<E_{c}$\\cr KE_{c}E^{-(s+1)},&$E\\geq E_{c}$\\cr},  where E_{c} is the energy of electrons emitting a frequency \\nu_{c}. The prefactor K is set by the total energy density of electrons U_{e}=3P_{e}, found by integrating
+
+U_{e}=\\int_{E_{\\rm min}}^{E_{\\rm min}}n(E)EdE,  where E_{\\rm min} and E_{\\rm max} are the minimum and maximum energies of electron spectrum, respectively. For s\\approx 1.5 and the limit E_{\\rm max}\\gg E_{c}\\gg E_{\\rm min}, U_{e}\\approx 4KE_{c}^{2-s}. The energy density is roughly set by E_{c} since the spectrum steepens for E>E_{c}.
+
+We next consider potential free-free absorption. The absorption coefficient is (Rybicki & Lightman, 1979)
+
+\\alpha_{\\rm ff}\\approx 1.9\\times 10^{-2}T^{-3/2}Z^{2}n_{e}n_{i}\\nu^{-2}g_{ \\rm ff}{\\rm cm}^{-1},  for h\\nu\\ll k_{\\rm B}T, where T is the temperature, Z is the average charge per ion, n_{e} and n_{i} are the electron and ion densities, respectively, g_{\\rm ff}\\sim 1 is the Gaunt factor, and all quantities are in cgs units. Just behind the forward shocks (see SS2), the temperature is high (\\gg 10^{9} K), and free-free absorption is negligible. But at the front edge of the ejecta, with density \\rho_{\\rm ej} and temperature T, pressure continuity across the contact discontinuity requires \\rho_{\\rm ej}k_{\\rm B}T/m_{p}\\sim n_{0}m_{p}\\nu_{s}^{2}. From this we estimate that T\\sim 10^{5}-10^{8} K at t\\sim 10^{6}-10^{7} s. For Z/A\\approx 1/2 (where A is the average atomic number) we estimate Z^{2}n_{e}n_{i}\\sim(\\rho_{\\rm ej}/m_{p})^{2}. The observed flux is thus F_{\\nu,\\rm obs}\\approx F_{\\nu}e^{-\\tau_{\\rm ff}}, where \\tau_{\\rm ff}\\approx\\alpha_{\\rm ff}\\Delta R_{p} and \\Delta R_{p}\\approx 0.1R_{p} is the shell thickness.
+
+In the top panel of Figure 1, we plot the evolution of the key frequencies \\nu_{\\rm SA} (eq. ), \\nu_{c} (eq. ), and \\nu_{\\rm ff}, where the latter is defined by \\tau_{\\rm ff}\\approx 1. From this one can follow the spectrum peak (at \\nu_{\\rm SA}) and determine when it is detectable. For example, 10\\,{\\rm GHz} emission peaks at \\approx 6\\times 10^{6} s. In the bottom panel we explore the lightcurves at 1.4\\,{\\rm GHz} as we vary T and \\eta_{B}. Typical timescales are \\sim months with a peak of \\sim 3-10\\,{\\rm mJy}. Free-free absorption is mostly negligible unless T\\lesssim 10^{4} K. The peak flux and time of peak are sensitive to \\eta_{B}.
+
+In Figure 2 we plot the peak flux at 1.4\\,{\\rm GHz} for a range of dipole field strengths and initial spin periods. The general trend is that faster spins and larger fields result in a more luminous radio source. This reverses in the top left corner where \\tau is sufficiently short that L(t) has decreased significantly by the time of peak. Over most of this parameter space, the magnetar winds are not expected to be strong enough to generate a collimated outflow (Bucciantini et al., 2012).
+
+## 4. Detection Rates
+
+AIC can result from both channels popularly discussed for SNe Ia (single-degenerate and double-degenerate; see SS1). Thus it makes sense to normalize the AIC rate to that of the SN Ia rate. The Lick Observatory Supernova Search finds a rate of (3.01\\pm 0.062)\\times 10^{-5}{\\rm Ia~{}Mpc^{-3}~{}yr^{-1}}(Li et al., 2011), which corresponds to (4.0-7.1)\\times 10^{-3}{\\rm Ia~{}yr^{-1}} for the Milky Way. Using population synthesis, Yungelson & Livio (1998) find AIC rates of 8\\times 10^{-7}-8\\times 10^{-5}{\\rm AIC~{}yr^{-1}} for the Milky Way, depending on assumptions about the common-envelope phase and mass transfer. Their upper bound is similar to the constraint obtained from observed abundances of neutron rich isotopes (Hartmann et al., 1985; Fryer et al., 1999).
+
+Figure 1.— The top panel shows the evolution of the critical frequencies with time for M_{\\rm ej}=10^{-2}M_{\\odot}, v_{\\rm ej}=0.1c, \\mu=10^{33}\\,{\\rm G}\\,{\\rm cm}^{3}, and P_{0}=3\\,{\\rm ms}. The electron spectrum has a power-law index s=1.5. The shaded region shows where free-free absorption suppresses the synchrotron spectrum for T=10^{8} K. This moves up for lower T (see eq. ). The spectrum peaks at frequency \\nu_{\\rm SA}. The bottom panel shows the time-dependent flux at \\nu=1.4\\,{\\rm GHz} for a distance D=100\\,{\\rm Mpc} over a range of parameters as labeled.
+
+Figure 2.— The peak flux at 1.4\\,{\\rm GHz} at 100\\,{\\rm Mpc} as a function of the magnetar field B_{\\star} and its initial period P_{0}. The contours of constant peak flux are spaced logarithmically in units of mJy with the thick, solid curves marking the labeled contours. In all cases we use \\eta_{B}=10^{-3}, T=10^{5} K, and s=1.5.
+
+For a typical peak 1.4 GHz flux of F_{p,100}\\sim 5 mJy at a distance of 100 Mpc, and an AIC rate that is a fraction f of the SN Ia rate, the detection rate of radio transients from AIC is
+
+{\\rm Rate}(>F_{p,100})\\approx 14\\left(\\frac{f}{10^{-2}}\\right)\\left(\\frac{F_{p,100 }}{5\\,{\\rm mJy}}\\right)^{-3/2}{\\rm yr}^{-1},  where f\\sim 10^{-4}-10^{-2}. For a \\sim 3 month duration emitting above \\sim 1 mJy, we expect \\sim 4(f/10^{-2}) AICs above threshold at a given time. In contrast, merely a few AICs are estimated to be detected as kilonovae per year (Metzger et al. 2009b), and this number could be much less if a lack of differential rotation during WD accretion (Piro 2008) inhibits disk formation upon collapse (Abdikamalov et al. 2010)
+
+Similar radio emission is possible if some NS mergers produce a massive NS. This would then provide an electromagnetic counterpart following months after the gravitational wave emission during coalescence1 (Metzger & Berger 2012; Nissanke et al. 2012). In fact, the distance at which the radio emission can be detected is similar to that probed by the next generation of "advanced" ground-based laser-interferometers. The NS merger rate is comparable or greater than the AIC rate. For example, Kim et al. (2005) estimate a Galactic rate of \\sim(0.1-3)\\times 10^{-4}yr{}^{-1}. The detection frequency is thus similar to equation (19) with f=10^{-2}, with the caveat that it may be much less if most NS mergers produce black holes.
+
+Footnote 1: Also see the work of Nakar & Piran (2011), which focuses on emission from the interaction of ejecta with the ISM.
+
+## 5. Detection & Identification of AIC Events
+
+This is a timely topic to discuss given the renaissance that is now occurring in decimetric radio astronomy. Refurbished (EVLA) and new facilities promise high mapping speeds by using small diameter antennas to realize a given total area (e.g. MeerKAT), through the use of focal plane arrays instead of a single feed to gain massive multiplex advantage (APERTIF), or both (ASKAP).
+
+We offer a plausible project aimed at detection of AICs that can be undertaken over the next few years. For a 7\\sigma detection2 of a 1 mJy point source, the EVLA mapping speed in the 1.4 GHz band (for a 500 MHz band width) is \\approx 86\\eta square degree per hour, where \\eta is the efficiency of time spent integrating on the sky (as opposed to slewing antennas or observing calibrator sources). For "on-the-fly" mapping, \\eta=0.9 (S. Myers, private communication) and a 250-hour allocation results in observing \\approx 19,000 square degrees (comparable in area and depth to FIRST; Becker et al. 1995). Another strategy would be to use the same allocation for several epochs focused on fields selected by their richness in nearby galaxies (as was done for the PTF key project "Investigation of Transients in the Local Universe," Kasliwal 2011). A systematic optical mapping of the sky should be undertaken a week or more prior to the radio observations and continued for a week after (for instance with PTF, Law et al. 2009; Rau et al. 2009).
+
+Footnote 2: In using a low threshold (7\\sigma) we take advantage of the fact that galaxies in the local universe (say out to 100 Mpc) occupy a small solid angle (\\sim 100 Mpc) in the local universe (say out to 100 Mpc) occupy a small solid angle (\\sim 100 Mpc) in the local universe (say out to 100 Mpc).
+
+The EVLA radio survey would yield roughly two AICs. The signature of these events would be unique: they would be coincident with galaxies in the nearby Universe, would not be accompanied by any optical supernovae of the sort that have detected so far, and would often occur outside of the nuclear regions of the host galaxy. For especially interesting radio detections, it may be worth conducting followup in the infrared to rule out the presence of an extinguished, radio-bright supernova. The issue of associated X-ray emission is less certain. It is possible that young magnetars shine in the X-rays, but if the ejecta is dominated by heavy elements then the classical X-ray emission is suppressed. A background AGN or a foreground active star would be revealed by the distinctive spectra of the astrometric coincident quiescent source.
+
+The future is quite bright. The soon-to-be-commissioned APERTIF (Verheijen et al. 2008) mapper could do the same survey 30% faster or alternatively redo the survey every few months. In the future ASKAP and MeerKAT mappers could undertake the survey five times faster.
+
+We thank Roger Chevalier, Peter Goldreich, Gregg Hallinan, Mansi Kasliwal, Keiichi Maeda, Brian Metzger, Christian Ott, E. Sterl Phinney, and Eliot Quataert. ALP was supported through NSF grants AST-1212170, PHY-1151197, and PHY-1068881, NASA ATP grant NNX11AC37G, NSF grant AST-0855535, and the Sherman Fairchild Foundation. SRK's research is in part supported by NSF.

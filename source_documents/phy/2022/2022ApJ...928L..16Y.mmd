@@ -1,0 +1,295 @@
+###### Abstract
+
+Some repeating fast radio burst (FRB) sources exhibit complex polarization behaviors, including frequency-dependent depolarization, variation of rotation measure (RM), and oscillating spectral structures of polarized components. Very recently, Feng et al. (2022) reported that active repeaters exhibit conspicuous frequency-dependent depolarization and a strong correlation between RM scatter (\\sigma_{\\rm RM}) and the temporal scattering time (\\tau_{\\rm s}), \\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{1.0\\pm 0.2}, both of which can be well described by multi-path propagation through a magnetized inhomogeneous plasma screen. This observation strongly suggests that the temporal scattering and RM scatter originate from the same region. Besides, a particular finding of note in Feng et al. (2022) is that the FRBs with compact persistent radio sources (PRS) tend to have extreme \\sigma_{\\rm RM}. In this work, we focus on some theoretical predictions on the relations among temporal scattering, depolarization by RM scatter, and PRS contributed by the magnetized plasma environment close to a repeating FRB source. The behaviors of the RM scatter imply that the magnetized plasma environment is consistent with a supernova remnant or a pulsar wind nebula, and the predicted \\sigma_{\\rm RM}-\\tau_{\\rm s} relation is \\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{(0.54-0.83)} for different astrophysical scenarios. We further make a general discussion on PRS that does not depend on specific astrophysical scenarios. We show that the specific luminosity of a PRS should have a positive correlation with the RM contributed by the plasma screen. This is consistent with the observations of FRB 121102 and FRB 190520B.
+
+Compact radiation sources (289); Radio transient sources (2008); Radio bursts (1339); Radio continuum emission (1340); Interstellar medium (847) 0000-0002-3820-2558]Yuan-Pei Yang
+
+0000-0002-8282-8677]Wenbin Lu
+
+0000-0002-4618-7275]Yi Feng
+
+## 1 Introduction
+
+Fast radio bursts (FRBs) are cosmological radio transients with millisecond durations. Since the first FRB (FRB 010724, "Lorimer burst") was discovered in 2007 (Lorimer et al., 2007), hundreds of FRB sources have been detected, dozens of which are repeaters (e.g., The CHIME/FRB Collaboration et al., 2021). Recently, a Galactic FRB 200428 was detected to be associated with SGR J1935+2154 (Bochenek et al., 2020; CHIME/FRB Collaboration et al., 2020; Li et al., 2021; Mereghetti et al., 2020; Ridnaia et al., 2021; Tavani et al., 2021), which suggests that at least some FRBs originate from magnetars born from core collapse of massive stars (e.g., Popov and Postnov, 2013; Katz, 2016; Murase et al., 2016; Beloborodov, 2017; Kumar et al., 2017; Yang and Zhang, 2018, 2021; Metzger et al., 2019; Lu et al., 2020; Margalit et al., 2020; Wadiasingh et al., 2020; Zhang, 2022; Wang et al., 2021). However, FRB 20200120E was found to be in a globular cluster of a nearby galaxy, M81 (Bhardwaj et al., 2021; Kirsten et al., 2021). This is in tension with scenario that invokes active magnetars with age \\lesssim 10 kyr formed in core-collapse supernovae (Kremer et al., 2021; Lu et al., 2021), and suggests that FRBs might origin from magnetars formed in compact binary mergers (Margalit et al., 2019; Wang et al., 2020; Zhong et al., 2020; Zhao et al., 2021). Therefore, the physical origin of FRBs is still not well constrained from the data (e.g., Petroff et al., 2019; Cordes & Chatterjee, 2019; Zhang, 2020; Xiao et al., 2021). The growing FRB detections start to shed lights onto the diversity among the phenomena. The repeaters presented in the first CHIME FRB catalog have relatively larger widths and narrower bandwidth compared with one-off FRBs (Pleunis et al., 2021). The behaviors of fluence with respect to peak flux exhibit statistically significant differences between bursts with long and short durations (Li et al., 2021). Multiple origins for the FRB population seem increasingly likely.
+
+The first known repeater, FRB 121102, possesses numerous interesting properties including: 1) a bright persistent radio counterpart with a luminosity of \\nu L_{\\nu}\\sim 10^{39}\\ \\mathrm{erg\\ s^{-1}} at \\nu\\sim 10 GHz that is spatially coincident with the FRB source (Chatterjee et al., 2017; Chen et al., 2022); 2) a large rotation measure (RM), |\\mathrm{RM}|\\sim 10^{5}\\ \\mathrm{rad\\ m^{-2}}(Michilli et al., 2018), with a decreasing trend of evolution over the period of a few years (Hilmarsson et al., 2021); 3) a large dispersion measure (DM) contribution (55\\ \\mathrm{pc\\ cm^{-3}}\\lesssim\\mathrm{DM_{host}}\\lesssim 225\\ \\mathrm{pc\\ cm^{-3}}) from its host galaxy (Tendulkar et al., 2017); and 4) a high burst rate and a bimodal energy distribution with time evolution (Li et al., 2021). These properties imply that FRB 121102 have a magneto-ionic environment and an active central engine. When relativistic electrons hold a good proportion of the electron population in a dense magnetized plasma, bright persistent radio emission would be generated by synchrotron radiation (Murase et al., 2016; Metzger et al., 2017; Kashiyama & Murase, 2017; Margalit & Metzger, 2018; Yang et al., 2020)1.
+
+Footnote 1: See, however, Yang et al. (2016) and Li et al. (2020) for an alternative interpretation that the persistent radio emission might be generated by synchrotron-heating of a synchrotron nebula by radio bursts themselves.
+
+In addition to FRB 121102, some repeaters recently studied by the Five-hundred-meter Aperture Spherical radio Telescope (FAST, Li et al., 2019) also exhibit signs of complex magnetized plasma environments. FRB 190520B (Niu et al., 2021), first discovered through drift scans of the Commensal Radio Astronomy FAST Survey (CRAFTS, Li et al., 2018), is co-located with a compact, persistent radio source (PRS) with luminosity similar to that of FRB 121102, and its host is a dwarf galaxy at z=0.241 with high specific star formation rate. The estimated DM contribution from the host is \\mathrm{DM_{host}}\\simeq 900\\ \\mathrm{pc\\ cm^{-3}}, nearly an order of magnitude higher than those of other FRBs, which might be explained by a supernova remnant (e.g., Zhao & Wang, 2021; Katz, 2022).
+
+Another active repeater FRB 20201124A (Lanman et al., 2021; Kumar et al., 2021; Nimmo et al., 2021; Hilmarsson et al., 2021) is found in a Milky-Way-sized, metal-rich, barred-spiral host galaxy at z=0.098(Xu et al., 2021; Fong et al., 2021; Ravi et al., 2021; Piro et al., 2021). This repeater indicates a significant, irregular, variation of the Faraday rotation over 36 days. Some bursts appear to have circular polarization up to 75% (Hilmarsson et al., 2021; Kumar et al., 2021; Xu et al., 2021). In particular, the frequency spectra of both circular polarization and linear polarization of some bursts with moderate circular polarization show clear oscillating structures (Xu et al., 2021), which might originate from the polarized absorption or the Faraday conversion mechanism (Melrose & Luo, 2004; Li et al., 2022).
+
+On the other hand, turbulence generally exists in complex magnetized plasma environments, leading to temporal scattering, scintillation, depolarization, etc. The temporal scattering time of some FRBs is much longer than that of radio pulsars at high Galactic latitudes (Cordes et al., 2016). Meanwhile, the lack of any correlation between scattering time and DM of FRBs implies that the intergalactic medium cannot account for both scattering time and DM2, and a detailed analysis for the turbulence effect of the intergalactic medium could be found in Beniamini & Kumar (2020). Qiu et al. (2020) studied the profiles of some FRBs detected by Australian Square Kilometre Array Pathfinder (ASKAP). Five FRBs were identified with evidence of millisecond pulse broadening caused by scattering in an inhomogeneous plasma, and they suggested that the temporal scattering could be caused by the interstellar medium or near-source plasma in the host galaxy. Theoretically, Xu & Zhang (2016) examined some possible density fluctuation turbulence models, and found that a short-wave-dominated power-law density spectrum can interpret the scattering timescale of FRBs. Simard & Ravi (2021) constrained the turbulence properties by comparing the measurements of FRB scattering with the optical recombination-line tracers of their host environments. In a cold magnetized plasma or a relativistic plasma, Faraday conversion could occur when an FRB propagates in the medium, leading to conversion of linearly polarized emission to circularly polarized emission (Vedantham and Ravi, 2019; Gruzinov and Levin, 2019). In a recent study, Beniamini et al. (2021) systematically studied the observed polarization properties of an FRB propagating in a magnetized plasma screen via multi-path propagation.
+
+More recently, Feng et al. (2022) reported new polarization measurements of five active repeaters, including FRB 121102, FRB 190520B, FRB 190303, FRB 190417, and FRB 20201124A with FAST and Green Bank Telescope (GBT). These bursts exhibit conspicuous frequency-dependent linear polarization fraction that can be well described by RM scatter, \\sigma_{\\rm RM} (see Section 2.2 for a detailed discussion about the depolarization by RM scatter). Furthermore, the scattering time \\tau_{\\rm s} of these bursts show a strong correlation with RM scatter3, \\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{1.0\\pm 0.2}, which implies that \\sigma_{\\rm RM} and \\tau_{\\rm s} likely originate from the same environment.
+
+Footnote 3: Notice that the relation in Figure 4 of Feng et al. (2022) is \\tau_{\\rm s}\\propto\\sigma_{\\rm RM}^{0.8\\pm 0.16}, and the temporal scattering times of all FRBs have been scaled to \\nu\\sim 1.3 GHz. For the same data, one has \\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{1.03\\pm 0.21}.
+
+In this work, we propose that temporal scattering, depolarization by RM scatter, and persistent radio emission all originate from the magnetized plasma environment near a FRB source, and predict the relations among them. The paper is organized as follows. We consider that an FRB propagates in a magneto-ionic inhomogeneous plasma screen, and calculate temporal scattering and depolarization by RM scatter in Section 2. The persistent radio emission from the magnetized plasma screen is analyzed in Section 3. The results are discussed and summarized in Section 4.
+
+## 2 Temporal Scattering and Depolarization by RM Scatter from a magnetized plasma screen
+
+### Temporal scattering
+
+We consider a power-law spectrum of electron density fluctuations in a magnetized plasma screen with thickness \\Delta R satisfying
+
+P(k)=C_{N}^{2}k^{-\\beta},\\quad\\text{for }2\\pi L^{-1}\\lesssim k\\lesssim 2\\pi l_{0} ^{-1},  where k=2\\pi/l is the spatial wavenumber, L and l_{0} are the outer and inner scales delineating the inertial range of the turbulence, respectively, \\beta is the spectral index of the three-dimensional power spectrum, and Kolmogorov turbulence has \\beta=11/3. Using the normalization of the power spectrum \\int P(\\overrightarrow{k})d\\overrightarrow{k}=\\delta n_{e,0}^{2}, one has (e.g., Xu and Zhang, 2017)
+
+C_{N}^{2}\\simeq\\begin{cases}\\dfrac{3-\\beta}{2(2\\pi)^{4-\\beta}}l_{0}^{3-\\beta }\\delta n_{e,0}^{2},&\\text{for }\\beta<3,\\\\ \\dfrac{\\beta-3}{2(2\\pi)^{4-\\beta}}L^{3-\\beta}\\delta n_{e,0}^{2},&\\text{for } \\beta>3,\\end{cases}  where \\delta n_{e,0}^{2} is the total mean-squared density fluctuation. According to Eq.(1), for l_{0}<l<L the electron density fluctuation \\delta n_{e,l} at scale l is
+
+\\delta n_{e,l}^{2}\\sim 4\\pi C_{N}^{2}k^{3-\\beta}\\sim\\begin{cases}\\delta n _{e,0}^{2}\\left(\\dfrac{l}{l_{0}}\\right)^{\\beta-3},&\\text{for }\\beta<3,\\\\ \\delta n_{e,0}^{2}\\left(\\dfrac{l}{L}\\right)^{\\beta-3},&\\text{for }\\beta>3. \\end{cases} 
+
+When the radio wave propagates in a turbulent medium, the fluctuating refractive indices introduce random phase fluctuations to the wavefront, as shown in Figure 1. The "phase structure function" is used to represent the mean-squared phase difference between two points separated by l, D_{\\phi}(\\overrightarrow{l})\\equiv\\left\\langle[\\phi(\\overrightarrow{x}+ \\overrightarrow{l})-\\phi(\\overrightarrow{x})]^{2}\\right\\rangle. If the turbulence in the plasma screen is isotropic and L\\ll\\Delta R, the phase structure function is given by (Coles et al., 1987; Rickett, 1990; Xu and Zhang, 2017)
+
+D_{\\phi}(l)\\simeq\\begin{cases}f_{1,\\alpha}\\pi^{2}r_{e}^{2}\\lambda^{2}C_{N}^{2 }\\Delta Rl_{0}^{\\beta-2}\\left(\\dfrac{l}{l_{0}}\\right)^{2},&\\text{for }l\\lesssim l _{0},\\\\ f_{2,\\alpha}\\pi^{2}r_{e}^{2}\\lambda^{2}C_{N}^{2}\\Delta Rl_{0}^{\\beta-2}\\left( \\dfrac{l}{l_{0}}\\right)^{\\beta-2},&\\text{for }l\\gtrsim l_{0},\\end{cases}  where \\lambda is the wavelength of the electromagnetic wave, f_{1,\\alpha}=\\Gamma(1-\\alpha/2), f_{2,\\alpha}=[\\Gamma(1-\\alpha/2)/\\Gamma(1+\\alpha/2)](8/\\alpha 2^{\\alpha}), and \\alpha=\\beta-2. For the Kolmogorov turbulence with \\alpha=5/3 (\\beta=11/3), one has f_{1,\\alpha}=5.6 and f_{2,\\alpha}=8.9, respectively. We define l_{\\rm diff} as the diffractive lengthscale that represents the transverse separation for which the root-mean-squared difference is equal to 1 rad, leading to D_{\\phi}(l_{\\rm diff})=1, one has
+
+l_{\\rm diff}=\\begin{cases}(f_{1,\\alpha}\\pi^{2}r_{e}^{2}\\lambda^{2}l_{0}^{ \\beta-4}C_{N}^{2}\\Delta R)^{-\\frac{1}{2}},&\\text{for $l_{\\rm diff}<l_{0}$}\\\\ (f_{2,\\alpha}\\pi^{2}r_{e}^{2}\\lambda^{2}C_{N}^{2}\\Delta R)^{\\frac{1}{2-\\beta} },&\\text{for $l_{\\rm diff}>l_{0}$}\\end{cases} 
+
+For the multi-path propagation as shown in Figure 1, the scattering angle of the electromagnetic waves is approximately \\theta_{\\rm s}\\simeq\\lambda/2\\pi l_{\\rm diff}. Therefore, the transverse scale of the visible part is
+
+l_{\\rm s}(\\lambda)=\\theta_{\\rm s}R\\simeq\\frac{\\lambda R}{2\\pi l_{\\rm diff}},  where R is the distance from the plasma screen to the source. The path-length difference between two rays is \\Delta s\\simeq R(1-\\cos\\theta_{\\rm s})\\simeq R\\theta_{\\rm s}^{2}/2 for \\theta_{\\rm s}\\ll 1. The temporal scattering time could be then estimated by4
+
+Footnote 4: Notice that due to the expansion of the universe, the observed wavelength is \\lambda_{\\rm obs}=(1+z)\\lambda, where \\lambda is the wavelength at the plasma screen. Considering that most repeaters are at low redshifts, we ignore the redshift correction in the following discussion.
+
+\\tau_{\\rm s}(\\lambda)\\simeq\\frac{l_{\\rm s}^{2}}{2Rc}=\\frac{\\lambda^{2}R}{8\\pi^ {2}cl_{\\rm diff}^{2}}. 
+
+Using Eq.(5) and \\Delta R\\sim R, the temporal scattering time satisfies
+
+\\tau_{\\rm s}(\\lambda)\\propto\\begin{cases}\\delta n_{e,0}^{2}R^{2}\\lambda^{4},&l _{\\rm diff}<l_{0},\\\\ \\delta n_{e,0}^{\\frac{4}{2}}R^{\\frac{\\beta}{\\beta-2}}\\lambda^{\\frac{2\\beta}{ \\beta-2}},&l_{\\rm diff}>l_{0}.\\end{cases} 
+
+For a certain plasma screen, scintillation and temporal scattering occur together, and have a relation of \\Delta\\nu_{\\rm sci}=1/(2\\pi\\tau_{\\rm s}), where \\Delta\\nu_{\\rm sci} is the scintillation bandwidth. In general, scintillation refers to spectral modulations, and temporal scattering refers to temporal broadening of pulses due to the multi-path propagation effect. The relation between scintillation and temporal scattering is due to the following reason: if the optical path difference is \\sim c\\tau_{\\rm s}, the phase difference is \\sim(2\\pi/\\lambda)c\\tau_{\\rm s}=2\\pi\\nu\\tau_{\\rm s}; thus the phase of the interference waves change by \\sim 1 rad in the bandwidth of \\Delta\\nu_{\\rm sci}=1/(2\\pi\\tau_{\\rm s}). The value of \\Delta\\nu_{\\rm sci}\\simeq 160 Hz(\\tau_{\\rm s}/1 ms)^{-1} is much smaller than the observed scintillation bandwidth of \\sim 1MHz. This result suggests that for extragalactic FRBs, the observed scintillation is mainly contributed by the interstellar medium within the Milky Way, whereas the observed scattering time is more likely contributed by circumburst medium or the interstellar medium in the FRB host galaxy.
+
+### Depolarization due to RM scatter
+
+Next, we discuss the depolarization effect of the RM scatter from the magnetized plasma screen. This has been discussed by Beniamini et al. (2021), but here we show that there is a correlation between two measurable quantities, i.e. the scattering time and the depolarization wavelength -- the critical wavelength below which radio waves are depolarized. We consider that there is a fluctuation in n_{e} and B_{\\parallel} across the lengthscale l. In a magneto-ionic cold plasma, the dispersion relation of left and right circularly polarized waves is approximately
+
+\\frac{k^{2}c^{2}}{\\omega^{2}}\\simeq 1-\\frac{\\omega_{p}^{2}}{\\omega^{2}}\\pm \\frac{\\omega_{p}^{2}\\omega_{B}}{\\omega^{3}},  for \\omega\\gg\\omega_{B}, where \\omega_{p}=(4\\pi e^{2}n_{e}/m_{e})^{1/2} is the plasma frequency, \\omega_{B}=eB_{\\parallel}/m_{e}c is the electron cyclotron frequency. Faraday rotation is related to the parallel component B_{\\parallel}=B\\cos\\theta, and \\theta is the angle between the wave-vector and the local magnetic field. For a certain polarized wave (left or right circular polarized waves) propagating in a homogeneous medium with scale l, the phase difference before and after crossing the medium is \\phi_{\\pm}=k_{\\pm}l (apart from the trivial light travel time difference). A given path contains on average N=\\Delta R/l independent segments, and the Poisson root mean squared (RMS) fluctuations is \\Delta N=(\\Delta R/l)^{1/2} in the limit of \\Delta N\\gg 1. Therefore, the total phase perturbation contributed by the plasma screen with an inhomogeneous medium is
+
+\\Delta\\phi_{\\pm}(l) = \\left(\\frac{\\Delta R}{l}\\right)^{1/2}\\delta\\phi_{\\pm}  \\simeq \\left(\\frac{\\Delta R}{l}\\right)^{1/2}\\frac{\\omega l}{c}\\left[ \\frac{\\delta(\\omega_{p}^{2})}{2\\omega^{2}}+\\frac{\\delta(\\omega_{p}^{2}\\omega_ {B})}{2\\omega^{3}}\\right], for \\omega\\gg\\omega_{B},\\omega_{p}, where \\delta\\phi_{\\pm} is the phase perturbation of the left/right circular polarized waves in a clump with lengthscale l. The perturbation of the Faraday rotation angle after a radio burst propagating across the plasma screen is \\Delta\\psi=|\\Delta\\phi_{+}-\\Delta\\phi_{-}|/2, i.e.,
+
+\\Delta\\psi(l)\\simeq\\left(\\frac{\\Delta R}{l}\\right)^{1/2}\\delta{\\rm RM}(l) \\lambda^{2}=\\frac{2\\pi e^{3}(l\\Delta R)^{1/2}}{m_{e}^{2}c^{2}\\omega^{2}}\\delta( n_{e}B_{\\parallel})_{l}, where the RM contribution by a clump with scale l is given by
+
+\\delta\\text{RM}(l)=\\frac{e^{3}}{2\\pi m_{e}^{2}c^{4}}\\delta(n_{e}B_{\\parallel})_{l }l,  and \\delta(n_{e}B_{\\parallel})_{l} is on the scale of l. One must notice that the decorrelation lengthscale of the Faraday rotation angle is different from the diffractive scale l_{\\text{diff}} that reflects the phase structure function, as shown in Figure 1.
+
+Since the rotation angle \\Delta\\psi increases with l, the most important contribution comes from the largest transverse separation l_{\\text{s}} given by Eq.(6). Let us consider the source to be 100% linearly polarized. If \\Delta\\psi(l_{\\text{s}})\\gg 1\\,\\text{rad}, the observed waves at any given time will be the superposition of a large number of patches with random polarization directions. The size of each patch, l_{\\text{PA}}, can be estimated by5\\Delta\\psi(l_{\\text{PA}})\\sim 1\\,\\text{rad}. Then, when we add up the contributions from many l_{\\text{PA}} patches, the final waves are unpolarized. Therefore, depolarization occurs at the depolarization wavelength \\lambda_{\\text{dep}} when \\Delta\\psi(l_{\\text{s}})\\sim 1\\,\\text{rad}. The RM scatter contributed by the plasma screen is estimated by
+
+Footnote 5: We consider the realistic limit \\omega_{B}\\ll\\omega (or B\\ll 1\\,\\text{kG} for GHz wave) and hence \\Delta\\psi(l)\\ll\\Delta\\phi(l). Thus, each patch of the size of l_{\\text{PA}} contains many sub-patches (each of the size of l_{\\text{diff}}) of different phases — even though the waves contributed by a patch of l_{\\text{PA}} have the same polarization direction, the phase coherence is lost.
+
+\\sigma_{\\text{RM}} \\simeq \\left(\\frac{\\Delta R}{l_{\\text{s}}}\\right)^{1/2}\\delta\\text{RM}(l _{\\text{s}})  = \\frac{e^{3}}{2\\pi m_{e}^{2}c^{4}}(l_{\\text{s}}\\Delta R)^{1/2} \\delta(n_{e}B_{\\parallel})_{l_{\\text{s}}} = 0.81\\,\\,\\text{rad}\\,\\,\\text{m}^{-2}\\left(\\frac{\\sqrt{l_{\\text{s} }\\Delta R}}{1\\,\\,\\text{pc}}\\right)\\left(\\frac{\\delta(n_{e}B_{\\parallel})_{l_{ \\text{s}}}}{1\\,\\,\\text{cm}^{-3}\\mu\\text{G}}\\right), and the depolarization wavelength is
+
+\\lambda_{\\text{dep}}\\sim\\sigma_{\\text{RM}}^{-1/2}. 
+
+We notice that the observed RM scatter \\sigma_{\\text{RM}} should be always less than the absolute value of RM contributed by the magnetized plasma screen. The observed result of \\sigma_{\\text{RM}}\\ll|\\text{RM}|(Feng et al., 2022) implies that a large-scale magnetic field may exist in the screen, or the observed RM is contributed by other regions. According to Eq.(7) and Eq.(13), eliminating l_{\\text{s}} and taking \\Delta R\\sim R, one finally obtains
+
+\\sigma_{\\text{RM}} \\simeq \\frac{e^{3}}{2\\pi m_{e}^{2}c^{4}}\\delta(n_{e}B_{\\parallel})_{l_{ \\text{s}}}(2R^{3}c\\tau_{\\text{s}}(\\lambda_{\\text{dep}}))^{1/4}=1.7\\,\\,\\text{ rad}\\,\\,\\text{m}^{-2} \\times \\left(\\frac{R}{1\\,\\,\\text{pc}}\\right)^{3/4}\\left(\\frac{\\delta(n_ {e}B_{\\parallel})_{l_{\\text{s}}}}{10^{3}\\,\\,\\text{cm}^{-3}\\mu\\text{G}}\\right) \\left(\\frac{\\tau_{\\text{s}}(\\lambda_{\\text{dep}})}{1\\,\\,\\text{ms}}\\right)^{1/ 4}, where \\tau_{\\text{s}}(\\lambda_{\\text{dep}}) is the scattering time at the depolarization wavelength. Some repeating FRBs studied by Feng et al. (2022) have RM scatter values \\sigma_{\\text{RM}}\\gtrsim 1\\,\\,\\text{rad}\\,\\,\\text{m}^{-2}. This is consistent with the picture that the RM scatter and temporal scattering originate from radio bursts propagating in a inhomogeneous magneto-ionic environment near the source. The above typical parameters of the plasma screen are consistent with the scenario of a supernova remnant or a pulsar wind nebula (Reynolds et al., 2012; Feng et al., 2022).
+
+### \\sigma_{\\text{RM}}-\\tau_{\\text{s}} relations
+
+In order to obtain the \\sigma_{\\text{RM}}-\\tau_{\\text{s}} relation, we would like to relate \\sigma_{\\text{RM}} to the temporal scattering time \\tau_{\\text{s},0} at a fixed wavelength \\lambda_{0} for all repeaters, as measured by Feng et al. (2022). According to Eq.(8) and Eq.(14), the temporal scattering time at wavelength \\lambda_{\\text{dep}} is given by
+
+\\tau_{\\text{s}}\\propto\\begin{cases}\\sigma_{\\text{RM}}^{-2}\\tau_{\\text{s},0},&l _{\\text{diff}}<l_{0},\\\\ \\sigma_{\\text{RM}}^{\\frac{\\sigma_{\\text{s}}}{2}}\\tau_{\\text{s},0},&l_{\\text{ diff}}>l_{0},\\end{cases} 
+
+Since the lengthscale of the visible part, l_{\\text{s}}, could be larger than the maximum length scale L of turbulence, we will discuss the cases of l_{\\text{s}}\\lesssim L and l_{\\text{s}}\\gtrsim L.
+
+(1) l_{0}\\lesssim l_{\\text{s}}\\lesssim L: In this case, one has \\delta n_{e}\\ll n_{e} and \\delta B_{\\parallel}\\ll B_{\\parallel}, so that
+
+\\delta(n_{e}B_{\\parallel})\\sim B_{\\parallel}\\delta n_{e}. 
+
+Using Eq.(3) and Eq.(7), one further obtains \\delta(n_{e}B_{\\parallel})_{l_{\\text{s}}}\\propto B_{\\parallel}\\delta n_{e,0} \\tau_{\\text{s}}^{(\\beta-3)/4}R^{(\\beta-3)/4}. Using Eq.(16), one gets
+
+\\delta(n_{e}B_{\\parallel})_{l_{\\text{s}}}\\propto\\begin{cases}B_{\\parallel} \\delta n_{e,0}\\sigma_{\\text{RM}}^{\\frac{\\beta-3}{22}}\\tau_{\\text{s},0}^{\\frac{ \\beta-3}{4}}R^{\\frac{\\beta-3}{4}},&l_{\\text{diff}}<l_{0},\\\\ B_{\\parallel}\\delta n_{e,0}\\sigma_{\\text{RM}}^{\\frac{\\beta(-3)}{4(2-\\beta)}} \\tau_{\\text{s},0}^{\\frac{\\beta-3}{4}}R^{\\frac{\\beta-3}{4}},&l_{\\text{diff}}>l _{0}.\\end{cases} 
+
+According to Eq.(8) Eq.(15), Eq.(16) and Eq.(18), one finally obtains the \\sigma_{\\text{RM}}-\\tau_{\\text{s},0} relation,
+
+\\sigma_{\\text{RM}}\\propto\\begin{cases}\\tau_{\\text{s},0}^{\\frac{1}{4}}R^{\\frac{ \\beta-4}{2\\beta}}B_{\\parallel}^{\\frac{2}{3}},&l_{\\text{diff}}<l_{0},\\\\ \\tau_{\\text{s},0}^{\\frac{2(\\beta-2)}{4+4}}R^{0}B_{\\parallel}^{\\frac{4}{3+4}},& l_{\\text{diff}}>l_{0},\\end{cases} 
+
+(2) l_{\\text{s}}\\gtrsim L: In this case, one has \\delta n_{e}\\sim\\delta n_{e,0}\\sim n_{e} and \\delta B_{\\parallel}\\sim\\delta B_{\\parallel,0}\\propto B_{\\parallel}, where \\delta B_{\\parallel,0} is the total root-mean-squared parallel magnetic field. For the global turbulent magnetic field, \\delta B_{\\parallel,0}\\sim B_{\\parallel}. For the magnetic field with turbulent component and large-scale component, \\delta B_{\\parallel,0}<B_{\\parallel}. Thus, one may have
+
+\\delta(n_{e}B_{\\parallel})_{l_{\\text{s}}}\\propto B_{\\parallel}\\delta n_{e,0}. Using Eq.(8) Eq.(15), Eq.(16) and Eq.(20), the \\sigma_{\\rm RM}-\\tau_{\\rm s,0} relation becomes
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{1}{2}}R^{-\\frac{1}{5}}B _{\\parallel}^{\\frac{2}{3}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)(\\beta-1)}{5\\beta-8}}R^{\\frac{\\beta^{2}-5\\beta+ 4}{8-5\\beta}}B_{\\parallel}^{\\frac{4(\\beta-2)}{5\\beta-8}},&l_{\\rm diff}>l_{0}. \\end{cases} 
+
+The \\sigma_{\\rm RM}-\\tau_{\\rm s} relation given by Eq.(19) and Eq.(21) involves several parameters connected to the nature of the screens, including screen radius R, line-of-sight component of magnetic field B_{\\parallel}, turbulence inner scale l_{0}, etc, which may vary between different FRBs, and the variations of these parameters would affect the scatter of the \\sigma_{\\rm RM}-\\tau_{\\rm s} relation. The larger the variation of these parameters, the larger the scatter of the \\sigma_{\\rm RM}-\\tau_{\\rm s} relation. Further more, the dependence on distance R is negligible and the only unknown is B_{\\parallel}. Because the sources with stronger turbulent fluctuations are expected to have a higher magnetic field strength, we expect the scaling to be steeper than \\sigma_{\\rm RM}\\propto\\tau_{\\rm s,0}^{1/2}.
+
+In the following, we propose to estimate the parallel component of the magnetic field by the fluctuations of RM and DM (Katz, 2018, 2021),
+
+B_{\\parallel} \\simeq \\frac{2\\pi m_{e}^{2}c^{4}}{e^{3}}\\frac{\\Delta{\\rm RM}}{\\Delta{ \\rm DM}}  = 1.2~{}{\\rm mG}~{}\\bigg{(}\\frac{\\Delta{\\rm RM}}{10^{3}\\,{\\rm rad} \\,{\\rm m}^{-2}}\\bigg{)}\\left(\\frac{\\Delta{\\rm DM}}{1{\\rm pc}\\,{\\rm cm}^{-3}} \\right)^{-1}.
+
+Because the large-scale plasma, e.g., the interstellar or intergalactic medium, contributes to nearly time-invariant RM and DM, the fluctuations \\Delta{\\rm RM} and \\Delta{\\rm DM} on timescales less than a few years are expected to originate from either the time evolution of the local plasma or the proper motion of the source with respect to the local plasma (Yang and Zhang, 2017; Piro and Gaensler, 2018).
+
+If one conducts an extensive monitoring campaign on a repeater source, it is possible to measure the root-mean-squared variation of \\left<\\Delta{\\rm RM}\\right>_{t} and \\left<\\Delta{\\rm DM}\\right>_{t}, where \\left<...\\right>_{t} denotes an ensemble average of multiple measurements of different \\Delta{\\rm RM} and \\Delta{\\rm DM} at a time separation of t. For example, FRB 121102 had an averaged increase of DM by \\sim 1\\,{\\rm pc}\\,{\\rm cm}^{-3} per year (Hessels et al., 2019) and an average decrease of RM by \\sim 10^{4}\\,{\\rm rad}\\,{\\rm m}^{-2} per year (Hilmarsson et al., 2021), so we infer B_{\\parallel}\\sim 10\\,{\\rm mG}. Another source FRB 20201124A had strong RM fluctuations of \\Delta{\\rm RM}\\sim 200\\,{\\rm rad}\\,{\\rm m}^{-2} on a timescale of 10 days (Xu et al., 2021) whereas its DM fluctuation is not well measured (due to the long scattering time) but constrained to be \\Delta{\\rm DM}\\lesssim 3\\,{\\rm pc}\\,{\\rm cm}^{-3} on a similar timescale (Xu et al., 2021). For this source, we can infer B_{\\parallel}\\gtrsim 0.1\\,{\\rm mG}. Even if good measurements of \\Delta{\\rm RM} and \\Delta{\\rm DM} are not available, for a source with a large RM \\gtrsim 500 rad m{}^{-2}, the main contributor to RM would possibly be from the local plasma. Meanwhile, the upper limit on the local DM may be inferred from the host galaxy redshift and Galactic DM contributions, so it is still possible to estimate a lower limit of B_{\\parallel} in the local plasma. Therefore, the relations of Eq.(19) and Eq.(21) can be tested by observations.
+
+Since the magnetic fields near most repeaters have not been measured by the above method, in the following we consider the magnetic field--density relation satisfies
+
+B=An_{e}^{\\kappa} 
+
+Different sources have the same \\kappa but different values of A. One may consider two cases: (1) if l_{0}\\lesssim l_{\\rm s}\\lesssim L, according to Eq.(8) and Eq.(19), one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\frac{\\beta+2\\kappa}{\\tau_{\\rm s,0}^{\\beta +4}}R^{\\frac{\\beta-4\\kappa-4}{2\\beta}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)(\\kappa+2)}{\\beta+4}}R^{\\frac{\\beta-\\kappa}{ \\beta+4}},&l_{\\rm diff}>l_{0}.\\end{cases} 
+
+We define the variation range of A for different sources as \\delta A, using Eq.(19), the scatter contributed by \\delta A of the above relation is
+
+\\frac{\\delta\\sigma_{\\rm RM}}{\\bar{\\sigma}_{\\rm RM}}=\\begin{cases}\\left(\\frac{ \\delta A}{\\bar{A}}\\right)^{\\frac{2}{\\beta}},&l_{\\rm diff}<l_{0},\\\\ \\left(\\frac{\\delta A}{\\bar{A}}\\right)^{\\frac{4}{\\beta+4}},&l_{\\rm diff}>l_{0}. \\end{cases} 
+
+(2) if l_{\\rm s}\\gtrsim L, according to Eq.(8) and Eq.(21), one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{2\\kappa+2}{\\beta}}R^ {\\frac{-(4\\kappa+1)}{6}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)(\\kappa+\\beta-2\\kappa-1)}{5\\beta-8}}R^{\\frac{( \\kappa+1)\\beta^{2}-(2\\kappa+5)\\beta+6}{8-5\\beta}},&l_{\\rm diff}>l_{0}.\\end{cases} 
+
+Using Eq.(21),the scatter of the above relation is
+
+\\frac{\\delta\\sigma_{\\rm RM}}{\\bar{\\sigma}_{\\rm RM}}=\\begin{cases}\\left(\\frac{ \\delta A}{\\bar{A}}\\right)^{\\frac{2}{\\beta}},&l_{\\rm diff}<l_{0},\\\\ \\left(\\frac{\\delta A}{\\bar{A}}\\right)^{\\frac{4(\\beta-2)}{5\\beta-8}},&l_{\\rm diff }>l_{0}.\\end{cases} 
+
+In the following discussion, we will discuss three different astrophysical scenarios.
+
+#### 2.3.1 Magnetized plasma with energy equipartition
+
+If the magnetized plasma screen roughly satisfies the energy equipartition between magnetic energy and kinetic energy of thermal electrons, one has
+
+n_{e}k_{B}T\\sim\\frac{B^{2}}{8\\pi}, where k_{B} is the Boltzmann constant and T is the plasma temperature. (1) if l_{0}\\lesssim l_{\\rm s}\\lesssim L, according to Eq.(24), one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{\\beta+1}{29}}R^{\\frac{ \\beta-6}{29}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)}{2(\\beta+4)}}R^{\\frac{-\\beta}{2(\\beta+4)}},&l_ {\\rm diff}>l_{0}.\\end{cases} 
+
+(2) if l_{\\rm s}\\gtrsim L, according to Eq.(26), one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{2}{29}}R^{-\\frac{1}{2 }},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)(\\beta-3-\\beta)}{2(\\beta+8)}}R^{\\frac{3(\\beta- 2)^{2}}{2(\\beta-5)}},&l_{\\rm diff}>l_{0}.\\end{cases} 
+
+This predicts \\sigma_{\\rm RM}\\propto\\tau_{\\rm s,0}^{(0.65-0.67)} for Kolmogorov turbulence with \\beta=11/3, which is shallower than the observed relation given by Feng et al. (2022). In particular, if the magnetized plasma screen is photo-ionized with typical temperature of T\\sim 10^{4}\\,\\rm K, the scatter of the above relations would be very small.
+
+#### 2.3.2 Magnetic freezing plasma
+
+We next consider that turbulent plasma satisfies the condition of the magnetic frozen, which might be satisfied when the magnetic reconnection is not significant. Then one obtains
+
+B=An_{e}^{2/3} 
+
+(1) if l_{0}\\lesssim l_{\\rm s}\\lesssim L, according to Eq.(24), one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{3\\beta+4}{69}}R^{\\frac {3\\beta-20}{69}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{8(\\beta-2)}{3(\\beta+4)}}R^{\\frac{-2\\beta}{3(\\beta+4)}},&l _{\\rm diff}>l_{0}.\\end{cases} 
+
+(2) if l_{\\rm s}\\gtrsim L, according to Eq.(26), one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{13}{69}}R^{-\\frac{11} {18}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)(5\\beta-7)}{3(\\beta-8)}}R^{\\frac{5\\beta^{2}-19 \\beta+18}{3(8-5\\beta)}},&l_{\\rm diff}>l_{0}.\\end{cases} 
+
+This predicts \\sigma_{\\rm RM}\\propto\\tau_{\\rm s,0}^{(0.58-0.72)} for Kolmogorov turbulence with \\beta=11/3. The scatters of the above relations depends on the range of A in the special astrophysical environments, see Eq.(25) and Eq.(27).
+
+#### 2.3.3 Shock compressed magnetized plasma
+
+We further consider the case that the magnetized turbulent plasma is from a shocked medium, and assume that the interstellar media as the upstream of the shocks. The Rankine--Hugoniot relation for non-relativistic perpendicular shock requires6
+
+Footnote 6: Notice that the shock surface may not necessarily be perpendicular to the line of sight. This may lead to a significant contribution of B_{\\parallel}.
+
+\\frac{B}{n_{e}}\\sim\\left(\\frac{B}{n_{e}}\\right)_{\\rm ISM}. 
+
+Again according to Eq.(24) and Eq.(26), we consider two cases: (1) if l_{0}\\lesssim l_{\\rm s}\\lesssim L, one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{\\beta+2}{29}}R^{\\frac {\\beta-8}{29}},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{3(\\beta-2)}{4}}R^{\\frac{-\\beta}{29+4}},&l_{\\rm diff}>l_{0 }.\\end{cases} 
+
+(2) if l_{\\rm s}\\gtrsim L, one obtains
+
+\\sigma_{\\rm RM}\\propto\\begin{cases}\\tau_{\\rm s,0}^{\\frac{5}{6}}R^{-\\frac{1}{6 }},&l_{\\rm diff}<l_{0},\\\\ \\tau_{\\rm s,0}^{\\frac{(\\beta-2)(\\beta-2)}{3(\\beta-8)}}R^{\\frac{2\\beta^{2}-7 \\beta+8}{8-5\\beta}},&l_{\\rm diff}>l_{0}.\\end{cases} 
+
+This predicts \\sigma_{\\rm RM}\\propto\\tau_{\\rm s,0}^{(0.65-0.83)} for Kolmogorov turbulence with \\beta=11/3. This theoretically predicted relation is closer to the observed relation (Feng et al., 2022) than the prediction of the model invoking magnetized turbulent plasma with energy equipartition or with magnetic frozen condition, as discussed in Section 2.3.1 and Section 2.3.2, respectively. At last, we discuss the scatters of the above relations. In general, the interstellar medium satisfies the energy equipartition condition, thus one has A=B_{\\rm ISM}/n_{\\rm ISM}\\propto n_{\\rm ISM}^{-1/2}. We assume that different FRB sources have n_{\\rm ISM} varying with three orders of magnitude, then \\delta A/\\bar{A} varies with one to two orders of magnitude. According to Eq.(25) and Eq.(27), the relative uncertainty \\delta\\sigma_{\\rm RM}/\\bar{\\sigma}_{\\rm RM} is with one order of magnitude, which is approximately consistent with the scatter of the observed relation (see Figure 4 of Feng et al. (2022)).
+
+## 3 Persistent radio emission from a magnetized plasma screen
+
+The FRB sources with large RM and \\sigma_{\\rm RM} values imply a dense and magnetized environment, which could produce synchrotron radiation if relativistic electrons make up a significant fraction of the plasma energy density, powering a bright PRS (e.g., Murase et al., 2016; Metzger et al., 2017; Margalit & Metzger, 2018; Yang et al., 2020). We consider that the electron distribution has a thermal component satisfying three-dimensional Maxwell distribution in the low-energy regime and a non-thermal component in the high-energy regime7, i.e.
+
+Footnote 7: The distribution given by Eq.(37) is consistent with the particle-in-cell simulations of particle acceleration in relativistic shock (Spitkovsky, 2008). However, one should notice that the Maxwell distribution in Spitkovsky (2008) is two-dimensional, leading to n_{e}(\\gamma)\\propto\\gamma for \\gamma\\lesssim\\gamma_{\\rm th}. For the three-dimensional Maxwell distribution, one has n_{e}(\\gamma)\\propto\\gamma^{2} for \\gamma\\lesssim\\gamma_{\\rm th}(Rybicki & Lightman, 1986; Kato, 2007).
+
+n_{e}(u)\\equiv\\frac{dn_{e}}{du}\\simeq\\begin{cases}\\frac{n_{e}}{u_{\\rm th}} \\left(\\frac{u}{u_{\\rm th}}\\right)^{2},&u<u_{\\rm th},\\\\ \\frac{n_{e}}{u_{\\rm th}}\\left(\\frac{u}{u_{\\rm th}}\\right)^{-p},&u>u_{\\rm th}, \\end{cases} where u=\\sqrt{\\gamma^{2}-1} is the dimensionless four velocity, u_{\\rm th}=\\sqrt{\\gamma_{\\rm th}^{2}-1} is the thermal four velocity with \\gamma_{\\rm th}=kT/m_{e}c^{2}+1 as the thermal Lorentz factor, p is the distribution index of the power-law component. The RM contribution from relativistic electrons is suppressed by a factor of \\gamma^{2} due to the relativistic mass m_{e}\\rightarrow\\gamma m_{e}. Therefore, the RM contributed by the plasma screen with the above electron distribution is approximately given by (e.g., Appendix of Quataert and Gruzinov, 2000)
+
+{\\rm RM}\\simeq\\frac{e^{3}}{2\\pi m_{e}^{2}c^{4}}\\frac{n_{e}B_{\\parallel}}{\\gamma _{\\rm th}^{2}}\\Delta R. 
+
+If the thermal component is non-relativistic, i.e., \\gamma_{\\rm th}\\sim 1, the RM would be mainly contributed by the non-relativistic electrons, leading to the classical results.
+
+For a single electron, the synchrotron radiation power is P=(4/3)\\sigma_{\\rm T}c\\gamma^{2}B^{2}/8\\pi, and the characteristic synchrotron frequency is \\nu=\\gamma^{2}eB/2\\pi m_{e}c. Thus, the spectral radiation power satisfies P_{\\nu}\\simeq P/\\nu=m_{e}c^{2}\\sigma_{\\rm T}B/3e, which depends on B only. We define \\zeta_{e} as the fraction of electrons that radiate synchrotron emission in the GHz band. The electrons emitting synchrotron radiation in the GHz band is required to have a Lorentz factor
+
+\\gamma_{\\rm GHz}\\sim\\left(\\frac{2\\pi m_{e}c\\nu}{eB}\\right)^{1/2}\\simeq 600 \\left(\\frac{\\nu}{1~{}{\\rm GHz}}\\right)^{1/2}\\left(\\frac{B}{1~{}{\\rm mG}} \\right)^{-1/2},  then the fraction \\zeta_{e} is approximately given by
+
+\\zeta_{e}\\sim\\frac{\\gamma_{\\rm GHz}n_{e}(\\gamma_{\\rm GHz})}{n_{e}}\\sim\\left( \\frac{\\gamma_{\\rm GHz}}{\\gamma_{\\rm th}}\\right)^{1-p}  for \\gamma_{\\rm GHz}>\\gamma_{\\rm th}. The total number of relativistic electrons is approximately N_{e}\\sim 4\\pi R^{2}\\Delta R\\zeta_{e}n_{e}/3 for \\Delta R\\sim R. The specific luminosity of synchrotron radiation is
+
+L_{\\nu} = N_{e}P_{\\nu}=\\frac{64\\pi^{3}}{27}\\zeta_{e}\\gamma_{\\rm th}^{2}m_{ e}c^{2}R^{2}\\left|{\\rm RM}\\right|  \\simeq 5.7\\times 10^{29}~{}{\\rm erg~{}s^{-1}~{}Hz^{-1}} \\times \\left(\\frac{\\zeta_{e}\\gamma_{\\rm th}^{2}}{0.01}\\right)\\left(\\frac {\\left|{\\rm RM}\\right|}{10^{3}~{}{\\rm rad~{}m^{-2}}}\\right)\\left(\\frac{R}{1~{} {\\rm pc}}\\right)^{2}.
+
+Since p\\sim 2 is satisfied in most astrophysical scenarios of particle acceleration, one has \\zeta_{e}\\gamma_{\\rm th}^{2}\\sim\\gamma_{\\rm th}^{3}\\gamma_{\\rm GHz}^{-1}. Therefore, according to Eq.(39), a small value of \\zeta_{e}\\gamma_{\\rm th}^{2} requires \\gamma_{\\rm th}\\lesssim a few, and the thermal component could be non-relativistic. At last, we are also interested in the specific luminosity related to \\sigma_{\\rm RM}. We define \\xi_{nB}=\\delta(n_{e}B_{\\parallel})_{l_{s}}/(n_{e}B_{\\parallel}) and \\eta_{l}=(l_{s}/\\Delta R)^{1/2}. According to Eq.(13) and Eq.(38), the specific luminosity of synchrotron radiation is
+
+L_{\\nu} = \\frac{64\\pi^{3}}{27}\\frac{\\zeta_{e}\\gamma_{\\rm th}^{2}}{\\xi_{nB} \\eta_{l}}m_{e}c^{2}R^{2}\\sigma_{\\rm RM}  \\simeq 5.7\\times 10^{29}~{}{\\rm erg~{}s^{-1}~{}Hz^{-1}}\\left(\\frac{\\xi_{nB} }{0.1}\\right)^{-1}\\left(\\frac{\\eta_{l}}{0.1}\\right)^{-1} \\times \\left(\\frac{\\zeta_{e}\\gamma_{\\rm th}^{2}}{0.01}\\right)\\left(\\frac {\\sigma_{\\rm RM}}{10~{}{\\rm rad~{}m^{-2}}}\\right)\\left(\\frac{R}{1~{}{\\rm pc}} \\right)^{2}.
+
+The results of Eq.(41) and Eq.(42) suggest that FRBs with large RM and \\sigma_{\\rm RM} values tend to be associated with compact PRS. This is consistent with the observations of FRB 121102 and FRB 190520B (Yang et al., 2020; Feng et al., 2022).
+
+Another way to estimate the radio luminosity is to assume that electrons radiating in the GHz band contribute a fraction of the total pressure, so that it may scales with the magnetic pressure, i.e. \\gamma^{2}(dn_{e}/d\\gamma)m_{e}c^{2}\\sim B^{2}/8\\pi. Because the electron distribution satisfies n_{e}(\\gamma)\\propto\\gamma^{-2} in most astrophysical scenarios, \\gamma^{2}(dn_{e}/d\\gamma) is roughly independent of \\gamma. According to Eq.(39), the specific luminosity is given by
+
+L_{\\nu} \\simeq \\gamma\\frac{dn_{e}}{d\\gamma}\\left(\\frac{4\\pi}{3}R^{3}\\right)P_{ \\nu}\\simeq 3.7\\times 10^{27}~{}{\\rm erg~{}s^{-1}Hz^{-1}}  \\times \\left(\\frac{\\nu}{1~{}{\\rm GHz}}\\right)^{-1/2}\\left(\\frac{B}{1~{ }{\\rm mG}}\\right)^{7/2}\\left(\\frac{R}{1~{}{\\rm pc}}\\right)^{3}
+
+If we further assume that the magnetic energy in the magnetized plasma screen is contributed by the central neutron star engine with a magnetic energy E_{B}, i.e. (B^{2}/8\\pi)(4\\pi R^{3}/3)\\sim\\beta_{B}E_{B} with \\beta_{B}<1, then the above equation could be written as
+
+L_{\\nu} \\simeq 2.4\\times 10^{28}~{}{\\rm erg~{}s^{-1}Hz^{-1}}\\eta_{B}  \\times \\left(\\frac{\\nu}{1~{}{\\rm GHz}}\\right)^{-1/2}\\left(\\frac{B}{10~ {}{\\rm mG}}\\right)^{3/2}\\left(\\frac{E_{B}}{10^{48}~{}{\\rm erg}}\\right)
+
+This shows that the PRS should only be detected from sources with a strongly magnetized environment, e.g. B\\gtrsim 10 mG. As the nebula expands with time, the magnetic energy drops due to adiabatic losses, and the magnetic field strength also decreases due to increasing volume, thus one may only expect to detect bright PRS from very young systems.
+
+## 4 Conclusions and Discussions
+
+Recently, some newly discovered repeating FRBs were found to possess complex polarization properties and be associated with compact PRS. For example, FRB 121102 showed a significant RM evolution during a long term (Michilli et al., 2018; Hilmarsson et al., 2021), meanwhile, it was associated with a compact PRS (Chatterjee et al., 2017). FRB 180301 exhibited significant PA swings on a timescale of \\sim 10 ms while maintaining a large polarization degree (Luo et al., 2020). FRB 190520B also was found to be associated with a compact PRS and have an extremely significant DM contribution by its host galaxy (Niu et al., 2021). FRB 20201124A showed significant, irregular, short-time variation of the Faraday rotation, and the frequency spectra of the polarized components of some bursts appear to show clear oscillating structures (Xu et al., 2021). Very recently, Feng et al. (2022) reported that active repeaters exhibit conspicuous frequency-dependent depolarization and a strong correlation between \\sigma_{\\rm RM} and \\tau_{\\rm s} (\\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{1.0\\pm 0.2}), meanwhile, the FRBs with compact PRS tend to have extreme RM scatter. The observational properties imply that these FRB sources are located in magnetized plasma environments, likely a supernova remnant or a pulsar wind nebula.
+
+Theories on temporal scattering and depolarization of FRBs have been discussed on some previous works (e.g., Xu and Zhang, 2016; Beniamini and Kumar, 2020; Beniamini et al., 2021). In this work, we mainly focus on some theoretical predictions on the relations among temporal scattering, depolarization by RM scatter, and persistent radio emission contributed by the magnetized plasma environment close to a repeating FRB source. First, we predict a relation between RM scatter and temporal scatting time, as shown by Eq.(19) and Eq.(21). Since B_{\\parallel}\\propto\\Delta{\\rm RM}/\\Delta{\\rm DM} is involved (Katz, 2018, 2021), such a relation could be tested once the root-mean-squared variations of DM and RM are measured for repeating FRBs in the future. Furthermore, if one assumes that the turbulent plasma satisfies energy equipartition with B\\propto n_{e}^{1/2}, then the relation between RM scatter and temporal scatting time would become Eq.(29) and Eq.(30), which gives \\sigma_{\\rm RM}\\propto\\tau_{\\rm s,0}^{(0.54-0.67)} for the Kolmogorov turbulence. This is shallower than the observed relation by Feng et al. (2022). If the turbulent plasma satisfies magnetic frozen conditon with B\\propto n_{e}^{2/3}, the predicted \\sigma_{\\rm RM}-\\tau_{\\rm s} becomes Eq.(32) and Eq.(33), which gives \\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{(0.58-0.72)} for the Kolmogorov turbulence. If the turbulent plasma is shock compressed with B\\propto n_{e}, the predicted \\sigma_{\\rm RM}-\\tau_{\\rm s} becomes Eq.(35) and Eq.(36), which gives \\sigma_{\\rm RM}\\propto\\tau_{\\rm s}^{(0.65-0.83)} for the Kolmogorov turbulence. This is closer to the observed relation (Feng et al., 2022). Besides, since the RM scatters measured by the frequency-dependent depolarization are much less than the absolute values of RMs of most repeaters (Feng et al., 2022), it implies that a large-scale magnetic field may exist in the plasma screen, or the observed RM is from a different region. Very recently, Anna-Thomas et al. (2022) reported that the RM of FRB 190520B is rapidly varying with a large amplitude. Since the \\sigma_{\\rm RM} affecting the depolarization is mainly contributed by the small-scale fluctuation \\delta(n_{e}B_{\\parallel}) with scale much less than l_{\\rm s} given by Eq.(6), the result of |{\\rm RM}|\\gg\\sigma_{\\rm RM} implies that the observed varying RM is mainly contributed by the large-scale magnetic field and \\delta B\\ll B is required.
+
+We then discuss the relation between RM and the luminosity of the PRS for repeating FRBs. Different from most previous works with PRS depending on some specific astrophysical scenarios (e.g., Yang et al., 2016; Dai et al., 2017; Margalit and Metzger, 2018), in this work we make a general discussion only assuming that PRS and RM originate from the same region and PRS is produced by synchrotron radiation. We find that the thermal component of accelerated electrons could not be ultra-relativistic. We also predict that the larger the RM and/or RM scatter, the brighter the persistent radio emission from the plasma screen. This result is consistent with the observation of FRB 121102 (Chatterjee et al., 2017; Michilli et al., 2018; Yang et al., 2020). According to this picture, FRB 190520B with a compact PRS should also have a relativelty large RM value. This is consistent with the preliminary analysis of (Niu et al., 2021) and the very recent observational result (Anna-Thomas et al., 2022). On the other hand, under the assumption that the plasma screen's magnetic energy originates from the activities in the magnetosphere of a neutron star, the brightness of the PRS will fade with time as the nebula expands. Thus, FRB sources with compact PRS might be very young as proposed in some previous works (e.g., Margalit and Metzger, 2018; Zhao and Wang, 2021).
+
+We thank the anonymous referee for helpful comments and suggestions. We also thank Siyao Xu for the constructive discussion about the MHD turbulence, and thank Jonathan Katz, Kohta Murase, Yuan-Hong Qu, Fa-Yin Wang, Zhao-Yang Xia for helpful discussions. This work has been supported by National Natural Science Foundation of China grant No. 11988101 and No. 12003028, and China Manned Spaced Project (CMS-CSST-2021-B11). WL is supported by Lyman Spitzer, Jr Fellowship at Princeton University. Y.F. is supported by Key Research Project of Zhejiang Lab No. 2021PE0AC03.
+
+[MISSING_PAGE_FAIL:10]
+
+* Ravi et al. (2021) Ravi, V., Law, C. J., Li, D., et al. 2021, arXiv e-prints, arXiv:2106.09710
+
+* Reynolds et al. (2012) Reynolds, S. P., Gaensler, B. M., & Bocchino, F. 2012, Space Sci. Rev., 166, 231
+
+* Rickett (1990) Rickett, B. J. 1990, ARA&A, 28, 561
+
+* Ridnaia et al. (2021) Ridnaia, A., Svinkin, D., Frederiks, D., et al. 2021, Nature Astronomy, 5, 372
+
+* Rybicki & Lightman (1986) Rybicki, G. B., & Lightman, A. P. 1986, Radiative Processes in Astrophysics
+
+* Simard & Ravi (2021) Simard, D., & Ravi, V. 2021, arXiv e-prints, arXiv:2107.11334
+
+* Spitkovsky (2008) Spitkovsky, A. 2008, ApJ, 682, L5
+
+* Tavani et al. (2021) Tavani, M., Casentini, C., Ursi, A., et al. 2021, Nature Astronomy, 5, 401
+
+* Tendulkar et al. (2017) Tendulkar, S. P., Bassa, C. G., Cordes, J. M., et al. 2017, ApJ, 834, L7
+
+* The CHIME/FRB Collaboration et al. (2021) The CHIME/FRB Collaboration, :, Amiri, M., et al. 2021, arXiv e-prints, arXiv:2106.04352
+
+* Vedantham & Ravi (2019) Vedantham, H. K., & Ravi, V. 2019, MNRAS, 485, L78
+
+* Wadiasingh et al. (2020) Wadiasingh, Z., Beniamini, P., Timokhin, A., et al. 2020, ApJ, 891, 82
+
+* Wang et al. (2020) Wang, F. Y., Wang, Y. Y., Yang, Y.-P., et al. 2020, ApJ, 891, 72
+
+* Wang et al. (2021) Wang, W.-Y., Yang, Y.-P., Niu, C.-H., Xu, R., & Zhang, B. 2021, arXiv e-prints, arXiv:2111.11841
+
+* Xiao et al. (2021) Xiao, D., Wang, F., & Dai, Z. 2021, Science China Physics, Mechanics, and Astronomy, 64, 249501
+
+* Xu et al. (2021) Xu, H., Niu, J. R., Chen, P., et al. 2021, arXiv e-prints, arXiv:2111.11764
+
+* Xu & Zhang (2016) Xu, S., & Zhang, B. 2016, ApJ, 832, 199
+
+* Xu & Zhang (2017) --. 2017, ApJ, 835, 2
+
+* Yang et al. (2020) Yang, Y.-P., Li, Q.-C., & Zhang, B. 2020, ApJ, 895, 7
+
+* Yang & Zhang (2017) Yang, Y.-P., & Zhang, B. 2017, ApJ, 847, 22
+
+* Yang & Zhang (2018) --. 2018, ApJ, 868, 31
+
+* Yang et al. (2021) --. 2021, ApJ, 919, 89
+
+* Yang et al. (2016) Yang, Y.-P., Zhang, B., & Dai, Z.-G. 2016, ApJ, 819, L12
+
+* Zhang (2020) Zhang, B. 2020, Nature, 587, 45
+
+* Zhang & Zhang (2022) --. 2022, ApJ, 925, 53
+
+* Zhao et al. (2021) Zhao, Z. Y., Zhang, G. Q., Wang, Y. Y., Tu, Z.-L., & Wang, F. Y. 2021, ApJ, 907, 111
+
+* Zhao & Wang (2021) Zhao, Z. Y. & Wang, F. Y. 2021, ApJ, 923, L17.
+
+* Zhong et al. (2020) Zhong, S.-Q., Dai, Z.-G., Zhang, H.-M., & Deng, C.-M. 2020, ApJ, 898, L5

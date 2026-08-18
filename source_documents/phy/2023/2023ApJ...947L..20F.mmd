@@ -1,0 +1,157 @@
+###### Abstract
+
+The radiation from accreting X-ray pulsars was expected to be highly polarized, with some estimates for the polarization degree of up to 80%. However, phase-resolved and energy-resolved polarimetry of X-ray pulsars is required in order to test different models and to shed light on the emission processes and the geometry of the emission region. Here we present the first results of the observations of the accreting X-ray pulsar Vela X-1 performed with the _Imaging X-ray Polarimetry Explorer_ (IXPE). Vela X-1 is considered to be the archetypal example of a wind-accreting high-mass X-ray binary system, consisting of a highly magnetized neutron star accreting matter from its supergiant stellar companion. The spectro-polarimetric analysis of the phase-averaged data for Vela X-1 reveals a polarization degree (PD) of 2.3\\pm0.4% at the polarization angle (PA) of -47\\fdg 3\\pm 5\\fdg 4. A low PD is consistent with the results obtained for other X-ray pulsars and is likely related to the inverse temperature structure of the neutron star atmosphere. The energy-resolved analysis shows the PD above 5 keV reaching 6-10%, and a \\sim 90^{\\circ} difference in the PA compared to the data in the 2-3 keV range. The phase-resolved spectro-polarimetric analysis finds a PD in the range 0-9% with the PA varying between -80^{\\circ} and 40^{\\circ}_Keywords:_ accretion - magnetic fields - pulsars: individual: Vela X-1 - stars: neutron - X-rays: binaries
+
+## 1 Introduction
+
+Accreting X-ray pulsars (XRPs) harbor some of the strongest magnetic fields in the entire Universe, which can be as large as several times 10^{12} G. The strong magnetic field channels accreting matter onto the polar regions at the neutron star surface, where it produces hot-spots that are bright in the X-rays; these spots rotate in and out of the observer's line-of-sight, resulting in the appearance of pulsed X-ray emission. Highly magnetized XRPs represent unique laboratories and much information is embedded in the interplay between the immense magnetic fields and the accretion flow. Observations of emission from accreting XRPs therefore constitute a substantial area of interest for theoretical models of matter interactions with ultrastrong magnetic fields, which cannot be replicated in terrestrial laboratories (see Mushtukov & Tsygankov, 2022, for a recent review).
+
+The magnetic field of the neutron star is the main cause for the polarized X-ray emission from accreting XRPs. The scattering of photons in a highly magnetized plasma is expected to result in a large degree of polarization of the emerging X-ray emission, up to 80% (Meszaros et al., 1988; Caiazzo & Heyl, 2021). Meszaros et al. (1988) showed that linear X-ray polarization is strongly dependent on the geometry of the emission region, and also that it varies with energy and pulse phase. X-ray polarimetric observations of accreting XRPs can therefore be used to probe the geometry of the emission region. The phase-resolved polarimetry can be used as a tool to constrain the viewing geometry and to distinguish between the models of their radiation.
+
+A large window of opportunity to achieve significant observations of polarized X-ray emission opened up recently, thanks to the launch of the _Imaging X-ray Polarimetry Explorer_ (IXPE, Weisskopf et al., 2022). IXPE is the first imaging X-ray polarimetric mission. For observations of XRPs, the strategy is to detect pulsations in the polarized emission, as well as to measure the polarization degree (PD) and polarization angle (PA) as a function of the pulse phase, which allows for the system geometry to be determined.
+
+Vela X-1 (associated with the Uhuru source 4U 0900-40) is a high-mass X-ray binary (HMXB) discovered as one of the first X-ray sources at the early years of X-ray astronomy (Chodil et al., 1967) and remains one of the best studied objects among neutron star HMXBs. It is one of the brightest, persistent XRPs chosen to be observed by IXPE. Vela X-1, located at a distance of about 2 kpc (Kretschmar et al., 2021), is often considered the quintessential wind accretor. It displays strong X-ray pulsations with a pulse period of 283 s (McClintock et al., 1976), variations with the orbital period of 8.964 days (Ulmer et al., 1972; van Kerkwijk et al., 1995), and eclipses lasting for about two days per orbit. The lower limit on the orbital inclination was obtained at i=73^{\\circ}(van Kerkwijk et al., 1995).
+
+Persistent wind-accreting XRPs are expected to have a different emission region geometry as opposed to the disk-accreting Be/X-ray binaries. Additionally, polarization signatures are expected to be introduced by the scattering in the dense asymmetric wind. The main goal is therefore to study the accretion geometry for wind-accretion and the properties of the dense stellar wind.
+
+Quaintrell et al. (2003) have shown that the separation between the neutron star and its stellar companion, the B0.5Ib supergiant HD 77581 (also known as GP Vel), is only about 1.7 stellar radii and therefore the neutron star is deeply embedded in the stellar wind of its companion star. The stellar companion has a mass loss rate of \\sim 10^{-6}\\ M_{\\odot} yr{}^{-1}(Nagase et al., 1986). The average X-ray luminosity of the source is \\sim 4\\times 10^{36}\\,\\rm erg\\,s^{-1}. The luminosity is, however, strongly variable on all time-scales, varying up to a factor of at least 20-30 (Staubert et al., 2004; Kreykenbohm et al., 2008).
+
+Observations of the cyclotron resonance scattering features (CRSFs) in the spectra of XRPs provide a direct measurement of the magnetic field strength in the line-forming region. These features were first discovered in Vela X-1 by Kendziorra et al. (1992) by utilizing MirHEXE data, reporting a fundamental line around 25 keV and a first harmonic close to 50 keV. Evidence for these features was also given by Makishima & Mihara (1992) and they were further detailed by Kretschmar et al. (1996). Early observations with RXTE also confirmed this detection (Kretschmar et al., 1997). More recent observations of Vela X-1 by NuSTAR clearly detected the fundamental line at 25 keV together with a more prominent first harmonic at 55 keV and revealed a positive correlation between the harmonic line energy and the observed flux (Furst et al., 2014). La Parola et al. (2016) confirmed a flux dependence of the first harmonic line energy and discovered its secular variation with time in the long-term data collected by Swift/BAT (see also Ji et al., 2019).
+
+In this paper, we present the first results of X-ray polarimetric observations of Vela X-1 by IXPE carried out on two separate occasions during 2022. In Sect. 2, the data used in the paper are described. Sect. 3 is devoted to the description of the results: the analysis of the phase-averaged, phase-resolved, and energy-resolved polarimetric data are given. Finally, the discussion and a short summary are presented in Sect. 4.
+
+## 2 Data
+
+IXPE is an observatory launched on December 9, 2021, as a NASA mission in partnership with the Italian space agency (ASI). IXPE consists of three telescope-detector systems which provide imaging polarimetry over a nominal 2-8 keV band at \\sim 30^{\\prime\\prime} angular resolution (half-power diameter). Each one of the three grazing incidence telescopes is comprised of a mirror module assembly (MMA), that focuses the X-rays onto a corresponding focal plane polarization-sensitive gas pixel electron tracking detector unit (DU). The detection principle is based on the photoelectric effect. All characteristics of each detected photon (sky coordinates, time of arrival, energy, and direction of the photo-electron) are measured simultaneously. A comprehensive description of the observatory, the instruments, and their performance is given by Soffitta et al. (2021) and Weisskopf et al. (2022).
+
+IXPE observations of Vela X-1 were carried out between 2022 April 15-21 and November 30 - December 6, with the total effective exposure of \\simeq280 ks and \\simeq270 ks, respectively. The data have been processed with the ixpeobssim package version 30.2.1 (Baldini et al., 2022) using the CalDB released on November 17, 2022. The position offset correction and energy calibration were applied before the scientific analysis of the data. Source photons were collected using a circular region with a radius R_{\\rm src}=70^{\\prime\\prime}. The background region was chosen in the form of an annulus with inner and outer radii equal to 2R_{\\rm src} and 4R_{\\rm src}, respectively. Data from the first observation were cleaned from events due to solar events, which have been identified by comparing the IXPE light curve with the one from the Geostationary Operational Environmental Satellite (GOES), then removing time intervals where the IXPE count rate in the background annular region was higher than the mean background value plus three times the RMS of this count rate. The background makes up \\sim3.6% and \\sim2.2% of the total count rate of the source region in the 2-8 keV energy range for the first and second observation, respectively.
+
+The barycorr tool from theftools package was used to correct the event arrival times to the barycenter of the Solar System. This was followed by a correction of arrival times as it relates to the effects of binary motion using the orbital parameters obtained by the _Fermi_ Gamma Ray Burst Monitor1 for Vela X-1 and given in Table 1.
+
+Footnote 1: [https://gammaray.nsstc.nasa.gov/gbm/science/pulsars.html](https://gammaray.nsstc.nasa.gov/gbm/science/pulsars.html)
+
+Stokes I energy spectra have been binned to have at least 30 counts per energy channel, and the same energy binning was applied to the energy spectra of Stokes parameters Q and U. The energy spectra were fitted in the xspec package (Arnaud, 1996) using \\chi^{2} statistics, using the version 12 instrument response functions. The reported uncertainties are at the 68.3% confidence level (1\\sigma), unless stated otherwise.
+
+## 3 Results
+
+### Light curve and pulse profile
+
+The light curves from the first and second observation of Vela X-1 in the 2-8 keV energy range obtained with the IXPE observatory are shown in Figure 1. For the first observation of Vela X-1, the observing window can be separated into three parts: pre-eclipse (MJD 59684.7-59687.7), eclipse (MJD 59687.7-59689.5), and post-eclipse (MJD 59689.5-59690.5). The post-eclipse count rate of the source was about one order of magnitude greater than the pre-eclipse source count rate. During the eclipse, which lasted about two days, the count rate dropped by an order of magnitude compared to the pre-eclipse value. For the following analysis, only pre- and post-eclipse data were included, i.e., only data outside of the eclipse.
+
+A spin period of P_{\\rm spin}=283.488(7) s and P_{\\rm spin}=283.437(6) s were measured for Vela X-1 for the first and second observation, respectively, using phase connection technique. The pulsed fraction in the 2-8 energy band, defined as PF=(F_{\\rm max}-F_{\\rm min})/(F_{\\rm max}+F_{\\rm min}) where
+
+\\begin{table}
+
+\\begin{tabular}{c c c} \\hline \\hline  Parameter & Value & Unit \\\\ \\hline Orbital period & 8.9642140 & d \\\\ T_{\\pi/2} & 2459115.02085 & JED \\\\ a_{\\rm X}\\sin i & 113.105 & light-sec \\\\ Longitude of periastron & 162.33 & deg \\\\ Eccentricity & 0.0872 & \\\\ Eclipse egress & 0.12 & \\\\ Eclipse ingress & 0.92 & \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: Orbital parameters for Vela X-1 adopted from the Fermi Gamma Ray Burst Monitor project (dated 2021 January 30).
+
+F_{\\rm max} and F_{\\rm min} are the maximum and minimum count rates in the pulse profile, respectively, was determined as PF=53.3\\pm 0.7\\% for the first observation and as PF=48.1\\pm 0.9\\% for the second observation. The resulting pulse profiles for Vela X-1 in two separate energy bands are shown in Figure 2.
+
+### Polarimetric analysis
+
+First, the analysis of the polarimetric properties of Vela X-1 was carried out by using the PCUBE algorithm (xpbin tool) in the ixpeobsim package, which is implemented according to the formalism by Kislat et al. (2015). The unweighted analysis has been used. We compute the normalized Stokes parameters, q=Q/I and u=U/I, and the polarization degree using the formula PD=\\sqrt{q^{2}+u^{2}} and ignoring the bias at low
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c} \\hline \\hline Energy & q & u & PD & PA \\\\ (keV) & (\\%) & (\\%) & (\\%) & (deg) \\\\ \\hline
+
+2–3 & 0.5\\pm 1.2 & 3.8\\pm 1.2 & 3.9\\pm 1.2 & 41.4\\pm 9.1 \\\\
+
+3–4 & 0.2\\pm 0.8 & -1.4\\pm 0.8 & 1.4\\pm 0.8 & -40.7\\pm 16.1 \\\\
+
+4–5 & -0.1\\pm 0.8 & -2.7\\pm 0.8 & 2.7\\pm 0.8 & -46.4\\pm 8.8 \\\\
+
+5–6 & -1.2\\pm 1.0 & -5.6\\pm 1.0 & 5.7\\pm 1.0 & -50.9\\pm 4.8 \\\\
+
+6–7 & -0.3\\pm 1.2 & -4.1\\pm 1.2 & 4.1\\pm 1.2 & -47.3\\pm 8.3 \\\\
+
+7–8 & -2.7\\pm 2.0 & -9.4\\pm 2.0 & 9.7\\pm 2.0 & -53.1\\pm 6.0 \\\\ \\hline
+
+2–8 & -0.6\\pm 0.5 & -3.7\\pm 0.5 & 3.7\\pm 0.5 & -49.9\\pm 4.1 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Measurements of the normalized Stokes parameters q and u, PD, and PA for the phase-averaged data of Vela X-1 in different energy bins using the PCUBE algorithm for the combined data set. signal-to-noise ratios (Serkowski, 1958; Simmons and Stewart, 1985; Maier et al., 2014; Mikhalev, 2018) and the PA=\\frac{1}{2}\\arctan(u/q) (measured counterclockwise on the sky from north to east).
+
+In the entire IXPE energy band (2-8 keV), the average PD and PA are found to be 3.9\\pm0.9% and -51\\fdg 5\\pm 6\\fdg 5, respectively, for the first observation. For the second observation, the average PD and PA are found to be 3.7\\pm0.7% and -48\\fdg 9\\pm 5\\fdg 2, respectively.
+
+Considering the similarities between the first and second observations, the data were combined into one single set of data in order to increase the statistics and further study the polarization properties of Vela X-1. In order to correctly phase-tag each event, the phase difference between the pulse profiles from the first and second observations was determined from cross-correlation (using the implementation provided by the Python library NumPy). Using the PCUBE algorithm (xpbin tool) in the ixpeobssim package, the average PD and PA are found to be 3.7\\pm0.5% and -49\\fdg 9\\pm 4\\fdg 1, respectively, in the entire IXPE energy band.
+
+We then studied the energy dependence of polarization by dividing the data into six energy bins. The PD is above the minimum detectable polarization at a 99% confidence level, MDP{}_{99}(Weisskopf et al., 2010), in all of the energy bins, except for the 3-4 keV bin, where the PD is below the MDP{}_{99} and in this case, the PA is not well constrained (Table 2 and Figure 3). The energy-resolved analysis shows that at higher energies (above 5 keV) the PD reaches 6-10% with the PA differing by \\sim90{}^{\\circ} from that below 3 keV.
+
+Next, a phase-resolved polarimetric analysis was performed utilizing the PCUBE-algorithm. The results in the 2-7 keV energy band are given in Table 3 and are shown in Figure 4 for the combined data set.
+
+Then, the spectro-polarimetric analysis was performed according to the following steps. Source I, Q, and U Stokes spectra were produced via the xpbin tool's PHA1, PHA1Q, and PHA1U algorithms, producing a full data set comprised of nine spectra per observation, three for each DU. As the background region is dominated by source events, background subtraction is not applied (Di Marco et al., 2023). Here we also used unweighted analysis. The xspec package (version 12.12.1) (Arnaud, 1996), which is a part of the standard high-energy astrophysics software suite HEASOFT, was used to study polarization as a function of energy. All 18 spectra were fitted simultaneously in xspec.
+
+There are several phenomenological spectral models used to describe the spectral continuum of Vela X-1. However, it is well known that except for a soft excess below 3 keV, the X-ray emission below 10 keV can be well described by a simple absorbed power law with an iron line at 6.4 keV. Due to the restricted energy range covered by IXPE and the energy resolution of the instrument (Weisskopf et al., 2022), we used a simple model consisting of a power law affected by interstellar absorption (model tbabs with the abundances from Wilms et al., 2000) combined with the polconst polarization model, which assumes energy-independent PD and PA. In order to account for the soft excess below 3 keV, a partial covering fraction absorption (model tbpcf) was introduced as well, which applies an added column density to a fraction of the power law. The re-normalization constant, const, was used to account for the possibility of discrepancies between the different DUs, and for DU1 it was fixed to unity. The final model
+
+\\texttt{tbabs}\\times\\texttt{tbpcf}\\times\\texttt{polconst}\\times\\texttt{powerlaw} \\times\\texttt{const} was subsequently applied to both the phase-averaged and phase-resolved data. The spectral analysis was confined to the 2-7 keV energy band, ignoring photons above 7 keV due to remaining calibration uncertainties.
+
+For the phase-averaged data, the results of the spectral fitting, including the best-fit model, are shown in Figure 5 and the best-fit model parameters are found in Table 4. The steppar command in xspec was used to create the confidence contours for the polarization measurements, and the resulting contour plots at 68.3%, 95.45% and 99.73% confidence levels are presented in Figure 6. The results of the phase-averaged polarimetric analysis for the two different approaches give compatible results.
+
+A wavy structure of the Stokes U parameter residuals in Figure 5 (see also Fig. 3) indicates that polarization is energy dependent. Thus, we replaced the polconst polarization model with the pollin model, corresponding to a linear energy dependence of the PD and PA. We assumed an energy-independent PA (\\psi_{1} in xspec; we fixed \\psi_{\\rm slope}=0), and allowed the PD to vary with photon energy E (keV) as PD(E)=A_{1}+A_{\\rm slope}(E-1). This results in an improved fit (\\chi^{2}/{\\rm d.o.f.}=2608.51/2221 with an F-test probability of 2.3\\times 10^{-7}). The best-fit parameters are A_{1}=-5.3\\pm 2.3% and A_{\\rm slope}=2.2\\pm 0.6%, and PA=\\psi_{1}=-47\\fdg 1\\pm 6\\fdg 1. The negative A_{1} means that the PA at lower energies is rotated by 90{}^{\\circ} relative to the PA at higher energies and the PD is zero at \\approx3.4 keV. Such a model is able to describe the observed behavior of Stokes Q and U parameters in Figures 3 and 5.
+
+For the phase-resolved spectro-polarimetric analysis, I, Q, and U Stokes spectra were extracted for each phase bin individually, again utilizing the xpbin tool's PHA1, PHA1Q, and PHA1U algorithms. The I, Q, and U Stokes
+
+\\begin{table}
+
+\\begin{tabular}{c c c} \\hline \\hline Parameter & Value & Unit \\\\ \\hline N_{\\rm H} & 3.8\\pm 0.3 & 10^{22} cm{}^{-2} \\\\ N_{\\rm H,thpcf} & 18.5^{+0.7}_{-0.6} & 10^{22} cm{}^{-2} \\\\ f_{\\rm cov} & 0.80\\pm 0.01 & \\\\ \\rm const_{DU2} & 0.964\\pm 0.003 & \\\\ \\rm const_{DU3} & 0.923\\pm 0.002 & \\\\ Photon index & 0.93\\pm 0.04 & \\\\ PD & 2.3\\pm 0.4 & \\% \\\\ PA & -47.3\\pm 5.4 & deg \\\\ \\rm Flux_{2-8\\ \\rm keV} & 7.93^{+0.02}_{-0.06} & 10^{-10} erg cm{}^{-2} s{}^{-1} \\\\ Luminosity{}_{2-8\\ \\rm keV} & 3.8\\times 10^{35} & erg s{}^{-1} at d=2.0 kpc \\\\ \\chi^{2} (d.o.f.) & 2640.19 (222) & \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 4: Spectral parameters for the best-fit model obtained from the phase-averaged spectro-polarimetric analysis of the combined data set.
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c c c} \\hline \\hline Phase & q & u & N_{\\rm H} & N_{\\rm H,thpcf} & f_{\\rm cov} & Photon index & PD & PA & \\chi^{2}/{\\rm d.o.f.} \\\\  & (\\%) & (\\%) & (10^{22} cm{}^{-2}) & (10^{22} cm{}^{-2}) & & & (\\%) & (deg) & \\\\ \\hline
+
+0.000–0.100 & 1.7\\pm 1.4 & -1.2\\pm 1.4 & 6.0^{+0.7}_{-0.8} & 23.0^{+1.8}_{-2.2} & 0.82\\pm 0.02 & 1.55^{+0.13}_{-0.16} & 2.3\\pm 1.2 & -22.0\\pm 16.9 & 2160/2152 \\\\
+
+0.100–0.150 & 0.8\\pm 1.8 & -4.4\\pm 1.8 & 4.4^{+1.0}_{-1.4} & 18.5^{+2.1}_{-2.0} & 0.83^{+0.04}_{-0.03} & 1.26\\pm 0.16 & 4.2\\pm 1.6 & -33.0\\pm 11.3 & 2162/2029 \\\\
+
+0.150–0.200 & 0.6\\pm 1.9 & -8.7\\pm 1.9 & 4.9^{+1.2}_{-2.1} & 18.4^{+3.2}_{-3.4} & 0.77^{+0.07}_{-0.04} & 0.96^{+0.19}_{-0.22} & 7.3\\pm 1.7 & -42.4\\pm 6.8 & 2081/2011 \\\\
+
+0.200–0.300 & 0.9\\pm 1.4 & -5.1\\pm 1.4 & 3.8^{+0.6}_{-0.9} & 19.9^{+2.1}_{-1.9} & 0.80\\pm 0.02 & 0.75^{+0.14}_{-0.13} & 5.0\\pm 1.2 & -36.6\\pm 7.2 & 2284/2179 \\\\
+
+0.300–0.400 & -0.2\\pm 1.3 & -1.5\\pm 1.3 & 4.0^{+0.1}_{-0.1} & 16.5^{+1.7}_{-1.5} & 0.81^{+0.04}_{-0.03} & 1.11\\pm 0.11 & <4.6 & — & 2304/2185 \\\\
+
+0.400–0.500 & 0.0\\pm 1.7 & 0.1\\pm 1.7 & 4.2^{+0.8}_{-1.2} & 20.5^{+2.5}_{-1.2} & 0.78\\pm 0.03 & 1.08\\pm 0.2 & <4.6 & — & 2057/2086 \\\\
+
+0.500–0.600 & 1.3\\pm 1.6 & 3.2\\pm 1.6 & 2.1^{+0.9}_{-1.0} & 17.7^{+1.7}_{-1.7} & 0.83\\pm 0.03 & 0.63\\pm 0.13 & 2.6\\pm 1.5 & 37.7\\pm 17.2 & 2230/2116 \\\\
+
+0.600–0.650 & -7.1\\pm 2.2 & -3.5\\pm 2.2 & 3.8^{+1.0}_{-1.0} & 21.3^{+2.0}_{-2.6} & 0.82\\pm 0.03 & 0.98^{+0.19}_{-0.22} & 8.3\\pm 2.0 & -77.3\\pm 6.9 & 1885/1858 \\\\
+
+0.650–0.700 & -7.0\\pm 2.2 & -8.7\\pm 2.2 & 2.5^{+1.2}_{-1.8} & 18.2^{+2.4}_{-2.1} & 0.84\\pm 0.04 & 0.73\\pm 0.18 & 9.2\\pm 2.0 & -64.2\\pm 6.1 & 1934/1912 \\\\
+
+0.700–0.775 & -3.4\\pm 1.9 & -6.4\\pm 1.9 & 0.6^{+1.5}_{-0.6} & 15.3^{+2.0}_{-1.2} & 0.85^{+0.02}_{-0.05} & 0.30^{+0.15}_{-0.13} & 5.6\\pm 1.6 & -60.6\\pm 8.7 & 2025/2038 \\\\
+
+0.775–0.875 & -2.0\\pm 1.6 & -4.3\\pm 1.6 & 4.0^{+0.7}_{-1.0} & 20.6^{+2.0}_{-2.2} & 0.81\\pm 0.02 & 1.05^{+0.14}_{-0.15} & 4.4\\pm 1.4 & -58.7\\pm 9.2 & 2117/2134 \\\\
+
+0.875–1.000 & 3.7\\pm 1.6 & 1.6\\pm 1.6 & 3.1^{+1.2}_{-2.1} & 14.9^{+1.9}_{-1.7} & 0.81^{+0.07}_{-0.05} & 0.95^{+0.13}_{-0.15} & 4.4\\pm 1.4 & 21.4\\pm 9.5 & 2271/2092 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 3: Pulse phase dependence of the normalized Stokes q and u parameters for the combined data set from the polarimetric analysis (2–7 keV) using the PCUBE algorithm and the spectral parameters, PD and PA obtained by the spectro-polarimetric analysis. An upper limit to the PD at 99.73% (3\\sigma) confidence level is computed using a \\chi^{2} with one degree of freedom. spectra were fitted with the same model as utilized for the phase-averaged spectro-polarimetric analysis, with the cross-calibration constants for DU2 and DU3 fixed to the values obtained for the phase-averaged analysis (see Table 4). The results of the phase-resolved spectro-polarimetric analysis are summarized in Table 3 and confidence contours corresponding to each phase bin are shown in Figure 7.
+
+A spectro-polarimetric phase-averaged analysis done separately for the eclipse data did not find a significant polarization, with an upper limit to the PD of 25.1% at 99.73% confidence level. An intensity-resolved spectro-polarimetric analysis performed on the combined data did not reveal a significant difference in polarization properties between different luminosity levels.
+
+## 4 Discussion and Summary
+
+XRPs are prime targets for X-ray polarimetric missions, where a high PD has been theoretically predicted because of the strong dependence of the primary radiation processes on the polarization of X-ray photons. The birefringence of highly magnetized plasma allows for the radiative transfer to be treated in terms of two normal polarization modes: the ordinary ("O") and extraordinary ("X") mode (Gnedin and Pavlov, 1974). These two modes have different orientations in relation to the plane made up by the direction of the magnetic field and the momentum of photons. For O-mode photons, the electric vector oscillates mainly within the plane, while for X-mode photons the electric vector oscillations are mainly oriented perpendicular to the plane. Below the cyclotron energy the opacities of the polarization modes differ significantly, where the opacity of the X-mode is largely reduced compared to that of the O-mode (Lai and Ho, 2003), resulting in the predictions for PD as high as 80% (Meszaros et al., 1988; Caiazzo and Heyl, 2021).
+
+However, a significantly lower PD of only \\sim2.3% detected for Vela X-1 in the IXPE data is in line with recent measurements done for other accreting XRPs (Her X-1, Doroshenko et al., 2022; Cen X-3, Tsygankov et al., 2022; 4U 1626-67, Marshall et al., 2022), where similar, relatively low PDs have been reported. The X-ray polarization of accreting XRPs greatly depends on the structure of the emission region (which is unknown), and most theoretical models mentioned here do not account yet for the temperature structure of the NS atmosphere, assuming instead a uniform temperature in the spectral forming region. In the case of the above-mentioned XRPs, the contradiction between the observed and the theoretically predicted values of the PD was explained with a model of the neutron star atmosphere overheated by the accretion process.
+
+The key factor for the depolarized emission in this model is a conversion of modes at the so-called vacuum resonance. In strong magnetic fields, both the plasma and the vacuum are birefringent, where vacuum birefringence is a fundamental QED effect. Generally speaking, the two effects (plasma and vacuum birefringence) tend to work against each other, and at vacuum resonance they cancel out (Meszaros and Ventura, 1978). This leads to a transformation of the normal modes of radiation and a loss of the linear polarization degree. The vacuum resonance occurs at a plasma density \\rho_{\\rm V}\\approx 10^{-4}B_{12}^{2}E_{\\rm keV}^{2} [g cm{}^{-3}] for a given photon energy E (in keV) and local magnetic field strength B_{12}=B/10^{12} G. This may result in a much smaller PD than normally predicted when considering the specific temperature structure of the atmospheres of accreting NSs. Doroshenko et al. (2022) have shown that a low PD of the X-ray radiation can be achieved if the point of vacuum resonance is located in an atmospheric transition layer with a strong temperature gradient. If the transition region is located at the border of the overheated upper atmospheric layer and the cooler underlying atmosphere, the low PD occurs as a result of the fast mode conversion (Gnedin et al., 1978). For the specific atmospheric thickness of \\sim3 g cm{}^{-2}, corresponding to the Thomson optical depth around unity, a PD of the order of 10% can be achieved (Doroshenko et al., 2022). As lower PDs than previously predicted seem to be a staple of sub-critical XRPs, theoretical models may well have to take into account the specific temperature structure of the NS atmosphere. On the other hand, the average observed luminosity for Vela X-1 is \\sim 4\\times 10^{35} erg s{}^{-1}, roughly two orders of magnitude lower than the observed luminosities of Her X-1 and Cen X-3. Thus, it is rather puzzling that this scenario suggests a similar thickness of the overheated layer for a much smaller accretion rate; however, the key quantity here may be the proton stopping depth (Zel'dovich and Shakura, 1969; Nelson et al., 1993; Zane et al., 2000; Gonzalez-Caniulef et al., 2019).
+
+The low PD may also be a result of the strong variations of the PD and PA with energy (see Figure 3), considering the evident \\sim 90^{\\circ} difference in the PA below and above 3.5 keV. However, a complete and detailed analysis of the complicated energy dependence of the polarization properties of Vela X-1 is out of the scope of this paper and is subject to future, more extensive work.
+
+Finally, we can speculate that the observed small PD is a result of strong variations of the PA with the pulsar phase. The observed pulse profile has a very complicated shape, which is related either to the complex structure of the surface magnetic field, or to the presence of a number of different components (see Tsygankov et al., 2022, for discussion). The present photon statistics allowed us to obtain significant detection of polarization in 9 out of 12 phase bins, while to resolve the variations of the PA we likely needed many more bins.
+
+The Imaging X-ray Polarimetry Explorer (IXPE) is a joint US and Italian mission. The US contribution is supported by the National Aeronautics and Space Administration (NASA) and led and managed by its Marshall Space Flight Center (MSFC), with industry partner Ball Aerospace (contract NNM15AA18C). The Italian contribution is supported by the Italian Space Agency (Agenzia Spaziale Italiana, ASI) through contract ASI-OHBI-2017-12-I.0, agreements ASI-INAF-2017-12-H0 and ASI-INFN-2017.13-H0, and its Space Science Data Center (SSDC) with agreements ASI-INAF-2022-14-HH.0 and ASI-INFN 2021-43-HH.0, and by the Istituto Nazionale di Astrofisica (INAF) and the Istituto Nazionale di Fisica Nucleare (INFN) in Italy. This research used data products provided by the IXPE Team (MSFC, SSDC, INAF, and INFN) and distributed with additional software tools by the High-Energy Astrophysics Science Archive Research Center (HEASARC), at NASA Goddard Space Flight Center (GSFC).
+
+We acknowledge support from the RSF grant 19-12-00423 (SST), the Academy of Finland grants 333112, 349144, 349373, and 349906 (JP, SST), the German Academic Exchange Service (DAAD) travel grant 57525212 (VD, VFS), and the German Research Foundation (DFG) grant WE 1312/53-1 (VFS).
+
+IXPE, Swift (XRT and UVOT), NuSTAR astropy (Astropy Collaboration et al., 2013, 2018), xspec(Arnaud, 1996), kypeobssim(Baldini et al., 2022).

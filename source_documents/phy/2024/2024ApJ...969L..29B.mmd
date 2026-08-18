@@ -1,0 +1,289 @@
+###### Abstract
+
+Fast radio bursts (FRBs) are brilliant short-duration flashes of radio emission originating at cosmological distances. The vast diversity in the properties of currently known FRBs, and the fleeting nature of these events make it difficult to understand their progenitors and emission mechanism(s). Here we report high time resolution polarization properties of FRB 20210912A, a highly energetic event detected by the Australian Square Kilometre Array Pathfinder (ASKAP) in the Commensal Real-time ASKAP Fast Transients (CRAFT) survey, which show intra-burst PA variation similar to Galactic pulsars and unusual variation of Faraday Rotation Measure (RM) across its two sub-bursts. The observed intra-burst PA variation and apparent RM variation pattern in FRB 20210912A may be explained by a rapidly-spinning neutron star origin, with rest-frame spin periods of \\sim 1.1 ms. This rotation timescale is comparable to the shortest known rotation period of a pulsar, and close to the shortest possible rotation period of a neutron star. Curiously, FRB 20210912A exhibits a remarkable resemblance with the previously reported FRB 20181112A, including similar rest-frame emission timescales and polarization profiles. These observations suggest that these two FRBs may have similar origins.
+
+Time domain astronomy (2109) -- Radio transient sources (2008) -- Radio bursts (1339) 0000-0002-8861-267X]Apurba Bera 0000-0002-2626-2377]Clancy W. James
+
+0000-0002-8828-7867]Adam T. Deller
+
+0000-0002-8872-0725]Keith W. Bannister
+
+0000-0002-8882-7855]Ryan M. Shannon
+
+0000-0002-8882-7855]Danica R. Scott
+
+0000-0002-8882-7855]Kelly Gourdji
+
+0000-0002-8882-7855]Lachlan Marnoch
+
+0000-0002-3133-2775]Marcin Glowacki
+
+0000-0002-8882-7855]Ronald D. Ekers
+
+0000-0002-8882-7855]Stuart D. Ryder
+
+## 1 Introduction
+
+Fast radio bursts (FRBs; e.g. Lorimer et al., 2007; Thornton et al., 2013) are intense short-lived radio signals of cosmological origin, the progenitors of which remain unknown to date (e.g. Petroff et al., 2022). There have been a plethora of FRB observations since their discovery (e.g. Shannon et al., 2018; CHIME/FRB Collaboration et al., 2021; Law et al., 2023), which have revealed a vast diversity of burst profiles (e.g. Pleunis et al., 2021), polarization properties (e.g. Day et al., 2020), host galaxies (e.g. Bhandari et al., 2022), and local magneto-ionic environments (e.g. Mannings et al., 2021; Mckinven et al., 2023). This diversity makes it difficult to infer progenitor properties, especially when allowing for selection biases (Macquart & Ekers, 2018), effects of propagation through ionized media on the observed burst-properties (e.g. Petroff et al., 2022), and the possibility of multiple progenitor populations (e.g. Caleb et al., 2018). Time resolved analysis of the bursts, with full polarization information, provides key insights to the nature of the FRB progenitors, since changes on sub-millisecond timescales can only be attributed to the progenitor itself, or the magneto-ionic environment in the immediate vicinity of the progenitor (e.g. Luo et al., 2020). Such studies require very high signal-to-noise ratio (S/N) polarization profiles of FRBs at microsecond time resolution, which are relatively rare for non-repeating FRBs (see also Pandhi et al., 2024).
+
+In this work, we present high time resolution polarization properties of FRB 20210912A, which are remarkably similar to those of the previously reported FRB 20181112A (Cho et al., 2020; Prochaska et al., 2019). These observations suggest that these two apparently non-repeating FRBs may have near-identical progenitors, possibly rapidly rotating neutron stars with similar spin periods. We briefly describe the observations and data analysis methods in Section 2. High time resolution properties of FRB 20210912A are presented in Section 3 and their similarities with those of FRB 20181112A are describedin Section 4. We present a possible interpretation of the observations in Section 5 and further discussion on the proposed interpretation in Section 6, and conclude with a summary of the results in Section 7.
+
+## 2 Observation and Data Processing
+
+Both FRB 20210912A and FRB 20181112A were detected by the Commensal Real-time ASKAP Fast Transients (CRAFT; Bannister et al., 2017) survey on the Australian Square Kilometre Array Pathfinder (ASKAP; Hotan et al., 2021), by passing an incoherent sum of total power from all antennas to the Fast Real-time Engine for Dedispersing Amplitudes (FREDDA; Qiu et al., 2023). Details of detection and localization are listed in Table 1. The real-time search pipeline, upon detection of FRBs, triggers recording of the raw voltage streams from each ASKAP antenna which are used for detailed offline analysis. Post-processing of the FRB data was carried out using the CRAFT Effortless Localization and Enhanced Burst Inspection pipeline (CELEBI; Scott et al., 2023). Offline correlation of voltage data and interferometric imaging of FRBs, as a part of post-processing, enabled phase-coherent beam-forming at the FRB sky location. The beam-formed data were used to estimate the optimum DM through structure maximization (Sutinjo et al., 2023). Polarization calibration was applied as part of post-processing, using the Vela pulsar (PSR J0835-4510) as the calibrator (Scott et al., 2023; Dial et al. in preparation).
+
+Coherently de-dispersed and polarization-calibrated complex voltage data for two orthogonal linear receptors (X and Y, in the coordinate system defined by the antenna dipoles) were used to construct dynamic spectra of all Stokes' parameters (I,Q,U and V) adopting the following convention
+
+I =|E_{X}|^{2}+|E_{Y}|^{2}  Q =|E_{Y}|^{2}-|E_{X}|^{2} (2) U =2\\,\\mathrm{Re}\\left(E_{X}^{*}\\,E_{Y}\\right) (3) V =2\\,\\mathrm{Im}\\left(E_{X}^{*}\\,E_{Y}\\right). 
+
+The choice of this convention was driven by the handedness of the ASKAP phased array feed (details are discussed in Dial et al. in preparation). The observed position angle of linear polarization is given by
+
+\\mathrm{PA}_{\\mathrm{obs}}=\\frac{1}{2}\\tan^{-1}(U/Q),  which is measured relative to the coordinate system defined by the receiver dipoles. We do not convert this to absolute position angles.
+
+Full Stokes (I,Q,U,V) dynamic spectra were constructed at different time and frequency resolutions; however, for most of the analysis in this work, we used 64 frequency channels (channel width \\approx 5.25 MHz). The sensitivity of the system drops sharply at both edges of the observing band. Hence, 5% of the channels at either end of the band (i.e. 10% of the channels in total) were excluded, and the effective bandwidth for all subsequent analysis is \\approx 300 MHz.
+
+### Measurement of Faraday Rotation
+
+Linearly polarized electromagnetic waves propagating through magnetized plasma with a parallel (to the direction of propagation) component of the magnetic field undergo wavelength (\\lambda) dependent rotation of the PA, which is known as Faraday Rotation. The rotation angle (\\deltaPA) is given by
+
+\\delta\\mathrm{PA}=\\mathrm{PA}-\\mathrm{PA}_{\\lambda_{0}}=\\mathrm{RM}(\\lambda^{2 }-\\lambda_{0}^{2}),  where \\lambda_{0} is the wavelength corresponding to a reference frequency and \\mathrm{PA}_{\\lambda_{0}} is the PA at the reference frequency. The proportionality constant, RM, is known as the Faraday rotation measure. We estimated the RM of the FRBs using two different methods -- a linear fit to the variation of \\mathrm{PA}_{\\mathrm{obs}} with \\lambda^{2} (Equation 6) and the technique of RM synthesis (Burn, 1966; Brentjens & de Bruyn, 2005; Heald, 2009). Linear fits were carried out using 64-channel spectra, and it was verified that using lower resolution spectra yields consistent results. As the change in \\mathrm{PA}_{\\mathrm{obs}} across the observing band is less than 90{}^{\\circ} (see Appendix B), no corrections were needed to account for wrapping of angles.
+
+Results obtained from linear fits are quoted as the estimated values of RM. Independent estimates of RM from the RMS-synthesis method, obtained using the publicly available package RM Tools (Purcell et al., 2020), were used to validate the results from linear fits. In all cases, estimates of RM obtained from these two methods agree well within the uncertainties. It was verified that using finer frequency resolutions (up to 8192-channel spectra) does not significantly change the results from RM synthesis.
+
+\\begin{table}
+
+\\begin{tabular}{l c c} \\hline \\hline  & FRB 20181112A  & FRB 20210912A  \\\\ \\hline J2000 RA & 21h49m23.63s & 23h23m10.35s \\\\ J2000 DEC & -52d58m15.4s & -30d24m19.2s \\\\ Host galaxy redshift & 0.4755 & Unknown \\\\ Central frequency3  & 1297.5 MHz & 1271.5 MHz \\\\ DM4  (pc cm{}^{-3}) & 589.26\\pm 0.03 & 1233.696\\pm 0.006 \\\\ Burst fluence (Jy ms) & 26\\pm 3 & 70\\pm 2 \\\\ \\hline \\end{tabular} Note. – 1 See Prochaska et al. (2019); Cho et al. (2020)
+
+{}^{**}See Marnoch et al. (2023)
+
+{}^{\\dagger} Centre of the 336 MHz observing band
+
+{}^{\\ddagger} Structure maximizing dispersion measure (Sutinjo et al., 2023)
+
+\\end{table}
+
+Table 1: Properties of FRB 20181112A and FRB 20210912AFor both FRBs, the average RM (i.e. RMavg) was measured from the time-averaged spectra over the entire burst. Additionally, we also estimated RM over smaller time bins to probe the RM variation across the bursts.
+
+### Correction for Faraday Rotation
+
+The observed Q,U dynamic spectra were 'corrected' (de-rotated) in order to remove the effect of Faraday rotation, using the average RM for each FRB, applying the wavelength-dependent transformation
+
+\\begin{bmatrix}Q(\\lambda,t)\\\\ U(\\lambda,t)\\end{bmatrix}=\\begin{bmatrix}\\cos\\xi(\\lambda)&-\\sin\\xi(\\lambda)\\\\ \\sin\\xi(\\lambda)&\\cos\\xi(\\lambda)\\end{bmatrix}\\begin{bmatrix}Q(\\lambda,t)\\\\ U(\\lambda,t)\\end{bmatrix}_{\\rm obs}  where
+
+\\xi(\\lambda)=-2*\\mathrm{RM}_{\\mathrm{avg}}*(\\lambda^{2}-\\lambda_{0}^{2})  is the wavelength-dependent de-rotation angle. The reference wavelength (\\lambda_{0}) for this de-rotation was chosen to be the wavelength corresponding to the central frequency of the observing band (not infinite frequency, as is sometimes chosen).
+
+We emphasize that for each FRB, de-rotation to Q,U dynamic spectra was applied for the average RM only. No correction or de-rotation was applied for short time-scale intra-burst RM variations.
+
+### Polarization Time Profiles and Spectra
+
+Time profiles for all four Stokes parameters were constructed by averaging the dynamic spectra over all frequency channels. The de-rotated Q,U dynamic spectra were averaged over frequency to generate corrected Q,U time profiles. The PA profiles were then generated from the corrected Q,U profiles using the relation
+
+\\mathrm{PA}_{\\mathrm{corrected}}=\\frac{1}{2}\\tan^{-1}(U_{\\mathrm{corrected}}/Q _{\\mathrm{corrected}}),  while the linearly polarized flux density profiles were generated using
+
+L=\\sqrt{Q_{\\mathrm{corrected}}^{2}+U_{\\mathrm{corrected}}^{2}}. 
+
+A further bias correction was applied to L, to account for unpolarized noise (see Everett and Weisberg, 2001; Day et al., 2020). The total polarized flux density profiles were generated using
+
+P=\\sqrt{L^{2}+V^{2}}. 
+
+Estimates of the PA were discarded if L<3\\,\\sigma_{I} (where \\sigma_{I} is the RMS noise in the total intensity profile), or if the uncertainty \\Delta\\mathrm{PA}>5^{\\circ}. Note that as the de-rotation was done with respect to the central frequency of the observing band, rather than the position angle of linear polarization at an infinite frequency.
+
+Spectra for all four Stokes parameters were generated by averaging the corresponding dynamic spectra (corrected dynamic spectra for Q,U) over a specified time range (or the entire burst duration). Spectra for PA, L and P were generated from the spectra of the Stokes parameters using the same equations mentioned above.
+
+## 3 FRB 20210912A
+
+Phase-coherent beam-forming of FRB 20210912A revealed two prominent sub-bursts: a strong primary sub-burst (A) followed by a weaker secondary one (B), separated by \\Delta\\mathrm{T}=1.27\\pm 0.11 ms in the observer frame, as shown in Figure 1 (see also Marnoch et al., 2023). Details of the measurements of sub-burst separation are given in Appendix A. Full Stokes (I,Q,U,V) dynamic spectra and time profiles of FRB 20210912A are shown in Figure A1. The high detection signal to noise ratio (\\mathrm{S/N}\\approx 500) of this FRB facilitates time-resolved analysis across individual sub-bursts. Each sub-burst of FRB 20210912A is composed of multiple components with different spectral shape (see Figures A1 and A2) while low-intensity emission is present between the two prominent sub-bursts.
+
+Despite a deep optical search with the Very Large Telescope (VLT), the host galaxy of FRB 20210912A remains hitherto undetected (Marnoch et al., 2023). Optical limits imply a distant host galaxy at a redshift of z\\gtrsim 0.7, assuming a galaxy at least as luminous as the dwarf host galaxy of FRB 20121102A, the least luminous known FRB host galaxy (Tendulkar et al., 2017). Including these constraints with multi-parameter fits to the cosmological redshift-DM relation and uncertainties therein (the 'Macquart relation'; Macquart et al., 2020; James et al., 2022) yields a redshift estimate of z=1.18\\pm 0.24(Marnoch et al., 2023).
+
+### Faraday Rotation Measure
+
+The average RM of FRB 20210912A, measured from Q-U spectra time-averaged over the entire burst profile, is RMavg
+
+\\begin{table}
+
+\\begin{tabular}{c c c c} \\hline \\hline \\multicolumn{1}{c}{ FRB} & Time range (ms) & \\multicolumn{2}{c}{RM (rad m{}^{-2})} \\\\  & (Sub-burst) & RM synthesis & Linear fit \\\\ \\hline
+
+210912A & -0.05 – 0.14 (A) & -2.39\\pm 0.27 & -2.33\\pm 0.37 \\\\  & 1.10-1.40 (B) & 11.56\\pm 0.79 & 11.32\\pm 0.75 \\\\  & -0.05 – 1.40 (Both) & 4.54\\pm 0.45 & 4.55\\pm 0.49 \\\\  & Difference{}^{*} & 13.95\\pm 0.83 & 13.65\\pm 0.84 \\\\ \\hline
+
+181112A & -0.06 – 0.12 (A) & 10.34\\pm 0.55 & 10.34\\pm 0.53 \\\\  & 0.72-0.86 (B) & 25.57\\pm 3.61 & 25.89\\pm 3.08 \\\\  & -0.06 – 0.86 (Both) & 13.09\\pm 1.01 & 13.15\\pm 0.96 \\\\  & Difference{}^{*} & 15.23\\pm 3.65 & 15.55\\pm 3.13 \\\\ \\hline \\end{tabular} Note. – {}^{*}Absolute difference between RM of sub-bursts A and B
+
+\\end{table}
+
+Table 2: **RMs of FRB 20181112A and FRB 20210912A**4.55\\pm 0.49 rad m{}^{-2}. The Galactic RM in the direction of this FRB, 8\\pm 4 rad m{}^{-2}(Hutschenreuter et al., 2022; Prochaska et al., 2023), is poorly constrained. Hence it was not possible to obtain a reliable estimate of the extragalactic component of the RM, however it is unlikely to be large.
+
+However, the RMs of the two sub-bursts A and B are significantly different from each other, with RM{}_{A}=-2.33\\pm 0.37 rad m{}^{-2} and RM{}_{B}=11.32\\pm 0.75 rad m{}^{-2}, as shown in Figure 1 and listed in Table 2. Polarization spectra of sub-bursts A and B (before correcting the Q-U dynamic spectra for RM{}_{\\rm avg}) show a clear difference between the slopes of the PA vs \\lambda^{2} curves for the two sub-bursts (see Appendix B). The absolute difference between the RMs of the two sub-bursts is |{\\rm RM_{A}-RM_{B}}|=13.7\\pm 0.8 rad m{}^{-2}. The high S/N of FRB 20210912A allows us to probe the temporal variation of RM within each sub-burst, at time-scales of tens of \\mus. Both sub-bursts of FRB 20210912A exhibit short time-scale (\\sim 10\\,\\mus) variation of RM across them, as shown in Figure 2, with RM varying monotonically on either side of an extremum in each sub-burst. The extrema, which occur close to the sub-burst peaks, have opposite natures (minimum and maximum) in the two sub-bursts.
+
+RM-synthesis yielded entirely consistent values of RM with those obtained from linear fits (described above), as listed in Table 2 and shown in Appendix B. Here we emphasize that the measured RM represents \\partial{\\rm PA}/\\partial\\lambda^{2}, i.e. the local slope of the PA vs \\lambda^{2} curve, and may not be associated with the phenomenon of Faraday rotation. We note that the PA spectra, for some time bins, show hints of deviation from a linear variation of PA with \\lambda^{2} (see Appendix B).
+
+The circular polarization fraction (V/I) shows weak (but measurable) dependence on wavelength. The (local) slope of the V/I vs \\lambda^{2} curve, \\kappa[=\\partial(V/I)/\\partial\\lambda^{2}], for the spectrum integrated over the entire burst, is 10.5\\pm 1.1 m{}^{-2}. The values of \\kappa, for spectra integrated over each of the sub-bursts A and B, are consistent within the errors. However, \\kappa shows temporal variation across each of the individual sub-bursts, with generally steeper values close to the centres of the sub-bursts and shallower at the edges, following broadly the same pattern as the apparent RM variation (though without any sign reversal). Correlated variation of apparent RM and \\kappa may arise from Generalized Faraday Effects (see Kennett & Melrose, 1998; Ilie et al., 2019; Noutsos et al., 2009; Kumar et al., 2022), in which case the \\lambda-dependence of PA would not follow the Faraday law.
+
+### Polarization Time Profile
+
+After correcting for RM{}_{\\rm avg} = 4.55 rad m{}^{-2}, both sub-bursts of FRB 20210912A are found to be highly polarized, with total polarization fractions \\gtrsim 70%. The fractional linear and circular polarization, as well as the position angle (PA) of linear polarization, vary across the sub-bursts, as shown in Figure 3.
+
+As described in Sections 2.2 and 2.3, the PA of linear polarization was calculated at the central frequency of the observing band, after correcting for the average RM. Extrapolation of PA to infinite frequency (i.e. PA{}_{\\lambda=0}) has not been performed. For time independent Faraday rotation, as expected from the inter-stellar and the inter-galactic media (which are not likely to significantly change on timescales of \\simms), PA at the central observing frequency has a constant offset from PA{}_{\\lambda=0}. As discussed in the previous sub-section, the apparent short timescale
+
+RM variation may not be associated with Faraday rotation, in which case a linear (with respect to \\lambda^{2}) extrapolation of PA to infinite frequency would not be meaningful.
+
+The two sub-bursts show opposite signs of PA evolution near the peaks, with the PA rotating clockwise at the peak of the first sub-burst, and counter-clockwise at the peak of the second, as shown in Figure 3. For both sub-bursts, the fastest rate of PA rotation temporally coincides with the intensity peak within the estimated uncertainties (see Section 5.3 and Appendix D).
+
+## 4 Similarities with FRB 20181112A
+
+FRB 20181112A, a FRB also detected and localized by ASKAP in the CRAFT survey (Cho et al., 2020; Prochaska et al., 2019), has a total intensity profile qualitatively similar to that of FRB 20210912A. Detailed analysis revealed further surprising similarities between the time scales and polarization properties of these two apparently unrelated events. Quantifying the similarity between these two FRBs is difficult, as discussed in Appendix E, due to the small number of high-S/N FRBs with time-resolved polarisation properties, and the lack of an appropriate null hypothesis of FRB behaviour against which to test. For the ease of comparison, high time resolution data for FRB 20181112A have been re-analysed using the same methods that were used for FRB 20210912A in this work and the results of the re-analysis are entirely consistent with the previously published (Cho et al., 2020).
+
+### Burst Profile and Emission Timescale
+
+We used a time resolution (observer frame) of 3.8 \\mus to study the high time resolution properties FRB 20181112A, chosen such that the fine structures are resolved while keeping S/N sufficiently high. FRB 20181112A also exhibits a bright primary sub-burst (A) followed by a relatively faint secondary sub-burst (B), with \\DeltaT = 0.81 \\pm 0.06 ms in the observer frame. Unlike FRB 20210912A, FRB 20181112A exhibits two more faint components (see Cho et al., 2020).
+
+The total intensity profile of FRB 20181112A, when scaled to the same peak intensity and temporal separation between sub-bursts, has a remarkable correspondence to that of FRB 20210912A, as shown in Figure 4. We find (see Appendix A) that the ratio of the widths of sub-bursts A and B (i.e. \\mathrm{FWHM}_{A}/\\mathrm{FWHM}_{B}) -- which is 0.31 \\pm 0.02 for FRB 20181112A and 0.32 \\pm 0.01 for FRB 20210912A -- is the same for these two FRBs within 5% (and 1\\sigma). The width of the primary sub-burst relative to the separation between sub-burst peaks (\\mathrm{FWHM}_{A}/\\mathrm{T}) -- which is 0.046 \\pm 0.003 for FRB 20181112A and 0.052 \\pm 0.005 for FRB 20210912A - agrees within 1\\sigma. The width of the secondary sub-burst relative to the separation between sub-burst peaks (\\mathrm{FWHM}_{B}/\\mathrm{T}) -- which is 0.148 \\pm 0.007 for FRB 20181112A and 0.16 \\pm 0.01 for FRB 20210912A - also agrees within 1\\sigma. Table 3 summarises the temporal properties of the bursts. This means, although the absolute (observed) timescales of the two FRBs are different, their relative emission timescales are surprisingly similar.
+
+The above observed time scales have been modified by cosmic expansion, and hence redshift measurements of the FRB host galaxies are crucial to infer the intrinsic timescales. Optical follow-up observations have revealed that FRB 20181112A originates from a galaxy at z=0.4755(Prochaska et al., 2019), implying a rest-frame sub-burst separation of \\DeltaT = 0.55\\pm 0.04 ms. The rest-frame emission time-scales of these two FRBs would be identical if the host galaxy of FRB 20210912A is at a redshift of z=1.35, which is entirely plausible given the redshift estimate in Section 3.
+
+### Intra-burst Variation of Rotation Measure
+
+The average RM of FRB 20181112A, measured over the entire burst profile, is \\mathrm{RM}_{\\mathrm{avg}}=13.2\\pm 1.0 rad m{}^{-2}. The RMs of the two sub-bursts A and B are significantly different from each other, by \\Delta\\mathrm{RM}_{AB}=15.2\\pm 3.7 rad m{}^{-2}, as shown in Figure 1 and listed in Table 2. Although the average RM of FRB 20181112A -- as well as the RMs of its two sub-bursts are different from those of FRB 20210912A -- the absolute difference between the RMs of sub-bursts A and B are surprisingly similar (and formally consistent within the uncertainties) for these two FRBs.
+
+The Galactic RM in the direction of FRB 20181112A is 16\\pm 6 rad m{}^{-2}(Hutschenreuter et al., 2022; Prochaska et al., 2023). The sightline to FRB 20181112A through the Galactic interstellar medium (ISM) cannot change appreciably over timescales of \\sim ms. Hence the excess RM -- i.e. the RM of an FRB after subtracting the Galactic contribution -- follows the same variation pattern as that of the total RM (which are shown in Figures 2 and 5) with a constant offset equal to the Galactic RM in the direction of the FRB.
+
+We note that the observed wavelength is longer than the emitted wavelength (in the rest-frame of the FRB host galaxy) by a factor of (1+z). Assuming \\Delta\\mathrm{RM}_{AB} has an origin within the FRB host galaxy (including regions close to the FRB source), the intrinsic value of \\Delta\\mathrm{RM}_{AB} is larger than its observed value by a factor of (1+z)^{2}. This would imply different values of intrinsic difference between the RMs of the sub-bursts in these two FRBs, \\approx 65 rad m{}^{-2} for FRB 20210912A and \\approx 33 rad m{}^{-2} for FRB 20181112A.
+
+Only sub-burst A of FRB 20181112A has sufficient S/N to probe the temporal variation of RM within the sub-burst. The RM profile is qualitatively similar to that of sub-burst A of FRB 20210912A, with a minimum close to the peak, as shown
+
+[MISSING_PAGE_FAIL:7] by the Faraday law, and hence the apparent RM only represents the local slope of the variation of PA with \\lambda^{2} (i.e. \\partial\\mathrm{PA}/\\partial\\lambda^{2}). The apparent RM hence cannot be used to estimate the value of PA at infinite frequency, which is the rationale behind our choice of normalization in Equation 6 and the reference frequency for de-rotation (see Section 2.2).
+
+The hints of deviation from the Faraday law observed in the polarization spectra of FRB 20210912A (see Appendix B) cannot distinguish among the possible reasons behind the apparent RM variation. However, the correlated variation of apparent RM and \\kappa (see Figure 2) suggests that the observed behaviour is likely to originate from 'generalized Faraday effects' in dense ionized media close to the source -- possibly in the magnetosphere or near wind region of a neutron star (e.g. Cho et al., 2020; Kennett & Melrose, 1998; Ilie et al., 2019; Lyutikov, 2022). In this case, the RM variation pattern and its associated timescale is expected to be related to the magnetic field geometry near the emission source (e.g. Wang et al., 2011; Lyutikov, 2022).
+
+The difference between the measured RMs of the two sub-bursts of FRB 20210912A and FRB 20181112A, and the qualitative similarity in the variation of the apparent RM across sub-burst A of both FRBs at comparable timescales, indicate that the physical reasons behind the RM variation are likely to be same in both FRBs. The observed reversal in the nature of RM variation between sub-bursts A and B of FRB 20210912A may be associated with the reversal of the magnetic field geometry near opposite poles of a compact magnetized progenitor, as is expected from generalized Faraday effects in the magnetosphere or in the inner wind region (see Wang et al., 2011; Lyutikov, 2022).
+
+### PA Evolution across Sub-bursts
+
+Pulsar-like PA evolution has been observed for other FRBs (e.g. Pandhi et al., 2024; Mckinven et al., 2024). The PA'swing' in pulsars (albeit typically for average profiles) is generally described by the 'rotating vector model' (RVM; Radhakrishnan & Cooke, 1969; Johnston & Kramer, 2019), where the PA traces the projection of the magnetic field at the emission site onto the sky plane as the neutron star rotates. The'swing' of PA is attributed to the change in viewing geometry of the magnetic field around the neutron star. The fastest rate of PA rotation is expected to coincide with the 'centre' of the emission beam in this model, as is observed for FRB 20210912A and FRB 20181112A (see also e.g. Blaskiewicz et al., 1991).
+
+The opposite signs of PA evolution in the two sub-bursts of FRB 20210912A can be qualitatively explained by a scenario where they are associated with emission from opposite magnetic poles of a neutron star and the line of sight intersects the emission beams from opposite poles at either side of the beam centre, e.g. from above and below. Such behaviour has been observed in some Galactic pulsars that show inter-pulse emission, albeit for average profiles (e.g. Johnston & Kramer, 2019; Kramer & Johnston, 2008).
+
+In a simple RVM, the magnetic field structure of a neutron star is assumed to be di-polar and the radio emission is assumed to originate near the 'polar cap' region. In this simple geometry, the PA evolution across a pulse is given by
+
+\\begin{split}\\mathrm{PA}&=\\mathrm{PA}_{0}+\\\\ &\\tan^{-1}\\left[\\frac{\\sin(\\Theta)\\sin(\\varphi-\\varphi_{0})}{\\sin (\\alpha)\\cos(\\Theta)-\\cos(\\alpha)\\sin(\\Theta)\\cos(\\varphi-\\varphi_{0})}\\right] \\end{split}  where \\Theta is the magnetic obliquity (i.e. the angle between the rotation axis and the magnetic axis), \\alpha is the inclination (i.e. angle between the rotation axis and the line-of-sight), \\varphi is the rotation phase and PA{}_{0} is the observed PA at a reference rotation phase \\varphi_{0}. However, in reality, many pulsars exhibit complex temporal variation of the PA with pulse phase (e.g. Mitra et al., 2023; Smits et al., 2006). Significant deviations from a simple RVM may occur due to a number of factors, including relativistic effects, wobbling of the neutron star, complex magnetic field structures (deviations from a di-polar geometry), and presence of orthogonal polarization modes (e.g. Cordes et al., 1978; Blaskiewicz et al., 1991; Hibschman & Arons, 2001). This makes quantitative fits of the RVM difficult for many sources. We also note that single pulses of pulsars often exhibit significant deviations from the PA trends of their average profiles (e.g. Singh et al., 2024).
+
+### A Rotating Vector Model for FRB 20210912A
+
+Assuming a simple RVM with di-polar magnetic field (Equation 12), the fastest rate of PA evolution is given by
+
+\\left[\\frac{\\mathrm{d}\\mathrm{PA}}{\\mathrm{dt}}\\right]_{\\mathrm{max}}=\\frac{2 \\pi}{\\mathrm{T}_{\\mathrm{obs}}}\\frac{\\sin(\\Theta)}{\\sin(\\beta)}  in the observer frame, where T_{\\mathrm{obs}} is the observed rotation period and \\beta is the 'impact angle' (=\\alpha-\\Theta). Assuming that sub-bursts A and B are associated with opposite magnetic poles, we have
+
+\\Theta_{A}+\\Theta_{B}=\\pi  from geometry. Neglecting the difference in emission heights at the two poles (e.g. Johnston and Kramer, 2019), the time difference between locations of the fastest rate of PA evolution in sub-bursts A and B is approximately equal to half of the rotation period.
+
+The rate of PA change (\\mathrm{d}\\mathrm{PA}/\\mathrm{dt}) was calculated by fitting local tangents to the PA curves, details of which are described in Appendix D. The fastest PA evolution rate in sub-burst A is 0.424\\pm 0.016\\deg\\mu\\mathrm{s}^{-1} while sub-burst B has a fastest PA swing rate of -0.177\\pm 0.006\\deg\\mu\\mathrm{s}^{-1}. The locations of the fastest rates of PA evolution in sub-bursts A and B are separated by 1.24\\pm 0.03 ms, implying a rotation period (in the observer frame) of 2.48\\pm 0.06. Using these estimates we infer an inclination of \\alpha=76.2^{\\circ}\\pm 1.7^{\\circ}, magnetic obliquity of \\Theta_{A}=59.1^{\\circ}\\pm 1.4^{\\circ} (primary pole), \\Theta_{B}=120.9^{\\circ}\\pm 1.4^{\\circ} (secondary pole) and impact angles of \\beta_{A}=17.1^{\\circ}\\pm 2.2^{\\circ} (primary), \\beta_{B}=-44.7^{\\circ}\\pm 2.2^{\\circ} (secondary).
+
+The half opening angle of the emission beam is given by (e.g. Johnston and Kramer, 2019),
+
+\\begin{split}\\rho_{e}=\\cos^{-1}[\\cos(\\Theta)\\cos(\\alpha)+\\\\ \\sin(\\Theta)\\sin(\\alpha)\\cos(W/2\\,T_{\\mathrm{obs}})]\\end{split}  where W is the width of the pulse. Using the FWHM of sub-burst A, we infer a half opening angle of \\rho_{e}=44.8^{\\circ}\\pm 1.7^{\\circ} for the emission beam. We note that this estimate relies on a number of simplifying assumptions which may not always hold, and hence the uncertainties are underestimated. Using the RVM-derived observed rotation speed, and incorporating redshift uncertainty, we infer an intrinsic spin period of 1.14\\pm 0.13 ms for the progenitor of FRB 20210912A.
+
+The PA evolution for an RVM with the inferred viewing geometry and rotation period is shown in Figure 3. While the observed PA evolution of FRB 20210912A near the peaks of the two sub-bursts is well-described by a di-polar RVM with the estimated parameters, significant deviations occur away from the peaks. In particular, these deviations are most apparent trailing the primary sub-burst and leading the secondary sub-burst, and coincide with contributions from faint extended emission components that exhibit different spectral properties (see Appendix A). This faint extended emission appears to have a flat PA profile. Nonetheless, as the steepest derivative of PA has been used to estimate the RVM parameters, deviations from the model far from this point of steepest rate of PA change do not contribute appreciably to our estimates of the uncertainties on the inferred parameters, and hence these uncertainties may be underestimated. We also cannot rule out the possibility that the PA evolution near the peaks are attributable to some physical mechanism other than the RVM, largely because the detailed physics of the FRB emission mechanism is not yet understood. Thus other interpretations of our measurements may yield different conclusions on the properties of the progenitor of FRB 20210912A.
+
+### Similar Progenitors for Two FRBs?
+
+The striking resemblance between FRB 20210912A and FRB 20181112A -- including profile shape, differential RM and short timescale RM variation pattern, polarization properties and evolution of PA across sub-bursts -- suggests similar origin for these two apparently non-repeating FRBs. Their near-identical rest-frame emission time-scales -- which would be exactly the same if the host galaxy of FRB 20210912A is at a redshift of z=1.35 -- may be attributable to (near-)identical physical conditions of their progenitors. This opens up the intriguing possibility of the existence of a class of transients with the same characteristic rest-frame emission time scales -- cosmological "standard clocks".
+
+The observed properties of both FRB 20210912A and FRB 20181112A appear broadly consistent with emission from rotating compact magnetized objects with rotation periods of \\approx 1.1 ms. This inferred rotation speed is higher than that of the fastest known millisecond pulsar (period = 1.4 ms), and close to the maximum allowed rotation speed for neutron stars (Hessels et al., 2006; Haskell et al., 2018). These two FRBs could hence be associated with impulsive radio emission from near-maximally-rotating neutron stars. The hypothesis of a millisecond neutron star progenitor would naturally explain the intrinsic similarities between these two FRBs, due to the physical limit of maximum rotation speed.
+
+The lack of significant time lag between the peak of the total intensity profile and the point of steepest PA variation -- assuming that the total intensity peak coincides with the centre of the emission beam and the time lag could be caused by aberration and retardation effects (e.g. Blaskiewicz et al., 1991; Johnston and Kramer, 2019) -- suggests that the observed radio emission originates close to the neutron star surface, at emission heights of \\lesssim 10% of the radius of the light cylinder (see Appendix D). However, this estimate critically relies on several assumptions which may not be valid in these cases.
+
+## 6 Discussion
+
+### A Possible Sub-class of FRBs?
+
+The existence of two near-identical FRBs does not imply that all FRBs have similar origins. Some FRBs have been observed to exhibit quasi-periodicity which does not appear related to a spin period (Chime/Frb Collaboration et al., 2022; Pastor-Marazuela et al., 2023). Observations of pulsars and magnetars have shown that quasi-periodic temporal structures can originate with frequencies orders of magnitude higher than the spin period (e.g. Kramer et al., 2023), but such bursts present very differently in the polarization domain, showing flat PA curves in stark contrast to FRB 20210912A and FRB 20181112A. However, the existence of two remarkably similar FRBs suggests that at least a sub-class of FRBs may originate in near-maximally rotating neutron stars, although identification of such events may not always be possible due to various possible reasons discussed in Appendix F.
+
+We do not find any other event in the current CRAFT FRB sample with high time resolution data available (Shannon et al. in preparation) that has observed properties and rest-frame timescales similar to FRB 20210912A and FRB 20181112A. Based on this fact, we estimate a 68% confidence limit on the fraction of such FRBs detected by ASKAP/CRAFT of 0.06-0.43 (see Appendix F). This compares to the small fraction (\\approx 2\\%) of known pulsars that show inter-pulse emission -- evidence for emission from both poles -- but with faster spinning pulsars having a greater prevalence for inter-pulses (e.g. Weltevrede and Johnston, 2008; Keith et al., 2010; Kramer et al., 1998). A thorough search for similar events in other FRB surveys (e.g. CHIME/FRB Collaboration et al., 2021; Law et al., 2023) is beyond the scope of this work.
+
+### Further Implications
+
+Our interpretation of FRB 20210912A and FRB 20181112A does not explain the physics of the FRB emission mechanism -- in particular, why the emission is observable for only a short duration. This is the case for the vast majority of FRBs detected to date, as well as rotating neutron stars in the Galaxy that exhibit bright yet isolated radio pulses (Rotating Radio Transients; e.g. McLaughlin et al., 2006)). However, the neutron star magnetosphere-based interpretation presented here does not preclude the later detection of a repeat burst from one of these sources. If a repeat burst was detected, the rapid spin-down of these objects should be detectable: assuming spin-down is governed by magnetic dipole radiation, a spin-down of 0.1\\,\\mathrm{ms} would be expected within 90 days if FRB 20210912A behaves like the Crab pulsar (period P and its derivative \\dot{P} obey P\\dot{P}=1.4\\times 10^{-14}\\,\\mathrm{s}(Lyne et al., 2015)), and within 36 minutes if it behaves like young magnetars such as SGR J1935+2154 (P\\dot{P}=4.6\\times 10^{-11}\\,\\mathrm{s}(Israel et al., 2016)). While a relationship between period and redshift (analogous to the Macquart relation between DM and redshift) would be apparent regardless of the lifetime of the progenitors, the relationship would be tightest in the instance where progenitor lifetimes are short and detectable bursts are most commonly observed while the progenitor is still near-maximally rotating. This scenario is consistent with emission near the light cylinder (e.g. Cognard et al., 1996). Confirmation of a periodicity-redshift relation for FRBs showing similar polarization properties as FRB 20210912A and FRB 20181112A would thus enable a redshitless tool for FRB cosmology.
+
+## 7 Summary
+
+In this work, we present high-time-resolution polarization properties of FRB 20210912A, which shows remarkable resemblance with the previously reported FRB 20181112A. These two apparently non-repeating FRBs have similar burst structures, near-identical rest-frame emission timescales, and similar PA evolution and similar variation of (apparent) RM across the bursts. The observed PA swing and apparent RM variation pattern in these two FRBs may be explained by a rapidly-spinning-neutron-star origin, with rest-frame spin periods of \\sim 1.1\\,\\mathrm{ms} -- comparable to the shortest known period of a pulsar and close to the shortest possible rotation period of a neutron star. We emphasize that other interpretations of these observations remain possible, which may lead to completely different conclusions. Nevertheless, the observed properties of these two FRBs provide a unique opportunity to probe the progenitors of such energetic events and hint at the existence of a class of cosmological transients with the same characteristic rest-frame emission time scales.
+
+## Acknowledgements
+
+We thank Marcus E. Lower for comments regarding alternative interpretations of the observations, and the anonymous reviewer for useful comments and feedback on the initial draft. We acknowledge the traditional custodians of the land this research was conducted on, the Whadjuk (Perth region) Noongar people and pay our respects to elders past, present and emerging. CWJ and MG acknowledge support by the Australian Government through the Australian Research Council's Discovery Projects funding scheme (project DP210102103). RMS acknowledges support through ARC Future Fellowship FT190100155. RMS and ATD acknowledge support by the Australian Government through the Australian Research Council's Discovery Projects funding scheme (project DP220102305). LM acknowledges the receipt of an MQ-RES scholarship from Macquarie University. KG acknowledges support through Australian Research Council Discovery Project DP200102243. This scientific work uses data obtained from the Australian Square Kilometre Array Pathfinder (ASKAP), located at Inyarrimanha Ilgari Bundara / the Murchison Radio-astronomy Observatory. We acknowledge the Wajarri Yamaji People as the Traditional Owners and native title holders of the Observatory site. ASKAP uses the resources of the Pawsey Supercomputing Research Centre. CSIRO's ASKAP radio telescope is part of the Australia Telescope National Facility. Establishment of ASKAP, Inyarrimanha Ilgari Bundara, the CSIRO Murchison Radio-astronomy Observatory and the Pawsey Supercomputing Research Centre are initiatives of the Australian Government, with support from the Government of Western Australia and the Science and Industry Endowment Fund. Operation of ASKAP is funded by the Australian Government with support from the National Collaborative Research Infrastructure Strategy. This work was performed on the OzSTAR national facility at Swinburne University of Technology. The OzSTAR program receives funding in part from the Astronomy National Collaborative Research Infrastructure Strategy (NCRIS) allocation provided by the Australian Government, and from the Victorian Higher Education State Investment Fund (VHESIF) provided by the Victorian Government. This research has made use of NASA's Astrophysics Data System Bibliographic Services. ASKAP
+
+Matplotlib(Hunter, 2007), NumPy(van der Walt et al., 2011), SciPy(Virtanen et al., 2020), AstroPy(Astropy Collaboration et al., 2022), RM Tools ([https://github.com/CIRADA-Tools/RM-Tools](https://github.com/CIRADA-Tools/RM-Tools); Purcell et al., 2020)
+
+## Appendix A Burst Structure and Pulse Shape
+
+We modelled the total intensity profiles of FRBs as superposition of multiple Gaussian components convolved with a common exponential scattering tail. The analytic expression used for fitting is given by
+
+I(t)=\\sum_{i=1}^{N}A_{i}\\ e^{-(t-t_{i})/\\tau}\\ \\mathrm{Erfc}\\left(-\\frac{t-t_{i}- \\frac{w_{i}^{2}}{\\tau}}{\\sqrt{2}w_{i}}\\right) (A1) where N is the number of individual burst components, \\tau is the scattering timescale, while A_{i}, t_{i} and w_{i} are the normalization, centre and width of the ith component, respectively. The best-fit values of the parameters (\\tau,A_{i}, t_{i} and w_{i}) were estimated using the least-square fitting method. The optimum number of components (N) was determined by minimizing the quantity
+
+1-R_{\\mathrm{adjusted}}^{2}=\\frac{(n_{\\mathrm{data}}-1)\\sum_{j=1}^{n_{\\mathrm{ data}}}(y_{j}-f_{j})^{2}}{(n_{\\mathrm{data}}-n_{\\mathrm{par}}-1)\\sum_{j=1}^{n_{ \\mathrm{data}}}(y_{j}-\\langle y\\rangle)^{2}} (A2) where the adjusted R^{2} is a measure of the goodness of fit, n_{\\mathrm{data}} is the number of data points used for fitting, n_{\\mathrm{par}}(=1+3N) is the number of free parameters in the model, y_{j} and f_{j} represent the j'th data point and its value from the best-fit model, respectively, while \\langle y\\rangle is the arithmetic mean of all the measured data points.
+
+For both FRBs, each sub-burst was independently modelled following the method described above. The peak and the full width at half maximum (FWHM) of each profile were measured from the best-fit models. The peak of each sub-burst is assumed to be co-located with the maximum of its best-fit model, from which the separation between the sub-burst peaks (T_{AB}) is measured. The FWHM is defined as the temporal separation between the two farthest points on either side of the maximum, where the intensity is half the maximum value. The uncertainties associated with our measured FWHM and peak separation are both statistical, due to the contribution of random noise obscuring the true FRB signal shape; and systematic, reflecting our imperfect knowledge of underlying FRB physics. To estimate the statistical error in the FWHM, we use a bootstrap method, by randomly excluding 20% of the data-points, and re-fitting. We repeat this 1,234 times, and use the spread of resulting FWHMs to assign an uncertainty. Systematic errors in these measurements due to our imperfect understanding of FRB physics are, however, much more difficult to quantify. The underlying emission from an FRB may not be composed of a series of Gaussian components, while it is ambiguous if the peak emission should be defined as the central point of the FWHM, the centre of the strongest Gaussian component, or some other method. We thus conservatively use the FWHM of the best-fit profile as a characteristic estimate of uncertainty in the location of the peak. The uncertainty associated with the peak separation is then estimated as
+
+\\delta T_{AB}=\\frac{\\sqrt{\\mathrm{FWHM}_{A}^{2}+\\mathrm{FWHM}_{B}^{2}}}{2} (A3) where \\mathrm{FWHM}_{A} and \\mathrm{FWHM}_{B} are the FWHMs of sub-bursts A and B, respectively.
+
+### Frb 20210912a
+
+Each sub-burst of FRB 20210912A comprises multiple components with different spectral shape, which can be seen in Figures A1 and A2. Sub-bursts A and B are found to be optimally described by 4 components and 6 components, respectively, as shown in Figure A3. The details of the measurements are listed in Table 3. We note that the optimum model significantly deviates from the observed intensity profile near the peak of sub-burst A.
+
+The scattering timescale (\\tau), which was kept independent for each sub-burst, was found to be consistent in the two sub-bursts with best-fit values of \\tau_{A}=43\\pm 6\\ \\mu s and \\tau_{B}=64\\pm 15\\ \\mu s. These estimates are also consistent with the scattering time-scales reported by Marnoch et al. (2023).
+
+The FWHMs of sub-bursts A and B are \\mathrm{FWHM}_{A}=66\\pm 2\\ \\mu s and \\mathrm{FWHM}_{B}=204\\pm 3\\ \\mu s, respectively. The peaks of the two sub-bursts are separated by T_{AB}=1.27\\pm 0.11\\ \\mathrm{ms}.
+
+Figure A2: Total intensity time profiles of FRB 20210912A in four sub-bands within the observing frequency band. The central frequency of each sub-band is mentioned in the top right corner. The flux densities have been normalized by the peak of the full-band profile. All profiles have a time resolution of 3.8 \\mus.
+
+[MISSING_PAGE_FAIL:15]
+
+[MISSING_PAGE_FAIL:16]
+
+The estimates of RM obtained from the RM-synthesis method are shown in Figure 11, which agree with the estimates from the fit (shown in Figure 5) within the errors. The values of PA{}_{\\lambda 0} (at infinite frequency) obtained from RM-synthesis show correlated variation with the RM estimates, similar to FRB 20210912A.
+
+## Appendix C Rotation Measure Variation
+
+Short timescale (\\sim 10\\,\\mus) variation of RM is observed across the sub-bursts of FRB 20210912A and FRB 20181112A, with RM varying monotonically on either side of extrema close to the peaks. To characterize the RM variation pattern, we empirically fit the RM profile of each sub-burst with a Gaussian of the form
+
+\\mathrm{RM}(t)=\\mathrm{RM}_{0}+\\mathrm{RM}_{\\mathrm{max}}\\exp\\left[-\\left( \\frac{t-t_{0}}{w_{\\mathrm{RM}}}\\right)^{2}\\right] (C5) where RM{}_{\\mathrm{max}}, t_{0} and w_{\\mathrm{RM}} are the peak (positive or negative), centre and the characteristic width of the Gaussian, respectively.
+
+### Frb 20210912a
+
+RM{}_{0} was set (not fit) to the arithmetic mean of the RMs of the two sub-bursts, i.e. RM{}_{0}=(\\mathrm{RM}_{A}+\\mathrm{RM}_{B})/2=4.5 rad m{}^{-2}. The peaks of the best-fit Gaussians are RM{}_{\\mathrm{max}}{}^{A}=-17.75\\pm 0.6 rad m{}^{-2} and RM{}_{\\mathrm{max}}{}^{B}=15.5\\pm 1.4 rad m{}^{-2}. The centres are located at t_{0}^{A}=0.043\\pm 0.002 ms and t_{0}^{B}=1.289\\pm 0.005 ms. The FWHMs of the best-fit Gaussians are 80\\pm 3\\mus and 99\\pm 13\\mus for sub-bursts A and B, respectively. We note that the ratio of the FWHMs is significantly different from the ratio of the burst widths.
+
+### Frb 20181112a
+
+Sub-burst A shows an RM variation pattern qualitatively similar to those of the sub-bursts of FRB 20210912A, while sub-burst B of FRB 20181112A does not have sufficient S/N to probe RM variation across it. RM{}_{0} was set (not fit) to the arithmetic mean of the RMs of the two sub-bursts, i.e. RM{}_{0}=(\\mathrm{RM}_{A}+\\mathrm{RM}_{B})/2=18.1 rad m{}^{-2}. The peak of the best-fit Gaussian is RM{}_{\\mathrm{max}}{}^{A}=-9.5\\pm 0.6rad m{}^{-2} and it is located at t_{0}^{A}=0.011\\pm 0.002 ms. The FWHM of the best-fit Gaussian is 42\\pm 7\\,\\mus. The ratio of the FWHM of this best-fit Gaussian (associated with sub-burst A) to T_{AB} is consistent within the uncertainties for FRB 20181112A (0.052\\pm 0.009) and FRB 20210912A (0.061\\pm 0.002).
+
+## Appendix D Rate of PA Swing
+
+The rate of PA evolution, d\\mathrm{PA}/dt, calculated by fitting local tangents to the PA curves, has extrema close to the sub-burst peaks. To find the locations and the values of the extrema, the d\\mathrm{PA}/dt curves were fitted with Gaussians. Half of the FWHM of the best-fit Gaussian was conservatively used as the uncertainty on the location of the extremum.
+
+Assuming that the peak of the primary sub-burst (A) coincides with the centre of the emission beam, an approximate emission height can be estimated using the relation (Blaskiewicz et al., 1991)
+
+h_{\\mathrm{em}}=\\frac{c\\,\\Delta t}{4(1+z)} (D6) where h_{\\mathrm{em}} is the emission height from the centre of the compact object (possibly a neutron star), c is the speed of light and \\Delta t/(1+z) is the rest-frame time lag between the steepest change in PA and the intensity peak. The radius of light cylinder, for a rotation period of \\approx 1.1 ms, is R_{\\mathrm{lc}}\\approx 52 km.
+
+### Frb 20210912a
+
+The rate of PA evolution (d\\mathrm{PA}/dt) was calculated by fitting tangents to 15 consecutive time samples on the PA curve for sub-burst A and 25 consecutive time samples for sub-burst B (due to its lower signal to noise ratio). The fastest PA swing rate in sub-burst A is 0.424\\pm 0.016\\deg\\mu\\mathrm{s}^{-1} at t_{A}^{\\mathrm{ex}}=0.032\\pm 0.025 ms, measured from the best-fit Gaussian as described above. Sub-burst B has a fastest PA evolution rate of -0.177\\pm 0.006\\deg\\mu\\mathrm{s}^{-1} at t_{B}^{\\mathrm{ex}}=1.270\\pm 0.048 ms. The relation in Equation D6 implies an emission height of h_{\\mathrm{em}}=(0.02\\pm 0.02)R_{\\mathrm{lc}} for sub-burst A.
+
+### Frb 20181112a
+
+The PA changes across sub-burst A in a fashion similar to that of sub-burst A of FRB 20210912A. The rate of PA swing (d\\mathrm{PA}/dt) was calculated by fitting tangents to 5 consecutive time samples on the PA curve. The fastest PA evolution rate in sub-burst A is -0.29\\pm 0.03\\deg\\mu\\mathrm{s}^{-1} at t_{A}^{\\mathrm{ex}}=0.042\\pm 0.023 ms, measured from the best-fit Gaussian as described above. Sub-burst B doesnot have enough signal to ratio to probe any PA variation across it. The relation in Equation D6 implies an emission height of h_{\\rm em}=(0.04\\pm 0.02)R_{\\rm lc} for sub-burst A.
+
+## Appendix E Quantifying Similarities between Two FRBs
+
+We would like to quantify the degree of similarity between FRB 20181112A and FRB 20210912A, to answer the question: what is the likelihood that two FRBs appear so similar due purely to random behaviour, rather than a common underlying physical mechanism? A statistical analysis of similarities between pulse profiles of two FRBs -- taking into account different (and possibly unknown) redshifts, different scattering timescales, different S/N etc. -- is difficult. An intuitive way to quantify similarity between any two FRBs would be to maximize Pearson's correlation coefficient (e.g. Freedman et al. 2007) between the total intensity profiles I(t) by varying three parameters: the relative amplitude \\Delta A, the relative start time \\Delta t_{0}, and a time compression factor \\Delta\\tau. Doing this for a large sample of FRBs would produce a distribution of maximized correlation coefficients against which the value for FRB 20181112A and FRB 20210912A could be evaluated.
+
+The first problem encountered with such an approach -- or any approach trying to quantify similarity -- is that no suitable model of FRB time-frequency profiles exist to form a null hypothesis against which to test, e.g. by generating synthetic FRBs. Relying on data however encounters several issues: many FRBs are sufficiently scattered that their intrinsic structure is unresolved, either due to instrumental time resolution, or because their shape is dominated by an exponential scattering tail. Clearly, any two such FRBs, when varying \\Delta A, \\Delta t_{0}, and \\Delta\\tau, will correlate extremely well. Similarly, even FRBs with complicated structure are often dominated by a strong primary peak, which will dominate any tests of correlation regardless of the details of fine structure. Therefore, in any such analysis, it seems reasonable to exclude each FRB's primary peak, and to examine secondary structures for the degree of correlation.
+
+It is at this point that the small number of high S/N, time-resolved FRBs with secondary structures becomes a problem. Of the FRB-detecting facilities with significant numbers of unbiased detections (as opposed to follow-up observations of known objects), only UTMOST, DSA-110, and ASKAP have data for which useful comparisons can be made. Excluding those FRBs with simple, single-pulse structures, and requiring a S/N of 50 (so that a secondary peak at the 10% power level would be detected at 5 sigma),leaves a total of 13 (2 UTMOST (Farah et al., 2018, 2019), 2 DSA (Sherman et al., 2023), and 9 ASKAP (Scott et al., 2023)) events. FRB 20181112A and FRB 20210912A are 'obviously' the most similar of these, but we do not consider this sample size sufficient to determine if the similarity is extraordinary. Furthermore, these two FRBs not only have similar rest-frame intensity profiles but also have similar rest-frame intensity profiles. also exhibit similar RM variation and PA swing. Capturing all this information in a single statistic is even more challenging and will be attempted as part of a separate work.
+
+## Appendix F Number of such FRBs
+
+We consider what fraction, f_{\\rm class}, of FRBs detected by CRAFT could plausibly belong to the same class as FRBs 20181112A and 20210912A. However, because this class is currently defined only by these two members, rather than a large analysis of a population of bursts (e.g. Pleunis et al., 2021), the precise class definitions are ambiguous.
+
+Using a strict definition of this class as having a broadband, narrow initial pulse, followed by a dimmer secondary pulse of amplitude less than 50% of the primary pulse, only FRBs 20181112A and 20210912A of the 22 FRBs detected by CRAFT in incoherent sum mode are class members (Cho et al., 2020; Day et al., 2020; Bhandari et al., 2020, 2023; Marnoch et al., 2023; Scott et al., 2023). Ten have large scattering tails however (\\tau_{\\rm scat}>0.5 ms), which would make the detection of a small secondary peak very difficult. Such scattering is most likely to arise either from the FRB host galaxy's interstellar medium (ISM) or circum-galactic medium (CGM), and is thus not intrinsic to the FRB emission mechanism (Sammons et al., 2023). Therefore, these FRBs could also be members of the same fundamental class, although a measurement of a rotation period for them would be unlikely.
+
+FRBs 20190102C and 20190611B both exhibit two sub-pulses, but with different relative powers to FRBs 20181112A and 20210912A. FRB 20190102C has a small precursor burst offset from the main pulse by \\sim 0.4 ms and \\sim10% of its amplitude, while FRB 20190611B has two bright peaks of almost equal magnitude, separated by \\sim 1.0 ms. If these peaks are associated with emission from opposite poles of a neutron star, the implied rotation periods would be 0.62 ms and 1.5 ms at their respective redshifts of 0.29 and 0.378 (Macquart et al., 2020). The former is excluded on causality considerations (Rhoades & Ruffini, 1974; Haskell et al., 2018); the latter remains a plausible candidate.
+
+The remaining eight FRBs do not appear to exhibit structures consistent with that of FRB 20181112A and FRB 20210912A. Our observation of two of 12 weakly scattered FRBs sets a 68% confidence limit on f_{\\rm class} of 0.06-0.34; allowing FRB 20190611B to be a potential class member yields the range 0.12-0.43.

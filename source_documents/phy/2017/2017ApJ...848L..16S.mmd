@@ -1,0 +1,97 @@
+###### Abstract
+
+We present the Dark Energy Camera (DECam) discovery of the optical counterpart of the first binary neutron star merger detected through gravitational wave emission, GW170817. Our observations commenced 10.5 hours post-merger, as soon as the localization region became accessible from Chile. We imaged 70 deg{}^{2} in the i and z bands, covering 93% of the initial integrated localization probability, to a depth necessary to identify likely optical counterparts (e.g., a kilonova). At 11.4 hours post-merger we detected a bright optical transient located 10.6{}^{\\prime\\prime} from the nucleus of NGC 4993 at redshift z=0.0098, consistent (for H_{0}=70 km s{}^{-1} Mpc{}^{-1}) with the distance of 40\\pm 8 Mpc reported by the LIGO Scientific Collaboration and the Virgo Collaboration (LVC). At detection the transient had magnitudes i\\approx 17.30 and z\\approx 17.45, and thus an absolute magnitude of M_{i}=-15.7, in the luminosity range expected for a kilonova. We identified 1,500 potential transient candidates. Applying simple selection criteria aimed at rejecting background events such as supernovae, we find the transient associated with NGC 4993 as the only remaining plausible counterpart, and reject chance coincidence at the 99.5% confidence level. We therefore conclude that the optical counterpart we have identified near NGC 4993 is associated with GW170817. This discovery ushers in the era of multi-messenger astronomy with gravitational waves, and demonstrates the power of DECam to identify the optical counterparts of gravitational-wave sources. binaries: close -- catalogs -- gravitational waves -- stars: neutron -- surveys
+
+## 1 Introduction
+
+The joint detection of electromagnetic (EM) and gravitational wave (GW) emission from astrophysical sources is one of the holy grails of present-day astronomy. The primary targets for such joint detections are the mergers of compact object binaries composed of neutron stars (NS) and/or black holes. In such systems the GW emission provides insight into the bulk motions, masses, binary properties, and potentially the composition of neutron stars. Electromagnetic observations provide critical insights into the astrophysics of the event, such as the progenitor environment, the formation of relativistic and non-relativistic outflows, and in some cases the nature of merger products (e.g., Metzger & Berger 2012; Rosswog et al. 2013; Baiotti & Rezzolla 2017). Combining EM and GW observations would lead to deeper scientific insights into some of the most cataclysmic events in the Universe. These multi-messenger observations also allow for novel measurements, such as standard siren measurements of the Hubble constant (Schutz 1986a; Holz & Hughes 2005; Dalal et al. 2006; Nissanke et al. 2010, 2013), and studies of gamma-ray bursts (Berger 2014).
+
+A wide range of EM emission mechanisms for GW sources have been proposed over the years (Metzger & Berger 2012), including short-duration GRBs (Eichler et al. 1989; Nakar 2007; Berger 2014), on- or off-axis afterglow emission from radio to X-rays (van Eerten & MacFadyen 2011; Coward et al. 2014; Fong et al. 2015; Lamb & Kobayashi 2016), optical/near-IR emission due to radioactive decay of r-process nuclei synthesized in the merger ejecta (so-called kilonova; Li & Paczynski 1998; Rosswog et al. 1999; Metzger et al. 2010; Barnes & Kasen 2013), and radio emission produced by interaction of the kilonova ejecta with the circumbinary medium (Nakar & Piran 2011; Metzger & Berger 2012).
+
+The search for optical counterparts is particularly attractive due to the combination of emission that, unlike GRB emission, is not highly beamed and wide-field optical telescope facilities; a detection can then be followed up at other wavelengths with narrow-field instruments. Over the last two years, we have used the Dark Energy Camera (DECam, Flaugher et al. 2015), a 3 deg{}^{2} wide-field imager on the Blanco 4-m telescope at the Cerro Tololo Inter-American Observatory (CTIO), to follow up GW sources from Advanced LIGO (Abbott et al. 2009) and Virgo (Acernese et al. 2015) detectors (see, e.g., Abbott et al. 2016b; Dark Energy Survey Collaboration et al. 2016). In particular, we conducted rapid follow-up observations of the black hole binary merger events GW150914 (Abbott et al. 2016c) and GW151226 (Abbott et al. 2016a), using DECam (Soares-Santos et al. 2016; Annis et al. 2016; Cowperthwaite et al. 2016). No optical counterpart was discovered in either case.
+
+On 2017 August 17 at 12:41:06 UT the Advanced LIGO/Virgo (ALV) observatories detected a binary neutron star merger, GW170817 (LIGO Scientific Collaboration and Virgo Collaboration 2017b,d,a). At 23:12:59 UT (10.53 hours after the GW detection) we began to image a 70.4 deg{}^{2} region that covered 93% of the localization probability in the map provided by the LVC at the time (LIGO Scientific Collaboration and Virgo Collaboration 2017c). Immediately following the identification by one of us (R. Chornock), we received a private communication from another DECam team member (R. Foley) indicating that the source was also discovered in an image taken 0.5 hours ahead of ours by the Swope Telescope. We issued a circular to the Gamma-ray Coordination Network (GCN) reporting the discovery at 01:15:01UT (Allam et al. 2017), including a reference to a GCN from the 1M2H collaboration at 01:05:23 UT (SSS17a; Coulter et al. 2017), and subsequent to our GCN the DLT40 team also announced an independent detection (DLT17ck: Yang et al. 2017 reported at 01:41:13 UT); see (LIGO Scientific Collaboration and Virgo Collaboration, et al. 2017a) for an overview of the observations carried out by the community. This transient has received an International Astronomical Union name of AT2017gfo.
+
+Subsequent to our discovery of the optical transient, we obtained follow-up observations with a wide range of telescopes, spanning radio to X-rays, which are detailed in the associated papers of this series: Cowperthwaite et al. (2017); Nicholl et al. (2017); Chornock et al. (2017); Margutti et al. (2017); Alexander et al. (2017); Blanchard et al. (2017); Fong et al. (2017).
+
+Here, in the first paper of the series, we present our DECam observations, the discovery of the optical transient, and a search for other potential counterparts across the 70.4 deg{}^{2} region. We find no other potential optical counterpart within the GW localization region, thus helping to significantly establish the association between the detected optical transient and GW170817. A measurement of the Hubble constant, the first utilizing a gravitational wave event as a standard siren measurement of distance (Schutz 1986b; Dalal et al. 2006), is enabled by this work and is described in LIGO Scientific Collaboration and Virgo Collaboration, et al. (2017b).
+
+## 2 DECAM counterpart search
+
+The alert for GW170817 was issued 40 minutes after the trigger, on 2017 August 17 at 13:21 UT (LIGO Scientific Collaboration and Virgo Collaboration 2017b), and
+
+[MISSING_PAGE_FAIL:4]
+
+Our primary program is to obtain images over the LIGO probability map to search for counterparts. Within 12 hours of the event we had obtained DECam i,z images across > 80% of the revised LIGO probability map. We have analyzed this region to determine how many potential counterparts are present.
+
+### Image Processing
+
+We employ the DES single-epoch processing and diffimg pipelines to produce a list of transient candidates. The search images are 72 exposures taken on the night of the trigger (corresponding to two tilings of 18 hexes in i and z bands). Because most of the exposures (\\sim 60\\%) did not have pre-existing DECam imaging in those bands, we took images on the nights of 31 August through 2 September to serve as templates. We expect any kilonova-like transients to have faded below detection thresholds by that time (\\sim 2 weeks from the trigger).
+
+The total area encompassed by the 72 exposures is 70.4 deg{}^{2}. The camera fill factor is 80% which results in 4% area loss when we consider the two overlapping tilings. Weather on the nights of template observations was partially clouded and caused a 3% loss. Processing failures accounted for less than 1% loss. The final area included in this search for other potential counterparts is 64.6 square degrees.
+
+This process results in 1500 transient candidates with magnitudes between 15.5 and 20.5. A candidate is defined as a detection meeting diffimg quality requirements (see Table 3 of Kessler et al. (2015)) on at least two search exposures. The magnitude cutoff of this analysis is limited by the depth of the template images: i=21.2 and z=20.5, to be compared with the depth of the search images: i=22.0 and z=21.3.
+
+### Candidate Selection
+
+We apply several selection criteria to candidates identified in diffimg aiming to reject moving objects, background artifacts and long-lived transients:
+
+* Criterion 1: The candidate must have at least one detection in i and one detection in z band.
+
+* Criterion 2: The candidate must pass our automated scanning program (Goldstein et al., 2015) with a machine learning score \\geq 0.7 in all detections. This criterion rejects non-astrophysical artifacts. The efficiency of this criterion as measured from point sources injected into our images is \\approx 90-100\\% for both i and z\\approx 17-22 mag.
+
+* Criterion 3: The candidate must have faded significantly between the search (first) and template (last) observations. Specifically, we require the change in the candidate flux to be greater, at 3\\sigma level, than the flux in a circular aperture of radius = 5 pixels on the template image. image at the location of the candidate. This criterion eliminates slow-evolving transients (e.g., supernovae).
+
+Table 2 lists the number of events passing each selection stage in various bins of magnitude. After all criteria are ap plied, one optical counterpart candidate remains: the source discovered by visual inspection. Slow moving solar system objects, which could potentially have met the selection criteria above, are very rare in the magnitude range of this search. The flares of M dwarf flare stars have T\\approx10,000 K and therefore are very blue; they are rejected by selection criterion 3 in z-band.
+
+## 4 Uniqueness of the Candidate
+
+This analysis shows that the source we discovered is the only one plausibly associated with the GW event within the region searched. To estimate its significance we compute the chance probability of a transient to occur within the volume and timescale of interest. Because SNe are by far the most likely transient contaminant, we use their rate and timescale to make a conservative estimate. We use a combined rate of 1\\times 10^{-4} Mpc{}^{-3}yr{}^{-1}, for core-collapse (Strolger et al., 2015) and Type Ia (Dilday et al., 2008) SNe at z\\lesssim 0.1. The characteristic timescale of SNe is \\tau\\sim1 month. The volume (V) we observed is estimated as a shell at z\\sim 0.01 (\\sim 40 Mpc) spanning 64 deg{}^{2} area and 16 Mpc width corresponding to the effective search area and the distance uncertainty, respectively: V=558 Mpc{}^{3}. Under these assumptions, we find that the probability of a chance coincidence is \\sim 0.5\\%, and we conclude that our optical transient is associated with GW170817.
+
+## 5 Conclusion
+
+We report the DECam discovery of the optical counterpart to the BNS merger GW170817, an object with i=17.30 mag and z=17.43 mag at 11.40 hours post-merger. The source was discovered through visual inspection of nearby galaxies in our raw data stream. Our analysis identifies this source as the only credible optical counterpart within a large fraction of the GW170817 sky map. The observed peak absolute magnitude of M_{i}=-15.7 is about 1000 times brighter than a nova, which is typically close to Eddington luminosity (M_{V}=-9). Thus, we have indeed discovered a kilonova as the name defines it and was predicted in Metzger et al. (2010).
+
+At M_{i}=-15.7, the optical transient is bright enough for us to detect it out to 425 Mpc. Its properties, 1.5 days after the event include: (i-z)=0.2, and a magnitude decline versus time in i,z,Y\\propto t^{-\\frac{1}{2}}, and faster decline in g-band (\\propto t^{-\\frac{1}{2}}). Future searches for counterparts of GW events may be improved by this information.
+
+This detection has opened a new era of multi-probe multi-messenger astronomical observations of the Universe that will bring new measurements of cosmological parameters, starting with the present rate of expansion (LIGO Scientific Collaboration and Virgo Collaboration, et al., 2017), and possibly helping determine the matter/energy content and evolution of the Universe.
+
+This is the first detection of an optical counterpart of a gravitational wave source. It will not be the last. As the LIGO
+
+\\begin{table}
+
+\\begin{tabular}{l c c c c} \\hline \\hline \\multicolumn{1}{c}{ mag(i)} & Raw & Cut 1 & Cut 2 & Cut 3 \\\\ \\hline
+
+15.5–16.5 & 4 & 0 & 0 & 0 \\\\
+
+16.5–17.5 & 11 & 7 & 3 & 1 \\\\
+
+17.5–18.5 & 26 & 15 & 7 & 0 \\\\
+
+18.5–19.5 & 296 & 63 & 27 & 0 \\\\
+
+19.5–20.5 & 1163 & 167 & 44 & 0 \\\\ \\hline Total & 1500 & 252 & 81 & 1 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 2: Number of candidates at each selection stage, sorted by i-band magnitude. and Virgo collaborations proceed to their next observing runs and upgrades, DECam will continue to play an important, almost unique, role in the identification of gravitational wave sources in the Southern hemisphere.
+
+Funding for the DES Projects has been provided by the DOE and NSF(USA), MEC/MICINN/MINECO(Spain), STFC(UK), HEFCE(UK). NCSA(UIUC), KICP(U. Chicago), CCAPP(Ohio State), MIFPA(Texas A&M), CNPQ, FAPERJ, FINEP (Brazil), DFG(Germany) and the Collaborating Institutions in the Dark Energy Survey.
+
+The Collaborating Institutions are Argonne Lab, UC Santa Cruz, University of Cambridge, CIEMAT-Madrid, University of Chicago, University College London, DES-Brazil Consortium, University of Edinburgh, ETH Zurich, Fermilab, University of Illinois, ICE (IEEC-CSIC), IFAE Barcelona, Lawrence Berkeley Lab, LMU Munchen and the associated Excellence Cluster Universe, University of Michigan, NOAO, University of Nottingham, Ohio State University, University of Pennsylvania, University of Portsmouth, SLAC National Lab, Stanford University, University of Sussex, Texas A&M University, and the OzDES Membership Consortium.
+
+Based in part on observations at Cerro Tololo Inter-American Observatory, National Optical Astronomy Observatory, which is operated by the Association of Universities for Research in Astronomy (AURA) under a cooperative agreement with the National Science Foundation.
+
+The DES Data Management System is supported by the NSF under Grant Numbers AST-1138766 and AST-1536171. The DES participants from Spanish institutions are partially supported by MINECO under grants AYA2015-71825, ESP2015-88861, FPA2015-68048, and Centro de Excelencia SEV-2012-0234, SEV-2016-0597 and MDM-2015-0509. Research leading to these results has received funding from the ERC under the EU's 7{}^{\\rm th} Framework Programme including grants ERC 240672, 291329 and 306478. We acknowledge support from the Australian Research Council Centre of Excellence for All-sky Astrophysics (CAASTRO), through project number CE110001020.
+
+This manuscript has been authored by Fermi Research Alliance, LLC under Contract No. DE-AC02-07CH11359 with the U.S. Department of Energy, Office of Science, Office of High Energy Physics. The United States Government retains and the publisher, by accepting the article for publication, acknowledges that the United States Government retains a non-exclusive, paid-up, irrevocable, world-wide license to publish or reproduce the published form of this manuscript, or allow others to do so, for United States Government purposes.
+
+HYC, ZD, BF, MF, and DEH were partially supported by NSF CAREER grant PHY-1151836 and NSF grant PHYS-1708081. They were also supported by the Kavli Institute for Cosmological Physics at the University of Chicago through NSF grant PHY-1125897 and an endowment from the Kavli Foundation.
+
+The Berger Time-Domain Group at Harvard is supported in part by the NSF through grants AST-1411763 and AST-1714498, and by NASA through grants NNX15AE50G and NNX16AC22G.
+
+We thank the University of Copenhagen, DARK Cosmology Centre, and the Niels Bohr International Academy for hosting R.J.F., Z.D., B.F. during the discovery of GW170817/SSS17a, where they were participating in the Kavli Summer Program in Astrophysics, "Astrophysics with gravitational wave detections". This program was supported by the Kavli Foundation, Danish National Research Foundation, the Niels Bohr International Academy, and the DARK Cosmology Centre.
+
+The UCSC group is supported in part by NSF grant AST-1518052, the Gordon & Betty Moore Foundation, the Heising-Simons Foundation, generous donations from many individuals through a UCSC Giving Day grant, and from fellowships from the Alfred P. Sloan Foundation and the David and Lucile Packard Foundation to R.J.F.
+
+We thank the CTIO director, Stephen Heathcote, for being supportive of our target of opportunity program using DE-Cam. We also thank the CTIO staff for providing a great experience to observers on-site and remotely.

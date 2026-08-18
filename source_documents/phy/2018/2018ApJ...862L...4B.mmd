@@ -1,0 +1,87 @@
+###### Abstract
+
+SAX J1810.8-2609 is a faint X-ray transient, mostly known for its abnormally low quiescent thermal luminosity, which disagrees with standard cooling models. It is also one of a small sample of stars whose mass and radius have been estimated using spectral modeling of one of its thermonuclear bursts. Here we report the discovery of millisecond oscillations in a type I thermonuclear X-ray burst from SAX J1810.8-2609 observed by _RXTE_ during the 2007 outburst. A strong signal (Leahy-normalized power of 71.5, 4.5\\times 10^{-9} chance of coincidence with a conservative estimate for the number of trials) was present at 531.8 Hz during the decay of one out of six bursts observed. Oscillations were detected for about 6 seconds, during which their frequency increased from 531.4 to 531.9 Hz in a manner similar to other burst oscillation sources. The millisecond oscillations discovered pinpoint the spin frequency of the neutron star, which is important for the spectral modeling, associated mass-radius inference, and understanding the evolutionary status and cooling behavior of the star. As of April 2018 the source is in outburst again, providing a fleeting opportunity to acquire new material for the burst oscillation searches.
+
+Subject headings:burst oscillations; type I bursts; LMXB; sources: individual: SAX J1810.8-2609
+
+## 1. Introduction
+
+Millisecond oscillations in type I X-ray bursts are caused by the development of asymmetric bright patches during thermonuclear explosions on the surface of accreting neutron stars. Burst oscillations are rare phenomena, having only been observed in 18 out of about 110 sources1. Oscillation amplitudes can take a range of values (typically, 5%-20% for the fractional rms amplitudes), with higher amplitudes being more prevalent in certain accretion states and the majority of the non-detections can be attributed to the lack of observations in the appropriate state (Ootes et al., 2017). However what causes this spread of amplitudes remains a mystery.
+
+Footnote 1: [http://www.sron.nl/~jeanz/bursterlist.html](http://www.sron.nl/~jeanz/bursterlist.html), see also Galloway et al. (2008), Watts (2012), and references therein.
+
+Burst oscillations can occur in any part of the burst and usually last for several seconds. They are highly coherent, with frequencies typically (but not always) drifting smoothly upwards by 1-3 Hz towards the asymptotic maximum, nearly constant for each source. Oscillation frequencies range from 245 to 620 Hz (Watts, 2012), but there have also been detected oscillations at frequencies as low as 11 Hz (e.g. Cavecchi et al., 2011). The similarity between the oscillation and spin frequencies of several accretion-powered pulsars (e.g. SAX J1808.4-3658 (Chakrabarty et al., 2003), XTE J1814-338 (Strohmayer et al., 2003), and other) revealed the tight connection between the oscillation frequency and the spin frequency of the neutron star, enabling the determination of spin frequencies for several neutron stars which do not manifest themselves as pulsars.
+
+Burst oscillations are unique tools for exploring the nuclear burning in the strong gravity/magnetic fields on the neutron star surface. Also, folded waveforms of burst oscillations bear the imprints of the gravitational field at the neutron star surface, allowing for simultaneous measurements of the star's mass and radius and thus constraining the equation of state of matter at supra-nuclear densities (see Watts et al., 2016, for an overview).
+
+SAX J1810.8-2609 is a low-mass X-ray binary (LMXB) discovered with the Wide Field Camera on board the BeppoSAX satellite (Uberini et al., 1998). The source spends most of time in a quiescent state, with three outbursts observed so far: in 1998, 2007 and 2012. As of April 2018, the source is reported to be in outburst again Negoro et al. (2018). Both quiescent and outburst luminosities of SAX J1810.8-2609 are on the lower end of the corresponding luminosity distributions for neutron star X-ray transients2. Its thermal luminosity during quiescence is in disagreement with NS heating and cooling models, suggesting an order of magnitude smaller accretion rate than is inferred from its outburst activity (Jonker et al., 2004; Allen et al., 2018). Thermal emission from one of the Type I bursts from the 2007 outburst has been used by Suleimanov et al. (2017) to constrain mass and radius of this neutron star using the direct cooling tail method, yielding R=11.5-13.0 km for the 99% confidence region at an assumed mass of M=1.3-1.8 M_{\\odot}. However the 68% confidence upper limit that they find on the mass is \\sim 1.5 M_{\\odot}.
+
+Footnote 2: However, Degenaar & Wijnands (2013) argued that the flux of the 2012 outburst suggests that SAX J1810.8-2609 may be a bright transient fortuitously observed previously during its fainter outbursts.
+
+Knowing the spin frequency of NS is important for spectral modeling both in quiescence and during outbursts and bursts (Burke et al., 2018; Baubock et al.,2015). It would also put constraints on the evolutionary history of the system, which could be helpful for explaining the low temperature of the NS (Allen et al., 2018).
+
+In this letter we report the discovery of 531.8 Hz burst oscillations in one of the six bursts recorded by Rossi X-Ray Timing Explorer (_RXTE_) in the 2007 outburst. This makes SAX J1810.8-2609 the 19th known source with burst oscillations and places the system among the fast-spinning NS LMXBs.
+
+## 2. Data Analysis
+
+We analyzed the data from the Proportional Counter Array on board of _RXTE_ for the six bursts which were observed between August and September 2007. The observation IDs and the MJDs of arrival (Table 1) were taken from the Multi-INstrument Burst ARchive (MINBAR1, Galloway et al., in prep). The duration was defined as the time span where 0.5-s count rate from Standard-2 files was larger than mean plus two standard deviations of the count rate in the pre-burst baseline window. The Science Event mode was used, with time resolution of 122 \\mus and no energy cuts.
+
+Footnote 1: [https://burst.sci.monash.edu/minbar/](https://burst.sci.monash.edu/minbar/)
+
+In order to search for oscillations, we applied the standard technique of calculating power spectra in sliding windows of \\Delta T=0.5, 1, 2 and 4 seconds, each new window starting with a 0.5-s offset with respect to the previous one. For each window, Fourier frequencies between 2 and 2002 Hz were recorded. The upper limit on the oscillation frequency reflects the upper limit on NS spin frequency set by all current reasonable models of the neutron star equation of state (Haensel et al., 2009).
+
+One of the bursts (#3 in Table 1) yielded a strong signal at frequencies of about 532 Hz for all FFT window lengths. The Leahy-normalized power (Leahy et al., 1983) was largest for 4-s windows, reaching P_{\\rm m}=71.5 at 531.75 Hz. Assuming the noise power is distributed as \\chi^{2} with two degrees of freedom, the single-trial proba
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c c c c} \\hline Burst & _RXTE_ & Burst & Burst start & Burst & Peak count & Bolometric & & & Photospheric \\\\ \\# & ObsID & epoch & date & duration & rate per PCU & fluence & & & radius \\\\  & & (MJD UT) & (vyvy-mm-dd) & (s) & (10^{3} ct s{}^{-1}) & (10^{-6} erg cm{}^{-2}) & (10^{-9} erg cm{}^{-2}) & & expansion? \\\\ \\hline
+
+1 & 93044-02-04-00 & 54325.89373 & 2007-08-13 & 106 & 6.7(1) & 1.37(1) & 1.012(5) & yes \\\\
+
+2 & 93044-02-05-00 & 54326.97236 & 2007-08-14 & 89 & 5.6(1) & 1.05(5) & 1.225(5) & no \\\\
+
+3 & 93044-02-07-00 & 54332.87613 & 2007-08-20 & 75 & 8.8(1) & 0.81(1) & 1.12(6) & yes \\\\
+
+4 & 93093-01-01-00 & 54369.80255 & 2007-09-26 & 91 & 5.8(1) & 0.96(1) & 1.21(3) & no \\\\
+
+5 & 93093-01-01-00 & 54370.50522 & 2007-09-27 & 70 & 5.5(1) & 0.92(1) & 1.21(3) & no \\\\
+
+6 & 93093-01-01-01 & 54370.33383 & 2007-09-27 & 66 & 5.8(1) & 0.93(9) & 1.16(8) & no \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1Summary of burst properties. All quantities except for burst duration are taken from the MINBAR catalog. Estimates of burst duration come from Bilous et al. (in prep).
+
+Figure 1.— Burst #3 from Table 1. The main panel shows count rate of Scientific Event data, with time counted from the burst start. Small data gaps due to telemetry limitations are present at higher count rates. The inset shows the Leahy-normalized power spectrum from the 4-s time interval marked with dashed lines on the main panel. In this time interval the oscillation signal was the strongest, with the power of over 70 at 531.75 Hz. bility of obtaining such power is 3\\times 10^{-16}. By a conservative estimate, counting all time bins and time windows as independent trials, the number of trials for all six bursts in total include 994\\times 4 time windows with 1000-8000 frequency bins per window, summing up to N_{\\rm tr}=994\\times(1000+2000+4000+8000)\\approx 1.5\\times 10^{7}. Even with this conservative estimate the chance probability of obtaining such a strong signal (4.5\\times 10^{-9}) is negligible. The estimated value of the chance probability corresponds to 5.75\\sigma of the normal distribution.
+
+Up to now, there have been known 18 sources with burst oscillations. Nine more sources have tentative detections (Watts, 2012). Normally, detection of coherent oscillations at similar frequencies in multiple bursts or in multiple independent time bins serves as a firm corroboration of burst oscillations. The oscillations from SAX J1810.8-2609 were detected in one burst only, motivating more searches for burst oscillations in the future, perhaps during the current outburst.
+
+For burst #3, oscillations with P_{\\rm m}>24 (corresponding to p<6\\times 10^{-6} for \\chi^{2} noise distribution) were detected in two independent consecutive 4-s time bins. The probability of such a detection being due to chance is p^{2}\\times 994\\times 8000\\approx 3\\times 10^{-4}, where we make the most conservative estimate for the number of trials, N_{\\rm tr}=994\\times 2000\\times\\Delta T. Overall, the P_{\\rm m}=71.5, 5.75\\sigma single-bin single burst oscillation detection for SAX J1810.8-2609 is more significant than detections from other sources deemed "tentative" in Watts (2012) (up to 4.9\\sigma). It is also more significant than at least some of the discovery detections of subsequently confirmed burst oscillations (e.g. SAX J1750.8-2900, 5.0\\sigma, Kaaret et al., 2002).
+
+In order to explore the possible frequency drift, we computed a dynamic power spectrum using \\dot{Z}^{2} statistics (Buccheri et al., 1983). Unlike Fourier transforms which use binned data, Z^{2} statistics use the time of arrival of each individual photon and can be computed at arbitrarily close frequencies (although the frequency resolution is still determined by the choice of \\Delta T). We used 4-s time bins overlapping by 3.875 s and frequency bins starting from 531 Hz and increasing in 0.125 Hz steps. The dynamic power spectrum is shown on Fig. 2. The oscillation signal is present at 6-12 s counting from the burst start and the frequency drifts from 531.4 to about 531.9 Hz. The largest value of the Z^{2} statistic was 81.
+
+The Leahy-normalized power spectra were used to compute the fractional amplitude of oscillations (Watts et al., 2005):
+
+A=\\left(\\frac{P_{\\rm s}}{N_{\\rm m}}\\right)^{1/2}\\frac{N_{\\rm m}}{N_{\\rm m}-N_ {\\rm bkg}}. 
+
+Here P_{\\rm s} is the Leahy-normalized power of signal in the absence of noise, N_{\\rm m} is the number of photons in the given time bin and N_{\\rm bkg} is the estimated number of background photons in the same time bin. We used the median value of P_{\\rm s}=P_{\\rm m}+1 from the distribution of P_{\\rm s} given P_{\\rm m} derived by Groth (1975), but with Leahy normalization (see discussion in Watts, 2012). The uncertainty on P_{\\rm s} was taken from [0.159, 0.841] percentiles of the same distribution. The uncertainty on the number of photons in a time bin, N_{\\rm m}, was taken to be Poissonian and the uncertainty in the background level was taken to be the standard deviation of count rates in the 4-s overlapping time bins within 120-s window prior to the burst onset. Fractional amplitude errors were calculated as linear error propagation of the independent parameters (Ootes et al., 2017). For the strongest signal, the fractional rms amplitude was 4.7\\pm 0.6%. We did not detect any signal at the first harmonic frequency: between 1063 and 1064 Hz the maximum P_{\\rm m} was 2.6.
+
+No signal was found in any of the other five bursts, although their peak count rates are comparable (Table 1). Bolometric fluences and the levels of persistent flux at burst times are also similar between all six bursts, although burst #3 has the largest peak count rate and the smallest bolometric fluence. Interestingly though, burst #3 is one of the two bursts out of six with photospheric radius expansion in the MINBAR catalog.
+
+## 3. Discussion
+
+The oscillations from SAX J1810.8-2609 have properties typical for the burst oscillations from other sources: frequency around 500 Hz, duration of few seconds, the small upward frequency drift towards an asymptotic frequency and moderate fractional amplitudes. They have been observed in the burst with strongest photospheric radius expansion (out of two such bursts in the sample).
+
+Another burst with PRE, #1 from Table 1 has been used to constrain mass and radius of this neutron star using the direct cooling tail method, which uses atmospheric models to convert the spectral evolution during burst tail to the stellar angular size (Suleimanov et al., 2017). As shown by Baubock et al. (2015), rapid rotation can have a significant effect on the radius inferred using this method: failure to include rotational effects leads to the radius or mass being under-estimated. Neither Nattila et al. (2016) nor Suleimanov et al. (2017) included rotation in their models, since it complicates the
+
+Figure 2.— Z^{2} power spectrum of burst #3. The Z^{2} values were computed in 4-s intervals overlapping by 3.875 seconds, at frequencies oversampled by a factor of 2. The power is plotted at the midpoint of each interval. Contour levels mark Z^{2} from 20 to 80 with the step of 10. The peak power was 81. computations by introducing two more free parameters (spin period and inclination). Establishing the spin frequency of SAX J1810.8-2609 allows us to make corrections to the model and obtain better constraints on mass and radius of this NS. A spin rate of 532 Hz could result in a radius up to \\sim 5\\% larger (Baubock et al., 2015).
+
+Knowing spin of NS is important for modeling the spectrum of persistent outburst emission. Burke et al. (2018) analyzed a sample of sources where the spin is known and found that Comptonization strength is larger for more rapidly spinning stars. The observations are thus in agreement with the theoretical scenario, in which for more rapidly spinning neutron stars less energy is liberated during the deceleration of accreted material in a boundary layer, resulting in a lower seed photon luminosity and less Compton cooling in the corona. SAX J1810.8-2609 has a relatively large spin frequency which might naturally explain the very hard nature of its spectrum (Natalucci et al., 2000).
+
+Finally, the high spin frequency of SAX J1810.8-2609 may corroborate or eliminate some mechanisms suggested to explain its very low quiescent luminosity. According to Allen et al. (2018), some of the possible explanations for the unusually low temperature of this NS include some enhanced cooling processes (e.g. direct Urca), a hybrid crust, or overestimation of the time-averaged outburst accretion rate. If the system is young or had extremely low accretion rates, it could not accrete enough material to replace the NS crust during its lifetime, forming so-called hybrid crust. Deep crustal heating is suppressed in a hybrid crust (Wijnands et al., 2013). The high spin frequency of SAX J1810.8-2609, if due to accretion-induced spin-up, may be at odds with the system being either young or having low accretion rate.
+
+Enhanced cooling via direct Urca process requires more massive NS (1.6-1.8M_{\\odot}). Currently this mass is outside the 68% probability region of Suleimanov et al. (2017), however it needs to be revisited with spin corrections included. As was shown by Baubock et al. (2015), for a known radius, neglecting rotation underestimates the mass.
+
+## Acknowledgements
+
+AVB and ALW acknowledge support from ERC Starting Grant No. 639217 CSINEUTRONSTAR (PI Watts). The MINBAR project acknowledges the support of the Australian Academy of Sciences Scientific Visits to Europe program, and the Australian Research Councils Discovery Projects (project DP0880369) and Future Fellowship (project FT0991598) schemes. The research leading to these results has received funding from the European Union's Horizon 2020 Programme under AHEAD project (grant agreement No. 654215).

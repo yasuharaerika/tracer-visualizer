@@ -1,0 +1,183 @@
+###### Abstract
+
+There are two outstanding issues regarding the neutron-star merger event GW170817: the nature of the compact remnant and the interstellar shock. The mass of the remnant of GW170817, \\sim 2.7 M{}_{\\odot}, implies the remnant could be either a massive, rotating, neutron star, or a black hole. We report _Chandra_ Director's Discretionary Time observations made in 2017 December and 2018 January, and we reanalyze earlier observations from 2017 August and 2017 September, in order to address these unresolved issues. We estimate the X-ray flux from a neutron star remnant and compare that to the measured X-ray flux. If we assume that the spin-down luminosity of any putative neutron star is converted to pulsar wind nebula X-ray emission in the 0.5-8 keV band with an efficiency of 10^{-3}, for a dipole magnetic field with 3\\times 10^{11} G < B <10^{14} G, a rising X-ray signal would result and would be brighter than that observed by day 107; we therefore conclude that the remnant of GW170817 is most likely a black hole. Independent of any assumptions of X-ray efficiency, however, if the remnant is a rapidly-rotating, magnetized, neutron star, the total energy in the external shock should rise by a factor \\sim10^{2} (to \\sim10^{52} erg) after a few years; therefore, _Chandra_ observations over the next year or two that do not show substantial brightening will rule out such a remnant. The same observations can distinguish between two different models for the relativistic outflow, either an angular or radially varying structure.
+
+X-rays: individual (GW170817) -- gamma-ray burst: individual (GRB170817A) -- stars: black holes -- stars: neutron -- pulsars: general -- shock waves +
+
+Footnote †: journal: ApJ Letters
+
+0000-0002-2861-6077]David Pooley
+
+## 1 Introduction
+
+The discovery of gravitational waves from a binary neutron star merger by LIGO (Abbott et al., 2017), the associated electromagnetic signal that arrived with a delay of 1.74s (Abbott et al., 2017), and the precise localization (Coulter et al., 2017) have opened a new and exciting frontier that should provide answers to long-standing questions regarding the synthesis of r-process elements (e.g. Tanvir et al., 2017; Kasen et al., 2017) and the generation of relativistic jets and \\gamma-ray photons (Kasliwal et al., 2017) in these events and possibly other high energy sources. X-ray observations with the _Chandra X-ray Observatory_ initially did not detect the event at 2-3 days post merger, but subsequent observations showed a brightening X-ray source 9 days after the merger (Haggard et al., 2017; Margutti et al., 2017; Troja et al., 2017).
+
+Of considerable interest is the nature of the compact remnant left behind by this event. Some theoretical works have suggested that the compact remnant is unlikely to be a neutron star that lived longer than a few months (Villar et al., 2017; Margalit & Metzger, 2017). Others do allow a neutron star remnant with a relatively modest magnetic field to be consistent with early X-ray measurements (Yu & Dai, 2017, but see SS3.2 and SS4). Observations published to date are inconclusive. Here, we address anew the final product of the merger, and if and how observations could rule out or confirm either a neutron star or black hole compact remnant. We also discuss the unresolved issue of the nature of the propagating external shock driven by the merger. We requested Director's Discretionary Time _Chandra_ observations in an attempt to address these issues.
+
+The publicly available _Chandra_ observations are described in SS2. In section SS3 we discuss the interpretation of the X-ray data. The main conclusions are summarized in SS4.
+
+We list in Table 1 the starting dates of all publicly available observations, their ObsIDs, and their exposure times in ks. All observations were taken with the telescope aimpoint on the Advanced CCD Imaging Spectrometer (ACIS) S3 chip. Data reduction was performed with the chandra_repro script, part of the Chandra Interactive Analysis of Observations (CIAO) software. We used CIAO version 4.9 and calibration database (CALDB) version 4.7.6. Images of the field of GW170817 are shown in Figure 1.
+
+In each observation, we extracted spectra from a 1\\farcs0 radius region centered on GW 170817 and a 1\\arcmin source-free background region to the northwest. The net counts and count rate are given in Table 1.
+
+We performed a simultaneous fit of all nine unbinned source spectra in the 0.5-8 keV band with Sherpa using the modified Cash (1979) statistic cstat and the simplex optimization method. We fit the data with a power-law model with two absorption components. We use the Tuebingen-Boulder ISM absorption model (Wilms et al., 2000) and fix one absorbing column to the Galactic value of n_{\\rm H}=7.20\\times 10^{20}cm{}^{-2} calculated from the Effelsberg-Bonn HI Survey (Winkel et al., 2016) using the online tool at the Argelander-Institut fur Astronomie1. We let the column density of the other absorption component vary to allow for absorption in the host galaxy and any absorption local to the event.
+
+Footnote 1: [https://www.astro.uni-bonn.de/hisurvey/AllSky_profiles/](https://www.astro.uni-bonn.de/hisurvey/AllSky_profiles/)
+
+In our fits, we require the same absorbing column for all spectra but allow the nine power-law indices and power-law normalizations to vary independently. In addition, we perform another fit with both of the December observations required to have the same power-law index and normalization and all of the January observations required to have the same power-law index and normalization. This resulted in a slightly different best-fit value for the additional column density. The results are given in Table 2, separated by a horizontal rule for the two sets of simultaneous fits. All uncertainties are 1\\sigma-equivalent (68%) confidence intervals. The reported fluxes are integrated from the unabsorbed models. Uncertainties on those fluxes are calculated as the 68%-confidence bounds of the integrated, unabsorbed fluxes from Monte Carlo realizations (1000 samples) of the best-fit mod
+
+\\begin{table}
+
+\\begin{tabular}{c c c c c c} \\hline \\hline \\multicolumn{1}{c}{ Start Date} & ObsID & Days After & Exp. & Net Counts & Count Rate \\\\  & & Merger{}^{\\rm a} & (ks) & 0.5–8 keV & cts ks{}^{-1} \\\\ \\hline
+
+2017 Aug 26.44 & 19294 & 9.20 & 49.4 & 13.4^{+4.1}_{-3.4} & 0.27^{+0.08}_{-0.07} \\\\ \\hline
+
+2017 Sep 01.64 & 20728 & 15.38 & 46.7 & 18.4^{+4.7}_{-4.0} & 0.39^{+0.10}_{-0.09} \\\\ \\hline
+
+2017 Dec 03.07 & 20860 & 107.97 & 74.1 & 105.1^{+0.2}_{-10.2} & 1.42^{+0.14}_{-0.13} \\\\
+
+2017 Dec 06.45 & 20861 & 111.07 & 24.7 & 34.7^{+6.2}_{-5.6} & 1.40^{+0.25}_{-0.23} \\\\
+
+2017 Dec 03/06 joint & 109.38 & 98.8 & 139.8^{+11.8}_{-11.8} & 1.41^{+0.09}_{-0.17} \\\\ \\hline
+
+2018 Jan 17.89 & 20936 & 153.55 & 31.7 & 56.6^{+7.0}_{-7.2} & 1.78^{+0.25}_{-0.23} \\\\
+
+2018 Jan 21.56 & 20938 & 157.13 & 15.9 & 27.8^{+5.6}_{-5.0} & 1.75^{+0.35}_{-0.15} \\\\
+
+2018 Jan 23.32 & 20937 & 158.92 & 20.8 & 28.7^{+5.7}_{-5.0} & 1.38^{+0.27}_{-0.24} \\\\
+
+2018 Jan 24.36 & 20939 & 159.94 & 22.2 & 23.7^{+5.2}_{-4.6} & 1.06^{+0.23}_{-0.21} \\\\
+
+2018 Jan 28.18 & 20945 & 163.73 & 14.2 & 15.8^{+4.3}_{-3.7} & 1.11^{+0.31}_{-0.26} \\\\
+
+2018 Jan 17–28 joint & 158.59 & 104.9 & 152.6^{+12.4}_{-12.4} & 1.45^{+0.12}_{-0.12} \\\\ \\hline \\end{tabular} Note. – Horizontal rules separate epochs. The last lines in the Dec and Jan epochs give the relevant information when considering all of the observations from the epoch as a single data point.
+
+\\end{table}
+
+Table 1: _Chandra_ Observations of GW 170817 els, taking into account the uncertainties in the best-fit parameters (using the sample_flux command in Sherpa).
+
+We also perform the fits with no additional absorption component. Compared to the fits allowing for additional absorption, these fits have a slightly worse fit statistic, slightly lower best-fit power-law indices, and roughly the same unabsorbed fluxes (Table 2).
+
+The large uncertainties on the power-law indices make it difficult to determine whether the X-ray spectrum has changed slope. To address this, we perform pairwise Kolmogorov-Smirnov tests on the detected photon energies and find marginal evidence for spectral evolution. The K-S tests show probabilities of the detected photon energies being drawn from the same parent distribution in the \\sim10%-100% range, which indicates consistency of the observed spectra. The smallest probability for being drawn from the same parent distribution is for the first and fourth observations (ObsIDs 19294 and 20861), which have a 6% probability of being drawn from the same parent distribution; this is not convincingly small enough to claim a spectral change.
+
+Although there is a considerable amount of stochastic variation in the calculated fluxes (and count-rates), there does seem to be an indication that the temporal behavior at days 153-163 is qualitatively different than at earlier times. If we take the two December observations together as a single flux point and the five January observations together as a single flux point, we fit the four-point X-ray light curve with a single power-law model in time, F_{\\rm x}\\sim t^{a_{1}}, and find that a_{1}=0.5 with a \\chi^{2} of 7.8 for 2 degrees of freedom. If we use all flux measurements separately in the fit, we find a_{1}=0.5 with a \\chi^{2} of 15.6 for 7 degrees of freedom. Neither of these fits is acceptable (p-values of 0.02 and 0.03, respectively), but we plot a power law with index 0.5 as the green line in Figure 2 for reference.
+
+The likely reason for the poorness of these fits is the possible fading trend seen in the January observations, as suggested by D'Avanzo et al. (2018). In the most general case, we nonparametrically test whether the January observations are consistent with a constant count rate using a K-S test. The photon arrival times (during "good-time intervals") were compared to a uniform distribution. The five individual observations were concatenated into one, with the next observation beginning where the previous left off. The K-S probability that the photon arrival times are drawn from a uniform distribution is only 2.1%. Figure 3 shows the cumulative distributions with faint gray lines marking the observation divisions. The maximum difference occurs near the division between the third and fourth January observations.
+
+Given the poor fit with a single power law and the suggestive evidence for fading from the K-S test, we next fit a broken power-law model, F_{\\rm x}\\sim t^{a_{1}} before t_{\\rm break} and F_{\\rm x}\\sim t^{a_{2}} after t_{\\rm break}. Because there is little data after a possible break to constrain the decay slope, we fix a_{2} to one of two values: -0.9 if the shock front is moving at relativistic speeds and -1.2 if the shock front is sub-relativistic. For a_{2}=-0.9, we find a_{1}=0.7^{+0.1}_{-0.6} with t_{\\rm break}=108^{+13}_{-43} days. For a_{2}=-1.2, we find a_{1}=0.7^{+0.1}_{-0.1} with t_{\\rm break}=116^{+10}_{-29} days. The two fits have \\chi^{2} values of 5.6 and 5.4, respectively, for 6 degrees of freedom. We plot these best fits in Figure 2.
+
+## 3 Interpretation of the Chandra data
+
+In SS3.1 we conclude, as have others (Mooley et al., 2018; Haggard et al., 2017; Margutti et al., 2017; Troja et al., 2017; Ruan et al., 2018), that the X-ray data from about 9 to 111 days after the GW detection are consistent with an expanding shocked plasma emitting synchrotron radiation due to its
+
+[MISSING_PAGE_FAIL:4] where \\epsilon_{e} is the fraction of shock energy given to electrons. In deriving the above expression we have taken the electron energy distribution to be dn(e)/de\\propto e^{-p} with p=2.2 as suggested by the X-ray and radio spectra that give f_{\\nu}\\propto\\nu^{-0.6}.
+
+For constant shock energy, equation (2) suggests that the X-ray flux should decline with time. Instead, the X-ray and radio light curves are rising with time from day 9 until at least day 111. For f_{\\nu}\\propto t^{\\alpha}, we find from equation (2) that energy in the shocked matter is increasing with time as
+
+E\\propto t^{(\\alpha+0.9)/1.3}. 
+
+The flux at 1 keV at 10^{2} days (1.4 nJy) is larger than the flux at 9 days by a factor of \\sim5, implying that \\alpha\\sim 0.7. We thus conclude from equation (3) that the energy in the shocked plasma increased by a factor \\sim20 between these two epochs. There are two ways that the energy in the external shock could increase with time. One is that the compact remnant left over in the merger continues to pump energy into the outward moving shock front. The other is that energy is supplied to the part of the external shock wave that we see by slower moving ejecta or a structured jet2.
+
+Footnote 2: A jet with energy per unit solid angle, dE/d\\Omega, that is independent of angle \\theta<\\theta_{j}, and drops to zero for \\theta>\\theta_{j} is referred to as a _top-hat jet_. A jet where dE/d\\Omega drops to zero as some smooth function of \\theta is called a structured jet.
+
+The first possibility, continuous production of energy from the compact object, is unlikely to work. This is because there is \\sim3\\times 10^{-2}\\rm M_{\\odot} of debris between the central compact remnant and the external shock front (e.g., Kasliwal et al., 2017). If the central compact object produces \\sim 10^{52} erg of energy, and a good fraction of this energy is used to accelerate the debris, then the speed of the debris would be \\sim 0.7c. This speed is smaller than the outward velocity of the relativistic shock-front. Any such energy will not be added to the shock until the shock speed has finally fallen below \\sim 0.7c. This is expected to take a year or more (SS3.2). Observations carried out then would be able to constrain the total energy in the outflow, as discussed in SS4.
+
+We are thus left with the second possibility: at 107 days, there is much more energy in the shocked medium within our cone of visibility, i.e., \\delta\\theta\\sim\\gamma^{-1}, than there was at 9 days, where \\gamma is the Lorentz factor of the shocked fluid within \\delta\\theta. There are two possible ways this could be true: slower moving ejecta caught up with the external shock or we see more of the shock as it decelerates and beaming effects decrease.
+
+We first consider the scenario where the unexpected shock energy is supplied by slower-moving, perhaps quasi-spherical, ejecta that catches up with the decelerating shock front. Let us take the distribution of energy with ejecta velocity (\\beta\\gamma) such that
+
+dE/d(\\beta\\gamma)\\propto[\\beta\\gamma]^{-\\eta_{E}},\\quad{\\rm or}\\quad E(>\\beta \\gamma)\\propto[\\beta\\gamma]^{1-\\eta_{E}},  where the exponent \\eta_{E} is determined from the observed light curves. Combining the energy equation (e.g., Granot & Sari, 2002)
+
+E\\sim(4\\pi/3)r^{3}nm_{p}c^{2}(\\beta\\gamma)^{2},  with the relation between the shock front radius r and observer time t
+
+t\\sim\\int\\frac{dr}{\\beta c}(1-\\beta)  yields
+
+\\beta\\gamma\\,\\lower 2.0pt\\hbox{$\\sim$}\\hbox to 0.0pt{\\raise 2.0pt\\hbox{$\\sim$ }}\\,(E/n)^{1/8}\\,t^{-3/8}. 
+
+Using equation (4) we obtain
+
+E(>\\beta\\gamma)\\,\\lower 2.0pt\\hbox{$\\sim$}\\hbox to 0.0pt{\\raise 2.0pt\\hbox{$ \\sim$}}\\,t^{-\\frac{3(1-\\eta_{E})}{1+\\eta_{E}}},  which is consistent with equation (3) provided that
+
+\\frac{3(\\eta_{E}-1)}{7+\\eta_{E}}=\\frac{\\alpha+0.9}{1.3}\\quad{\\rm or}\\quad\\eta_ {E}=\\frac{10.2+7\\alpha}{3-\\alpha}. 
+
+The X-ray data give \\alpha\\sim 0.7, and therefore the rising light curve can be explained if dE/d(\\beta\\gamma)\\,\\lower 2.0pt\\hbox{$\\sim$}\\hbox to 0.0pt{\\raise 2.0pt\\hbox{$ \\sim$}}\\,[\\beta\\gamma]^{-6.6}, which is roughly consistent with the conclusion of Mooley et al. (2018).
+
+A rising light curve can also occur when E is a rapidly decreasing function of angle \\theta measured from the jet axis and the observer is located off axis, as was pointed out by Lazzati et al. (2017) for GW170817. In the case of either a top-hat structure or a more gently-shaped angular structure, an off-axis observer will see a rising light curve as the external shock decelerates and the Lorentz beaming decreases. The rate of increase for a top hat jet scales as t^{3}, which is inconsistent with the data (Mooley et al., 2018; Ruan et al., 2018). For a structured jet, the rate of rise depends on how the energy declines with angle. In this case, an off-axis observer finds the energy in the shocked medium to increase with time because photons are detected from a larger fraction of the external shock. It can be shown that the rising X-ray flux between \\sim10 and 10{}^{2} days (f_{x}\\propto t^{0.7}) can arise from a structured jet when dE/d\\theta\\,\\lower 2.0pt\\hbox{$\\sim$}\\hbox to 0.0pt{\\raise 2.0pt\\hbox{$ \\sim$}}\\,(1+\\theta/\\theta_{c})^{-4}, (\\theta_{c} is the angular size of the jet core) with \\theta_{c}\\sim 3^{\\circ}, and the observer is located off axis at an angle \\sim 30^{\\circ} with respect to the jet axis.
+
+The data for GW170817 are consistent with both of these possibilities: slower moving ejecta that caught up with the external shock or beaming effects from a structured jet. This degeneracy may be removed by careful modeling of afterglow light curve data about a year after the merger. If the rise is due to a structured jet with angular size of the core \\sim 3^{\\circ}, then the X-flux should stop increasing at t\\sim 10^{2} days; there is evidence for this flattening in the _Chandra_ data at around day 160 (Figure 2).
+
+We note that the total energy in the shocked ISM is highly uncertain because of the unknown parameters n, \\epsilon_{B} and \\epsilon_{e}. We return to the discussion of the nature of the external shock in SS4.
+
+### Merged remnant a black hole or a neutron star?
+
+The merger of two neutron stars with mass 1.48\\pm 0.12M{}_{\\odot} and 1.26\\pm 0.1M{}_{\\odot} -- where the merged object has a mass of 2.74^{+0.04}_{-0.01}M{}_{\\odot}(Abbott et al., 2017) -- could result in either a massive neutron star or a black hole. There might also be a debris disk that gets accreted onto the central object over a period of time. The observed X-ray luminosity at around 10{}^{2} days is much larger than the expected value from any debris disk, so we do not consider such a source further here.
+
+The large orbital angular momentum of the inspiralling neutron stars make the rapid rotation of the compact remnant inevitable. If the surviving compact remnant is a neutron star, then the expectation is that dynamo processes will work rapidly in the differential rotation of the remnant to produce substantial magnetic fields, perhaps of magnetar strength (\\sim 10^{14} G) (Duncan & Thompson, 1992; Akiyama et al., 2003; Metzger & Piro, 2014). Having been born in the highly energetic, shearing environment of this binary system, a neutron star with less than 10^{13} G is highly unlikely. We assume substantial initial rotation and magnetic field in the subsequent discussion unless the context explicitly calls for other values.
+
+The bolometric spin-down luminosity of a neutron star due to dipole radiation is (e.g., Shapiro & Teukolsky, 1983)
+
+L_{d}(t)\\approx(6\\times 10^{45}{\\rm erg\\,s^{-1}})B_{13}^{2}\\,P_{-3}^{-4}\\,\\left( 1+t/t_{{}_{\\rm SD}}\\right)^{-2}\\,,  where
+
+t_{{}_{\\rm SD}}\\approx(5\\times 10^{6}\\,{\\rm s})\\,B_{13}^{-2}\\,P_{-3}^{2}\\,,  is the spin-down time, B_{13} is the dipole magnetic field in units of 10^{13} G, and P_{-3} is the rotation period in units of milliseconds.
+
+The rotational energy of a millisecond period massive neutron star is \\sim3\\times 10^{52} erg. From equation (11), this energy is deposited in the neutron star merger debris on a timescale less than 10^{2} days provided that the dipole magnetic field strength is larger than 7\\times 10^{12} G. A fraction of the spin-down energy goes into heating the debris, and a fraction is used to accelerate the ejecta of mass, \\sim3\\times 10^{-2} M{}_{\\odot}, to speed \\beta\\Gamma\\sim 1.1. From equation 7, the speed of the external shock decreases with time as
+
+\\beta\\gamma\\sim 1.3\\,t_{7}^{-3/8}(E_{50}/n_{-2})^{1/8},  so the debris moving with \\beta\\gamma\\sim 1.1 will catch up with the decelerating ISM shock front in about 2 years and transfer a substantial fraction of its energy to the external shock.
+
+Consideration must also be given to the fraction of the unobscured spin-down power that could appear directly in the 0.5-8 keV X-ray band. Metzger & Piro (2014), and Siegel & Ciolfi (2016) provided estimates for optical, UV and X-ray luminosities from the dipole wind of a neutron star remnant and its interaction with the material ejected in the merger. These authors considered a wide variety of physical processes such as the power law spectrum for spin-down radiation, adiabatic losses, pair production, and absorption and scattering of photons as they travel through the system, which is considered to be spherically symmetric. According to Metzger & Piro (2014), the X-ray luminosity should peak between 1 and 10 days after the merger, depending on the mass of the debris and the magnetic field strength of the remnant. They argued that the ejecta would be fully ionized and therefore of low opacity, giving a measured X-ray luminosity roughly between 10{}^{-1} and 10{}^{-3} of the spin-down power (depending on various parameters), declining as t^{-2} for t\\lower 2.15pt\\hbox{$\\,\\buildrel>\\over{\\sim}\\,$}10 days. The resulting X-ray flux would then considerably exceed that observed for GW170817 in this early epoch.
+
+The IR, optical and UV light curves and spectra for this event, however, showed a photospheric temperature of \\sim 2\\times 10^{3} K and many absorption lines in the UV about 10 days after the merger (e.g. Cowperthwaite et al., 2017). This suggests that the ionization state of the ejecta was not very high. This might be because the fraction of spin-down power deposited in the ejecta was smaller than estimated by Metzger & Piro (2014). Here we take a more conservative approach and adopt the fraction of spin-down power converted to X-ray luminosity from the extensive data available for pulsar wind nebulae (PWN). Our estimates of the X-ray flux are smaller than earlier works, and hence the conclusions we draw concerning the possible existence of a neutron star remnant are more robust.
+
+We use the data for pulsars in our Galaxy to estimate the X-ray flux that would be produced assuming that the remnant of GW170817 is a long-lived massive neutron star. We show below that the _Chandra_ flux at 107 days is smaller than expected for a pulsar remnant even for our conservative estimates.
+
+The bolometric EM luminosity of the _pulsed_ radiation from the Crab is about 0.1% of the spin-down luminosity. Of this flux, only about 10% comes out as 1-10 keV photons (Durant et al., 2011; Buhler & Blandford, 2014). Thus, the fraction of the spin-down rate of energy loss released as pulsed X-ray photons is \\sim 10^{-4}(Durant et al., 2011). The fraction of spin-down energy going into pulsed X-ray photons does not seem to be dependent on pulsar age or surface magnetic field strength (see Table 8 of Durant et al., 2011). Geminga, at 3\\times 10^{5} years, has an X-ray efficiency within a factor 3 of the Crab, which is only 10{}^{3} yrs old. Therefore, a crude estimate is that \\sim 10^{-4} of the spin-down luminosity of the merged neutron star in GW170817 should be expected as 1-10 keV _pulsed_ X-rays3. The total X-ray luminosity emitted directly by the NS might be a factor of 10 larger (Verbunt et al., 1996).
+
+Footnote 3: Note that, as pulsed X-ray radiation might be beamed in a cone of few 10s of degrees opening angle, an observer would not directly measure this pulsed component unless their line of sight intersected this small cone.
+
+A larger fraction of the pulsar spin-down power is converted to EM radiation in the pulsar-wind nebula (PWN) which is produced when the pulsar wind interacts with the surrounding medium. A fraction \\sim10{}^{-3} of the spin-down power is converted to 0.5-8 keV X-rays in the PWN (Kargaltsev & Pavlov, 2008). The fraction of spin-down energy released in the X-ray band in the PWN is larger for younger pulsars and pulsars with higher rotation speed, although the scatter is large in these correlations (Kargaltsev & Pavlov, 2008).
+
+A fairly conservative estimate for the 0.5-8 keV X-ray luminosity of a neutron star star remnant of GW170817, assuming a millisecond rotation period, is thus \\sim10{}^{-3} of the spin-down power. Using equation (10), we obtain the X-ray flux from the PWN associated with any long-lived neutron star remnant of GW170817 to be
+
+f_{x}\\sim\\begin{cases}3\\times 10^{-11}\\,{\\rm erg}\\,{\\rm cm}^{-2}\\,{\\rm s}^{-1} \\,B_{13}^{2}\\,P_{-3}^{-4}&B_{13}<2.2t_{6}^{-1/2}P_{-3}\\\\ \\\\ 7\\times 10^{-10}\\,{\\rm erg}\\,{\\rm cm}^{-2}\\,{\\rm s}^{-1}\\,B_{13}^{-2}\\,t_{6}^{-2 }&B_{13}>2.2t_{6}^{-1/2}P_{-3}\\end{cases}  where we took the distance to the object to be 40 Mpc (Abbott et al., 2017). This is to be compared to the observed, unabsorbed flux of f_{x}\\sim 8\\times 10^{-15}\\,{\\rm erg}\\,{\\rm cm}^{-2}\\,{\\rm s}^{-1} at 10 days and \\sim 3\\times 10^{-14}\\,{\\rm erg}\\,{\\rm cm}^{-2}\\,{\\rm s}^{-1} at 107 days.
+
+In order to determine the constraints on the properties of a possible neutron star remnant, it is important to know when the ejecta are optically thick to X-rays. The ejecta in a binary neutron star merger event consist of nuclei of high atomic number that have large cross-sections for absorbing X-ray photons via the bound-free process. The X-ray opacity for binary neutron star merger ejecta can be found in, e.g., Hotokezaka et al. (2016). At 5 keV, the mass absorption coefficient due to elements with atomic number between 40 and 92 is estimated to be \\sim5\\times 10^{2} cm{}^{2} g{}^{-1}, and at higher photon energies it declines approximately as E^{-1.8}. The optical depth of the ejecta moving with speed v_{\\rm ej}, after time t is \\tau_{\\rm 5keV}\\sim 8\\,M_{\\rm ej,-2}t_{6}^{-2}v_{\\rm ej,10}^{-2}; where M_{\\rm ej,-2}=M_{\\odot}/10^{2} is the isotropic equivalent mass of matter ejected along our line of sight, and v_{\\rm ej,10}=v_{\\rm ej}/10^{10} cm s{}^{-1}. The X-ray photons are strongly absorbed for the earliest observations at \\sim 10 days, but not for t\\gtrsim 10^{2} days.
+
+At t=10 days, the unabsorbed X-ray flux from a putative neutron star would be larger than the observed flux by a factor \\gtrsim 10^{3} for B\\lesssim 10^{14} G, but opacity effects must be considered at this epoch. If M_{\\rm ej,-2}>1 as observations suggest (e.g., Kasliwal et al., 2017; Kasen et al., 2017), at t=10 days, \\tau_{\\rm 5keV}>10. Thus, the luminosity of X-ray photons produced in the PWN at 10 days that can escape is smaller than the unabsorbed luminosity by a factor \\sim10^{5}. According to equation 13, the neutron star flux is maximized for B_{13}\\sim 2.2, and for a millisecond period, would be f_{x}\\sim 1.5\\times 10^{-10}{\\rm erg}\\,{\\rm cm}^{-2}\\,{\\rm s}^{-1}. This maximum flux then, for the given absorption, is still smaller than that observed. We therefore do not expect a neutron star to be observable at this early epoch.
+
+At t=107 days when the ejecta are expected to be optically thin, our conservative estimates for the X-ray flux from a PWN would be a factor of a few larger than the observed flux for the typical magnetar magnetic field strength \\sim 10^{14} G. From equation 13, assuming a millisecond period, the predicted flux is maximum for a field of B_{13}\\sim 0.7, giving f_{x}\\sim 1.5\\times 10^{-10}\\,{\\rm erg}\\,{\\rm cm}^{-2}\\,{\\rm s}^{-1}, a factor of \\sim 500 times brighter than observed. A neutron star would therefore be unobservable only for a field B\\lesssim 3\\times 10^{11} G or stronger than B\\sim 1.4\\times 10^{14} G.
+
+The fact that the temporal and spectral behaviors of the radio and X-ray flux are consistent with a single emission component at 107 days effectively rules out any additional component with flux comparable to or even somewhat smaller than the observed value. The observed X-ray flux at t=107 days thus rules out the possibility that the remnant of GW170817 is a long-lived neutron star with 3\\times 10^{11}\\lesssim B\\lesssim 10^{14} G. If the field exceeds 10^{14} G, as may be expected, the spin-down energy would be deposited and thermalized very early while the remnant is still optically thick. This energy must, however, eventually be deposited in the external ISM shock, as we discuss in the next section.
+
+## 4 Future Light Curve Diagnostics for Remnant and Jet
+
+Two important questions remain about GW170817: (1) what is the final remnant of the event, and (2) what is the nature of the relativistic jet?
+
+### Diagnostics for the Remnant of GW170817
+
+In SS3.2, we made the case that GW170817 left behind a black hole because a new-born neutron star would be much brighter in X-rays at \\sim 10^{2} days than was observed. Rather, the X-ray emission through day 163 is fully consistent with an origin from a jet interacting with the local ISM. No additional source of X-ray emission (i.e., spin-down emission from a neutron star) is required.
+
+Our estimate of the X-ray flux at \\sim 10^{2} days from a new-born neutron star was based on an observed relationship between pulsar spin-down luminosity and X-ray luminosity, which may not hold for this neutron star. Future X-ray observations can overcome this ambiguity. In SS3.2, we noted that any spin-down energy input would not yet have affected radiation from the external shock at \\sim 10^{2} days because it would not have had time to propagate to the decelerating shock front. If there is spin-down energy, however, it must eventually be deposited in the ISM shock, resulting in dramatic brightening.
+
+For B>3\\times 10^{12} G, the kinetic energy of rotation of the neutron star (\\sim 3\\times 10^{52} erg) is carried away by the magnetic dipole wind in one year or less. A fraction of this energy4 would go into accelerating the ejecta and then be deposited to the shock when the ejecta catch up to it. The predicted deposition is much larger than the total energy currently in the external shock (\\sim 10^{49}-10^{50} erg). When that deposition happens, the X-ray light curve would increase very roughly as t^{2} during or after 2019, corresponding to a total increase of 1-2 orders of magnitude in \\sim1-2 years. This scenario is represented by the associated rising curves in Figure 4. Because a neutron star with B<10^{12} G is very unlikely, if we do not see this dramatic brightening, we can conclude with certainty that the remnant is a black hole.
+
+### Diagnostics for the Nature of the Jet
+
+As described in SS3.1, there are two well-known models of the jet; one of these posits that the jet energy per unit solid angle and the Lorentz factor declines with angle from the jet axis, the "structured jet" model of Lazzati et al. (2017). The other model invokes a jet with radial structure such that the jet speed decreases with increasing distance inward from the front surface of the jet, but with jet properties that do not vary with angle (Kasliwal et al., 2017; Nakar & Piran, 2017).
+
+Both of the proposed models successfully explain the radio and X-ray data from day 9 to day 111 as synchrotron radiation from the ISM shock-heated by the relativistic outflow produced in the merger, with a rise in the light curve due to energy of the shocked ISM increasing between these times. The structured jet is predicted to reach maximum brightness within a few months of the day 107-111 observations; the radial jet will not peak until \\sim day 530 (around 2019 Feb), with a 1/e fading time of \\sim1 yr (SS3.1). Fading may already be present in the day 153-163 observations, but the data are not conclusive. Additional X-ray observations will distinguish between these models (Figure 4).
+
+We may also learn about the microphysics of the shocked material if we observe the epoch when the synchrotron cooling frequency passes through the X-ray band, thus breaking an important degeneracy in shock parameters. The observed flux scales as n^{1/2}B^{1.6}, and hence we cannot determine n and B separately from radio or X-ray flux alone. Measurement of the synchrotron cooling frequency can break this degeneracy between n and B. The cooling frequency currently lies above the X-ray band of _Chandra_ and _XMM-Newton_ and decreases with time as t^{-1/2}. The cooling frequency could thus shift into the X-ray band during 2019 and would be seen as steepening of the spectral slope, i.e., a depression in the higher energy channel flux.
+
+### Future Observations
+
+Future X-ray observations could both test for the possible presence of rising PWN emission and also constrain the jet break time and rate of decline. Because there is a reasonable chance that both of these could manifest in the next year, a long-term strategy is needed to fully understand the outcome of this merger. In Figure 4, we indicate with purple lines four intervals during which sensitive X-ray observations would both test for the presence of rising emission from a PWN as well as distinguish between jet models.
+
+## 5 Conclusions
+
+The _Chandra_ X-ray data for the neutron star merger event GW170817 obtained 107-111 days after the merger show that the rate of increase of the X-ray flux is essentially the same as the radio flux increase reported by Mooley et al. (2018). The extrapolation of the well-defined radio spectrum to the X-ray band is also consistent with the measured X-ray flux. These results suggest that radio and X-ray photons are produced in the same source, which is most likely the shocked interstellar medium (ISM). The rising X-ray flux between 9 and 111 days requires the observable energy in the shocked plasma to increase by a factor \\sim20 during this period. That might be due to more energy resident in slower moving ejecta where the energy scales with shock-front velocity \\beta\\gamma as (\\beta\\gamma)^{-6.6}, which is roughly consistent with radio data as reported by Mooley et al. (2018), or due to a structured jet with dE/d\\theta\\,\\widetilde{\\times}\\,(1+\\theta/\\theta_{c})^{-4} with \\theta_{c}\\sim 3^{o}(Lazzati et al., 2017).
+
+The X-ray data at 107-111 days suggest that the remnant is not a neutron star with magnetic field \\gtrsim 10^{12} G. This, in turn, suggests that the merged object is most likely a black hole. Additional checks of the possibility of a stable neutron star remnant could be provided by continued monitoring of the system in X-rays and radio. If the remnant is a stable neutron star with magnetic field \\gtrsim10^{12} G (so that the spin-down time is less than a few years), then in about a year the X-ray and radio fluxes from the external shock should increase by a large factor when the expanding PWN with energy \\sim10^{52} erg, and speed \\beta\\gamma\\sim 1.1, catches up with the decelerating external shock (equation 12).
+
+Possible fading after 107-111 days (as may be indicated by the observations on days 153-163) may be a result of a structured jet and is still consistent with our arguments for a black hole remnant.
+
+We thank Belinda Wilkes and _Chandra_ team for carrying out the _Chandra_ Director's Discretionary Time observations and E. L. Robinson, U. Nakar, and C. Froning for very useful discussions. JCW is supported in part by the Samuel T. and Fern Yanagisawa Regents Professorship. CXO CIAO (Fruscione et al., 2006), Sherpa (Freeman et al., 2001)

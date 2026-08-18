@@ -1,0 +1,368 @@
+# Engineering Plant Cytochrome P450s for Enhanced Synthesis of Natural Products: Past Achievements and Future Perspectives
+
+## abstract
+Cytochrome P450s (P450s) are the most versatile catalysts and are widely used by plants to synthesize a vast array of structurally diverse specialized metabolites that not only play essential ecological roles but also constitute a valuable resource for the development of new drugs. To accelerate the metabolic engineering of these high-value metabolites, it is imperative to identify and characterize pathway P450s, and to further improve their activities through protein engineering. In this review, we focus on P450 engineering and summarize the major strategies for enhancing the stability and activity of P450s and successful cases of P450 engineering. Studies in which the functions of P450s were altered to create de novo metabolic pathways or novel compounds are discussed as well. We also overview emerging tools, specifically DNA synthesis, machine learning, and de novo protein design, as well as the evolutionary patterns of P450s unveiled from a massive number of DNA sequences that could be integrated to accelerate the engineering of these enzymes. These approaches would greatly aid in the exploitation of plant-specialized metabolites or derivatives for various uses including medical applications.
+
+## Journal Pre-proof
+Yi Shang, Sanwen Huang
+PII: S2590-3462(19)30012-4   
+DOI: https://doi.org/10.1016/j.xplc.2019.100012   
+Reference: XPLC 100012
+To appear in: PLANT COMMUNICATIONS
+Please cite this article as: Shang, Y., Huang, S., Engineering Plant Cytochrome P450s for Enhanced Synthesis of Natural Products: Past Achievements and Future Perspectives, PLANT COMMUNICATIONS (2020), doi: https://doi.org/10.1016/j.xplc.2019.100012.
+This is a PDF file of an article that has undergone enhancements after acceptance, such as the addition of a cover page and metadata, and formatting for readability, but it is not yet the definitive version of record. This version will undergo additional copyediting, typesetting and review before it is published in its final form, but we are providing this version to give early visibility of the article. Please note that, during the production process, errors may be discovered which could affect the content, and all legal disclaimers that apply to the journal pertain.
+$\circledcirc$ 2019 The Author(s).
+Generally, plants employ signature enzymes (e.g., cyclases) to form the basic carbon backbones, followed by tailoring enzymes (e.g., P450s, acyltransferases, and glycosyltransferases) that adds specific functional groups to form various metabolites. Among these biocatalysts, the P450 superfamily is the most versatile, participating in irreversible and oftentimes rate-limiting reactions including regio- and stereoselective hydroxylation, as well as complex reactions including epoxidation, sulfoxidation, arylaryl coupling, nitration, and oxidative and reductive dehalogenations (Guengerich and Munro, 2013). Because of their pivotal roles in the biosynthesis of plant-specialized products, P450s are of great interest and selected as essential components for the metabolic engineering of plants (Urlacher and Girhard, 2019). As several reviews have addressed the progress made on genome mining and functional characterization of plant P450s, this review will focus on the topic of P450 engineering and its potential application in the metabolic engineering of plant-derived natural products.
+## The importance of modulating P450s in plant metabolite engineering
+Enzymes with high catalytic efficiency and selectivity are crucial to the reconstruction of metabolic pathways in plants or heterologous hosts. Unfortunately, studies have shown that plant-specialized metabolism is inherently slow when compared to that of  the central metabolism (Bar-Even et al., 2011). There has been speculation that this is due to central metabolism being more conserved across phylogenetic groups, and thus the related
+1 enzymes tend to be better optimized during evolution. On the other hand, secondary   
+2 metabolism aids in the adaptation to changing environments, which requires the   
+3 associated enzymes to be more flexible regarding substrate recognition and product   
+4 spectrum at the cost of lower catalytic rates (Nam et al., 2012). This is the case for plant   
+5 P450s, which usually exhibit low $\mathbf{k}_{\mathrm{cat}}<5\mathrm{~\textsubscript~{~s~}~}^{-1}$ and are well-known for their   
+6 substrate promiscuity (Bar-Even and Tawfik, 2013; Bernhardt and Urlacher, 2014). In   
+7 addition to low rates and poor specificities, plant P450s have two other characteristics   
+8 that hinder their widespread use in engineering applications. First of all, these enzymes   
+9 tend to be incompatible with non-native hosts and statistical data suggests that ${\sim}40\%$ of   
+10 plant P450s are poorly expressed in yeast (Renault et al., 2014). Secondly, the electron   
+11 flux from $\mathrm{\DeltaNAD(P)H}$ , the ultimate electron source in cells, to P450s is usually mediated   
+12 by an additional redox partner such as cytochrome P450 reductases (CPR). This   
+13 introduces several more optimization requirements, as the inefficient electron transfer   
+14 resulting from either the lack of sufficient NAD(P)H levels or the poor interactions   
+15 between P450s and CPRs would reduce the enzymatic activity (Lundemo and Woodley,   
+16 2015).   
+17 An emerging area of P450 engineering is to create abiotic reactions for the de novo   
+18 synthesis of chemical products and their derivatives. In the plant genome, approximately   
+19 $1\%$ of the coding genes are P450s (Nelson and Werck-Reichhart, 2011). Although recent   
+20 advances have been made in genome mining using multi-omics data to accelerate the   
+21 identification of enzymatic pathways, this process is still tedious and challenging. For   
+22 example, the biosynthetic pathway of taxol, an anti-cancer agent originally isolated from   
+23 the bark of pacific yew trees, has not been not fully elucidated. The missing steps from   
+24 taxa-4(5),11(12)-diene- $\cdot10\upbeta$ -ol-5α-acetate to 10-deacetylbaccan III are thought to   
+25 be catalyzed by P450s (Kusari et al., 2014). Based on the fact that intermediates produced   
+26 in the taxol pathway should be structurally similar, this information could be utilized to   
+27 search for the missing P450s from genomic data of yew trees using the method described   
+28 by Zhao et al (Zhao et al., 2013). In addition, it is also possible to repurpose two known   
+29 P450s in the taxol pathway, T5αH and T10βH, that have structurally similar substrates to   
+30 that of the missing P450s (Schoendorf et al., 2001; Jennewein et al., 2004), thereby   
+31 completing the pathway in producing taxol (Figure 1). Apart from pathway gap-filling,
+functionally modifying plant P450s could be used to add functional groups to high-value metabolites to mitigate their unwanted side-effects (e.g. cytotoxicity). For instance, gossypol, a sesquiterpene aldehyde that accumulates in cotton seeds, has been demonstrated to exhibit anti-tumor activity against several cancer cells (Neergheen et al., 2010), but there is also evidence pointing to its anti-nutritional properties (Sunilkumar et al., 2006). Fortunately, several related intermediates with potentially similar bioactivities that are less toxic have been identified recently (Tian et al., 2018, 2019).In these studies, it was shown that cotton uses CYP71BE79 as a highly active enzyme to decorate one of the intermediates (8-hydroxy-7-keto-δ-cadinene) to prevent its phytotoxicity during gossypol synthesis (Tian et al., 2018, 2019). Interestingly, while genes involved in secondary metabolic pathways tend to be clustered in the plant genome (Field et al., 2011; Chae et al., 2014), the gossypol pathway genes are dispersed, and the three P450s identified belong to different families, suggesting that phylogenetically distant P450s can also act on structurally similar substrates (Tian et al., 2018).
+## Protein engineering of P450s and their applications
+Rational design and directed evolution are the commonly used strategies in protein engineering (Chen and Zeng, 2016). Rational design uses physics-based energy functions calculated from models or crystal structures of proteins to guide modifications that alter the substrate specificity, structural stability, or kinetic property of enzymes. As conformational dynamism of a protein provides a basis for it to acquire new functions (Tokuriki and Tawfik, 2009), qualitatively accurate computing methods for the protein energy landscape is required for an efficient rational design (Ranganathan, 2018). In addition, as some protein families such as P450s are notoriously difficult to crystallize, accurate protein modeling methods are also important. On the other hand, directed evolution is a nature-inspired protein engineering approach originally developed in the early 1990s (Chen and Arnold, 1993). The basic logic of this approach is to generate sequence diversity, then iteratively select variants with desired properties. As nature has spent millions of years to optimize protein functions in different species, successful application of directed evolution largely relies on the ability to generate diverse protein sequences and to select proper variants using high-throughput systems
+1 (Jung et al., 2011; Bassalo et al., 2016). A number of new enzymes, especially P450s,   
+2 with novel functions have been created through this approach (Arnold, 2015).
+## Application one: To improve enzyme-host compatibility
+5 In terms of engineering plant P450s, one major challenge lies in improving its   
+6 enzyme-host compatibility, as P450s involved in the biosynthesis of plant-specialized   
+7 products are membrane-bound and different from the soluble cytoplasmic P450s in   
+8 prokaryotes (Munro et al., 2007). To this end, the residues within the N-terminal   
+9 transmembrane anchor region of eukaryotic P450s could be deleted or modified to   
+10 improve protein solubility without affecting their activity. The first crystal structure of a   
+11 mammalian P450 (CYP2C5) was obtained by applying this method (Williams et al.,   
+12 2000). Moreover, plant P450s involved in secondary metabolism are usually poorly   
+13 expressed in yeast or bacteria. Thus, the promoter, codon usage, as well as copy number   
+14 also need to be optimized to increase the yield of desired compounds (Figure 2A). For   
+15 example, an induced promoter with a specific codon version were used in a study to   
+16 successfully achieve a higher P450 expression which resulted in a $35\%$ increase in the   
+17 production of perillyl alcohol in bacteria (Alonso-Gutierrez et al., 2013). Similar   
+18 strategies including codon optimization and adding additional gene copies have been used   
+19 to enhance the expression of a plant P450 (G8H) to increase the production titer of   
+20 strictosidine in yeast (Brown et al., 2015). In addition to microbial platforms, using   
+21 tobacco as an efficient plant-based host represents an alternative way to optimize the   
+22 expression of plant P450s (Reed et al., 2017). Finally, substrate specificity is another   
+23 factor that affects the metabolic flux toward target compounds. Although a broad   
+24 substrate specificity of P450s increases its chance to evolve new functions, this substrate   
+25 promiscuity could impose a kinetic barrier that blocks the synthesis of desired products,   
+26 thus requiring substrate recognition site engineering. For instance, a 5.6-fold higher   
+27 activity was achieved for Coleus forskohlii CYP76AH15 by tuning its substrate   
+28 preference (Forman et al., 2018).
+## 30 Application two: To optimize electron flux during oxidation reaction
+1 Most eukaryotic P450s are membrane-bound proteins mainly expressed in the   
+2 endoplasmic reticulum (ER) (Werck-Reichhart and Feyereisen, 2000). The lipid   
+3 composition and amount of ER in cells determines the localization as well as expression   
+4 of ER-resident P450 enzymes, which in turn affects their behaviors (Strobel et al., 1970;   
+5 Negretti et al., 2014; Park et al., 2014). For instance, oleaginous yeasts that are rich in   
+6 membrane compartments provide an ideal environment for introducing plant-derived   
+7 P450s in the biosynthesis of flavonoids (Lv et al., 2019). Another way to improve the   
+8 activity of P450s is to enhance the physical proximity between a P450 enzyme and its   
+9 redox partner on the ER membranes, leading to better electron flux during oxidation   
+10 reactions (Figure 2B). This was demonstrated previously when the P450 isoflavone   
+11 synthase 1 from Glycine max was fused to the bacterial P450 reductase domain from   
+12 Rhodococcus sp. to form the first active P450 fusion enzyme (Sabbadin et al., 2010).   
+13 Optimization of the taxol precursor production by engineering the N-terminal sequence of   
+14 T5αH and linking this enzyme with a CPR from Taxus represents another elegant   
+15 example (Ajikumar et al., 2010). Although both activity and solubility of plant P450s   
+16 could be increased through protein fusion, introduction of these artificial enzymes into   
+17 host cells may lead to uncoupled electron transfers or excessive production of reactive   
+18 oxygen species, both of which are toxic to the cells (Renault et al., 2014). As such,   
+19 balancing the expression ratio between P450 and CPR is another way to efficiently   
+20 optimize the electron transfer process while mitigating the aforementioned issues. To   
+21 demonstrate the effectiveness of this idea, a cytochrome ${\sf b}_{5}$ was introduced into yeast with   
+22 low CPR and normal CYP71AV1 expression levels. The results showed that both   
+23 yeast viability and the yield of artemisinic acid, the precursor to artemisinin, were   
+24 improved (Paddon et al., 2013). The importance of regulating the electron transfer   
+25 process by cytochrome $\mathbf{b}_{5}$ can also be seen in engineering flower color. For instance,   
+26 overexpression of a cytochrome ${\sf b}_{5}$ and CYP75A is required for the accumulation of blue   
+27 pigment in carnation (Tanaka and Brugliera, 2013), whereas a pink color is achieved by   
+28 the down-regulation of CYP75B in cyclamen flowers (Boase et al., 2010).
+## 30 Application three: To create abiotic reactions for P450s
+1 Currently, engineering P450s to catalyze abiotic reactions is a field of primary   
+2 interest. The catalytic cycle and the reactive intermediates produced during the process   
+3 are essential to the activity of a P450 enzyme (Krest et al., 2013). Among these reactive   
+4 intermediates, the iron-oxo species, also known as compound I, tend to abstract   
+5 hydrogens from substrates, which favor proton-coupled oxidation (Green, 2009); the   
+6 iron-peroxo, or hydroperoxide, works as an oxidant in epoxidation, sulfoxidation, and C  
+7 C cleavage reactions (Jin et al., 2003; Cryle and De Voss, 2006); ferric-superoxide   
+8 species can mediate nitration reactions (Barry et al., 2012). Residue mutations that affect   
+9 either formation or stabilization of these reactive intermediates would result in novel   
+10 P450s reactions (Figure 2C). As an example, the universally conserved cysteine among   
+11 P450s is involved in ligating the heme iron from the axial side. Mutating this important   
+12 residue to serine abolishes the native monooxygenase activity of CYP102A1 (P450 BM3)   
+13 and enables the variant with new catalytic abilities such as C-H amination and   
+14 cyclopropanation reactions (Coelho et al., 2013a; Wang et al., 2014). Through this   
+15 cysteine mutation as well as other residue reforms, researchers have introduced additional   
+16 reactions including sulfimidation to generate S-N bonds (Farwell et al.,   
+17 2014), aziridination of aryl olefins (Farwell et al., 2015), and carbene transfer to alkynes   
+18 (Chen et al., 2018) to P450 BM3. Another conserved residue is threonine located within   
+19 the I-helix on the distal side of the heme that usually acts as a proton shuttle for O-O   
+20 bond scission to produce compound I (Krest et al., 2013). Olefin cyclopropanation   
+21 activity was introduced to P450 BM3 by mutations that include this residue (Coelho et al.,   
+22 2013b). Currently, engineering P450s to create de novo reactions primarily focuses on   
+23 enzymes originating from microbes and mammals with very few successful examples   
+24 related to plant enzymes. Due to the limited understanding of P450s (e.g. enzyme   
+25 dynamics), the targeted regio- and stereo-electivity of plant P450 engineering still   
+26 remains a major challenge.
+## Toolboxes and perspectives for engineering plant P450s
+Protein engineering approaches, especially those developed based on directed evolution, require the capacity to generate a large number of sequences that are usually achieved by ep-PCR (Cadwell and Joyce, 1992), site-directed mutagenesis (Wang and Malcolm,
+1 1999), multiplex automated genome engineering (Wang et al., 2009), or   
+2 genome shuffling (Zhang et al., 2002). With the advances in DNA synthesis technology   
+3 and decreases in associated costs, direct synthesis of DNA sequences has become much   
+4 easier to introduce sequence mutagenesis, optimize codon usage for specific hosts, or   
+5 piece together gene elements as a start point for protein engineering. However, the   
+6 increased ability to create diverse sequences also requires the corresponding high  
+7 throughput screening methods for the selection process. Allosteric transcription factor or   
+8 RNA-based biosensors using either fluorescent proteins or antibiotic resistance genes as   
+9 reporters have recently been developed and applied to accelerate protein engineering   
+10 (Bassalo et al., 2016; Wan et al., 2019). In addition, as cell dependent systems   
+11 have several innate drawbacks, cell-free screening methods such as droplet or   
+12 microchamber-based platforms have been developed as efficient alternatives (Longwell et   
+13 al., 2017). Overall, applications of these ultra-high-throughput technologies could   
+14 accelerate protein engineering and transform it into a less painstaking process.
+As the cost for next-generation DNA sequencing technology has dramatically decreased, a tremendous amount of sequence data have been generated by big genome sequencing projects such as 10KP (10,000 Plants) Genome Sequencing Project (Cheng et al., 2018) and metagenome sequence projects (Rigden and Fernández, 2017). This has provided unprecedented opportunities to study both protein co-evolution among different species and co-varying residues within various proteins through the combined application of different statistical analyses (De Juan et al., 2013), giving insights into the strategies used by nature to create the functional domains as well as residues involved in substrate binding, catalysis, and allosteric regulation. With the constantly growing pool of genomic data (>350,000 P450 sequences available in databases) (Nelson, 2018) and the development of new statistical analysis tools such as machine learning for data mining (Yang et al., 2019), the predicted functional domains or co-varying residues revealed from these analyses are becoming more and more accurate, thus narrowing the choice of beneficial mutations to a much smaller pool, thereby accelerating protein engineering.
+De novo computational protein design is an approach to introduce new structure or function to enzymes. The software Rosetta, developed in David Baker’s lab, is one of the most popular computational tools for protein design. This method integrates protein
+1 structure, folding, binding, and assembly with powerful computing of all-atom energy   
+2 functions to create novel proteins that have extremely high stability (Kellogg et al.,   
+3 2011). As suggested by the de novo protein design, the lowest free energy state of a   
+4 protein should determine its conformation (Baker, 2019). This core principle could be   
+5 used to create stable enzyme variants that serve as a start pointing to incorporate a greater   
+6 number of simultaneous mutations during engineering. In addition, Rosetta structure   
+7 calculation combined with co-varying residue-residue contacts could be applied to   
+8 accurately predict protein structure (Ovchinnikov et al., 2017), which is extremely useful   
+9 for rational redesign of plant P450s that are hard to crystallize or lack homologs of known   
+10 structures for protein modeling. As a proof of concept, Rosetta as well as the information   
+11 of co-evolving amino acids were utilized to engineer a multifunctional P450 (CYP87D20)   
+12 into a monooxygenase (Li et al., 2019), aiming to create a de novo pathway to direct the   
+13 metabolic flux from cucurbitacin C (a bitter triterpenoid from cucumber) towards mogrol   
+14 (the precursor to the natural sweetener mogroside in Siraitia grosvenorii) (Figure 2D).
+Although progress has been made in the identification and engineering of plant P450s to accelerate research related to plant natural products, there is still a large gap between academic research and industrial applications. Nature has created a diverse and fascinating world of enzymes that remains largely unexplored, waiting to be better understood, uncovered, and utilized. The emerging new tools, especially DNA synthesis, machine learning, and de novo computational protein design, combined with the massive amount of DNA sequencing data of P450s, could be integrated to accelerate the engineering of such enzymes (Figure 3). This will eventually lead to better usage of plant specialized metabolites in various applications.
+## Acknowledges
+We thank Prof. Xiaoya Chen (Shanghai Institute of Plant Physiology and Ecology, Chinese Academy of Sciences), Dr. Per Greisen (enEvolv), and Dr. Nian Liu (Department of Chemical Engineering, Massachusetts Institute of Technology) for their critical editing of this manuscript. This work was funded by the National Key Research and Development Program of China (2018YFA0901800) and National Natural Science
+2 and Shenzhen Municipal governments.
+5 The authors declare no competing financial interests.   
+6   
+7 Ajikumar, P. K., Xiao, W.-H., Tyo, K. E., Wang, Y., Simeon, F., Leonard, E., Mucha,   
+8 O., Phon, T. H., Pfeifer, B., and Stephanopoulos, G. (2010). Isoprenoid   
+9 pathway optimization for Taxol precursor overproduction in Escherichia coli.   
+10 Science 330:70–74.   
+11 Alonso-Gutierrez, J., Chan, R., Batth, T. S., Adams, P. D., Keasling, J. D., Petzold,   
+12 C. J., and Lee, T. S. (2013). Metabolic engineering of Escherichia coli for   
+13 limonene and perillyl alcohol production. Metab. Eng. 19:33–41.   
+14 Arnold, F. H. (2015). The nature of chemical innovation: new enzymes by evolution. Q.   
+15 REV. Biophys. 48:404–410.   
+16 Baker, D. (2019). What has de novo protein design taught us about protein folding and   
+17 biophysics? Protein Sci. 28:678–683.   
+18 Bar-Even, A., and Tawfik, D. S. (2013). Engineering specialized metabolic pathways-is   
+19 there a room for enzyme improvements? Curr. Opin. Biotechnol. 24:310–319.   
+20 Bar-Even, A., Noor, E., Savir, Y., Liebermeister, W., Davidi, D., Tawfik, D. S., and   
+21 Milo, R. (2011). The moderately efficient enzyme: evolutionary and   
+22 physicochemical trends shaping enzyme parameters. Biochem. 50:4402–4410.   
+23 Barry, S. M., Kers, J. A., Johnson, E. G., Song, L., Aston, P. R., Patel, B., Krasnoff,   
+24 S. B., Crane, B. R., Gibson, D. M., and Loria, R. (2012). Cytochrome P450–   
+25 catalyzed L-tryptophan nitration in thaxtomin phytotoxin biosynthesis. Nat. Chem.   
+26 Biol. 8:814.   
+27 Bassalo, M. C., Liu, R., and Gill, R. T. (2016). Directed evolution and synthetic biology   
+28 applications to microbial systems. Curr. Opin. Biotechnol. 39:126–133.   
+29 Bernhardt, R., and Urlacher, V. B. (2014). Cytochromes P450 as promising catalysts   
+30 for biotechnological application: chances and limitations. Appl. Microbiol.   
+31 Biotechnol. 98:6185–6203.   
+32 Boase, M. R., Lewis, D. H., Davies, K. M., Marshall, G. B., Patel, D., Schwinn, K. E.,   
+33 and Deroles, S. C. (2010). Isolation and antisense suppression of flavonoid 3’, 5’-   
+34 hydroxylase modifies flower pigments and colour in cyclamen. BMC Plant Biol.   
+35 10:107.   
+1 Brown, S., Clastre, M., Courdavault, V., and O’Connor, S. E. (2015). De novo   
+2 production of the plant-derived alkaloid strictosidine in yeast. Proc. Nat. Acad.   
+3 Sci. 112:3205–3210.   
+4 Cadwell, R. C., and Joyce, G. F. (1992). Randomization of genes by PCR mutagenesis.   
+5 Genome Res. 2:28–33.   
+6 Chae, L., Kim, T., Nilo-Poyanco, R., and Rhee, S. Y. (2014). Genomic signatures of   
+7 specialized metabolism in plants. Science 344:510–513.   
+8 Chen, K., and Arnold, F. H. (1993). Tuning the activity of an enzyme for unusual   
+9 environments: sequential random mutagenesis of subtilisin E for catalysis in   
+10 dimethylformamide. Proc. Nat. Acad. Sci. 90:5618–5622.   
+11 Chen, Z., and Zeng, A.-P. (2016). Protein engineering approaches to chemical   
+12 biotechnology. Curr. Opin. Biotechnol. 42:198–205.   
+13 Chen, K., Huang, X., Kan, S. J., Zhang, R. K., and Arnold, F. H. (2018). Enzymatic   
+14 construction of highly strained carbocycles. Science 360:71–75.   
+15 Cheng, S., Melkonian, M., Smith, S. A., Brockington, S., Archibald, J. M., Delaux,   
+16 P.-M., Li, F.-W., Melkonian, B., Mavrodiev, E. V., Sun, W., et al. (2018).   
+17 10KP: A phylodiverse genome sequencing plan. Gigascience 7.   
+18 Coelho, P. S., Wang, Z. J., Ener, M. E., Baril, S. A., Kannan, A., Arnold, F. H., and   
+19 Brustad, E. M. (2013a). A serine-substituted P450 catalyzes highly efficient   
+20 carbene transfer to olefins in vivo. Nat. Chem. Biol. 9:485.   
+21 Coelho, P. S., Brustad, E. M., Kannan, A., and Arnold, F. H. (2013b). Olefin   
+22 cyclopropanation via carbene transfer catalyzed by engineered cytochrome P450   
+23 enzymes. Science 339:307–310.   
+24 Cryle, M. J., and De Voss, J. J. (2006). Is the ferric hydroperoxy species responsible for   
+25 sulfur oxidation in cytochrome P450s? Angew. Chem. Int. Edit. 45:8221–8223.   
+26 De Juan, D., Pazos, F., and Valencia, A. (2013). Emerging methods in protein co  
+27 evolution. Nat. Rev. Genet. 14:249.   
+28 Farwell, C. C., McIntosh, J. A., Hyster, T. K., Wang, Z. J., and Arnold, F. H. (2014).   
+29 Enantioselective imidation of sulfides via enzyme-catalyzed intermolecular   
+30 nitrogen-atom transfer. J. Am. Chem. Soc. 136:8766–8771.   
+31 Farwell, C. C., Zhang, R. K., McIntosh, J. A., Hyster, T. K., and Arnold, F. H.   
+32 (2015). Enantioselective enzyme-catalyzed aziridination enabled by active-site   
+33 evolution of a cytochrome P450. ACS Central Sci. 1:89–93.   
+1 Field, B., Fiston-Lavier, A.-S., Kemen, A., Geisler, K., Quesneville, H., and Osbourn,   
+2 A. E. (2011). Formation of plant metabolic gene clusters within dynamic   
+3 chromosomal regions. Proc. Nat. Acad. Sci. 108:16116–16121.   
+4 Forman, V., Bjerg-Jensen, N., Dyekjær, J. D., Møller, B. L., and Pateraki, I. (2018).   
+5 Engineering of CYP76AH15 can improve activity and specificity towards   
+6 forskolin biosynthesis in yeast. Microb. Cell Fact. 17:181.   
+7 Green, M. T. (2009). CH bond activation in heme proteins: the role of thiolate ligation in   
+8 cytochrome P450. Curr. Opin. Chem. Biol. 13:84–88.   
+9 Guengerich, F. P., and Munro, A. W. (2013). Unusual cytochrome P450 enzymes and   
+10 reactions. J. Biol. Chem. 288:17065–17073.   
+11 Jennewein, S., Long, R. M., Williams, R. M., and Croteau, R. (2004). Cytochrome   
+12 P450 taxadiene 5α-hydroxylase, a mechanistically unusual monooxygenase   
+13 catalyzing the first oxygenation step of taxol biosynthesis. Chem. Biol. 11:379–   
+14 387.   
+15 Jin, S., Makris, T. M., Bryson, T. A., Sligar, S. G., and Dawson, J. H. (2003).   
+16 Epoxidation of olefins by hydroperoxo-ferric cytochrome P450. J. Am. Chem. Soc.   
+17 125:3406–3407.   
+18 Kellogg, E. H., LeaverFay, A., and Baker, D. (2011). Role of conformational   
+19 sampling in computing mutation‐induced changes in protein structure and   
+20 stability. Proteins 79:830–838.   
+21 Krest, C. M., Onderko, E. L., Yosca, T. H., Calixto, J. C., Karp, R. F., Livada, J.,   
+22 Rittle, J., and Green, M. T. (2013). Reactive intermediates in cytochrome P450   
+23 catalysis. J. Biol. Chem. 288:17074–17081.   
+24 Kroymann, J. (2011). Natural diversity and adaptation in plant secondary metabolism.   
+25 Curr. Opin. Plant Biol. 14:246–251.   
+26 Kusari, S., Singh, S., and Jayabaskaran, C. (2014). Rethinking production of Taxol®   
+27 (paclitaxel) using endophyte biotechnology. Trends Biotechnol. 32:304–311.   
+28 Li, D., Ma, Y., Zhou, Y., Gou, J., Zhong, Y., Zhao, L., Han, L., Ovchinnikov, S., Ma,   
+29 L., Huang, S., et al. (2019). A structural and data-driven approach to engineering   
+30 a plant cytochrome P450 enzyme. Sci. China Life Sci. 62: 873–882   
+31 Longwell, C. K., Labanieh, L., and Cochran, J. R. (2017). High-throughput screening   
+32 technologies for enzyme engineering. Curr. Opin. Biotechnol. 48:196–202.   
+33 Lundemo, M. T., and Woodley, J. M. (2015). Guidelines for development and   
+34 implementation of biocatalytic P450 processes. Appl. Microbiol. Biotechnol.   
+35 99:2465–2483.   
+1 Lv, Y., Koffas, M., Zhou, J., and Xu, P. (2019). Optimizing oleaginous yeast cell   
+2 factories for flavonoids and hydroxylated flavonoids biosynthesis. bioRxiv   
+3 Advance Access published.   
+4 Munro, A. W., Girvan, H. M., and McLean, K. J. (2007). Variations on a (t) heme—   
+5 novel mechanisms, redox partners and catalytic functions in the cytochrome P450   
+6 superfamily. Nat. Prod. Rep. 24:585–609.   
+7 Nam, H., Lewis, N. E., Lerman, J. A., Lee, D.-H., Chang, R. L., Kim, D., and Palsson,   
+8 B. O. (2012). Network context and selection in the evolution to enzyme   
+9 specificity. Science 337:1101–1104.   
+10 Neergheen, V. S., Bahorun, T., Taylor, E. W., Jen, L.-S., and Aruoma, O. I. (2010).   
+11 Targeting specific cell signaling transduction pathways by dietary and medicinal   
+12 phytochemicals in cancer chemoprevention. Toxicology 278:229–241.   
+13 Negretti, S., Narayan, A. R., Chiou, K. C., Kells, P. M., Stachowski, J. L., Hansen, D.   
+14 A., Podust, L. M., Montgomery, J., and Sherman, D. H. (2014). Directing   
+15 group-controlled regioselectivity in an enzymatic C–H bond oxygenation. J. Am.   
+16 Chem. Soc. 136:4901–4904.   
+17 Nelson, D. R. (2018). Cytochrome P450 diversity in the tree of life. BBA.-Proteins   
+18 Proteomics 1866:141–154.   
+19 Nelson, D., and Werck-Reichhart, D. (2011). A P450-centric view of plant evolution.   
+20 Plant J. 66:194–211.   
+21 Ovchinnikov, S., Park, H., Varghese, N., Huang, P.-S., Pavlopoulos, G. A., Kim, D.   
+22 E., Kamisetty, H., Kyrpides, N. C., and Baker, D. (2017). Protein structure   
+23 determination using metagenome sequence data. Science 355:294–298.   
+24 Paddon, C. J., Westfall, P. J., Pitera, D. J., Benjamin, K., Fisher, K., McPhee, D.,   
+25 Leavell, M. D., Tai, A., Main, A., Eng, D., et al. (2013). High-level semi  
+26 synthetic production of the potent antimalarial artemisinin. Nature 496:528–532.   
+27 Park, J. W., Reed, J. R., Brignac-Huber, L. M., and Backes, W. L. (2014).   
+28 Cytochrome P450 system proteins reside in different regions of the endoplasmic   
+29 reticulum. Biochem. J. 464:241–249.   
+30 Ranganathan, R. (2018). Putting evolution to work. Cell 175:1449–1451.   
+31 Reed, J., Stephenson, M. J., Miettinen, K., Brouwer, B., Leveau, A., Brett, P., Goss,   
+32 R. J., Goossens, A., O’Connell, M. A., and Osbourn, A. (2017). A translational   
+33 synthetic biology platform for rapid access to gram-scale quantities of novel drug  
+34 like molecules. Metab. Eng. 42:185–193.   
+1 Renault, H., Bassard, J.-E., Hamberger, B., and Werck-Reichhart, D. (2014).   
+32 Cytochrome P450-mediated metabolic engineering: current progress and future   
+challenges. Curr. Opin. Plant Biol. 19:27–34.   
+4 Rigden, D. J., and Fernández, X. M. (2017). The 2018 Nucleic Acids Research   
+5 database issue and the online molecular biology database collection. Nucleic   
+6 Acids Res. 46:D1–D7.   
+7 Sabbadin, F., Hyde, R., Robin, A., Hilgarth, E.-M., Delenne, M., Flitsch, S., Turner,   
+8 N., Grogan, G., and Bruce, N. C. (2010). LICRED: a versatile drop-in vector for   
+9 rapid generation of redox-self-sufficient cytochrome P450s. ChemBioChem   
+10 11:987–994.   
+11 Schoendorf, A., Rithner, C. D., Williams, R. M., and Croteau, R. B. (2001).   
+12 Molecular cloning of a cytochrome P450 taxane $10\upbeta$ -hydroxylase cDNA from   
+13 Taxus and functional expression in yeast. Proc. Nat. Acad. Sci. 98:1501–1506.   
+14 Strobel, H. W., Lu, A. Y., Heidema, J., and Coon, M. J. (1970). Phosphatidylcholine   
+15 requirement in the enzymatic reduction of hemoprotein P450 and in fatty acid,   
+16 hydrocarbon, and drug hydroxylation. J. Biol. Chem. 245:4851–4854.   
+17 Sunilkumar, G., Campbell, L. M., Puckhaber, L., Stipanovic, R. D., and Rathore, K.   
+18 S. (2006). Engineering cottonseed for use in human nutrition by tissue-specific   
+19 reduction of toxic gossypol. Proc. Nat. Acad. Sci. 103:18054–18059.   
+20 Tanaka, Y., and Brugliera, F. (2013). Flower colour and cytochromes P450. Philos. T.   
+21 Roy. Soc. B: Biological Sciences 368:20120432.   
+22 Tian, X., Ruan, J.-X., Huang, J.-Q., Yang, C.-Q., Fang, X., Chen, Z.-W., Hong, H.,   
+23 Wang, L.-J., Mao, Y.-B., and Lu, S., et al. (2018). Characterization of gossypol   
+24 biosynthetic pathway. Proc. Nat. Acad. Sci. 115:E5410–E5418.   
+25 Tian, X., Fang, X., Huang, J.-Q., Wang, L.-J., Mao, Y.-B., and Chen, X.-Y. (2019). A   
+26 gossypol biosynthetic intermediate disturbs plant defence response. Philos. T. Roy.   
+27 Soc. B 374:20180319.   
+28 Tokuriki, N., and Tawfik, D. S. (2009). Protein dynamism and evolvability. Science   
+29 324:203–207.   
+30 Urlacher, V. B., and Girhard, M. (2019). Cytochrome P450 monooxygenases in   
+31 biotechnology and synthetic biology. Trends Biotechnol. Advance Access   
+32 published.   
+33 Wang, W., and Malcolm, B. A. (1999). Two-stage PCR protocol allowing introduction   
+34 of multiple mutations, deletions and insertions using QuikChangeTM site-directed   
+35 mutagenesis. Biotechniques 26:680–682.   
+1 Wan, X., Marsafari, M., and Xu, P. (2019). Engineering metabolite-responsive   
+2 transcriptional factors to sense small molecules in eukaryotes: current state and   
+3 perspectives. Microb. Cell Fact. 18:61.   
+4 Wang, H. H., Isaacs, F. J., Carr, P. A., Sun, Z. Z., Xu, G., Forest, C. R., and Church,   
+5 G. M. (2009). Programming cells by multiplex genome engineering and   
+6 accelerated evolution. Nature 460:894.   
+7 Wang, Z. J., Renata, H., Peck, N. E., Farwell, C. C., Coelho, P. S., and Arnold, F. H.   
+8 (2014). Improved cyclopropanation activity of histidine‐ligated cytochrome   
+9 P450 enables the enantioselective formal synthesis of levomilnacipran. Angew.   
+10 Chem. Int. Edit. 53:6810–6813.   
+11 Werck-Reichhart, D., and Feyereisen, R. (2000). Cytochromes P450: a success story.   
+12 Genome Biol. 1: 1-9.   
+13 Williams, P. A., Cosme, J., Sridhar, V., Johnson, E. F., and McRee, D. E. (2000).   
+14 Mammalian microsomal cytochrome P450 monooxygenase: structural adaptations   
+15 for membrane binding and functional diversity. Mol. Cell 5:121–131.   
+16 Wink, M. (2010). Introduction: biochemistry, physiology and ecological functions of   
+17 secondary metabolites. Annu. Plant Rev. volume 40: Biochemistry of plant   
+18 secondary metabolism. 1-19   
+19 Yang, K. K., Wu, Z., and Arnold, F. H. (2019). Machine-learning-guided directed   
+20 evolution for protein engineering. Nat. Methods Advance Access.   
+21 Zhang, Y.-X., Perry, K., Vinci, V. A., Powell, K., Stemmer, W. P., and del Cardayré,   
+22 S. B. (2002). Genome shuffling leads to rapid phenotypic improvement in bacteria.   
+23 Nature 415:644.   
+24 Zhao, S., Kumar, R., Sakai, A., Vetting, M. W., Wood, B. M., Brown, S., Bonanno, J.   
+25 B., Hillerich, B. S., Seidel, R. D., and Babbitt, P. C. (2013). Discovery of new   
+26 enzymes and metabolic pathways by using structure and genome context. Nature   
+27 502:698.
+Figure 1. Engineering of P450s to create novel reactions and its potential applications. The missing steps within the taxol metabolic pathway is indicated with a dotted line and P450s are suggested to be involved in these steps. Two pathway P450s, T5αH and $\mathrm{T10\betaH}$ , sharing substrate similarities with the missing P450s (indicated with red backbone) are suitable for engineered to acquire new activities that can fill the pathway gap.
+Figure 2. Successful cases that improved enzyme-host compatibility (A) and activities of the P450s (B), as well as conferred abiotic reactions to the P450s, creating de novo metabolites (C) or metabolic pathways (D). Cuol, cucurbitadienol; C, carbonyl; H, hydroxyl.
+Figure 3. A workflow of plant P450 engineering using integrated tools in the future. Metagenome data is explored using machine learning to identify the co-evolving amino acids of P450s. This information is adopted by Rosetta structure prediction to generate high accurate P450 models. Sequences of protein variants generated from direct evolution or rational design are further optimized by Rosetta to improve protein stability, and then directly synthesized for the following sensor-assisted screening process. Iterative optimization may be needed to acquire desired properties for P450s.

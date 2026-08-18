@@ -1,0 +1,107 @@
+###### Abstract
+
+A millisecond pulsar (MSP) is an old neutron star (NS) that has accreted material from its companion star, causing it to spin up, which is known as the recycling scenario. During the mass transfer phase, the system manifests itself as an X-ray binary. PSR J1402+13 is an MSP with a spin period of 5.89\\ \\rm{ms} and a spin period derivative of \\log\\dot{P}_{\\rm spin}=-16.32. These properties make it a notable object within the pulsar population, as MSPs typically exhibit low spin period derivatives. In this paper, we aim to explain how an MSP can posses high spin period derivative by binary evolution. By utilizing the stellar evolution code MESA, we examine the effects of irradiation on the companion star and the propeller effect on the NS during binary evolution. We demonstrate that irradiation can modify the spin period and mass of an MSP, resulting in a higher spin period derivative. These results suggest that the irradiation effect may serve as a key factor in explaining MSPs with high spin period derivatives. binaries: close -- binaries: general -- X-rays: binaries -- pulsars: general +
+
+Footnote †: journal: ApJL
+
+## 1 Introduction
+
+A neutron star (NS) in a binary system can accretes material from its companion star and spins itself up to form a millisecond pulsar (MSP). This process is known as the recycling scenario. During the mass transfer phase, depending on the mass of the companion star, the system can manifests itself as a high-mass X-ray binary (M_{2}\\gtrsim 10M_{\\odot}) or a low-mass X-ray binary (LMXB, M_{2}\\lesssim 1.5M_{\\odot}). For detailed reviews on compact object binary evolution, references such as Bhattacharya & van den Heuvel (1991), Podsiadlowski et al. (2002), and Tauris & van den Heuvel (2006) can be consulted. Presently, more than 3300 pulsars have been detected, including approximately 530 MSPs (Manchester et al., 2005)1. Some of these MSPs are referred to as transitional MSPs (tMSP) (Archibald et al., 2009; Papitto et al., 2013; Bassa et al., 2014), and there are also accreting millisecond X-ray pulsars (AMXPs) (Patruno & Watts, 2021). TMSPs exhibit changes between rotation-powered and accretion-powered states, demonstrating a direct connection between radio MSPs and AMXPs. These observations strongly support the recycling scenario. For a recent review about tMSPs, one can refer Papitto & de Martino (2022). In comparison to normal pulsars, MSPs typically have spin periods lower than 30\\ \\rm{ms}, lower spin period derivatives \\log\\dot{P}_{\\rm spin}\\sim-20, and lower magnetic fields B\\sim 10^{8}\\ \\rm{G}. Most NSs can be born with strong magnetic fields B\\sim 10^{13.25}\\ \\rm{G}(Popov et al., 2010), nevertheless, during the recycling process, the NS accretes material, leading to a reduction in its magnetic field (Shibazaki et al., 1989). Most observational results also support canonical evolutionary theory (e.g., Tauris et al., 2012). However, there are exceptions, e.g., the MSP PSR J1402+13 (Abdollahi et al., 2022) with a spin period of 5.89\\ \\rm{ms} and a spin period derivative of \\log\\dot{P}_{\\rm spin}=-16.32.
+
+Footnote 1: The current population of pulsars can be viewed at [https://www.atnf.csiro.au/research/pulsar/psrcat/](https://www.atnf.csiro.au/research/pulsar/psrcat/)
+
+The spin evolution of MSPs has always been an important aspect of study. It can help determine the equation of state of NS and constrain X-ray binary evolution theory. Based on the mass transfer rate value, as well as the spin period and magnetic field of the NS, the NS can experience either spin-up or spin-down evolution as a result. There are essentiallythree regimes depending on the mass transfer rate value: radio spin-down, propeller spin-down, and accretion spin-up (e.g., Tauris et al., 2012; Bhattacharyya, 2021; Li et al., 2021). During the accretion spin-up regime, the NS accretes material transferred from its companion star and spins itself up. When the mass transfer rate decreases to a specific value, the propeller effect is activated. During the propeller regime, the transferred mass is expelled from the binary, preventing it from being accreted by the NS. The NS loses its angular momentum which is carried by ejected matter and the magnetic field. (Romanova et al., 2018). As the mass transfer rate value further decreases and even stop, the binary system will eventually host a radio pulsar.
+
+Despite the progress made in understanding the overall perspective of the recycling scenario, uncertainties still remain. For instance, a birthrate problem emerged when Kulkarni & Narayan (1988) proposed the birthrate of MSPs and the number of LMXBs, from which they descend in this framework, do not match. The irradiation effect in LMXBs could be a solution to the birthrate problem. Irradiation primarily affects stars with a convective envelope, which explains why it can have a significant impact on the evolution of LMXBs (Podsiadlowski, 1991). The irradiation-induced mass transfer cycles lead to a reduced time spent in the LMXB phase (Ritter et al., 2000; Buning & Ritter, 2004; Ritter, 2008), which demonstrates the potential of the irradiation effect in addressing the birthrate problem. Additionally, the irradiation effect can explain the existence of certain MSPs with a positive orbital period derivative (Patruno & Watts, 2021). A series of works by Benvenuto et al. (2012, 2014, 2015, 2017) have found that the irradiation effect may play a crucial role in the formation of black widow/redback pulsars, with black widows possibly evolving from redbacks. The irradiation effect may play a key role in the formation of AMXPs such as SAX J1808.4-3658 (Tailo et al., 2018; Goodwin & Woods, 2020). Irradiated systems may also serve as good progenitors for massive MSPs (Echeveste et al., 2020). In this paper, we will show that the irradiation effect is also a key factor to form the MSPs with high spin period derivative.
+
+This paper is organised as follows: Section 2 describes our input physics and methods. Section 3 shows our results. In Section 4, we discuss the possible indications about our results and give some conclusions.
+
+## 2 Methods
+
+We use the stellar evolution code Modules for Experiments in Stellar Astrophysics (MESA,version 10398; Paxton et al., 2011, 2013, 2015, 2018, 2019) to simulate possible evolution of LMXB and the spin of MSP. We assume that the NS has a canonical initial mass of 1.4~{}M_{\\odot}. Also, the binary evolution begin with a NS and a zero-age main-sequence companion star in a circular and synchronized orbit. The metallicity of the companion star is Z=0.02. The maximum age of the system is set to be 14~{}\\rm Gyr.
+
+Mass transfer rate value is described by the Ritter scheme (Ritter, 1988). We adopt the isotropic re-emission model (Tauris & van den Heuvel, 2006) to compute the mass-loss from the binary system with the following parameters: \\alpha=0,~{}\\beta=0.7,~{}\\delta=0, which correspond to the fraction of mass lost from the vicinity of companion star, the vicinity of NS and the circumbinary co-plane toroid, respectively. The mass accretion rate onto NS is \\dot{M}_{\\rm NS}=(1-\\alpha-\\beta-\\delta)|\\dot{M}_{2}|, where \\dot{M}_{2} is the mass lost rate of companion star. The \\dot{M}_{\\rm NS} is limited by Eddington accretion rate (Tauris et al., 2012)
+
+\\dot{M}_{\\rm Edd}\\simeq 3.0\\times 10^{-8}M_{\\odot}{\\rm yr}^{-1}\\,\\left(\\frac{R _{\\rm NS}}{13~{}{\\rm km}}\\right)\\left(\\frac{1.3}{1+X}\\right),  where the R_{\\rm NS}=15~{}(M_{\\rm NS}/M_{\\odot})^{1/3}~{}{\\rm km} is the radius of the NS, and the X is the fraction of hydrogen of transferred mass.
+
+### Orbital evolution
+
+In our simulation, orbital angular momentum loss is dominated by three mechanisms: gravitational wave radiation, mass loss from the system and magnetic braking.
+
+The orbital angular momentum loss by gravitational wave radiation is calculated by (Landau & Lifshitz, 1971)
+
+\\dot{J}_{\\rm GW}=-\\frac{32G^{7/2}M_{\\rm NS}^{2}M_{2}^{2}(M_{\\rm NS}+M_{2})^{1 /2}}{5c^{5}a^{7/2}},  where G is the gravitational constant, c is the speed of light in vacuum and a is the semi-major axis of the orbit.
+
+Material lost from the system will carry specific orbital angular momentum of NS away from system. We calculate the angular momentum loss by this mechanism as
+
+\\dot{J}_{\\rm ML}=(\\alpha+\\beta+\\delta)|\\dot{M}_{2}|\\bigg{(}\\frac{M_{\\rm NS}}{ M_{\\rm NS}+M_{2}}\\bigg{)}^{2}\\frac{2\\pi a^{2}}{P_{\\rm orb}},  where the P_{\\rm orb} is the orbital period.
+
+The magnetic braking will also cause the loss of orbital angular momentum. We use the standard magnetic braking prescription (Rappaport et al., 1983):
+
+\\dot{J}_{\\rm MB}=-3.8\\times 10^{-30}M_{2}R_{2}^{\\gamma}\\Omega^{3}{\\rm dyn~{} cm},  where R_{2} is the radius of the companion star, \\gamma is the magnetic braking index in which we adopt the value \\gamma=4, \\Omega is the spin angular velocity of the companion star.
+
+### Irradiation on companion star
+
+During mass transfer phase, the system will manifest itself as an X-ray source. In this context, the companion star can be irradiated by X-rays. Such irradiation may significantly alter the evolution of LMXBs. For how irradiation affect the secular evolution of LMXBs, one can refer outstanding previous works, e.g., Podsiadlowski (1991), Harpaz & Rappaport (1994), Vilhu et al. (1994), Buning & Ritter (2004).
+
+The X-ray irradiation effect on companion star is included in this work. The accretion luminosity is
+
+L_{\\rm X}=\\frac{GM_{\\rm NS}\\dot{M}_{\\rm NS}}{R_{\\rm NS}},  follow Harpaz & Rappaport (1994), we calculate irradiation luminosity as
+
+L_{\\rm irr}=\\left\\{\\begin{array}{ll}\\eta L_{\\rm X}\\left(\\frac{R_{2}}{2a} \\right)^{2}&\\dot{M}_{2}<\\dot{M}_{\\rm Edd}\\\\ \\eta L_{\\rm X}\\left(\\frac{R_{2}}{2a}\\right)^{2}\\exp\\left(1-\\frac{|\\dot{M}_{2 }|}{M_{\\rm Edd}}\\right)&\\dot{M}_{2}\\geq\\dot{M}_{\\rm Edd}\\end{array}\\right.,  where \\eta is the irradiation efficiency. The energy will deposit in the outer layer of companion star and the deposited energy is decrease with e^{-\\tau}, where \\tau is the optical depth at a given radius.
+
+### Spin evolution of neutron star
+
+The spin evolution of NS in binary system could be affected by multiple factors: gravitational wave radiation and magnetic radiation (dipole and multi-pole) of NS, spin-up and spin-down torques caused by the interactions between transferred material and magnetic field, etc. The gravitational wave and multi-pole radiation will not be discussed in this paper, since they may not dominant the energy loss (e.g., Kiziltan & Thorsett, 2010; Patruno, 2010).
+
+We consider the accretion-induced magnetic filed decay of NS. Magnetic moment is calculated by following formula (Shibazaki et al., 1989):
+
+\\mu=\\mu_{0}\\left(1+\\frac{\\Delta M_{\\rm NS}}{10^{-4}M_{\\odot}}\\right)^{-1},  where \\mu_{0} is the initial magnetic moment. \\Delta M_{\\rm NS} is the accreted mass of NS.
+
+Interactions between magnetic field and transferred mass are characterized by three radii: magnetosphere radius r_{\\rm mag}, co-rotation radius r_{\\rm co} and light cylinder radius r_{\\rm lc}. We calculate these radii by the following forms (Ghosh & Lamb, 1979; Romanova et al., 2018; Yang & Li, 2023):
+
+r_{\\rm mag}\\simeq 1.5\\times 10^{8}\\left(\\frac{\\mu}{\\mu_{0}}\\right)^{4/7}\\left( \\frac{M_{\\rm NS}}{M_{\\odot}}\\right)^{-1/7}\\left(\\frac{\\dot{M}_{\\rm NS}}{M_{ \\rm Edd}}\\right)^{-2/7}{\\rm cm}, 
+
+r_{\\rm co}\\simeq 1.5\\times 10^{8}\\left(\\frac{M_{\\rm NS}}{M_{\\odot}}\\right)^{1 /3}\\left(\\frac{P_{\\rm spin}}{1\\ {\\rm s}}\\right)^{2/3}{\\rm cm}, 
+
+r_{\\rm lc}\\simeq 4.8\\times 10^{9}\\frac{P_{\\rm spin}}{1\\ {\\rm s}}\\ {\\rm cm}. 
+
+Follow Tauris (2012), the total torque acting on the NS is
+
+N_{\\rm total}=n\\left(\\dot{M}_{\\rm NS}\\sqrt{GM_{\\rm NS}r_{\\rm mag}}+\\frac{\\mu^{2 }}{9r_{\\rm mag}^{3}}\\right)+N_{\\rm radio},  where n is a dimensionless parameter,
+
+n=\\tanh\\left(\\frac{1-(r_{\\rm mag}/r_{\\rm co})^{3/2}}{0.002}\\right). 
+
+N_{\\rm radio} is the spin-down torque caused by magnetic dipole radiation. We calculate N_{\\rm radio} as (Yang & Li, 2023)
+
+N_{\\rm radio}=-\\frac{\\mu^{2}}{r_{\\rm lc}^{3}}. 
+
+We assume that the NSs in our simulations have an initial spin period P_{\\rm spin}=10\\ {\\rm s} and a constant moment of inertia I=10^{45}{\\rm g\\ cm^{2}}. We also assume that all the transferred material is ejected from the magnetosphere during the propeller regime.
+
+## 3 Results
+
+We calculated a series of models of binary systems with an initial companion star mass M_{2}=1.0\\ M_{\\odot} and initial orbital periods P_{\\rm orb}=3.0,~{}5.0,10.0,~{}20.0~{}{\\rm days} for different values of the irradiation efficiencies \\eta=0,~{}0.001,~{}0.01,~{}0.1 and initial magnetic field \\mu_{0} range from 10^{29}~{}{\\rm G~{}cm^{3}} to 10^{32}~{}{\\rm G~{}cm^{3}}. Here, for simplicity, we only show the results from two examples with \\eta=0,~{}0.1, both with P_{\\rm orb}=5.0~{}{\\rm days} and \\mu_{0}=4.0\\times 10^{31}~{}{\\rm G~{}cm^{3}}, and will give a simple discussion on the effect of other parameters in Section 4. Figure 1 shows the evolution of mass transfer rate value for different \\eta. For \\eta=0, the mass transfer occurs in a cyclic way instead in a continuous form (as in the case of \\eta=0). During the initial phase of Roche-lobe overflow (RLO), the mass transfer rate value \\dot{M}_{2} increases, resulting in a corresponding increase in X-ray luminosity (L_{\\rm X}). Irradiation causes the companion star to expand, leading to a higher mass transfer rate value \\dot{M}_{2} compared to the system without irradiation. Detachment of the companion star from its Roche lobe occurs when the expansion due to irradiation is outweighed by the thermal relaxation of the companion star. Orbital angular momentum loss subsequently induces the companion star to reattach, initiating a new cycle of mass transfer, and so forth. Further insights about the mechanism of the mass transfer cycle can be found in Ritter et al. (2000). This phenomenon causes the system to constantly switch between the LMXB phase and the radio pulsar phase, which is quite different from that with \\eta=0.
+
+Figure 2 shows the spin period evolution. The spin period evolution of NS in an irradiated system is significantly different from that of none irradiated system. For non irradiated system, i.e., \\eta=0, for the most part the first and the second RLO, the NS is actually in a spin-equilibrium state (i.e., r_{\\rm mag}\\simeq r_{\\rm co}) (see also Tauris et al., 2012), and constantly experiences minor propeller regimes during \\sim 12.12-12.21~{}{\\rm Gyr} and \\sim 12.25-12.32~{}{\\rm Gyr}. On the other hand, for \\eta=0.1, irradiation-induced mass transfer cycles cause the NS to experience multiple propeller regimes and radio spin-down phases before the mass transfer fully stops. Due to a higher mass transfer rate value, the NS can reach a lower spin period.
+
+Figure 3 shows the evolution of the mass of the NS. For \\eta=0.1, although the mass transfer rate value during RLO is larger than that in the case of \\eta=0, the total duration of RLO for the irradiated system is shorter than that for the non-irradiated system. Moreover, the accretion rate remains constrained by the Eddington limit. As a result, the final mass of the MSP in the irradiated system is smaller than that in the non-irradiated system.
+
+In Figure 4, we show the evolutionary tracks when binary systems host an radio pulsar in P_{\\rm spin}-\\dot{P}_{\\rm spin} diagram. Same as previous figures, different line styles and colors indicate different values of irradiation efficiency. The line segments in Figure 4 present the evolutionary path segments corresponding to the case r_{\\rm mag}>r_{\\rm lc}, i.e., the system hosts a radio MSP. Each line segment evolves from the upper left to the lower right. For \\eta=0, due to interaction between magnetic field and transferred material, it is difficult for NS to possessing lower spin period and higher spin period derivative at same time during radio phases. For \\eta=0.1, the tracks can cover a larger part of P_{\\rm spin}-\\dot{P}_{\\rm spin} diagram. Due to the irradiation-induced mass transfer cycles, the NS can reach a lower spin period and undergo several radio phases before the mass transfer completely stops. This enables the NS to possess both a lower spin period and higher spin period derivative during the radio phases. As we can see in Figure 4, our calculations show that the irradiated models can explain the high value of the spin period derivative of PSR J1402+13.
+
+## 4 Discussion and Conclusions
+
+In this work, we showed binary evolution calculations of a system composed of a canonical NS whose companion is a normal star with initial mass of M_{2}=1.0~{}M_{\\odot} in an orbit with initial period of P_{\\rm orb}=5~{}{\\rm days}. We considered both the irradiation effect and the propeller effect, tracking the spin period evolution of MSPs. Our goal was to provide an explanation for the formation of MSPs having high spin period derivatives.
+
+In our simulations, the two most crucial free parameters affecting the spin evolution are the irradiation efficiency \\eta and the initial magnetic field \\mu_{0}. Typically, \\eta is believed to range from 0.01 to 0.1 in LMXBs (Buning & Ritter, 2004), while population synthesis suggests that most NSs may have an initial magnetic field of \\mu_{0}\\sim 10^{31}~{}{\\rm G~{}cm^{3}}(Popov et al., 2010). The value of \\eta affects the peak mass transfer rate value during RLO and the number of mass transfer cycles (e.g., Benvenuto et al., 2014), which in turn determines the minimum spin period that an MSP can reach. Our additional tests (not shown here) suggest that NSs in binary systems with initial magnetic fields of \\mu_{0}\\sim 10^{31}-10^{32}~{}{\\rm G~{}cm^{3}} may produce radio MSPs with high spin period derivatives. The exact relationship between irradiation efficiency, the initial magnetic field of the NS, the initial orbital period, the initial mass of companion star, and the spin period and spin period derivative of MSPs varies complicatedly and still needs to be investigated in details in the future.
+
+Due to the absence of other estimated parameters, we are currently unable to rigorously constrain the evolutionary history of PSR J1402+132. In the future, we intend to conduct more comprehensive investigations utilizing binary population synthesis, encompassing topics such as but not limited to the progenitor system of PSR J1402+13 and the birth rate of MSPs having high spin period derivatives.
+
+Footnote 2: Although a catalog GalacticMSPs.txt says an orbital period of 52.49 days, this parameter is absent from the ANTF catalog. We simply assume that the system is a binary, but have not incorporated this value into our study, although, our models can successfully reproduce this orbital period.
+
+As shown in Figure 2 and Figure 3, the final spin period and mass of the MSP can be altered by the irradiation effect. Furthermore, the irradiation effect can modify the evolution track on the P_{\\rm spin}-\\dot{P}_{\\rm spin} diagram, leading to a wider range of possible tracks. In conclusion, the canonical evolutionary theory faces difficulties in producing radio MSPs with high spin period derivatives, but the irradiation effect provides an potential way to conquer this problem.
+
+## Acknowledgments
+
+We are grateful to the anonymous referee for the constructive comments that helped us to improve the manuscript. S.L. would like to express sincere gratitude to Hai-Liang Chen, Zheng-Wei Liu, Zhen-Wei Li, Ph.Podsiadlowski, O.G.Benvenuto and A.J.Goodwin for their valuable helps and suggestions. This work is supported by the National Science Foundation of China and National Key R&D Program of China (No. 2021YFA1600403), the National Natural Science Foundation of China (Nos. 11973080, 12333008 and 12288102). X.M. acknowledges support from the Yunnan Ten Thousand Talents Plan - Young & Elite Talents Project, and the CAS 'Light of West China' Program. X.M. acknowledges support from International Centre of Supernovae, Yunnan Key Laboratory (No. 202302AN360001), the Yunnan Revitalization Talent Support Program-Science & Technology Champion Project (NO. 202305AB350003), Yunnan
+
+[MISSING_PAGE_FAIL:6]

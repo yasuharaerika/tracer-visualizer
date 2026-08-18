@@ -1,0 +1,69 @@
+###### Abstract
+
+We combine the gravitational-wave measurement of the effective distance to the binary neutron star merger GW170817, the redshift of its host galaxy NGC 4993, and the latest Hubble constant measurement from the Dark Energy Survey to constrain the inclination between the orbital angular momentum of the binary and the line of sight to 18\\pm 8 degrees (less than 28 degrees at 90% confidence). This provides a complementary constraint on models of potential afterglow observations.
+
+Subject headings:binaries: close, stars: neutron, gravitational waves
+
+## 1. Introduction
+
+Gravitational waves from the coalescence of two neutron stars, GW170817, were detected by the advanced LIGO (Aasi et al., 2015) and Virgo (Acernese et al., 2015) gravitational-wave observatories on 17 August, 2017 (Abbott et al., 2017c). A short gamma ray burst was observed by Fermi less than two seconds later (Abbott et al., 2017b). These detections initiated a campaign of electromagnetic observations which identified the transient source and localized it to the host galaxy NGC 4993 (Abbott et al., 2017d, and references therein).
+
+For a nearly face-on binary located nearly overhead a gravitational-wave detector, the gravitational-wave signal amplitude scales as \\cos\\iota/D_{L}, where D_{L} is the luminosity distance to the source and \\iota is the inclination angle to the line of sight (0 for a face-on and 180 degrees for a face-off binary). Gravitational-wave observations measure the signal amplitude to a fractional accuracy of \\sim 1/\\rho, where the signal-to-noise ratio \\rho is approximately 32 for GW170817 (Abbott et al., 2017c). However, the inclination-distance degeneracy prevents a precise inclination measurement, and the viewing angle can only be constrained to be below 55 degrees from gravitational-wave observations alone (Abbott et al., 2017c).
+
+This inclination-distance degeneracy, inherent in gravitational-wave inference (e.g., Veitch et al., 2012), can be broken with the aid of an independent distance measurement. The observed recession velocity of the host galaxy, NGC 4993 (e.g., Hjorth et al., 2017), combined with a precise value of the Hubble constant, provides such a measurement.
+
+The most recent measurement of the Hubble constant by the Dark Energy Survey (DES) team yields a value of H_{0}=67.2^{+1.2}_{-1.0} km/s/Mpc (DES Collaboration et al., 2017). This is very similar to the H_{0} value inferred from Planck data (Planck Collaboration et al., 2016). The DES team also combines results with four other statistically independent H_{0} measurements - Planck and SPTpol (Henning et al., 2017) which use independent CMB information, SHOES (Riess et al., 2016) which is based on standard candles provided by type IA supernovae, and H0LiCOW (Bonvin et al., 2017) which uses time delays between images of strongly lensed variable quasars - to yield the very precise value of H_{0}=69.1^{+0.4}_{-0.6} km/s/Mpc (DES Collaboration et al., 2017).
+
+Abbott et al. (2017a) combined the LIGO/Virgo distance data with the observed redshift of the host galaxy NGC 4993 to obtain an independent measurement of H_{0}. Here, we reverse their approach: we take the data behind Figure 2 of Abbott et al. (2017a), which includes posterior samples in the two-dimensional H_{0}-\\cos\\iota space, and resample them according to the tighter, independent H_{0} measurements in order to obtain a posterior distribution on \\iota, where we map \\iota onto the range 0\\leq\\iota\\leq 90 degrees.
+
+## 2. Results
+
+In the Bayesian framework, we marginalize the joint posterior probability distribution on \\iota and H_{0} given both the gravitational-wave data \\vec{d}_{\\rm GW} and independent data \\vec{d}_{H_{0}} that provides improved knowledge H_{0}:
+
+p(\\iota|{\\rm data})=\\int p(\\iota,H_{0}|\\vec{d}_{\\rm GW},\\vec{d}_{H_{0}})dH_{ 0}. 
+
+Figure 1.— Probability distribution on the orbital inclination angle \\iota of GW170817, obtained by combining the distance and inclination inferred from the gravitational-wave signal, the host galaxy redshift, and an independent measurement of the Hubble constant. The blue curve is based on the DES measurement of H_{0}, while the red curve is based on a combination of 5 statistically independent H_{0} measurements (DES Collaboration et al., 2017).
+
+We use the existing joint posterior computed from gravitational-wave observations by Abbott et al. (2017a)
+
+p(\\iota,H_{0}|\\vec{d}_{\\rm GW})\\propto\\pi_{\\rm LVC}(\\iota)\\pi_{\\rm LVC}(H_{0})p( \\vec{d}_{\\rm GW}|\\iota,H_{0}),  where \\pi_{\\rm LVC} denote the priors used by Abbott et al. (2017a) with \\pi_{\\rm LVC}(H_{0})\\propto 1/H_{0}. Therefore,
+
+p(\\iota,H_{0}|\\vec{d}_{\\rm GW},\\vec{d}_{H_{0}}) \\propto \\pi_{\\rm LVC}(\\iota)p(H_{0}|\\vec{d}_{H_{0}})p(\\vec{d}_{\\rm GW}|H _{0},\\iota)  \\propto p(\\iota,H_{0}|\\vec{d}_{\\rm GW})\\frac{p(H_{0}|\\vec{d}_{H_{0}})}{ \\pi_{\\rm LVC}(H_{0})}, where p(H_{0}|\\vec{d}_{H_{0}}) is the distribution of H_{0} inferred from independent observations.
+
+Figure 1 shows the posterior on \\iota re-weighted by the H_{0} measurements from DES Collaboration et al. (2017). Specifically, we re-weighted the data from Abbott et al. (2017a) by the ratio p(H_{0}|\\vec{d}_{H_{0}})/\\pi_{\\rm LVC}(H_{0}). We approximated the DES measurement p(H_{0}|\\vec{d}_{H_{0}}) as a normal distribution with mean 67.3 km/s/Mpc and standard deviation 1.1 km/s/Mpc. The inclination angle \\iota is constrained to be 18\\pm 8 degrees with a 90%-confidence upper limit of 28 degrees.
+
+If instead the combined H_{0} value from five measurements is used (DES Collaboration et al., 2017), approximated as a normal distribution with mean 69.0 km/s/Mpc and standard deviation 0.5 km/s/Mpc, we obtain an inclination angle \\iota=20\\pm 8 degrees with a 90%-confidence upper limit of 30 degrees. These constraints are summarized in table 1.
+
+Our constraint on low inclination angles is not informative: as \\iota\\to 0, the inferred posterior probability distribution on \\iota is consistent with the prior, p(\\iota)\\propto\\sin\\iota, which disfavors very small inclination angles. Pian et al. (2017) point out that the a priori probability for \\iota<26 degrees is only 10% 1. However, as pointed out by Guidorzi et al. (2017), low values of \\iota are ruled out by electromagnetic observations, which indicate that the Earth is neither in the jet nor too close to the jet, given the \\gtrsim 10-day delay times before X-ray and radio afterglows were detected (Troja et al., 2017; Hallinan et al., 2017).
+
+Footnote 1: The a priori probability for \\iota<26^{\\circ} rises to 30% if selection effects from gravitational-wave searches are included, due to mild on-axis beaming of gravitational waves.
+
+## 3. Discussion
+
+The DES Collaboration et al. (2017) and Planck Collaboration et al. (2016) values of the Hubble constant are significantly lower than the value inferred from type Ia supernova and the local distance ladder, H_{0}=73.24\\pm 1.74 km/s/Mpc (Riess et al., 2016). The latter value would yield \\iota=25\\pm 8 degrees with a 90%-confidence upper limit of 35 degrees. However, while the Planck value is based on cosmic microwave background measurements and its discrepancy with the Riess et al. (2016) value could conceivably be due to a failing of the standard \\Lambda CDM cosmology, the DES value is ultimately based on low-redshift galaxy clustering and weak lensing observations, but without the potential systematics inherent in calibrating a distance ladder.
+
+The peculiar velocity of NGC 4993 relative to the Hubble flow can affect the conversion of its redshift into distance. Abbott et al. (2017a) consider a variation in which the uncertainty on the peculiar velocity is increased to 250 km/s from the nominal 150 km/s; this has virtually no effect (see their extended table 1). We also consider a systematic shift in the peculiar velocity by 100 km/s in addition to this velocity uncertainty. This corresponds to a 3% shift in the velocity, and hence a 3% change in the distance for a given value of H_{0}. The resulting 3% shift in \\cos\\iota could move the 90% upper limit on \\iota from 28 to 31 degrees.
+
+Our maximum inclination angle constraint is significantly tighter than the constraint from gravitational-wave measurements alone, less than 55 degrees at 90% confidence (Abbott et al., 2017c)2. This complementary constraint can aid in the interpretation of the electromagnetic transient associated with this binary neutron star merger. In particular, it strongly limits the available parameter space for models of observed electromagnetic signatures, ruling out several proposals. For example, we can rule out the preferred model of Kim et al. (2017), which explains radio observations by appealing to an observing angle of 41 degrees. The preferred 'top-hat' jet model of Lazzati et al. (2017) with the same observing angle can also be ruled out, though their structured jet model is consistent with the inclination constraint presented here. The model of Evans et al. (2017), which prefers an observing angle of \\approx 30 degrees, is only marginally consistent with the maximum allowed inclination value. The models of Nicholl et al. (2017); Troja et al. (2017); Alexander et al. (2017); Margutti et al. (2017); Perego et al. (2017); Mooley et al. (2017) are consistent with the constraint presented here for only part of their parameter space; adding this additional constraint could allow for more precise estimates of other free parameters in these models. Other models consistent with the maximum inclination value presented here include Haggard et al. (2017); Fraija et al. (2017).
+
+Footnote 2: A similar constraint to the one obtained here was made by assuming the Planck value of H_{0} by Abbott et al. (2017c).
+
+As another example application, we can translate the threshold on \\iota into a constraint on the jet energy and the density of the surrounding material. The afterglow peak is expected at
+
+t_{\\rm peak}\\sim 70\\left(\\frac{E}{10^{51}\\,{\\rm erg}}\\right)^{1/3}\\left(\\frac{ n}{1\\,{\\rm cm^{-3}}}\\right)^{-1/3}\\theta_{\\rm obs}^{2}\\ \\,{\\rm days}  after the merger (Granot et al., 2017), where E is the jet kinetic energy, n is the interstellar medium density, and \\theta_{\\rm obs} is the observing angle in radians. We assume that the jet is perpendicular to the binary's orbital plane, so
+
+\\begin{table}
+
+\\begin{tabular}{l r r} H_{0} source & H_{0} [km s{}^{-1} Mpc{}^{-1}] & \\iota [degrees] \\\\ \\hline DES-onlya  & 67.2^{+1.2}_{-1.0} & 18\\pm 8 (28) \\\\ DES+v_{\\rm pec}b  & & (31) \\\\ Combineda  & 69.1^{+0.4}_{-0.6} & 20\\pm 8 (30) \\\\ SHoESc  & 73.24\\pm 1.74 & 25\\pm 8 (35) \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1The inferred value of the inclination angle \\iota (with 90% upper limits in parentheses) for each of the H_{0} observations as described in the text.
+
+\\theta_{\\rm obs}=\\iota. The constraint on \\iota provided here then yields
+
+\\frac{E}{10^{50}\\,{\\rm erg}}\\frac{10^{-4}\\,{\\rm cm}^{-3}}{n}\\gtrsim\\left(\\frac{t_ {\\rm peak}}{170\\,{\\rm days}}\\right)^{3}\\left(\\frac{\\iota}{28^{\\circ}}\\right)^{- 6}. 
+
+The isotropic-equivalent energy of the jet, E_{\\rm iso}\\sim 2E/\\theta_{0}^{2} where \\theta_{0} is the jet opening angle, has been observed to range from 3\\times 10^{49} to 3\\times 10^{52} erg, while the inferred circum-merger density n ranges from \\sim 10^{-4} to \\sim 1 cm{}^{-3} in on-axis events (Fong et al., 2015). The jet opening angle has been estimated from jet breaks and from the requirement of matching short gamma ray bursts rates to binary neutron star merger rates to be \\theta_{0}\\sim 10^{\\circ}(Fong & Berger, 2013; Fong et al., 2015). Therefore, the observations of a continuing afterglow lasting beyond 100 days after the merger (Mooley et al., 2017; Ruan et al., 2017; Levan et al., 2017; Lazzati et al., 2017) indicate that the merger happened in a very low-density environment, n\\lesssim 10^{-4} cm{}^{-3}. Alternatively, they could indicate that there is limited or no sideways expansion of the jet, which would increase the peak time for a given choice of E and n by a factor of (\\theta_{\\rm obs}/\\theta_{0})^{2/3} relative to Eq. (4), therefore relaxing the constraint on the maximum n obtained here by a factor of (\\theta_{\\rm obs}/\\theta_{0})^{2}; even then, the rise of the afterglow should not extend beyond \\sim 550 days after merger for n\\gtrsim 10^{-4} cm{}^{-3}.
+
+We thank Christopher Berry, Jens Hjorth and Nial Tanvir for useful discussions. We particularly thank Will Farr for contributing to the formulation of this work; unfortunately, he did not wish to be an author because of restrictions required by the LIGO Scientific Collaboration policies. IM is partially supported by STFC.

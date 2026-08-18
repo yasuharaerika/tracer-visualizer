@@ -1,0 +1,317 @@
+###### Abstract
+
+We present the first numerical simulations that track the evolution of a black hole-neutron star (BH-NS) merger from pre-merger to r\\gtrsim 10^{11} cm. The disk that forms after a merger of mass ratio q=2 ejects massive disk winds (3--5\\times 10^{-2}\\,M_{\\odot}). We introduce various post-merger magnetic configurations and find that initial poloidal fields lead to jet launching shortly after the merger. The jet maintains a constant power due to the constancy of the large-scale BH magnetic flux until the disk becomes magnetically arrested (MAD), where the jet power falls off as L_{j}\\sim t^{-2}. All jets inevitably exhibit either excessive luminosity due to rapid MAD activation when the accretion rate is high or excessive duration due to delayed MAD activation compared to typical short gamma-ray bursts (sGRBs). This provides a natural explanation for long sGRBs such as GRB 211211A but also raises a fundamental challenge to our understanding of jet formation in binary mergers. One possible implication is the necessity of higher binary mass ratios or moderate BH spins to launch typical sGRB jets. For post-mergeret al., 2015, 2017; Foucart et al., 2015; Kawaguchi et al., 2016; Darbha et al., 2021; Wanajo et al., 2022; Ekanger et al., 2023; Gompertz et al., 2023).
+
+The ability to generate relativistic jets in BH-NS mergers is contingent upon various characteristics of the system, including the mass ratio, BH spin, NS radius, and spin-orbit misalignment of the binary. When the pre-merger BH spins rapidly, the misalignment is modest, the NS is not overly compact, and the mass ratio is not excessively high, a substantial amount of mass remains outside the BH innermost stable circular orbit (ISCO), facilitating the formation of a massive accretion disk around it (Shibata & Uryu, 2006, 2007; Etienne et al., 2008; Rantsiou et al., 2008; Shibata & Taniguchi, 2008, 2011; Duez et al., 2010; Foucart et al., 2011, 2012, 2014, 2017, 2019; Kyutoku et al., 2011, 2013, 2015; Foucart, 2012; Kawaguchi et al., 2015; Fragione, 2021; Hayashi et al., 2021; Sarin et al., 2022; Biscoveanu et al., 2023). As a result, in some cases mass continues to accrete onto the BH following the merger. If the disk brings vertical large-scale magnetic flux to the post-merger BH, the Blandford-Znajek effect leads to formation of a pair of ultra-relativistic collimated outflows, or jets (Blandford & Znajek, 1977).
+
+The properties of the launched jets are influenced by several factors, including the magnetic flux threading the BH, the spin of the post-merger BH, and the mass accretion rate (Blandford & Znajek, 1977; Tchekhovskoy et al., 2011; Tchekhovskoy, 2015). While the BH spin can be inferred from GW observations, the mass accretion rate and the magnetic field structure cannot, motivating the need for numerical simulations to explore these properties. Both the mass accretion rate and the magnetic field threading the BH strongly depend on the disk magnetic configuration (Rosswog, 2007), which, in turn, relies on the amplification of the magnetic field before, during, and shortly after the merger. Various mechanisms have been proposed to generate a strong magnetic field in the context of BNS mergers. One such mechanism is the Kelvin-Helmholtz instability (KHI; Helmholtz 1868; Thomson 1871) in the shear layer between the NSs (Price & Rosswog, 2006). However, in BH-NS mergers, KHI can only occur in the shear between the spiral arm and the disk (Hayashi et al., 2022). Another mechanism involves the magnetorotational instability (MRI) and magnetic winding in the disk. In this case, the amplification of magnetic fields in the disk through the MRI should persist until the fields reach equipartition values, where the typical thermal pressure in the disk corresponds to a magnetic field strength of \\sim 10^{15} G (Kiuchi et al., 2015). We note that both of these amplification processes are highly sensitive to the grid resolution and may not be fully captured in present-day simulations (Kiuchi et al., 2018).
+
+Irrespective of the specific jet properties, it is expected that at least some jets ultimately generate a short gamma-ray burst (sGRB), followed by a multi-band afterglow emission. In a significant fraction of sGRBs (\\sim 25\\%-50\\%; Norris & Gehrels, 2008; Norris et al., 2010), there is evidence of a distinct third X-ray component known as the extended emission (EE; Norris & Bonnell, 2006; Perley et al., 2009), the origin of which is still a subject of debate. One intriguing possibility is that sGRB-EEs originate from late-time fallback accretion of the tidal tail formed by the merger ejecta (Rosswog, 2007), if not suppressed by disk winds (Fernandez et al., 2015, 2017).
+
+In the past decade, significant progress has been made in our understanding of the formation of relativistic jets in BH-NS mergers through numerical simulations (Etienne et al., 2012; Kiuchi et al., 2015; Paschalidis et al., 2015; Ruiz et al., 2018; Hayashi et al., 2022, 2023). However, previous approaches were limited in their ability to track the outflows up to the self-similar expansion radii and investigate the late-time evolution of the disk and relativistic outflows. Furthermore, the structure of the relativistic outflows, which has been shown to be crucial in shaping the afterglow emission in GW170817 (e.g., Alexander et al., 2017; Margutti et al., 2017; Mooley et al., 2018, 2018; Lazzati et al., 2018; Lyman et al., 2018; Troja et al., 2018; Ghirlanda et al., 2019; Lamb et al., 2019), remains unexplored in the context of BH-NS mergers. In this study, we present the first simulations of BH-NS mergers that extend out to radii of r>10^{11} cm by chaining a numerical relativity simulation of a BH-NS merger with a suite of general relativistic magnetohydrodynamic (GRMHD) simulations. By employing this approach, we investigate the launching and evolution of sub- and ultra-relativistic outflows from BH-NS mergers under various magnetic field configurations in the post-merger disk.
+
+## 2 Setup
+
+We simulate, for the first time, the entire dynamical evolution of a compact object merger from the pre-merger phase to the stage where most of the gas reaches homologous expansion. We achieve this by first performing a numerical relativity simulation using the code SpEC (SpEC collaboration, 2023) of the pre-merger until 8 ms post-merger. We remap the output of the simulation to use it as the initial conditions for the GPU-accelerated GRMHD code h-amr(Liska et al., 2022). We then add different configurations of magnetic field and evolve the system for several seconds.
+
+For the merger simulation, we consider optimal binary properties for producing a massive post-merger disk. The binary mass ratio is q=2, where the NS gravitational mass is M_{\\rm NS}=1.35M_{\\odot}, and the BH Christodoulou mass is M_{\\rm BH}=2.7M_{\\odot}. The matter inside the NS is described by the SFHo equation of state (Steiner et al., 2013), and the NS is initially non-spinning. The BH has an initial dimensionless spin a=0.6, aligned with the orbital angular momentum of the binary. We follow the late inspiral of the binary from an initial separation d\\sim 60\\,\\mathrm{km}, the disruption of the NS, and formation of a tidal tail and accretion disk, ending the SpEC simulation 8\\,\\mathrm{ms} after NS disruption. At this time, a baryonic mass of M_{\\mathrm{rem}}=0.17\\,\\mathrm{M}_{\\odot} remains outside of a BH of mass M_{\\mathrm{BH}}=3.80M_{\\odot} and dimensionless spin a=0.86. About \\sim 0.14\\,M_{\\odot} of the baryonic mass is in a nearly Keplerian disk, and \\sim 0.03\\,M_{\\odot} is outside of the disk, with \\sim\\,1--2\\times 10^{-3}\\,M_{\\odot} of which is the unbound tidal tail. The remaining matter has average temperature \\langle T\\rangle=4\\,\\mathrm{MeV} and electron fraction \\langle Y_{e}\\rangle=0.06.
+
+The SpEC simulation is performed by evolving Einstein's equations in the generalized harmonics formalism (Lindblom et al., 2006) coupled to the relativistic hydrodynamics equations and a Monte-Carlo scheme for neutrino radiation transport (see Duez et al., 2008; Foucart et al., 2013; Foucart et al., 2021, for a description of the numerical methods in SpEC). The SpEC simulations are performed with a resolution \\Delta x=190\\,\\mathrm{m} on the finest finite difference grid used to evolve the fluid equations. After the merger, that finite difference grid uses adaptive mesh refinement (AMR) with six nested blocks. Each block has 252^{3} grid cells, with the grid spacing increasing by a factor of 2 between nested blocks. Thus, the outermost block has sides of length L\\sim 1500\\,\\mathrm{km}, sufficient to follow the ejected matter to the end of the SpEC simulation: the total mass loss at the outer boundary over the course of our simulation is less than 10^{-3}\\,M_{\\odot}. Given the low impact of neutrino transport on the inspiral, disruption, and early post-merger evolution, our Monte-Carlo scheme uses only 10^{6} packets per neutrino species, yet each packet has energy \\lesssim 2\\times 10^{-11}M_{\\odot}c^{2}. The Monte-Carlo radiation transport here is mostly useful to follow the evolution of the post-merger disk composition in preparation for future post-merger simulations including neutrino transport.
+
+At 8\\,\\mathrm{ms} after the merger, the space-time metric is approximately axisymmetric and hardly changes, allowing us to remap the output to h-amr, which works with a fixed space-time metric (see Appendix A). Upon remmapping, we modify the equation of state from tabulated to ideal gas. We consider five models with different seed magnetic field strengths and geometries, which are summarized in Table 1. The magnetic field depends on the mass density distribution at 8\\,\\mathrm{ms}, with a cutoff at 5\\times 10^{-4} of the maximum comoving density, \\rho. Poloidal magnetic field models, P_{s}, P_{c}, and P_{w}, with "strong", "canonical", and "weak" magnetic field strengths, respectively, are all initialized with a poloidal magnetic field configuration with varying \\beta_{p}\\equiv p_{g}/p_{m}, where p_{g} is the thermal pressure, and p_{m} is the magnetic pressure, and Table 1 gives typical \\beta_{p} values. The toroidal strong magnetic field model, T_{s}, is initialized with a toroidal magnetic field, and the model H_{0} has no magnetic field.
+
+We now provide more information on the magnetic field structure of the models. The model P_{w} has a characteristic initial \\beta_{p}=1000 and a large field loop set using a magnetic field potential A_{\\varphi}\\propto\\rho^{2}r^{3}. The models P_{c} and P_{s} have the same initial field geometries, set by A_{\\varphi}\\propto\\rho, with a characteristic \\beta_{p} set to 1000 and 100, respectively. The model T_{s} is initialized with a rather strong toroidal field with characteristic \\beta_{p}=1 and A_{\\theta}\\propto\\rho. Figure 6 in Appendix A gives the initial \\beta_{p} profiles. If jets are launched, their initial magnetization, set by the density floor conditions, is \\sigma_{0}\\equiv b_{0}^{2}/4\\pi\\rho_{0}c^{2}=150, where b_{0} is the initial comoving magnetic field strength, and \\rho_{0} is the initial comoving mass density. This is the first time that such high initial magnetizations are explored in the context of binary mergers.
+
+In h-amr, we employ a relativistic gas equation of state, p_{g}=(\\gamma-1)u_{g}, where p_{g} and u_{g} are the gas pressure and internal energy densities, and \\gamma=4/3 is the adiabatic index. We emphasize that this equation of state and the lack of neutrino cooling may alter the outflows, particularly during the first few hundred ms, as we discuss later. The grid in spherical-polar coordinates is uniform in \\log r, \\theta and \\varphi, extending from r=r_{g} to r=10^{6}\\,r_{g}, where r_{g}=GM_{\\mathrm{BH}}/c^{2} is the BH gravitational radius. The base grid resolution is N_{r}\\times N_{\\theta}\\times N_{\\varphi}=384\\times 96\\times 96 cells. Using static mesh refinement, we double the base resolution (quadruple in model T_{s}) in all dimensions at 4<r/r_{g}<100. The higher resolution in the disk compared to the immediate vicinity of the BH allows our simulations to resolve the wavelength of the fastest-growing MRI mode (Balbus and Hawley, 1991). We verify this by calculating the MRI quality factor Q_{f}, which gives the number of cells per the MRI wavelength, and find that Q_{f}\\gg 30 in all models, significantly higher than the Q_{f}\\sim 10 required for resolving MRI (Hawley et al., 2011). We conduct a resolution convergence test in Appendix B. We also employ three levels of AMR in the relativistic outflows, by requiring
+
+\\begin{table}
+
+\\begin{tabular}{|c|c c c c|c c|} \\hline Model & A & \\beta_{p} & \\log(B\\,[\\mathrm{G}]) & t_{f}\\,[\\mathrm{s}] & M_{\\mathrm{ej}}\\,[10^{-2}\\,M_{\\odot}] & t_{b}\\,[\\mathrm{s}] \\\\ \\hline H_{0} & A=0 & - & - & 8 & 3 & - \\\\ P_{w} & A_{\\varphi}\\propto\\rho^{2}r^{3} & 1000 & 15 & 5 & 3 & 0.3 \\\\ P_{c} & A_{\\varphi}\\propto\\rho & 1000 & 15.3 & 5 & 3 & 0.1 \\\\ P_{s} & A_{\\varphi}\\propto\\rho & 100 & 15.8 & 1.8 & 5 & 0.05 \\\\ T_{s} & A_{\\theta}\\propto\\rho & 1 & 16.5 & 4 & 4 & 4 \\\\ \\hline \\end{tabular}
+
+\\end{table}
+
+Table 1: A summary of the models’ parameters. The model names stand for hydrodynamic (H), poloidal (P), or toroidal (T) initial magnetic fields, with the subscripts indicate the strength of the field: zero (0), weak (w), canonical (c), or strong (s). A is the vector potential, \\beta_{p} is the characteristic gas to magnetic pressure ratio, B is the characteristic initial magnetic field in the disk, t_{f} is the final time of the simulation with respect to the merger, M_{\\mathrm{ej}} is the amount of unbound ejecta at the homologous phase, and t_{b} is the breakout time of the relativistic outflow from the disk winds. that both the jet and the cocoon are resolved at all radii by at least 96 cells each, based on their opening angle calculated using the magnetization criterion (see details in Gottlieb et al. 2022a). Overall, at the highest refinement level, the effective resolution in the grid is 3072\\times 768\\times 768 cells.
+
+## 3 Jet Launching
+
+Within a few milliseconds after the merger, an accretion disk with a nearly Keplerian rotation profile forms around the BH resulting from the merger. We investigate the impact of introducing different magnetic field configurations in the disk. In all models considered, the initial magnetic flux threading the BH at early times is insufficient to lead to a dynamically important magnetic flux and the magnetically arrested disk (MAD) state (Bisnovatyi-Kogan & Ruzmaikin, 1974, 1976; Narayan et al., 2003; Igumenshchev et al., 2003; Igumenshchev, 2008; Tchekhovskoy et al., 2011). During this early stage, accretion onto the BH is primarily driven by the MRI within the disk. As a result, the presence of magnetic fields enhances the accretion rate compared to unmagnetized disks, where only hydrodynamic instabilities are present. After a brief period of t\\lesssim 10 ms, the availability of gas for accretion becomes more limited in magnetized disks. Consequently, the accretion rate declines rapidly, following a power-law of \\dot{M}\\propto t^{-2}, as seen in Figure 1(a), and consistent with simulations that included a neutrino leakage scheme (e.g., Fernandez et al., 2015, 2017, 2019; Christie et al., 2019; Hayashi et al., 2022). Most of the accreted matter originates in the post-merger disk, which is \\sim 0.8M_{\\rm rem}. The decline in the accretion rate for magnetized disks is faster than the case of a purely hydrodynamic disk, where \\dot{M}\\propto t^{-1}, driven by shocks between spirals in the disk (see Appendix C).
+
+Figures 1(b,c) depict the progressive amplification of the dimensionless magnetic flux on the BH and of the jet launching efficiency owing to the reduction in the mass accretion rate. Once the dimensionless flux reaches saturation at \\phi\\approx 50, the disk transitions to a MAD state (Tchekhovskoy et al., 2011; Tchekhovskoy, 2015). Concurrently, the BH achieves its maximum jet launching efficiency of \\eta\\approx 0.9, consistent with the expected behavior for a BH spin of a=0.86(Lowell et al., 2023).
+
+Fig. 1(d) shows the jet power, defined as
+
+L_{j}=\\int_{r_{g}}\\sqrt{-g}(-T_{t}^{r}-\\rho u^{r})c^{2}\\mathrm{d}\\theta\\mathrm{ d}\\varphi,  and considering only fluid elements with \\sigma>1, where g is the metric determinant, T_{t}^{r} denotes the radial energy flux density expressed in terms of the stress-energy tensor T, and u^{\\mu} is the four-velocity such that \\rho u^{r} represents the radial mass-energy flux density. The jet luminosity can also be expressed through the efficiency \\eta as L_{j}=\\eta\\dot{M}c^{2}. As the accretion rate decreases and the jet efficiency increases, the jet power remains relatively constant: this is primarily due to the approximate constancy of the large-scale vertical BH magnetic flux, which controls the jet power. The first model to reach a MAD state is P_{s}, where the initial magnetic field corresponds to the strongest poloidal field, and the disk becomes MAD less than a second after the merger. Eventually, the dimensionless magnetic flux, \\phi, and jet efficiency, \\eta, reach and remain saturated at their asymptotic MAD values. As a result, the jet power begins to decay, following a power-law of L_{j}\\propto\\dot{M}\\propto t^{-2}. In our simulations with magnetic fields, all disks eventually reach a MAD state within several seconds, marking the end of the jet (see Tchekhovskoy and Giannios 2015, who explored a similar idea in the context of long GRBs). Disks with weaker initial magnetic fields take longer to reach the MAD state compared to those with stronger initial fields (see also Christie et al. 2019; Fernandez et al. 2019). Of particular interest is the simulation with initial toroidal field T_{s}, which requires efficient dynamo process to form a global poloidal field and generate relativistic outflows. The ongoing dynamo process also results in higher variability in the jet launching efficiency compared to the initially poloidal field configurations. Consequently, although its initial \\beta_{p} is the highest, the jet forms last compared to the initial poloidal configurations, and has to punch through more massive winds.
+
+Interestingly, putting the above another way, we find that either the jet is too luminous (in model P_{s}), or its launching process is too long (in all other models) compared to typical sGRBs. In order for jets to be consistent with the observed jet power, they cannot be too luminous, i.e., they have to reach maximum efficiency only after the accretion rate drops substantially from \\dot{M}\\sim M_{\\odot}\\,\\rm s^{-1}. However, this necessarily requires the jet launching to be longer than a typical sGRB duration of \\lesssim 1\\,\\rm s. We stress that the exclusion of the alpha recombination effect in our simulations is unlikely to impact this conflict. The reason is that these factors only start to influence the mass accretion rate after the neutrino luminosity decreases at t\\sim 0.5\\,\\rm s, shifting the accretion rate from \\dot{M}\\sim t^{-2} to \\dot{M}\\sim t^{-3}(Haddadi et al., 2023). As a result, their impact on the jet luminosity is negligible within the typical duration of sGRBs, t\\lesssim 1\\,\\rm s.
+
+A similar challenge of excessive jet power was recently found for long GRBs in collapsars and can be resolved by the requirement that the BH is slowly spinning, such that the jet power is reduced to reduce the tension with that of long GRBs (Gottlieb et al., 2023). However, in BH-NS mergers, low spin BHs cannot resolve the problem. The reason is that low post-merger BH spins require low angular momentum in the merger, such that the NS is not disrupted to form a post-merger disk, and hence there are no jets. However, a low pre-merger BH spin (which would increase after the merger) or a higher mass ratio would reduce the disk mass to \\sim 10^{-3}\\,M_{\\odot} and subsequently the accretion rate. If the post-merger evolution scales with the disk mass, model P_{s} would yield a jet with a typical sGRB power and duration. Similar but weaker effects can also be caused by a tilt angle of the binary orbit. Nonetheless, higher BH spins, such as the one in this study, may provide a natural explanation for the origin of the recent detection of sGRB 211211A (e.g., Rastinejad et al. 2022; Troja et al. 2022; Yang et al. 2022). This event featured bright kilonova emission, as expected from the large debris of high BH spins, and a \\sim 10 s burst. We leave a full investigation of the GRB characteristics as a function of the magnetic field configuration to follow-up work.
+
+Our results exhibit similarities to those presented in Hayashi et al. (2022, 2023), where the magnetic field evolved self-consistently from the disrupted NS. This implies that the observed behavior is not a consequence of our choice of the post-merger magnetic field. Once the jet forms within \\sim 1\\,\\rm s, it maintains a relatively constant jet luminosity, indicating an increasing efficiency. Hayashi et al. (2023) reported that the disk does not reach a MAD state, and their figure 17 demonstrates that the dimensionless magnetic flux has not yet reached saturation at a value of \\phi\\approx 50. A longer integration can lead to the attainment of a MAD state, at which point a decline in jet luminosity will follow, as observed in our study. Initial toroidal fields necessitate stronger magnetization to generate sufficiently robust poloidal flux through the dynamo process early on (Christie et al., 2019). This may also elucidate why Ruiz et al. (2018); Most et al. (2021); Gottlieb et al. (2022) did not find evidence of relativistic jets when the initial magnetic flux has a toroidal configuration with \\beta_{p}\\gtrsim 10, as the time over which a poloidal field is generated will be longer than the simulation time for such relatively high \\beta_{p} values.
+
+## 4 Sub and mildly relativistic outflows
+
+Figure 2(a) illustrates the quantities of bound (solid lines) and unbound (dashed lines) mass, as determined by the Bernoulli parameter criterion -(h+\\sigma)u_{t}>1, where h=1+4p_{g}/\\rho c^{2} is the specific enthalpy, and u_{t} is the covariant time-component of the four-velocity vector. In comparison to our hydrodynamic model H_{0}, all of our models incorporating magnetic fields exhibit stronger outflows that emerge early on due to the combined effects of the MRI in the disk and strong relativistic outflows, with stronger magnetic fields resulting in earlier and more substantial ejections of mass. However, we note that the difference in the final amount of unbound mass is comparable to the difference at the onset of the GRMHD simulation between strongly and weakly magnetized disks (see also Hayashi et al. 2022). This implies that introducing strong initial magnetic fields induces a firm relaxation and unbinds the highly magnetized fluid promptly. Consequently, without further investigation, we cannot definitively confirm whether the variations in the unbound mass are physical. In unmagnetized disks, the low accretion rate sustains a heavier disk, which may explain the ejection of more massive outflows compared to weakly magnetized disks, as shown by the asymptotic behavior of the unbound ejecta in Fig. 2(a). Similar to accretion, the origin of the outflows in model H_{0} is the shocks generated by the interaction between spiral density waves in the disk (see Appendix C).
+
+The ejecta mass in all models reaches its asymptotic value by the end of the simulations, \\sim 3--5\\times 10^{-2}\\,M_{\\odot}, as indicated by the asymptotic behavior of the unbound mass. Of particular interest is the fate of the tidal tail. Figure 2(b) shows a 3D rendering at small distance from the BH in model P_{c}, demonstrating that the tidal tail is composed of bound and unbound (extended yellow component on the right) components. All models feature a similar behavior of the tidal tail. The innermost part of the bound component merges with the disk at early times, slightly increasing the disk mass. The unbound component ultimately influences the kilonova composition (see e.g., Fernandez et al., 2017). We find no evidence for late fallback accretion, as all models exhibit a smooth power-law decline in the mass accretion rate (Fig. 1(a)). However, in the absence of neutrino cooling, heavy nuclei, and radioactive heating (e.g., Desai et al., 2019; Haddadi et al., 2023), we cannot preclude a definitive conclusion regarding late-time fallback of the tail. In a recent study, Metzger and Fernandez (2021) found that marginally bound tail progressively falls back into the disk, but it quickly becomes unbound due to its inability to efficiently cool down. If indeed the bound tail fails to reach the BH, hindering the increase in mass accretion rate, the activation of the sGRB-EE by the tidal tail (Metzger et al., 2010) is improbable.
+
+Figure 2(b) also portrays the preeminent initiation of disk winds compared to the emergence of the relativistic jets. This indicates that the trajectory of the jet intersects with the disk winds, resulting in the formation of a layer of shocked cocoon. Consequently, the presence of dynamical ejecta is not a prerequisite for cocoon formation, suggesting that cocoons accompany all jets (see also Gottlieb et al., 2022). The emission from the cocoon spreads across wide viewing angles and could have a noteworthy impact on BH-NS mergers, similar to its influence in the BNS merger GW170817. In a companion paper Gottlieb et al. (2023), we perform a detailed calculation of the early near-UV/optical emission. We find that the cocoon generates a bright signal, exhibiting an absolute magnitude of M_{\\rm AB}\\approx-15 for a few hours after the merger. In future work, we will investigate the effect of neutrino cooling on the timing and amount of disk wind mass ejecta.
+
+## 5 Relativistic outflows
+
+Figure 3 displays the final snapshot of the simulations, capturing a 3D rendering of the four models characterized by magnetic fields that generate relativistic outflows. All models exhibit disk winds (red-yellow), which are shocked by the relativistic jets (light blue) to form a hot cocoon (dark blue). We find that all jets wobble, similar to collapsar jets (Gottlieb et al., 2022), but to a lesser extent with a tilt angle of
+
+\\theta_{t}\\sim 5^{\\circ}-10^{\\circ}. The jet opening angle increases over time due to weaker collimation by the disk winds (see also Hayashi et al., 2022, 2023). In all simulations, the jet head is relativistic, so that its evolution follows the solution of jet propagation in the static media regime (Gottlieb and Nakar, 2022).
+
+Figure 4(a) shows the evolution of the jet power as a function of the distance from the BH. The solid lines represent the jet power on the horizon, r_{s}=r_{\\rm H}=r_{g}(1+\\sqrt{1-a^{2}}), where a is the BH spin, which is identical to Fig. 1(d). The dashed (dash-dotted) lines depict the jet power at r_{s}=10^{10}\\,\\rm cm (r_{s}=3\\times 10^{10}\\,\\rm cm). To facilitate comparison, the x-axis represents the retarded time t-r_{s}/c, ensuring that ultra-relativistic elements appear at the same time. Initially, the jet undergoes stronger interactions with the disk winds, leading to a reduction in jet power with increasing r. This effect is particularly pronounced in model T_{s}, where the early-time jets are weak due to the absence of a global poloidal field. For initial poloidal configuration, it shows that as time progresses, the interaction between the jet and the winds weakens, allowing the jets to retain their power as they propagate. This result suggests that for such jets, the power on the horizon may provide a good indication of the time evolution of the jet power close to the emission zone. However, it is still necessary to consider the emission mechanism and radiative efficiency to draw conclusions about the GRB emission.
+
+For the toroidal initial magnetic field configuration, model T_{s}, there is an initial jet launching owing to random poloidal loops that are generated by the dynamo process. Magnetic reconnection leads to a quiet episode before the launch of a steady jet when the dynamo process generates a sufficiently strong global poloidal field, as seen in Fig. 1(d). This picture is similar to the BH model suggested by Kisaka and Ioka (2015), however here the initial jet is too weak to survive the interaction with the disk winds. By the time the steady jet is launched, it needs to interact with more massive ejecta for a longer duration, leading to a loss of jet power and greater deposition of energy into the cocoon. In fact, when the jet is launched, most of the ejecta is already positioned along its trajectory, resulting in the jet encountering an isotropic equivalent mass of \\sim 5\\times 10^{-2}\\,M_{\\odot}. The jet ultimately escapes from the ejecta after several seconds, consistent with the theoretical predictions for typical sGRB power in such ejecta (Gottlieb et al., 2021; Gottlieb and Nakar, 2022). If typical sGRB jets break out within \\sim 1 second (Moharana and Piran, 2017), this may necessitate some poloidal component to already be present at the time of the merger in order to produce typical sGRBs. On the other hand, such jets can explain long-duration sGRBs such as GRB 211211A. Furthermore, if a long delay between the GW signal and the GRB prompt emission is observed, this may imply that the post-merger magnetic field is predominantly toroidal.
+
+Figure 4(b) depicts the angular distributions of the isotropic equivalent energy in different models, defined as
+
+E_{\\rm iso}(\\theta)=2\\frac{\\rm d}{\\rm{dcos}\\theta}\\int_{0}^{\\infty}\\int_{0}^{ \\theta}\\int_{0}^{2\\varphi}\\sqrt{-g}(-T_{t}^{t}-\\rho u^{f})c^{2}r^{2}\\rm{sin} \\theta dr\\theta^{\\prime}d\\varphi. 
+
+In the absence of (or for negligible) magnetic fields in the disk (model H_{0}), the outflow exhibits a quasi-isotropic distribution with a slight excess of energy along the equatorial plane due to disk winds. The introduction of large-scale magnetic fields triggers the formation of relativistic jets, causing a redistribution of the gas. In our canonical model P_{c} and a similar field configuration in model P_{w}, the energy decreases away from the polar axis, following a power-law E_{\\rm iso}\\sim\\theta^{-2}. This structure features more energy in the cocoon compared to the one emerging when an idealized torus is assumed (model V in Gottlieb et al., 2022), or purely hydrodynamic and weakly magnetized jets (Gottlieb et al., 2020, 2019). We find modifications in this structure when strong initial fields are present. In model P_{s}, the jet power significantly exceeds the rest mass energy of the local ejecta, resulting in a weakly collimated jet, as can also be seen in Fig. 3. Consequently, the energy distribution follows E_{\\rm iso}\\sim\\theta^{-1} up to the characteristic angle of the relativistic outflows at \\theta\\approx 0.5\\,rad. In model T_{s}, the energy deposition of the jet into the cocoon results in a wider distribution of energy at larger angles at the expense of energy along the pole.
+
+Figure 4(c) presents the cumulative magnetic energy fraction out of the total energy. We show here for the first time that sGRB jets maintain a significant reservoir of magnetic energy far from the launching point, with E_{\\rm iso}\\sim 10^{50}-10^{52}\\,erg{}^{*}. Such substantial magnetic energy implies that magnetic processes, such as magnetic reconnection and/or synchrotron emission, play a crucial role in the emission of sGRBs. This finding is novel, as previous first-principles simulations of jets in binary mergers have not considered the launch of highly magnetized jets with \\sigma_{0}>100. While Gottlieb et al. (2022) investigated such highly magnetized jets in the context of collapsars, the dense stellar envelope in those scenarios led to significantly stronger interactions between the jet and the medium, resulting in a low asymptotic magnetization of \\sigma\\sim 0.1.
+
+## 6 Conclusions
+
+We performed the first BH-NS simulations that track the merger evolution from the pre-merger phase to the homologous expansion of the outflows at distances r>10^{11}\\,cm. To achieve this, we employed a technique where we remapped numerical relativity simulations to 3D GRMHD simulations at 8 ms after the merger, as the metric does not undergo significant changes beyond that point. The properties of the binary system, including a mass ratio of q=2, a high post-merger BH spin of a=0.86, and an aligned spin-orbit configuration, favor the presence of a large mass reservoir outside the ISCO, facilitating efficient jet launching. We investigated the formation of outflows for various configurations of magnetic fields in the post-merger accretion disk.
+
+We found that in all configurations, the large-scale vertical magnetic flux accumulated on the BH does not become dynamically important right away and, hence, the accretion disk does not immediately enter a MAD state after the merger. Instead, the magnetic flux quickly accumulates and remains approximately constant on the BH thereafter, \\Phi\\approx constant. As \\dot{M} decreases, the dimensionless magnetic flux \\phi\\propto\\Phi/\\dot{M}^{1/2} gradually grows on the BH, leading to an increase in jet efficiency, \\eta=L_{j}/\\dot{M}c^{2}\\propto\\phi^{2}. Simultaneously, the constancy of \\Phi results in a constant jet power, L_{j}\\propto\\Phi^{2}\\approx constant. Stronger initial fields lead to more luminous jets and reach MAD onset faster. Eventually, all disks reach the MAD state within several seconds, at which point the magnetic flux becomes too strong to all stay on the BH, and both \\Phi\\propto\\dot{M}^{1/2} and the jet power L_{j}\\propto\\Phi^{2}\\propto\\dot{M} begin to drop, such that the dimensionless magnetic flux and jet efficiency remain at the MAD level, \\Phi/\\dot{M}^{1/2}\\propto\\phi\\approx 50 and \\eta=L_{j}/\\dot{M}c^{2}\\approx 1, respectively. Thus, the onset of the MAD state marks the end of a sGRB jet. This picture can be tested observationally as it has a clear observational signature at the end of the sGRB signal, L_{j}\\sim\\dot{M}\\sim t^{-2}.
+
+While it has been speculated that BH-NS mergers produce less ejecta outside of the equatorial plane compared to BNS mergers, our simulations demonstrate that a significant amount, \\sim 20\\%-30\\% of the total baryonic mass outside of the ISCO at the time of the merger, \\sim 3--5\\times 10^{-2}\\,M_{\\odot}, is ejected after the merger due to heating from disk turbulence. Stronger magnetic fields have the capability to unbind a larger amount of merger debris through stronger MRI heating, resulting in a greater reservoir of ejecta. It should be noted that this result is specific for our configuration, which produces a massive torus similar to that in BNS mergers. The disk mass is anticipated to be substantially smaller for lower BH spins or higher binary mass ratios, and can also be reduced by neutrino cooling. Since the cocoon is generated during the jet-wind interaction, a less massive disk would lead to a weaker wind and lighter cocoon. However, the angular structure of the cocoon seems to be independent of the cocoon energy (see for comparison Gottlieb et al., 2020, 2021, 2022b). In the future, we will investigate how neutrino cooling affects the mass of the disk wind ejecta.
+
+While revealing a notable interaction between the jet and polar disk winds, the simulations show that the jet elements manage to preserve the majority of their energy while propagating away from the BH. The stability of the jet is further demonstrated by the presence of a large reservoir of magnetic energy far from the BH, r>10^{10}cm. Using an initially ultra-high magnetization of \\sigma_{0}=150, we showed for the first time that at least a few percent of the total jet energy exists at \\sigma\\gg 1, highlighting the significance of magnetic processes in the sGRB prompt emission mechanism. Future work will investigate the implications of this result for the emission mechanisms in greater detail. Despite the jet successfully retaining its energy, the interaction of the jet with the disk winds inevitably inflates a hot cocoon, implying that cocoon formation is not conditional to the presence of dynamical ejecta. The jet-cocoon structure features an angular profile of the outflow isotropic equivalent energy that is consistent with a power-law distribution. The cocoon may have a crucial role in the detection of electromagnetic counterparts in BH-NS mergers, similar to its significance in BNS mergers. In a companion paper Gottlieb et al. (2023b), we present evidence that the cocoon generates a remarkably bright near-UV/optical signal a few hours after the merger.
+
+In cases where the magnetic field configuration in the post-merger disk is purely toroidal, the dynamo process generates a poloidal field and operates for \\sim 1 s before launching a steady jet, depending on the field strength. During this initial period, only weak jets emerge from the BH, encountering increasing amounts of polar ejecta generated by disk winds. By the time the steady jet is launched, it becomes heavily contaminated by baryonic matter from the polar ejecta. As a result, the jet loses a significant portion of energy, which is redistributed at wider angles. Eventually, after a few seconds, the jet breaks free from the surrounding ejecta. Consequently, two intriguing possibilities arise: (i) Observation of a long delay between the GW signal and the GRB may indicate that the post-merger disk magnetic field is primarily toroidal, and (ii) A toroidal field configuration may provide some clues regarding the origin of EE: the MAD onset time is inversely proportional to the magnetic field strength. Thus, lowering the magnetic field by an order-of-magnitude compared to the toroidal model T_{s} may give rise to an early jet launch followed by a long (\\sim 50 s) jet launching duration, which might be linked to the sGRB-EE mechanism.
+
+Interestingly, we found that all jets display either excessive luminosity or too long a duration in comparison to typical sGRBs. The underlying reason can be explained as follows: in order for the jets to achieve typical sGRB luminosity, the maximum efficiency needs to be obtained after a significant decrease in the accretion rate. However, achieving this entails a longer duration for the jet launching process than what is typically observed in sGRBs. This behavior is not seen in simulations where the initial conditions are an analytic torus, presumably due to the exclusion of the violent merger, motivating the need for self-consistent simulations from the pre-merger phase. While such long sGRBs may explain the origin of the kilonova-associated long-duration sGRB GRB 211211A, they also introduce a fundamental challenge to our understanding of typical jet formation in all types of binary mergers. This could be alleviated by the requirement that the pre-merger BHs possess moderate spins of a\\gtrsim 0.2 as sug
+
+[MISSING_PAGE_FAIL:10]
+
+* Duez et al. (2010) Duez, M. D., Foucart, F., Kidder, L. E., Ott, C. D., & Teukolsky, S. A. 2010, Classical and Quantum Gravity, 27, 114106, doi: 10.1088/0264-9381/27/11/114106
+
+* Duez et al. (2008) Duez, M. D., Foucart, F., Kidder, L. E., et al. 2008, PhRvD, 78, 104015, doi: 10.1103/PhysRevD.78.104015
+
+* Ekanger et al. (2023) Ekanger, N., Bhattacharya, M., & Horiuchi, S. 2023, arXiv e-prints, arXiv:2303.00765, doi: 10.48550/arXiv.2303.00765
+
+* Etienne et al. (2008) Etienne, Z. B., Faber, J. A., Liu, Y. T., et al. 2008, PhRvD, 77, 084002, doi: 10.1103/PhysRevD.77.084002
+
+* Etienne et al. (2012) Etienne, Z. B., Paschalidis, V., & Shapiro, S. L. 2012, PhRvD, 86, 084026, doi: 10.1103/PhysRevD.86.084026
+
+* Fernandez et al. (2017) Fernandez, R., Foucart, F., Kasen, D., et al. 2017, Classical and Quantum Gravity, 34, 154001, doi: 10.1088/1361-6382/aa7a77
+
+* Fernandez et al. (2015) Fernandez, R., Quataert, E., Schwab, J., Kasen, D., & Rosswog, S. 2015, MNRAS, 449, 390, doi: 10.1093/mnras/stv238
+
+* Fernandez et al. (2019) Fernandez, R., Tchekhovskoy, A., Quataert, E., Foucart, F., & Kasen, D. 2019, MNRAS, 482, 3373, doi: 10.1093/mnras/sty2932
+
+* Foucart (2012) Foucart, F. 2012, PhRvD, 86, 124007, doi: 10.1103/PhysRevD.86.124007
+
+* Foucart et al. (2021) Foucart, F., Duez, M. D., Hebert, F., et al. 2021, Astrophys. J., 920, 82, doi: 10.3847/1538-4357/ac1737
+
+* Foucart et al. (2019) Foucart, F., Duez, M. D., Kidder, L. E., et al. 2019, PhRvD, 99, 103025, doi: 10.1103/PhysRevD.99.103025
+
+* Foucart et al. (2012) --. 2012, PhRvD, 85, 044015, doi: 10.1103/PhysRevD.85.044015
+
+* Foucart et al. (2011) Foucart, F., Duez, M. D., Kidder, L. E., & Teukolsky, S. A. 2011, PhRvD, 83, 024005, doi: 10.1103/PhysRevD.83.024005
+
+* Foucart et al. (2013) Foucart, F., Deaton, M. B., Duez, M. D., et al. 2013, PhRvD, 87, 084006. [https://arxiv.org/abs/1212.4810](https://arxiv.org/abs/1212.4810)
+
+* Foucart et al. (2014) --. 2014, PhRvD, 90, 024026, doi: 10.1103/PhysRevD.90.024026
+
+* Foucart et al. (2015) Foucart, F., O'Connor, E., Roberts, L., et al. 2015, PhRvD, 91, 124021, doi: 10.1103/PhysRevD.91.124021
+
+* Foucart et al. (2017) Foucart, F., Desai, D., Brege, W., et al. 2017, Classical and Quantum Gravity, 34, 044002, doi: 10.1088/1361-6382/aa573b
+
+* Fragione (2021) Fragione, G. 2021, ApJL, 923, L2, doi: 10.3847/2041-8213/ac3bcd
+
+* Ghirlanda et al. (2019) Ghirlanda, G., Salafia, O. S., Paragi, Z., et al. 2019, Science, 363, 968, doi: 10.1126/science.aau8815
+
+* Gompertz et al. (2023) Gompertz, B. P., Nicholl, M., Smith, J. C., et al. 2023, arXiv e-prints, arXiv:2305.07582, doi: 10.48550/arXiv.2305.07582
+
+* Gottlieb et al. (2020) Gottlieb, O., Bromberg, O., Singh, C. B., & Nakar, E. 2020, MNRAS, 498, 3320, doi: 10.1093/mnras/staa2567
+
+* Gottlieb et al. (2023a) Gottlieb, O., Jacquemin-Ide, J., Lowell, B., Tchekhovskoy, A., & Ramirez-Ruiz, E. 2023a, ApJL, 952, L32, doi: 10.3847/2041-8213/acc779
+
+* Gottlieb et al. (2022a) Gottlieb, O., Liska, M., Tchekhovskoy, A., et al. 2022a, ApJL, 933, L9, doi: 10.3847/2041-8213/ac7530
+
+* Gottlieb et al. (2022b) Gottlieb, O., Moseley, S., Ramirez-Aguilar, T., et al. 2022b, ApJL, 933, L2, doi: 10.3847/2041-8213/ac7728
+
+* Gottlieb & Nakar (2022) Gottlieb, O., & Nakar, E. 2022, MNRAS, 517, 1640, doi: 10.1093/mnras/stac2699
+
+* Gottlieb et al. (2021) Gottlieb, O., Nakar, E., & Bromberg, O. 2021, MNRAS, 500, 3511, doi: 10.1093/mnras/staa3501
+
+* Gottlieb et al. (2023b) Gottlieb, O., Issa, D., Jacquemin-Ide, J., et al. 2023b, ApJL, 953, L11, doi: 10.3847/2041-8213/acec4a
+
+* Haddadi et al. (2023) Haddadi, M., Duez, M. D., Foucart, F., et al. 2023, Classical and Quantum Gravity, 40, 085008, doi: 10.1088/1361-6382/ac0c6
+
+* Harris et al. (2020) Harris, C. R., Millman, K. J., van der Walt, S. J., et al. 2020, at, 585, 357, doi: 10.1038/s41586-020-2649-2
+
+* Hawley et al. (2011) Hawley, J. F., Guan, X., & Krolik, J. H. 2011, ApJ, 738, 84, doi: 10.1088/0004-637X/738/1/84
+
+* Hayashi et al. (2022) Hayashi, K., Fujibayashi, S., Kiuchi, K., et al. 2022, PhRvD, 106, 023008, doi: 10.1103/PhysRevD.106.023008
+
+* Hayashi et al. (2021) Hayashi, K., Kawaguchi, K., Kiuchi, K., Kyutoku, K., & Shibata, M. 2021, PhRvD, 103, 043007, doi: 10.1103/PhysRevD.103.043007
+
+* Hayashi et al. (2023) Hayashi, K., Kiuchi, K., Kyutoku, K., Sekiguchi, Y., & Shibata, M. 2023, PhRvD, 107, 123001, doi: 10.1103/PhysRevD.107.123001
+
+* Helmholtz (1868) Helmholtz, H. 1868, Monthly Rep. Royal Prussian Acad. Phil. Berlin, 23, 215
+
+* Igumenshchev (2008) Igumenshchev, I. V. 2008, ApJ, 677, 317, doi: 10.1086/529025
+
+* Igumenshchev et al. (2003) Igumenshchev, I. V., Narayan, R., & Abramowicz, M. A. 2003, ApJ, 592, 1042, doi: 10.1086/375769
+
+* Janka et al. (1999) Janka, H. T., Eberl, T., Ruffert, M., & Fryer, C. L. 1999, ApJL, 527, L39, doi: 10.1086/312397
+
+* Kawaguchi et al. (2015) Kawaguchi, K., Kyutoku, K., Nakano, H., et al. 2015, PhRvD, 92, 024014, doi: 10.1103/PhysRevD.92.024014
+
+* Kawaguchi et al. (2016) Kawaguchi, K., Kyutoku, K., Shibata, M., & Tanaka, M. 2016, ApJ, 825, 52, doi: 10.3847/0004-637X/825/1/52
+
+* Kisaka & Ioka (2015) Kisaka, S., & Ioka, K. 2015, ApJL, 804, L16, doi: 10.1088/2041-8205/804/1/L16
+
+* Kiuchi et al. (2015) Kiuchi, K., Cerda-Duran, P., Kyutoku, K., Sekiguchi, Y., & Shibata, M. 2015, PhRvD, 92, 124034, doi: 10.1103/PhysRevD.92.124034
+
+* Kiuchi et al. (2018) Kiuchi, K., Kyutoku, K., Sekiguchi, Y., & Shibata, M. 2018, PhRvD, 97, 124039, doi: 10.1103/PhysRevD.97.124039
+
+* Kyutoku et al. (2015) Kyutoku, K., Ioka, K., Okawa, H., Shibata, M., & Taniguchi, K. 2015, PhRvD, 92, 044028, doi: 10.1103/PhysRevD.92.044028
+
+* Kyutoku et al. (2013) Kyutoku, K., Ioka, K., & Shibata, M. 2013, PhRvD, 88, 041503, doi: 10.1103/PhysRevD.88.041503
+
+* Kyutoku et al. (2011) Kyutoku, K., Okawa, H., Shibata, M., & Taniguchi, K. 2011, PhRvD, 84, 064018, doi: 10.1103/PhysRevD.84.064018
+
+* Lamb et al. (2019) Lamb, G. P., Tanvir, N. R., Levan, A. J., et al. 2019, ApJ, 883, 48, doi: 10.3847/1538-4357/ab38bb
+
+* Lazzati et al. (2018) Lazzati, D., Perna, R., Morsony, B. J., et al. 2018, PhRvL, 120, 241103, doi: 10.1103/PhysRevLett.120.241103
+
+* Lindblom et al. (2006) Lindblom, L., Scheel, M. A., Kidder, L. E., Owen, R., & Rinne, O. 2006, Classical and Quantum Gravity, 23, S447, doi: 10.1088/0264-9381/23/16/S09* Liska et al. (2022) Liska, M. T. P., Chatterjee, K., Issa, D., et al. 2022, ApJS, 263, 26, doi: 10.3847/1538-4365/ac9966
+
+* Lowell et al. (2023) Lowell, B., Jacquemin-Ide, J., Tchekhovskoy, A., & Duncan, A. 2023, arXiv e-prints, arXiv:2302.01351, doi: 10.48550/arXiv.2302.01351
+
+* Lyman et al. (2018) Lyman, J. D., Lamb, G. P., Levan, A. J., et al. 2018, Nature Astronomy, 2, 751, doi: 10.1038/s41550-018-0511-3
+
+* Margutti & Chornock (2021) Margutti, R., & Chornock, R. 2021, ARA&A, 59, doi: 10.1146/annurev-astro-112420-030742
+
+* Margutti et al. (2017) Margutti, R., Berger, E., Fong, W., et al. 2017, ApJL, 848, L20, doi: 10.3847/2041-8213/aa9057
+
+* Metzger et al. (2010) Metzger, B. D., Arcones, A., Quataert, E., & Martinez-Pinedo, G. 2010, MNRAS, 402, 2771, doi: 10.1111/j.1365-2966.2009.16107.x
+
+* Metzger & Fernandez (2021) Metzger, B. D., & Fernandez, R. 2021, ApJL, 916, L3, doi: 10.3847/2041-8213/ac1169
+
+* Mochkovitch et al. (1993) Mochkovitch, R., Hernanz, M., Isern, J., & Martin, X. 1993, Nature, 361, 236, doi: 10.1038/361236a0
+
+* Moharana & Piran (2017) Moharana, R., & Piran, T. 2017, MNRAS, 472, L55, doi: 10.1093/mnrasl/slx131
+
+* Mooley et al. (2018a) Mooley, K. P., Nakar, E., Hotokezaka, K., et al. 2018a, Nature, 554, 207, doi: 10.1038/nature25452
+
+* Mooley et al. (2018b) Mooley, K. P., Deller, A. T., Gottlieb, O., et al. 2018b, Nature, 561, 355, doi: 10.1038/s41586-018-0486-3
+
+* Most et al. (2021) Most, E. R., Papenfort, L. J., Tootle, S. D., & Rezzolla, L. 2021, MNRAS, 506, 3511, doi: 10.1093/mnras/stab1824
+
+* Nakar (2020) Nakar, E. 2020, PhR, 886, 1, doi: 10.1016/j.physrep.2020.08.008
+
+* Narayan et al. (2003) Narayan, R., Igumenshchev, I. V., & Abramowicz, M. A. 2003, PASJ, 55, L69, doi: 10.1093/pasj/55.6.1.69
+
+* Norris & Bonnell (2006) Norris, J. P., & Bonnell, J. T. 2006, ApJ, 643, 266, doi: 10.1086/502796
+
+* Norris & Gehrels (2008) Norris, J. P., & Gehrels, N. 2008, in American Institute of Physics Conference Series, Vol. 1000, Gamma-ray Bursts 2007, ed. M. Galassi, D. Palmer, & E. Fenimore, 280-283, doi: 10.1063/1.2943463
+
+* Norris et al. (2010) Norris, J. P., Gehrels, N., & Scargle, J. D. 2010, ApJ, 717, 411, doi: 10.1088/0004-637X/717/1/411
+
+* Paczynski (1991) Paczynski, B. 1991, AcA, 41, 257
+
+* Papaloizou & Pringle (1984) Papaloizou, J. C. B., & Pringle, J. E. 1984, Monthly Notices of the Royal Astronomical Society, 208, 721, doi: 10.1093/mnras/208.4.721
+
+* Paschalidis et al. (2015) Paschalidis, V., Ruiz, M., & Shapiro, S. L. 2015, ApJL, 806, L14, doi: 10.1088/2041-8205/806/1/L14
+
+* Perley et al. (2009) Perley, D. A., Metzger, B. D., Granot, J., et al. 2009, ApJ, 696, 1871, doi: 10.1088/0004-637X/696/2/1871
+
+* Price & Rosswog (2006) Price, D. J., & Rosswog, S. 2006, Science, 312, 719, doi: 10.1126/science.1125201
+
+* Rantsiou et al. (2008) Rantsiou, E., Kobayashi, S., Laguna, P., & Rasio, F. A. 2008, ApJ, 680, 1326, doi: 10.1086/587858
+
+* Rastinejad et al. (2022) Rastinejad, J. C., Gompertz, B. P., Levan, A. J., et al. 2022, Nature, 612, 223, doi: 10.1038/s41586-022-05390-w
+
+* Rosswog (2005) Rosswog, S. 2005, ApJ, 634, 1202, doi: 10.1086/497062
+
+* Rosswog (2007) --. 2007, MNRAS, 376, L48, doi: 10.1111/j.1745-3933.2007.00284.x
+
+* Ruiz et al. (2018) Ruiz, M., Shapiro, S. L., & Tsokaros, A. 2018, PhRvD, 98, 123017, doi: 10.1103/PhysRevD.98.123017
+
+* Sarin et al. (2022) Sarin, N., Lasky, P. D., Vivanco, F. H., et al. 2022, PhRvD, 105, 083004, doi: 10.1103/PhysRevD.105.083004
+
+* Shibata & Taniguchi (2008) Shibata, M., & Taniguchi, K. 2008, PhRvD, 77, 084015, doi: 10.1103/PhysRevD.77.084015
+
+* Shibata & Taniguchi (2011) --. 2011, Living Reviews in Relativity, 14, 6, doi: 10.12942/lrr-2011-6
+
+* Shibata & Uryu (2006) Shibata, M., & Uryu, K. 2006, PhRvD, 74, 121503, doi: 10.1103/PhysRevD.74.121503
+
+* Shibata & Taniguchi (2007) --. 2007, Classical and Quantum Gravity, 24, S125, doi: 10.1088/0264-9381/24/12/S09
+
+* SpEC collaboration (2023) SpEC collaboration. 2023. [https://www.black-holes.org/code/SpEC.html](https://www.black-holes.org/code/SpEC.html)
+
+* Steiner et al. (2013) Steiner, A. W., Hempel, M., & Fischer, T. 2013, ApJ, 774, 17, doi: 10.1088/0004-637X/774/1/17
+
+* Surman et al. (2008) Surman, R., McLaughlin, G. C., Ruffert, M., Janka, H. T., & Hix, W. R. 2008, ApJL, 679, L117, doi: 10.1086/589507
+
+* Tanaka et al. (2014) Tanaka, M., Hotokezaka, K., Kyutoku, K., et al. 2014, ApJ, 780, 31, doi: 10.1088/0004-637X/780/1/31
+
+* Tchekhovskoy (2015) Tchekhovskoy, A. 2015, in Astrophysics and Space Science Library, Vol. 414, The Formation and Disruption of Black Hole Jets, ed. I. Contopoulos, D. Gabuzda, & N. Kylafis, 45, doi: 10.1007/978-3-319-10356-3_3
+
+* Tchekhovskoy & Giannios (2015) Tchekhovskoy, A., & Giannios, D. 2015, MNRAS, 447, 327, doi: 10.1093/mnras/stu2229
+
+* Tchekhovskoy et al. (2011) Tchekhovskoy, A., Narayan, R., & McKinney, J. C. 2011, MNRAS, 418, L79, doi: 10.1111/j.1745-3933.2011.01147.x
+
+* Thomson (1871) Thomson, W. K. 1871, Phil. Mag., 42, 362
+
+* Troja et al. (2018) Troja, E., Piro, L., Ryan, G., et al. 2018, MNRAS, 478, L18, doi: 10.1093/mnrasl/sly061
+
+* Troja et al. (2022) Troja, E., Fryer, C. L., O'Connor, B., et al. 2022, Nature, 612, 228, doi: 10.1038/s41586-022-05327-3
+
+* Wanajo et al. (2022) Wanajo, S., Fujibayashi, S., Hayashi, K., et al. 2022, arXiv e-prints, arXiv:2212.04507, doi: 10.48550/arXiv.2212.04507
+
+* Yang et al. (2022) Yang, J., Ai, S., Zhang, B.-B., et al. 2022, Nature, 612, 232, doi: 10.1038/s41586-022-05403-8
+
+* Zhu et al. (2021) Zhu, J.-P., Wu, S., Yang, Y.-P., et al. 2021, ApJ, 921, 156, doi: 10.3847/1538-4357/ac19a7
+
+## Appendix A Remapping Spec to H-Amr
+
+In our attempt to self-consistently simulate the BH-NS merger, starting from the inspiral all the way to r>10^{11}\\,\\mathrm{cm}, we employ a novel approach in which we use the outcome of the dynamical spacetime simulation, using code SpEC, as an initial setup. We remap the set of primitive quantities, such as density, pressure and velocity, onto the grid of the GPU-accelerated GRMHD code h-amr, which employs a static spacetime that allows us to greatly reduce the computational cost of the simulations, and simulate the entire dynamical evolution timescale of the post-merger ejecta.
+
+The final snapshot of the BH-NS simulation includes a set of the primitive quantities (density, pressure, and plasma four-velocities), the covariant metric components, denoted as g^{(\\mathrm{SpEC})}_{\\mu\\nu}, and the inertial coordinates of the grid of the simulation x_{\\mathrm{SpEC}}. The grid of our simulation employs a Kerr metric in horizon-penetrating modified Kerr-Schild coordinates, (\\log r,\\theta,\\varphi). The inertial coordinates of the dynamical spacetime simulation asymptote to Cartesian Kerr-Schild coordinates far away from the BH. Therefore, we first use a Cartesian to spherical polar coordinate transformation. However, near the BH, we use a special procedure to find the coordinate transformation, since the metric at this region differs considerably from the Kerr-Cartesian metric. We use the symmetric nature of the covariant metric to eigendecompose the input and output metric matrices, Q and \\hat{Q}, respectively,
+
+g^{(\\mathrm{SpEC})}=\\hat{Q}\\hat{\\Lambda}\\hat{Q}^{T},\\quad g^{(\\mathrm{H-AMR})} =Q\\Lambda Q^{T}\\,, (A1) where the columns of Q and \\hat{Q} are normalized eigenvectors, and \\Lambda and \\hat{\\Lambda} are diagonal matrices with eigenvalues ordered from the smallest to the largest.
+
+The coordinate transformation matrix from SpEC to h-amr coordinates, J^{\\hat{a}}_{a}=\\frac{\\partial\\lambda^{\\hat{a}}_{\\mathrm{SpEC}}}{\\partial \\lambda^{\\hat{a}}_{\\mathrm{H-AMR}}}, connects the metrics as follows:
+
+g^{(\\mathrm{SpEC})}_{\\hat{\\mu}\\hat{\\nu}}\\frac{\\partial\\lambda^{\\hat{a}}_{ \\mathrm{SpEC}}}{\\partial\\lambda^{\\hat{a}}_{\\mathrm{H-AMR}}}\\frac{\\partial \\lambda^{\\hat{\\nu}}_{\\mathrm{SpEC}}}{\\partial\\lambda^{\\nu}_{\\mathrm{H-AMR}}}=g ^{(\\mathrm{H-AMR})}_{\\mu\\nu}\\,, (A2) or, in a matrix form,
+
+J^{T}g^{(\\mathrm{SpEC})}J=g^{(\\mathrm{H-AMR})}\\,. (A3)
+
+Since the metric matrices have the metric signature that is preserved after the coordinate transformation (i.e. there is always one negative and three positive eigenvalues), we further decompose the eigenvalue matrix as the product of the matrices \\Lambda=RDR, where R_{ii}=\\sqrt{|\\Lambda_{ii}|} and D=\\mathrm{diag}(-1,1,1,1). Together with Equations (A1),(A3), we obtain the matrix equation (where D=\\hat{D})
+
+J^{T}\\hat{Q}\\hat{R}\\hat{D}\\hat{R}\\hat{Q}^{T}J=QRDRQ^{T}\\,. (A4)
+
+The coordinate transformation matrix is thus
+
+J=(\\hat{R}\\hat{Q}^{T})^{-1}RQ^{T}=\\hat{Q}\\hat{R}^{-1}RQ^{T}\\,. (A5)
+
+By computing the eigenvalues and eigenvectors of the metric matrices, we compute the coordinate transformation at each point, which preserves the inner product of the four-velocity by default. We use the numerical implementation of the eigendecomposition provided by the NumPy package in Python (specifically, the eigh() function; Harris et al., 2020). The major caveat here is that the eigendecompositions of symmetric matrices are unique up to (a) the signs of the normalized eigenvectors and (b) eigenvector-eigenvalue pair column permutations. Therefore, we develop a numerical procedure that (a) guarantees that the eigenvectors are continuous in sign and (b) minimizes the matrix difference between the SpEC and h-amr metric matrix eigendecompositions using the Magyar algorithm. Additionally, we rescale the cylindrical radius in the final coordinate system r_{\\mathrm{cyl}}=\\int\\sqrt{g_{\\varphi\\varphi}}d\\varphi/2\\pi, to match the cylindrical radius computed in the SpEC coordinates. We map the values of density and pressure and use the coordinate transformation matrix at each point on the grid to remap the velocities,
+
+u^{\\mu}_{\\mathrm{H-AMR}}=J^{T}u^{\\mu}_{\\mathrm{SpEC}}\\,. (A6)
+
+We verify the handoff procedure by comparing the profiles of \\varphi-averaged specific binding energy (-1-u_{t}) and angular momenta (u_{\\varphi}), as seen in Figure 5, which differ by \\lesssim 10\\% at in the regions near the BH (r\\lesssim 3\\,r_{g}).
+
+At the time of the remapping, we introduce various magnetic field profiles for gas with \\rho>5\\times 10^{-4}\\,\\rho_{\\mathrm{max}} (see Tab. 1), where \\rho_{\\mathrm{max}} is the maximum comoving mass density in the grid at the time of remapping. Figure 6 depicts the radial profile of the initial mass density weighted average \\beta_{p} on the equatorial plane.
+
+## Appendix B Convergence test
+
+We verify that our simulations converge by performing one high resolution simulation of configuration P_{c}. In that simulation we double the resolution in the disk in all dimensions, and compare it with the original resolution. Figure 7 depicts the same quantities as in Fig. 1, but for the two resolutions. All quantities are compatible between the two resolutions at all times. This confirms that the disk evolution and jet launching, including the MRI, are well resolved in our original resolution.
+
+## Appendix C Hydrodynamic disk evolution
+
+Figure 8(a) depicts the density averaged radial angular momentum profile at different times. All profiles deviate considerably from Keplerian (black dotted line) at r\\gtrsim 20\\,r_{g}. This implies that the disk is pressure supported at the outer radii. The profile at the earliest time (dark blue) is relatively flat, similar to a thick torus, and is thus a fertile ground for the Papaloizou-Pringle instability (PPI, Papaloizou & Pringle, 1984). Fig. 8(a) demonstrates a slow readjustment of the angular momentum profile, as angular momentum is progressively transported towards the outer radii. This angular momentum transport drives accretion in the inner radii. Figure 9 delineates deviations of the surface density from an axisymmetric profile. It portrays a spiral structure in the disk, which is the underlying mechanism for transport of angular momentum, matter and enthalpy (in the form of dissipating shocks) to the outer radii.
+
+Fig. 8(b) shows the density averaged radial physical velocity, u_{\\tilde{r}}=\\sqrt{g_{rr}}u^{r}, normalized to the local Keplerian velocity. The positive radial flux of angular momentum leads to accretion in the inner radii and outward radial motions. The radial oscillations in the radial velocity, driven by the spiral shocks, are damped as the disk redistributes its angular momentum, and the PPI stabilizes itself on sufficiently long timescales (Bugli et al., 2018). The radial velocity is comparable to the Keplerian velocity at r>10^{3}\\,r_{g}, effectively reaching escape velocity, which explains the outflow measured in SS4.
+
+In the absence of neutrino cooling in the system, the torus can only cool through vertical transport. Thus, the radial transport also drives a vertical outflow. Neutrino cooling would efficiently inhibit the outward radial transport of enthalpy by vertically disposing the thermal energy. Finally, MRI turbulence is known to stabilize the PPI, and is also expected to dominate the angular momentum transport (Bugli et al., 2018). Thus, accretion through PPI is also not physically motivated in BH-NS mergers.

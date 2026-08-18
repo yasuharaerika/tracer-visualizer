@@ -1,0 +1,83 @@
+###### Abstract
+
+The increase in spin frequency as the burning atmospheres of Type I X-ray bursts cool provides a strong constraint on the radius of the underlying neutron star. If the change in spin frequency is due to a change in the thickness of the atmosphere, the radius of the star must exceed 3GM/c^{2} for any equation of state and approximately 3.5GM/c^{2} for most physically reasonable equations of state. This constraint arises because the direction of the Coriolis force for radial motion reverses for R<G/c^{2}(M+I/R^{2}). Furthermore, the marked change in the magnitude of the Coriolis force near compact stars provides a straightforward explanation for why the frequency of the quickly rotating bursters shifts by the same amount as the slow rotators; they are slightly more massive, 1.6 M{}_{\\odot} versus 1.4 M{}_{\\odot}.
+
+## 1 Introduction
+
+If material accretes onto the surface of a neutron star sufficiently slowly, a layer of fuel develops and then suddenly ignites producing a burst of x-rays known as a Type I X-ray burst. These thermonuclear flashes each release about 10^{39} ergs and repeat on a timescale from hours to days (Lewin, van Paradijs & Taam 1995, Bildsten 1998). Although only one source (SAX J1808.4-3658) exhibits periodic variation in its quiescent emission (Wijnands & van der Klis 1998, Chakrabarty & Morgan 1998), during the bursts themselves the emission is quasiperiodic (_e.g._ Strohmayer, Zhang & Swank 1997), apparently due to rotational modulation of the inhomogeneities in the thermonuclear burning. Strohmayer & Markwardt (1999) find that the oscillations in the cooling tails of the X-ray bursts from 4U 1702-429 and 4U 1728-34 are nearly coherent with Q\\sim 4000 and consistent with an increase in the modulation frequency as the burning layer cools.
+
+Joss (1978) calculated the first numerical models of thermonuclear burning on the surface of a 1.4 M{}_{\\odot} neutron star with a radius of 6.6 km. He found that the initial surface layer of helium expands from a thickness of about three meters to one of thirty meters during the onset of the burst (also Bildsten 1995). Strohmayer et al. (1997) argue that this increase in radius is sufficient to account for the frequency shifts observed during the bursts due to the conservation of angular momentum.
+
+To use the conservation of angular momentum to explain the change in frequency of the emission as the burning region of the atmosphere (or hotspot) expands and then contracts, oneassumes that the specific angular momentum of a fluid element is conserved during the burst. The magnetic fields of the neutron stars are likely to be weak (otherwise there would be periodicities in the persistent emission); consequently, this is a viable assumption. However, the relationship between the specific angular momentum of a fluid element and its position is more complicated in general relativity than in Newtonian theory (_e.g._ Abramowicz, Miller & Stuchlik 1993). In the case of the Schwarzschild spacetime, the angular momentum of a fluid element is
+
+{\\rm d}L={\\rm d}m\\Omega r_{g}^{2}={\\rm d}m\\Omega\\frac{r^{2}}{1-2M/r}  where \\Omega is the angular velocity of the element as measured by an observer at infinity. This expression and its generalizations result in the reversal of the centrifugal forces (_e.g._ Abramowicz & Prasanna 1990, Abramowicz 1993) and gyroscopic precession (_e.g._ Nayak & Vishveshwara 1998) in curved spacetimes.
+
+Rather than using Equation 1 to obtain the change in the angular velocity of the hotspot, SS 2 calculates the change the angular velocity in a frame that rotates with the neutron star. The reasons for this treatment are two-fold. First, the calculation is quite straightforward and illustrative. Second, the effects of frame dragging are likely to be important for neutron stars, so rather than deriving a new definition for the radius of gyration to include frame dragging, frame dragging may simply be included in the metric. SS 3 applies these results to Type I X-ray bursts, and finally SS 4 summarizes the conclusions.
+
+## 2 The Coriolis Force in Curved Spacetime
+
+Evaluating the Coriolis force in the curved spacetime surrounding a neutron star is straightforward once the metric is specified. The forces that affect the motion of the neutron star atmosphere are most easily expressed in a frame that rotates with the star. In this frame the nonzero components of the metric tensor are
+
+g_{00} = 1-\\frac{2M}{r}+\\Omega^{2}r^{2}\\sin^{2}\\theta\\left(\\frac{I}{r^{3} }+1\\right)  g_{03}=g_{30} = \\Omega r^{2}\\sin^{2}\\theta\\left(2\\frac{I}{r^{3}}+1\\right) (3) g_{11} = -\\left(1-\\frac{2M}{r}\\right)^{-1} (4) g_{22} = -r^{2} (5) g_{33} = -r^{2}\\sin^{2}\\theta.  where x^{\\mu}=[t,r,\\theta,\\phi]. J=I\\Omega which accounts for the effects of frame dragging to lowest order in \\Omega (Landau & Lifshitz 1987), and the various quantities are given in geometric units with c=G=1. For rotational frequencies, \\nu<400 Hz, this is a good approximation (_e.g._ Morsink & Stella 1999)but for \\nu\\sim 600 Hz, the induced quadrupole moment of the star may introduce a significant but not dominant correction to the metric (Cook, Shapiro & Teukolsky 1994, Sibgatullin & Sunyaev 1998); this issue will be addressed in the more detailed sequel.
+
+The Coriolis force for material moving radially manifests itself through the connection term,
+
+\\Gamma_{01}^{3} = \\frac{1}{2}\\left(g^{33}g_{30,1}+g^{30}g_{00,1}\\right)  = \\frac{\\Omega}{r}\\left[\\left(1-\\frac{I}{r^{3}}\\right)+\\frac{1+2I/r ^{3}}{1-2M/r}\\frac{M}{r}\\right],  and \\Gamma_{11}^{3}=\\Gamma_{00}^{3}=0. The first term yields the standard "Newtonian" Coriolis force reduced by the effects of frame dragging, and the second term arises because the usually afferent gravitational acceleration has an azimuthal component for material moving radially in the rotating frame.
+
+The atmosphere expands with a four velocity v whose components in the rotating frame are found by setting \\mathbf{u\\cdot u}=1, \\mathbf{v\\cdot v}=1 and \\mathbf{u\\cdot v}=\\gamma where u points along the time axis in the rotating frame (_i.e._ it is four velocity of an observer stationary in the rotating frame). Due to pressure gradients, the trajectory of gas does not obey the t and r components of the geodesic equations. In the non-rotating frame, these pressure gradients also have a \\phi component. However, in the rotating frame, the gas is free to follow a geodesic in the \\phi direction, yielding
+
+\\frac{{\\rm d}v^{3}}{{\\rm d}\\tau}=-2\\beta\\gamma^{2}\\frac{\\Omega}{r}\\left(1- \\frac{3M}{r}-\\frac{I}{r^{3}}\\right)\\left(1-\\frac{2M}{r}\\right)^{-1}+{\\cal O} \\left(\\Omega^{3}\\right)  where \\beta is the magnitude of the three-velocity measured locally by an observer stationary in the rotating frame (_i.e._u) and \\gamma=1/\\sqrt{1-\\beta^{2}}.
+
+If the radial motion is nonrelativistic and small relative to the initial radius (as for the expansion of the atmosphere), the result is easily integrated. After transforming the result to the nonrotating (distant observer's) frame, it is
+
+\\frac{{\\rm d}\\ln\\Omega_{\\infty}}{{\\rm d}\\ln r}=-2\\left(1-\\frac{3M}{r}-\\frac{I} {r^{3}}\\right)\\left(1-\\frac{2M}{r}\\right)^{-1}. 
+
+This result in the absence of frame dragging (_i.e._I\\to 0) could also be obtained by using the definition of Abramowicz, Miller & Stuchlik (1993) for the radius of gyration in general relativity. Comparison of this result with Equation 1 yields the following definition for the radius of gyration with frame dragging included to lowest order in \\Omega,
+
+r_{g}=\\frac{r}{\\sqrt{1-2M/r}}\\left(1-\\frac{2M}{r}\\right)^{-\\frac{1}{8}\\frac{I} {M^{3}}}\\exp\\left(-\\frac{1}{4}\\frac{r+M}{M^{2}r^{2}}I\\right) 
+
+As the mass of the star and its moment of inertia vanish, the familiar result obtains. However, in the vicinity of a neutron star, the correction may be large.
+
+Application to X-Ray Bursts
+
+Strohmayer & Markwardt (1999) find that during a X-ray burst, the observed frequency of the modulation exponentially decreases toward a value which is constant from burst to burst for each source. They interpret this asymptotic frequency as the spin frequency of the star. At the beginning of the burst, they argue that the atmosphere expands and slows due to the Coriolis force, and as it cools and deflates the spin frequency increases again through the Coriolis force. This simple inverse correlation between the spin frequency and the thickness of the atmosphere restricts
+
+R>3M+\\frac{I}{R^{2}}  for the neutron stars associated with 4U 1636-54, KS 1731-26, Aql X-1, the galactic center source, 4U 1702-43 and 4U 1728-34 ( R and M are the mass and radius of the neutron star). For a uniform density sphere in the Newtonian limit I=\\frac{2}{5}MR^{2}. Ravenhall & Pethick (1994) find that the moment of inertia for the FPS equation of state (Friedman & Pandharipande 1981) is well fit by
+
+I=0.21MR^{2}\\left(1-\\frac{2M}{R}\\right)^{-1}. 
+
+In the context of this equation of state, R>3.49M.
+
+Cumming & Bildsten (2000) have examined the structure of the atmosphere of the X-ray burst in further detail. By understanding the magnitude of the change in the frequency of X-ray bursts as well as its sign, tighter constraints on the radius of the neutron star may be obtained. The the proper thickness of the layer (\\Delta z_{1.89}) as calculated by Cumming & Bildsten (2000) for g_{s}=1.89\\times 10^{14} cms{}^{-2} and the coordinate thickness (\\Delta r) are related by
+
+\\frac{\\Delta r}{R}=2.1\\times 10^{-7}{\\rm cm}^{-1}\\Delta z_{1.89}\\frac{R}{M} \\left(1-\\frac{2M}{R}\\right)  where the variation in the surface gravity with mass and radius is included and 2.1\\times 10^{-7}{\\rm cm}^{-1}=g_{s}c^{2}. The change in observed frequency \\Delta\\nu for \\nu=300 Hz is
+
+\\Delta\\nu=-0.252\\ {\\rm Hz}\\frac{\\Delta z_{1.89}}{20\\ {\\rm m}}\\frac{\\nu}{300\\ { \\rm Hz}}\\frac{R}{M}\\left(1-\\frac{3M}{R}-\\frac{I}{R^{3}}\\right) 
+
+It is also straightforward to add the relativistic corrections to the more detailed results of Cumming & Bildsten (2000) (C&B) which yields
+
+\\frac{\\Delta\\Omega_{\\infty}}{\\Omega_{\\infty}}\\bigg{|}_{\\rm GR}=\\frac{R}{M} \\left(\\left.\\frac{R}{M}\\right|_{\\rm C\\&B}\\right)^{-1}\\left(1-\\frac{3M}{R}- \\frac{I}{R^{3}}\\right)\\left.\\frac{\\Delta\\Omega}{\\Omega}\\right|_{\\rm C\\&B}  where the effects of changing surface gravity are also included by assuming that the scale height of the atmosphere is inversely proportional to the gravitational acceleration; Cumming & Bildsten (2000) assume that R/M\\approx 4.82.
+
+Figure 1 shows the corrections to the calculated values of \\Delta\\Omega including both the effects of general relativity and varying the surface gravity. If the effects of the curved spacetime are included, the result is given by the middle curve, and if frame dragging is also included the lower curve traces the result. The expected change in the observed angular velocity as the atmosphere expands vanishes for R=3M (without frame dragging) and R=3.49M (with frame dragging).
+
+Table 1 of Cumming & Bildsten (2000) presents the properties of the oscillations from Type I bursts. Specifically, the sources fall into two types those with \\nu\\sim 300 Hz and those with \\nu\\sim 600 Hz. Both sets of objects typically have \\Delta\\nu\\sim 1 Hz. Miller (1999) argues that those objects with faster oscillations simply have two burning fronts active simultaneously, so the actual rotational frequency of the star is \\sim 300 Hz and the kinematics of the expanding atmosphere is similar to those with faster oscillations. An alternative possibly is that the 600-Hz oscillations correspond to a 600-Hz rotational frequency and that \\Delta\\nu/\\nu is smaller due to a different value of M/R.
+
+To wit, assuming that the 300-Hz objects are 1.4 M{}_{\\odot} neutron stars with the FPS equation of state (Friedman & Pandharipande 1981, Ravenhall & Pethick 1994) they have a radius of 10.75 km and M/R=0.196. Using this data to normalize Equation 16 for \\Delta\\nu/\\nu=6\\times 10^{-3} gives
+
+\\left.\\frac{\\Delta\\Omega}{\\Omega}\\right|_{\\rm C\\&B}=13.5\\times 10^{-3}  which is about twice as large as the value that Cumming & Bildsten (2000) find for their Newtonian models.
+
+Using this value, Equation 16 can be used to infer a value of M/R for the fast rotators of 0.234, modestly different from that of the slow rotators (0.246 if frame dragging is neglected). Without the general relativistic corrections, M/R for the fast rotators would be 0.391 which is more compact than is achieved for any standard equation of state. Using the value of M/R which includes frame dragging yields M=1.6{\\rm M}_{\\odot} for the fast rotators and R=10.3 km.
+
+If more detailed models argue that the normalization (Equation 17) is unphysically large, the conclusion would be that the objects have R\\gg 3M. Specifically, if the modeling of the evolving atmosphere by Cumming & Bildsten (2000) is precisely correct, R=8.1M for the slowly rotating bursters and R=5.7M for the fast rotators. If the mass of the neutron stars exceeds a solar mass, this requires a very hard equation of state such as the TI and MF results (Pandharipande, Pines & Smith 1976).
+
+## 4 Conclusions
+
+The Coriolis force in the curved spacetime near a neutron star is substantially smaller than the Newtonian value and reverses its direction as the radius of the star approaches 3GM/c^{2}. For typical neutron-star parameters of R=10 km and M=1.4 M{}_{\\odot}, the fully relativistic Coriolis force Figure 1: The relativistic corrections to the expected spin-down from Type I X-ray bursts. The upper slanted line gives the Newtonian result, and the cross shows that it is normalized for a neutron star with R=10 km and M=1.4 M{}_{\\odot}. The middle line gives the relativistic correction without frame dragging, and the lower curve traces the correction including frame dragging. is only 30% of the Newtonian value. This contrasts with the assertion of Strohmayer (1999) that the correction to the Coriolis force is the same order as the gravitational redshift, _i.e._ 20 - 30% due to time dilation alone. Although time dilation does contribute, it does not dominate. Time dilation alone would not predict, the change in the sign of the Coriolis force for r\\approx 3M.
+
+The bulk of the effect arises from the fact that the specific angular momentum of a fluid element has a minimum at the photon circular orbit, which has r=3M for a non-rotating star. This also manifests itself through the reversal of the centrifugal force also at r=3M (_e.g._ Abramowicz & Prasanna 1990, Abramowicz 1990, 1993, 1996) and the fact that compact stars may have moments of inertia which exceed {2\\over 5}MR^{2}, the Newtonian value for a sphere with constant density (_e.g._ Hartle 1967, Chandrasekhar & Miller 1974).
+
+Because the Coriolis force sensitively depends on the ratio of the mass to the radius of a relativistic star, Type I X-ray bursts provide a strong constraint on the equation of state of the underlying neutron star. Specifically, since the oscillation frequency of the burst increases as the atmosphere cools and presumably shrinks, the radius of the star must exceed 3\\;GM/c^{2}. If frame dragging is included, the constraint is stronger, R>3.49\\;GM/c^{2}. Furthermore, this sensitivity provides a simple explanation for the fact that the quickly rotating bursters, 4U 1636-54, KS 1731-26, Aql X-1 and the galactic center source, spin up by the same amount as the slowly rotating bursters, 4U 1702-43 and 4U 1728-34. The fast rotators are simply slightly more massive, 1.6 M{}_{\\odot} versus 1.4 M{}_{\\odot}. Further studies of the thermonuclear burning in the atmospheres of Type I X-ray bursts will make them a precise probe of the spacetime geometry surrounding rotating neutron stars.
+
+General relativity presents gravity as an inertial force; therefore, it is not surprising that Newtonian notions of inertial forces do not apply in strong gravitational fields. Gravity strongly affects the Coriolis force which is important in the evolution of Type I X-Ray bursts; consequently, these bursts provide a strong constraint on the spacetime geometry surrounding accreting neutron stars.
+
+I would like to acknowledge a Lee A. DuBridge Postdoctoral Scholarship for support. I would like to thank Lars Bildsten, Greg Ushomirsky, Alessandra Buonanno, Lior Burko, Scott Hughes, Eugene Chiang and Yoram Lithwick for useful discussions.

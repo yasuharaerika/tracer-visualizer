@@ -1,0 +1,67 @@
+###### Abstract
+
+The possible existence of intermediate mass binary black holes (IMBBHs) in globular clusters (GCs) offers a unique geometry in which to detect space-time oscillations. For certain pulsar-IMBBH configurations possible within a GC, the usual far-field plane wave approximation for the IMBBH metric perturbation severely underestimates the magnitude of the induced pulsar pulse time-of-arrival (TOA) fluctuations. In this letter, the expected TOA fluctuations induced by an IMBBH lying close to the line-of-sight between a pulsar and the Earth are calculated for the first time. For an IMBBH consisting of 10M_{\\odot} and 10^{3}M_{\\odot} components, a 10 year orbital period, and located 0.1 yr from the Earth-Pulsar line of sight, the induced pulsar timing residual amplitude will be of order 5 to 500 ns.
+
+Subject headings:pulsars :general -- gravitational waves -- black hole physics
+
+## 1. Introduction
+
+The unique stability of the electromagnetic pulses emitted by radio pulsars could allow one to detect the presence of gravitational wave radiation. It is normally assumed that the pulsar, Earth, and all points along the line-of-sight between the pulsar and the Earth are located far enough away from the source that the space-time oscillations may be treated as gravitational plane waves (Sazhin, 1978; Detweiler, 1979). Recently, it has been suggested that intermediate mass black hole binary systems may form in the centers of Globular Clusters (GCs) (Miller, 2002; Will, 2004; Miller & Colbert, 2004). Given the high density of radio pulsars in GCs together with the relatively small scale length (100 pc) of a GC, it is possible to find a pulsar whose line-of-sight will pass closer to the binary system than its end points. It is even possible that the pulsar itself may lie close to the binary system. It is shown in this letter that this scenario differs from the plane gravitational wave case in two important ways. First, the amplitude of the induced residuals depends on the distance of closest approach, or impact parameter, between the binary system and the Earth-pulsar line-of-sight. Second, since the closest distance may be well within one gravitational wavelength, the near-field terms will play the dominant role in inducing the observed pulsar pulse arrival time fluctuations.
+
+In this letter, the effect of the gravitational field of a binary system on pulsar timing residuals are calculated. This is the first time both near and far field terms are included in this calculation and no assumptions are made about the structure of the emitted gravitational wave front. The results are accurate to order (v/c)^{2} and (d/r)^{2} where v is the characteristic relative velocity of the mass-energy within the source, c is the speed of light, d is the length scale of the binary system, and r is the smallest distance between the binary system and the Earth-pulsar line of sight. The general expressions for the timing residuals derived here may be applied to pulsar timing data to constrain the properties of putative black hole binary systems.
+
+It should be noted that the 20 new millisecond pulsars recently discovered in the dense globular cluster Terzan 5 (Ransom et al., 2005) may provide an interesting application of these results. The large number of pulsars together with this cluster's high central density (\\approx 10^{6}L_{\\odot}/{\\rm pc}^{3}) make it a good candidate to detect or at least limit the existence of an intermediate mass binary black hole (IMBBH) system in its core.
+
+In the next section, the general effect of a binary system on the arrival times of pulses emitted by a pulsar is calculated. We make use of geometric units where G=c=1. Order of magnitude estimates of the induced timing residuals are also made for astrophysically relevant systems. The results are summarized in the last section.
+
+## 2. Calculating the Residuals
+
+The curvature of space-time will cause the observed pulsar frequency to vary as a function of time. The timing residuals, R(t), are given by(Detweiler, 1979)
+
+R(t)=\\int_{0}^{t}\\frac{\\nu_{o}-\\nu_{e}}{\\nu_{e}}dt\\;,  where t is time, \\nu_{o} is the observed frequency, and \\nu_{e} is the emitted frequency. The frequency shifts will be calculated using perturbative methods. Given the four velocity of an observer, V^{\\mu}, the observed pulse frequency is given by \\nu=-V^{\\mu}K_{\\mu} where K_{\\nu} is the dual to the photon four velocity. Let V^{\\mu}=\\bar{V}^{\\mu}+\\delta V^{\\mu} and K_{\\mu}=\\bar{K}_{\\mu}+\\delta K_{\\mu}, where the barred quantities are the unperturbed values, and \\delta V and \\delta K are the corresponding perturbations. For the purposes of this discussion, we choose the unperturbed four-velocities of both the emitter and the observer to be 1 in the time direction and zero for the three spatial components. To lowest order, the timing residuals are given by
+
+R(t)=\\int_{0}^{t}\\frac{\\delta K_{0}^{o}-\\delta K_{0}^{e}+(\\delta V^{o\\mu}- \\delta V^{e\\mu})\\bar{K}_{\\mu}}{\\bar{K}_{0}}dt\\;. 
+
+The last term on the right hand side is the standard Doppler shift due to the relative velocity between thesource and the emitter. The first two terms are determined by the actual path of the photons as they travel towards the receiver.
+
+The geodesic equations will be used to solve for both \\delta K and \\delta V. To lowest order, these equations take the following form:
+
+\\frac{d\\delta K_{\\alpha}}{d\\lambda}-\\frac{1}{2}g_{\\mu\\nu,\\alpha} \\bar{K}^{\\mu}\\bar{K}^{\\nu} = 0\\;,  \\frac{d\\delta V_{\\alpha}}{d\\tau}-\\frac{1}{2}g_{\\mu\\nu,\\alpha} \\bar{V}^{\\mu}\\bar{V}^{\\nu} = 0\\;,  where \\lambda is the affine parameter along the light-ray path, \\tau is the proper time of the observer, and g_{\\mu\\nu} is the space-time metric. The metric is assumed to be of the form \\eta_{\\mu\\nu}+h_{\\mu\\nu} where \\eta_{\\mu\\nu} is the flat Minkowsky metric and h_{\\mu\\nu} is a small perturbation given, at space-time location (t,\\vec{r}), by:
+
+h_{\\mu\\nu}(t,\\vec{r})=\\int\\frac{\\bar{T}_{\\mu\\nu}(t-|\\vec{r}-\\vec{r}^{\\prime}|, \\vec{r}^{\\prime})}{|\\vec{r}-\\vec{r}^{\\prime}|}d^{3}\\vec{r}^{\\prime}\\;,  where \\bar{T}_{\\mu\\nu} is the trace-reversed stress energy tensor of the region generating the space-time perturbation.
+
+The timing residual due to ray path propagation will be calculated to first order in h using Eq. (3) rewritten in integral form as:
+
+\\frac{\\delta K_{0}^{\\alpha}-\\delta K_{0}^{\\epsilon}}{K_{0}} = \\int_{z_{e}}^{z_{o}}H(t+z,b\\hat{y}+z\\hat{z})dz  H(t,\\vec{r}) = \\frac{1}{2}(h_{00,0}+h_{zz,0}+2h_{0z,0}),  given in the black hole barycentered coordinate system shown in Fig. 1, with \\hat{z} pointing parallel to the light ray from the radio emitter to the observer (so that z=\\bar{K}^{0}\\lambda), and \\hat{x} pointing from the black hole binary barycenter to the closest point on that ray. The emitter and observer positions z_{e} and z_{o}, and the impact parameter b, are defined in Fig. 1.
+
+Using Eq. (5), h_{\\mu\\nu} can be calculated using standard perturbative techniques to order (v/c)^{2} and (d/r)^{2} where v is the characteristic velocity of the source elements relative to their center of mass, and d is the characteristic size scale of the source. Remarkably, H can be written to this order as H=dF/dz, where F is given by:
+
+F(t,\\vec{r}) = \\frac{\\dot{Q}_{rr}-\\dot{Q}_{i}^{i}}{(r-z)r}+\\frac{\\dot{Q}_{rr}+ \\dot{Q}_{zz}-2\\dot{Q}_{rz}}{(r-z)^{2}}+  \\frac{\\ddot{Q}_{rr}+\\ddot{Q}_{zz}-2\\ddot{Q}_{rz}}{r-z}.
+
+Q_{ij} is the second moment of the mass-energy distribution defined as
+
+Q_{ij}=\\int T^{00}r_{i}^{\\prime}r_{j}^{\\prime}d^{3}\\vec{r}^{\\prime},  and the "" represents the time derivative. Given that the mass-energy distribution is usually specified in the (\\hat{x},\\hat{y},\\hat{z}) coordinate system, it is useful to note that Q_{rr}=Q_{zz}\\cos^{2}\\theta+2Q_{zx}\\cos\\theta\\sin\\theta+Q_{xx}\\sin^{2}\\theta, Q_{rz}=Q_{zz}\\cos\\theta+Q_{zx}\\sin\\theta, and Q_{i}^{i}=Q_{xx}+Q_{yy}+Q_{zz}, where r=\\sqrt{z^{2}+b^{2}} and \\theta=\\arccos z/r.
+
+Next, the contribution due to the 4-velocity of the observer and emitter will be calculated. Eq. (4) determines the acceleration of the body in question. Under the assumption that the body does not move appreciably under the influence of the metric perturbation so that the time derivatives of r may be ignored,
+
+\\frac{\\delta V^{\\mu}\\bar{K}_{\\mu}}{K_{0}}=G(t,\\vec{r})-G(0,\\vec{r})  where
+
+G(t,\\vec{r}) = \\frac{2\\ddot{Q}_{rz}-\\left(1+\\frac{z}{r}\\right)\\frac{\\ddot{Q}_{rr }}{2}-\\left(1+\\frac{z}{r}\\right)\\frac{\\ddot{Q}_{i}^{i}}{2}}{r}+  \\frac{3\\dot{Q}_{rz}-3\\dot{Q}_{rr}\\left(1+\\frac{z}{r}\\right)-\\frac {\\dot{Q}_{i}^{i}}{2}}{r^{2}}+ \\frac{3Q_{rz}-\\frac{3}{2}\\left(1+\\frac{5z}{r}\\right)Q_{rr}+\\left( 1+\\frac{3z}{r}\\right)\\frac{\\ddot{Q}_{i}^{i}}{2}}{r^{3}}+ \\int_{0}^{t}\\left(\\frac{3Q_{rz}+\\frac{3z}{2r}Q_{i}^{i}-\\frac{15z }{2r}Q_{rr}}{r^{4}}\\right)dt^{\\prime}
+
+Using Eqs. (2), (6), and (10), the complete residual may be written as
+
+R(t) = \\int_{0}^{t}\\left\\{F(t^{\\prime},\\vec{r}_{o})-F(t_{\\rm ret},\\vec{r }_{e})+\\right.  \\left.G(t^{\\prime},\\vec{r}_{o})-G(t_{\\rm ret},\\vec{r^{\\prime}_{e }})\\right\\}dt^{\\prime} where t_{\\rm ret}=t^{\\prime}-\\left[z_{o}-z_{e}\\right]. Note that the terms which will ultimately give rise to secular terms (i.e. G(0,\\vec{r})) are not included in the above expression.
+
+The above derivation assumes that the pulsar and observer are stationary in the barycentric frame of the binary system. However, for relative velocities \\ll c, Eqs. 8, 11, and 12 give the correct leading-order behavior of the residual, provided we allow z and r to be functions of t.
+
+For the case when z_{e} goes to negative infinity and z_{o} goes to positive infinity, one can show that the expected residual does not go to zero. Instead it limits to:
+
+R(t)=2\\int_{0}^{t}\\frac{\\dot{Q}_{xx}(t^{\\prime}-r_{o})-\\dot{Q}_{yy}(t^{\\prime}- r_{o})}{b(t^{\\prime})^{2}}\\;dt^{\\prime} 
+
+Now when the source of the gravitational perturbation is a massive binary system, we can give an explicit form for the quadrapole moment in the barycentric frame:
+
+Q_{ij}=\\mu s_{i}s_{j}\\;,  where \\mathbf{s}=\\mathbf{s}_{2}-\\mathbf{s}_{1} is the separation vector and \\mu=m_{1}m_{2}/(m_{1}+m_{2}) is the reduced mass of the binary system with component masses m_{1} and m_{2}. Using standard astrometric notation, we can write this directly in terms of the inclination i of the orbit to the plane of the sky, the position angle \\Omega of the ascending node, the argument of periapse \\omega, and the true anomaly v as shown in Fig. 2. There \\hat{r}_{o} points towards the observer, \\hat{\\delta} points towards the North celestial pole, \\hat{s}_{p} is the direction of the separation vector at periapse, \\hat{L} points along the orbital angular momentum axis, and \\hat{u} points towards the ascending node of the orbit. Defining a second unit vector \\hat{w}=\\hat{L}\\times\\hat{u} in the plane of the orbit, we can write the motion of the binary in that coordinate system as:
+
+\\mathbf{s}=a_{1}\\frac{1-c^{2}}{1+c\\cos\\omega}\\{\\cos(\\omega+v)\\hat{u}+ \\sin(\\omega+v)\\hat{w}\\}  where a is the orbital semi-major axis and e is the eccentricity. Noting that \\hat{x}^{\\prime}=\\hat{x}\\cos\\theta_{o}-\\hat{z}\\sin\\theta_{o} is the projection of \\hat{x} into the plane of the sky, and defining its
+
+[MISSING_PAGE_EMPTY:2873]

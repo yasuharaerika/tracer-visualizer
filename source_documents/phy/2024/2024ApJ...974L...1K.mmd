@@ -1,0 +1,131 @@
+###### Abstract
+
+Some X-ray binaries containing an energetic pulsar in orbit around a normal star accelerate particles to high energies in the shock cone formed where the pulsar and stellar winds collide. The magnetic field geometry in the acceleration region in such binaries is unknown. We performed the first measurement of the polarization of the X-ray synchrotron emission from a gamma-ray emitting binary system. We observed PSR B1259-63 with the Imaging X-ray Polarimetry Explorer (IXPE) during an X-ray bright phase following the periastron passage in June 2024. X-ray polarization is detected with a polarization degree of 8.3\\%\\pm 1.5\\% at a significance of 5.3\\sigma. The X-ray polarization angle is aligned with the axis of the shock cone at the time of the observation. This indicates that the predominant component of the magnetic field in the acceleration region is oriented perpendicular to the shock cone axis.
+
+0000-0002-8282-8871]Philip Kaaret
+
+0000-0002-8282-2871]Oliver J. Roberts
+
+0000-0002-8626-7235]Steven R. Ehler
+
+0000-0002-8282-8585]Douglas A. Swartz
+
+0000-0002-4719-747X]Martin C. Weisskopf
+
+0000-0002-8286-7235]Ioannis Liodakis
+
+0000-0002-8282-8585]M. Lynne Saade
+
+0000-0002-8282-8585]Stephen L. O'Dell
+
+## 1 Introduction
+
+Understanding particle acceleration in relativistic shocks is a key goal in high energy astrophysics. Pulsars lose rotational energy primarily through the generation of relativistic winds of electromagnetic energy and electron-positron pairs (Michel, 1982). Pulsars in isolation produce pulsar wind nebulae (PWNe) that emit non-thermal emission from radio up to the TeV band produced by relativistic electrons accelerated at the pulsar wind termination shock (Gaensler & Slane, 2006).
+
+In contrast, the winds from pulsars in stellar binaries interact with the stellar outflows and particle acceleration occurs in a time-varying standing shock (Tavani & Arons, 1997). There are three stellar binary systems that are known to contain energetic pulsars and emit TeV gamma-rays indicating the presence of highly energetic particles (Aharonian et al., 2005; Abeysekara et al., 2018; Weng et al., 2022). In these systems, the companion is an early-type star (spectral type O or B) that produces a stellar wind and an outflowing circumstellar disk. Unpulsed, non-thermal emission is observed from the radio band up to TeV energies.
+
+The X-ray emission in both PWNe and TeV binaries is due to synchrotron radiation by the energetic particles. Therefore, X-ray polarization can be used to probe the configuration of the magnetic field near the acceleration region. We observed the TeV binary PSR B1259-63 with the Imaging X-Ray Polarimetry Explorer (IXPE, Weisskopf et al., 2022) during an X-ray bright phase shortly after its periastron passage on 30 June 2024 (MJD 60491.57). We describe the binary system and the IXPE observations in Section 2. Our analysis and the results are presented in Section 3. We conclude with a discussion of the implications for our understanding of the magnetic field geometry in TeV binaries in Section 4.
+
+## 2 IXPE observations of PSR B1259-63
+
+PSR B1259-63, hereafter B1259, is a neutron star with a spin period of P=47.76 ms and a spin-down power of \\approx 8\\times 10^{35} erg/s (Johnston et al., 1994) in a binary system at a distance of 2.6 kpc (Miller-Jones et al., 2018). The companion star is a massive, emission line star with spectral type O9.5Ve, but often referred to as a Be star, that produces a roughly isotropic wind and a dense equatorial outflow which forms a stellar disk that is inclined to the orbital plane (Dubus, 2013). The orbital period is 1236.724526 days (Shannon et al., 2014). The pulsar plunges through the companion star's circumstellar disk twice each orbit, about 16 days before and 13 days after periastron. The timing is estimated from the disappearance of the radio pulsations around periastron, thought to be caused by free-free absorption in the stellar disk (Johnston et al., 1999). The X-ray emission strongly brightens as the pulsar passes through the disk (Chernyakova et al., 2009). The X-ray spectrum is well described by a power-law as expected for synchrotron emission (Grove et al., 1995). Very high energy (VHE) gamma-ray emission is also seen after disk crossings (Aharonian et al., 2005).
+
+The IXPE observations occurred shortly after the disk passage following periastron in 2024, from 14 July 2024 (MJD 60505.417; Bastille Day) to 29 July 2024 (MJD 60520.163). IXPE has three X-ray telescopes, each of which consists of a Mirror Module Assembly (Ramsey et al., 2022, MMA) and a detector unit (DU) containing a polarization-sensitive gas-pixel detector (GPD) that measures linear X-ray polarization by imaging the tracks of photoelectrons produced by incident X-rays (Costa et al., 2001; Soffitta et al., 2021; Baldini et al., 2021). The IXPE photon event list was processed to reduce the instrumental background using the rejection algorithm described in Di Marco et al. (2023). We also removed timesof high background by filtering on the DU counting rates in the 2-8 keV band, excising intervals when the count rate in any DU in a 240 s time bin exceeded the mean rate in that DU by more than 3 times the standard error on the rate measurement. After filtering, the total livetime was 794.9, 794.5, and 794.6 ks for DU1, DU2, and DU3, respectively. We extracted source counts from a circular region with a radius of 60^{\\prime\\prime} which was found to optimize the signal to background ratio and background counts from a concentric annulus with radii of 150^{\\prime\\prime} and 300^{\\prime\\prime}(Di Marco et al., 2023). The source spectrum is above the background spectrum, scaled for the region sizes, in the 2-6 keV band; we use that energy band for the subsequent IXPE analysis. We used tools in both HEA-Soft version 6.33.2 and \\tt{IXPEobssim} version 310.1 (Baldini et al., 2022) for analysis. We used version 20240125 of the GPD response files and version 20231201 of the MMA response files. All uncertainties are reported at 68.27% confidence.
+
+## 3 Results
+
+Figure 1 shows the X-ray light curve measured with IXPE and with the Swift X-Ray Telescope (XRT; Burrows et al., 2005). The time bins are 1 day for the XRT and 19.6 ks for IXPE. Fluxes in the 2-6 keV band were estimated from IXPE count rates in the 2-6 keV band and XRT count rates in the 0.3-10 keV band assuming an absorbed powerlaw spectrum with an absorption column density of 7\\times 10^{21}\\,\\mathrm{cm}^{-2}(Chernyakova et al., 2023) and a photon index of 1.6 as measured in the IXPE spectropolarimetric analysis below. We used the Swift-XRT products webpage at the University of Leicester.
+
+Figure 2 shows the polarization of the events from the source region for the full observation as measured using the model-independent pcube algorithm with no additional correction for background. The polarization signal of each event was weighted based on the capability of the electron track characterization algorithm to correctly reconstruct the original photoelectron direction. The observed polarization degree (PD) is 7.9\\%\\pm 1.4\\%. The probability that the signal is a random fluctuation from an unpolarized source is 1.0\\times 10^{-7}. This is equivalent to a 5.3\\sigma confidence level and indicates a secure detection of X-ray polarization. The electric vector position angle (EVPA) is -41\\fdg 3\\pm 5\\fdg 0 and is measured anti-clockwise from north in the equatorial coordinate system.
+
+Correcting for background utilizing the additive nature of the Stokes parameters, we estimate the PD of the source as 8.31\\%\\pm 1.45\\% and the EVPA as -41\\fdg 7\\pm 5\\fdg 0. As expected for unpolarized backgrounds, the EVPA is consistent with the results without background subtraction.
+
+We also performed a spectropolarimetric analysis using Xspec (Arnaud, 1996). We modeled the spectrum using an absorbed powerlaw with constant polarization multiplied by a constant allowed to vary between the three DUs. The column density for the tbabs absorption model using the Wilms et al. (2000) abundances was fixed to 7\\times 10^{21}\\,\\mathrm{cm}^{-2}(Chernyakova et al., 2023). The normalization for DU1 was fixed to unity and those for the other DUs were allowed to vary. We used a weighted polarization analysis. We find a good fit (\\chi^{2}/\\mathrm{dof}=829.6/885) with a photon index of \\Gamma=1.602\\pm 0.013. The observed flux is 1.6\\times 10^{-11}\\,\\mathrm{erg\\,cm}^{-2}\\,\\mathrm{s}^{-1} in the 2-6 keV band. The EVPA is -43\\fdg 8\\pm 4\\fdg 7, which is consistent with the pcube results. The PD is 8.32\\%\\pm 1.37\\%, which is consistent with the background-subtracted pcube result.
+
+We searched for variability in the polarization signal by dividing the observation in half and using pcube to estimate the polarization. In the first half, polarization is detected at a confidence level of 1-1.8\\times 10^{-8} with a PD of 11.11\\%\\pm 1.86\\% and an EVPA of -41\\fdg 1\\pm 4\\fdg 8. In the second half, the confidence level drops to 0.81 with a PD of
+
+3.83\\%\\pm 2.11\\% and an EVPA of -42\\fdg 1\\pm 15\\fdg 8. To test the significance of the change in PD assuming constant PA, we rotate the Stokes parameters for each observation by the PA measured for the full observation and compare the Stokes Q values. We find that \\Delta Q=0.0728\\pm 0.0281 corresponding to a confidence level of 99%. Thus, there is probable, but inconclusive, evidence for variability.
+
+## 4 Discussion
+
+The IXPE measurements of the X-ray polarization of PSR B1259-63 provide new information about the magnetic field in the shock region where the relativistic wind from the pulsar interacts with the outflows from Be star. The pulsar wind termination shock is roughly symmetric around the axis between the pulsar and the star. The geometry depends on the ratio, \\eta, of the momentum flux density of the pulsar wind to that of the Be star outflow at the shock location. The IXPE observations occur just after a disk passage when \\eta\\approx 5\\times 10^{-2}(Bogovalov et al., 2008). With this momentum ratio, the shock has a cone-like shape opening towards the pulsar with a bow shock at the apex curved away from the Be star.
+
+Figure 3 shows a portion of the orbit of B1259 around the times of the IXPE observation. The pulsar orbit was measured via highly accurate radio timing and astrometric observations (Shannon et al., 2014; Miller-Jones et al., 2018). The position angle of the pulsar relative to the center of mass, which sets the shock-cone position angle, varies from -27\\fdg 7 at the observation start to -57\\fdg 1 at the stop. The EVPA of -41\\fdg 7\\pm 5\\fdg 0 lies between the shock cone position angles at the start and stop of the observation and is consistent with the average shock cone position angle during the observation. We re-analyzed the data by rotating the Stokes parameters for each event according to the pulsar/shock-cone position angle at the time of the event. However, this did not increase the PD nor the detection significance.
+
+For synchrotron emission, the EVPA is perpendicular to the magnetic field. Thus, the dominant component of the magnetic field is perpendicular to the shock axis of symmetry. A random magnetic field geometry would produce zero net polarization which is inconsistent with the PD observed. A poloidal field geometry, with a small shock-cone opening angle, would produce a net magnetic field almost parallel to the shock-cone axis (Xingxing and Jumpei, 2021) and, thus, an EVPA perpendicular to that observed. The IXPE results are consistent with a toroidal magnetic field at the termination shock. However, the observations provide insufficient information to uniquely identify the field geometry as toroidal.
+
+Dubus et al. (2015) performed relativistic hydrodynamical simulations of shocks in TeV binaries. The simulations were performed for LS 5039. However, the shock geometry and flow dynamics, after scaling for the orbital separation (d), should be reasonably well matched to B1259 since the selected momentum flux ratio was taken as \\eta=0.1 similar to that expected during the IXPE observations of B1259. In the simulations, most of the X-ray emission arises from a compact region at the apex with an extent of \\sim 0.5d. The orbital separation during the IXPE observation was \\sim1000 light-seconds, thus the emission/acceleration region would extend \\sim500 light-seconds. The small extent is due to the short timescales for acceleration and radiative losses. These timescales are expected to be \\sim200 s for B1259 near periastron (Tavani and Arons, 1997). X-ray variability has been detected from B1259 on timescales of 3 ks around when the pulsar passes through the stellar disk (Chernyakova et al., 2009; Uchiyama et al., 2009). Very rapid X-ray variability has been seen from the TeV binary LS I +61{}^{\\circ} 303, which also contains a pulsar but has a smaller orbital separation, on timescales down to a few seconds (Smith et al., 2009).
+
+The termination shock is predominantly orthogonal to the symmetry/flow axis in the compact region where the simulations suggest that particle acceleration and X-ray emission occurs. Thus, the magnetic field in the acceleration region is orthogonal to the flow, i.e. the acceleration occurs in a perpendicular shock. Sironi et al. (2013) studied particle acceleration in relativistic shocks as a function of the magnetization, \\sigma, which is the ratio of magnetic to kinetic energy in the flow. They found that for perpendicular shocks efficient acceleration occurs only for low magnetization, \\sigma<10^{-3}. This may suggest that the magnetization in the pulsar wind is already low at the termination shock in PSR B1259-63 which lies at \\sim 2\\times 10^{4}R_{L}, where the light cylinder radius R_{L}=cP/2\\pi.
+
+The PD for synchrotron emission depends on the particle spectral index and the level of uniformity of the magnetic field. The maximum polarization for synchrotron radiation given the measured X-ray photon index is 71%. The PD of 8.3\\%\\pm 1.4\\% observed in B1259 is significantly lower. The ratio of the PD to the maximum polarization is roughly given by the ratio of the energy in the uniform magnetic field component to that in the total field (Burn, 1966); this would suggest that \\approx 12% of the field is in the uniform component. However, the observed PD is reduced relative to the intrinsic value if the shock-cone axis is not perpendicular to the line of sight (Laing, 1980; Xingxing and Jumpei, 2021). The inclination of the shock-cone axis varies from 74^{\\circ} to 66^{\\circ} over the observation (Miller-Jones et al., 2018). Also, the curvature of the bow shock could reduce the observed PD relative to the local PD at each position along the shock. Thus, the fraction of the field in the uniform component should be considered as a lower bound.
+
+In conclusion, IXPE observations of PSR B1259-63 have revealed, for the first time, the magnetic field geometry in a gamma-ray binary. The magnetic field in the acceleration region is predominantly aligned perpendicular to the shock-cone axis. This new information on the magnetic field geometry should inform future studies of relativistic shock acceleration.
+
+We thank the anonymous referee for comments that improved the paper. We thank Allyn Tennant and Brian Ramsey for useful discussions. The Imaging X-ray Polarimetry Explorer (IXPE) is a joint US and Italian mission. The US contribution is supported by the National Aeronautics and Space Administration (NASA) and led and managed by its Marshall Space Flight Center (MSFC), with industry partner Ball Aerospace (now, BAE Systems). The Italian contribution is supported by the Italian Space Agency (Agenzia Spaziale Italiana, ASI) through contract ASI-OHBI-2022-13-I0, agreements ASI-INAF-2022-19-HH.0 and ASI-INFN-2017.13-H0, and its Space Science Data Center (SSDC) with agreements ASI-INAF-2022-14-HH.0 and ASI-INFN 2021-43-HH.0, and by the Istituto Nazionale di Astrofisica (INAF) and the Istituto Nazionale di Fisica Nucleare (INFN) in Italy. This research used data products provided by the IXPE Team (MSFC, SSDC, INAF, and INFN) and distributed with additional software tools by the High-Energy Astrophysics Science Archive Research Center (HEASARC), at NASA Goddard Space Flight Center (GSFC). This work made use of data supplied by the UK Swift Science Data Centre at the University of Leicester.
+
+IXPE, Swift
+
+HEASoft (NASA High Energy Astrophysics Science Archive Research Center (HEASARC), 2014), 1256, 123, 10.3847/1538-3881/aabc4f
+
+Astropy Collaboration, Price-Whelan, A. M., Lim, P. L., et al. 2022,, 935, 167, 10.3847/1538-4357/ac7c74
+
+Baldini, L., Bucciantini, N., Di Lalla, N., et al. 2022, SoftwareX, 19, 101194, 10.1016/j.softx.2022.101194
+
+Baldini, L., Barbanera, M., Bellazzini, R., et al. 2021, Astroparticle Physics, 133, 102628, 10.1016/j.astropartphys.2021.102628* Bogovalov et al. (2008) Bogovalov, S. V., Khangulyan, D. V., Koldoba, A. V., Ustyugova, G. V., & Aharonian, F. A. 2008, MNRAS, 387, 63, doi: 10.1111/j.1365-2966.2008.13226.x
+
+* Burn (1966) Burn, B. J. 1966, MNRAS, 133, 67, doi: 10.1093/mnras/133.1.67
+
+* Burrows et al. (2005) Burrows, D. N., Hill, J. E., Nousek, J. A., et al. 2005, SSRv, 120, 165, doi: 10.1007/s11214-005-5097-2
+
+* Chernyakova et al. (2023) Chernyakova, M., Malyshev, D., van Soelen, B., et al. 2023, arXiv, 2309.08299, doi: 10.48550/arXiv.2309.08299
+
+* Chernyakova et al. (2009) Chernyakova, M., Neronov, A., Aharonian, F., Uchiyama, Y., & Takahashi, T. 2009, MNRAS, 397, 2123, doi: 10.1111/j.1365-2966.2009.15116.x
+
+* Costa et al. (2001) Costa, E., Soffitta, P., Bellazzini, R., et al. 2001, Nature, 411, 662, doi: 10.1038/35079508
+
+* Di Marco et al. (2023) Di Marco, A., Soffitta, P., Costa, E., et al. 2023, AJ, 165, 143, doi: 10.3847/1538-3881/acba0f
+
+* Dubus (2013) Dubus, G. 2013, A&A Rev, 21, 64, doi: 10.1007/s00159-013-0064-5
+
+* Dubus et al. (2015) Dubus, G., Lamberts, A., & Fromang, S. 2015, A&A, 581, A27, doi: 10.1051/0004-6361/201425394
+
+* Gaensler & Slane (2006) Gaensler, B. M., & Slane, P. O. 2006, ARA&A, 44, 17, doi: 10.1146/annurev.astro.44.051905.092528
+
+* Grove et al. (1995) Grove, J. E., Tavani, M., Purcell, W. R., et al. 1995, ApJL, 447, L113, doi: 10.1086/309568
+
+* Johnston et al. (1994) Johnston, S., Manchester, R. N., Lyne, A. G., Nicastro, L., & Spyromilio, J. 1994, MNRAS, 268, 430, doi: 10.1093/mnras/268.2.430
+
+* Johnston et al. (1999) Johnston, S., Manchester, R. N., McConnell, D., & Campbell-Wilson, D. 1999, MNRAS, 302, 277, doi: 10.1046/j.1365-8711.1999.02133.x
+
+* Laing (1980) Laing, R. A. 1980, MNRAS, 193, 439, doi: 10.1093/mnras/193.3.439
+
+* Michel (1982) Michel, F. C. 1982, Reviews of Modern Physics, 54, 1, doi: 10.1103/RevModPhys.54.1
+
+* Miller-Jones et al. (2018) Miller-Jones, J. C. A., Deller, A. T., Shannon, R. M., et al. 2018, MNRAS, 479, 4849, doi: 10.1093/mnras/sty1775
+
+* NASA High Energy Astrophysics Science Archive Research Center (HEASARC). 2014, HEAsoft: Unified Release of FTOOLS and XANADU, Astrophysics Source Code Library, record ascl:1408.004. [http://ascl.net/1408.004](http://ascl.net/1408.004)
+
+* Ramsey et al. (2022) Ramsey, B. D., Bongiorno, S. D., Kolodziejczak, J. J., et al. 2022, Journal of Astronomical Telescopes, Instruments, and Systems, 8, 024003, doi: 10.1117/1.JATIS.8.2.024003
+
+* Shannon et al. (2014) Shannon, R. M., Johnston, S., & Manchester, R. N. 2014, MNRAS, 437, 3255, doi: 10.1093/mnras/stt2123
+
+* Sironi et al. (2013) Sironi, L., Spitkovsky, A., & Arons, J. 2013, ApJ, 771, 54, doi: 10.1088/0004-637X/771/1/54
+
+* Smith et al. (2009) Smith, A., Kaaret, P., Holder, J., et al. 2009, ApJ, 693, 1621, doi: 10.1088/0004-637X/693/2/1621
+
+* Smithsonian (2000) Smithsonian Astrophysical Observatory. 2000, SAOImage DS9: A utility for displaying astronomical images in the X11 window environment, Astrophysics Source Code Library, record ascl:0003.002. [http://ascl.net/0003.002](http://ascl.net/0003.002)
+
+* Soffitta et al. (2021) Soffitta, P., Baldini, L., Bellazzini, R., et al. 2021, AJ, 162, 208, doi: 10.3847/1538-3881/ac19b0
+
+* Tavani & Arons (1997) Tavani, M., & Arons, J. 1997, ApJ, 477, 439, doi: 10.1086/303676
+
+* Uchiyama et al. (2009) Uchiyama, Y., Tanaka, T., Takahashi, T., Mori, K., & Nakazawa, K. 2009, ApJ, 698, 911, doi: 10.1088/0004-637X/698/1/911
+
+* Weisskopf et al. (2022) Weisskopf, M. C., Soffitta, P., Baldini, L., et al. 2022, Journal of Astronomical Telescopes, Instruments, and Systems, 8, 026002, doi: 10.1117/1.JATIS.8.2.026002
+
+* Weng et al. (2022) Weng, S.-S., Qian, L., Wang, B.-J., et al. 2022, Nature Astronomy, 6, 698, doi: 10.1038/s41550-022-01630-1
+
+* Wilms et al. (2000) Wilms, J., Allen, A., & McCray, R. 2000, ApJ, 542, 914, doi: 10.1086/317016
+
+* Xingxing & Jumpei (2021) Xingxing, H., & Jumpei, T. 2021, ApJ, 922, 260, doi: 10.3847/1538-4357/ac273b

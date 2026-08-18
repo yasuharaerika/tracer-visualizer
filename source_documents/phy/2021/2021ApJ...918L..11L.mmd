@@ -1,0 +1,185 @@
+###### Abstract
+
+We discuss constraints that the observed brightness temperatures impose on coherent processes in pulsars and Fast Radio Bursts (FRBs), and in particular on the hypothesis of coherent curvature emission by bunches. We estimate the peak brightness temperature that a bunch of charge Ze can produce via synchrotron and/or curvature emission as k_{B}T\\sim(Ze)^{2}/\\lambda, where \\lambda is the typical emitted wavelength. We demonstrate that the bunch's electrostatic energy required to produce observed brightness temperature is prohibitively high, of the order of the total _bulk_ energy. We compare corresponding requirements for the Free Electron Laser mechanism (Lyutikov, 2021) and find that in that case the constraints are much easier satisfied.
+
+## 1 Introduction
+
+Many modern day theories of coherent emission from pulsars/Fast Radio Burst (FRBs) accept the "coherent curvature emission by bunches" model, formulated in the early years of pulsar research (Goldreich and Keeley, 1971; Cheng and Ruderman, 1977), and go on calculating the details of this assumption. Extensive work in the 70s through the day (Benford and Buschauer, 1977; Asseo et al., 1990; Melrose, 1992; Melrose and Gedalin, 1999; Melrose et al., 2021) demonstrated that the model is not viable.
+
+The problems are many. For example, in the original version of Goldreich and Keeley (1971), the bunching, driven by weak radiation-reaction effect, is easily destroyed by minor velocity spread. Another problem is long times needed to create the bunches: in a relativistically streaming plasma the processes in the beam frame are suppressed both by smaller rest-frame beam/plasma density if compared with the lab frame, and relativistic freezing of any corresponding dynamical process as viewed in the lab frame (_e.g._ Lyutikov, 1999).
+
+Here we approach the question "How justified is the assumption of the coherent emission by bunches" from the observational side: let's assume that bunches are created, what is the corresponding conditions to reproduce the observed properties? In particular, creation of electrostatically repulsive bunches costs energy. - How much? Are the costs consistent with the model? (The answer is no.)
+
+As a quantitative parameter that would measure the validity of the model we take the (awkwardly defined but universally used) quantity of brightness temperature. (Energetics is typically not an issue since radio carries minuscule amount of energy, though observations of Fast Radio Burst start to impose meaningful constraints on the plasma parameters at the source, Lyutikov and Rafat, 2019).
+
+In case of pulsars and FRBs the brightness temperatures reach values in excess of 10^{35} K (_e.g._ Manchester and Taylor, 1977; Melrose, 2000; Lorimer et al., 2007), and as high as \\sim 10^{40} K in extreme cases (_e.g._ Soglasnov et al., 2004). Can models of coherent emission by bunches reproduce those brightness temperature?
+
+We limit our approach to the class of "antenna" mechanism (as opposed to plasma maser Melrose and Gedalin, 1999; Lyutikov et al., 1999). That is: all particles emit independently, but due to the external driver they all emit in phase. We also limit our consideration to models operating within the magnetospheres of neutron stars: simultaneous observations of radio and X-ray bursts (CHIME/FRB Collaboration et al., 2020; Ridnaia et al., 2021; Bochenek et al., 2020; Mereghetti et al., 2020) unequivocally establishes magnetospheric origin of FRBs, as argued by Lyutikov and Popov (2020).
+
+Cyclotron and curvature emission are qualitatively very similar, but there is an important observational distinction: small cyclotron times typically cannot be resolved by the observing instruments, hence we see emission averaged over many gyration periods. Emitted and observed powers are equal then (if no bulk motion). Curvature emission is different: particle emits once when its velocity is nearly along the line of sight. At that moment it is moving relativistically towards an observer, so that emitted and observed powers are different.
+
+We illustrate the above points with three examples: a more familiar synchrotron emission and a popular model of coherent curvature emission by bunches SS2.1, and recently proposed Free Electron Laser mechanism, SS3.
+
+## 2 Peak brightness temperatures of synchrotron and curvature emission
+
+### Single particle
+
+Let's start with the more familiar case of synchrotron emission. We are after a subtle difference between the emitted power and the observed one (_e.g._ Scheuer 1968). The _average_ synchrotron power _emitted_ by a particle (we stress the "averaged" and the "'emitted" - not "instantaneously observed") is
+
+P_{a,s}\\approx\\frac{e^{2}}{c}\\gamma^{2}\\omega_{B}^{2}  and typical frequency
+
+\\omega_{s}\\sim\\gamma^{2}\\omega_{B} \\omega_{B}=\\frac{eB}{m_{e}c} 
+
+(For the sake of clarity we omit factors of unity.)
+
+It can be derived from the relativistic Larmor formula for intensity of radiation
+
+P_{a}=\\frac{2}{3}e^{2}\\gamma^{6}\\left(a_{\\parallel}^{2}+\\frac{1}{\\gamma^{2}}a_ {\\perp}^{2}\\right),  where a_{\\parallel},a_{\\perp} are acceleration along and perpendicular to the velocity. The quantity P_{a} is the rate of energy loss by an electron seen in lab frame at the moment when the electron has given velocity and acceleration, as measured in the lab frame.
+
+For a particle on Larmor orbit with
+
+r_{L}=\\gamma\\frac{c}{\\omega_{B}}  the period of rotation and transverse acceleration are
+
+T_{rot}=\\gamma\\frac{2\\pi}{\\omega_{B}} a_{\\perp}=\\frac{c^{2}}{r_{L}}=\\frac{c\\omega_{B}}{\\gamma} 
+
+Hence we derive relation (1).
+
+Relation (3) is the power _emitted_ by an electron. It equals the _average_ power seen by an observer stationary with respect to the gyration center, modulo angular factors of the order of unity - not dependent on the particle Lorentz factor (in a sense that an observer measuring energy flux through a given surface area, and projecting the result over the whole sky, would infer emitted power \\sim P_{a}). In other words, it's an integrated power seen by all observers spread out over 4\\pi.
+
+For an observer in the gyration plane that average power comes in the form of bursts, when the direction of electron motion nearly coincides with the line of sight, see Fig. 1
+
+A relativistic particle emits within a cone of \\sim 1/\\gamma. Hence a particle emits toward an observer for period
+
+t_{em}\\sim\\frac{1}{\\gamma}T_{rot}\\sim\\frac{1}{\\omega_{B}} 
+
+Note that the radiation formation length
+
+l_{r}\\sim\\gamma^{2}\\lambda\\sim c/\\omega_{B}\\ll r_{L}  is comparable to ct_{em}.
+
+As the particle within a small angle \\sim 1/\\gamma nearly catches-up with its radiation, the observed pulse duration
+
+t_{ob}\\sim\\frac{t_{em}}{\\gamma^{2}}=\\frac{2\\pi}{\\gamma^{2}\\omega_{B}} Note that the inverse/Fourier transform of (8) gives the typical frequency (2).
+
+Now, energy emitted during time (6) is
+
+E_{em}=\\frac{e^{2}}{c}\\gamma^{2}\\omega_{B} 
+
+And the observed power
+
+P_{ob}=\\frac{E_{em}}{t_{ob}}\\sim\\frac{e^{2}}{c}\\gamma^{4}\\omega_{B}^{2} 
+
+This is power during the peak emission in the middle of a short pulse. The peak power is \\gamma^{2} times larger than the average (1). This is the difference between emitted and observed power. Qualitatively, an observer sees one short bright burst per period of rotation. The peak brightness is much larger than the average one, by \\sim\\gamma^{2}. In other words, all the energy we observe is emitted during 1/\\gamma fraction of the orbit, but it arrives within time span 1/\\gamma^{2} shorter.
+
+Peak observed spectral power
+
+P_{ob,\\omega}=\\frac{P_{ob}}{\\omega_{s}}\\sim\\frac{e^{2}}{c}\\gamma^{2}\\omega_{B} 
+
+Estimating the brightness temperature as
+
+k_{B}T_{b}\\sim P_{ob,\\omega}\\frac{c}{(\\omega t_{ob})^{2}}  we find
+
+k_{B}T_{b}\\approx\\frac{e^{2}}{\\lambda} \\lambda=\\frac{c}{\\omega} 
+
+Relation (13) give the effective brightness temperature during a burst of synchrotron emission for a single electrons producing synchrotron emission at wavelength \\lambda. Thus the brightness temperature of the emission peak of synchrotron and of the curvature emission is approximately the electrostatic energy with the emitted wavelength.
+
+Numerical estimate gives
+
+T_{b}=5\\times 10^{-5}\\nu_{9}\\,\\mathrm{K}  where \\nu_{9}=\\nu/10^{9} is the frequency of the emitted waves in GHz.
+
+The procedure outlined above to estimate the peak brightness temperature for synchrotron emission gives _the same_ brightness temperature for the curvature emission as well, Eq. (13). Note that the observed peak power of curvature emission is
+
+P_{ob,c}\\sim\\frac{e^{2}}{c}\\gamma^{6}\\left(\\frac{c}{R_{c}}\\right)^{2}  is different from the emitted power by a factor \\gamma^{2}.
+
+### Coherent curvature emission by bunches
+
+The antenna mechanism is qualitatively based on the idea that if there is a bunch of Z electrons that has a dimension smaller than a wave length \\leq\\lambda, it will produce an emission pulse with brightness temperature
+
+k_{B}T_{b}\\approx Z^{2}\\frac{e^{2}}{\\lambda}. 
+
+Scaling with \\propto Z^{2} indicates coherent process. Hence the number of electrons needed in a bunch to produce a given brightness temperature T_{b} is
+
+Z=\\frac{\\sqrt{k_{B}T_{b}\\lambda}}{e}=2.5\\times 10^{16}T_{b,30}^{1/2}\\lambda^{1/2}  where we normalized brightness temperature to 10^{30} K, an appropriate scaling for pulsars and FRBs.
+
+Importantly, relation (16) gives an estimate of the electrostatic Coulomb energy E_{Cmb,\\,curv} required to create one bunch: 1
+
+Footnote 1: The corresponding equipartition magnetic field, assuming that the bunch occupies volume \\sim\\lambda^{3} is
+
+B\\sim\\frac{\\sqrt{k_{B}T_{b}}}{\\lambda^{3/2}}=5\\times 10^{7}\\frac{T_{b,30}^{1/2} }{\\lambda^{3/2}}\\,G
+
+The ratio of electrostatic energy to create a bunch to the bulk kinetic energy of the bunch E_{k}\\sim\\gamma Zm_{e}c^{2},
+
+\\frac{E_{Cmb,\\,curv}}{E_{k}}\\approx\\left(\\frac{1}{\\gamma}\\frac{(k_{B}T_{b})}{m _{e}c^{2}}\\frac{r_{e}}{\\lambda}\\right)^{1/2}=\\left(\\gamma\\frac{(k_{B}T_{b})}{m _{e}c^{2}}\\frac{r_{e}}{R_{c}}\\right)^{1/2} 
+
+Assuming that R_{c}\\sim c/\\Omega, numerical estimates give
+
+\\frac{E_{Cmb,\\,curv}}{E_{k}}=7\\nu_{9}^{1/6}T_{b,30}^{1/2}, 
+
+For Crab pulsar with period 0.03 seconds, near the light cylinder. For broader applications, the ratio (r_{e}/R_{c})^{1/2}, Eq. (19), microscopic to macroscopic parameters, does not vary much by changing the macroscopic one.
+
+Relation (20) is the main result: the electrostatic energy required to created charge bunches to produce coherent curvature emission of observed brightness temperature is prohibitively high, of the order of the total _bulk_ energy.
+
+Finally we note that the model of "coherent emission by bunches" cannot be taken to the continuous limit (this would eliminate the extra \\gamma^{2} factor in the observed power). A constant flow of particles, even a charged one will not produce any radiation.
+
+## 3 FEL Mechanism
+
+Lyutikov (2021) developed a model of Free Electron Laser (FEL) for the production of coherent emission in pulsars (Crab in particular) and FRBs, Fig. 2. The model has many attractive features, including explanation for some very subtle observed relationships: (i) operates in a very broad range of neutron star's parameters (_independent_ of the value of the magnetic field); (ii) can tolerate mild momentum spread of the beam \\Delta p/p\\leq 1; (iii) reproduces (multiple) emission bands seen in Crab and FRBs; can also produce broader emission; (iv) gives correct estimates for the brightness temperatures both in pulsars and FRBs; (v) explains correlation between polarization and spectral properties (that narrow-band emission in FRBs correlated with linear polarization).
+
+The model assumes that Alfven waves (electromagnetic wigglers) with relative amplitude
+
+a_{H}=\\frac{\\delta B}{B_{0}}\\ll 1 
+
+(\\delta B is the fluctuating magnetic field, B_{0} is the guiding field) and wave number k_{w} propagates through neutron star magnetosphere. The wiggler shakes the electron beam. The resulting ponderomotive force, appearing due to the beat of the wiggler and the electromagnetic wave amplified via parametric resonance, leads to the creation of charged bunches. The powerful wiggler then shakes the bunches producing coherent emission.
+
+Single particle emitted power and frequency are
+
+P_{a,FEL}\\approx a_{H}^{2}\\frac{e^{2}}{c}\\gamma^{4}(k_{w}c)^{2} \\omega_{FEL}\\sim\\gamma^{2}(k_{w}c) 
+
+Thus, the wiggler is Compton-scattered by the beam (FEL in guide field dominated regime cannot be treated as curvature emission in a wiggled field.)
+
+The emitting particle continuously propagates towards an observer - this is an important different from the synchrotron and curvature emission (when observer sees a short burst).
+
+Consider emission from particle propagating in a static wiggler of length L (relations are the same, within a factor of \\sim 2, for the electromagnetic wiggler propagating towards the particle), so that a particle emits for time L/c; but in observer frame this is shorter by \\gamma^{2}. Total emitted energy is \\sim P_{a,FEL}L/c and t_{ob}\\sim L/(\\gamma^{2}c). The observed power is thus
+
+P_{ob,FEL}\\approx a_{H}^{2}\\frac{e^{2}}{c}\\gamma^{6}(k_{w}c)^{2} 
+
+The peak spectral power
+
+P_{\\omega}=\\frac{P_{ob,FEL}}{\\omega_{FEL}}=a_{H}^{2}e^{2}\\gamma^{4}k_{w}=a_{H} ^{2}\\frac{e^{2}}{c}\\gamma^{2}\\omega 
+
+The brightness temperature of the observed pulse is then
+
+k_{B}T_{b}=a_{H}^{2}\\gamma\\frac{s}{L^{2}\\omega^{2}}=\\left(\\frac{\\gamma a_{H}}{ \\eta_{w}}\\right)^{2}\\frac{e^{2}}{\\lambda}  where we normalized the total wiggler length to the fluctuating wave number, L=\\eta_{w}/k_{w}, \\eta_{w}\\gg 1. (Factor \\gamma a_{H}/\\eta_{w} is typically \\leq 1).
+
+The required bunching number Z to produce given brightness temperature is
+
+Z\\approx\\frac{\\eta_{w}}{\\gamma a_{H}}\\frac{\\sqrt{k_{B}T_{b}\\lambda}}{e} 
+
+The charged bunches in the FEL need not be static ones - this involved huge energy as we discussed above. The charged bunches can be dynamic (_e.g._, Langmuir oscillations driven by the wiggler for FEL operating in Raman regime), so here is no need to confine them electrostatically. Still, let us take an extreme view and following the previous estimates demonstrate that FEL is consistent even with the extreme case of statically produced charged bunches.
+
+The corresponding electrostatic energy
+
+E_{Cmb,w}\\sim Z^{2}\\frac{e^{2}}{\\lambda}=\\left(\\frac{\\eta_{w}}{\\gamma a_{H}} \\right)^{2}k_{B}T_{b} 
+
+(we used \\lambda k_{w}\\sim 1/\\gamma^{2}). In absolute values the quantity E_{Cmb,w} is larger than E_{Cmb,\\,curv}, (18) since the factor in front of k_{B}T_{b} is generally larger than unity.
+
+Ratio of electrostatic energy over kinetic energy
+
+\\frac{E_{Cmb,w}}{E_{k}}=\\frac{\\eta_{w}}{a_{H}}\\frac{\\sqrt{k_{B}T_{b}}k_{w} \\sqrt{\\lambda}}{m_{e}c^{2}}=\\left(\\frac{\\eta_{w}}{a_{H}}\\right)T_{30}^{1/2} \\sqrt{\\lambda}\\times\\left\\{\\begin{array}{ll}2\\times 10^{-4}&\\mbox{Crab light cylinder}\\\\ 3\\times 10^{-2}&\\mbox{near neutron star}\\end{array}\\right. 
+
+(wavelength \\lambda is not normalized - as measured in centimeters.) Smaller ratio of electrostatic to beam energy in this case can be traced to the fact that the frequency of curvature emission scales as \\gamma^{3}, while FEL as \\gamma^{2} - hence for similar scale \\sim light cylinder, in the case of curvature emission \\gamma is smaller, hence smaller bulk energy.
+
+Most importantly, in the case of the FEL the bunching is driven, in some correctly implied sense, not by the beam but by the wiggler (the axial bunching force \\propto\\delta v\\delta B, while the velocity drift component \\delta v is also \\propto\\delta B).
+
+Ratio of electrostatic to wiggler energy within \\lambda^{3}, E_{w}\\sim a_{H}^{2}B_{0}^{2}c\\lambda^{3}, evaluates to
+
+\\frac{E_{Cmb,w}}{E_{w}}=\\frac{\\eta_{w}^{2}}{a_{H}^{4}}\\frac{k_{B}T_{b}k_{w}}{ B_{0}^{2}\\lambda^{2}}=\\left(\\frac{\\eta_{w}^{2}}{a_{H}^{4}}\\right)T_{30}\\lambda^{-2} \\times\\left\\{\\begin{array}{ll}10^{-6}&\\mbox{at Crab light cylinder}\\\\ 10^{-19}b_{q}^{-2}&\\mbox{near magnetar}\\end{array}\\right.  where b_{q}=B_{0}/B_{Q}, B_{Q}=m_{e}^{2}c^{3}/(\\hbar c). (Scaling to the quantum magnetic field B_{Q} is given since the model of Lyutikov (2021) applies both to the inner regions of magnetars and the Crab's light cylinder. Thus, mild wigglers can indeed create (have enough energy) the required charged bunches.
+
+## 4 Discussion
+
+In this paper we argue that a popular simple model of "coherent curvature emission by bunches" is not self-consistent: the price in electrostatic energy that is needed to create charge bunches is too high to explain the observed brightness temperatures. This is our main conclusion.
+
+Together with the well recognized problems of how to create charge bunches (Benford & Buschauer, 1977; Asseo et al., 1990; Melrose, 1992; Melrose & Gedalin, 1999; Melrose et al., 2021), the unrealistic energetic requirements further assert that coherent emission by bunches is not a viable pulsar/FRM emission mechanism.
+
+On a more general issues, we point out an apparently subtle confusion in the literature between the emitted power and the observed one. The former can be measured in the electron rest frame, the latter depends on the location of the observer. Though synchrotron and curvature emission are qualitatively very similar, the cyclotron motion is typically very fast, so that the use of the average power (1) is, basically justified. If there is no bulk motion of plasma, then the _average_ observed power equals _average_ emitted power. This is not the case for curvature emission: particles stream along the field lines and appear in the line of sight once. At this moment the observed power is different from the emitted power by a factor \\sim\\gamma^{2}. This is an important correction to the _observed_ power of curvature radiation.
+
+This work had been supported by NASA grants 80NSSC17K0757 and 80NSSC20K0910, NSF grants 1903332 and 1908590. I would like to thank Mikhail Medvedev and Alexandre Philippov for discussions.

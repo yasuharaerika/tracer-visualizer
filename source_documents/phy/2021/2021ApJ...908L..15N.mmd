@@ -1,0 +1,239 @@
+###### Abstract
+
+We report the detection of 376.05 Hz (2.66 ms) coherent X-ray pulsations in _NICER_ observations of a transient outburst of the low-mass X-ray binary IGR J17494-3030 in 2020 October/November. The system is an accreting millisecond X-ray pulsar in a 75 minute ultracompact binary. The mass donor is most likely a \\simeq 0.02\\,M_{\\odot} finite-entropy white dwarf composed of He or C/O. The fractional rms pulsed amplitude is 7.4%, and the soft (1-3 keV) X-ray pulse profile contains a significant second harmonic. The pulsed amplitude and pulse phase lag (relative to our mean timing model) are energy-dependent, each having a local maximum at 4 keV and 1.5 keV, respectively. We also recovered the X-ray pulsations in archival 2012 _XMM-Newton_ observations, allowing us to measure a long-term pulsar spin-down rate of \\dot{\\nu}=-2.1(7)\\times 10^{-14} Hz s{}^{-1} and to infer a pulsar surface dipole magnetic field strength of \\simeq 10^{9} G. We show that the mass transfer in the binary is likely non-conservative, and we discuss various scenarios for mass loss from the system. stars: neutron - stars: oscillations (pulsations) - binaries: close - stars: rotation - X-rays: binaries - X-rays: individual (IGR J17494-3030) 000000-0000-0000-0000-00servations with _Swift_ showed that the outburst lasted approximately one month (Armas Padilla et al., 2013) before fading into quiescence (Chakrabarty et al., 2013). _XMM-Newton_ 0.5-10 keV spectroscopy suggested that the compact primary is a neutron star (Armas Padilla et al., 2013). A new outburst was detected with _INTEGRAL_ in 2020 October (Ducci et al., 2020), leading to a more precise X-ray localization with _Chandra_(Chakrabarty & Jonker, 2020) and the identification of a 4.5 GHz radio counterpart with the VLA (van den Eijnden et al., 2020).
+
+Soft X-ray observations of the 2020 outburst with the _Neutron Star Interior Composition Explorer (NICER)_ revealed the presence of coherent 376 Hz pulsations modulated by a 75 minute binary orbit, establishing the system as a millisecond pulsar (neutron star) in an ultracompact binary (Ng et al., 2020). In this Letter, we first outline the _NICER_ and _XMM-Newton_ observations and data processing. We then present results from timing and spectral analyses of the _NICER_ observations, as well as from a timing analysis of the archival 2012 _XMM-Newton_ observations. Finally, we constrain the possible nature of the donor in the IGR J17494 system and discuss further implications of the source.
+
+## 2 Observations and Data Processing
+
+### Nicer
+
+_NICER_ is an X-ray telescope mounted on the _International Space Station_(_ISS_) since 2017 June. _NICER_ has 56 aligned pairs of X-ray concentrator optics and silicon drift detectors (52 detectors are usually active on _NICER_). _NICER_ is capable of fast-timing observations in the 0.2-12.0 keV band, with timing accuracy of time-tagged photons to better than 100 ns (Gendreau et al., 2012; LaMarr et al., 2016; Prigozhin et al., 2016).
+
+_NICER_ observed IGR J17494 from 2020 October 27 to November 41 for a total exposure time of 32.3 ks after filtering, in ObsIDs 3201850101-32018501082. These observations were available through the public NASA HEASARC data archive. There were additional _NICER_ observations, to which we did not have access, during this interval for a proprietary guest observer investigation (PI: A. Sanna; shown as the shaded region in the top panel of Figure 1). The events were barycenter-corrected in the ICRS reference frame, with source coordinates R.A. = 267.348417{}^{\\circ} and Decl.= -30.499722{}^{\\circ} (equinox J2000.0) obtained from a recent _Chandra_ observation (Chakrabarty & Jonker, 2020), using barycorr from FTOOLS with the JPL DE405 solar system ephemeris (Standish, 1998).
+
+Footnote 1: The source became unobservable due to Sun-angle constraints around November 5.
+
+Footnote 2: During the course of the observations, several detectors were turned off for scheduled maintenance. Detectors 01, 02, 10, 13, 34, 43, and 44 were affected. In all observations, 46–48 detectors were active. Detectors 11, 20, 22, and 60 have been inactive since launch.
+
+The _NICER_ observations were processed with HEASoft version 6.28 and the _NICER_ Data Analysis Software (nicerdas) version 7.0 (2020-04-23_V007a). The following criteria, which we note are relaxed compared to standard filtering criteria as the latter were too restrictive and resulted in no events, were imposed in the construction of the good time intervals (GTIs): no discrimination of events when _NICER_ (on the _ISS_) was inside or outside of the South Atlantic Anomaly during the course of the observations; \\geq 20^{\\circ} for the source-Earth limb angle (\\geq 30^{\\circ} for the Sun-illuminated Earth); \\geq 38 operational Focal Plane Modules (FPMs); undershoot (dark current) count-rate range of 0-400 per FPM (underonly_range); overshoot (saturation from charged particles) count-rate range of 0-2 per FPM (overonly_range and overonly_expr); pointing offset is <0.015^{\\circ} from the nominal source position.
+
+We analyzed spectral data using XSPEC v12.11.1 (Arnaud, 1996). _NICER_ data were selected in the range 1-10 keV, to avoid contamination from optical loading and significant interstellar absorption at lower energy. The spectra were rebinned to have at least 25 counts per bin. Background spectra were extracted using nibackgen3C50 version 6 from the official _NICER_ tools3. Standard response files made available by the _NICER_ team were used to perform spectral analysis4.
+
+Footnote 3: [https://heasarc.gsfc.nasa.gov/docs/nicer/tools/nicer_bkg_est_tools.html](https://heasarc.gsfc.nasa.gov/docs/nicer/tools/nicer_bkg_est_tools.html).
+
+Footnote 4: [https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/data/nicer/xti/index.html](https://heasarc.gsfc.nasa.gov/docs/heasarc/caldb/data/nicer/xti/index.html).
+
+### _XMM-Newton_
+
+_XMM-Newton_ performed a 43 ks observation of IGR J17494 on 2012 March 31 (ObsID 0694040201). The EPIC-PN camera was operated in timing mode, yielding a time resolution of 29.56 \\mus, which is sufficient to allow us to search for the presence of coherent pulsations. We processed these data using SAS version 18.0 and the latest version of the calibration files5. Applying standard screening criteria, we retained only those events with photon energies in the 0.4-10 keV range, with pattern \\leq 4 and screening flag = 0. Source events were extracted from rawx columns [34:42], while background events were extracted from rawx [51:59]. Constructing a 32-s resolution light curve of the source and background data, we find that the source count-rate gradually decreased over the span of the observation, dropping from 2 ct s{}^{-1} to 1 ct s{}^{-1}. Additionally, we filtered out an episode of background flaring that occurred between 15750 s and 21500 s after the start of the observation. Finally, we applied barycentric corrections to the cleaned event data, again using the JPL DE405 solar system ephemeris and the source coordinates quoted previously.
+
+## 3 Results
+
+### Nicer
+
+The _NICER_ 1-7 keV light curve for the 2020 outburst is shown in the top panel of Figure 1. The source gradually faded until MJD 59155.4, after which it decayed more rapidly. The X-ray spectrum prior to the proprietary data gap was fairly constant and well-fit with a two-component absorbed power-law and blackbody model (tbabs(powerlaw+bbodyrad) in XSPEC), with absorption column density n_{\\rm H}=2.07(6)\\times 10^{22} cm{}^{-2}, photon index \\Gamma=1.90(6), blackbody temperature kT=0.58(3) keV, and blackbody radius R_{\\rm bb}=2.9(5)\\,d_{10} km, where d_{10} is the source distance in units of 10 kpc. The uncertainties are reported at the 90% confidence level. The reduced \\chi^{2} (\\chi^{2}_{\\nu}) of the fit was 1.14 for 849 degrees of freedom. The spectrum softened during the late decay phase of the outburst, where the same two-component model fit yielded \\Gamma=4.3^{+0.9}_{-0.6} and n_{\\rm H} is assumed to be unchanged throughout the observations. The peak absorbed 1-10 keV flux we observed was 1.01\\times 10^{-10} erg s{}^{-1} cm{}^{-2} on MJD 59149.4, corresponding to an unabsorbed flux of 1.43\\times 10^{-10} erg s{}^{-1} cm{}^{-2}. The lowest absorbed flux we measured was 1.21\\times 10^{-12} erg s{}^{-1} cm{}^{-2} on MJD 59157.5, corresponding to an unabsorbed flux of 3.23\\times 10^{-12} erg s{}^{-1} cm{}^{-2}. This is roughly a factor of 3 fainter than the minimum flux detected by _XMM-Newton_ at the end of the 2012 outburst (Armas Padilla et al., 2013). A more detailed X-ray spectral analysis will be reported elsewhere.
+
+We first detected X-ray pulsations with a data analysis pipeline that employs multiple techniques6 for X-ray pulsation searches, including averaged power spectral stacking with Bartlett's method (Bartlett, 1948) and acceleration searches with PRESTO(Ransom et al., 2002). The initial detection was made through PRESTO, an open-source pulsar timing software package7 designed for efficient searches for binary millisecond pulsars. We ran a Fourier-domain acceleration search scheme with the accelsearch task over the range 1-1000 Hz, and posited that the Doppler motion would cause the possible signal to drift over a maximum of 100 bins in Fourier frequency space. This yielded a strong \\simeq 376.05 Hz pulsation candidate (trial-adjusted significance of 3.5\\sigma) in the 2-12 keV range.
+
+After initial identification of the candidate in the 2-12 keV range, we optimized the pulse significance by adjusting the energy range to maximize the Z_{1}^{2} statistic, where
+
+Z_{1}^{2}=\\frac{2}{N}\\left[\\left(\\sum_{j=1}^{N}\\cos 2\\pi\\nu t_{j}\\right)^{2}+ \\left(\\sum_{j=1}^{N}\\sin 2\\pi\\nu t_{j}\\right)^{2}\\right],  where t_{j} are the N photon arrival times (Buccheri et al., 1983). We found that an optimal energy range of 1.01-7.11 keV yielded Z_{1}^{2}=1915.41. Our subsequent timing analyses were carried out over 1-7 keV.
+
+The acceleration searches indicated that the pulsation frequency is modulated by a binary orbit. We used the acceleration data to estimate an initial timing model with a provisional circular orbit. We then used this initial model to construct 35 pulse times of arrival (TOAs) with the photon_toa.py tool in the NICERsoft8 data analysis package, using a Gaussian pulse template and ensuring an integration time of 500 s for each TOA (with minimum exposure time of 200 s). We then used these TOAs to compute corrections to our initial orbit model using weighted least-squares fitting with the PINT pulsar data analysis package (Luo et al., 2020). Our best-fit orbit ephemeris is shown in Table 1, and the orbital decay curve is shown in the middle panel of Figure 1. Using our best-fit timing model, pulsations were detected throughout the entire outburst. At the end of the observations, we were able to detect the pulsations in observations from MJD 59154-59157 (November 1-4) by combining all the data. The mean unabsorbed flux over this 4-day interval was 8.5\\times 10^{-12} erg s{}^{-1} cm{}^{-2} (1-10 keV). We did not have sufficient sensitivity to detect the pulsations in individual pointings from these dates. The time-averaged fractional root-mean-squared (rms) pulsed amplitude was 7.4% (1-7 keV). Examining the lower and higher energies separately, we found amplitudes of 7.2% in the 1-3 keV band and 8.7% in the 3-7 keV band. The soft and hard X-ray pulse profiles are shown in the bottom panel of Figure 1. The 1-3 keV profile shows the presence of a second harmonic; this component is not significantly detected in the 3-7 keV profile. To further examine the energy dependence of the pulse waveform, we adaptively binned the timing data in energy. We required the energy bins to contain a multiple of 5 pulse-invariant (PI) energy channels (0.05 keV), such that each bin contained at least 5000 counts. For each of these energy bins, we then folded the data using our best-fit timing solution and measured the background-corrected fractional rms pulsed amplitude and the pulse phase offset relative to the model. The resulting energy dependencies are shown in Figure 2. The pulsed amplitude has a local maximum of 11% at 4 keV, while the pulse phase lag has a local maximum of +0.05 cycles (130 \\mus) at around 1.5 keV.
+
+Footnote 8: [https://github.com/paulray/NICERsoft](https://github.com/paulray/NICERsoft)
+
+### _XMM-Newton_
+
+The uncertainty in our P_{\\rm orb} value does not allow us to coherently extrapolate our timing model back to the 2012 outburst. Thus, we searched for pulsations in the _XMM-Newton_ data by constructing a grid of trial T_{\\rm asc} values around the local epoch that spanned one orbital period. The grid resolution was set to 50 s, which is equivalent to 4{}^{\\circ} in orbital longitude. For each trial ephemeris, we then demodulated the event data and computed the Z_{1}^{2} statistic (see Eq. 1). We evaluated this statistic for pulse frequencies in a \\pm 3 mHz window around the spin frequency measured with _NICER_, adopting a frequency resolution of 1/T, with T the duration of the _XMM-Newton_ observation. The best can didate solution produced by this search had Z_{1}^{2}=89, which converts to a trial-adjusted pulse detection significance of 8\\sigma.
+
+Adopting the best T_{\\rm asc} and pulse frequency from the grid search as a provisional model, we performed a phase-coherent pulse analysis. We divided the light curve into \\approx 3 ks segments, and measured the pulse phase in each segment separately. The phase residuals were fit using a circular orbital model and constant spin frequency, where we kept the orbital period and projected semimajor axis fixed at their _NICER_ values. The best-fit values were \\nu_{2012}=376.0501759(19) Hz and T_{\\rm asc,2012}= MJD 56017.33680(5). Comparing to our _NICER_ measurement, we find \\Delta\\nu\\equiv\\nu_{2020}-\\nu_{2012}=-5.7\\pm 1.9 mHz. This indicates long-term spin-down of the pulsar between outbursts, at a rate \\dot{\\nu}=-2.1(7)\\times 10^{-14} Hz s{}^{-1}. Owing to the uncertainty in exact orbital cycle count between the 2012 and 2020 epochs, we are unable to use these T_{\\rm asc} measurements to further refine the orbital period.
+
+The _XMM-Newton_ data also showed an energy-dependent trend in pulse phase lag similar to that observed in the _NICER_ data. We were unable to measure an energy-dependence in the pulsed amplitude with _XMM-Newton_, but the results from the two data sets were consistent within the measurement uncertainties.
+
+## 4 Discussion
+
+The discovery of coherent millisecond X-ray pulsations from IGR J17494-3030 definitively identifies the source as an accreting neutron star. We can use the long-term spin-down of the pulsar between its 2012 and 2020 X-ray outbursts to estimate the pulsar's magnetic field strength. Assuming that the spin-down is due to magnetic dipole radiation, we can calculate the pulsar's magnetic dipole moment (Spitkovsky, 2006)
+
+\\mu =5.2\\times 10^{26}\\left(1+\\sin^{2}\\alpha\\right)^{-1/2} \\times\\left(\\frac{I}{10^{45}\\ {\\rm g\\ cm^{2}}}\\right)^{1/2}{\\rm G \\ cm^{3}},  where \\alpha is the angle between the magnetic and spin axes, and I is the neutron star moment of inertia. The corresponding surface dipole field strength of \\simeq 10^{9} G is on the high end of the distribution inferred for other AMXPs (Mukherjee et al., 2015).
+
+We found that the fractional rms pulsed amplitude and the pulse phase of IGR J17494 vary as a function of photon energy. Both the amplitude and the phase lag reach a local maximum at a (different) characteristic energy of 4 and 1.5 keV, respectively. Energy-dependent variations of the pulse waveform are ubiquitous among AMXPs, although the location of these local maxima varies greatly from source to source (Gierlinski et al., 2002; Gierlinski & Poutanen, 2005; Falanga et al., 2005; Patruno et al., 2009; Falanga et al., 2012). The behavior can be understood through a two-component emission model, with thermal emission originating from the stellar surface and scattered Compton emission originating from some height above the surface (Gierlinski et al., 2002; Wilkinson et al., 2011). Accounting for the difference in geometry and emission patterns, such a model can self-consistently explain the energy dependence of both the phase lags and the pulsed amplitudes (Poutanen & Gierlinski, 2003).
+
+Our measurement of a 75 min binary orbit allows us to constrain the nature of the mass donor in this system. The vast majority of Roche-lobe-filling LMXBs and cataclysmic variables contain hydrogen-rich donor stars, and they all have binary periods P_{\\rm orb}\\gtrsim 80 min (Paczynski & Sienkiewicz, 1981; Rappaport et al., 1982). The so-called ultracompact binaries (P_{\\rm orb}\\lesssim 80 min) have H-depleted donors (Nelson et al., 1986; Pylyser & Savonije, 1988, 1989; Nelemans et al., 2010). IGR J17494 has the longest known period for an ultracompact LMXB and lies near the period boundary, making it a particularly interesting case. We also note the recent discovery of the rotation-powered millisecond gamma-ray pulsar PSR J1653-0158 in a 75 min (non-accreting) binary (Nieder et al., 2020). This is the _shortest_ orbital period known for a rotation-powered binary pulsar, and this "black widow" system is believed to have evolved from an ultracompact LMXB after mass transfer ended.
+
+From our measured orbital parameters, the binary mass function of IGR J17494 is
+
+f_{m} \\equiv\\frac{(M_{d}\\sin i)^{3}}{(M_{\\rm ns}+M_{d})^{2}}=\\frac{4 \\pi^{2}(a_{x}\\sin i)^{3}}{GP_{\\rm orb}^{2}} \\approx 1.39\\times 10^{-6}\\ M_{\\odot},  where M_{\\rm ns} is the neutron star mass, M_{d} is the donor mass, a_{x}\\sin i is the projected semimajor axis, and the binary inclination i is defined as the angle between the line of sight and the orbital angular momentum vector. For a given value of M_{\\rm ns}, we can use Equation 3 to calculate M_{d} as a function of i (see top panel of Figure 3). Assuming M_{\\rm ns}=1.4\\ (2.0)\\,M_{\\odot}, the minimum donor mass (for an edge-on binary with i=90^{\\circ}) is 0.014\\ (0.018)\\ M_{\\odot}. For a random ensemble of binaries, the probability distribution of \\cos i is uniformly distributed and {\\rm Pr}(i<i_{0})=1-\\cos i_{0}. Thus, the donor mass is likely to be very low, with a 90% confidence upper limit of M_{d}<0.033\\ (0.041)\\,M_{\\odot} for M_{\\rm ns}=1.4\\ (2.0)\\,M_{\\odot}.
+
+Assuming a Roche-lobe-filling donor, we can calculate the donor radius R_{d} as a function of M_{d}(Eggleton, 1983); this is shown in the bottom panel of Figure 3 for M_{\\rm ns}=1.4\\,M_{\\odot}. For comparison, the figure also shows the mass-radius relations for different types of low-mass stars: cold white dwarfs (WDs; Zapolsky & Salpeter, 1969; Rappaport & Joss, 1984; Nelemans et al., 2001); hot (finite-entropy) WDs composed of either He, C, or O (Deloye & Bildsten, 2003); and low-mass H-rich stars, including brown dwarfs (Chabrier et al., 2000). We see that cold WD models are inconsistent with our measured mass-radius constraint, indicating that thermal bloating is likely important. Moderately hot He WDs with central temperature T_{c}=2.5\\times 10^{6} K or C/O WDs with T_{c}=5\\times 10^{6} K are consistent with our constraint at high binary inclination. Hotter WDs and moderately old (cool) brown dwarfs are also consistent, but the required inclinations have low a priori probability. Finally, H-rich dwarfs above the mass-burning limit are also possible, but only for extremely low (improbable) inclinations. We conclude that the donor is likely to be a \\simeq 0.02\\,M_{\\odot} finite-entropy He or C/O white dwarf.
+
+The angular momentum evolution of the binary is described by (Verbunt, 1993; Verbunt & van den Heuvel, 1995)
+
+-\\frac{\\dot{J}}{J}=-\\frac{\\dot{M}_{d}}{M_{d}}\\,f_{\\rm ML},  where \\dot{J} is the rate of change of the orbital angular momentum J due to effects other than mass loss from the system, \\dot{M}_{d} (<0) is the rate of change of the donor mass, and the dimensionless factor f_{\\rm ML} is given by
+
+f_{\\rm ML}=\\frac{5}{6}+\\frac{n}{2}-\\beta q-\\frac{(1-\\beta)(q+3\\alpha)}{3(1+q)},  where q=M_{d}/M_{\\rm ns}\\ll 1 is the binary mass ratio, \\beta is the fraction of \\dot{M}_{d} that accretes onto the neutron star (\\beta=1 for conservative mass transfer),
+
+n=\\frac{d(\\ln R_{d})}{d(\\ln M_{d})}  denotes how the donor radius R_{d} changes with mass loss, and \\alpha is the specific angular momentum of any (non-conservative) mass lost from the system in units of the donor star's specific angular momentum. Thus, \\alpha parameterizes the site of any mass ejection from the system, where \\alpha\\simeq 1 for mass loss close to the donor and \\alpha\\simeq q^{2} for mass loss close to the pulsar. Mass transfer in ultracompact binaries is primarily driven by angular momentum loss due to gravitational radiation from the binary orbit (see Rappaport et al., 1982, and references therein); for a circular orbit, this loss is given by (Landau & Lifshitz, 1989; Peters, 1964)
+
+-\\left(\\frac{\\dot{J}}{J}\\right)_{\\rm GW}=\\frac{32\\,G^{3}}{5\\,c^{5}}\\frac{M_{ \\rm ns}M_{d}(M_{\\rm ns}+M_{d})}{a^{4}},  where a is the binary separation. Inserting this into the left-hand side of Equation 4, we can then calculate the gravitational-wave-driven mass transfer rate from the donor into the accretion disk as
+
+\\dot{M}_{\\rm GW}=-\\dot{M}_{d}=\\frac{32G^{3}}{5c^{5}}\\left(\\frac{4\\pi^{2}}{G} \\right)^{4/3}\\frac{M_{\\rm ns}^{8/3}\\,q^{2}}{(1+q)^{1/3}\\,P_{\\rm orb}^{8/3}\\,f_ {\\rm ML}}
+
+\\approx 2.6\\times 10^{-12}\\left(\\frac{M_{\\rm ns}}{1.4M_{\\odot}}\\right)^{2/3}
+
+\\times\\left(\\frac{M_{d}}{0.014M_{\\odot}}\\right)^{2}\\left(\\frac{f_{\\rm ML}}{0.66 }\\right)^{-1}M_{\\odot}\\,\\,\\,{\\rm yr}^{-1}. 
+
+\\begin{table}
+
+\\begin{tabular}{l c} \\hline \\hline \\multicolumn{1}{c}{Parameter} & \\multicolumn{1}{c}{Value} \\\\ \\hline Right ascension, \\alpha (J2000) & 267.348417{}^{\\circ} \\\\ Declination, \\delta (J2000) & -30.499722^{\\circ} \\\\ Position epoch (TT) & MJD 59156.34 \\\\ Spin frequency, \\nu_{0} (Hz) & 376.05017022(4) \\\\ Spin frequency derivative (during outburst), |\\dot{\\nu}| (Hz/s) & <1.8\\times 10^{-12} \\\\ Spin epoch, t_{0} (TDB) & MJD 59149.0 \\\\ Binary period, P_{\\rm orb} (s) & 4496.67(3) \\\\ Projected semimajor axis, a_{x}\\sin i (lt-ms) & 15.186(12) \\\\ Epoch of ascending node passage, T_{\\rm asc} (TDB) & MJD 59149.069012(15) \\\\ Eccentricity, e & <0.006 (2\\sigma) \\\\ \\hline Spin frequency derivative (long-term), \\dot{\\nu} (Hz/s) & -2.1(7)\\times 10^{-14} \\\\ \\hline \\end{tabular} Note. – Source coordinates adopted for the barycentering were determined by Chakrabarty & Jonker (2020). The spin frequency derivative quoted here is during the 2020 outburst.
+
+\\end{table}
+
+Table 1: IGR J17494-303 timing parameters from the 2020 outburst Our scaling value of f_{\\rm ML}=0.66 corresponds to n=-1/3 (typical for degenerate donors) and \\beta=1.
+
+Although accretion onto the neutron star is mediated by episodic outbursts, mass continuity requires that the long-term average accretion luminosity reflect \\dot{M}_{\\rm GW} if the mass transfer is conservative. Our observations are not ideal for examining this, since we did not observe the early (brightest) part of the 2020 outburst with _NICER_. However, the unabsorbed 0.5-10 keV X-ray fluence in the 2012 outburst was 1.1\\times 10^{-4} erg cm{}^{-2}(Armas Padilla et al., 2013). Assuming that the 2012 outburst was typical, that the long-term average accretion rate is dominated by the outbursts, and that there were no intervening outbursts between 2012 and 2020, the outburst separation of \\approx 3100 days yields a long-term average X-ray flux of F_{x,\\rm avg}=3.9\\times 10^{-13} erg s{}^{-1} cm{}^{-2} (0.5-10 keV). We can then write the accretion luminosity as
+
+\\frac{GM_{\\rm ns}\\beta\\dot{M}_{\\rm GW}}{R_{\\rm ns}}=\\left(\\frac{\\Delta\\Omega}{ 4\\pi}\\right)4\\pi d^{2}f_{\\rm bol}\\,F_{x,\\rm avg},  where R_{\\rm ns} is the neutron star radius, d is the distance to the source, f_{\\rm bol} is the bolometric correction (accounting for accretion luminosity outside the 0.5-10 keV bandpass), and \\Delta\\Omega is the solid angle into which the accretion luminosity is emitted. Based on the _INTEGRAL_ hard X-ray observations in 2012 (Boissay et al., 2012), we estimate f_{\\rm bol}\\approx 1.7. Assuming R_{\\rm ns}=10 km and taking \\beta=1 and \\Delta\\Omega=4\\pi, we obtain an implausibly large distance of 20 kpc. Although it is not impossible that the source lies on the far side of the Galaxy, a location near the Galactic center is far more likely given the line of sight. There are several reasons that our distance estimate might be significantly inflated. Obtaining a more plausible distance of 8 kpc would require
+
+\\frac{1}{\\beta}\\left(\\frac{\\Delta\\Omega}{4\\pi}\\right)\\left(\\frac{f _{\\rm bol}}{1.7}\\right)\\left(\\frac{f_{\\rm ML}}{0.66}\\right) \\times\\left(\\frac{M_{\\rm ns}}{1.4\\,M_{\\odot}}\\right)^{-5/3}\\left( \\frac{M_{d}}{0.014\\,M_{\\odot}}\\right)^{-2} \\times\\left(\\frac{F_{x,\\rm avg}}{3.9\\times 10^{-13}\\,\\,\\rm erg\\,\\,s ^{-1}\\,\\,\\rm cm^{-2}}\\right)\\approx 6. 
+
+Some combination of these factors may be different than what we assumed above. However, a heavier neutron star (M_{\\rm ns}>1.4\\,M_{\\odot}), a heavier mass donor (equivalent to a lower binary inclination), or significant beaming (\\Delta\\Omega<4\\pi) would further inflate the distance estimate. Also, our estimate of f_{\\rm bol} is fairly robust, given the broad X-ray coverage of the _INTEGRAL_ data. It is possible that we have underestimated F_{x,\\rm avg}. This could happen if we missed accretion outbursts that occurred between 2012 and 2020, or if the quiescent (non-outburst) flux is as high as \\sim 10^{-12} erg s{}^{-1} cm{}^{-2}. The former possibility can be explored through a careful analysis of archival X-ray monitoring data, while the latter possibility could be checked through sensitive X-ray observations of the source in quiescence.
+
+The factor f_{\\rm ML} may be somewhat larger than we assumed. Although we calculated it using the usual value of n=-1/3 for degenerate donors, Deloye & Bildsten (2003) showed that the WD donors in ultracompact binaries can have n values in the range of -0.1 to -0.2 due to the importance of Coulomb interactions for extremely low donor masses. However, this is unlikely to increase f_{\\rm ML} by more than a factor of \\simeq 1.2.
+
+Non-conservative mass transfer (\\beta<1) is a more promising avenue. The radio detection of IGR J17494 (van den Eijnden et al., 2020) points to the likelihood of a collimated jet ejection during the outburst. Moreover, a similar distance conundrum was invoked to infer non-conservative mass transfer in the ultracompact LMXB pulsar XTE J0929-314 (Marino et al., 2017) as well as several other AMXPs (Marino et al., 2019). Also, there was evidence found for an outflow in the ultracompact LMXB pulsar IGR J17062-6143 (Degenaar et al., 2017; van den Eijnden et al., 2018), possibly arising from a magnetic propeller-driven wind from the inner accretion disk (Illarionov and Sunyaev, 1975).
+
+During the long periods of X-ray (accretion) quiescence, mass loss from the binary could arise from several different mechanisms. These are motivated by the study of rotation-powered radio millisecond pulsars in detached (non-accreting) binaries: the so-called "black widow" (M_{c}\\lesssim 0.05M_{\\odot}) and "redback" (M_{c}\\gtrsim 0.1M_{\\odot}) systems, where M_{c} is the companion mass (see, e.g., Romani et al., 2016, and references therein). One possibility is black-widow-like ablation of the companion, driven by rotation-powered gamma-ray emission from the pulsar (Ginzburg and Quataert, 2020). Such ablation could also be driven by particle heating via the rotation-powered pulsar wind (see Harding and Gaisser, 1990, and references therein). Hard X-rays and gamma-rays from the intrabinary shock observed in many black widow systems could significantly affect the mass loss rate (Wadiasingh et al., 2018). Another possibility is that the pulsar wind could drive an outflow from the inner Lagrange (L_{1}) point by overcoming the ram pressure of accreting material (Burderi et al., 2001; Di Salvo et al., 2008).
+
+As an example, we consider the case of gamma-ray ablation. If we assume the gamma-ray luminosity is \\simeq 10\\% of the spin-down luminosity (\\simeq 3\\times 10^{35} erg  s{}^{-1} based on our long-term \\dot{\\nu} measurement) as typically seen in black widow systems (Abdo et al., 2013), this would imply a companion mass loss rate of \\sim 10^{-11}M_{\\odot}/yr (Ginzburg and Quataert, 2020). For a source distance of 8 kpc and assuming that gravitational wave losses dominate in Equation 4, this implies \\beta\\approx 0.04 and \\alpha\\approx 0.4, suggesting that the mass ejection occurs somewhere between the pulsar and the L_{1} point (\\alpha\\approx 0.8). However, Ginzburg and Quataert (2020) argue that magnetic braking of the donor (through magnetic coupling to the ablated wind) likely dominates gravitational radiation as an angular momentum sink in black widow systems. If so, then that could both decrease \\beta and increase \\alpha even further in our case.
+
+All of the X-ray-quiescent mechanisms mentioned above rely on the system entering a rotation-powered radio pulsar state during X-ray quiescence. We note that a growing class of so-called transitional millisecond pulsars (tMSPs) has been identified that switch between LMXB and radio pulsar states (see Papitto and de Martino, 2020, for a review). The known tMSPs would be classified as redback systems in their radio pulsar state. If IGR J17494 is a tMSP, then its low companion mass would make it a black widow system in its rotation-powered state. We note that the X-ray properties of IGR J17494 correspond to those of the so-called very faint X-ray transients (VFXTs; Wijnands et al., 2006), whose low outburst luminosities and long-term accretion rates are difficult to understand. Our observations support the suggestion that some VFXTs may also be tMSPs (Heinke et al., 2015). The distinction between VFXTs and ordinary LMXBs may somehow relate to the level of non-conservative mass transfer.
+
+M.N. and this work were supported by NASA under grant 80NSSC19K1287 as well as through the _NICER_ mission and the Astrophysics Explorers Program. _NICER_ work at NRL is also supported by NASA. D.A. acknowledges support from the Royal Society. This research has made use of data and/or software provided by the High Energy Astrophysics Science Archive Research Center (HEASARC), which is a service of the Astrophysics Science Division at NASA/GSFC and the High Energy Astrophysics Division of the Smithsonian Astrophysical Observatory. NICER, XMM astropy (Astropy Collaboration et al., 2013), NumPy and SciPy (Oliphant, 2007), Matplotlib (Hunter, 2007), IPython (Perez and Granger, 2007), tqdm (Da Costa-Luis et al., 2020), NICERsoft, PRESTO (Ransom et al., 2002), PINT (Luo et al., 2020), HEASoft 6.28
+
+[MISSING_PAGE_POST]
+
+* Arnaud (1996) Arnaud, K. A. 1996, in Astronomical Society of the Pacific Conference Series, Vol. 101, Astronomical Data Analysis Software and Systems V, ed. G. H. Jacoby & J. Barnes, 17
+
+* Astropy Collaboration et al. (2013) Astropy Collaboration, Robitaille, T. P., Tollerud, E. J., et al. 2013, A&A, 558, A33
+
+* Bartlett (1948) Bartlett, M. S. 1948, Nature, 161, 686
+
+* Boissay et al. (2012) Boissay, R., Chenevez, J., Bozzo, E., et al. 2012, The Astronomer's Telegram, 3984, 1
+
+* Buccheri et al. (1983) Buccheri, R., Bennett, K., Bignami, G. F., et al. 1983, A&A, 128, 245
+
+* Burderi et al. (2001) Burderi, L., Possenti, A., D'Antona, F., et al. 2001, ApJL, 560, L71
+
+* Chabrier et al. (2000) Chabrier, G., Baraffe, I., Allard, F., & Hauschildt, P. 2000, ApJ, 542, 464
+
+* Chakrabarty & Jonker (2020) Chakrabarty, D., & Jonker, P. G. 2020, The Astronomer's Telegram, 14146, 1
+
+* Chakrabarty et al. (2013) Chakrabarty, D., Jonker, P. G., & Markwardt, C. B. 2013, The Astronomer's Telegram, 4886, 1
+
+* Da Costa-Luis et al. (2020) Da Costa-Luis, C., Larroque, S. K., Altendorf, K., et al. 2020, tqdm: A fast, Extensible Progress Bar for Python and CLI, v.v.4.47.0, Zenodo, doi:10.5281/zenodo.3912045
+
+* Degenaar et al. (2017) Degenaar, N., Pinto, C., Miller, J. M., et al. 2017, MNRAS, 464, 398
+
+* Deloye & Bildsten (2003) Deloye, C. J., & Bildsten, L. 2003, The Astrophysical Journal, 598, 1217-1228
+
+* Di Salvo et al. (2008) Di Salvo, T., Burderi, L., Riggio, A., Papitto, A., & Menna, M. T. 2008, MNRAS, 389, 1851
+
+* Di Salvo & Sanna (2020) Di Salvo, T., & Sanna, A. 2020, arXiv e-prints, arXiv:2010.09005
+
+* Ducci et al. (2020) Ducci, L., Chenevez, J., Sidoli, L., et al. 2020, The Astronomer's Telegram, 14119, 1
+
+* Eggleton (1983) Eggleton, P. P. 1983, ApJ, 268, 368
+
+* Falanga et al. (2012) Falanga, M., Kuiper, L., Poutanen, J., et al. 2012, A&A, 545, A26
+
+* Falanga et al. (2005) --. 2005, A&A, 444, 15
+
+* Gendreau et al. (2012) Gendreau, K. C., Arzoumanian, Z., & Okajima, T. 2012, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 8443, Space Telescopes and Instrumentation 2012: Ultraviolet to Gamma Ray, 844313
+
+* Gierlinski et al. (2002) Gierlinski, M., Done, C., & Barret, D. 2002, MNRAS, 331, 141
+
+* Gierlinski & Poutanen (2005) Gierlinski, M., & Poutanen, J. 2005, MNRAS, 359, 1261
+
+* Ginzburg & Quataert (2020) Ginzburg, S., & Quataert, E. 2020, MNRAS, 495, 3656
+
+* Hameury (2020) Hameury, J. M. 2020, Advances in Space Research, 66, 1004
+
+* Harding & Gaisser (1990) Harding, A. K., & Gaisser, T. K. 1990, ApJ, 358, 561
+
+* Heinke et al. (2015) Heinke, C. O., Bahramian, A., Degenaar, N., & Wijnands, R. 2015, MNRAS, 447, 3034
+
+* Hunter (2007) Hunter, J. D. 2007, Computing in Science and Engineering, 9, 90
+
+* Illarionov & Sunyaev (1975) Illarionov, A. F., & Sunyaev, R. A. 1975, A&A, 39, 185
+
+* LaMarr et al. (2016) LaMarr, B., Prigozhin, G., Remillard, R., et al. 2016, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 9905, Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray, ed. J.-W. A. den Herder, T. Takahashi, & M. Bautz, 99054W
+
+* Landau & Lifshitz (1989) Landau, L. D., & Lifshitz, E. M. 1989, The Classical Theory of Fields, 4th rev. Eng. ed. (Oxford: Pergamon)
+
+* Lasota (2001) Lasota, J.-P. 2001, NewAR, 45, 449
+
+* Luo et al. (2020) Luo, J., Ransom, S., Demorest, P., et al. 2020, arXiv e-prints, arXiv:2012.00074
+
+* Marino et al. (2017) Marino, A., Di Salvo, T., Gambino, A. F., et al. 2017, A&A, 603, A137
+
+* Marino et al. (2019) Marino, A., Di Salvo, T., Burderi, L., et al. 2019, A&A, 627, A125
+
+* Mukherjee et al. (2015) Mukherjee, D., Bult, P., van der Klis, M., & Bhattacharya, D. 2015, MNRAS, 452, 3994
+
+* Nelemans et al. (2001) Nelemans, G., Portegies Zwart, S. F., Verbunt, F., & Yungelson, L. R. 2001, A&A, 368, 939
+
+* Nelemans et al. (2010) Nelemans, G., Yungelson, L. R., van der Sluys, M. V., & Tout, C. A. 2010, MNRAS, 401, 1347
+
+* Nelson et al. (1986) Nelson, L. A., Rappaport, S. A., & Joss, P. C. 1986, ApJ, 304, 231
+
+* Ng et al. (2020) Ng, M., Ray, P. S., Strohmayer, T. E., et al. 2020, The Astronomer's Telegram, 14124, 1
+
+* Nieder et al. (2020) Nieder, L., Clark, C. J., Kandel, D., et al. 2020, ApJL, 902, L46
+
+* Oliphant (2007) Oliphant, T. E. 2007, Computing in Science and Engineering, 9, 10
+
+* Paczynski & Sienkiewicz (1981) Paczynski, B., & Sienkiewicz, R. 1981, ApJL, 248, L27
+
+* Papitto & de Martino (2020) Papitto, A., & de Martino, D. 2020, arXiv e-prints, arXiv:2010.09060
+
+* Patruno et al. (2009) Patruno, A., Altamirano, D., Hessels, J. W. T., et al. 2009, ApJ, 690, 1856
+
+* Perez & Granger (2007) Perez, F., & Granger, B. E. 2007, Computing in Science and Engineering, 9, 21
+
+* Peters (1964) Peters, P. C. 1964, Phys. Rev., 136, B1124
+
+* Poutanen & Gierlinski (2003) Poutanen, J., & Gierlinski, M. 2003, MNRAS, 343, 1301
+
+* Prigozhin et al. (2016) Prigozhin, G., Gendreau, K., Doty, J. P., et al. 2016, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 9905, Space Telescopes and Instrumentation 2016: Ultraviolet to Gamma Ray, ed. J.-W. A. den Herder, T. Takahashi, & M. Bautz, 99051I
+
+* Pylyser & Savonije (1988) Pylyser, E., & Savonije, G. J. 1988, A&A, 191, 57
+
+* Pylyser & Savonije (1989) Pylyser, E. H. P., & Savonije, G. J. 1989, A&A, 208, 52* Ransom et al. (2002) Ransom, S. M., Eikenberry, S. S., & Middleditch, J. 2002, AJ, 124, 1788
+
+* Rappaport & Joss (1984) Rappaport, S., & Joss, P. C. 1984, ApJ, 283, 232
+
+* Rappaport et al. (1982) Rappaport, S., Joss, P. C., & Webbink, R. F. 1982, ApJ, 254, 616
+
+* Romani et al. (2016) Romani, R. W., Graham, M. L., Filippenko, A. V., & Zheng, W. 2016, ApJ, 833, 138
+
+* Spitkovsky (2006) Spitkovsky, A. 2006, ApJ, 648, L51
+
+* Standish (1998) Standish, E. M. 1998, JPL Planetary and Lunar Ephemerides, DE405/LE405, JPL Interoffice Memo 312.F-98-048 (Pasadena: NASA Jet Propulsion Laboratory)
+
+* van den Eijnden et al. (2018) van den Eijnden, J., Degenaar, N., Pinto, C., et al. 2018, MNRAS, 475, 2027
+
+* van den Eijnden et al. (2020) van den Eijnden, J., Degenaar, N., Wijnands, R., et al. 2020, The Astronomer's Telegram, 14129, 1
+
+* Verbunt (1993) Verbunt, F. 1993, ARA&A, 31, 93
+
+* Verbunt & van den Heuvel (1995) Verbunt, F., & van den Heuvel, E. P. J. 1995, in X-ray Binaries, ed. W. H. G. Lewin, J. van Paradijs, & E. P. J. van den Heuvel (Cambridge, Cambridge Univ. Press), 457-494
+
+* Wadiasingh et al. (2018) Wadiasingh, Z., Venter, C., Harding, A. K., Bottcher, M., & Kilian, P. 2018, ApJ, 869, 120
+
+* Wijnands et al. (2006) Wijnands, R., in't Zand, J. J. M., Rupen, M., et al. 2006, A&A, 449, 1117
+
+* Wilkinson et al. (2011) Wilkinson, T., Patruno, A., Watts, A., & Uttley, P. 2011, MNRAS, 410, 1513
+
+* Zapolsky & Salpeter (1969) Zapolsky, H. S., & Salpeter, E. E. 1969, ApJ, 158, 809

@@ -1,0 +1,351 @@
+###### Abstract
+
+We consider some general implications of bright \\gamma-ray counterparts to fast radio bursts (FRBs). We show that even if these manifest in only a fraction of FRBs, \\gamma-ray detections with current satellites (including _Swift_) can provide stringent constraints on cosmological FRB models. If the energy is drawn from the magnetic energy of a compact object such as a magnetized neutron star, the sources should be nearby and be very rare. If the intergalactic medium is responsible for the observed dispersion measure, the required \\gamma-ray energy is comparable to that of the early afterglow or extended emission of short \\gamma-ray bursts. While this can be reconciled with the rotation energy of compact objects, as expected in many merger scenarios, the prompt outflow that yields the \\gamma-rays is too dense for radio waves to escape. Highly relativistic winds launched in a precursor phase, and forming a wind bubble, may avoid the scattering and absorption limits and could yield FRB emission. Largely independent of source models, we show that detectable radio afterglow emission from \\gamma-ray bright FRBs can reasonably be anticipated. Gravitational wave searches can also be expected to provide useful tests. gamma-ray burst: general -- gravitational waves -- radio continuum: general -- stars: magnetars -- stars: neutron +
+
+Footnote †: slugcomment:
+
+## 1 Introduction
+
+Fast radio bursts (FRBs) are short radio transients (Lorimer et al., 2007; Keane et al., 2012; Thornton et al., 2013), and have recently become the object of much scrutiny (Keane & SUPERB Collaboration, 2016; Katz, 2016). Their inferred rate is \\mathcal{R}_{\\rm FRB}\\sim 10^{-3}\\ \\rm yr^{-1}\\ galaxy^{-1}(Thornton et al., 2013), or about 10% of supernovae, \\mathcal{R}_{\\rm SN}\\sim 10^{-2}\\ \\rm yr^{-1}\\ galaxy^{-1}, which is much higher than that of \\gamma-ray bursts (GRBs), \\mathcal{R}_{\\rm GRB}\\sim 10^{-6}-10^{-5}\\ \\rm yr^{-1}\\ galaxy^{-1}(Wanderman & Piran, 2010). The dispersion measures (DMs), DM \\gtrsim 500\\ \\rm cm^{-3}pc, suggest that they are cosmological, with redshifts z\\sim 0.5-1 (Cordes & Lazio, 2002). The typical flux is F_{\\nu}\\sim 0.1-1\\ \\rm Jy, implying a total emitted energy of \\sim 10^{38}-10^{42}\\ \\rm erg at cosmological distances, if the emission is isotropic. The durations are \\delta t\\lesssim 5\\ \\rm ms, indicating relatively compact emission regions, c\\delta t\\lesssim 1500\\ \\rm km, if they are non-relativistic. So far all FRBs but one have been non-repeating, so a significant fraction of them may be one-time events. The exception, FRB 121102 (Spitler et al., 2016), could indicate either more than one FRB type, or a difference in environments (Dai et al., 2016).
+
+Their origin has been under intense debate. Cosmological FRBs require strong radio emission, and most models involve a neutron star (NS) or a black hole (BH), and the collapse of an accreting NS to a BH has also been discussed, as well as NS-NS/NS-BH/BH-BH binary mergers (see recent reviews Keane & SUPERB Collaboration, 2016, and references therein) (note that the latter merger models could not explain repeating events from the same system). The most common models involve a young magnetar (Popov & Postnov, 2010) or giant pulses from a fast-rotating neutron star (e.g., Falcke & Rezzolla, 2014; Cordes & Wasserman, 2016). On the other hand, various merger models, which could be coincident gravitational waves or GRBs, have been invoked (e.g., Totani, 2013; Kashiyama et al., 2013; Zhang, 2014; Mingarelli et al., 2015; Zhang, 2016). Such systems could be expected to leave an afterglow (e.g., Niino et al., 2014; Yi et al., 2014; Murase et al., 2016), and searches have been underway. The first claim of a counterpart was of a long-lasting radio afterglow leading to a host galaxy determination (Keane et al., 2016); however, the host was subsequently found to have re-brightened (Williams & Berger, 2016; Vedantham et al., 2016) indicating that it was a flaring galaxy. More recently, a persistent radio counterpart and the host galaxy of FRB 121102 were discovered (Chatterjee et al., 2017; Marcote et al., 2017; Tendulkar et al., 2017), and its emission properties are consistent with the theoretical predictions for pulsar-driven supernova remnants (Murase et al., 2016). However, FRB 121102 is the only repeating FRB, so that the origin of FRBs is still an open question.
+
+Searches for \\gamma-ray counterparts have been going on for quite a while without significant success (Palaniswamy et al., 2014; Tendulkar et al., 2016; Yamasaki et al., 2016), until the recent announcement (DeLaunay et al., 2016) of a coincidence between FRB 131104 and a _Swift_-BAT \\gamma-ray transient. Based on the radio DM, the redshift is z\\sim 0.55, corresponding to a luminosity distance d_{L}\\sim 3 Gpc, assuming the \\LambdaCDM cosmology. This detection of a possible gamma-ray counterpart will give us profound implications, if it is not accidental. DeLaunay et al. (2016) determined for it an isotropic-equivalent \\gamma-ray energy of \\mathcal{E}_{\\gamma}\\approx 5\\times 10^{51} erg with an observed duration of \\approx 377 s. The confidence is only 3.2\\sigma, and \\gamma-ray-bright FRBs should be very rare. But it can be used as the first example where important parameters of possible models can be put to the test.
+
+The successful detection of an X/\\gamma-ray counterpart implies that FRBs may be energetic events like GRBs, if they are cosmological. The sensitivity of the _Swift_-BAT imaging trigger is F_{\\rm lim}\\sim 10^{-8}\\ {\\rm erg\\ cm^{-2}\\ s^{-1}}, which enhances the chance of discovering long-duration X/\\gamma-ray transients such as shock breakouts and tidal disruption events, and only a fraction (not all) of the FRBs could be associated with them (DeLaunay et al., 2016). If every GRB does not has an associated FRB, the fraction should be even smaller.
+
+In this work, we consider some general implications that can be obtained from successful detections of an FRB's counterpart. Our aim is to clarify the required physical conditions and to show the power of a possible \\gamma-ray counterpart signal for testing the existing FRB models. In Sections 2 and 3, we consider \\gamma-ray constraints on magnetar-like models and merger-motivated models. In Section 4 we discuss implications for the afterglow emission. Throughout this work we use the notation Q=10^{x}Q_{x} in CGS units, unless noted otherwise.
+
+## 2 Constraints on Magnetic Burst Scenarios
+
+Among various FRB models, one of the most widely discussed possibilities is the magnetar scenario, where FRBs are attributed to hyper-flares from young magnetars (e.g., Popov & Postnov, 2010; Lyubarsky, 2014; Murase et al., 2016). If the X/\\gamma-rays come from the magnetic energy trapped in a NS, its isotropically equivalent energy is limited by
+
+\\mathcal{E}_{\\gamma}\\lesssim\\mathcal{E}_{\\rm mag}f_{b}^{-1}\\approx\\frac{1}{6}B_ {c}^{2}R_{*}^{3}\\simeq 1.7\\times 10^{49}\\ {\\rm erg}\\ B_{c,15.5}^{2}R_{*,6}^{3}f_{ b,-1}^{-1},  where f_{b}=\\Omega_{b}/(4\\pi)\\leq 1 is the possible beaming factor (for one-side beam), B_{c} is the internal magnetic field, and R_{*} is the stellar size. Note that we have \\mathcal{E}_{\\rm mag}\\simeq 2.1\\times 10^{45}\\ {\\rm erg}\\ B_{c,9.5}^{2}R_{*,8.7}^ {3} in white dwarf models (Kashiyama et al., 2013). For a \\gamma-ray sensitivity F_{\\rm lim}\\sim 10^{-8}\\ {\\rm erg\\ cm^{-2}\\ s^{-1}}(Barthelmy et al., 2005; Lien et al., 2013), a successful detection of \\gamma-ray counterparts implies that the luminosity distance must be
+
+d_{L}(1+z)^{-1/2}\\lesssim 180\\ {\\rm Mpc}\\ \\mathcal{E}_{\\rm mag,48}^{1/2}f_{b,-1 }^{-1/2}F_{\\rm lim,-8}^{-1/2}\\Delta T_{\\gamma,2,4}^{-1/2},  where \\Delta T_{\\gamma} is the intrinsic \\gamma-ray duration in the cosmic rest frame. Thus, if FRBs are powered by compact objects with strong magnetic fields, they cannot be at gigaparsec distances, unless the \\gamma-rays are beamed.
+
+The DM may be used to infer the distance to FRBs. For example, an FRB with DM = 779 pc cm{}^{-3} indicates that d_{L}\\sim 3 Gpc. However, the DM may be dominated by the local environments, including the immediate environments (such as pulsar wind nebulae and supernova remnant ejecta) as well as the ionized plasma in host galaxies (e.g., Masui et al., 2015; Kulkarni et al., 2014; Connor et al., 2016; Piro, 2016). In particular, a non-negligible contribution could come from the supernova ejecta (but see also Katz, 2016; Murase et al., 2016). Although the unshocked ejecta of very young supernova remnants are mostly neutral (depending on their evolution and composition), assuming a mean atomic number \\bar{A}\\sim 10 and effective charge \\bar{Z}\\sim\\bar{A}/2 for the singly ionized state, the free electron density is estimated to be n_{e}=3M_{\\rm ej}/(4\\pi R_{\\rm ej}^{3}\\mu_{e}m_{H}) with \\mu_{e}^{-1}\\sim\\bar{A}^{-1}\\sim 0.1, and the DM is evaluated as {\\rm DM}\\approx n_{e}R_{\\rm ej}\\approx n_{e}V_{\\rm ej}T_{\\rm age}.
+
+On the other hand, free-free absorption in an ionized plasma prevents radio emission from escaping the system. The free-free optical depth is given by
+
+\\tau_{\\rm ff}\\approx 8.4\\times 10^{-28}\\ \\mathcal{T}_{e,4}^{-1.35}\\nu_{10}^{-2.1 }\\int dr\\ n_{e}n_{i}\\bar{Z}^{2},  where \\mathcal{T}_{e} is the electron temperature. Imposing \\tau_{\\rm ff}\\lesssim 1 gives an upper limit on the DM due to the immediate environment. Assuming a supernova ejecta with mass M_{\\rm ej}=10\\ M_{\\odot}\\ M_{\\rm ej,1}, we obtain
+
+{\\rm DM}\\lesssim 590\\ {\\rm pc}\\ {\\rm cm}^{-3}\\ \\frac{\\mathcal{T}_{e,5}^{27/50} \\nu_{9}^{21/25}M_{\\rm ej,1}^{1/5}(\\bar{A}/10)^{2/5}}{(\\bar{Z}/5)^{4/5}\\mu_{e,1 }^{3/5}},  which is consistent with previous results, {\\rm DM}\\lesssim 21\\ {\\rm pc}\\ {\\rm cm}^{-3}\\ \\mathcal{T}_{e,2.5}^{27/50}\\nu_{9}^{21/25}\\ M_{\\rm ej,0.5}^{1/5}(\\bar{A}/10)^{2/5}(\\bar{Z}/5)^{-4/5}\\mu_{e,1}^{-3/5}(Murase et al., 2016). Correspondingly, for the supernova ejecta to give a significant contribution {\\rm DM}\\gtrsim 300\\ {\\rm pc}\\ {\\rm cm}^{-3}, the age should satisfy
+
+40\\ {\\rm yr}\\ \\mathcal{T}_{e,5}^{-27/100}\\nu_{9}^{-21/50}M_{\\rm ej,1}^{2/5}(\\bar{Z}/5)^{2/5}(\\bar{A}/10)^{-1/5}\\mu_{e,1}^{-1/5} V_{\\rm ej,8.5}^{-1}\\lesssim T_{\\rm age}\\lesssim 55\\ {\\rm yr}\\ M_{\\rm ej,1}^{1/2}\\mu_{e,1}^{-1/2}V_{\\rm ej,8.5}^{-1}. 
+
+In principle, it is possible to expect that the DM is dominated by the supernova ejecta. However, the allowed parameter space is rather limited, so it should be a rare event. This constraint is applied independently of \\gamma-ray observations, if the supernova ejecta significantly contribute to the DM.
+
+Although there is large uncertainty, the apparent cosmological FRB rate has been estimated to be \\rho_{\\rm FRB}\\sim 10^{4}\\ {\\rm Gpc^{-3}\\ yr^{-1}} with large uncertainty (e.g., Kulkarni et al., 2014; Champion et al., 2016; Callister et al., 2016). Equation (2) suggests that \\gamma-rays are detectable for d\\lesssim 100-200 Mpc in the magnetar scenario. Thus, even if all FRBs are intrinsically accompanied by \\gamma-rays, only a fraction of FRBs have \\gamma-ray counterparts that can be detected by _Swift_-BAT. Indeed, the all-sky rate within \\sim 100\\ {\\rm Mpc^{-3}} is \\sim 40\\ {\\rm yr^{-1}}.
+
+The \\gamma-ray detectability depends on detectors' sensitivities and fields of view. If all FRBs were like FRB 131104, one would obtain \\sim 25 yr{}^{-1} above the BAT threshold (DeLaunay et al., 2016), which is at most comparable to the above number within large uncertainties. In addition, Equation (5) suggests that most magnetars will not have required DM values, so that FRBs accompanied by \\gamma-rays should be even more rare.
+
+In summary, because of the energetics argument, the magnetar scenario predicts that \\gamma-ray counterparts of FRBs can be detected only for nearby events, so that the DM should be largely attributed to local environments. The allowed parameter space is so narrow that FRBs with detectable \\gamma-ray counterparts and large DMs are difficult in the magnetar scenario.
+
+## 3 Gamma-ray Constraints on Relativistic Outflow Scenarios
+
+### Implications for Compact Merger Scenarios
+
+GRBs are known energetic transients, but the observed GRB rate is much lower than the FRB rate. Observationally, only a fraction of the FRBs may still be accompanied by \\gamma-rays, but this could naturally occur if \\gamma-rays are strongly beamed, whereas radio emission is more isotropic. On the other hand, compared to ordinary burst emission, the association with long-duration transients is less constrained. Interestingly, some short GRBs (SGRBs) have showed extended emission in the X-ray and \\gamma-ray ranges (e.g., Gompertz et al., 2013; Kaneko et al., 2015, and references therein), which seems to be consistent with _Swift_-BAT's observation of FRB 131104 (DeLaunay et al., 2016).
+
+Two popular possibilities have been considered as energy sources for the SGRB extended emission. The first is the rotation energy of a rapidly rotating magnetar (Blackman & Yi, 1998; Dai & Lu, 1998; Zhang & Meszaros, 2001). Numerical relativity simulations of NS-NS mergers have suggested that a hypersurface magnetar may be formed as a remnant of the merger (Shibata, 2005). Its lifetime depends on the equation of state, which is currently uncertain. If the equation of state is not very stiff, the proto-NS collapses into a BH after the NS loses its angular momentum. However, in principle, such a magnetar could survive for a long time, and it has been speculated that this explains the extended emission (Dai et al., 2006; Fan & Xu, 2006; Metzger et al., 2008). Using the results of magnetohydrodynamic simulations (Gruzinov, 2005; Spitkovsky, 2006), the spin-down energy-loss rate is estimated to be
+
+L_{\\rm sd} \\approx \\frac{20\\pi^{4}B_{*}^{2}R_{*}^{6}P_{i}{}^{-4}}{3c^{3}}  \\simeq 2.4\\times 10^{49}\\ {\\rm erg\\ s^{-1}}\\ B_{*,15}^{2}P_{i,-3}^{-4}R_{ *,6}^{6} and the spin-down time is
+
+T_{\\rm sd}\\approx\\frac{3P_{i}^{2}{\\cal I}c^{3}}{10\\pi^{2}B_{*}^{2}R_{*}^{6}} \\simeq 800\\ {\\rm s}\\ B_{*,15}^{-2}P_{i,-3}^{2}R_{*,6}^{-4},  where P_{i} is the initial rotation period and B_{*} is the dipole magnetic field at the surface. To have an extended emission with duration \\Delta T_{\\gamma}, the spin-down time should satisfy T_{\\rm sd}\\gtrsim\\Delta T_{\\gamma}, where \\Delta T_{\\gamma} may be attributed to the time of the BH formation (Falcke & Rezzolla, 2014; Zhang, 2014). With L_{\\rm sd}/f_{b}=L_{w}\\sim 10^{49}\\ {\\rm erg\\ s^{-1}} and \\Delta T_{\\gamma}\\sim 10^{2.4}\\ {\\rm s}, solving these leads to
+
+B_{*} \\gtrsim 2.8\\times 10^{16}\\ {\\rm G}\\ L_{w,49}^{-1/2}\\Delta T_{ \\gamma,2.4}^{-1}R_{*,6}^{-1}f_{b,-1.5}^{-1/2} P_{i} \\lesssim 16\\ {\\rm ms}\\ L_{w,49}^{-1/2}\\Delta T_{\\gamma,2.4}^{-1/2}R_{*, 6}f_{b,-1.5}^{-1/2},  so rather strong magnetic fields (compared to surface magnetic fields indicated for Galactic magnetars Mereghetti, 2008) may be required, although the exact values are affected by uncertainties in, e.g., effects of higher multipoles, the proto-NS size, and the angle between rotation and magnetic axes.
+
+Another possibility is the fallback accretion and subsequent energy extraction from a spinning BH (e.g., Nakamura et al., 2014; Kisaka & Ioka, 2015). The rotation energy of a Kerr BH can be extracted via the Blandford-Znajek process (Blandford & Znajek, 1977), and its absolute jet power is estimated to be (e.g., Armitage & Natarajan, 1999; Tchekhovskoy et al., 2011)
+
+L_{\\rm BZ} \\approx \\frac{1}{8\\pi c}\\Omega_{H}^{2}B_{p}^{2}R_{H}^{4}  \\simeq 6.9\\times 10^{47}\\ {\\rm erg\\ s^{-1}}\\ B_{p,13.5}^{2}M_{\\rm BH,0.5}^{2}, where \\Omega_{H} is the BH rotation frequency, R_{H} is the horizon radius, and B_{p} is the anchored field. The rotation energy of the BH is estimated to be {\\cal E}_{\\rm rot}=[1-(1/2+\\sqrt{1-a^{2}}/2)^{1/2}]M_{\\rm BH}c^{2}\\sim 4\\times 10^{53} \\ {\\rm erg\\ }M_{\\rm BH,0.5}, where a\\sim 0.7 is the dimensionless Kerr parameter. As long as {\\cal E}_{\\rm rot}/L_{\\rm BH} is large enough, the duration is determined by the fallback accretion time scale that is
+
+T_{\\rm BZ}\\sim 300\\ {\\rm s}\\ B_{p,13.5}^{-6/5}M_{\\rm BH.0.5}^{-6/5}T_{\\rm vis,-1}^{ 2/5}M_{\\rm fb,-2.5}^{3/5},  where T_{\\rm vis} is the viscous time scale and M_{\\rm fb} is the fallback mass (Kisaka & Ioka, 2015). Thus, this scenario is also a viable option.
+
+Although all models seem speculative, the association with orphan SGRBs is an appealing possibility (DeLaunay et al., 2016) since compact merger scenarios (including NS-NS/NS-BH/BH-BH models) predict that gravitational waves associated with FRBs can be detected by Advanced LIGO. The detection of GW signals can prove that some FRBs come from mergers. By observing the timing among FRB, GW, and associated \\gamma-ray emissions, one could probe the emission region of FRBs as well as the emission mechanism of extended \\gamma-ray emission, which is especially relevant to test the precursor model described in the next section.
+
+However, there are two general remarks. First, one should note that the rate of FRBs with such large radiation energy must be much smaller than that of FRBs. Second, to be consistent with _Swift_-BAT observations, the rate of orphan SGRBs showing extended emission cannot be much larger than the SGRB rate, and the former beaming factor cannot be not much larger than that of SGRBs, f_{b}\\sim 0.01(DeLaunay et al., 2016). Note that the observed SGRB rate is \\rho_{\\rm SGRB}\\sim 10\\ {\\rm Gpc^{-3}\\ yr^{-1}}(e.g., Coward et al., 2012; Fong et al., 2015), and it has been thought that \\sim 20-30\\% of SGRBs may have the extended emission (Kaneko et al., 2015). Obviously, the apparent rate of SGRBs is much smaller than the total rate of FRBs, \\rho_{\\rm FRB}\\sim 10^{4}\\ {\\rm Gpc^{-3}\\ yr^{-1}}, so that only a fraction of total FRBs could be accompanied by \\gamma-rays. For example, \\gamma-ray emission may be beamed, while FRB emission may be more isotropic.
+
+### Radio Compactness Problem
+
+Let us assume a generic relativistic outflow with isotropic-equivalent outflow luminosity, L_{w}, and bulk Lorentz factor, \\Gamma_{0}. If \\gamma-rays are detected by current satellites such as _Swift_, it implies L_{w}\\gg L_{\\rm FRB}, and the outflow would not be so tenuous. As in X-ray flares, long-duration \\gamma-ray emission is likely to have an internal dissipation origin, so we assume the late prompt emission model (e.g., Ghisellini et al., 2007; Murase et al., 2011), in which the extended X/\\gamma-ray emission is produced by internal shocks or magnetic reconnections via synchrotron radiation (see also Nakamura et al., 2014, for the case of the photospheric scenario). In the internal shock model, internal dissipation occurs at r\\sim\\Gamma_{0}^{2}c\\Delta t_{\\gamma}, where \\Delta t_{\\gamma}\\leq\\Delta T_{\\gamma} is the variability time. The spectrum of the observed extended emission does not look purely thermal. Although we do not exclude the dissipative photosphere model as an option (Rees & Meszaros, 2005), internal dissipation should occur beyond/around the photosphere, whose radius is
+
+r_{\\rm ph}\\simeq 3.7\\times 10^{11}\\ {\\rm cm}\\ \\zeta_{e}L_{w,49}\\Gamma_{0,1.5 }^{-3}[(1+\\sigma)]^{-1}.  where n^{\\prime}_{w}\\approx L_{w}/[4\\pi r^{2}\\Gamma_{0}^{2}m_{p}c^{3}(1+\\sigma)] is the comoving baryon density (here \\sigma is the magnetization parameter) and \\zeta_{e}(\\leq m_{p}/m_{e}) is a possible enhancement factor due to electron-positron pairs. Note that the acceleration of the outflow is assumed to cease at sub-photospheres, and we may use \\tau_{T}\\approx\\zeta_{e}n^{\\prime}_{w}\\sigma_{T}(r/\\Gamma_{0}).
+
+On the other hand, the dissipation radius at which internal dissipation (including FRB emission) occurs, is limited as r<{\\rm max}[r_{\\rm dec},r_{\\rm BM}], where
+
+r_{\\rm dec} \\approx [3\\mathcal{E}/(4\\pi nm_{p}c^{2}\\Gamma_{0}^{2})]^{1/3}  \\simeq 2.0\\times 10^{17}\\ {\\rm cm}\\ \\mathcal{E}_{51.7}^{1/3} \\Gamma_{0,1.5}^{-2/3}n_{-1}^{-1/3} is the deceleration radius, and
+
+r_{\\rm BM}\\simeq 1.4\\times 10^{17}\\ {\\rm cm}\\ \\mathcal{E}_{51.7}^{1/4}n_{-1}^{- 1/4}\\Delta T_{\\gamma,2.4}^{1/4},  is given by the Blandford-McKee self-similar solution.
+
+In principle, FRB emission could occur during the extended \\gamma-ray emission. However, one sees that this is challenging due to the radio compactness problem. First of all, the emission region should be outside the photosphere, otherwise the radio emission is diminished by the Thomson scattering.
+
+Second, the synchrotron absorption due to non-thermal electrons producing the extended emission is relevant (Murase et al., 2016; Yang et al., 2016), unless an inverse-population of electrons is formed. The absorption frequency, at which \\tau_{\\rm sa}(\\nu_{\\rm sa})=1, is estimated by equating the intrinsic surface flux to a blackbody surface flux as
+
+2k\\mathcal{T}_{e}^{\\prime}\\frac{{\\nu^{\\prime}}^{2}_{\\rm sa}}{c^{2}}\\approx 2 \\frac{L_{\\nu_{\\rm sa}}}{4\\pi r^{2}\\Gamma_{0}}. 
+
+For simplicity, let us assume a simple power-law spectrum, L_{E}/E\\propto E^{-\\alpha} at E=h\\nu<E^{b} and k\\mathcal{T}_{e}^{\\prime}=\\gamma_{ea}^{\\prime}m_{e}c^{2}, where E^{b} is the break energy in the burst frame. For \\alpha=1, which is typical in GRB prompt emission and consistent with the X/\\gamma-ray observation of FRB 131104 (DeLaunay et al., 2016), we obtain \\nu_{\\rm sa}\\simeq 1.0\\times 10^{12}\\ {\\rm Hz}\\ L_{w,49}^{1/2}\\Gamma_{0,1.5}^{2/5} \\epsilon_{B}^{1/10}\\left(E^{b}/100\\ {\\rm keV}\\right)^{-2/5}r_{16}^{-1}. Then, requiring \\tau_{\\rm sa}(\\nu)<1 gives
+
+r\\gtrsim 1.0\\times 10^{19}\\ {\\rm cm}\\ \\nu_{9}^{-1}L_{w,49}^{1/2}\\Gamma_{0,1.5}^{ 2/5}\\epsilon_{B}^{1/10}(E^{b}/100\\ {\\rm keV})^{-2/5}. 
+
+Thus, radio emission cannot escape from a late prompt outflow producing the synchrotron \\gamma-ray emission. The \\gamma-ray observation suggest a large value of L_{w}, which leads to a strong constraint given that the \\gamma-rays originate from relativistic electrons. Note that in general, details depend on the photon spectrum or the electron distribution, but our assumption is satisfied in the sufficiently fast cooling case.
+
+Another constraint can be placed by the induced-Compton scattering (e.g., Zel'dovich & Sobel'man, 1970). First, we consider a region with a comoving size of r/\\Gamma_{0}. Assuming an isotropic emission in this frame, its optical depth is (Melrose, 1971; Lyubarsky, 2008)
+
+\\tau_{\\rm ic}\\approx\\frac{3\\zeta_{e}n^{\\prime}_{w}\\sigma_{T}I^{\\prime}_{\\rm FRB }r}{2\\nu^{\\prime 2}\\gamma_{T}^{\\prime}m_{e}\\Gamma_{0}},  where I^{\\prime}_{\\rm FRB} is the radio intensity and \\gamma_{T}^{\\prime}m_{e}c^{2} is the thermal energy of electrons. Imposing \\tau_{\\rm ic}\\lesssim 10 gives
+
+r\\gtrsim 6.3\\times 10^{17}\\ {\\rm cm}\\ \\frac{L_{\\rm FRB,43}^{1/3}L_{w,49}^{1/3} \\zeta_{e}^{1/3}}{\\Gamma_{0,1.5}^{2/3}\\nu_{9}\\gamma_{T}^{\\prime\\,1/3}(1+\\sigma) ^{1/3}},  which is typically larger than r_{\\rm dec}.
+
+The above constraint is strong but rather conservative. The FRB emission has a short pulse of \\delta t\\sim 1\\ {\\rm ms}, so we may consider a compact blob with l^{\\prime}_{c}\\approx\\Gamma_{0}c\\delta t(\\lesssim r/\\Gamma_{0}) (in the outflow comoving frame). Then, the induced-Compton scattering optical depth is estimated to be (Wilson & Rees, 1978; Macquart, 2007; Tanaka & Takahara, 2013)
+
+\\tau_{\\rm ic}\\approx\\zeta_{e}n^{\\prime}_{w}\\sigma_{T}l^{\\prime}_{c}\\left( \\frac{3k\\mathcal{T}^{\\prime}_{b}}{\\gamma_{T}^{\\prime}m_{e}c^{2}}\\right),  where \\mathcal{T}^{\\prime}_{b} is the brightness temperature given by \\mathcal{T}^{\\prime}_{b}=c^{2}I^{\\prime}_{\\rm FRB}/(2k\\nu^{\\prime 2}). For a spherical blob, using the isotropic-equivalent FRB luminosity (L_{\\rm FRB}), we obtain I^{\\prime}_{\\rm FRB}\\approx L_{\\rm FRB}/(8\\pi\\Gamma_{0}^{2}3l^{\\prime}_{e} {}^{2}\\nu) and \\mathcal{T}^{\\prime}_{b}\\simeq 1.5\\times 10^{31}\\ {\\rm K}\\ L_{\\rm FRB,43}\\Gamma_{0,1.5}^{- 3}\\nu_{9}^{-3}\\delta t_{-3}^{-2}. If we assume that the emission occurs at r\\approx\\Gamma_{0}^{2}c\\delta t, the Lorentz factor is constrained to be
+
+\\Gamma_{0}>\\Gamma_{c}\\simeq 1.8\\times 10^{4}\\ \\frac{L_{\\rm FRB,43}^{1/8}L_{w,49}^{ 1/8}\\zeta_{c}^{1/8}}{\\nu_{9}^{3/8}\\delta t_{-3}^{3/8}\\gamma_{T}^{\\prime\\ 1/8}(1+ \\sigma)^{1/8}}. 
+
+Thus, the radio emission could avoid induced-Compton scatterings if \\Gamma_{0} exceeds the critical Lorentz factor (\\Gamma_{c}), at which Equations (16) and (18) are equal. Or, the constraints can be weaker if the flow is Poynting dominated (\\sigma\\gg 1) or the plasma is hot (\\gamma_{T}^{\\prime}\\gg 1).
+
+## 4. Precursor Burst in a Wind Bubble?
+
+FRB emission during the precursor phase of compact mergers has been discussed by several authors (Lyutikov, 2013; Totani, 2013; Wang et al., 2016). Although the magnetic fields of binary pulsars are uncertain, it is often thought that one of the two NSs has a weak magnetic field as a recycled pulsar, whereas the other has a strong magnetic field with B_{*}\\sim 10^{12}-10^{13} G. The merger time due to gravitational wave losses is
+
+t_{m}=\\frac{5}{512}\\frac{c^{5}a^{4}}{G^{3}M^{3}}\\simeq 3.0\\ {\\rm ms}\\ \\Big{(} \\frac{a}{10\\ {\\rm km}}\\Big{)}^{4},  where a is the separation and their mass is assumed to be 1.4 M_{\\odot}. The pre-merger luminosity is uncertain, but the maximum luminosity is estimated to be L_{\\rm pre}^{\\rm max}\\sim 4\\times 10^{45}\\ {\\rm erg\\ s^{-1}}\\ B_{*,13}^{2}t_{m,-3}^{-13/8}(Lai, 2012). The isotropic-equivalent wind luminosity could be larger if the flow is collimated as L_{w}\\approx L_{\\rm pre}/f_{b}, and L_{w}\\mathrel{\\hbox{\\hbox to 0.0pt{\\hbox{\\lower 4.0pt\\hbox{$\\sim$}}}\\hbox{$> $}}}L_{\\rm FRB}\\sim 10^{43}\\ {\\rm erg\\ s^{-1}} is expected to explain FRBs. The wind magnetic field at radius r may be as strong as B\\approx 82 G L_{w,45}^{1/2}r_{1.5}^{-1} in the burst frame.
+
+Even in this precursor phase, FRB emission cannot be produced close to the binary. The light cylinder of the system may be R_{\\rm lc}=cP/(2\\pi)\\simeq 4.8\\times 10^{6}\\ P_{-3}\\ {\\rm cm}, which can be comparable to the photospheric radius of the precursor fireball, r_{\\rm ph}\\sim 3.8\\times 10^{6}\\ {\\rm cm}\\ (r_{0}/a)^{1/2}B_{*,13}^{1/2}(a/30\\ {\\rm km })^{-9/8}(Metzger & Zivance, 2016), where r_{0} is the initial radius. A radio pulse produced in such a dense region would be significantly diminished. Note that the similar constraint would be applied to NS-BH binary models (D'Orazio et al., 2016).
+
+The situation is much relaxed at large radii, given that the wind is magnetically accelerated to a highly relativistic speed. Using Equation (16), the induced-Compton scattering limit becomes 1
+
+Footnote 1: Note that a geometrical factor should be taken into account for a radio beam that has successfully escaped from the emission region and propagates in the plasma (e.g., Wilson & Rees, 1978; Tanaka & Takahara, 2013, and references therein).
+
+r\\mathrel{\\hbox{\\hbox to 0.0pt{\\hbox{\\lower 4.0pt\\hbox{$\\sim$}}}\\hbox{$>$}}}3.6 \\times 10^{14}\\ {\\rm cm}\\ \\frac{L_{\\rm FRB,43}^{1/3}L_{w,45}^{1/3}}{\\Gamma_{w, 6}^{2/3}\\nu_{9}\\gamma_{T}^{\\prime\\ 2/3}(1+\\sigma)^{1/3}},  where we have assumed \\zeta_{c}=m_{p}/(\\gamma_{T}^{\\prime}m_{e}) and r\\mathrel{\\hbox{\\hbox to 0.0pt{\\hbox{\\lower 4.0pt\\hbox{$\\sim$}}}\\hbox{$<$}}} \\Gamma_{w}^{2}c\\delta t\\simeq 3.0\\times 10^{19}\\ {\\rm cm}\\ \\Gamma_{w,6}^{2}\\delta t_{-3}.
+
+At present, there is no convincing model for the coherent mechanism of FRB emission, in particular in cosmological scenarios. As an alternative possibility, we consider the burst-in-bubble model (Murase et al., 2016). A highly magnetized impulsive wind, which may be caused by some inhomogeneous energy injection, would run into a cleaner bubble environment created by a previous wind from the progenitor. Then, this relativistic wind pulse leads to significant dissipation as it interacts with the existing nebula. The initial nebula is expected to be small and dim. For an old pulsar with B_{*}\\sim 10^{12.5} G and P\\sim 10\\ {\\rm s} (corresponding to T_{\\rm age}\\sim 0.3\\ {\\rm Gyr}), the spin-down luminosity is estimated to be L_{\\rm sd}\\approx 2.4\\times 10^{28}\\ {\\rm erg\\ s^{-1}}\\ B_{*,12.5}^{2}P_{1}^{-4}R_{*,6}^{6}. Note that old pulsars are in the interstellar medium rather than inside the supernova ejecta, forming a bow shock. Using a pulsar velocity, V_{\\rm k}\\sim 100-1000\\ {\\rm km\\ s^{-1}}, the typical nebular radius is estimated to be R_{w}\\approx[L_{\\rm sd}/(6\\pi nm_{p}V_{k}^{2}c)]^{1/2}\\simeq 5.0\\times 10^{13}\\ { \\rm cm}\\ B_{*,12.5}P_{1}^{-2}R_{*,6}^{3}n_{-1}^{-1/2}V_{k,7}^{-1}, using the isobaric condition for the nebular pressure, p_{\\rm ts}=(2/3)\\Gamma_{w}^{2}n_{w}mc^{2}\\approx L_{\\rm sd}/(6\\pi R_{w}^{2}c), and the ram pressure of the cold interstellar medium, p_{\\rm bs}=nm_{p}V_{k}^{2}. The nebula is freshly energized only for \\sim R_{\\rm ts}/V_{k}\\simeq 5.0\\times 10^{6}\\ {\\rm s}\\ B_{*,12.5}P_{1}^{-2}R_{*,6}^{3}n_{-1}^{-1/2}V_{k,7}^{-2} and the magnetic field is estimated to be B_{\\rm nb}\\simeq 75\\ \\mu\\ {\\rm G}\\ \\epsilon_{B,-3}^{1/2}n_{-1}^{-1/2}V_{k,7}^{1/2}. Note that this nebular size may not satisfy Equation (21).
+
+However, the nebula is so tenuous that it would be significantly affected by a continuous energy injection from a precursor outflow. Although its detailed evolution needs dynamical calculations, the causality and pressure balance conditions imply that the nebula may expand up to \\sim 2\\times 10^{15}\\ {\\rm cm}\\ B_{*,12.5}^{16/29}n_{-1}^{-8/29}V_{k,7}^{-16/29}. If the wind is accelerated to \\Gamma_{w}\\gg 10^{4}, the pressure balance at the contact discontinuity leads to a Lorentz factor of the merged wind of \\Gamma_{m}\\mathrel{\\hbox{\\hbox to 0.0pt{\\hbox{\\lower 4.0pt\\hbox{$\\sim$}}}\\hbox{$>$}}}1400\\ L_{w,45}^{1/4}n_{-1}^{-1/4}V_{k,7}^{-1/2}R_{w,15.5}^{-1/2}.
+
+The impulsive wind is quickly decelerated after interaction with the bubble, and its energy can be efficiently converted into radiation. Particles in the wind can be boosted by \\sim\\Gamma_{w}/(2\\Gamma_{m}), while those in the pre-shocked nebula can be boosted by \\sim\\Gamma_{m}, respectively. An inverted population of particles may form in such a situation. Although details are uncertain, if the synchrotron absorption cross-section is negative in the relevant energy range 2, the synchrotron maser mechanism (Wu, 1985; Gallant et al., 1992; Sagiv & Waxman, 2002; Lyubarsky, 2014) may operate and could account for the FRB emission. For \\Gamma_{m}<\\Gamma_{c}\\simeq 1.4\\ \\times\\ 10^{4}\\ L_{\\rm FRB,43}^{1/8}L_{w,45}^{1/8}\\nu_{9}^{-3/8}\\delta t_{-3}^{-3/8}\\gamma_{T}^{\\prime\\ -1/4}(1+\\sigma)^{-1/8}, the induced-Compton scattering limit gives
+
+Footnote 2: Ghisellini (2016) obtained \\gamma_{e}\\mathrel{\\hbox{\\hbox to 0.0pt{\\hbox{\\lower 4.0pt\\hbox{$\\sim$}}}\\hbox{$<$}}}110\\ \\nu_{9}^{1/2}B^{-1/2}.
+
+r\\mathrel{\\hbox{\\hbox to 0.0pt{\\hbox{\\lower 4.0pt\\hbox{$\\sim$}}}\\hbox{$>$}}}3.9\\times 10^{13}\\ {\\rm cm}\\ \\frac{L_{\\rm FRB,43}^{1/2}L_{w,45}^{1/2}}{\\Gamma_{m,3.5}^{2}\\delta t_{-3}^{1/2}\\nu_{9}^{3/2}\\gamma_{T,3.5}^{2}(1+\\sigma)^{1/2}}, which can be satisfied in this burst-in-bubble scenario.
+
+If the nebula is hot by virtue of a relativistic particle content, shocked particles energized by the relativistic boost can rapidly lose their energies via synchrotron emission in the high-energy \\gamma-ray range at \\sim 0.5~{}\\Gamma_{m,3.5} TeV. However, such a \\gamma-ray flash is detectable only for nearby events (Murase et al., 2016).
+
+## 5. Radio Afterglow Emission
+
+FRBs associated with \\gamma-rays should be caused by energetic events, and this may lead to external shocks driven by a high-velocity outflow. First, let us consider a relativistic, late prompt outflow, as considered in merger scenarios (e.g., Lamb & Kobayashi, 2016). In the thin shell case, the crossing time is comparable to t_{\\rm dec}\\approx r_{\\rm dec}/(4\\Gamma_{0}^{2}c)\\simeq 1700 s \\mathcal{E}_{51.7}^{1/3}\\Gamma_{0.15}^{-8/3}n_{-1}^{-1/3}, where \\mathcal{E} is the isotropic-equivalent kinetic energy and n is the ambient density. The Lorentz factor at t>t_{\\rm dec} is
+
+\\Gamma\\approx\\left(\\frac{17\\mathcal{E}}{1024\\pi nm_{p}c^{5}t^{3}}\\right)^{1/8 }\\simeq 7.1~{}\\mathcal{E}_{51.7}^{1/8}n_{-1}^{-1/8}t_{5}^{-3/8}. 
+
+The post-shock magnetic field is estimated to be B^{\\prime}=\\left(32\\pi\\epsilon_{B}\\Gamma^{2}nm_{p}c^{2}\\right)^{1/2}\\simeq 8.7\\times 10^{-2} G \\mathcal{E}_{51.7}^{1/8}n_{-1}^{3/8}\\epsilon_{B-2}^{1/2}t_{5}^{-3/8}, where \\epsilon_{B} is the magnetic energy fraction. Note that the redshift dependence, which can be taken into account easily, is not explicitly shown here.
+
+Following the standard external forward shock model (Meszaros & Rees, 1993; Meszaros & Rees, 1997), the injection Lorentz factor of accelerated electrons is estimated to be \\gamma^{\\prime}_{e_{i}}\\approx g_{s}(\\epsilon_{e}/f_{e})(m_{p}/m_{e})\\Gamma \\simeq 370\\left(\\epsilon_{e,-1}/f_{e}\\right)(g_{s}/g_{2.4})\\mathcal{E}_{51.7 }^{1/8}n_{-1}^{-1/8}t_{5}^{-3/8}, where g_{s}=(s-2)/(s-1) for s>2, \\epsilon_{e} is the energy fraction of non-thermal electrons, and f_{e}(\\gtrsim m_{e}/m_{p}\\sim 5\\times 10^{-4}) is their injection fraction. The accelerated electrons cool on a time scale t^{\\prime}_{\\rm rad}\\approx 6\\pi m_{e}c/(\\sigma_{T}{B^{\\prime}}^{2}\\gamma^{ \\prime}_{e}[1+Y]), where Y is the Compton Y parameter. By the condition t^{\\prime}_{\\rm rad}=r/(\\Gamma c), we have the cooling Lorentz factor, \\gamma^{\\prime}_{ecc}\\approx 6\\pi m_{e}c/(\\sigma_{T}{B^{\\prime}}^{2}t^{\\prime}[1+Y ])\\simeq 3.6\\times 10^{4}~{}\\mathcal{E}_{51.7}^{-3/8}n_{-1}^{-5/8}\\epsilon_{B,-2}^{1/2}(1+Y)^{-1}t_{5}^{1/8}. The acceleration time is given by t^{\\prime}_{\\rm acc}\\approx\\gamma^{\\prime}_{e}m_{e}c^{2}/(eB^{\\prime}c). The condition t^{\\prime}_{\\rm acc}=t^{\\prime}_{\\rm rad} gives the maximum Lorentz factor of electrons, \\gamma^{\\prime}_{eM}\\approx 6\\pi e/(\\sigma_{T}{B^{\\prime}}[1+Y])^{1/2}\\simeq 3.9 \\times 10^{8}~{}\\mathcal{E}_{51.7}^{-1/16}n_{-1}^{-3/16}\\epsilon_{B,-2}^{-1/4}(1+Y )^{-1/2}t_{5}^{3/16}.
+
+Then, we estimate the injection synchrotron frequency to be \\nu_{i}\\approx\\Gamma\\gamma^{\\prime}_{e_{i}}{}^{2}3eB^{\\prime}/(4\\pi m_{e}c) \\simeq 3.6\\times 10^{11}~{}\\rm Hz~{}\\mathcal{E}_{51.7}^{1/2}t_{5}^{-3/2} \\epsilon_{B,-2}^{1/2}\\epsilon_{e_{i}}{}^{-1}g_{2.4}^{-2}f_{e}^{-2}, the cooling synchrotron frequency is \\nu_{c}\\approx\\Gamma\\gamma^{\\prime}_{e}{}^{2}3eB^{\\prime}/(4\\pi m_{e}c)\\simeq 3.3\\times 10^{15}~{}\\rm Hz~{}\\mathcal{E}_{51.7}^{-1/2}n_{-1}^{-1/5}\\epsilon_{B,-2}^{-3/2}(1+Y)^{-2}, and the maximum synchrotron frequency is \\nu_{M}\\simeq 4.1\\times 10^{23}~{}\\rm Hz~{}\\mathcal{E}_{51.7}^{1/8}n_{-1}^{-1/8}t_{5}^{- 3/8}(1+Y)^{-1}. The maximum synchrotron energy flux per frequency is L_{\\nu}^{\\rm max}\\approx\\Gamma(0.6f_{e}nr^{3})[4\\sqrt{3}\\pi e^{3}B^{\\prime}/(3m_ {e}c^{2})]\\simeq 8.2\\times 10^{30}~{}\\rm erg~{}s^{-1}~{}Hz^{-1}~{}\\mathcal{E}_{51.7 }f_{e}\\epsilon_{B,-2}^{1/2}n_{-1}^{1/2}. A slow-cooling synchrotron spectrum is typically expected, in which the synchrotron spectrum at \\nu<\\nu_{i} is F_{\\nu}\\propto\\nu^{1/3}, while we expect F_{\\nu}\\propto\\nu^{1/2-s/2} at \\nu_{i}<\\nu<\\nu_{c}, and F_{\\nu}\\propto\\nu^{-s/2} at \\nu_{c}<\\nu<\\nu_{M}, respectively. Here s is the injection spectral index of the accelerated electrons. The radio band typically lies in the range \\nu<\\nu_{i}, where the synchrotron flux at time t is approximately given by
+
+F_{\\nu}\\sim 0.09\\,{\\rm mJy}\\,\\nu_{9}^{1/3}\\mathcal{E}_{51.7}^{5/6}n_{-1}^{1/2} \\epsilon_{B,-2}^{1/3}\\epsilon_{e,-1}^{-2/3}f_{e}^{5/3}g_{2.4}^{-2/3}t_{5}^{1/2} d_{28}^{-2},  where s\\sim 2.4 is used as a nominal value. Thus, as discussed for GRBs, the radio afterglows are detectable with radio facilities such as the Very Large Array (with a sensitivity of \\sim 0.03-0.1 mJy). Note that the self-absorption frequency at \\nu_{\\rm sa}\\simeq 1.2\\times 10^{9}~{}\\rm Hz~{}\\mathcal{E}_{51.7}^{1/5}n_{-1}^{3/5} \\epsilon_{B,-2}^{1/5}e_{e,-1}^{-1}g_{2.4}^{-1}f_{e}(<\\nu_{i}) can be relevant.
+
+An afterglow emission is promising even in the magnetic burst scenario. Although the ejecta is only mildly relativistic or non-relativistic, there are two advantages. First, in the case of a \\gamma-ray association, the source has to be nearby. Second, the magnetar making a FRB is likely to be so young that the external (supernova ejecta) density is large. Assuming d\\sim 100 Mpc and \\mathcal{E}\\sim 10^{48} erg, the non-relativistic afterglow flux at \\nu_{m}<\\nu<\\nu_{c} is estimated to be (Murase et al., 2016)
+
+F_{\\nu} \\sim 5.1~{}{\\rm mJy}~{}M_{15}^{19/20-s/4}(V_{5|8.5}T_{\\rm age,9})^{-57/20 +3s/4}\\nu_{9}^{1/2-s/2}  \\times\\mathcal{E}_{48}^{3/10+s/2}\\epsilon_{B,-2}^{1/4+s/4}f_{e,-1. 5}\\zeta_{e}{}^{-1+s}t_{6}^{21/10-3s/2}d_{26.5}^{-2}.
+
+Thus, both Equations (24) and (25) imply that the FRB's afterglow signatures are detectable with current radio telescopes carrying out dedicated follow-up observations, but for some FRBs that are accompanied by \\gamma-rays.
+
+The above arguments are generally applicable to various scenarios involving energetic blast waves. As a possible application, let us discuss FRB 131104. Recently, Shannon & Ravi (2016) reported an upper limit on the radio afterglow flux in the field of view of FRB 131104. Using F_{\\nu}<F_{\\nu}^{\\rm lim}\\approx 0.07 mJy at \\nu=5.5 GHz at t\\sim 10^{6} s, we obtain a constraint
+
+n\\epsilon_{B,-2}^{2/3}f_{e}^{10/3} \\lesssim 2.0\\times 10^{-3}~{}{\\rm cm}^{-3}~{}\\nu_{9.7}^{-2/3}\\mathcal{E}_{51.7}^{-5/3} \\epsilon_{e,-1}^{4/3}  \\times\\left.g_{2.4}^{4/3}t_{6}^{-1}(F_{\\nu}^{\\rm lim}/0.07~{}{ \\rm mJy})\\right^{2}.
+
+This upper limit is consistent with ambient densities deduced from SGRB afterglows, which are typically n\\sim 10^{-5}-1~{}{\\rm cm}^{-3} (see, e.g., Fig. 9 of Fong et al., 2015) (and it also depends on other parameters such as \\epsilon_{B} and f_{e}, which can be low). While a large parameter space for the standard afterglow scenario for SGRBs is not yet constrained, it disfavors the long GRB afterglow scenario, which is characterized by higher densities, as argued by Shannon & Ravi (2016), which is also consistent with the radio compactness issue described above. With the constraints (2) and (5), the magnetic burst afterglow scenario is largely excluded. These demonstrate how we can use follow-up observations of FRBs with a possible \\gamma-ray counterpart.
+
+## 6. Summary and Discussion
+
+In the previous sections we showed the general importance of \\gamma-ray observations _for testing FRB models_. Ourmain points are summarized as follows.
+
+(i) If the DM is dominated by the intergalactic medium, \\gamma-ray detections with _Swift_-like detectors imply that FRBs must be energetic events, such as GRBs. If the energy is supplied by the magnetic energy of a compact object, as in the magnetar hyper-flare model, the source has to be nearby, so the DM should be dominated by local environments. FRBs with bright \\gamma-ray counterparts and large DMs would be difficult in the magnetar scenario, because the allowed age, T_{\\rm age}, can be largely constrained by the free-free absorption.
+
+(ii) A cosmological interpretation can also be challenged by the _radio compactness problem_, which turned out to be usually more severe than the \\gamma-ray compactness issue. We considered the general implications of late prompt outflows producing extended \\gamma-ray emission, which has been observed in some SGRBs (Kaneko et al., 2015), and found that in this case the FRB emission region is unlikely to coincide with the \\gamma-ray emission region, especially due to the synchrotron absorption and induced-Compton scattering.
+
+(iii) On the other hand, FRB emission might occur during the precursor phase of compact mergers. Independently of the \\gamma-ray constraints, we showed that a highly relativistic impulsive wind, interacting with a wind bubble, can avoid the induced-Compton scattering constraints. Although we discussed the NS-NS scenario (e.g., Totani, 2013; Zhang, 2014) as an example, the constraints would be applicable to other NS-BH and BH-BH merger scenarios that could work for a given clean environment (Mingarelli et al., 2015; Zhang, 2016).
+
+(iv) Based on the standard afterglow model, we showed that radio afterglow emission from \\gamma-ray bright FRBs is detectable in merger models, which also encourages future GW searches. We also argued that detectable afterglow emission is expected in the magnetar scenario, following Murase et al. (2016).
+
+At present, all FRB models that have been proposed in the literature are speculative. Merger scenarios also have caveats. First, the rate of orphan SGRBs with extended emission cannot be large. The _Swift_-BAT observations already imply f_{b}\\lesssim 10^{-1.5}(DeLaunay et al., 2016), so the fraction of the FRBs accompanied by \\gamma-rays would be at most comparable to the SGRB rate. Also, merger models would not explain a repeating FRB. Thus, in this scenario, FRBs should consist of multiple source populations. On the other hand, even if FRBs may occur in different source populations, there may be a _common mechanism_ for coherent radio emission, in principle. Another appealing point is that they have some predictions that can be tested. If FRBs are produced in the precursor phase, an extended emission should be observed a few seconds later than a radio burst. One also expects that some FRBs show the coincidence of a short \\gamma-ray spike a bit after the FRB pulse. As has been discussed in the literature, even if the internal extended emission is not observed, orphan SGRB afterglows could generically appear as extended, slow-evolving hard X-ray transients (when observed not too far off-axis), as we are just seeing the rise (due to wider beaming) and fall (due to afterglow decay) of the X-ray afterglow. Radio afterglow observations are also promising, although the detectability and implications depend on ambient densities that can be very low in many merger scenarios. Another strong test of the compact merger scenarios is the association with GWs, which can be detected by Advanced LIGO, Virgo, and KAGRA, as recently demonstrated by the discovery of BH-BH merger events (Abbott et al., 2016, 2016). It has been predicted that NS-NS mergers are detectable up to \\sim 200 Mpc with the designed sensitivity of Advanced LIGO. The field of view of radio telescopes is small, so that coincident detections of FRBs and GWs may be challenging with current facilities. On the other hand, \\gamma-ray detectors have a much larger field of view. We expect the \\gamma-ray coincidence only when we are on-axis, so the detection rate would be at most comparable to that of GWs coincident with SGRBs (e.g., Clark et al., 2015; Patricelli et al., 2016). High-energy neutrino emission from late prompt emission such as the extended emission has also been suggested (Murase & Nagataki, 2006).
+
+Recently, a tentative \\sim 3\\sigma detection of extended \\gamma-ray emission from FRB 131104 was reported (DeLaunay et al., 2016). An interesting indication is that the observed \\gamma-ray emission is similar to the extended emission observed in SGRBs. Needless to say, future confirmations of such phenomena are necessary to conclude that a fraction of the FRBs is indeed accompanied by \\gamma-rays. Our work here has demonstrated that the constraints that can be placed by such \\gamma-ray observations are indeed powerful, which may require serious revisions of the extragalactic models, or the revisiting of Galactic models in which energetics and compactness issues are much less serious. We also have shown the implications of late-time radio observations by Shannon & Ravi (2016), but they are not strong enough to test the merger scenario. Any future firm detection of \\gamma-rays with _Swift_, _Fermi_, and other all-sky \\gamma-ray monitors, as well as late follow-up observations in the radio band, could confirm the inference presented here that FRBs originate from catastrophic cosmological events, and future searches with multi-messenger networks such as the Astrophysical Multimessenger Observatory Network (AMON) (Smith et al., 2013) could also be very important.
+
+We thank Maurcio Bustamante, Ke Fang, Kazumi Kashiyama, and Shuta Tanaka for useful discussions. We acknowledge support from NSF Grant No. PHY-1620777 (KM) and NASA Grant No. NNX13AH50G (PM).
+
+* () Abbott, B. P. et al. 2016a, Physical Review Letters, 116, 241103
+
+* () -- 2016b, Physical Review Letters, 116, 061102
+
+* () Armitage, P. J. & Natarajan, P. 1999, ApJ, 523, L7
+
+* () Barthelmy, S. D. et al. 2005, Space Sci. Rev., 120, 143
+
+* () Blackman, E. G. & Yi, I. 1998, ApJ, 498, L31
+
+* () Blandford, R. D. & Znajek, R. L. 1977, MNRAS, 179, 433
+
+* () Callister, T., Kanner, J., & Weinstein, A. 2016, ApJ, 825, L12
+
+* () Champion, D. J. et al. 2016, MNRAS, 460, L30
+
+* () Chatterjee, S. et al. 2017, Nature, 541, 58
+
+* () Clark, J., Evans, H., Fairhurst, S., Harry, I. W., Macdonald, E., Macleod, D., Sutton, P. J., & Williamson, A. R. 2015, ApJ, 809, 53
+
+* () Connor, L., Sievers, J., & Pen, U.-L. 2016, MNRAS, 458, L19
+
+* () Cordes, J. M. & Lazio, T. J. W. 2002, astro-ph/0207156
+
+* () Cordes, J. M. & Wasserman, I. 2016, MNRAS, 457, 232
+
+* () Coward, D. M. et al. 2012, MNRAS, 425, 2668
+
+* () Dai, Z. G. & Lu, T. 1998, A&A, 333, L87
+
+* () Dai, Z. G., Wang, J. S., Wu, X. F., & Huang, Y. F. 2016, ApJ, 829, 27
+
+* () Dai, Z. G., Wang, X. Y., Wu, X. F., & Zhang, B. 2006, Science, 311, 1127
+
+* () DeLaunay, J. J. et al. 2016, ApJ, 832, L1
+
+* () D'Orazio, D. J., Levin, J., Murray, N. W., & Price, L. 2016, Phys. Rev. D, 94, 023001
+
+* () Falcke, H. & Rezzolla, L. 2014, A&A, 562, A137
+
+* () Fan, Y.-Z. & Xu, D. 2006, MNRAS, 372, L19
+
+* () Fong, W., Berger, E., Margutti, R., & Zauderer, B. A. 2015, ApJ, 815, 102
+
+* () Gallant, Y. A., Hoshino, M., Langdon, A. B., Arons, J., & Max, C. E. 1992, ApJ, 391, 73
+
+* () Ghisellini, G. 2016, arXiv:1609.04815
+
+* () Ghisellini, G., Ghirlanda, G., Nava, L., & Firmani, C. 2007, ApJ, 658, L75
+
+* () Gompertz, B. P., O'Brien, P. T., Wynn, G. A., & Rowlinson, A. 2013, MNRAS, 431, 1745
+
+* () Gruzinov, A. 2005, Physical Review Letters, 94, 021101
+
+* () Kaneko, Y., Bostanc, Z. F., Gogus, E., & Lin, L. 2015, MNRAS, 452, 824
+
+* () Kashiyama, K., Ioka, K., & Meszaros, P. 2013, ApJ, 776, L39
+
+* () Katz, J. I. 2016a, Modern Physics Letters A, 31, 1630013
+
+* () -- 2016b, ApJ, 818, 19
+
+* () Keane, E. F. et al. 2016, Nature, 530, 453
+
+* () Keane, E. F., Stappers, B. W., Kramer, M., & Lyne, A. G. 2012, MNRAS, 425, L71
+
+* () Keane, E. F. & SUPERB Collaboration 2016, arXiv:1602.05165
+
+* () Kisaka, S. & Ioka, K. 2015, ApJ, 804, L16
+
+* () Kulkarni, S. R., Ofek, E. O., Neill, J. D., Zheng, Z., & Juric, M. 2014, ApJ, 797, 70
+
+* () Lai, D. 2012, ApJ, 757, L3
+
+* () Lamb, G. P. & Kobayashi, S. 2016, ApJ, 829, 112
+
+* () Lien, A., Sakamoto, T., Gehrels, N., Palmer, D. M., Barthelmy, S. D., Graziani, C., & Cannizzo, J. K. 2013, arXiv:1308.3720
+
+* () Lorimer, D. R., Bailes, M., McLaughlin, M. A., Narkevic, D. J., & Crawford, F. 2007, Science, 318, 777
+
+* () Lyubarsky, Y. 2008, ApJ, 682, 1443
+
+* () -- 2014, MNRAS, 442, L9
+
+* () Lyutikov, M. 2013, ApJ, 768, 63
+
+* () Macquart, J.-P. 2007, ApJ, 658, L1
+
+* () Marcote, B. et al. 2017, ApJ, 834, L8
+
+* () Masui, K. et al. 2015, Nature, 528, 523
+
+* () Melrose, D. B. 1971, Ap&SS, 13, 56
+
+* () Mereghetti, S. 2008, A&A Rev., 15, 225
+
+* () Meszaros, P. & Rees, M. J. 1993, ApJ, 405, 278
+
+* () Meszaros, P. & Rees, M. J. 1997, ApJ, 476, 232
+
+* () Metzger, B. D., Quataert, E., & Thompson, T. A. 2008, MNRAS, 385, 1455
+
+* () Metzger, B. D. & Zivancev, C. 2016, MNRAS, 461, 4435
+
+* () Mingarelli, C. M. F., Levin, J., & Lazio, T. J. W. 2015, ApJ, 814, L20
+
+* () Murase, K., Kashiyama, K., & Meszaros, P. 2016, MNRAS, 461, 1498
+
+* () Murase, K. & Nagataki, S. 2006, Physical Review Letters, 97, 051101
+
+* () Murase, K., Toma, K., Yamazaki, R., & Meszaros, P. 2011, ApJ, 732, 77
+
+* () Nakamura, T., Kashiyama, K., Nakauchi, D., Suwa, Y., Sakamoto, T., & Kawai, N. 2014, ApJ, 796, 13
+
+* () Niino, Y., Totani, T., & Okumura, J. E. 2014, PASJ, 66, L9
+
+* () Palaniswamy, D., Wayth, R. B., Trott, C. M., McCallum, J. N., Tingay, S. J., & Reynolds, C. 2014, ApJ, 790, 63
+
+* () Patricelli, B., Razzano, M., Cella, G., Fidecaro, F., Pian, E., Branchesi, M., & Stamerra, A. 2016, JCAP, 11, 056
+
+* () Piro, A. L. 2016, ApJ, 824, L32
+
+* () Popov, S. B. & Postnov, K. A. 2010, in Evolution of Cosmic Objects through their Physical Activity, ed. H. A. Harutyunian, A. M. Mickaelian, & Y. Terzian, 129-132
+
+* () Rees, M. J. & Meszaros, P. 2005, ApJ, 628, 847
+
+* () Sagiv, A. & Waxman, E. 2002, ApJ, 574, 861
+
+* () Shannon, R. M. & Ravi, V. 2016, arXiv:1611.05580
+
+* () Shibata, M. 2005, Physical Review Letters, 94, 201101
+
+* () Smith, M. W. E. et al. 2013, Astroparticle Physics, 45, 56
+
+* () Spitkovsky, A. 2006, ApJ, 648, L51
+
+* () Spitler, L. G. et al. 2016, Nature, 531, 202
+
+* () Tanaka, S. J. & Takahara, F. 2013, Progress of Theoretical and Experimental Physics, 2013, 123E01
+
+* () Tchekhovskoy, A., Narayan, R., & McKinney, J. C. 2011, MNRAS, 418, L79
+
+* () Tendulkar, S. P. et al. 2017, ApJ, 834, L7
+
+* () Tendulkar, S. P., Kaspi, V. M., & Patel, C. 2016, ApJ, 827, 59
+
+* () Thornton, D. et al. 2013, Science, 341, 53
+
+* () Totani, T. 2013, PASJ, 65, L12
+
+* () Vedantham, H. K., Ravi, V., Mooley, K., Frail, D., Hallinan, G., & Kulkarni, S. R. 2016, ApJ, 824, L9
+
+* () Wanderman, D. & Piran, T. 2010, MNRAS, 406, 1944
+
+* () Wang, J.-S., Yang, Y.-P., Wu, X.-F., Dai, Z.-G., & Wang, F.-Y. 2016, ApJ, 822, L7
+
+* () Williams, P. K. G. & Berger, E. 2016, ApJ, 821, L22
+
+* () Wilson, D. B. & Rees, M. J. 1978, MNRAS, 185, 297
+
+* () Wu, C. S. 1985, Space Sci. Rev., 41, 215
+
+* () Yamasaki, S., Totani, T., & Kawanaka, N. 2016, MNRAS, 460, 2875
+
+* () Yang, Y.-P., Zhang, B., & Dai, Z.-G. 2016, ApJ, 819, L12
+
+* () Yi, S.-X., Gao, H., & Zhang, B. 2014, ApJ, 792, L21
+
+* () Zel'dovich, Y. B. & Sobel'man, I. I. 1970, Soviet Physics Uspekhi, 13, 307
+
+* () Zhang, B. 2014, ApJ, 780, L21
+
+* () -- 2016, ApJ, 822, L14
+
+* () Zhang, B. & Meszaros, P. 2001, ApJ, 552, L35

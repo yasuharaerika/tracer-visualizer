@@ -1,0 +1,73 @@
+###### Abstract
+
+We present the results of the timing and spectral analysis of X-ray high-state observations of the high-mass X-ray pulsar SMC X-1 with _Chandra_, _XMM-Newton_, and _ROSAT_, taken between 1991 and 2001. The source has L_{\\rm X}\\sim(3-5)\\times 10^{38} ergs s{}^{-1}, and the spectra can be modeled as a power law plus blackbody with kT_{\\rm BB}\\sim 0.18 keV and a reprocessed emission radius R_{\\rm BB}\\sim 2\\times 10^{8} cm, assuming a distance of 60 kpc to the source. Energy-resolved pulse profiles show several distinct forms, more than half of which include a second pulse in the soft profile, previously documented only in hard energies. We also detect significant variation in the phase shift between hard and soft pulses, as has recently been reported in Her X-1. We suggest an explanation for the observed characteristics of the soft pulses in terms of precession of the accretion disk.
+
+Subject headings:accretion, accretion disks -- stars: neutron -- X-rays: binaries: individual (SMC X-1) -- stars: pulsars: individual (SMC X-1) +
+
+Footnote †: slugcomment: Accepted for publication in Astrophysical Journal Letters
+
+## 1. Introduction
+
+SMC X-1 is a high-mass X-ray binary system consisting of an X-ray source, a 1.6 M_{\\odot} pulsar, accreting from a 17.2 M_{\\odot} companion, Sk 160 (Clarkson et al., 2003). It is also the only X-ray pulsar for which no spin-down episodes have been observed (Kahabka & Li, 1999). The X-ray pulsar has a spin period of 0.71 s and an eclipsing orbital period of 3.89 days, and in addition it shows a superorbital variation in flux with period between 45 and 60 days. This is likely due to precession of a warped accretion disk (Wojdowski et al., 1998).
+
+The presence of the accretion disk is likely to have significant consequences for the observed pulse profile. In Her X-1, a low-mass X-ray pulsar with a regular 35 day superorbital period, reprocessing of hard X-rays by the disk gives rise to a pulsating, soft spectral component (Endo et al., 2000). Zane et al. (2004) have shown that the phase difference between hard and soft pulses changes as the accretion disk precesses. If similar reprocessing is at work in SMC X-1, as argued by Hickox et al. (2004), the pulse profiles should show a variation similar to that of Her X-1. To that end, we have analyzed pulse profiles of SMC X-1 in different epochs from _Chandra_, _XMM_, and _ROSAT_. In SS 2 we discuss the observations and our methods of data analysis. In SS 3 we present the results of our analysis, and in SS 4 we consider the implications of our results and future work.
+
+## 2. Observations
+
+The observations reported in this Letter are described in Table 1 and were made with _Chandra_'s ACIS-S in continuous clocking (CC) mode (CXC Proposers' Observatory Guide v5.0, 2002), the EPIC-pn detectors on _XMM-Newton_ in full window (X101) and small window (X201) modes (XMM-Newton Users' Handbook v2.2, 2004), and the _ROSAT_ PSPC detectors in pointing mode (ROSAT Users' Handbook v96). We shall refer to the observations as C104, X201, Rn00, etc. (see Table 1). Fig. 1 locates the _Chandra_ and _XMM_ observations in the All-Sky Monitor (ASM) lightcurve from the _Rossi X-ray Timing Explorer_ (_RXTE_) mission. We estimate the superorbital phase (\\phi_{\\rm SO}) as 0.16 for the _Chandra_ observations, 0.37 for X101, and 0.42 for X201, where \\phi_{\\rm SO}=0 at the beginning of the X-ray high state. Given the variation in \\phi_{\\rm SO}, the uncertainty for these estimates is plus or minus a few days or \\phi_{\\rm SO}\\sim 0.05. The \\phi_{\\rm SO} estimates for _ROSAT_ are unavailable because those observations were taken before the launch of _RXTE_.
+
+Since the CC mode provides only one dimension of spatial information, ACIS source events were extracted from a source-centered rectangle of size 0\\farcs 492\\times 1\\farcs 968. Background events were extracted from two regions 0\\farcs 492\\times 9\\farcs 84 equidistant from the source. For X101, which shows the source entering an eclipse, events were located within a circular region of radius 45\\arcsec and extracted from the 4.9 ks of pre-eclipse data; for X201, we used a circular region of radius 51\\farcs 2. We ignored the _XMM_ background because its surface brightness was less than 0.1% of that of the source region. _ROSAT_ source events were extracted from a circular region of radius 2\\farcm 5. For Ra02, which shows an eclipse, events were taken from the 5.5 ks of post-eclipse data.
+
+## 3. Analysis
+
+Before the spectroscopic and timing analysis, we performed a barycentric correction and corrected for the orbital motion of SMC X-1 using the orbital ephemeris calculated by
+
+Figure 1.— _RXTE_ ASM lightcurve for SMC X-1 with arrows designating several observations. Quick-look results as provided by the _RXTE_/ASM team.
+
+Wojdowski et al. (1998). The following analysis was performed with CIAO version 3.1 for Chandra and ROSAT data and SAS version 5.3.3 for XMM.
+
+### Phase-Averaged Spectroscopy
+
+For Chandra and XMM, we extracted phase-averaged spectra, modeling the 0.6-9.8 keV emissions with neutral absorption, a blackbody with kT_{\\rm BB}\\sim 0.18 keV, and a power law. For the XMM spectra we also included a high-energy cutoff (E_{\\rm cut}\\sim 6 keV, E_{\\rm fdd}\\sim 8 keV Woo et al. 1995). For Chandra and X201, we excluded the energy range 1.7-2.8 keV to avoid instrumental effects (near the Au and Si edges) for high count data (Miller et al. 2002). Although the excellent time resolution of CC mode prevents some photon pileup, we used the ISIS pileup kernel for the Chandra observations (Davis 2001), which show a pileup fraction of \\sim17%. For XMM we minimized pileup in the spectra by excluding events from the central one-third radius of the extraction regions.
+
+Spectral fits from C104, X201, and X101 are shown in Fig. 2 and results are listed in Table 2. All spectra are dominated by blackbody emission below \\sim1.0 keV, although the similar wavy residuals in the Chandra and X201 spectra below 1.0 keV suggest that the soft emission is not exactly blackbody. For X101, the data are taken as the source is entering eclipse, and the spectrum could not be fitted using the simple model above. Fixing \\Gamma to a typical value of 0.9, we found that a good fit is achieved by including a partial covering absorption, with a covering fraction of 88%. This accounts for the extra absorption by the dense gas around the star as the eclipse begins, but allows for some X-rays to be scattered around the absorbing region. Residuals suggest that there may also be Fe absorption at \\sim6.5 keV, but more detailed spectral analysis is beyond the scope of this Letter. Since blackbody emission dominates below 1.0 keV, and power-law emission above 2.0 keV, we can use energy-resolved profiles in these ranges to examine the variation of the separate components. More detailed analysis, using pulse-phase spectroscopy, will be presented in a forthcoming paper.
+
+### Timing Analysis
+
+Since SMC X-1 is a fast-period pulsar, pulse profile analysis requires a time resolution of better than 0.71 s. Fortunately, the Chandra, X201, X101, and ROSAT observations have sufficient time resolutions of 2.85, 6, 73.4, and 130 ms, respectively. We used _efsearch_ in the software package XRONOS to measure the pulse periods (see Table 1). These are consistent with the spin-up rate calculated by Wojdowski et al. (1998) and the periods determined by Vrtilek et al. (2001) from the same Chandra data. We extracted high- and low-energy pulse profiles from each of the seven observations (see Fig. 3). Here
+
+Figure 2.— Spectra from (a) C104, (b) X201, and (c) X101 with blackbody and power law components shown. As X101 is a pre-eclipse observation, it was fit with an additional partial covering absorption. Note that in (a) the model components do not add exactly to the observed counts. This is due to the pileup kernel used in the fit. we do not correct for pileup effects, since these have minimal impact on the shapes of the pulses.
+
+All seven observations show the double-peaked hard pulse profile that has been thoroughly documented (Wojdowski et al., 1998; Paul et al., 2002; Naik & Paul, 2004). The soft profile, however, varies markedly. While earlier studies of SMC X-1 have shown a roughly sinusoidal shape of soft pulses (Paul et al., 2002; Naik & Paul, 2004), the _ROSAT_, _Chandra_, and _XMM_ observations show a complex variation of profiles. Although the _ROSAT_ pulse profiles show a single main soft peak, four of the five _Chandra_ and _XMM_ observations show _double_-peaked soft pulses.
+
+The first _ROSAT_ observation, Rn00, shows a single asymmetric hump at lower energies, slightly out of phase with the hard pulses. For Ra02, the soft pulses are lightly double-peaked, although the poor spectral resolution of the PSPC places the exact details of the profiles in doubt. The X101 pulse profile shows a single broad peak quite similar to Rn00. In the _Chandra_ data, we see a clear second peak in all three soft pulse profiles, and we note a _significant phase difference_ between hard and soft pulses. In X201 we also find double-peaked soft pulses, but these are _almost in phase_ with the hard pulses.
+
+For _Chandra_ and _XMM_ we cross-correlated the hard and soft profiles, to quantify the phase shift between the pulses (see Fig. 4), as in Ramsay et al. (2002) and Zane et al. (2004). The _Chandra_ profiles show strong anticorrelations at a phase shift of 0{}^{\\circ} and positive correlations at \\pm90{}^{\\circ}. We see multiple peaks because the hard and soft profiles each have two pulses. Observation X101 shows a broad correlation with a peak at \\sim20{}^{\\circ}; in X201 we detect possible phase shifts of \\sim0{}^{\\circ}, \\sim\\pm90{}^{\\circ}, and \\sim\\pm170{}^{\\circ}.
+
+## 4. Discussion
+
+In these observations both hard and soft X-rays show pulsations, but differences in the hard and soft pulse profiles indicate a different geometric or physical origin of emission (Paul et al., 2002). Soft pulses in the most luminous X-ray pulsars are likely to originate at the inner edge of the accretion disk, where hard pulses from the neutron star are reradiated at lower energies by disk gases (Hickox et al., 2004). If this picture is valid for SMC X-1, the observed blackbody component should be consistent with emission from the inner disk. For reprocessing by a partial spherical surface around the neutron
+
+Figure 3.— Hard and soft pulse profiles for (a) _ROSAT_, (b) _Chandra_, and (c) _XMM_. The hard range is 2.0–8.0 keV (1.5–2.4 keV for _ROSAT_); soft is 0.5–1.0 keV. Two pulse periods are shown for clarity. Note that the pulse phases shown are not absolute, but are only relative to each observation. star, the blackbody radius R_{\\rm BB} is given by (Paul et al., 2002)
+
+R_{\\rm BB}=\\sqrt{\\frac{L_{X}}{4\\pi\\sigma T_{\\rm BB}^{4}}}.
+
+Using kT_{\\rm BB}\\sim 0.18 keV and L_{X}\\sim 4\\times 10^{38} ergs s{}^{-1}, we have R_{\\rm BB}\\sim 1.7\\times 10^{8} cm.
+
+In the standard model for X-ray pulsars, the inner disk radius R_{0} is close to the magnetospheric radius R_{m}, where the magnetic pressure of the dipole field equals the ram pressure of the infalling gas. However, R_{m} is difficult to estimate for SMC X-1, because the surface B-field has not been directly measured. We note that R_{\\rm BB} is close to the corotation radius R_{\\rm cor}=(GMP^{2}/4\\pi^{2})^{1/3}\\simeq 1.3\\times 10^{8} cm, which is another estimate for R_{0}. However, the lack of spin-down episodes for SMC X-1 suggests that R_{0}<R_{\\rm cor}(Kahabka & Li, 1999). The situation is therefore unclear, but without additional constraints it is certainly possible that the soft pulses originate at the inner accretion disk.
+
+In light of this picture we consider the following pulse profile characteristics:
+
+1. The hard pulse profile is consistently double-peaked, typically with one dominant peak.
+
+2. The soft pulse profile varies in shape, and has been observed with either a single asymmetric peak or two peaks with varying degrees of symmetry.
+
+3. The pulse profiles exhibit large-scale variations in phase relationship. Closely-spaced observations have revealed identical phase shifts.
+
+Zane et al. (2004) suggest that the varying hard-soft phase shift in Her X-1 may be due to the precession of the accretion disk, so we consider the possibility that such a disk could reproduce the above characteristics in SMC X-1. If the observational line of sight is sufficiently close to the plane of the magnetic axis, we might always see two hard pulses, one from each magnetic pole. However, the soft profile could change dramatically in shape and relative phase, as observed, if precession of the disk causes the visible part of the reprocessing region to vary.
+
+We note however that we cannot conclusively verify this picture and its analogy to Her X-1. First, we lack sufficient sampling of the full 60 day superorbital period. Second, the hard-soft phase shift appears to vary more rapidly for SMC X-1 (a change of \\simeq90{}^{\\circ} between \\phi_{\\rm SO}\\simeq 0.16 and 0.42) than for Her X-1 (\\simeq20{}^{\\circ} between \\phi_{\\rm SO}\\simeq 0.03 and 0.17 Zane et al., 2004). Third, it is not completely clear even in Her X-1 that the phase variation is caused by the 35 day disk precession; soon after the observations of Zane et al. (2004), the source entered an anomalous low state, an event that may be caused by changes in the inner disk structure (Boyd & Still, 2004; Oosterbroek et al., 2001). Such changes could alter the shape of the inner reprocessing region, and thus the soft profiles, in a way that is not directly related to the superorbital period.
+
+We conclude that in SMC X-1, we have observed variations in the soft pulse profile that likely reflect changes in the reprocessing of hard X-rays by the accreting gas. These variations may be related to the superorbital precession of the accretion disk, as has been proposed for Her X-1. If it can be shown with more observations that the pulse profiles and superorbital period are correlated, then we will have the opportunity to apply significant constraints to the geometry of SMC X-1.
+
+We thank Cara Rakowski, John Houck, Craig Heinke, Jonathan McDowell, and Patrick Wojdowski for helpful discussions and the referee for useful comments. This work was supported in part by NSF grants 9731923 and AST 0307433 and NASA grant NAG5-10780.

@@ -1,0 +1,287 @@
+###### Abstract
+
+Upcoming LIGO/Virgo/KAGRA (LVK) observing runs are expected to detect a variety of inspiralling gravitational-wave (GW) events, that come from black-hole and neutron-star binary mergers. Detection of non-inspiral GW sources is also anticipated. We report the discovery of a new class of non-inspiral GW sources - the end states of massive stars - that can produce the brightest simulated stochastic GW burst signal in LVK bands known to date, and could be detectable in the LVK run A+. Some dying massive stars launch bipolar relativistic jets, which inflate a turbulent energetic bubble - cocoon - inside of the star. We simulate such a system using state-of-the-art 3D general-relativistic magnetohydrodynamic simulations and show that these cocoons emit quasi-isotropic GW emission in the LVK band, \\sim 10-100 Hz, over a characteristic jet activity timescale, \\sim 10-100 s. Our first-principles simulations show that jets exhibit a wobbling behavior, in which case cocoon-powered GWs might be detected already in LVK run A+, but it is more likely that these GWs will be detected by the third generation GW detectors with estimated rate of \\sim 10 events/year. The detection rate drops to \\sim 1% of that value if all jets were to feature a traditional axisymmetric structure instead of a wobble. Accompanied by electromagnetic emission from the energetic core-collapse supernova and the cocoon, we predict that collapsars are powerful multi-messenger events.
+
+0000-0003-1212-1222]0000-0003-0032-122]Ore Gotlieb
+
+00000-0003-0002-1222]Hiroki Nagakura
+
+0000-0003-0002-1222]Alexander Tchekhovskoy
+
+00000-0003-0003-1222]Priamvada Natarajan
+
+00000-0003-0002-1222]Sharan Banagiri
+
+0000-0003-0002-1222]Jonatan Jacquemin-Ide
+
+00000-0003-0002-1222]Nick Kaaz
+
+00000-0003-0002-1222]Vicky Kalogera
+
+0000-0003-0002-1222]Coter for Interdisciplinary Exploration & Research in Astrophysics (CIERA), Physics & Astronomy, Northwestern University, Evanston, IL 6020202, USA
+
+[0000-0003-0002-1222]Coter for Interdisciplinary Exploration & Research in Astrophysics (CIERA), Physics & Astronomy, Northwestern University, Evanston, IL 60202, USA and turbulent hourglass-shape structure that envelops the jets (Fig. 1; Meszaros & Rees 2001; Ramirez-Ruiz et al. 2002; Matzner 2003; Lazzati & Begelman 2005). The cocoon is generated as long as parts of the jets are moving sub-relativistically inside the star. LGRB jets break out from the star after t_{b}\\sim 10 s (MacFadyen & Woosley 1999; Zhang et al. 2004; Bromberg & Tchekhovskoy 2016) and spend a comparable amount of time outside of the star before their engine turns off (Bromberg et al. 2011). After breakout, jets are expected to stop depositing energy into the cocoon (Ramirez-Ruiz et al. 2002; Lazzati & Begelman 2005; Bromberg et al. 2011; Gottlieb et al. 2021b), unless they are intermittent or wobbly (Gottlieb et al. 2020, 2021a, 2022b). This implies that the cocoon energy E_{c}\\simeq E_{j}\\sim 10^{51}-10^{52} erg (Nakar & Piran 2017) is similar to the jet energy if the jet propagates along a fixed axis. But E_{c} can be even larger than the _observed_ jet energy if the jet wobbles. Our simulation indicates that in such a scenario, the cocoon energy could be larger by an order of magnitude, thereby impacting the GW detection rate. Consequently, the detection of cocoon-powered GWs can serve as a valuable tool for investigating the jet structure.
+
+In this _Letter_, we show that the cocoon is a promising new GW source for present-day detectors. The cocoon evolves over shorter timescales than the jets, and, as we show, its GW signal lies within the LVK frequency band. We first calculate the GW emission using an analytic approximation and then compute it numerically (SS2), and then turn to estimate the detectability of such events (SS3). We discuss the multi-messenger detection prospects in SS4 and conclude in SS5.
+
+## 2 Gravitational-waves from cocoons
+
+To calculate the GW emission, we carry out a high resolution 3D general-relativistic magnetohydrodynamic (GRMHD) simulation of LGRB jet formation, propagation and escape from a collapsing star. The simulation is similar to those discussed in Gottlieb et al. (2022b), but here we double the stellar mass for consistency with LGRB progenitor stars (Kuncarayakti et al. 2013). Due to the scale-free nature of the simulation, doubling the mass results in an equivalent doubling of the energy, while leaving the magnetohydrodynamic evolution of the system unaffected. We also increase the data output frequency, as needed to resolve the GW signal at high frequencies. Overall we post-process more than a petabyte of simulation data output at a high cadence (\\sim 50 kHz sampling frequency). This simulation follows the jet and cocoon from the BH for \\simeq 3.2 s until they reach distance \\simeq 1.5R_{\\star} with energy E=E_{j}+E_{c}\\simeq 10^{53} erg, where E_{c}\\simeq 2E_{j} and R_{\\star} is the stellar radius. The simulation details are provided in Appendix A.
+
+We first provide an order of magnitude estimate of the GW strain, using the familiar quadrupole approximation:
+
+h\\approx\\frac{2G}{Dc^{4}}\\frac{d^{2}Q}{dt^{2}}\\approx\\frac{4G}{Dc^{4}}E \\epsilon\\simeq 10^{-23}\\ \\frac{100\\ \\mathrm{Mpc}}{D}\\frac{E\\epsilon}{10^{52}\\ \\mathrm{erg}}\\,  where G is the gravitational constant, c is the speed of light, D is the distance to the source, Q is the gravitational quadrupole, and \\epsilon is the degree of asymmetry of the cocoon, which depends on the viewing angle \\theta_{\\mathrm{obs}} (see Fig. 1). The quadrupole estimate does not consider phase cancellation between different GW emitting regions, as it assumes that the cocoon is smaller than the GW wavelength. Due to the invalidity of this assumption, we utilize the approach of applying the retarded Green's function to post-process the simulation data (see Appendix A). Fig. 2 depicts the GW strain density of the hourglass-shaped cocoon upon breakout from the star (see the full animation and accompanying sonification in [https://oregottleb.com/gw.html](https://oregottleb.com/gw.html)). For on-axis observers (Fig. 2a), the projected shape of the cocoon is close to circular (\\epsilon\\ll 1), similar to CCSNe, significantly suppressing the quadrupole moment. Off-axis observers (Fig. 2b), on the other hand, will see an asymmetric outflow that propagates parallel to their field of view, with an order unity asymmetry \\epsilon\\lesssim 1, resulting in much stronger GW emission.
+
+Turbulent motions in the jet-cocoon outflow results in a stochastic GW burst with a broad spectrum of GW frequencies that is challenging to evaluate analytically. However, we can estimate the main features of the emerging GW spectrum as follows. The smallest length-scales of the cocoon emerge over the thickness of the shocked region \\Delta r_{\\mathrm{sh}}\\simeq 10^{-2}R_{\\mathrm{sh}}\\Gamma^{-2}\\lesssim 3\\times 10^{7} cm (Nakar & Sari 2012), where \\Gamma\\simeq 2 is the jet head Lorentz factor inside the star, and R_{\\mathrm{sh}}\\lesssim 10^{10} cm is the radius of the shock. The co coon elements are generated over characteristic timescale t_{\\rm min}\\simeq\\Delta r_{\\rm sh}/c_{s}\\lesssim 5\\times 10^{-4} s, where c_{s}\\simeq c/\\sqrt{3} is the relativistic sound speed, implying the highest GW frequency, f_{\\rm max}\\approx t_{\\rm min}^{-1}\\gtrsim 2000 Hz. The maximum timescale is the time that the jet energizes the cocoon, t_{\\rm max}\\gtrsim t_{b}\\sim 10 s, thereby setting the minimum GW frequency, f_{\\rm min}\\approx t_{\\rm max}^{-1}\\lesssim 0.1 Hz. The cocoon energy is distributed quasi-uniformly in the logarithm of the proper-velocity (Gottlieb et al., 2021, 2022), 10^{-2.5}\\lesssim\\Gamma\\beta\\lesssim 3. Thus, although various cocoon components evolve on disparate timescales, they carry comparable amounts of energy, and result in a rather flat GW characteristic strain between f_{\\rm min} and f_{\\rm max}.
+
+The full GW calculation uses the retarded Green's function approach and reveals strong incoherent GW emission. The strain density maps in Fig. 2 demonstrate that the jets have the highest GW strain density. The wobbling nature of the jets, coupled with their substantial departure from axisymmetry, calls into question the validity of previous estimates which concluded that jets emit GWs only in sub-Hz frequencies, based on ideal, steady, and continuously axisymmetric top-hat jet models (e.g., Leiderschneider and Piran, 2021). However, when integrating the strain density over volume, we find that the observed GW emission is dominated by the freshly shocked material in the cocoon head, which occupies the majority of the outflow volume. We emphasize that the cocoon emission is not uniformly distributed throughout the cocoon. Had it been distributed uniformly, phase cancellations would have considerably attenuated the signal. Since most of the GW emission concentrates in smaller regions that are comparable in size to the characteristic GW wavelength, phase cancellations are partly suppressed, and a strong GW signal emerges. A comparison of the GW strain to the order of magnitude estimate in Eq. (1) shows that the calculated signal at \\theta_{\\rm obs}=90^{\\circ} is weaker by a factor of \\sim 3 than the maximum strain.
+
+Figure 3a,b shows a 3D mass density rendering of the cocoon after breakout from the star at t_{b}\\approx 2.5 s, taken from Gottlieb et al. (2022). Similar to its pre-breakout shape in Fig. 2, the cocoon is asymmetric when observed off-axis (Fig. 3a), and near-axisymmetric when observed on-axis (Fig. 3b). Fig. 3d shows that the on-axis emission exhibits a distinct peak at 10~{}\\mathrm{Hz}\\lesssim f\\lesssim 100~{}\\mathrm{Hz}, whereas the off-axis spectrum is rather flat with sporadic peaks in the same frequency range. The off-axis emission is stronger by 1-2 orders of magnitude than the on-axis emission, and by 2 orders of magnitude than the GW emission from CCSNe (Abdikamalov et al., 2020). Following Eq. (1), we assume linear scaling of the strain amplitude with the outflow energy and calibrate the strain amplitude1,
+
+Footnote 1: We neglect secondary effects on the GW emission, such as the density profile of the star and turbulent mixing, that may affect the cocoon shape and its GW spectrum, and cause deviations from the linear scaling shown in Eq. (1).
+
+h\\approx 10^{-22}~{}\\frac{40~{}\\mathrm{Mpc}}{D}\\frac{E}{10^{53}~{}\\mathrm{ erg}}~{}. 
+
+Approximating the GW emission to be isotropic, we find that the total GW energy is E_{\\mathrm{GW}}\\approx 10^{50}~{}\\mathrm{erg}, such that the GW conversion efficiency is E_{\\mathrm{GW}}\\sim 10^{-3}E (see Eq. (A7)). This implies that the GW efficiency is about two orders of magnitude higher than that in CCSNe, where E_{\\mathrm{GW}}\\approx 10^{-5}E_{k}(Abdikamalov et al., 2020), and E_{k} is the CCSN kinetic energy.
+
+Throughout the entire simulation duration, the strain increases linearly with the energy injected into the system (note that Fig. 3c is presented in a semi-logarithmic scale), consistent with Eq. (1).2. The GW emission is expected to last until the jet engine shuts off (longer than our simulation), and the cocoon turbulent motions relax, hence the signal in Fig. 3 is expected to keep growing linearly with the jet activity time3. The strain amplitude spectrogram (Fig. 3e) shows that as the cocoon expands (t\\lesssim 1~{}\\mathrm{s} in our simulation), the GW emission shifts only slightly toward lower frequencies, as the spectrum does not vary considerably between different regions in the cocoon, owing to mixing. Both on- and off-axis signals are qualitatively different from traditional GWs in CCSNe which have a peak frequency that rises over a much shorter GW emission timescale (t\\ll 1~{}\\mathrm{s}; Kawahara et al., 2018; Powell and Muller, 2022).
+
+Footnote 2: We employ a full retarded calculation for off-axis observers, and neglect time-delay effects for on-axis observers, where the emission is weak (Appendix A). Hence the difference in the integration times shown for off- and on-axis observers in Fig. 3.
+
+Footnote 3: GW travel time effects may slightly prolong the signal duration for observers close to the jet axis, see Appendix A.
+
+We calculate the matched-filter (MF) signal-to-noise ratio (SNR) for off-axis detection, and find \\mathrm{SNR_{MF}}=2,4,28 at 100~{}\\mathrm{Mpc} in LVK O4, A+ and CE, respectively (see Eq. (A9)). To assess the detectability, we conservatively employ a minimum SNR threshold of 20. This is motivated by the fact that a detection of a stochastic burst signal of this type will likely require the use of unmodeled search pipelines like coherent wave burst (Klimenko and Mitselmakher, 2004; Klimenko et al., 2011, 2016) or STAMP (Thrane et al., 2011; Macquet et al., 2021). Using this SNR threshold, we find that an outflow of E=10^{53}~{}\\mathrm{erg} could be detectable by A+ at about 20~{}\\mathrm{Mpc}. As we explain below, it is likely that some GRBs are associated with considerably more energetic outflows, for which the detection horizon is farther away. For on-axis observers, the GW detection horizon of such cocoons is smaller by 1-2 orders of magnitude, owing to the low degree of non-axisymmetry, which renders a direct on-axis detection unlikely.
+
+## 3 Detection Rates
+
+To estimate the number of detectable GW events in runs O4, A+ and CE, we use Eq. (2), connect E to the _observed_ jet energy via E=E_{c}+E_{j}\\simeq 2E_{j}\\approx\\xi E_{j,\\mathrm{obs}}, and consider two types of jets with opening angle \\theta_{j}\\simeq 0.1^{+0.07}_{-0.03} rad (Goldstein et al., 2016): (i) a traditional axisymmetric jet, for which the observed jet energy is equal to the total jet energy, E_{j}=E_{j,\\mathrm{obs}}, i.e. \\xi=2, and conventional local LGRB rate \\mathcal{R}_{\\mathrm{GRB}}\\sim 100~{}\\mathrm{Gpc^{-3}~{}yr^{-1}}(Pescalli et al., 2015); and (ii) a jet wobbling by \\theta_{w}\\simeq 0.2~{}\\mathrm{rad} as in our simulations, for which the local GRB rate is an order of magnitude lower (Gottlieb et al., 2022b), \\mathcal{R}_{\\mathrm{GRB}}\\sim 10~{}\\mathrm{Gpc^{-3}~{}yr^{-1}}. When a jet wobbles by \\theta_{w}\\simeq 2\\theta_{j}, it is observed on average only (\\theta_{j}/\\left[\\theta_{w}+\\theta_{j}\\right])^{2}\\simeq 10\\% of the time, i.e. \\xi\\simeq 20. This implies that the outflow has more energy for a given E_{\\gamma,\\mathrm{iso}}, since most of its energy (\\simeq 90\\%) is beamed away from our line of sight. Assuming the \\gamma-ray energy is 20\\% of the total jet energy (Frail et al., 2001), the isotropic equivalent \\gamma-ray energy is E_{\\gamma,\\mathrm{iso}}\\simeq 0.2\\times 2\\theta_{j}^{-2}E\\xi^{-1}. For example, in our simulation, the total outflow energy is E\\simeq 10^{53}~{}\\mathrm{erg}, the jet energy E_{j}\\simeq 3\\times 10^{52}~{}\\mathrm{erg} and opening angle \\theta_{j}\\simeq 0.1~{}\\mathrm{rad}, so E_{j,\\mathrm{obs}}\\simeq 3\\times 10^{51}~{}\\mathrm{erg}, and E_{\\gamma,\\mathrm{iso}}\\simeq E. Thus, although the simulated outflow energy may seem rather high, the observed \\gamma-ray jet energy is in fact fairly typical. We conclude that within the framework of our simulation, which features a wobbling jet, a typical GRB event might produce detectable GWs at 20 Mpc, making close-by SNe Ic-BL such as SN 2022xxf (Kuncarayakti et al., 2023) viable candidates for GW detection.
+
+The _detected_ LGRB population can be modeled by a lognormal distribution, whereas the _total number_ of LGRBs can be fit by a power-law that coincides with the log-normal distribution tail at E_{\\gamma,\\mathrm{iso}}>E_{\\gamma,\\mathrm{iso,min}}\\approx 5\\times 10^{53}~{} \\mathrm{erg} (figure 5 in Butler et al., 2010). Thus, the tail of the distribution, which dominates the GW-detectable events can be constrained observationally. Integration over the distribution shows that LGRBs at this range comprise about half of the _detected_ GRB population. The fit of the log-normal distribution tail to a power-law yields dN_{\\mathrm{LGRBs}}/dE_{\\gamma,\\mathrm{iso}}=AE_{\\gamma,\\mathrm{iso}}-2(Lan et al., 2022), where the normalization A is set by the requirement that
+
+\\int_{E_{\\gamma,\\rm iso,\\rm max}}^{E_{\\gamma,\\rm iso,\\rm max}}AE_{\\gamma,\\rm iso}{}^ {-2}dE_{\\gamma,\\rm iso}=0.5\\mathcal{R}_{\\rm GRB}\\,  thus
+
+A=\\frac{\\mathcal{R}_{\\rm GRB}}{2\\left(\\frac{1}{E_{\\gamma,\\rm iso,\\rm min}}- \\frac{1}{E_{\\gamma,\\rm iso,\\rm max}}\\right)}. 
+
+As the number of detectable events in a given volume grows as E_{\\gamma,\\rm iso}^{3}, the total number of detectable GW events scales as N\\propto N_{\\rm LGRBs}/dE_{\\gamma,\\rm iso}E_{\\gamma,\\rm iso}{}^{3}dE_{\\gamma, \\rm iso}\\propto E_{\\gamma,\\rm iso}{}^{2} (Eq. (5)). Namely, the most energetic LGRBs dominate the detectable GW events, and the E_{\\gamma,\\rm iso} power-law cutoff, E_{\\gamma,\\rm iso,\\rm max}, sets the expected number of detectable events. The recent detection of GRB 221009A - the brightest GRB of all time suggests that E_{\\gamma,\\rm iso,\\rm max}\\approx 10^{55} erg (e.g., Burns et al., 2023; O'Connor et al., 2023).
+
+For estimating the detectability in upcoming LVK observing runs, we assume the following: Linear scaling between the strain amplitude and the outflow energy (Eq. (2)); \\rm SNR_{MF}=2,4,28 at 100 Mpc for O4, A+ and CE runs, respectively; required SNR for detection of 20; isotropic GW emission to be similar to off-axis; and we consider only one detector for simplicity. We find that the number of detectable GW events per year is
+
+N_{\\rm yr}=\\int_{E_{\\gamma,\\rm iso,\\rm min}}^{E_{\\gamma,\\rm iso,\\rm max}}\\ \\left(\\frac{5E_{\\gamma,\\rm iso}{}^{\\frac{6}{2}}_{\\rm\\gamma}\\xi}{E_{\\rm Gpc}} \\right)^{3}AE_{\\gamma,\\rm iso}{}^{-2}dE_{\\gamma,\\rm iso}\\,  where the parentheses reflects the fraction of detectable GW events in the energy band dE_{\\gamma,\\rm iso} within a given volume. The cubic dependency comes from the linear scaling of the GW strain amplitude with the energy, and inverse scaling with the distance. The numerator is the outflow energy, E=2.5E_{\\gamma,\\rm iso}\\theta_{J}^{2}\\xi, and the denominator, E_{\\rm Gpc}=0.7,5,10\\times 10^{54} erg \\rm Gpc^{-1}, is the energy required to reach SNR=20 at 1 Gpc in CE, A+ and O4 runs, respectively.
+
+The detection rate of the quasi-isotropic GW signal can also be used to estimate the abundance of LGRBs among their progenitors - SNe of type Ib/c, whose rate is \\mathcal{R}_{\\rm SNe~{}Ib/c}\\approx 2.6\\times 10^{4}\\rm Gpc^{-3} yr{}^{-1}(Li et al., 2011). If the number of detected events with E<E_{\\rm max} in the LVK observing run is N(E<E_{\\rm max}), then the fraction of SNe Ib/c progenitors that power LGRBs with E<E_{\\rm max} can be estimated as
+
+\\frac{N_{\\rm LGRBs}(E<E_{\\rm max})}{N_{\\rm SNe~{}Ib/c}}\\approx\\frac{N_{\\rm yr }(E<E_{\\rm max})}{\\frac{\\mathcal{R}_{\\rm SNe~{}Ib/c}}{\\rm Gpc^{-3}~{}yr^{-1}} \\left(\\frac{E_{\\rm max}}{E_{\\rm Gpc}}\\right)^{3}}. 
+
+The detection rate scales as N\\sim\\xi^{3}\\mathcal{R}_{\\rm GRB} (Eq. (5)), implying that the rate for axisymmetric jets is lower by two orders of magnitude. Therefore, our calculations assume that the majority of jets exhibit wobbling behavior, as observed in all first-principles collapsar simulations (Gottlieb et al., 2022, 2022). Fig. 4 displays the number of detectable GW events expected in upcoming LVK observing runs (Barsotti et al., 2023), considering wobbling jets. If all jets are axisymmetric, these rates would be lower by two orders of magnitude. The uncertainty in the opening angle of the jet translates into a large uncertainty in the estimated number of detectable events, owing to its quadratic dependence on \\theta_{j}. The green range, which represents the number of detectable events in CE in one year, suggest that a GW detection is likely by CE. The blue and purple ranges imply a possible detection during the LVK A+ run, whereas in O4 run (pink and purple ranges) a detection is unlikely. We emphasize that in addition to the large uncertainties in \\theta_{j}, the distribution of the most energetic GRBs and the prompt/afterglow energy ratio (Beniamini et al., 2016) are poorly constrained, and introduce an even larger range of uncertainty into the expected number of detectable GW events4. Interestingly, the detection rate of these quasi-isotropic GWs with energies E<E_{\\rm max} constrains the fraction of SN Ib/c progenitors that power LGRBs with E<E_{\\rm max}, as shown on the right vertical axis in Fig. 4. In order to optimize the GW detection, we need: (i) unmodeled searches, the characterization of which would require GW signatures from different jetted explosions to understand the diversity of signals (this will be addressed in future work); (ii) good localization of the source, which can be achieved in the likely case that the GW signal is accompanied by another detectable messenger signal, as we discuss below.
+
+Footnote 4: Additionally, in our estimate we ignore jets that are choked in the stellar envelope and do not generate a GRB. If such phenomenon is common among massive stars (Gottlieb et al., 2022), then the predicted GW detection rate is increased significantly (see §5).
+
+## 4 Multimessenger Events
+
+Although joint LGRB-GW detection is unlikely due to the weak on-axis GW emission, the GW signal is likely accompanied by a wide range of electromagnetic counterparts powered by the SN explosion and the cocoon: shock breakout in \\gamma- and X-rays (seconds to minutes), cooling emission and radioactive decay in UV/optical/IR (days to months), and broadband synchrotron (afterglow) emission (days to years) (Lazzati et al., 2017; Nakar and Piran, 2017). For close-by CCSNe, neutrino detection is also possible, and will place even stronger constraints on the expected time of the GW signal. Thus, LGRBs are rich multi-messenger sources. The earliest radiative signal emerges when the cocoon or SN shock wave breaks out from the star, producing a nearly coincident electromagnetic counterpart to the GWs. However, the shock breakout signal originates in a thin layer, and primarily depends on the breakout shell velocity and structure of the progenitor star, rather than the total explosion energy (Nakar and Sari, 2012; Gottlieb et al., 2018). Thus, although under favorable conditions of viewing angle and progenitor structure it is possible to detect a shock breakout in \\gamma-rays, those signals will typically go unnoticed.
+
+After releasing the shock breakout emission, the stellar shells and the cocoon expand adiabatically and give rise to an optical cooling signal. SNe Ib/c cooling emission lasts weeks and peaks at an absolute magnitude M_{\\rm AB}\\approx-18(Drout et al., 2011), whereas cocoons with energies of E_{c}\\sim 10^{52} erg that emit strong GWs, will power even brighter (M_{\\rm AB}\\sim-19) quasi-isotropic (\\theta_{\\rm obs}\\lesssim 1.0 rad) UV/optical cooling emission on timescales of days (Nakar and Piran, 2017; Gottlieb et al., 2018). The optical emission of the cocoons and SNe is sufficiently bright to be detected at all relevant distances of a few hundred Mpc by Zwicky Transient Facility (ZTF) (Graham et al., 2019; Masci et al., 2019). However, the cocoon cooling emission lasts a few hours, challenging the detection of such signals. The prospect of future telescopes such as the Rubin Observatory (LSST Science Collaboration et al., 2009) and ULTRASAT (Ben-Ami et al., 2022; Shvartzvald et al., 2023) holds great promise in significantly enhancing the rate of such detections. These advanced observatories will provide valuable insights into the energetics and abundance of these events. Furthermore, cocoons with E_{c}\\gtrsim 10^{52} erg s{}^{-1} will explode the entire massive star and may power superluminous supernovae (SLSNe) with M_{\\rm AB}\\lesssim-21 over \\sim months timescale (Gal-Yam, 2012).
+
+Finally, the interaction of the cocoon with the circumstellar medium will produce a detectable broadband afterglow, assuming typical ambient densities around collapsars and standard equipartition parameters (Gottlieb et al., 2019). The timescale over which the afterglow emission emerges varies from days to years, as it depends on the specific parameters of the system and the observer's viewing angle, thereby posing a challenge to its detection. However, the early cooling signal, which can be detected by a rapid search will enable an early localization of the event and a targeted search for the later multi-band afterglow, which will potentially alleviate the afterglow detection difficulty.
+
+## 5 Conclusions
+
+In this _Letter_, we propose and investigate a new non-inspiral GW source originating in the cocoon that is generated during the jet propagation in a dense medium. The cocoon is a promising GW source for the following reasons: (i) it contains at least as much energy as the jet, and likely even more considering the jet wobbling motion; (ii) when observed off-axis, its projected shape is highly asymmetric, giving rise to a substantial gravitational quadrupole moment; (iii) it evolves over considerably shorter timescale than the jet, such that its GW emission peaks at 10 Hz \\lesssim f\\lesssim 100 Hz. However, we note that the presence of an unstable and wobbly jet may also lead to GW production within the frequency bands detectable by LVK. This raises concerns and casts doubt on the validity of previous numerical and analytic calculations of GWs originating from continuously launched, steady, and axisymmetric jets. We find that collapsar cocoons are the brightest stochastic GW sources in LVK frequency bands known to date, and could be detectable out to dozens of Mpc in LVK A+ run.
+
+The jet structure plays a crucial role in determining the detection rates. If the jet wobbles, as indicated by state-of-the-art first-principles simulations, the cocoon energy may be as high as E_{c}\\gtrsim 10^{52} erg. We note that if the jet wobbles, the inferred \\gamma-ray efficiency is lower than its real value due to emission wasted in the direction out of the line of sight, which would also result in less energy available for the afterglow emission. However, the confirmation of such high energies still requires observational evidence, which could
+
+[MISSING_PAGE_FAIL:8]
+
+* Ben-Ami et al. (2022) Ben-Ami, S., Shvartzvald, Y., Waxman, E., et al. 2022, in Society of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol. 12181, Space Telescopes and Instrumentation 2022: Ultraviolet to Gamma Ray, ed. J.-W. A. den Herder, S. Nikzad, & K. Nakazawa, 1218105, doi: 10.1117/12.2629850
+
+* Beniamini et al. (2016) Beniamini, P., Nava, L., & Piran, T. 2016, MNRAS, 461, 51, doi: 10.1093/mnras/stw1331
+
+* Bethe (1990) Bethe, H. A. 1990, Reviews of Modern Physics, 62, 801, doi: 10.1103/RevModPhys.62.801
+
+* Birnholtz & Piran (2013) Birnholtz, O., & Piran, T. 2013, Phys. Rev. D, 87, 123007, doi: 10.1103/PhysRevD.87.123007
+
+* Bromberg et al. (2011) Bromberg, O., Nakar, E., & Piran, T. 2011, ApJ, 739, L55, doi: 10.1088/2041-8205/739/2/L55
+
+* Bromberg et al. (2012) Bromberg, O., Nakar, E., Piran, T., & Sari, R. 2012, ApJ, 749, 110, doi: 10.1088/0004-637X/749/2/110
+
+* Bromberg & Tchekhovskoy (2016) Bromberg, O., & Tchekhovskoy, A. 2016, MNRAS, 456, 1739, doi: 10.1093/mnras/stv2591
+
+* Burns et al. (2023) Burns, E., Svinkin, D., Fenimore, E., et al. 2023, GRB 221009A, The BOAT. [https://arxiv.org/abs/2302.14037](https://arxiv.org/abs/2302.14037)
+
+* Burrows & Lattimer (1986) Burrows, A., & Lattimer, J. M. 1986, ApJ, 307, 178, doi: 10.1086/164405
+
+* Butler et al. (2010) Butler, N. R., Bloom, J. S., & Poznanski, D. 2010, ApJ, 711, 495, doi: 10.1088/0004-637X/711/1495
+
+* Chatzioannou et al. (2017) Chatzioannou, K., Clark, J. A., Bauswein, A., et al. 2017, PhRvD, 96, 124035, doi: 10.1103/PhysRevD.96.124035
+
+* Drout et al. (2011) Drout, M. R., Soderberg, A. M., Gal-Yam, A., et al. 2011, ApJ, 741, 97, doi: 10.1088/0004-637X/741/2/97
+
+* Frail et al. (2001) Frail, D. A., Kulkarni, S. R., Sari, R., et al. 2001, ApJ, 562, L55, doi: 10.1086/338119
+
+* Gal-Yam (2012) Gal-Yam, A. 2012, Science, 337, 927, doi: 10.1126/science.1203601
+
+* Goldstein et al. (2016) Goldstein, A., Connaughton, V., Briggs, M. S., & Burns, E. 2016, ApJ, 818, 18, doi: 10.3847/0004-637X/818/1/18
+
+* Gottlieb et al. (2021a) Gottlieb, O., Bromberg, O., Levinson, A., & Nakar, E. 2021a, MNRAS, 504, 3947, doi: 10.1093/mnras/stab1068
+
+* Gottlieb et al. (2023) Gottlieb, O., Jacquemin-Ide, J., Lowell, B., Tchekhovskoy, A., & Ramirez-Ruiz, E. 2023, arXiv e-prints, arXiv:2302.07271, doi: 10.48550/arXiv.2302.07271
+
+* Gottlieb et al. (2022a) Gottlieb, O., Lalakos, A., Bromberg, O., Liska, M., & Tchekhovskoy, A. 2022a, MNRAS, 510, 4962, doi: 10.1093/mnras/stab3784
+
+* Gottlieb et al. (2020) Gottlieb, O., Levinson, A., & Nakar, E. 2020, MNRAS, 495, 570, doi: 10.1093/mnras/staa1216
+
+* Gottlieb et al. (2022b) Gottlieb, O., Liska, M., Tchekhovskoy, A., et al. 2022b, ApJ, 933, L9, doi: 10.3847/2041-8213/ac7530
+
+* Gottlieb et al. (2021b) Gottlieb, O., Nakar, E., & Bromberg, O. 2021b, MNRAS, 500, 3511, doi: 10.1093/mnras/staa3501
+
+* Gottlieb et al. (2018a) Gottlieb, O., Nakar, E., & Piran, T. 2018a, MNRAS, 473, 576, doi: 10.1093/mnras/stx2357
+
+* Gottlieb et al. (2019) --. 2019, MNRAS, 488, 2405, doi: 10.1093/mnras/stz1906
+
+* Gottlieb et al. (2018b) Gottlieb, O., Nakar, E., Piran, T., & Hotokezaka, K. 2018b, MNRAS, 479, 588, doi: 10.1093/mnras/sty1462
+
+* Gottlieb et al. (2022c) Gottlieb, O., Tchekhovskoy, A., & Margutti, R. 2022c, MNRAS, 513, 3810, doi: 10.1093/mnras/stac910
+
+* Graham et al. (2019) Graham, M. J., Kulkarni, S. R., Bellm, E. C., et al. 2019, PASP, 131, 078001, doi: 10.1088/1538-3873/ab006c
+
+* Hiramatsu et al. (2005) Hiramatsu, T., Kotake, K., Kudoh, H., & Taruya, A. 2005, MNRAS, 364, 1063, doi: 10.1111/j.1365-2966.2005.09643.x
+
+* Janka (2012) Janka, H.-T. 2012, Annual Review of Nuclear and Particle Science, 62, 407, doi: 10.1146/annurev-nucl-102711-094901
+
+* Janka & Mueller (1996) Janka, H. T., & Mueller, E. 1996, A&A, 306, 167
+
+* Jaranowski & Krolak (1994) Jaranowski, P., & Krolak, A. 1994, PhRvD, 49, 1723, doi: 10.1103/PhysRevD.49.1723
+
+* Kawahara et al. (2018) Kawahara, H., Kuroda, T., Takiwaki, T., Hayama, K., & Kotake, K. 2018, ApJ, 867, 126, doi: 10.3847/1538-4357/aae57b
+
+* Kawamura et al. (2011) Kawamura, S., Ando, M., Seto, N., et al. 2011, Classical and Quantum Gravity, 28, 094011, doi: 10.1088/0264-9381/28/9/094011
+
+* Klimenko & Mitselmakher (2004) Klimenko, S., & Mitselmakher, G. 2004, Classical and Quantum Gravity, 21, S1819
+
+* Klimenko et al. (2011) Klimenko, S., Vedovato, G., Drago, M., et al. 2011, Phys. Rev. D, 83, 102001, doi: 10.1103/PhysRevD.83.102001
+
+* Klimenko et al. (2016) Klimenko, S., et al. 2016, Phys. Rev. D, 93, 042004, doi: 10.1103/PhysRevD.93.042004
+
+* Kotake (2013) Kotake, K. 2013, Comptes Rendus Physique, 14, 318, doi: 10.1016/j.crhy.2013.01.008
+
+* Kuncarayakti et al. (2013) Kuncarayakti, H., Doi, M., Aldering, G., et al. 2013, The Astronomical Journal, 146, 30, doi: 10.1088/0004-6256/146/2/30
+
+* Kuncarayakti et al. (2023) Kuncarayakti, H., Sollerman, J., Izzo, L., et al. 2023, arXiv e-prints, arXiv:2303.16925, doi: 10.48550/arXiv.2303.16925
+
+* Lan et al. (2022) Lan, G.-X., Wei, J.-J., Li, Y., Zeng, H.-D., & Wu, X.-F. 2022, ApJ, 938, 129, doi: 10.3847/1538-4357/ac8fec
+
+* Lazzati & Begelman (2005) Lazzati, D., & Begelman, M. C. 2005, ApJ, 629, 903, doi: 10.1086/430877
+
+* Lazzati et al. (2017) Lazzati, D., Deich, A., Morsony, B. J., & Workman, J. C. 2017, MNRAS, 471, 1652, doi: 10.1093/mnras/stx1683
+
+* Leiderschneider & Piran (2021) Leiderschneider, E., & Piran, T. 2021, Phys. Rev. D, 104, 104002, doi: 10.1103/PhysRevD.104.104002
+
+* Li et al. (2011) Li, W., Chornock, R., Leaman, J., et al. 2011, MNRAS, 412, 1473, doi: 10.1111/j.1365-2966.2011.18162.x
+
+* Liska et al. (2022) Liska, M. T. P., Chatterjee, K., Issa, D., et al. 2022, ApJS, 263, 26, doi: 10.3847/1538-4365/ac9966
+
+* LSST Science Collaboration et al. (2009) LSST Science Collaboration, Abell, P. A., Allison, J., et al. 2009, arXiv e-prints, arXiv:0912.0201. [https://arxiv.org/abs/0912.0201](https://arxiv.org/abs/0912.0201)
+
+* MacFadyen & Woosley (1999) MacFadyen, A. I., & Woosley, S. E. 1999, ApJ, 524, 262, doi: 10.1086/307790
+
+* MacFadyen et al. (2018) MacFadyen, A. I., & Woosley, S. E. 2018, ApJ, 867, 126, doi: 10.1086/307790
+
+* MacFadyen et al. (2019) MacFadyen, A. I., & Woosley, S. E. 2019, ApJ, 874, 126, doi: 10.1086/30790
+
+* MacFadyen et al. (2019) MacFadyen, A. I., Woosley, S. E., & Woosley, S. E. 2019, ApJ, 888, 129, doi: 10.1086/307900
+
+* MacFadyen et al. (2019) MacFadyen, A. I., Woosley, S. E., & Woosley, S. E. 2019, ApJ, 898, 129, doi: 10.1086/307900
+
+* MacFadyen et al. (2019) MacFadyen, A. I., Woosley, S. E., & Woosley, S. E.
+
+* Macquet et al. (2021) Macquet, A., Bizouard, M.-A., Christensen, N., & Coughlin, M. 2021, Phys. Rev. D, 104, 102005, doi: 10.1103/PhysRevD.104.102005
+
+* Margutti et al. (2014) Margutti, R., Milisavljevic, D., Soderberg, A. M., et al. 2014, ApJ, 797, 107, doi: 10.1088/0004-637X/797/2/107
+
+* Masci et al. (2019) Masci, F. J., Laher, R. R., Rusholme, B., et al. 2019, PASP, 131, 018003, doi: 10.1088/1538-3873/aae8ac
+
+* Matzner (2003) Matzner, C. D. 2003, MNRAS, 345, 575, doi: 10.1046/j.1365-8711.2003.06969.x
+
+* Meszaros & Rees (2001) Meszaros, P., & Rees, M. J. 2001, ApJ, 556, L37, doi: 10.1086/322934
+
+* Moore et al. (2015) Moore, C. J., Cole, R. H., & Berry, C. P. L. 2015, Classical and Quantum Gravity, 32, 015014, doi: 10.1088/0264-9381/32/1/015014
+
+* Nagakura et al. (2014) Nagakura, H., Hotokezaka, K., Sekiguchi, Y., Shibata, M., & Ioka, K. 2014, ApJ, 784, L28, doi: 10.1088/2041-8205/784/2/L28
+
+* Nakar (2015) Nakar, E. 2015, ApJ, 807, 172, doi: 10.1088/0004-637X/807/2/172
+
+* Nakar & Piran (2017) Nakar, E., & Piran, T. 2017, ApJ, 834, 28, doi: 10.3847/1538-4357/834/1/28
+
+* Nakar & Sari (2012) Nakar, E., & Sari, R. 2012, ApJ, 747, 88, doi: 10.1088/0004-637X/747/2/88
+
+* Nitz et al. (2021) Nitz, A., Harry, I., Brown, D., et al. 2021, gwastro/pycbc: 1.18.0 release of PyCBC, v1.18.0, Zenodo, Zenodo, doi: 10.5281/zenodo.4556907
+
+* O'Connor et al. (2023) O'Connor, B., Troja, E., Ryan, G., et al. 2023, arXiv e-prints, arXiv:2302.07906, doi: 10.48550/arXiv.2302.07906
+
+* Ott (2009) Ott, C. D. 2009, Classical and Quantum Gravity, 26, 063001, doi: 10.1088/0264-9381/26/6/063001
+
+* Pescalli et al. (2015) Pescalli, A., Ghirlanda, G., Salafia, O. S., et al. 2015, MNRAS, 447, 1911, doi: 10.1093/mnras/stu2482
+
+* Powell & Muller (2022) Powell, J., & Muller, B. 2022, Phys. Rev. D, 105, 063018, doi: 10.1103/PhysRevD.105.063018
+
+* Ramirez-Ruiz et al. (2002) Ramirez-Ruiz, E., Celotti, A., & Rees, M. J. 2002, MNRAS, 337, 1349, doi: 10.1046/j.1365-8711.2002.05995.x
+
+* Sago et al. (2004) Sago, N., Ioka, K., Nakamura, T., & Yamazaki, R. 2004, Phys. Rev. D, 70, 104012, doi: 10.1103/PhysRevD.70.104012
+
+* Shahmoradi & Nemiroff (2015) Shahmoradi, A., & Nemiroff, R. J. 2015, MNRAS, 451, 126, doi: 10.1093/mnras/stv714
+
+* Shvartzvald et al. (2023) Shvartzvald, Y., Waxman, E., Gal-Yam, A., et al. 2023, arXiv e-prints, arXiv:2304.14482, doi: 10.48550/arXiv.2304.14482
+
+* Srivastava et al. (2019) Srivastava, V., Ballmer, S., Brown, D. A., et al. 2019, PhRvD, 100, 043026, doi: 10.1103/PhysRevD.100.043026
+
+* Thrane et al. (2011) Thrane, E., et al. 2011, Phys. Rev. D, 83, 083004, doi: 10.1103/PhysRevD.83.083004
+
+* Urrutia et al. (2022) Urrutia, G., De Colle, F., Moreno, C., & Zanolin, M. 2022, arXiv e-prints, arXiv:2208.00129. [https://arxiv.org/abs/2208.00129](https://arxiv.org/abs/2208.00129)
+
+* Usman et al. (2016) Usman, S. A., Nitz, A. H., Harry, I. W., et al. 2016, Classical and Quantum Gravity, 33, 215004, doi: 10.1088/0264-9381/33/21/215004
+
+* Woosley & Janka (2005) Woosley, S., & Janka, T. 2005, Nature Physics, 1, 147, doi: 10.1038/nphys172
+
+* Woosley (1993) Woosley, S. E. 1993, ApJ, 405, 273, doi: 10.1086/172359
+
+* Woosley et al. (2002) Woosley, S. E., Heger, A., & Weaver, T. A. 2002, Reviews of Modern Physics, 74, 1015, doi: 10.1103/RevModPhys.74.1015
+
+* Yu (2020) Yu, Y.-W. 2020, ApJ, 897, 19, doi: 10.3847/1538-4357/ab93cc
+
+* Zhang et al. (2004) Zhang, W., Woosley, S. E., & Heger, A. 2004, ApJ, 608, 365, doi: 10.1086/386300
+
+## Appendix A Gravitational-Wave Calculation
+
+When a fluid particle accelerates, it induces a perturbation in the metric, which results in emission of GW radiation. The GW strain at the observer frame calculated using the retarded Green's function5
+
+Footnote 5: This approximation is valid in flat space-time. Since in the innermost \\sim 100r_{\\rm g} (r_{\\rm g} is the BH gravitational radius) there is a negligible amount of energy (the cocoon is many thousands of r_{\\rm g}, e.g. Fig. 2), it can be applied to the calculation of GWs from cocoons.
+
+h_{\\mu\\nu}(t,x)\\approx\\frac{4G}{Dc^{4}}\\int\\frac{T_{\\mu\\nu}\\left(x^{\\prime},t-| x-x^{\\prime}|/c\\right)}{|x-x^{\\prime}|}dx^{\\prime}dy^{\\prime}dz^{\\prime}\\, (A1) where T_{\\mu\\nu} is the covariant stress-energy tensor, and the integration is over the volume of the system. For the numerical calculation, we evaluate the stress-energy tensor for each cell in the simulation. Subsequently, we divide the simulation grid by slicing it along surfaces parallel to the \\hat{y}-axis, creating a series of \\hat{x}-\\hat{z} planes with a width of 10^{3} km, where the \\hat{z}-axis represents the axis of rotation. For each plane, we integrate the total T_{\\mu\\nu} at every laboratory time. To account for time-delay, we calculate the retarded contribution of each plane by determining the retarded times as t_{\\rm obs}=t-|x-x^{\\prime}|/c. This is done with respect to an observer at infinity along the \\hat{y}-axis. For the faint on-axis emission, we neglect time-delay effects and assume that the observer time coincides with the laboratory time.
+
+For a single GW with angular frequency \\omega, that - without the loss of generality - propagates along the \\hat{x}-axis, a plane wave solution has two independent components in the transverse-traceless (TT) gauge metric
+
+h_{\\mu\\nu}(t,x)=\\begin{pmatrix}0&0&0&0\\\\ 0&0&0&0\\\\ 0&0&h_{+}&h_{\\times}\\\\ 0&0&h_{\\times}&-h_{+}\\end{pmatrix}\\cos\\left[\\omega\\left(t-\\frac{x}{c}\\right) \\right]\\, (A2) where
+
+h_{+}=h_{yy}-h_{zz}\\, (A3) h_{\\times}=2h_{yz} are the two independent polarizations of the plane wave moving along the \\hat{x}-axis.
+
+The GW detector response function to the planar GW is a linear combination of the two polarizations (Jaranowski & Krolak, 1994) and is given by
+
+h(t)=F_{+}h_{+}(t)+F_{\\times}h_{\\times}(t)\\, (A4) where F_{+},F_{\\times} are functions of the antenna-pattern of the detector that depend on the sensitivity to each polarization. For an order of magnitude estimate, the GW strain can be approximated as
+
+h(t)\\approx\\sqrt{h_{\\pi}^{2}(t)+h_{\\times}^{2}(t)}\\, (A5) and similarly the Fourier transform of the interferometer response to the dimensionless GW strain
+
+\\tilde{h}(f)=\\sqrt{\\tilde{h}_{\\pi}^{2}(f)+\\tilde{h}_{\\times}^{2}(f)}\\. (A6)
+
+Finally, the GW energy in the isotropic approximation is (Chatzioannou et al., 2017)
+
+E_{\\rm GW}=\\frac{c^{3}}{G}\\pi^{2}D^{2}\\int_{-\\infty}^{\\infty}\\left(|\\tilde{h} _{\\times}(f)|^{2}+|\\tilde{h}_{+}(f)|^{2}\\right)f^{2}df\\. (A7)
+
+To characterize the sensitivity for detection at a given frequency, one defines the characteristic strain as (Moore et al., 2015)
+
+h_{c}(f)=2f|\\tilde{h}(f)|\\. (A8)We estimate the MF SNR as the inner product of the strain, whitened by power-spectral density of the noise S(f)(Moore et al., 2015)
+
+\\text{SNR}_{\\text{MF}}=\\sqrt{\\int\\frac{4|\\tilde{h}(f)|^{2}}{S(f)}}df\\. (A9)
+
+We use the PyCBC package (Usman et al., 2016; Nitz et al., 2021) for the noise power-spectral densities of advanced LIGO, A+ and CE detectors.
+
+For the numerical simulation, we follow Gottlieb et al. (2022) who performed high resolution 3D GRMHD simulations of a collapsing star with strong magnetic fields (maximum B-field in the stellar core at the time of the BH collapse is B\\approx 10^{12.5} G). We use the code h-amr(Liska et al., 2022) to rerun one of their simulations (with maximum initial magnetization of \\sigma_{0}=15), but double the mass scale of the simulation such that the stellar mass is M_{\\star}=28\\,M_{\\odot}, the stellar radius is R_{\\star}=4\\times 10^{10} cm. The Kerr BH mass is M_{\\text{BH}}=4.2\\,M_{\\odot} and its dimensionless spin is a=0.8. We follow the outflow evolution until the jet head breaks out from the collapsing star and reaches \\simeq 1.5R_{\\star} at t\\simeq 3.2 s with asymptotic Lorentz factor \\sim 5. We output data files every \\Delta t=r_{g}/c\\approx 0.02 ms. We verify that the strain does not change when increasing the spatial resolution in each dimension by a factor of 1.5. The integration to t\\gtrsim 3 s \\approx 150,000\\ r_{g}/c implies that we post-process 150,000 files with more than a petabyte of data.

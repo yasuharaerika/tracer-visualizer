@@ -1,0 +1,247 @@
+###### Abstract
+
+We study the gravitational wave signal from eight new 3D core-collapse supernova simulations. We show that the signal is dominated by f- and g-mode oscillations of the protoneutron star and its frequency evolution encodes the contraction rate of the latter, which, in turn, is known to depend on the star's mass, on the equation of state, and on transport properties in warm nuclear matter. A lower-frequency component of the signal, associated with the standing accretion shock instability, is found in only one of our models. Finally, we show that the energy radiated in gravitational waves is proportional to the amount of turbulent energy accreted by the protoneutron star.
+
+Supernovae: general - Gravitational waves 0000-0002-3871-2788]David Radice
+
+0000-0002-3272-1877]Victoriya Morozova
+
+0000-0002-8282-737X]Adam Burrows
+
+0000-0002-8282-0703]David Vartanyan
+
+0000-0002-8282-0703]Hiroki Nagakura
+
+## 1 Introduction.
+
+Core-collapse supernovae (CCSN) have long been considered promising sources of gravitational waves (GWs) for ground-based detectors (Wheeler, 1966; Finn & Evans, 1990; Ott, 2009; Kotake, 2013) such as Advanced LIGO Aasi et al. (2015), Advanced Virgo (Acernese et al., 2015), and KAGRA (Aso et al., 2013). The combined observation of GWs, neutrinos, and photons (Nakamura et al., 2016) from the next Galactic CCSN could unveil the mechanism by which massive stars explode at the end of their lives, resolving a puzzle that has eluded the scientific community for more than 50 years (Burrows, 2013; Janka, 2012; Muller, 2016). Multi-messenger observations of the next galactic CCSN could also constrain the properties of matter at extreme densities and the interior structure of massive stars, and reveal the origin of many of the chemical elements.
+
+The current understanding of the GW signal from CCSN is for the most part derived from the analysis of 2D (axisymmetric) simulations (Finn & Evans, 1990; Dimmelmeier et al., 2002; Shibata & Sekiguchi, 2004; Dimmelmeier et al., 2007; Marek et al., 2009; Murphy et al., 2009; Kotake et al., 2009; Mueller et al., 2013; Cerda-Duran et al., 2013; Abdikamalov et al., 2014; Yakunin et al., 2015; Pan et al., 2018; Morozova et al., 2018), or 3D simulations with simplified microphysics (Mueller & Janka, 1997; Rampp et al., 1998; Fryer et al., 2004; Shibata & Sekiguchi, 2005; Ott et al., 2007, 2011, 2013; Kuroda et al., 2014, 2016; Hayama et al., 2016; Kuroda et al., 2017; Hayama et al., 2018; O'Connor & Couch, 2018; Powell & Muller, 2018). However, a number of sophisticated neutrino-radiation-hydrodynamics simulations of CCSN have become available in the past several years (Tamborra et al., 2013; Melson et al., 2015; Lentz et al., 2015; Melson et al., 2015a; Roberts et al., 2016; Muller et al., 2017; Ott et al., 2018; Summa et al., 2018; Kuroda et al., 2018; O'Connor & Couch, 2018; Vartanyan et al., 2019; Glas et al., 2019). Gravitational wave signals have been published for ten of these models (Andresen et al., 2017; Yakunin et al., 2017; Andresen et al., 2018). However, even though these simulations exhibit some common qualitative features, it is difficult to extract general quantitative conclusions from the published data, because of the limited number of models and the variety of employed microphysical treatments and numerical setups. Moreover, most of the published waveforms are not sampled at a sufficiently high rate to capture all of the relevant features of the signal, particularly after the first few hundred milliseconds after core bounce, and/or were obtained from simulations that treated the inner core of the protoneutron star (PNS) in 1D, possibly affecting the development of the inner PNS convection (Buras et al., 2006; Dessart et al., 2006; Radice et al., 2017; Glas et al., 2018).
+
+In this _Letter_, we report on the GW signal from eight, new, 3D, state-of-the-art neutrino-radiation hydrodynamics CCSN simulations performed with the Eulerianradiation-hydrodynamics code Fornax (Skinner et al., 2015, 2019). We present well-sampled GW waveforms and study, for the first time, their generic properties using a homogeneous set of simulations covering a wide range of zero age main sequence (ZAMS) masses and post-bounce dynamics. We show that GW observations could constrain the structure of the PNS and the magnitude of the turbulent energy fluxes impinging on it.
+
+## 2 Methods.
+
+We consider seven stellar evolution progenitors from Sukhbold et al. (2016) with ZAMS masses of 9M_{\\odot}, 10M_{\\odot}, 11M_{\\odot}, 12M_{\\odot}, 13M_{\\odot}, 19M_{\\odot}, and 60M_{\\odot}. We also consider the 25M_{\\odot} progenitor from Sukhbold et al. (2018). All models have solar metallicity. We simulate the collapse of each progenitor in 1D until 10 ms after core bounce, since large-scale deviations from spherical symmetry are not expected for nonrotating progenitors during the collapse phase. Afterwards, we remap fluid and neutrino-radiation quantities to 3D, and we add small, dynamically unimportant, velocity perturbations to break the spherical symmetry. In particular, we perturb the velocity in the region 200 km \\leq r\\leq 1,000 km using the prescription introduced by Muller and Janka (2015) with a maximum amplitude perturbation of 100 km s{}^{-1}. The perturbations amount to a less than 0.5% change in the velocity field and are expected to be dynamically irrelevant.
+
+The evolution is continued on a grid of 678\\times 128\\times 256 zones in (r,\\theta,\\phi) extending up to 20,000 km. The radial grid is linearly spaced in the inner \\sim20 km, and logarithmic outside. These are among the highest resolution 3D full-physics CCSN simulations to date. Because of the extreme computational costs, we are not able to perform a resolution study of our results. However, because of the turbulent nature of CCSNe and on the basis of previous studies employed simplified microphysics (Hanke et al., 2012; Takiwaki et al., 2014; Abdikamalov et al., 2015; Radice et al., 2016), we expect that the detailed quantitative evolution of each model will be stochastic. For this reason, in our analysis we will focus on features that are found to be present in all our models and are expected to be robust. Our grid is derefined in angle as needed to keep the aspect ratio of the cells roughly constant when approaching the grid center or the axis (Skinner et al., 2019). This allows us to evolve the collapsing core of the star in 3D all the way to the center.
+
+Stellar and nuclear matter is treated using the SFHo equation of state (EOS; Steiner et al., 2013). We assume nuclear statistical equilibrium to hold everywhere in our computational domain. Neutrino radiation is treated using a multi-dimensional moment method with analytical closure.
+
+We employ twelve logarithmically spaced energy bins for \\nu_{e} and \\bar{\\nu}_{e}, while heavy-lepton neutrinos are lumped together into a single effective species "\\nu_{\\mu}." Our neutrino treatment accounts for gravitational redshift, Doppler effects, and inelastic scattering (Burrows et al., 2018; Vartanyan et al., 2019). Together with our previous calculations Vartanyan et al. (2019), these are the only simulations including neutrino-matter inelastic scattering in the context of a truly multi-dimensional neutrino-transport scheme. In particular, we do not use the ray-by-ray method (Skinner et al., 2015; Glas et al., 2019).
+
+Gravity is treated in the monopole approximation using an effective general-relativistic potential (Marek et al., 2006). GWs are estimated using the quadrupole approximation (Finn and Evans, 1990), and evaluated at every timestep \\sim10^{-6} s. For the analysis, we down-sample to 16,384 Hz, the data readout frequency of Advanced LIGO (Aasi et al., 2015).
+
+## 3 Results.
+
+Runaway shock expansion occurs for all but one of our progenitors (see Fig 1). The explosions proceed in accordance with the general expectations from the delayed neutrino mechanism (Colgate and White, 1966; Burrows and Goshy, 1993). The inclusion of inelastic scattering and many-body corrections to neutrino-matter cross sections, and the presence of sharp compositional interfaces in most of the progenitors we considered are key for the successful explosion we witness in our calculations (Burrows et al., 2018; Vartanyan et al., 2019). Even after shock runaway, asymmetric accretion onto the PNS persists for most of our progenitors to late times. The only exception is the 9M_{\\odot} progenitor, for which the shock runaway is followed by the emergence of an almost isotropic neutrino-driven wind. This completely terminates accretion onto the PNS for this model. We documented the same behavior in previously published simulations of the same progenitor in 2D (Radice et al., 2017) and in 3D (Burrows et al., 2019).
+
+The neutrino luminosities from our simulations are collected in Fig. 2. They are bounded from below by the luminosity of the 9M_{\\odot} progenitor, and from above by the luminosity of the 25M_{\\odot} progenitor. High neutrino luminosities are characteristic of progenitors with higher compactnesses and accretion rates. These, in turn, increase with the ZAMS mass for most of the progenitors we consider here. For this reason, we find that the neutrino luminosity increases with ZAMS mass. The exception is the 60M_{\\odot} progenitor. This progenitor shed a significant fraction of its mass to stellar winds and has a less compact core than the 19M_{\\odot} progenitor at the time of collapse. Overall, this figure demonstrates the wide variety of the progenitors considered in this work. A more detailed account of our new calculations is presented in Burrows et al. (2019) and in Radice et al. (2019) in prep. See also Skinner et al. (2019) and Vartanyan et al. (2019) for additional information about our new set of 3D simulations. Here, we focus only on the GW signal from these models.
+
+The GW strains from our models are shown in Fig. 3. As in previous studies, we find that the GW signal starts with a burst shortly after bounce. This is due to prompt convective overturn developing in conjunction with neutrino shock breakout (Burrows, 1987; Murphy et al., 2009; Mueller et al., 2013; Ott et al., 2013; Yakunin et al., 2015). The initial GW burst is followed by a \\sim100 ms phase of quiescence that ends when neutrino-driven convection (Burrows et al., 1995; Janka & Mueller, 1996; Foglizzo et al., 2006; Radice et al., 2016, 2018), or the standing accretion shock instability (SASI; Blondin et al. (2003); Foglizzo et al. (2007); Burrows et al. (2012); Hanke et al. (2013); Abdikamalov et al. (2015)) become fully developed. Subsequently, the GW emission is sustained by non-spherical, intermittent accretion streams hitting the PNS and exciting its quadrupolar oscillation modes (Murphy et al., 2009; Mueller et al., 2013; Fuller et al., 2015; Morozova et al., 2018; Torres-Forne et al., 2018, 2019).
+
+The energy radiated in GWs is shown in Fig. 4. Our most optimistic models emit up to several times 10^{-9}M_{\\odot}c^{2} in the first half second after bounce, in good agreement with the model considered by Yakunin et al. (2017). The corresponding optimal, single detector signal-to-noise ratios (SNRs) for Adv. LIGO, _i.e._, the SNR computed assuming perfect knowledge of the waveform, at 10 kpc range from \\sim1.5 for the 9M_{\\odot} progenitor, for which the signal shuts down at t-t_{\\rm bounce}\\simeq 0.3 s, to \\sim11.5 for the 19M_{\\odot} progenitor, which remains a loud GW emitter for the entire duration of our simulation. For the proposed Einstein Telescope (ET) in the "D" configuration (Punturo et al., 2010; Hild et al., 2011), which we take as a representative 3rd-generation detector, the corresponding SNRs are \\sim20 and \\sim110. These values are similar to those reported by Andresen et al. (2017) and Andresen et al. (2018) for their models. They imply that, even though there are good prospects for the detection of nearby CCSNe with current generation GW observatories, 3rd-generation detector sensitivities are required for confident, high-SNR detection of all CCSN events in the Milky Way.
+
+All the GW waveforms from our models are characterized by the presence of a narrow track in the time-frequency plane with steadily increasing frequency. We show a representative example of this feature in Fig. 5. Using the astro-seismological approach we developed in Morozova et al. (2018), we identify this feature with a low-order, quadrupolar surface g-mode of the PNS. This mode evolves as the PNS contracts, increasing in frequency, and assuming the character of a quadrupolar f-mode when t-t_{\\rm bounce}\\gtrsim 0.4 s. We observed an identical trend in our previous 2D study (Morozova et al., 2018). This is expected, since PNS masses and radii found in our 3D simulations are in excellent agreement with those found in the corresponding 2D simulations.
+
+A lower frequency feature of the GW signal associated with the SASI, is present only for the 25M_{\\odot} progenitor. The 13M_{\\odot} progenitor also shows SASI activity at late times, but this is not accompanied by a strong GW signal. This might be due to the fact that the accretion rate for the 13M_{\\odot} model is smaller than that of the 25M_{\\odot} model, which implies that a smaller amount of material is involved in the SASI motion for the former. The time interval over which the SASI is active for the 25M_{\\odot} progenitor, as well as the associated characteristic frequency, are highlighted in Fig. 5. Hayama et al. (2016) and Hayama et al. (2018) reported that that rotation and/or SASI activity could leave an imprint in the circular polarization of the GW signal. However, we do not find evidence for this effect in our simulations. This is possibly because SASI is not as vigorous in our models as it is in theirs. The SASI signal disappears once runaway shock expansion develops, in agreement with previous findings (Andresen et al., 2017, 2018). Apart from the disappearance of the SASI signature for the 25M_{\\odot} progenitor and the vanishing of the GW emission from the 9M_{\\odot} model, we do not find obvious signatures of explosion, or lack thereof, in the GW signals.
+
+It has been speculated that PNS convection might be the main agent perturbing the PNS and driving the emission of GWs (Andresen et al., 2017). However, our 9M_{\\odot} progenitor seems to rule out this hypothesis: the PNS convection for this model is vigorous throughout the evolution, but the GW luminosity decays substantially after t-t_{\\rm bounce}\\simeq 0.3 s (see Fig. 4). Instead, the drop in the GW luminosity for this model is coincident with the emergence of a quasi-spherical wind from the PNS and the termination of accretion. This suggests instead that it is the chaotic accretion onto the PNS that is driving the GW emission.
+
+To test this hypothesis we compute time-integrated turbulent energy fluxes (kinetic plus thermal) impinging on the PNS using to the formalism derived in Radice et al. (2016). We then compare the total amount of turbulent energy accreted by the PNS, E_{\\rm turb}, to the total amount of energy irradiated in GWs, E_{\\rm GW}. The results are given in Fig. 6. We find a clear correlation between E_{\\rm GW} and E_{\\rm turb}. This is evidence for accretion being the main driver of the GW emission. Specifically, our results suggest that GWs are produced by the non-resonant excitation of pulsational modes of the PNS by chaotic accretion. We remark that a scaling close to E_{\\rm GW}\\sim E_{\\rm turb}^{2} can be expected on the basis of simple
+
+-dimensional arguments (Misner et al., 1973, chapter 36) essentially because of the quadrupolar nature of GWs (Muller, 2017).
+
+## 4 Discussion.
+
+We have analyzed the GW signals from a large set of 3D Fornax CCSN simulations. Our calculations employed the most advanced treatment for neutrino transport and neutrino-matter interactions available. The most robust feature is an excess in the time-frequency diagram of the GW strain following a characteristic track. The corresponding peak frequency is associated with quadrupolar oscillation modes of the PNS, so its measurement would allow us to constrain the structure of the PNS. This in turn would have consequences for the EOS and for the transport properties of warm nuclear matter.
+
+A signature of the SASI is found only in one progenitor. If present and detected, this signature could potentially be extremely valuable because it might be used to infer the time at which the supernova shock is revived (Andresen et al., 2017, 2018). In combination with the knowledge of the time of neutrino shock breakout (Wallace et al., 2016), this would produce a strong constraint on the explosion mechanism. Nevertheless, our results show that, in contrast with what Andresen et al. (2017) and Andresen et al. (2018) claimed on the basis of a few models affected by aliasing, it is the pulsation of the PNS that is the most robust feature of the GW signal in 3D, and not the SASI. Indeed, a signature of the SASI is found only in one of our progenitors.
+
+Our simulations also clearly demonstrate that GWs are driven by convection at the periphery of the PNS and not by the convection inside the neutron star (NS) as claimed by Andresen et al. (2017). Finally, we have shown, for the first time, that a measurement of the overall amplitude of the GW signal would constrain the strength of turbulence induced by neutrino-driven convection or SASI behind the shock. This would allow us to probe directly the engine of CCSNe. Our results show that GW observations are a promising avenue by which to probe the otherwise inaccessible dynamics of the inner engine of CCSNe. However, these observations will likely require the kind of high sensitivity over a broad range of frequencies that only future generation GW detectors can achieve.
+
+Future work should develop the data analysis techniques necessary to extract the features we have identified in the waveforms, as well as systematic strategies to jointly analyze GW and neutrino signals. First, the detection of the neutrino burst will reveal the time and sky position of the SN, thus reducing the false alarm rate for the GW signal and the number of free parameters needed for template-based searches (Adams et al., 2013; Nakamura et al., 2016). Second, the detection of correlated neutrino and GW temporal variability might provide a way to diagnose large-scale chaotic motion in the supernova core (Ott et al., 2012; Kuroda et al., 2017). We also plan to extend this work with the study of progenitors with moderate rotation and with relic perturbations from advanced nuclear burning stages (Couch et al., 2015; Muller et al., 2017), and to explore the GW signal over longer timescales.
+
+We acknowledge support via the Scientific Discovery through Advanced Computing (SciDAC4) program and Grant DE-SC0018297 (subaward 00009650), the U.S. NSF under Grants AST-1714267 and PHY-1144374, partial support for DR as a Frank and Peggy Taplin Fellow at the Institute for Advanced Study, and the allocation of generous computer resources under the NSF PRAC program at Blue Waters (award #OAC-1809073), under XSEDE at Stampede2 (ACI-1548562), and at NERSC under their contract DE-AC03-76SF00098.
+
+Fornax (Skinner et al., 2019), NumPy (Oliphant, 2015), Matplotlib (Hunter, 2007)
+
+* Aasi et al. (2015) Aasi, J., et al. 2015, Class. Quant. Grav., 32, 074001, doi: 10.1088/0264-9381/32/7/074001
+
+* Abdikamalov et al. (2014) Abdikamalov, E., Gossan, S., DeMaio, A. M., & Ott, C. D. 2014, Phys. Rev., D90, 044001, doi: 10.1103/PhysRevD.90.044001
+
+* Abdikamalov et al. (2015) Abdikamalov, E., Ott, C. D., Radice, D., et al. 2015, Astrophys. J., 808, 70, doi: 10.1088/0004-637X/808/1/70
+
+* Acernese et al. (2015) Acernese, F., et al. 2015, Class. Quant. Grav., 32, 024001, doi: 10.1088/0264-9381/32/2/024001
+
+* Adams et al. (2013) Adams, S. M., Kochanek, C. S., Beacom, J. F., Vagins, M. R., & Stanek, K. Z. 2013, Astrophys. J., 778, 164, doi: 10.1088/0004-637X/78/2/164
+
+* Andresen et al. (2017) Andresen, H., Muller, B., Muller, E., & Janka, H.-T. 2017, Mon. Not. Roy. Astron. Soc., 468, 2032, doi: 10.1093/mnras/stx618
+
+* Andresen et al. (2018) Andresen, H., Muller, E., Janka, H. T., et al. 2018, doi: 10.1093/mnras/stz990
+
+* Aso et al. (2013) Aso, Y., Michimura, Y., Somiya, K., et al. 2013, Phys. Rev., D88, 043007, doi: 10.1103/PhysRevD.88.043007
+
+* Blondin et al. (2003) Blondin, J. M., Mezzacappa, A., & DeMarino, C. 2003, Astrophys. J., 584, 971, doi: 10.1086/345812
+
+* Buras et al. (2006) Buras, R., Janka, H.-T., Rampp, M., & Kifonidis, K. 2006, Astron. Astrophys., 457, 281, doi: 10.1051/0004-6361:20054654
+
+* Burrows (1987) Burrows, A. 1987, ApJL, 318, L57, doi: 10.1086/184937
+
+* Burrows (2013) Burrows, A. 2013, Rev. Mod. Phys., 85, 245, doi: 10.1103/RevModPhys.85.245
+
+* Burrows et al. (2012) Burrows, A., Dolence, J. C., & Murphy, J. W. 2012, Astrophys. J., 759, 5, doi: 10.1088/0004-637X/759/1/5
+
+* Burrows & Goshy (1993) Burrows, A., & Goshy, J. 1993, Astrophys. J., 416, L75, doi: 10.1086/187074
+
+* Burrows et al. (1995) Burrows, A., Hayes, J., & Fryxell, B. A. 1995, Astrophys. J., 450, 830, doi: 10.1086/176188
+
+* Burrows et al. (2019) Burrows, A., Radice, D., & Vartanyan, D. 2019, doi: 10.1093/mnras/stz543
+
+* Burrows et al. (2018) Burrows, A., Vartanyan, D., Dolence, J. C., Skinner, M. A., & Radice, D. 2018, Space Sci. Rev., 214, 33, doi: 10.1007/s11214-017-0450-9
+
+* Cerda-Duran et al. (2013) Cerda-Duran, P., DeBrye, N., Aloy, M. A., Font, J. A., & Obergaulinger, M. 2013, Astrophys. J., 779, L18, doi: 10.1088/2041-8205/779/2/L18
+
+* Colgate & White (1966) Colgate, S. A., & White, R. H. 1966, Astrophys. J., 143, 626, doi: 10.1086/148549
+
+* Couch et al. (2015) Couch, S. M., Chatzopoulos, E., Arnett, W. D., & Timmes, F. X. 2015, Astrophys. J., 808, L21, doi: 10.1088/2041-8205/808/1/L21
+
+* Dessart et al. (2006) Dessart, L., Burrows, A., Livne, E., & Ott, C. D. 2006, Astrophys. J., 645, 534, doi: 10.1086/504068
+
+* Dimmelmeier et al. (2002) Dimmelmeier, H., Font, J. A., & Muller, E. 2002, Astron. Astrophys., 393, 523, doi: 10.1051/0004-6361:20021053
+
+* Dimmelmeier et al. (2007) Dimmelmeier, H., Ott, C. D., Janka, H.-T., Marek, A., & Mueller, E. 2007, Phys. Rev. Lett., 98, 251101, doi: 10.1103/PhysRevLett.98.251101
+
+* Finn & Evans (1990) Finn, L. S., & Evans, C. R. 1990, Astrophys. J., 351, 588, doi: 10.1086/168497
+
+* Foglizzo et al. (2007) Foglizzo, T., Galletti, P., Scheck, L., & Janka, H. T. 2007, Astrophys. J., 654, 1006, doi: 10.1086/509612
+
+* Foglizzo et al. (2006) Foglizzo, T., Scheck, L., & Janka, H. T. 2006, Astrophys. J., 652, 1436, doi: 10.1086/508443
+
+* Fryer et al. (2004) Fryer, C. L., Holz, D. E., & Hughes, S. A. 2004, Astrophys. J., 609, 288, doi: 10.1086/421040
+
+* Fuller et al. (2015) Fuller, J., Klion, H., Abdikamalov, E., & Ott, C. D. 2015, Mon. Not. Roy. Astron. Soc., 450, 414, doi: 10.1093/mnras/stv698
+
+* Glas et al. (2018) Glas, R., Janka, H. T., Melson, T., Stockinger, G., & Just, O. 2018. [https://arxiv.org/abs/1809.10150](https://arxiv.org/abs/1809.10150)
+
+* Glas et al. (2019) Glas, R., Just, O., Janka, H. T., & Obergaulinger, M. 2019, Astrophys. J., 873, 45, doi: 10.3847/1538-4357/ab0423
+
+* Hanke et al. (2012) Hanke, F., Marek, A., Muller, B., & Janka, H.-T. 2012, Astrophys. J., 755, 138, doi: 10.1088/0004-637X/755/2/138
+
+* Hanke et al. (2013) Hanke, F., Mueller, B., Wongwathanarat, A., Marek, A., & Janka, H.-T. 2013, Astrophys. J., 770, 66, doi: 10.1088/0004-637X/770/1/66
+
+* Hayama et al. (2018) Hayama, K., Kuroda, T., Kotake, K., & Takiwaki, T. 2018, Mon. Not. Roy. Astron. Soc., 477, L96, doi: 10.1093/mnrasl/sly055
+
+* Hayama et al. (2016) Hayama, K., Kuroda, T., Nakamura, K., & Yamada, S. 2016, Phys. Rev. Lett., 116, 151102, doi: 10.1103/PhysRevLett.116.151102
+
+* Hild et al. (2011) Hild, S., et al. 2011, Class. Quant. Grav., 28, 094013, doi: 10.1088/0264-9381/28/9/094013
+
+* Hunter (2007) Hunter, J. D. 2007, Computing In Science & Engineering, 9, 90, doi: 10.1109/MCSE.2007.55
+
+* Janka (2012) Janka, H.-T. 2012, Ann. Rev. Nucl. Part. Sci., 62, 407, doi: 10.1146/annurev-nucl-102711-094901
+
+* Janka & Mueller (1996) Janka, H. T., & Mueller, E. 1996, Astron. Astrophys., 306, 167
+
+* Kotake (2013) Kotake, K. 2013, Comptes Rendus Physique, 14, 318, doi: 10.1016/j.crhy.2013.01.008
+
+* Kotake et al. (2009) Kotake, K., Iwakami, W., Ohnishi, N., & Yamada, S. 2009, ApJL, 697, L133, doi: 10.1088/0004-637X/697/2/L133
+
+* Kuroda et al. (2017) Kuroda, T., Kotake, K., Hayama, K., & Takiwaki, T. 2017, Astrophys. J., 851, 62, doi: 10.3847/1538-4357/aa988d
+
+* Kuroda et al. (2016) Kuroda, T., Kotake, K., & Takiwaki, T. 2016, Astrophys. J., 829, L14, doi: 10.3847/2041-8205/829/1/L14
+
+* Kuroda et al. (2018) Kuroda, T., Kotake, K., Takiwaki, T., & Thielemann, F.-K. 2018, Mon. Not. Roy. Astron. Soc., 477, L80, doi: 10.1093/mnrasl/sly059* Kuroda et al. (2014) Kuroda, T., Takiwaki, T., & Kotake, K. 2014, Phys. Rev., D89, 044011, doi: 10.1103/PhysRevD.89.044011
+
+* Lentz et al. (2015) Lentz, E. J., Bruenn, S. W., Hix, W. R., et al. 2015, Astrophys. J., 807, L31, doi: 10.1088/2041-8205/807/2/L31
+
+* Marek et al. (2006) Marek, A., Dimmelmeier, H., Janka, H.-T., Muller, E., & Buras, R. 2006, A&A, 445, 273, doi: 10.1051/0004-6361:20052840
+
+* Marek et al. (2009) Marek, A., Janka, H. T., & Mueller, E. 2009, Astron. Astrophys., 496, 475, doi: 10.1051/0004-6361/200810883
+
+* Melson et al. (2015a) Melson, T., Janka, H.-T., Bollig, R., et al. 2015a, Astrophys. J., 808, L42, doi: 10.1088/2041-8205/808/2/L42
+
+* Melson et al. (2015b) Melson, T., Janka, H.-T., & Marek, A. 2015b, Astrophys. J., 801, L24, doi: 10.1088/2041-8205/801/2/L24
+
+* Misner et al. (1973) Misner, C. W., Thorne, K. S., & Wheeler, J. A. 1973, Gravitation
+
+* Morozova et al. (2018) Morozova, V., Radice, D., Burrows, A., & Vartanyan, D. 2018, Astrophys. J., 861, 10, doi: 10.3847/1538-4357/aac5f1
+
+* Mueller et al. (2013) Mueller, B., Janka, H.-T., & Marek, A. 2013, Astrophys. J., 766, 43, doi: 10.1088/0004-637X/766/1/43
+
+* Mueller & Janka (1997) Mueller, E., & Janka, H.-T. 1997, A&A, 317, 140
+
+* Murphy et al. (2009) Murphy, J. W., Ott, C. D., & Burrows, A. 2009, Astrophys. J., 707, 1173, doi: 10.1088/0004-637X/707/2/1173
+
+* Muller (2016) Muller, B. 2016, Publ. Astron. Soc. Austral., 33, e048, doi: 10.1017/pasa.2016.40
+
+* Muller (2017) Muller, B. 2017 [https://arxiv.org/abs/1703.04633](https://arxiv.org/abs/1703.04633)
+
+* Muller & Janka (2015) Muller, B., & Janka, H. T. 2015, Mon. Not. Roy. Astron. Soc., 448, 2141, doi: 10.1093/mnras/stv101
+
+* Muller et al. (2017) Muller, B., Melson, T., Heger, A., & Janka, H. T. 2017, Mon. Not. Roy. Astron. Soc., 472, 491, doi: 10.1093/mnras/stx1962
+
+* Nakamura et al. (2016) Nakamura, K., Horiuchi, S., Tanaka, M., et al. 2016, Mon. Not. Roy. Astron. Soc., 461, 3296, doi: 10.1093/mnras/stw1453
+
+* O'Connor & Couch (2018) O'Connor, E. P., & Couch, S. M. 2018, Astrophys. J., 865, 81, doi: 10.3847/1538-4357/aadcf7
+
+* Oliphant (2015) Oliphant, T. E. 2015, Guide to NumPy, 2nd edn. (USA: CreateSpace Independent Publishing Platform)
+
+* Ott (2009) Ott, C. 2009, Class. Quant. Grav., 26, 063001, doi: 10.1088/0264-9381/26/6/063001
+
+* Ott et al. (2007) Ott, C. D., Dimmelmeier, H., Marek, A., et al. 2007, Phys. Rev. Lett., 98, 261101, doi: 10.1103/PhysRevLett.98.261101
+
+* Ott et al. (2018) Ott, C. D., Roberts, L. F., da Silva Schneider, A., et al. 2018, Astrophys. J., 855, L3, doi: 10.3847/2041-8213/aaa967
+
+* Ott et al. (2011) Ott, C. D., Reisswig, C., Schnetter, E., et al. 2011, Phys. Rev. Lett., 106, 161103, doi: 10.1103/PhysRevLett.106.161103
+
+* Ott et al. (2012) Ott, C. D., Abdikamalov, E., O'Connor, E., et al. 2012, Phys. Rev., D86, 024026, doi: 10.1103/PhysRevD.86.024026
+
+* Ott et al. (2013) Ott, C. D., Abdikamalov, E., Mosta, P., et al. 2013, Astrophys. J., 768, 115, doi: 10.1088/0004-637X/768/2/115
+
+* Pan et al. (2018) Pan, K.-C., Liebendorfer, M., Couch, S. M., & Thielemann, F.-K. 2018, Astrophys. J., 857, 13, doi: 10.3847/1538-4357/aab71d
+
+* Powell & Muller (2018) Powell, J., & Muller, B. 2018. [https://arxiv.org/abs/1812.05738](https://arxiv.org/abs/1812.05738)
+
+* Punturo et al. (2010) Punturo, M., et al. 2010, Class. Quant. Grav., 27, 084007, doi: 10.1088/0264-9381/27/8/084007
+
+* Radice et al. (2018) Radice, D., Abdikamalov, E., Ott, C. D., et al. 2018, J. Phys., G45, 053003, doi: 10.1088/1361-6471/aab872
+
+* Radice et al. (2017) Radice, D., Burrows, A., Vartanyan, D., Skinner, M. A., & Dolence, J. C. 2017, Astrophys. J., 850, 43, doi: 10.3847/1538-4357/aa92c5
+
+* Radice et al. (2016) Radice, D., Ott, C. D., Abdikamalov, E., et al. 2016, Astrophys. J., 820, 76, doi: 10.3847/0004-637X/820/1/76
+
+* Rampp et al. (1998) Rampp, M., Mueller, E., & Ruffert, M. 1998, Astron. Astrophys., 332, 969. [https://arxiv.org/abs/astro-ph/9711122](https://arxiv.org/abs/astro-ph/9711122)
+
+* Roberts et al. (2016) Roberts, L. F., Ott, C. D., Haas, R., et al. 2016, Astrophys. J., 831, 98, doi: 10.3847/0004-637X/831/1/98
+
+* Shibata & Sekiguchi (2004) Shibata, M., & Sekiguchi, Y.-i. 2004, Phys. Rev., D69, 084024, doi: 10.1103/PhysRevD.69.084024
+
+* Rampp et al. (2005) --. 2005, Phys. Rev., D71, 024014, doi: 10.1103/PhysRevD.71.024014
+
+* Skinner et al. (2015) Skinner, M. A., Burrows, A., & Dolence, J. C. 2015, doi: 10.3847/0004-637X/831/1/81
+
+* Skinner et al. (2019) Skinner, M. A., Dolence, J. C., Burrows, A., Radice, D., & Vartanyan, D. 2019, Astrophys. J. Suppl., 241, 7, doi: 10.3847/1538-4365/ab007f
+
+* Steiner et al. (2013) Steiner, A. W., Hempel, M., & Fischer, T. 2013, Astrophys. J., 774, 17, doi: 10.1088/0004-637X/774/1/17
+
+* Sukhbold et al. (2016) Sukhbold, T., Ertl, T., Woosley, S. E., Brown, J. M., & Janka, H. T. 2016, Astrophys. J., 821, 38, doi: 10.3847/0004-637X/821/138
+
+* Sukhbold et al. (2018) Sukhbold, T., Woosley, S., & Heger, A. 2018, Astrophys. J., 860, 93, doi: 10.3847/1538-4357/aac2da
+
+* Summa et al. (2018) Summa, A., Janka, H. T., Melson, T., & Marek, A. 2018, Astrophys. J., 852, 28, doi: 10.3847/1538-4357/aa92c8
+
+* Takiwaki et al. (2014) Takiwaki, T., Kotake, K., & Suwa, Y. 2014, Astrophys. J., 786, 83, doi: 10.1088/0004-637X/786/2/83* Tamborra et al. (2013) Tamborra, I., Hanke, F., Muller, B., Janka, H.-T., & Raffelt, G. 2013, Phys. Rev. Lett., 111, 121104, doi: 10.1103/PhysRevLett.111.121104
+
+* Torres-Forne et al. (2018) Torres-Forne, A., Cerda-Duran, P., Passamonti, A., & Font, J. A. 2018, Mon. Not. Roy. Astron. Soc., 474, 5272, doi: 10.1093/mnras/stx3067
+
+* Torres-Forne et al. (2019) Torres-Forne, A., Cerda-Duran, P., Passamonti, A., Obergaulinger, M., & Font, J. A. 2019, Mon. Not. Roy. Astron. Soc., 482, 3967, doi: 10.1093/mnras/sty2854
+
+* Vartanyan et al. (2019) Vartanyan, D., Burrows, A., Radice, D., Skinner, A. M., & Dolence, J. 2019, Mon. Not. Roy. Astron. Soc., 482, 351, doi: 10.1093/mnras/sty2585
+
+* Wallace et al. (2016) Wallace, J., Burrows, A., & Dolence, J. C. 2016, Astrophys. J., 817, 182, doi: 10.3847/0004-637X/817/2/182
+
+* Wheeler (1966) Wheeler, J. A. 1966, Ann. Rev. Astron. Astrophys., 4, 393, doi: 10.1146/annurev.aa.04.090166.002141
+
+* Yakunin et al. (2015) Yakunin, K. N., et al. 2015, Phys. Rev., D92, 084040, doi: 10.1103/PhysRevD.92.084040
+
+* Yakunin et al. (2017) Yakunin, K. N., Mezzacappa, A., Marronetti, P., et al. 2017. [https://arxiv.org/abs/1701.07325](https://arxiv.org/abs/1701.07325)

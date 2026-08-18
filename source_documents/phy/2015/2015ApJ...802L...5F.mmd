@@ -1,0 +1,133 @@
+###### Abstract
+
+The recent discovery of a neutron star accretor in the ultra-luminous X-ray source M82 X-2 challenges our understanding of high-mass X-ray binary formation and evolution. By combining binary population synthesis and detailed mass-transfer models, however, we show that the binary parameters of M82 X-2 are not surprising provided non-conservative mass transfer is allowed. Specifically, the donor-mass lower limit and orbital period measured for M82 X-2 lie near the most probable values predicted by population synthesis models, and systems such as M82 X-2 should exist in approximately 13% of the galaxies with a star-formation history similar to M82. We conclude that the binary system that formed M82 X-2 is most likely less than 50 Myr old and contains a donor star which had an initial mass of approximately 8-10 M{}_{\\odot}, while the NS's progenitor star had an initial mass in the 8-25 M{}_{\\odot} range. The donor star still currently resides on the main sequence, and is capable of continued MT on the thermal timescale, while in the ultra-luminous X-ray regime, for as long as 400,000 years.
+
+Subject headings:stars: binaries -- stars: neutron -- X-rays: binaries
+
+## 1. Introduction
+
+Ultra-luminous X-ray Sources (ULX) are among the most extreme phases of binary evolution, characterized by X-ray luminosities exceeding 10^{39} erg s{}^{-1}(Gladstone et al., 2009). Since these systems exceed the Eddington luminosity for compact objects formed via stellar evolution, models must invoke one of two mechanisms in order to account for their high luminosities. Under the assumption of spherical, Eddington-limited accretion, one class of models employs intermediate-mass black holes (BHs) with masses exceeding \\sim 100 M{}_{\\odot}(Colbert & Mushotzky, 1999; van der Marel, 2004; Madhusudhan et al., 2008; Feng & Soria, 2011). The second method employs some combination of thin accretion disks (Shakura & Sunyaev, 1973; Begelman, 2002), whose luminosity can exceed the Eddington limit without being disrupted by radiation pressure, and/or anisotropic X-Ray emission (King, 2009), in order to reproduce the luminosity of observed systems without exceeding the Eddington limit. The formation rate of ULXs has been accounted for in models examining the formation rate of the most massive BHs from single stars (e.g. Mapelli et al., 2010) and with the incorporation of binary evolution effects (e.g. Linden et al., 2010).
+
+Recently, NuSTAR discovered a pulsar spatially coincident with the location of the ULX M82 X-2, indicating that the compact object in this system is a neutron star (NS; Bachetti et al., 2014). Assuming a typical NS mass M_{\\rm NS}\\sim 1.4 M{}_{\\odot}, the measured mass function and orbital period (2.52 days) indicate that the donor star has a mass M_{2}\\gtrsim 5.2 M{}_{\\odot} and a radius R_{2}\\gtrsim 7 R{}_{\\odot}. The X-ray luminosity of M82 X-2 is observed to be L{}_{\\rm X}(0.5 - 10 keV) = 6.6 \\times 10{}^{39} erg s{}^{-1}, indicating that the system has an accretion rate that exceeds the Eddington limit by at least a factor of 30.
+
+The identification of M82 X-2 as a NS ULX has already generated a variety of new theoretical insights. Tong (2014) finds that the spin-up behavior of the pulsar is consistent with a low-magnetic field (\\sim 1 TG) magnetar, while Eksi et al. (2014) and Dall'Osso et al. (2014) use the physical properties of the system to imply larger magnetic fields \\sim10-100 TG. Kluzniak & Lasota (2015) note that the high MT rates would spin up the NS to millisecond periods within 10^{5} yr, opening the possibility that observable high-mass X-ray binaries may be found with a millisecond pulsar accretor. Lyutikov (2014) suggests that the extremely super-Eddington accretion rates require a new MT regime, where an optically thick accretion curtain shields the interior gas from the outgoing X-ray flux. Furthermore, this analysis suggests that the equilibrium, where the Alfven radius matches the co-rotation radius, indicates a magnetic field of 14 TG. An analysis by Christodoulou et al. (2014) disagrees, arguing that the luminosity of M82 X-2 can be explained just with mild geometrical beaming.
+
+Apart from the specific emission mechanism and the magnitude and influence of the NS's magnetic field, the measured orbital period and the lower limits on the donor mass and radius are both telling and puzzling at first glance: (1) the high inferred accretion rate onto the NS requires that the donor is in Roche-lobe overflow (RLO), as wind-fed X-ray binaries with NS accretors are expected to have X-ray luminosities orders of magnitude below the ULX range (Linden et al., 2010), (2) the donor star must be hydrogen rich, as a helium star with mass \\gtrsim 5 M{}_{\\odot} cannot fill its Roche lobe in a 2.5 day period orbit, independent of its evolutionary stage, (3) the evolutionary mechanism must have either a long lifetime, or a high formation rate, in order for this one system to exist in the local universe.
+
+Still, the picture of a donor more massive than \\simeq 5 M{}_{\\odot} transferring mass onto a NS is particularly puzzling. While RLO X-ray binaries with NS accretors are a common output of population synthesis models, they typically involve lower-mass donors (e.g. Fragos et al., 2008, 2009a, 2013a,b). This is due, primarily, to the stability criteria for RLO from a massive donor star onto a lower-mass accretor. Early polytropic and semi-analytic models, with the assumption of conservative MT, demonstrated that systems with a donor more than \\sim3 times as massive as the compact object would quickly enter a delayed dynamical instability (Hjellming & Webbink, 1987; Ivanova & Taam, 2004), producing a stellar merger. However, more recent studies of the stability of binary MT phases, using detailed binary evolution codes, showed that some of the approximations made in earlier studies, such as fully adiabatic mass-loss and the strict enforcement of hydrostatic equilibrium, underestimate the maximum mass-ratio of a binary in which dynamically stable MT can occur (e.g. Ivanova et al., 2013; Pavlovskii & Ivanova, 2014). A crucial factor in determining this maximum mass ratio for stability of non-conservative MT phases is the specific angular momentum of the material ejected from the binary. Several different models have been developed for different physically motivated mass-loss models (e.g. van den Heuvel, 1994; King & Ritter, 1999; Tauris & van den Heuvel, 2006).
+
+In this _Letter_, we investigate the formation of ULX systems with NS accretors and derive constraints on the evolutionary history and current properties of M82 X-2. We first utilize the Binary Stellar Evolution (BSE) code (Hurley et al., 2002) in order to study the initial binary properties that can produce a MT event with characteristics similar to M82 X-2. We terminate simulations with this code at the onset of RLO and perform the MT calculations with the detailed stellar evolution code MESA (Paxton et al., 2011, 2013), in order to accurately predict the duration and accretion rate of the MT phase.
+
+## 2. The host galaxy: M82
+
+M82 is one of the nearest dusty starburst galaxies. It has sustained vigorous star formation in the past 50 to 100 Myr (Barker et al., 2008), probably triggered by its anterior interaction with M81. Based on publicly available photometry from _IRAS_, _Spitzer_-MIPS, and _Herschel_-SPIRE (Roussel et al., 2010), we estimate the IR-derived star-formation rate (SFR) to be of at least 5.5\\,\\mathrm{M}_{\\odot}\\,\\mathrm{yr}^{-1} during this period, in agreement with Kennicutt et al. (2003). We should note, however, that preliminary spectral energy distribution fitting results, following the methodology described in Sklias et al. (2014), favor a declining star-formation activity in M82 over a constant SFR. Along the same lines, earlier, spatially resolved, studies infer SFRs as high as \\sim 30\\,\\mathrm{M}_{\\odot}\\,\\mathrm{yr}^{-1}, depending on various IMF assumptions (e.g. Forster Schreiber et al., 2003). In the rest of this paper, we adopt a constant SFR of 5\\,\\mathrm{M}_{\\odot}\\,\\mathrm{yr}^{-1}, over the last 100 Myr, and a metallicity of Z=0.02(Forster Schreiber et al., 2001) for all our simulations.
+
+## 3. Numerical models
+
+### Binary Population Synthesis with BSE
+
+In order to determine the most probable initial parameters for M82 X-2, we calculated the evolution of 10^{7} isolated1 massive binaries, restricting our modeling to systems with a primary mass large enough to form a NS. We utilize the BSE population synthesis code (Hurley et al., 2002), modified to include the suite of stellar wind prescriptions for massive stars described in Belczynski et al. (2010), and the fitting formulae for the binding energy of the envelopes of stars derived by Loveridge et al. (2011). We followed binary systems through any binary interaction prior to the primary's supernova, through the supernova explosion which formed the NS, and the post-supernova detached evolution. We halted the code at the moment when the secondary star fills its Roche lobe, and recorded the state of the binary to use as an input to our stellar evolution and MT code.
+
+Footnote 1: Formation channels through dynamical interactions in dense stellar systems are not taken into account
+
+In our modeling, we assume a Kroupa (2001) initial mass-function, a flat distribution of initial binary mass-ratios, a logarithmically flat distribution of initial orbital separations, a Maxwellian distribution of NS supernova kick magnitudes with \\sigma=265\\,\\mathrm{km}\\,\\mathrm{s}^{-1}(Hobbs et al., 2005), and a common envelope efficiency of \\alpha_{CE}=0.5. These parameter values have been shown to produce synthetic populations of X-ray binaries that are in good agreement with observations of X-ray luminosity functions and X-ray scaling relations of extragalactic populations. (e.g. Fragos et al., 2008; Linden et al., 2009; Fragos et al., 2013; Tzanavaris et al., 2013). We repeated all calculations in this paper utilizing common envelope efficiencies of \\alpha_{CE}=0.2 and \\alpha_{CE}=1.0, finding only a small change in the resulting distributions for the orbital periods and donor masses of possible M82 X-2 progenitors. The qualitative insensitivity of our models to the common envelope efficiency is explained by the high mass of the secondary star (\\gtrsim 5\\,\\mathrm{M}_{\\odot}) which guaranties that the orbital energy of the binary is usually greater than the binding energy of the NS's progenitor envelope.
+
+### Detailed Mass-Transfer Calculations with MESA
+
+We use version 7184 of the stellar evolution code MESA (Paxton et al., 2011, 2013) in order to calculate grids of \\sim 2,700 MT sequences for NS X-ray binaries undergoing MT. We assume an initial NS mass of 1.4\\,\\mathrm{M}_{\\odot}, and cover the parameter space of possible orbital periods and companion masses at the onset of RLO. Specifically we consider initial donor masses (M_{2}) between 1.0\\,\\mathrm{M}_{\\odot} and 50.0\\,\\mathrm{M}_{\\odot} and initial binary orbital periods between 1.0 and 300.0 day. A higher initial NS mass (e.g. 2.0\\,\\mathrm{M}_{\\odot}), as suggested by Tauris et al. (2011) for the formation of the binary millisecond pulsar PSR J1614-2230, will yield in our case qualitatively identical results, and is not considered in this work as it would increase significantly the computational cost of our simulations.
+
+For our MT calculations we employ the implicit MT scheme and the hydrodynamic solver of MESA, in order to properly resolve the onset of a dynamically unstable MT phase. We terminate the MT sequences when any of the following criteria are met: _(i)_ the mass of the donor star drops below 1\\,\\mathrm{M}_{\\odot}, _(ii)_ the age of the system exceeds the age of the Universe (13.7\\,\\mathrm{Gyr}), _(iii)_ the whole envelope of the donor star is removed, or _(iv)_ the timestep of the hydrodynamic solver drops below 10^{-6}\\,\\mathrm{s}, while the MT rate exceeds 10^{-2}\\,\\mathrm{M}_{\\odot}\\,\\mathrm{yr}^{-1}, and no solution can be found such that the radius of the donor is less or equal to the radius of its Roche lobe. We consider the latter as the onset of a common envelope.
+
+The secular evolution of the orbit of a mass-transferring binary depends on the accretion efficiency, and on the specific angular momentum that is lost from the system. Here, following van den Heuvel (1994), we define a parameter \\alpha denoting the fraction of the mass lost from the donor (\\dot{M}_{2}) that is ejected from the vicinity of the donor star in the form of "fast wind", i.e. with specific angular momentum equal to that of the donor star. The remainder of the mass ((1-\\alpha)\\dot{M}_{2}) is funneled through the first Lagrangian point to the accretion disk around the NS. We limit the accretion rate onto the NSto 100 times the Eddington limit (\\dot{M}_{Edd}2). We note here that the exact value of this upper limit, within a factor of a few, does not play a significant role in the evolution of a mass-transfer sequence. The fraction of (1-\\alpha)\\dot{M}_{2} that is in excess of 100\\dot{M}_{Edd} is again ejected from the system in the form of "fast winds". However, we assume that this mass is ejected from the vicinity of the NS and has the specific angular momentum of the accretor. Since these X-ray binaries have a donor star that is more massive than the NS, mass lost from the vicinity of the donor star has a smaller angular momentum than mass lost from the vicinity of the accretor. Hence, a value \\alpha>0 would results in a reduced rate of angular momentum loss from the orbit, and would therefore increase the stability of the MT phase. We ran our grid of MT sequences for 4 different values of the parameter \\alpha (\\alpha = 0.0, 0.5, 0.9, 0.99) in order to study the effect that it has on the formation of potential NS ULXs. The right panel of Figure 1 shows the parameter space in the orbital period-donor star's mass that is covered by our grid of detailed MT sequences, assuming an initial NS mass of 1.4 M{}_{\\odot} and a MT efficiency parameter \\alpha = 0.9
+
+Footnote 2: For the calculation of \\dot{M}_{Edd} a radiative efficiency of 10% is assumed.
+
+## 4. Results
+
+In Figure 1 (left) we show the distribution of orbital periods and donor masses, at the beginning of the MT phase, as produced by the BSE code. Intriguingly, we note that the peak of this distribution is centered around systems with a donor mass of 5-10 M{}_{\\odot} and an orbital period between 1.6 - 3.2 days at the onset of RLO. This distribution of binaries is thus highly compatible with the observation of M82 X-2. The population appears to change in character at \\simeq13 M{}_{\\odot}; systems to the left of this boundary experience a CE phase before NS formation, while systems to the left evolve through stable MT between the two initial massive stars. Similarly, there is a "valley" around orbital periods of 3-10 days, which separates systems with main-sequence donors from systems with evolved donors. However, in order to estimate the probability that any of these systems is currently a ULX, we need to convolve this distribution function of binaries at the onset of RLO with the detailed MESA calculations, so that we determine the duration of ULX activity in each binary. For our analysis using the MESA code, we define as ULX any X-ray binary in which the NS is accreting material at a rate that exceeds 10\\dot{M}_{Edd}.
+
+In Figures 2 and 3 we show the resulting probability distribution of having a ULX with a NS accretor in the parameter space of the observed characteristics of M82 X-2 (donor mass and orbital period). We show results for four different age ranges for the ULX, 0 - 25 Myr, 25 - 50 Myr, 50 - 75 Myr, and 75 - 100 Myr, and four different values of non-conservative MT: \\alpha~{}=~{}0.99,~{}0.9,~{}0.5 and 0.0. The color bar depicts the relative probability of a NS ULX existing today with the given orbital parameters, and the expected number of systems in M82 is listed as <N_{\\rm NS-ULX}>. This probability is calculated by assigning to each one of our MT sequences a weight proportional to the formation rate of NS binaries reaching RLO at periods and donor masses close to that of the MT sequence, as calculated by our BSE population synthesis models. In addition, we weight each MT sequence by the time that the sequence spends at each period and donor mass, while the MT rate exceeds 10\\dot{M}_{Edd}.
+
+In each panel of Figures 2 and 3, we show white lines denoting the observed orbital period and minimum donor mass of M82 X-2. We note two key observations: (1) the observed parameters of M82 X-2 are well matched to the most probable parameters of a ULX with a NS accretor, (2) the probability of such a system in M82 existing is relatively high, between \\sim 0.03 and \\sim 0.13 (i.e. we expect to have a NS ULX in every one out of approximately 8 galaxies, with properties similar to M82). Furthermore, comparing the observed properties of M82 X-2 to the different panels of Figures 2 and 3, we can put limits on both the current age of the system and the accretion efficiency of the MT phase. Accretion efficiencies below 1% (\\alpha>0.99) can be excluded, as the accretion rate becomes too low to produce a ULX (see the very low expected number of ULX in the all panels of the first row of Figure 2). Similarly, accretion efficiencies above 50% (\\alpha<0.5) predict that ULXs would be formed at significantly shorter periods than observed in M82 X-2. The age of the population plays also role, as older systems tend to have shorted periods and lower mass companions. Based on this comparison, a system like M82 X-2, would likely have an age \\lesssim 75 Myr, and an accretion efficiency below 10%.
+
+We can derive more robust constraints on both the current properties of M82 X-2 and the properties of its progenitor binary by following an analysis similar to Fragos et al. (2009b) and Fragos & McClintock (2015). For each MT sequence in
+
+Figure 1.— **Left panel:** The two-dimensional distribution of binary orbital periods versus donor masses of binaries that contain a NS and a secondary non-degenerate star that just filled its Roche lobe, calculated from 10^{7} isolated binaries evolved with BSE. **Right panel:** The gray shaded area shows the parameter space in the orbital period-donor star mass plane that is covered by our grid of detailed MT sequences calculated with MESA, assuming a MT efficiency parameter \\alpha=0.9. our grid, we examine all systems that simultaneously fit the observational constraints on M82 X-2, specifically an orbital period of 2.52 day, a donor mass above 5.2 M{}_{\\odot} and an accretion rate onto the NS higher than 10\\dot{M}_{Edd}. In this part of the analysis we only consider one of our MT grids, with \\alpha=0.9, which predicts the highest expected number of NS ULXs and the closest-matching properties for M82 X-2. In Figure 4 we show the probability density functions of current binary parameters (donor mass and age, and ULX duration) for systems with the M82 X-2 measured characteristics. We also use the results from our parameter-space exploration in BSE in order to derive self-consistent constraints on the initial binary parameters of M82 X-2's progenitor (component masses and orbital period).
+
+## 5. Discussion
+
+By combining a parameter space exploration using the BSE population synthesis code with a detailed treatment of MT using the MESA code, we have shown that the properties of M82 X-2 are well explained by current models of binary population synthesis. Specifically, our models reveal the following details about the formation of M82 X-2:
+
+* The donor star is hydrogen rich, as a helium star of mass \\gtrsim 5.2 M{}_{\\odot} cannot fill the Roche lobe of a \\sim 2.5 day orbit, even at the late stages of the carbon/oxygen burning phase. Furthermore, the donor star is in RLO, as wind-fed NS binaries are expected to have X-ray luminosities below the Eddington limit (e.g. Linden et al., 2010).
+
+Figure 3.— Same as Figure 2, but for \\alpha=0.5 (top) and \\alpha=0.0 (bottom).
+
+Figure 2.— Relative likelihood of a NS ULX existing _today_ at a given orbital period and donor mass. Each column of the figure corresponds to a different age range of the ULXs, while each row corresponds to a different choice of the accretion parameter \\alpha (top: \\alpha=0.99, bottom: \\alpha=0.9).
+
+[MISSING_PAGE_FAIL:5]
+
+Fragos, T., Willems, B., Kalogera, V., Ivanova, N., Rockefeller, G., Fryer, C. L., & Young, P. A. 2009b, The Astrophysical Journal, 697, 1057
+
+* Gladstone et al. (2009) Gladstone, J. C., Roberts, T. P., & Done, C. 2009, MNRAS, 397, 1836
+
+* Hjellming & Webbink (1987) Hjellming, M. S., & Webbink, R. F. 1987, ApJ, 318, 794
+
+* Hobbs et al. (2005) Hobbs, G., Lorimer, D. R., Lyne, A. G., & Kramer, M. 2005, MNRAS, 360, 974
+
+* Hurley et al. (2002) Hurley, J. R., Tout, C. A., & Pols, O. R. 2002, MNRAS, 329, 897
+
+* Ivanova et al. (2013) Ivanova, N., Justham, S., Chen, X., Dave Marco, O., Fryer, C. L., Gaburov, E., Ge, H., Glebbeek, E., Han, Z., Li, X. D., Lu, G., Marsh, T., Podsiadlowski, P., Potter, A., Soker, N., Taam, R., Tauris, T. M., van den Heuvel, E. P. J., & Webbink, R. F. 2013, The Astronomy and Astrophysics Review, 21, 59
+
+* Ivanova & Taam (2004) Ivanova, N., & Taam, R. E. 2004, ApJ, 601, 1058
+
+* Kennicutt et al. (2003) Kennicutt, Jr., R. C., Armus, L., Bendo, G., Calzetti, D., Dale, D. A., Draine, B. T., Engelbracht, C. W., Gordon, K. D., Grauer, A. D., Helou, G., Hollenbach, D. J., Jarrett, T. H., Kewley, L. J., Leitherer, C., Li, A., Malhotra, S., Regan, M. W., Rieke, G. H., Rieke, M. J., Roussel, H., Smith, J.-D., T., Thomley, M. D., & Walter, F. 2003, PASP, 115, 928
+
+* King & Ritter (1999) King, A. R., & Ritter, H. 1999, MNRAS, 309, 253
+
+* King (2009) King, A. R. 2009, MNRAS, 393, A14
+
+* Kluzniak & Lasota (2015) Kluzniak, W., & Lasota, J.-P. 2015, MNRAS, 448, L43
+
+* Kroupa (2001) Kroupa, P. 2001, MNRAS, 322, 231
+
+* Linden et al. (2010) Linden, T., Kalogera, V., Sepinsky, J. F., Prestwich, A., Zezas, A., & Gallagher, J. S. 2010, ApJ, 725, 1984
+
+* Linden et al. (2009) Linden, T., Sepinsky, J. F., Kalogera, V., & Belczynski, K. 2009, The Astrophysical Journal, 699, 1573
+
+* Loveridge et al. (2011) Loveridge, A. J., van der Staveh, M. V., & Kalogera, V. 2011, The Astrophysical Journal, 743, 49
+
+* Lyutikov (2014) Lyutikov, M. 2014, arXiv:1410.8745
+
+* Madhusudhan et al. (2008) Madhusudhan, N., Rappaport, S., Podsiadlowski, P., & Nelson, L. 2008, ApJ, 688, 1235
+
+* Mapelli et al. (2010) Mapelli, M., Ripamonti, E., Zampieri, L., Colpi, M., & Bressan, A. 2010, MNRAS, 408, 234
+
+* Neilsen & Lee (2009) Neilsen, J., & Lee, J. C. 2009, Nature, 458, 481
+
+* Pavlovski & Ivanova (2014) Pavlovski, K., & Ivanova, N. 2014, eprint arXiv:1410.5109
+
+* Paxton et al. (2011) Paxton, B., Bildsten, L., Dotter, A., Herwig, F., Lesaffre, P., & Timmes, F. 2011, ApJS, 192, 3
+
+* Paxton et al. (2013) Paxton, B., Cantiello, M., Arras, P., Bildsten, L., Brown, E. F., Dotter, A., Mankovich, C., Montgomery, M. H., Stello, D., Timmes, F. X., & Townsend, R. 2013, arXiv, 319
+
+* Ponti et al. (2012) Ponti, G., Fender, R. P., Begelman, M. C., Dunn, R. J. H., Neilsen, J., & Coriat, M. 2012, MNRAS, 422, L11
+
+* Rappaport et al. (2005) Rappaport, S. A., Podsiadlowski, P., & Pfahl, E. 2005, MNRAS, 356, 401
+
+* Roussel et al. (2010) Roussel, H., Wilson, C. D., Vigroux, L., Isaak, K. G., Sauvage, M., Madden, S. C., Auld, R., Baes, M., Barlow, M. J., Bendo, G. J., Bock, J. J., Boselli, A., Bradford, M., Buat, V., Castro-Rodriguez, N., Chanial, P., Charlot, S., Ciesla, L., Clements, D. L., Cooray, A., Cormier, D., Cortese, L., Davies, J. I., Dwek, E., Eales, S. A., Elbaz, D., Galametz, M., Galliano, F., Gear, W. K., Giem, J., Gomez, H. L., Griffin, M., Hony, S., Levenson, L. R., Lu, N., O'Halloran, B., Okumura, K., Oliver, S., Page, M. J., Panuzzo, P., Papageorgiou, A., Parkin, T. J., Perez-Fournon, I., Pohlen, M., Rangwala, N., Rigby, E. E., Rykala, A., Sacchi, N., Schulz, B., Schirm, M. R. P., Smith, M. W. L., Spinoglio, L., Stevens, J. A., Srinivasan, S., Symeonidis, M., Trichas, M., Vaccari, M., Wozniak, H., Wright, G. S., & Zeilinger, W. W. 2010, A&A, 518, L66
+
+* Shakura & Sunyaev (1973) Shakura, N. I., & Sunyaev, R. A. 1973, A&A, 24, 337
+
+* Sklias et al. (2014) Sklias, F., Zamojski, M., Schaerer, D., Dessauges-Zavadsky, M., Egami, E., Rex, M., Rawle, T., Richard, J., Boone, F., Simpson, J. M., Smail, I., van der Werf, P., Altieri, B., & Kneib, J. P. 2014, A&A, 561, A149
+
+* Tauris et al. (2011) Tauris, T. M., Langer, N., & Kramer, M. 2011, MNRAS, 416, 2130
+
+* Tauris & van den Heuvel (2006) Tauris, T. M., & van den Heuvel, E. P. J. 2006, In: Compact stellar X-ray sources. Edited by Walter Lewin & Michiel van der Klis. Cambridge Astrophysics Series, 623
+
+* Tong (2014) Tong, H. 2014, arXiv:1411.3168
+
+* Tzanavaris et al. (2013) Tzanavaris, P., Fragos, T., Tremmel, M., JENKINS, L., Zezas, A., Lehmer, B. D., Hornschemeier, A., Kalogera, V., Ptak, A., & Basu-Zych, A. R. 2013, The Astrophysical Journal, 774, 136
+
+* van den Heuvel (1994) van den Heuvel, E. P. J. 1994, 22. Saas-Fee Advanced Course of the Swiss Society for Astrophysics and Astronomy: Interacting binaries, -1, 263
+
+* van der Marel (2004) van der Marel, R. P. 2004, Coevolution of Black Holes and Galaxies, 37
